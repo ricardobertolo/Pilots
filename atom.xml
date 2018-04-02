@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Documentações e tutoriais</title>
-    <link href="https://developercielo.github.io/atom.xml" rel="self"/>
-    <link href="https://developercielo.github.io/"/>
-    <logo>https://developercielo.github.io/assets/images/logo.png</logo>
-    <icon>https://developercielo.github.io/assets/favicon.ico</icon>
-    <updated>2018-03-27T20:04:50+00:00</updated>
-    <id>https://developercielo.github.io/</id>
+    <link href="https://docscielo.github.io/Pilots/atom.xml" rel="self"/>
+    <link href="https://docscielo.github.io/Pilots/"/>
+    <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
+    <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
+    <updated>2018-04-02T21:21:29+00:00</updated>
+    <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
         <email>neto.joaobatista@gmail.com</email>
@@ -15,9 +15,9 @@
     <entry>
         <title>Manual de integração</title>
         <category term="tutorial" />
-        <link href="https://developercielo.github.io/tutorial/edi"/>
+        <link href="https://docscielo.github.io/Pilots/tutorial/edi"/>
         <updated>2017-11-30T00:00:00+00:00</updated>
-        <id>https://developercielo.github.io/tutorial/edi</id>
+        <id>https://docscielo.github.io/Pilots/tutorial/edi</id>
         <content type="html">&lt;h1 id=&quot;introdução&quot;&gt;Introdução&lt;/h1&gt;
 
 &lt;p&gt;O EDI - Eletronic Data Interchange é um canal de captura e processamento de grandes volumes de transações em lote, por meio de troca de arquivos entre o cliente, o parceiro de transmissão de arquivos (VANs) e a Cielo.&lt;/p&gt;
@@ -55,7 +55,7 @@
   &lt;li&gt;Produção: enviar o arquivo para processamento.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/edi-passos.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/edi-passos.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;suporte-técnico&quot;&gt;Suporte Técnico&lt;/h2&gt;
 
@@ -69,7 +69,7 @@
 
 &lt;h2 id=&quot;produtos-e-bandeiras-habilitados-para-o-canal-edi&quot;&gt;Produtos e Bandeiras habilitados para o CANAL EDI:&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/edi-bandeiras.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/edi-bandeiras.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -1534,9 +1534,9 @@
     <entry>
         <title>Postman Cielo</title>
         <category term="tutorial" />
-        <link href="https://developercielo.github.io/tutorial/postman"/>
+        <link href="https://docscielo.github.io/Pilots/tutorial/postman"/>
         <updated>2017-07-26T00:00:00+00:00</updated>
-        <id>https://developercielo.github.io/tutorial/postman</id>
+        <id>https://docscielo.github.io/Pilots/tutorial/postman</id>
         <content type="html">&lt;h1 id=&quot;o-que-é-o-postman&quot;&gt;O que é o POSTMAN?&lt;/h1&gt;
 
 &lt;p&gt;O Postman é um API Client que facilita aos desenvolvedores criar, compartilhar, testar e documentar APIs. Isso é feito, permitindo aos usuários criar e salvar solicitações &lt;strong&gt;HTTP e HTTPs&lt;/strong&gt; simples e complexas, bem como ler suas respostas.&lt;/p&gt;
@@ -1569,25 +1569,25 @@
 
 &lt;p&gt;1.Acesse a Chrome Store, pesquise por POSTMAN  em APPs&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/documentos-adicionais/tutorial-postman/p1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/documentos-adicionais/tutorial-postman/p1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;2.Na aba de Apps no seu Google Chrome acesse o ícone do Postman&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/p2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/p2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;3.Ao acessar o Postman pela primeira vez, o App ira requisitar um login. Essa etapa é opcional, mas sugerismos que uma conta seja criada, pois isso sincroniza suas configurações com a sua conta POSTMAN, ou seja, se for necessario realiza um login em outro computador, suas configurações já estarão prontas para serem usadas&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/p3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/p3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;4.Pronto, basta configurar suas Coleções  e ambientes para iniciar os testes&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/p4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/p4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;explicando-componentes-do-postman&quot;&gt;Explicando Componentes do POSTMAN&lt;/h1&gt;
 
 &lt;p&gt;Nesta área vamos explicar os diferentes componentes do Postman e suas funções. Depois dessa introdução, as próximas partes deste tutorial vão focar na configurações e usos para teste das APIs&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/pc.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/pc.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;A&lt;/strong&gt; - &lt;strong&gt;Environment (Ambiente)&lt;/strong&gt;:
 Ambiente para onde serão direcionadas as requisições. Nesta área que serão definidos dados de:&lt;/p&gt;
@@ -1640,11 +1640,11 @@ O número de coleções é ilimitado, ou seja, você pode criar várias coleçõ
 
 &lt;p&gt;1 - No canto superior direito, clique na engrenagem e selecione “Manage environment”.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/p7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/p7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;2 - Na tela de gerenciamento, basta preencher as configurações de acordo com a tela abaixo:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/p8.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/p8.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;3 - Pronto,  agora os endereços e credenciais para teste já estão cadastrada. Sugerimos que você crie um ambiente para Produção e um para Sandbox assim,&lt;/p&gt;
 
@@ -1669,13 +1669,13 @@ No &lt;strong&gt;Checkout Cielo&lt;/strong&gt; não há &lt;code class=&quot;hig
   &lt;li&gt;Com o Postman aberto, use o botão IMPORT, e selecione a opção “IMPORT FROM LINK”.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/p5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/p5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Pronto, sua coleção Cielo já está disponível. Basta selecionar Environment e a requisição. Ao clicar em SEND, o Postman vai executar a comunicação com a Cielo.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/p6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/p6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;collections-e-environments--cielo&quot;&gt;Collections e Environments  Cielo&lt;/h2&gt;
 
@@ -1731,7 +1731,7 @@ No &lt;strong&gt;Checkout Cielo&lt;/strong&gt; não há &lt;code class=&quot;hig
 
 &lt;p&gt;Com a sua Collection e Environmet configurados, realizar uma transação junto a Cielo é extremamente facil:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/pr.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/pr.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Seleciona qual requisição você deseja usar.&lt;/li&gt;
@@ -1754,15 +1754,15 @@ No &lt;strong&gt;Checkout Cielo&lt;/strong&gt; não há &lt;code class=&quot;hig
 
 &lt;p&gt;&lt;em&gt;OBS&lt;/em&gt;:Caso esse link não exista em sua tela, clique em &lt;code class=&quot;highlighter-rouge&quot;&gt;Params&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/p10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/p10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;2 - Selecione a Linguagem que deseje converter, neste caso, Python.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/pcode.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/pcode.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;3 - Pronto. O exemplo Json está convertido para Python&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/pcode2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/pcode2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;collections-e-environments--cielo-1&quot;&gt;Collections e Environments  Cielo&lt;/h1&gt;
 
@@ -1819,9 +1819,9 @@ No &lt;strong&gt;Checkout Cielo&lt;/strong&gt; não há &lt;code class=&quot;hig
     <entry>
         <title>Manual de integração</title>
         <category term="manual" />
-        <link href="https://developercielo.github.io/manual/cielo-lio"/>
+        <link href="https://docscielo.github.io/Pilots/manual/cielo-lio"/>
         <updated>2017-01-01T00:00:00+00:00</updated>
-        <id>https://developercielo.github.io/manual/cielo-lio</id>
+        <id>https://docscielo.github.io/Pilots/manual/cielo-lio</id>
         <content type="html">&lt;h1 id=&quot;documentação-cielo-lio&quot;&gt;Documentação Cielo LIO&lt;/h1&gt;
 
 &lt;p&gt;Nessa documentação você tem acesso a todas as informações sobre a plataforma Cielo LIO e boas práticas para o desenvolvimento e modelos de integração disponíveis para complementar o negócio de seu cliente.&lt;/p&gt;
@@ -4939,7 +4939,7 @@ Os parâmetros do método anterior, com a inclusão de um parâmetro que é o va
 
 &lt;p&gt;Toda vez que é feito um cancelamento na LIO utilizando o launcher, o sistema envia um broadcast notificando quaisquer aplicações que estejam registradas sobre o mesmo. Para que sua aplicação seja notificada de um cancelamento, atualize o arquivo &lt;code class=&quot;highlighter-rouge&quot;&gt;AndroidManifest.xml&lt;/code&gt; conforme o exemplo abaixo:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/cielo-lio/manifest.jpg&quot; alt=&quot;Manifest&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/cielo-lio/manifest.jpg&quot; alt=&quot;Manifest&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;em seguida, é necessário implementar um &lt;code class=&quot;highlighter-rouge&quot;&gt;BroadcastReceiver&lt;/code&gt; para tratar o evento da maneira que for pertinente a sua aplicação:&lt;/p&gt;
 
@@ -5192,7 +5192,7 @@ O método recebe como parâmetro o texto a ser impresso, um mapa de estilo de im
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Exemplo de impressão de texto simples:
-&lt;img src=&quot;https://developercielo.github.io/images/cielo-lio/print-text.png&quot; alt=&quot;Impressão texto simples&quot; height=&quot;25%&quot; width=&quot;25%&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://docscielo.github.io/Pilots/images/cielo-lio/print-text.png&quot; alt=&quot;Impressão texto simples&quot; height=&quot;25%&quot; width=&quot;25%&quot; /&gt;&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -5238,7 +5238,7 @@ O método recebe como parâmetro um array de texts a serem impresso, um array co
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Resultado final da impressão:
-&lt;img src=&quot;https://developercielo.github.io/images/cielo-lio/print-columns.png&quot; alt=&quot;Impressão Múltiplas Colunas&quot; height=&quot;25%&quot; width=&quot;25%&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://docscielo.github.io/Pilots/images/cielo-lio/print-columns.png&quot; alt=&quot;Impressão Múltiplas Colunas&quot; height=&quot;25%&quot; width=&quot;25%&quot; /&gt;&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -5285,8 +5285,8 @@ O método recebe como parâmetro o &lt;code class=&quot;highlighter-rouge&quot;&
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;https://developercielo.github.io/images/cielo-lio/cielo.png&quot; alt=&quot;Impressão Imagem&quot; height=&quot;50%&quot; width=&quot;50%&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;https://developercielo.github.io/images/cielo-lio/print-image.png&quot; alt=&quot;Impressão Imagem&quot; height=&quot;25%&quot; width=&quot;25%&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/cielo-lio/cielo.png&quot; alt=&quot;Impressão Imagem&quot; height=&quot;50%&quot; width=&quot;50%&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/cielo-lio/print-image.png&quot; alt=&quot;Impressão Imagem&quot; height=&quot;25%&quot; width=&quot;25%&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -5753,9 +5753,9 @@ Clique na aba Apps -&amp;gt; Clique no aplicativo Cielo Store -&amp;gt; Escolha 
     <entry>
         <title>Configurando Boletos e Débito Online</title>
         <category term="tutorial" />
-        <link href="https://developercielo.github.io/tutorial/habilitacao-meios-de-pagamento"/>
+        <link href="https://docscielo.github.io/Pilots/tutorial/habilitacao-meios-de-pagamento"/>
         <updated>2015-08-25T00:00:00+00:00</updated>
-        <id>https://developercielo.github.io/tutorial/habilitacao-meios-de-pagamento</id>
+        <id>https://docscielo.github.io/Pilots/tutorial/habilitacao-meios-de-pagamento</id>
         <content type="html">&lt;h1 id=&quot;meios-de-pagamento&quot;&gt;Meios de Pagamento&lt;/h1&gt;
 
 &lt;h2 id=&quot;sobre-este-manual&quot;&gt;Sobre este Manual&lt;/h2&gt;
@@ -5833,7 +5833,7 @@ O Comprador acessará via a loja o Ambiente do Banco e realizará uma transferê
   &lt;li&gt;&lt;strong&gt;Vencimento&lt;/strong&gt;: 5 dias&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/boleto-bradesco-passo-2.png&quot; alt=&quot;Boleto Bradesco&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/boleto-bradesco-passo-2.png&quot; alt=&quot;Boleto Bradesco&quot; /&gt;&lt;/p&gt;
 
 &lt;aside class=&quot;notice&quot;&gt;Obs: O vencimento deverá ser o mesmo configurado no Checkout Cielo.&lt;/aside&gt;
 
@@ -5844,7 +5844,7 @@ O Comprador acessará via a loja o Ambiente do Banco e realizará uma transferê
   &lt;li&gt;Para os campos de &lt;strong&gt;URL de resposta, URL de falha e URL de redirecionamento&lt;/strong&gt;, inserir o seguinte link: &lt;code class=&quot;highlighter-rouge&quot;&gt;https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/boleto-bradesco-passo-3.png&quot; alt=&quot;Boleto Bradesco&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/boleto-bradesco-passo-3.png&quot; alt=&quot;Boleto Bradesco&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; Em cada um dos três Paramêtros a seguir, preencher com o Parâmetro de Comunicação abaixo:&lt;/p&gt;
 
@@ -5871,7 +5871,7 @@ O Comprador acessará via a loja o Ambiente do Banco e realizará uma transferê
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/boleto-bradesco-passo-4.png&quot; alt=&quot;Boleto Bradesco&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/boleto-bradesco-passo-4.png&quot; alt=&quot;Boleto Bradesco&quot; /&gt;&lt;/p&gt;
 
 &lt;aside class=&quot;notice&quot;&gt;Obs: Não podem existir espaços ou quebras de texto nos parâmetros expostos acima.&lt;/aside&gt;
 
@@ -5901,7 +5901,7 @@ O Comprador acessará via a loja o Ambiente do Banco e realizará uma transferê
 
 &lt;aside class=&quot;notice&quot;&gt;Obs: A afiliação do Bradesco está localizada no topo do gerenciador web.&lt;/aside&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/boleto-bradesco-passo-5.png&quot; alt=&quot;Boleto Bradesco&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/boleto-bradesco-passo-5.png&quot; alt=&quot;Boleto Bradesco&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; O Cielo e-Commerce confirmará, em até 3 dias, a inclusão do boleto como forma de pagamento da sua loja online.&lt;/p&gt;
 
@@ -6007,9 +6007,9 @@ O Comprador acessará via a loja o Ambiente do Banco e realizará uma transferê
     <entry>
         <title>Artigos e informações</title>
         <category term="tutorial" />
-        <link href="https://developercielo.github.io/tutorial/artigos"/>
+        <link href="https://docscielo.github.io/Pilots/tutorial/artigos"/>
         <updated>2015-08-25T00:00:00+00:00</updated>
-        <id>https://developercielo.github.io/tutorial/artigos</id>
+        <id>https://docscielo.github.io/Pilots/tutorial/artigos</id>
         <content type="html">&lt;h1 id=&quot;como-usar-azure-kubernetes-services&quot;&gt;Como usar Azure Kubernetes Services&lt;/h1&gt;
 
 &lt;h2 id=&quot;sobre-o-autor&quot;&gt;Sobre o Autor:&lt;/h2&gt;
@@ -6157,7 +6157,7 @@ Por fim, vamos acessar o IP da nossa aplicação para ver se deu tudo certo!&lt;
 
 &lt;h2 id=&quot;números-de-cartões&quot;&gt;Números de cartões&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/cartao.png&quot; alt=&quot;Cartão Visa&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/cartao.png&quot; alt=&quot;Cartão Visa&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Basicamente, o número do cartão é composto por três partes:&lt;/p&gt;
 
@@ -6564,9 +6564,9 @@ Por fim, vamos acessar o IP da nossa aplicação para ver se deu tudo certo!&lt;
     <entry>
         <title>Manual de Integração</title>
         <category term="manual" />
-        <link href="https://developercielo.github.io/manual/webservice-1-5"/>
+        <link href="https://docscielo.github.io/Pilots/manual/webservice-1-5"/>
         <updated>2015-03-25T00:00:00+00:00</updated>
-        <id>https://developercielo.github.io/manual/webservice-1.5</id>
+        <id>https://docscielo.github.io/Pilots/manual/webservice-1.5</id>
         <content type="html">&lt;h1 id=&quot;integração-webservice-15&quot;&gt;Integração Webservice 1.5&lt;/h1&gt;
 
 &lt;aside class=&quot;warning&quot;&gt;O Webservice 1.5 foi descontinuado. O documento abaixo existe como base de conhecimento para clientes ja integrados. Novos cadastros não serão realizados pelo atendimento Cielo&lt;/aside&gt;
@@ -6719,15 +6719,15 @@ para iniciar a operação no ambiente de produção.&lt;/p&gt;
 
 &lt;h3 id=&quot;internet-explorer&quot;&gt;Internet Explorer:&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-ie.jpg&quot; alt=&quot;Certificado EV Internet Explorer&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-ie.jpg&quot; alt=&quot;Certificado EV Internet Explorer&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;firefox&quot;&gt;Firefox&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-firefox.jpg&quot; alt=&quot;Certificado EV Firefox&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-firefox.jpg&quot; alt=&quot;Certificado EV Firefox&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;google-chrome&quot;&gt;Google Chrome&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-chrome.jpg&quot; alt=&quot;Certificado EV Google Chrome&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-chrome.jpg&quot; alt=&quot;Certificado EV Google Chrome&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;o-que-é-certificado-ev-ssl&quot;&gt;O que é Certificado EV SSL?&lt;/h2&gt;
 
@@ -6740,10 +6740,10 @@ para iniciar a operação no ambiente de produção.&lt;/p&gt;
 &lt;p&gt;Basta instalar os três arquivos a seguir na Trustedstore do servidor. A Cielo não oferece suporte para a instalação do Certificado. Caso não esteja seguro sobre como realizar a instalação do Certificado EV, então você deverá ser contatado o suporte do fornecedor do seu servidor.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developercielo.github.io/attachment/Root.crt&quot;&gt;Certificado Raiz&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developercielo.github.io/attachment/Intermediate1.crt&quot;&gt;Certificado Intermediária 1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developercielo.github.io/attachment/Intermediate2.crt&quot;&gt;Certificado Intermediária 2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developercielo.github.io/attachment/ServerCertificate.crt&quot;&gt;Certificado E-Commerce Cielo&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docscielo.github.io/Pilots/attachment/Root.crt&quot;&gt;Certificado Raiz&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docscielo.github.io/Pilots/attachment/Intermediate1.crt&quot;&gt;Certificado Intermediária 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docscielo.github.io/Pilots/attachment/Intermediate2.crt&quot;&gt;Certificado Intermediária 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docscielo.github.io/Pilots/attachment/ServerCertificate.crt&quot;&gt;Certificado E-Commerce Cielo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;passo-a-passo-para-a-instalação&quot;&gt;Passo a Passo para a Instalação&lt;/h2&gt;
@@ -6763,83 +6763,83 @@ para iniciar a operação no ambiente de produção.&lt;/p&gt;
 &lt;p&gt;Salvar os arquivos abaixo em uma pasta nova, ou que relembre facilmente, pois será utilizada posteriormente:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developercielo.github.io/attachment/Root.crt&quot;&gt;Certificado Raiz&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developercielo.github.io/attachment/Intermediate1.crt&quot;&gt;Certificado Intermediária 1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developercielo.github.io/attachment/Intermediate2.crt&quot;&gt;Certificado Intermediária 2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developercielo.github.io/attachment/ServerCertificate.crt&quot;&gt;Certificado E-Commerce Cielo&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docscielo.github.io/Pilots/attachment/Root.crt&quot;&gt;Certificado Raiz&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docscielo.github.io/Pilots/attachment/Intermediate1.crt&quot;&gt;Certificado Intermediária 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docscielo.github.io/Pilots/attachment/Intermediate2.crt&quot;&gt;Certificado Intermediária 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docscielo.github.io/Pilots/attachment/ServerCertificate.crt&quot;&gt;Certificado E-Commerce Cielo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;2o-passo&quot;&gt;2o Passo:&lt;/h4&gt;
 
 &lt;p&gt;No “Internet Explorer”, clique no menu “Ferramentas” e acesse as “Opções da Internet”:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-1.jpg&quot; alt=&quot;Instalar IE&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-1.jpg&quot; alt=&quot;Instalar IE&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;No “Firefox”, clique no menu “Abrir Menu” e acesse “Avançado” e “Opções”:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ff-1.jpg&quot; alt=&quot;Instalar FF&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ff-1.jpg&quot; alt=&quot;Instalar FF&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;No “Chrome”, clique no “Personalizar e Controlar o Google Chrome” e acesse “Configurações” e “Mostrar configurações avançadas… “Alterar Configurações de Proxy e “Conteúdo” e Certificados:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-gc-1.jpg&quot; alt=&quot;Instalar GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-gc-1.jpg&quot; alt=&quot;Instalar GC&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;3o-passo&quot;&gt;3o Passo:&lt;/h4&gt;
 
 &lt;p&gt;No Internet Explorer, em “Certificados”, clique em “Importar”.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-2.jpg&quot; alt=&quot;Instalar IE&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-2.jpg&quot; alt=&quot;Instalar IE&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;No Firefox clique em “Ver Certificados”, clique em “Importar”&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ff-2.jpg&quot; alt=&quot;Instalar FF&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ff-2.jpg&quot; alt=&quot;Instalar FF&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;No Chrome clique em “Gerenciar Certificados”, clique em “Importar”&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-gc-2.jpg&quot; alt=&quot;Instalar GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-gc-2.jpg&quot; alt=&quot;Instalar GC&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;4o-passo&quot;&gt;4o Passo:&lt;/h4&gt;
 
 &lt;p&gt;No Internet Explorer e Chrome “Assistente para Importação de Certificados”, clique em “Avançar”.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-gc-3.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-gc-3.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-gc-4.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-gc-4.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;No Firefox “Aba Servidores ”, clique em “Importar”&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ff-3.jpg&quot; alt=&quot;Instalar FF&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ff-3.jpg&quot; alt=&quot;Instalar FF&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;5o-passo&quot;&gt;5o Passo:&lt;/h4&gt;
 
 &lt;p&gt;No Chrome e Internet Explorer “Assistente para Importação de Certificados”, clique em “Procurar”, procure a pasta onde estão os arquivos e selecione o arquivo “ecommerce.cielo.com.br.crt, clique em “Abrir” e em seguida “Avançar”.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-gc-5.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-gc-5.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-gc-6.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-gc-6.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;6o-passo&quot;&gt;6o Passo:&lt;/h4&gt;
 
 &lt;p&gt;Selecionar a opção desejada: adicionar o Certificado em uma pasta padrão ou procurar a pasta de sua escolha.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-gc-7.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-gc-7.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;7o-passo&quot;&gt;7o Passo:&lt;/h4&gt;
 
 &lt;p&gt;Clique em “Concluir”.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-gc-8.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-gc-8.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;8o-passo&quot;&gt;8o Passo:&lt;/h4&gt;
 
 &lt;p&gt;Clique em “Ok” para concluir a importação.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-gc-9.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-gc-9.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
 
 &lt;aside class=&quot;notice&quot;&gt;No Firefox não consta a mensagem de Importação com Êxito, apenas conclui a importação.&lt;/aside&gt;
 
 &lt;p&gt;O Certificado poderá ser visualizado na aba padrão “Outras Pessoas” ou na escolhida pelo cliente.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-gc-10.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-gc-10.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;9o-passo&quot;&gt;9o Passo:&lt;/h4&gt;
 
@@ -6920,7 +6920,7 @@ mensagem=&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; e
 
 &lt;p&gt;A partir da criação de uma transação, ela pode assumir os seguintes status:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/status.png&quot; alt=&quot;status transações&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/status.png&quot; alt=&quot;status transações&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As transições de status podem ser realizadas através da troca de mensagens entre a loja e a Cielo, ou de forma automática, por exemplo, quando o prazo para a captura de transação autorizada expirar.&lt;/p&gt;
 
@@ -7279,13 +7279,13 @@ mensagem=&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; e
 
 &lt;p&gt;O diagrama abaixo facilita a visualização do fluxo completo de navegação:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/fluxo.png&quot; alt=&quot;fluxo&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/fluxo.png&quot; alt=&quot;fluxo&quot; /&gt;&lt;/p&gt;
 
 &lt;aside class=&quot;notice&quot;&gt;Geralmente, a URL de retorno segue o seguinte formato: https://minhaloja.com.br/pedido?id=12345678. Essa página deve utilizar o número do pedido para buscar internamente o TID que foi retornado pela Cielo. Com esta informação, a página deve realizar uma requisição de Consulta via TID ao Web Service da Cielo e interpretar o resultado para exibir ao cliente&lt;/aside&gt;
 
 &lt;p&gt;Por outro lado, quando não há autenticação, não existe troca de contextos ou redirects, e a integração é mais simples:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/fluxo-simples.png&quot; alt=&quot;fluxo-simples&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/fluxo-simples.png&quot; alt=&quot;fluxo-simples&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;tipos-de-retorno&quot;&gt;Tipos de retorno&lt;/h2&gt;
 
@@ -7425,7 +7425,7 @@ mensagem=&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; e
 
 &lt;p&gt;Quando há autenticação, o fluxo de execução da autorização acaba sendo feito em duas etapas, conforme mostrado no diagrama abaixo:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/fluxo-autenticacao.png&quot; alt=&quot;fluxo-autenticacao&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/fluxo-autenticacao.png&quot; alt=&quot;fluxo-autenticacao&quot; /&gt;&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;fecharPedido() – acontece quando o portador do cartão finaliza o pedido e dá início ao pagamento da compra&lt;/li&gt;
@@ -8881,7 +8881,7 @@ mensagem=&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; e
   &lt;li&gt;Caso a transação recorrente tenha sido enviada através de um cartão, sua autorização será negada e serão retornados os dados do novo cartão, conforme o diagrama abaixo:&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/remova-facil.png&quot; alt=&quot;remova fácil&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/remova-facil.png&quot; alt=&quot;remova fácil&quot; /&gt;&lt;/p&gt;
 
 &lt;aside class=&quot;notice&quot;&gt;O Renova Fácil só está disponível para transações recorrentes. A efetividade do Renova Fácil depende do uso correto das transações recorrentes devidamente sinalizadas como tal. Consulte os bancos e bandeiras participantes com o Suporte Web Cielo eCommerce.&lt;/aside&gt;
 
@@ -9187,7 +9187,7 @@ das transações que pararam após a execução deste processo. A mensagem para 
   &lt;li&gt;Caso a transação recorrente tenha sido enviada através de um token, sua autorização será negada e será retornado um novo token para ser utilizado, conforme o diagrama abaixo:&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/remova-facil-token.png&quot; alt=&quot;remova fácil com token&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/remova-facil-token.png&quot; alt=&quot;remova fácil com token&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;geração-de-token&quot;&gt;Geração de Token&lt;/h3&gt;
 
@@ -10273,7 +10273,7 @@ O lote a ser gerado deverá conter uma ou mais transações do mesmo tipo de ope
 
 &lt;p&gt;Após a conclusão do desenvolvimento, a etapa de Homologação garantirá que a implementação foi adequada e a solução do Cliente está apta para interagir no ambiente produtivo da Cielo. Ela sempre acontece depois que o desenvolvimento foi finalizado e testado. É composta pelas seguintes etapas:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/fluxo-testes.png&quot; alt=&quot;fluxo testes&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/fluxo-testes.png&quot; alt=&quot;fluxo testes&quot; /&gt;&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Finalização do Cadastro: nesta etapa o Cliente deve enviar um email para &lt;a href=&quot;mailto:cieloeCommerce@cielo.com.br&quot;&gt;cieloeCommerce@cielo.com.br&lt;/a&gt;, solicitando a Chave de Produção. A mensagem deve conter as
@@ -10330,15 +10330,15 @@ seguintes informações, que irão completar o cadastro:
 
 &lt;p&gt;&lt;strong&gt;Google Chrome&lt;/strong&gt;:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-chrome.png&quot; alt=&quot;Certificado no Google Chrome&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-chrome.png&quot; alt=&quot;Certificado no Google Chrome&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Mozilla Firefox&lt;/strong&gt;:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-firefox.png&quot; alt=&quot;Certificado no Mozilla Firefox&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-firefox.png&quot; alt=&quot;Certificado no Mozilla Firefox&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Internet Explorer&lt;/strong&gt;:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-ie.png&quot; alt=&quot;Certificado no Internet Explorer&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-ie.png&quot; alt=&quot;Certificado no Internet Explorer&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Programa &lt;strong&gt;Verified by Visa&lt;/strong&gt; (Visa)&lt;/p&gt;
 
@@ -10353,9 +10353,9 @@ seguintes informações, que irão completar o cadastro:
     <entry>
         <title>Tutorial - Guia de Migração</title>
         <category term="tutorial" />
-        <link href="https://developercielo.github.io/tutorial/guia-de-migracao"/>
+        <link href="https://docscielo.github.io/Pilots/tutorial/guia-de-migracao"/>
         <updated>2015-03-25T00:00:00+00:00</updated>
-        <id>https://developercielo.github.io/tutorial/guia-de-migracao</id>
+        <id>https://docscielo.github.io/Pilots/tutorial/guia-de-migracao</id>
         <content type="html">&lt;h1 id=&quot;guia-de-migração-cielo&quot;&gt;Guia de migração Cielo&lt;/h1&gt;
 
 &lt;aside class=&quot;warning&quot;&gt;O Webservice 1.5 foi descontinuado. O documento abaixo existe como base de conhecimento para clientes ja integrados. Novos cadastros não serão realizados pelo atendimento Cielo&lt;/aside&gt;
@@ -12055,9 +12055,9 @@ seguintes informações, que irão completar o cadastro:
     <entry>
         <title>FAQ</title>
         <category term="faq" />
-        <link href="https://developercielo.github.io/faq/faq-webservice-1-5"/>
+        <link href="https://docscielo.github.io/Pilots/faq/faq-webservice-1-5"/>
         <updated>2015-03-25T00:00:00+00:00</updated>
-        <id>https://developercielo.github.io/faq/faq-webservice-1.5</id>
+        <id>https://docscielo.github.io/Pilots/faq/faq-webservice-1.5</id>
         <content type="html">&lt;h1 id=&quot;dúvidas-frequentes&quot;&gt;Dúvidas frequentes&lt;/h1&gt;
 
 &lt;aside class=&quot;warning&quot;&gt;O Webservice 1.5 foi descontinuado. O documento abaixo existe como base de conhecimento para clientes ja integrados. Novos cadastros não serão realizados pelo atendimento Cielo&lt;/aside&gt;
@@ -12168,9 +12168,9 @@ seguintes informações, que irão completar o cadastro:
     <entry>
         <title>Sdks Cielo</title>
         <category term="" />
-        <link href="https://developercielo.github.io/sdks-cielo"/>
+        <link href="https://docscielo.github.io/Pilots/sdks-cielo"/>
         <updated>2003-03-03T00:00:00+00:00</updated>
-        <id>https://developercielo.github.io/sdks-cielo</id>
+        <id>https://docscielo.github.io/Pilots/sdks-cielo</id>
         <content type="html">&lt;hr /&gt;
 &lt;p&gt;layout: tutorial
 title:  SDKs
@@ -12292,9 +12292,9 @@ tags:&lt;/p&gt;
     <entry>
         <title>FAQ</title>
         <category term="faq" />
-        <link href="https://developercielo.github.io/faq/faq-cielo-lio"/>
+        <link href="https://docscielo.github.io/Pilots/faq/faq-cielo-lio"/>
         <updated>2003-03-03T00:00:00+00:00</updated>
-        <id>https://developercielo.github.io/faq/faq-cielo-lio</id>
+        <id>https://docscielo.github.io/Pilots/faq/faq-cielo-lio</id>
         <content type="html">&lt;h1 id=&quot;dúvidas-plataforma-lio&quot;&gt;Dúvidas Plataforma LIO&lt;/h1&gt;
 
 &lt;h2 id=&quot;se-o-estabelecimento-comercial-trocar-a-lio-v1-pela-lio-v2-o-que-ele-precisa-fazer-para-ter-o-aplicativo-na-nova-máquina&quot;&gt;Se o estabelecimento comercial trocar a LIO v1 pela LIO v2, o que ele precisa fazer para ter o aplicativo na nova máquina?&lt;/h2&gt;
@@ -12526,9 +12526,9 @@ Caso decida por Aplicativo Público na Cielo Store, você já consegue fazer o u
     <entry>
         <title>Tutoriais</title>
         <category term="tutorial" />
-        <link href="https://developercielo.github.io/tutorial/tutoriais-3-0"/>
+        <link href="https://docscielo.github.io/Pilots/tutorial/tutoriais-3-0"/>
         <updated>2003-03-03T00:00:00+00:00</updated>
-        <id>https://developercielo.github.io/tutorial/tutoriais-3.0</id>
+        <id>https://docscielo.github.io/Pilots/tutorial/tutoriais-3.0</id>
         <content type="html">&lt;h1 id=&quot;backoffice-api-cielo&quot;&gt;Backoffice API Cielo&lt;/h1&gt;
 
 &lt;p&gt;O objetivo deste documento é orientar o lojista sobre como acessar Backoffice da API Cielo Ecommerce. Descrevendo as funcionalidades, os métodos a serem utilizados, listando informações necessárias e provendo exemplos.&lt;/p&gt;
@@ -12548,21 +12548,21 @@ Caso decida por Aplicativo Público na Cielo Store, você já consegue fazer o u
 
 &lt;p&gt;Para acessar o Backoffice, é necessário que o lojista realize login no Site Cielo, inserindo sua Afiliação (Nº de estabelecimento) e Usuário:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/i0.png&quot; alt=&quot;Acessando o Backoffice&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i0.png&quot; alt=&quot;Acessando o Backoffice&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/i1.png&quot; alt=&quot;Acessando o Backoffice&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i1.png&quot; alt=&quot;Acessando o Backoffice&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Em seguida é necessário incluir sua Senha:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/i2.png&quot; alt=&quot;Acessando o Backoffice&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i2.png&quot; alt=&quot;Acessando o Backoffice&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Na área de “Vendas Online” basta clicar em Webservice 3.0&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/i3.png&quot; alt=&quot;Acessando o Backoffice&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i3.png&quot; alt=&quot;Acessando o Backoffice&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Você será direcionado para o Backoffice:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/i4.png&quot; alt=&quot;Acessando o Backoffice&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i4.png&quot; alt=&quot;Acessando o Backoffice&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Nesta área você pode acessar as outras funcionalidades do Backoffice&lt;/p&gt;
 
@@ -12570,7 +12570,7 @@ Caso decida por Aplicativo Público na Cielo Store, você já consegue fazer o u
 
 &lt;p&gt;Clique no link destacado abaixo:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/i45.png&quot; alt=&quot;Desenvolvedor&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i45.png&quot; alt=&quot;Desenvolvedor&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Você será redirecionado para&lt;/p&gt;
 
@@ -12580,11 +12580,11 @@ Caso decida por Aplicativo Público na Cielo Store, você já consegue fazer o u
 
 &lt;p&gt;Ao acessar a opção abaixo:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/i5.png&quot; alt=&quot;Pesquisa de transações&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i5.png&quot; alt=&quot;Pesquisa de transações&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Você será direcionado a tela de pesquisa de transações:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/i6.png&quot; alt=&quot;Pesquisa de transações&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i6.png&quot; alt=&quot;Pesquisa de transações&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Essa tela permite buscar todas as transações realizadas com sucesso na API Cielo Ecommerce e realizar a captura ou cancelamento de transações.&lt;/p&gt;
 
@@ -12658,13 +12658,13 @@ Caso decida por Aplicativo Público na Cielo Store, você já consegue fazer o u
 
 &lt;p&gt;Ao realizar uma pesquisa, é possível realizar a captura ou cancelamento de transações. Ao identificar a transação que deseje cancelar ou capturar:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/i7.png&quot; alt=&quot;capturando transações&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i7.png&quot; alt=&quot;capturando transações&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/i8.png&quot; alt=&quot;capturando transações&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i8.png&quot; alt=&quot;capturando transações&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Basta realizar o cancelamento ou a Captura (O botão apresentado depende do status da transação no momento de exibição.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/i9.png&quot; alt=&quot;capturando transações&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i9.png&quot; alt=&quot;capturando transações&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Confirme o valor a ser capturado ou cancelado.
 &lt;strong&gt;OBS:&lt;/strong&gt; Alterar o valor no menu acima, define o comportamento do Cancelamento/Captura Parcial.&lt;/p&gt;
@@ -12673,21 +12673,21 @@ Caso decida por Aplicativo Público na Cielo Store, você já consegue fazer o u
 
 &lt;p&gt;Ao realizar uma pesquisa, é possível realizar a captura ou cancelamento de transações em bloco. Basta selecionar quais serão modificadas e clique em “Opções”:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/i10.png&quot; alt=&quot;bloco de transações&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i10.png&quot; alt=&quot;bloco de transações&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Selecione a opção desejada:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/i11.png&quot; alt=&quot;bloco de transações&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i11.png&quot; alt=&quot;bloco de transações&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ao selecionar a opção desejada, você será direcionado a uma tela onde poderá ser definido o valor da captura/cancelamento.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/i12.png&quot; alt=&quot;bloco de transações&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i12.png&quot; alt=&quot;bloco de transações&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;utilizando-o-extrato&quot;&gt;Utilizando o Extrato&lt;/h2&gt;
 
 &lt;p&gt;O Extrato de cobrança permite visualizar o valor a ser cobrado pela utilização das funcionalidades da API Cielo Ecommerce. Basta selecionar o mês e ano que se deseja exibir.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/i13.png&quot; alt=&quot;extrato&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i13.png&quot; alt=&quot;extrato&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Para maiores informações a respeito dos serviços cobrados, entre em contato com nossa equipe de suporte:&lt;/p&gt;
 
@@ -12709,11 +12709,11 @@ Caso decida por Aplicativo Público na Cielo Store, você já consegue fazer o u
 
 &lt;p&gt;Acesse a tela de configuração e use o link “&lt;strong&gt;Tipo de pagamento&lt;/strong&gt;”:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/i14.png&quot; alt=&quot;Recorrência&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i14.png&quot; alt=&quot;Recorrência&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Você será direcionado para a tela de configuração:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/i15.png&quot; alt=&quot;Recorrência&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i15.png&quot; alt=&quot;Recorrência&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Nessa tela é possível alterar:&lt;/p&gt;
 
@@ -12727,9 +12727,9 @@ Caso decida por Aplicativo Público na Cielo Store, você já consegue fazer o u
     <entry>
         <title>FAQ</title>
         <category term="faq" />
-        <link href="https://developercielo.github.io/faq/faq-api-3-0"/>
+        <link href="https://docscielo.github.io/Pilots/faq/faq-api-3-0"/>
         <updated>2003-03-03T00:00:00+00:00</updated>
-        <id>https://developercielo.github.io/faq/faq-api-3.0</id>
+        <id>https://docscielo.github.io/Pilots/faq/faq-api-3.0</id>
         <content type="html">&lt;h1 id=&quot;dúvidas-de-negócio&quot;&gt;Dúvidas de negócio&lt;/h1&gt;
 
 &lt;h2 id=&quot;1-o-que-é-a-api-cielo-ecommerce&quot;&gt;1. O que é a API Cielo eCommerce?&lt;/h2&gt;
@@ -13222,9 +13222,9 @@ Caso um chargeback seja realizado, a Cielo não se responsabiliza por reembolsar
     <entry>
         <title>Manual de Integração</title>
         <category term="manual" />
-        <link href="https://developercielo.github.io/manual/cielo-ecommerce"/>
+        <link href="https://docscielo.github.io/Pilots/manual/cielo-ecommerce"/>
         <updated>2003-03-03T00:00:00+00:00</updated>
-        <id>https://developercielo.github.io/manual/cielo-ecommerce</id>
+        <id>https://docscielo.github.io/Pilots/manual/cielo-ecommerce</id>
         <content type="html">&lt;h1 id=&quot;visão-geral---api-cielo-ecommerce&quot;&gt;Visão geral - API Cielo eCommerce&lt;/h1&gt;
 
 &lt;p&gt;O objetivo desta documentação é orientar o desenvolvedor sobre como integrar com a API Cielo eCommerce da Cielo, descrevendo as funcionalidades, os métodos a serem utilizados, listando informações a serem enviadas e recebidas, e provendo exemplos.&lt;/p&gt;
@@ -13459,15 +13459,15 @@ Caso um chargeback seja realizado, a Cielo não se responsabiliza por reembolsar
 
 &lt;h3 id=&quot;internet-explorer&quot;&gt;Internet Explorer:&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-ie.jpg&quot; alt=&quot;Certificado EV Internet Explorer&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-ie.jpg&quot; alt=&quot;Certificado EV Internet Explorer&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;firefox&quot;&gt;Firefox&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-firefox.jpg&quot; alt=&quot;Certificado EV Firefox&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-firefox.jpg&quot; alt=&quot;Certificado EV Firefox&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;google-chrome&quot;&gt;Google Chrome&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-chrome.jpg&quot; alt=&quot;Certificado EV Google Chrome&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-chrome.jpg&quot; alt=&quot;Certificado EV Google Chrome&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;o-que-é-certificado-ev-ssl&quot;&gt;O que é Certificado EV SSL?&lt;/h2&gt;
 
@@ -13511,73 +13511,73 @@ Caso um chargeback seja realizado, a Cielo não se responsabiliza por reembolsar
 
 &lt;p&gt;No “Internet Explorer”, clique no menu “Ferramentas” e acesse as “Opções da Internet”:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-1.jpg&quot; alt=&quot;Instalar IE&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-1.jpg&quot; alt=&quot;Instalar IE&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;No “Firefox”, clique no menu “Abrir Menu” e acesse “Avançado” e “Opções”:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ff-1.jpg&quot; alt=&quot;Instalar FF&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ff-1.jpg&quot; alt=&quot;Instalar FF&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;No “Chrome”, clique no “Personalizar e Controlar o Google Chrome” e acesse “Configurações” e “Mostrar configurações avançadas… “Alterar Configurações de Proxy e “Conteúdo” e Certificados:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-gc-1.jpg&quot; alt=&quot;Instalar GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-gc-1.jpg&quot; alt=&quot;Instalar GC&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;3o Passo:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;No Internet Explorer, em “Certificados”, clique em “Importar”.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-2.jpg&quot; alt=&quot;Instalar IE&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-2.jpg&quot; alt=&quot;Instalar IE&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;No Firefox clique em “Ver Certificados”, clique em “Importar”&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ff-2.jpg&quot; alt=&quot;Instalar FF&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ff-2.jpg&quot; alt=&quot;Instalar FF&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;No Chrome clique em “Gerenciar Certificados”, clique em “Importar”&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-gc-2.jpg&quot; alt=&quot;Instalar GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-gc-2.jpg&quot; alt=&quot;Instalar GC&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;4o Passo:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;No Internet Explorer e Chrome “Assistente para Importação de Certificados”, clique em “Avançar”.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-gc-3.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-gc-3.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-gc-4.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-gc-4.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;No Firefox “Aba Servidores ”, clique em “Importar”&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ff-3.jpg&quot; alt=&quot;Instalar FF&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ff-3.jpg&quot; alt=&quot;Instalar FF&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;5o Passo:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;No Chrome e Internet Explorer “Assistente para Importação de Certificados”, clique em “Procurar”, procure a pasta onde estão os arquivos e selecione o arquivo “cieloecommerce.cielo.com.br.crt, clique em “Abrir” e em seguida “Avançar”.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-gc-5.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-gc-5.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-gc-6.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-gc-6.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;6o Passo:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Selecionar a opção desejada: adicionar o Certificado em uma pasta padrão ou procurar a pasta de sua escolha.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-gc-7.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-gc-7.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;7o Passo:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Clique em “Concluir”.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-gc-8.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-gc-8.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;8o Passo:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Clique em “Ok” para concluir a importação.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-gc-9.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-gc-9.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
 
 &lt;aside class=&quot;notice&quot;&gt;No Firefox não consta a mensagem de Importação com Êxito, apenas conclui a importação.&lt;/aside&gt;
 
 &lt;p&gt;O Certificado poderá ser visualizado na aba padrão “Outras Pessoas” ou na escolhida pelo cliente.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-gc-10.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-gc-10.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;9o Passo:&lt;/strong&gt;&lt;/p&gt;
 
@@ -19685,11 +19685,11 @@ Nesse modelo, o sistema do lojista é encarregado por definir o período, os dad
 
 &lt;p&gt;&lt;strong&gt;Estrutura de um RecurrentPaymentID&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/apicieloecommerce/recpaymentid.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/apicieloecommerce/recpaymentid.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Fluxo de uma Recorrência Programada&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/apicieloecommerce/fluxosrecprog.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/apicieloecommerce/fluxosrecprog.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;caso-de-uso-1&quot;&gt;Caso de uso&lt;/h4&gt;
 
@@ -27437,9 +27437,9 @@ Mais informações e integração completa, você encontra no link: https://deve
     <entry>
         <title>Manual de Integração</title>
         <category term="manual" />
-        <link href="https://developercielo.github.io/manual/promotions"/>
+        <link href="https://docscielo.github.io/Pilots/manual/promotions"/>
         <updated>2000-01-03T00:00:00+00:00</updated>
-        <id>https://developercielo.github.io/manual/promotions</id>
+        <id>https://docscielo.github.io/Pilots/manual/promotions</id>
         <content type="html">&lt;h1 id=&quot;visão-geral---promotions&quot;&gt;Visão geral - Promotions&lt;/h1&gt;
 
 &lt;p&gt;Documentação técnica para orientar o desenvolvedor de como realizar uma integração junto à Cielo para o processo de divulgação de ofertas e promoções dos estabelecimentos comerciais que utilizam o Cielo Promo.&lt;/p&gt;
@@ -27487,25 +27487,25 @@ Mais informações e integração completa, você encontra no link: https://deve
 
 &lt;p&gt;Fluxo de autenticação e autorização a ser executado para utilizar os recursos da API:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/apicielopromotions/fluxoautenticacao.png&quot; alt=&quot;Fluxo&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/apicielopromotions/fluxoautenticacao.png&quot; alt=&quot;Fluxo&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;diagrama-de-utilização-demostrando-os-passos-para-o-uso-da-api&quot;&gt;Diagrama de utilização demostrando os passos para o uso da API&lt;/h3&gt;
 
 &lt;p&gt;Passo 1: Chamar recurso /login para obter a página de autenticação e autorização&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/apicielopromotions/passo1.png&quot; alt=&quot;Passo1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/apicielopromotions/passo1.png&quot; alt=&quot;Passo1&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Passo 2: Com o response do passo 1, renderizar o HTML na aplicação para iteração com usuário&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/apicielopromotions/passo2.png&quot; alt=&quot;Passo2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/apicielopromotions/passo2.png&quot; alt=&quot;Passo2&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Passo 3: Após a execução do login, obter através do callback o código de autorização&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/apicielopromotions/passo3.png&quot; alt=&quot;Passo3&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/apicielopromotions/passo3.png&quot; alt=&quot;Passo3&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Passo 4: Com o código de autorização, chamar o recurso /access-token para gerar o access_token necessário para executar as chamadas aos recursos da API&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/apicielopromotions/passo4.png&quot; alt=&quot;Passo4&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/apicielopromotions/passo4.png&quot; alt=&quot;Passo4&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Passo 5: Com a resposta, guardar o access_token (tempo de expiração) e o refresh_token (para regerar o access_token)&lt;/p&gt;
 
@@ -29575,9 +29575,9 @@ Mais informações e integração completa, você encontra no link: https://deve
     <entry>
         <title>Tutoriais</title>
         <category term="tutorial" />
-        <link href="https://developercielo.github.io/tutorial/checkout-tutoriais"/>
+        <link href="https://docscielo.github.io/Pilots/tutorial/checkout-tutoriais"/>
         <updated>2000-01-01T00:00:00+00:00</updated>
-        <id>https://developercielo.github.io/tutorial/checkout-tutoriais</id>
+        <id>https://docscielo.github.io/Pilots/tutorial/checkout-tutoriais</id>
         <content type="html">&lt;h1 id=&quot;tutorial---backoffice&quot;&gt;Tutorial - Backoffice&lt;/h1&gt;
 
 &lt;p&gt;O objetivo deste documento é orientar o lojista sobre como acessar a manipular o Backoffice do Checkout Cielo.&lt;/p&gt;
@@ -29586,19 +29586,19 @@ Mais informações e integração completa, você encontra no link: https://deve
 
 &lt;p&gt;Para acessar o Backoffice do Checkout Cielo, é necessário que o lojista &lt;strong&gt;&lt;a href=&quot;https://www.cielo.com.br/minha-conta&quot;&gt;realize login no Site Cielo&lt;/a&gt;&lt;/strong&gt;, inserindo sua Afiliação (Nº de estabelecimento) e Usuário:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tutoriais-checkout/checkout-login.png&quot; alt=&quot;Login Backoffice Cielo&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tutoriais-checkout/checkout-login.png&quot; alt=&quot;Login Backoffice Cielo&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Em seguida é necessário incluir sua Senha:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tutoriais-checkout/checkout-login-senha.png&quot; alt=&quot;Senha Backoffice Cielo&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tutoriais-checkout/checkout-login-senha.png&quot; alt=&quot;Senha Backoffice Cielo&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Na área de “Vendas Online” basta clicar em Checkout Cielo.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tutoriais-checkout/checkout-vendas-online.png&quot; alt=&quot;Vendas online&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tutoriais-checkout/checkout-vendas-online.png&quot; alt=&quot;Vendas online&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Caso o site principal da Cielo não esteja disponível, basta acessar a URL &lt;a href=&quot;https://cieloecommerce.cielo.com.br/backoffice&quot;&gt;https://cieloecommerce.cielo.com.br/backoffice&lt;/a&gt; e inserir seu e-mail de cadastro e senha.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://developercielo.github.io/images/checkout/tutoriais-checkout/checkout-cielo.png&quot;&gt;!Checkout Cielo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://docscielo.github.io/Pilots/images/checkout/tutoriais-checkout/checkout-cielo.png&quot;&gt;!Checkout Cielo&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;abas-do-backoffice-checkout-cielo&quot;&gt;Abas do Backoffice Checkout Cielo&lt;/h2&gt;
 
@@ -29654,7 +29654,7 @@ Mais informações e integração completa, você encontra no link: https://deve
 
 &lt;aside class=&quot;warning&quot;&gt;Por padrão, transações de crédito expiram em 15 dias. Após esse perido, elas não podem ser capturadas.&lt;/aside&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tutoriais-checkout/checkout-dashboard.png&quot; alt=&quot;DashBoard&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tutoriais-checkout/checkout-dashboard.png&quot; alt=&quot;DashBoard&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;aba-pedidos&quot;&gt;Aba Pedidos&lt;/h2&gt;
 
@@ -29663,11 +29663,11 @@ O resultado da pesquisa é exposto em forma de uma listagem de transações que 
 
 &lt;p&gt;Listagem de Pedidos&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tutoriais-checkout/checkout-pedidos.png&quot; alt=&quot;Pedidos&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tutoriais-checkout/checkout-pedidos.png&quot; alt=&quot;Pedidos&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Detalhes dos Pedidos&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tutoriais-checkout/checkout-pedidos-detalhes.png&quot; alt=&quot;Detalhes do Pedido&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tutoriais-checkout/checkout-pedidos-detalhes.png&quot; alt=&quot;Detalhes do Pedido&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;aba-link-de-pagamento&quot;&gt;Aba Link de Pagamento&lt;/h2&gt;
 
@@ -29684,7 +29684,7 @@ O resultado da pesquisa é exposto em forma de uma listagem de transações que 
 
 &lt;h3 id=&quot;listar-link-de-pagamentos-cadastrados&quot;&gt;Listar Link de pagamentos Cadastrados&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tutoriais-checkout/checkout-listar-link-de-pagamentos.png&quot; alt=&quot;Produtos cadastrados&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tutoriais-checkout/checkout-listar-link-de-pagamentos.png&quot; alt=&quot;Produtos cadastrados&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Clicando no Titulo ou SKU do produto, você será redirecionado a página de informações de Produto, onde todas as características do produto são informadas e onde você pode definir o padrão do Botão (caso a sua integração seja com base no Botão Checkout Cielo) a ser usado na venda desse produto.&lt;/p&gt;
 
@@ -29703,7 +29703,7 @@ O Checkout Cielo considera 5 tipos de produtos: Material Físico, Digital, Servi
   &lt;li&gt;&lt;strong&gt;Pagamentos&lt;/strong&gt; - Pagamentos unicos ou transferência de valores Ex: quitação de dividas etc&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tutoriais-checkout/checkout-cadastrar-link-de-pagamentos.png&quot; alt=&quot;Cadastrar Link de pagamentos&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tutoriais-checkout/checkout-cadastrar-link-de-pagamentos.png&quot; alt=&quot;Cadastrar Link de pagamentos&quot; /&gt;&lt;/p&gt;
 
 &lt;aside class=&quot;notice&quot;&gt;Material Físico exige que um tipo de frete seja cadastrado. &lt;/aside&gt;
 
@@ -29715,7 +29715,7 @@ O Checkout Cielo considera 5 tipos de produtos: Material Físico, Digital, Servi
 
 &lt;p&gt;Após realizar o cadastro do produto/Link de pagamento, a seguinte loja será exibida:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tutoriais-checkout/checkout-detalhes-link-de-pagamentos.png&quot; alt=&quot;Detalhes do produto&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tutoriais-checkout/checkout-detalhes-link-de-pagamentos.png&quot; alt=&quot;Detalhes do produto&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;O Link de pagamentos é exibido de &lt;strong&gt;3 maneiras:&lt;/strong&gt;&lt;/p&gt;
 
@@ -29724,7 +29724,7 @@ O Checkout Cielo considera 5 tipos de produtos: Material Físico, Digital, Servi
 &lt;/ul&gt;
 
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;form&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;method=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'post'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;action=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'https://cieloecommerce.cielo.com.br/transactional/Checkout/BuyNow'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;target=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'blank'&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'hidden'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'id'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;00000000-0000-0000-000000000000/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'image'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'submit'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Comprar'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'https://cieloecommerce.cielo.com.br /BackOffice/Contenthttps://developercielo.github.io/images/botao_comprar_3.jpg'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'hidden'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'id'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;00000000-0000-0000-000000000000/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'image'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'submit'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Comprar'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'https://cieloecommerce.cielo.com.br /BackOffice/Contenthttps://docscielo.github.io/Pilots/images/botao_comprar_3.jpg'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/form&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -29757,7 +29757,7 @@ O Checkout Cielo considera 5 tipos de produtos: Material Físico, Digital, Servi
 
 &lt;p&gt;Esse relatorio apresenta as vendas pagas em um determinado periodo de tempo, sendo separadas por meio de pagamento. Selecionando o periodo e  tipo de pagamento, após pressionar “Buscar” o resultado será apresentado.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tutoriais-checkout/checkout-relatorio-financeiro.png&quot; alt=&quot;Relatório financeiro&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tutoriais-checkout/checkout-relatorio-financeiro.png&quot; alt=&quot;Relatório financeiro&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;relatório-detalhado-de-vendas&quot;&gt;Relatório detalhado de vendas.&lt;/h3&gt;
 
@@ -29765,7 +29765,7 @@ O Checkout Cielo considera 5 tipos de produtos: Material Físico, Digital, Servi
 
 &lt;aside class=&quot;notice&quot;&gt;Pedidos realizados no Modo de teste não são apresentados nesse relatório, mesmo que estejam com o status “PAGO”&lt;/aside&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tutoriais-checkout/checkout-relatorio-detalhado-vendas.png&quot; alt=&quot;Relatório detalhado de vendas&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tutoriais-checkout/checkout-relatorio-detalhado-vendas.png&quot; alt=&quot;Relatório detalhado de vendas&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;listagem-de-clientes&quot;&gt;Listagem de clientes&lt;/h3&gt;
 
@@ -29816,17 +29816,17 @@ O Checkout Cielo considera 5 tipos de produtos: Material Físico, Digital, Servi
 
 &lt;p&gt;A lista do valor cobrado pelos serviços oferecidos pela Cielo será apresentada neste relatório. Todos os dados dos planos e custos transacionais serão apresentados aqui:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tutoriais-checkout/checkout-extrato-cobranca.png&quot; alt=&quot;Extrato de cobrança&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tutoriais-checkout/checkout-extrato-cobranca.png&quot; alt=&quot;Extrato de cobrança&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;relatório-de-recorrência&quot;&gt;Relatório de Recorrência&lt;/h3&gt;
 
 &lt;p&gt;Nesse relatório é possível pesquisar o conjunto de recorrência e suas transações com base em seu ID ou por Status e Intervalo de ocorrência.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tutoriais-checkout/checkout-relatorio-recorrencia.png&quot; alt=&quot;Relatório de Recorrências&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tutoriais-checkout/checkout-relatorio-recorrencia.png&quot; alt=&quot;Relatório de Recorrências&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ao clicar no “+” é aberto a tela de Detalhes da recorrência:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tutoriais-checkout/checkout-detalhes-da-recorrencia.png&quot; alt=&quot;Detalhes da Recorrência&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tutoriais-checkout/checkout-detalhes-da-recorrencia.png&quot; alt=&quot;Detalhes da Recorrência&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Os Detalhes da recorrência informam o carrinho e o histórico de transações agendadas. Ao clicar em “+Detalhes” o lojista é direcionado a tela de detalhes de Pedidos (Ver item “PEDIDOS”)&lt;/p&gt;
 
@@ -29842,7 +29842,7 @@ O Checkout Cielo considera 5 tipos de produtos: Material Físico, Digital, Servi
 
 &lt;p&gt;Nesta página constam os manuais do Checkout Cielo, assim como a pagina de FAQ e de “Duvidas”, onde o lojista pode entrar em contato com a equipe de suporte Checkout Cielo.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tutoriais-checkout/checkout-suporte.png&quot; alt=&quot;Dúvidas&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tutoriais-checkout/checkout-suporte.png&quot; alt=&quot;Dúvidas&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Nessa pagina é possivel entrar em contato a respeito de duvidas Operacionais, tecnicas e Comerciais  e ter acesso aos documentos técnicos e de suporte do Checkout Cielo.&lt;/p&gt;
 
@@ -29859,7 +29859,7 @@ O Checkout Cielo considera 5 tipos de produtos: Material Físico, Digital, Servi
 
 &lt;p&gt;Aqui é possivel alterar o logo do meio de pagamento disponível em sua loja e a cor de fundo do site via o uso da caixa de opções ou digitando o código relativo a cor escolhida (As cores estão no padrão RGB).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tutoriais-checkout/checkout-configuracoes-loja.png&quot; alt=&quot;Configuração Exibição&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tutoriais-checkout/checkout-configuracoes-loja.png&quot; alt=&quot;Configuração Exibição&quot; /&gt;&lt;/p&gt;
 
 &lt;aside class=&quot;notice&quot;&gt;O logo de sua loja será exibido na tela de Checkout centralizado.&lt;/aside&gt;
 
@@ -29867,7 +29867,7 @@ O Checkout Cielo considera 5 tipos de produtos: Material Físico, Digital, Servi
 
 &lt;p&gt;Nesta tela é possível alterar as configurações dos meios de pagamento disponíveis em sua loja, os definindo como ativos ou não, e configurar a URL de retorno, notificação e Mudança de Status.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tutoriais-checkout/checkout-configuracoes-pagamento.png&quot; alt=&quot;Configuração Exibição&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tutoriais-checkout/checkout-configuracoes-pagamento.png&quot; alt=&quot;Configuração Exibição&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;modo-de-teste-checkout-cielo&quot;&gt;Modo de Teste Checkout Cielo&lt;/h4&gt;
 
@@ -29875,7 +29875,7 @@ O Checkout Cielo considera 5 tipos de produtos: Material Físico, Digital, Servi
 
 &lt;p&gt;O modo de teste pode ser ativado marcando a caixa de seleção:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tm01.png&quot; alt=&quot;Ativando Modo de teste&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tm01.png&quot; alt=&quot;Ativando Modo de teste&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Quando a opção for salva, uma tarja vermelha será exibida na parte superior da tela. Ela será exibida em todas as telas do Backoffice e na tela transacional do Checkout Cielo.&lt;/p&gt;
 
@@ -29890,8 +29890,8 @@ O Checkout Cielo considera 5 tipos de produtos: Material Físico, Digital, Servi
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tmbackoffice.png&quot; alt=&quot;Tarja vermelha - Backoffice&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tmtransacional.png&quot; alt=&quot;Tarja vermelha - Transacional&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tmbackoffice.png&quot; alt=&quot;Tarja vermelha - Backoffice&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tmtransacional.png&quot; alt=&quot;Tarja vermelha - Transacional&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -29941,7 +29941,7 @@ O Checkout Cielo considera 5 tipos de produtos: Material Físico, Digital, Servi
 
 &lt;p&gt;Na tela de pedidos, dentro de cada transação, há a opção de reenvio do POST de mudança de status.  Basta clicar nos botões azuis, marcados na imagem abaixo:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tutoriais-checkout/checkout-detalhe-pedidos.png&quot; alt=&quot;Detalhes do pedido&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tutoriais-checkout/checkout-detalhe-pedidos.png&quot; alt=&quot;Detalhes do pedido&quot; /&gt;&lt;/p&gt;
 
 &lt;aside class=&quot;notice&quot;&gt;Os Lojistas da “Loja Virtual Terra Cielo” possuem URL’s de notificação, mudança de Status e Retorno atualizadas automaticamente. Para esses lojistas, não é necessário alterar as URL’s citadas.&lt;/aside&gt;
 
@@ -29951,7 +29951,7 @@ O Checkout Cielo considera 5 tipos de produtos: Material Físico, Digital, Servi
 
 &lt;p&gt;Nesta parte da aba de configurações é possível configurar 4 valores mínimos e descontos por meios de pagamento:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tutoriais-checkout/checkout-configuracoes-de-valores-minimos.png&quot; alt=&quot;Valor minimo parcela&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tutoriais-checkout/checkout-configuracoes-de-valores-minimos.png&quot; alt=&quot;Valor minimo parcela&quot; /&gt;&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -29998,7 +29998,7 @@ O Checkout Cielo considera 5 tipos de produtos: Material Físico, Digital, Servi
 
 &lt;p&gt;Basta marcar a caixa de seleção do cartão que deseja disponibilizar no momento do pagamento. Para desabilita-lo, basta desmarcar a caixa de seleção.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tutoriais-checkout/checkout-cards.png&quot; alt=&quot;Configurando meios de pagamento&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tutoriais-checkout/checkout-cards.png&quot; alt=&quot;Configurando meios de pagamento&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;O parcelamento é definido por bandeira de cartão. O numero de parcelas maximas disponibilizadas para cada cartão passa a ser definida pelo Lojista.&lt;/p&gt;
 
@@ -30012,11 +30012,11 @@ O Checkout Cielo considera 5 tipos de produtos: Material Físico, Digital, Servi
 
 &lt;aside class=&quot;notice&quot;&gt;Se o lojista não tem habilitado o antifraude em seu contrato junto a Cielo ou não enviar no POST a solicitação de analise de fraude, a captura automática não será executada caso esteja configurada para ser efetuada com base no status da analise de risco. Caberá ao lojista a captura manual do pedido.&lt;/aside&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tutoriais-checkout/checkout-anti-fraude.png&quot; alt=&quot;Anti fraude&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tutoriais-checkout/checkout-anti-fraude.png&quot; alt=&quot;Anti fraude&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Campo valor mínimo de analise AF:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tutoriais-checkout/checkout-anti-fraude-valor-minimo.png&quot; alt=&quot;Valor mínimo anti fraude&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tutoriais-checkout/checkout-anti-fraude-valor-minimo.png&quot; alt=&quot;Valor mínimo anti fraude&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;tabela-de-status-do-antifraude&quot;&gt;Tabela de status do Antifraude&lt;/h4&gt;
 
@@ -30079,13 +30079,13 @@ O Checkout Cielo considera 5 tipos de produtos: Material Físico, Digital, Servi
 
 &lt;p&gt;Você pode visualizar o status do antifraude acessando o detalhe da compra, na aba Pedidos e clicando no (+)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tutoriais-checkout/checkout-status-antifraude.png&quot; alt=&quot;Status Antifraude&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tutoriais-checkout/checkout-status-antifraude.png&quot; alt=&quot;Status Antifraude&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;frete-de-correios--serviços&quot;&gt;Frete de Correios &amp;amp; Serviços&lt;/h3&gt;
 
 &lt;p&gt;Nesta área você configura as opções de frete disponiveis em sua Loja. Na seção Informações sobre Frete há uma explicação mais detalhada sobre os tipos de fretes disponiveis no Checkout Cielo. Há tambem na área de fretes de Correiros, uma calculadora de frete para consultas (essa calculadora dá o valor de frete de cada tipo de frete cadastrado para um determinado peso e localidade)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tutoriais-checkout/checkout-frete-correios.png&quot; alt=&quot;Frete Correios&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tutoriais-checkout/checkout-frete-correios.png&quot; alt=&quot;Frete Correios&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;tutorial---link-de-pagamentos&quot;&gt;Tutorial - Link de Pagamentos&lt;/h1&gt;
 
@@ -30106,12 +30106,12 @@ Esse tipo de integração é realizado via o cadastro de um conjunto de itens a 
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/botao.png&quot; alt=&quot;Botão&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/botao.png&quot; alt=&quot;Botão&quot; /&gt;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Botão&lt;/strong&gt;&lt;/td&gt;
       &lt;td&gt;É um código HTML que ao ser colado em um site, vai direcionar o comprador a tela transacional - Ideal para uso em &lt;strong&gt;hotSites&lt;/strong&gt; ou &lt;strong&gt;E-mail Marketing&lt;/strong&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/qrcode.png&quot; alt=&quot;QRCODE&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/qrcode.png&quot; alt=&quot;QRCODE&quot; /&gt;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;QRCODE&lt;/strong&gt;&lt;/td&gt;
       &lt;td&gt;Código interpretável por Smartphones e Tablets - Ideal para uso em &lt;strong&gt;Marketing impressos&lt;/strong&gt; ou &lt;strong&gt;Digital&lt;/strong&gt;&lt;/td&gt;
     &lt;/tr&gt;
@@ -30164,7 +30164,7 @@ Esse tipo de integração é realizado via o cadastro de um conjunto de itens a 
 
 &lt;h4 id=&quot;fluxo-do-link-de-pagamento&quot;&gt;Fluxo do Link de Pagamento&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/intbt.png&quot; alt=&quot;Fluxo de integração Checkout Cielo Botão&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/intbt.png&quot; alt=&quot;Fluxo de integração Checkout Cielo Botão&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;criando-um-link-de-pagamentos&quot;&gt;Criando Um Link de pagamentos&lt;/h2&gt;
 
@@ -30182,11 +30182,11 @@ Esse tipo de integração é realizado via o cadastro de um conjunto de itens a 
 
 &lt;p&gt;&lt;strong&gt;Tela de Cadastro&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/btcadastro.png&quot; alt=&quot;Cadastro de Botão&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/btcadastro.png&quot; alt=&quot;Cadastro de Botão&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Botão Cadastrado:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/btcadastro2.png&quot; alt=&quot;Cadastro de Botão&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/btcadastro2.png&quot; alt=&quot;Cadastro de Botão&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Abaixo a listagem de itens que devem ser cadastrados para a criação do botão:&lt;/p&gt;
 
@@ -30299,9 +30299,9 @@ Esse tipo de integração é realizado via o cadastro de um conjunto de itens a 
     <entry>
         <title>FAQ</title>
         <category term="faq" />
-        <link href="https://developercielo.github.io/faq/checkout-faq"/>
+        <link href="https://docscielo.github.io/Pilots/faq/checkout-faq"/>
         <updated>2000-01-01T00:00:00+00:00</updated>
-        <id>https://developercielo.github.io/faq/checkout-faq</id>
+        <id>https://docscielo.github.io/Pilots/faq/checkout-faq</id>
         <content type="html">&lt;h1 id=&quot;dúvidas-de-integração&quot;&gt;Dúvidas de Integração&lt;/h1&gt;
 
 &lt;h2 id=&quot;qual-a-diferença-entre-o-tipo-de-integração-usada-no-checkout-cielo&quot;&gt;Qual a diferença entre o tipo de Integração usada no CHECKOUT CIELO?&lt;/h2&gt;
@@ -30315,7 +30315,7 @@ Esse tipo de integração é realizado via o cadastro de um conjunto de itens a 
 
 &lt;h2 id=&quot;como-eu-crio-o-botão&quot;&gt;Como eu crio o Botão?&lt;/h2&gt;
 
-&lt;p&gt;O Botão é criado no momento de inclusão de um novo produto. Para isso, acesse o &lt;a href=&quot;https://developercielo.github.io/tutorial/checkout-tutoriais&quot;&gt;Backoffice Checkout Cielo&lt;/a&gt;, no menu Produtos/Cadastrar Produtos.&lt;/p&gt;
+&lt;p&gt;O Botão é criado no momento de inclusão de um novo produto. Para isso, acesse o &lt;a href=&quot;https://docscielo.github.io/Pilots/tutorial/checkout-tutoriais&quot;&gt;Backoffice Checkout Cielo&lt;/a&gt;, no menu Produtos/Cadastrar Produtos.&lt;/p&gt;
 
 &lt;h2 id=&quot;quais-informações-eu-preciso-para-montar-o-post&quot;&gt;Quais informações eu preciso para montar o POST?&lt;/h2&gt;
 
@@ -30344,7 +30344,7 @@ Esse tipo de integração é realizado via o cadastro de um conjunto de itens a 
 
 &lt;p&gt;Ao finalizar uma transação, é enviado um POST com todos os dados da venda para a URL de Notificação, previamente cadastrada no BackOffice. O POST de notificação é enviado apenas no momento que a transação é finalizada, independentemente se houver alteração do status da transação.&lt;/p&gt;
 
-&lt;p&gt;Dessa maneira os dados do pedido ficam atualizados no &lt;a href=&quot;https://developercielo.github.io/tutorial/checkout-tutoriais&quot;&gt;Backoffice Checkout Cielo&lt;/a&gt; e também no backoffice da loja/plataforma.&lt;/p&gt;
+&lt;p&gt;Dessa maneira os dados do pedido ficam atualizados no &lt;a href=&quot;https://docscielo.github.io/Pilots/tutorial/checkout-tutoriais&quot;&gt;Backoffice Checkout Cielo&lt;/a&gt; e também no backoffice da loja/plataforma.&lt;/p&gt;
 
 &lt;h2 id=&quot;para-que-serve-a-url-de-mudança-de-status&quot;&gt;Para que serve a URL de Mudança de Status?&lt;/h2&gt;
 
@@ -30352,7 +30352,7 @@ Esse tipo de integração é realizado via o cadastro de um conjunto de itens a 
 
 &lt;h2 id=&quot;onde-é-feito-o-cadastro-dessas-urls&quot;&gt;Onde é feito o cadastro dessas URLs?&lt;/h2&gt;
 
-&lt;p&gt;No &lt;a href=&quot;https://developercielo.github.io/tutorial/checkout-tutoriais&quot;&gt;Backoffice Checkout Cielo&lt;/a&gt;, no menu Configurações/Configurações da loja.&lt;/p&gt;
+&lt;p&gt;No &lt;a href=&quot;https://docscielo.github.io/Pilots/tutorial/checkout-tutoriais&quot;&gt;Backoffice Checkout Cielo&lt;/a&gt;, no menu Configurações/Configurações da loja.&lt;/p&gt;
 
 &lt;h2 id=&quot;qual-a-diferença-entre-o--erro-opsss-antes-e-depois-da-exibição-da-tela-do-checkout-cielo&quot;&gt;Qual a diferença entre o  Erro OPSSS antes e depois da exibição da tela do Checkout Cielo?&lt;/h2&gt;
 
@@ -30392,7 +30392,7 @@ Esse tipo de integração é realizado via o cadastro de um conjunto de itens a 
 
 &lt;p&gt;As categorias “Bens digitais” ou “Serviços” não necessitam desse tipo de informação.&lt;/p&gt;
 
-&lt;p&gt;Para compreender a diferença entre os parâmetros do POST em relação a frete e tipos de produtos, compare os exemplos de post abaixo. Para mais informações, acesse o &lt;a href=&quot;https://developercielo.github.io/manual/checkout-cielo&quot;&gt;Manual de Integração Checkout Cielo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Para compreender a diferença entre os parâmetros do POST em relação a frete e tipos de produtos, compare os exemplos de post abaixo. Para mais informações, acesse o &lt;a href=&quot;https://docscielo.github.io/Pilots/manual/checkout-cielo&quot;&gt;Manual de Integração Checkout Cielo&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;parâmetros-obrigatórios&quot;&gt;Parâmetros obrigatórios&lt;/h3&gt;
 
@@ -30476,9 +30476,9 @@ Esse tipo de integração é realizado via o cadastro de um conjunto de itens a 
     <entry>
         <title>Manual de integração</title>
         <category term="manual" />
-        <link href="https://developercielo.github.io/manual/checkout-cielo"/>
+        <link href="https://docscielo.github.io/Pilots/manual/checkout-cielo"/>
         <updated>2000-01-01T00:00:00+00:00</updated>
-        <id>https://developercielo.github.io/manual/checkout-cielo</id>
+        <id>https://docscielo.github.io/Pilots/manual/checkout-cielo</id>
         <content type="html">&lt;h1 id=&quot;sobre-o-checkout-cielo&quot;&gt;Sobre o Checkout Cielo.&lt;/h1&gt;
 
 &lt;p&gt;O Checkout Cielo é uma solução que agrega vários serviços de processamento de pagamento, no qual o consumidor é direcionado para uma página de pagamento online segura da &lt;em&gt;Cielo&lt;/em&gt;.
@@ -30778,15 +30778,15 @@ Abaixo listamos pontos que devem estar prontos antes da integração:&lt;/p&gt;
 
 &lt;h3 id=&quot;internet-explorer&quot;&gt;Internet Explorer:&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-ie.jpg&quot; alt=&quot;Certificado EV Internet Explorer&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-ie.jpg&quot; alt=&quot;Certificado EV Internet Explorer&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;firefox&quot;&gt;Firefox&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-firefox.jpg&quot; alt=&quot;Certificado EV Firefox&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-firefox.jpg&quot; alt=&quot;Certificado EV Firefox&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;google-chrome&quot;&gt;Google Chrome&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-chrome.jpg&quot; alt=&quot;Certificado EV Google Chrome&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-chrome.jpg&quot; alt=&quot;Certificado EV Google Chrome&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;o-que-é-certificado-ev-ssl&quot;&gt;O que é Certificado EV SSL?&lt;/h2&gt;
 
@@ -30799,10 +30799,10 @@ Abaixo listamos pontos que devem estar prontos antes da integração:&lt;/p&gt;
 &lt;p&gt;Basta instalar os três arquivos a seguir na Trustedstore do servidor. A Cielo não oferece suporte para a instalação do Certificado. Caso não esteja seguro sobre como realizar a instalação do Certificado EV, então você deverá ser contatado o suporte do fornecedor do seu servidor.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developercielo.github.io/attachment/Root.crt&quot;&gt;Certificado Raiz&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developercielo.github.io/attachment/Intermediate1.crt&quot;&gt;Certificado Intermediária 1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developercielo.github.io/attachment/Intermediate2.crt&quot;&gt;Certificado Intermediária 2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developercielo.github.io/attachment/ServerCertificate.crt&quot;&gt;Certificado E-Commerce Cielo&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docscielo.github.io/Pilots/attachment/Root.crt&quot;&gt;Certificado Raiz&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docscielo.github.io/Pilots/attachment/Intermediate1.crt&quot;&gt;Certificado Intermediária 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docscielo.github.io/Pilots/attachment/Intermediate2.crt&quot;&gt;Certificado Intermediária 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docscielo.github.io/Pilots/attachment/ServerCertificate.crt&quot;&gt;Certificado E-Commerce Cielo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;passo-a-passo-para-a-instalação&quot;&gt;Passo a Passo para a Instalação&lt;/h2&gt;
@@ -30822,83 +30822,83 @@ Abaixo listamos pontos que devem estar prontos antes da integração:&lt;/p&gt;
 &lt;p&gt;Salvar os três arquivos abaixo em uma pasta nova, ou que relembre facilmente, pois será utilizada posteriormente:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developercielo.github.io/attachment/Root.crt&quot;&gt;Certificado Raiz&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developercielo.github.io/attachment/Intermediate1.crt&quot;&gt;Certificado Intermediária 1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developercielo.github.io/attachment/Intermediate2.crt&quot;&gt;Certificado Intermediária 2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developercielo.github.io/attachment/ServerCertificate.crt&quot;&gt;Certificado E-Commerce Cielo&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docscielo.github.io/Pilots/attachment/Root.crt&quot;&gt;Certificado Raiz&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docscielo.github.io/Pilots/attachment/Intermediate1.crt&quot;&gt;Certificado Intermediária 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docscielo.github.io/Pilots/attachment/Intermediate2.crt&quot;&gt;Certificado Intermediária 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docscielo.github.io/Pilots/attachment/ServerCertificate.crt&quot;&gt;Certificado E-Commerce Cielo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;2º Passo&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;No “Internet Explorer”, clique no menu “Ferramentas” e acesse as “Opções da Internet”:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-1.jpg&quot; alt=&quot;Instalar IE&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-1.jpg&quot; alt=&quot;Instalar IE&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;No “Firefox”, clique no menu “Abrir Menu” e acesse “Avançado” e “Opções”:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ff-1.jpg&quot; alt=&quot;Instalar FF&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ff-1.jpg&quot; alt=&quot;Instalar FF&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;No “Chrome”, clique no “Personalizar e Controlar o Google Chrome” e acesse “Configurações” e “Mostrar configurações avançadas… “Alterar Configurações de Proxy e “Conteúdo” e Certificados:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-gc-1.jpg&quot; alt=&quot;Instalar GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-gc-1.jpg&quot; alt=&quot;Instalar GC&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;3º Passo&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;No Internet Explorer, em “Certificados”, clique em “Importar”.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-2.jpg&quot; alt=&quot;Instalar IE&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-2.jpg&quot; alt=&quot;Instalar IE&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;No Firefox clique em “Ver Certificados”, clique em “Importar”&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ff-2.jpg&quot; alt=&quot;Instalar FF&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ff-2.jpg&quot; alt=&quot;Instalar FF&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;No Chrome clique em “Gerenciar Certificados”, clique em “Importar”&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-gc-2.jpg&quot; alt=&quot;Instalar GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-gc-2.jpg&quot; alt=&quot;Instalar GC&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;4º Passo&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;No Internet Explorer e Chrome “Assistente para Importação de Certificados”, clique em “Avançar”.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-gc-3.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-gc-3.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-gc-4.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-gc-4.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;No Firefox “Aba Servidores ”, clique em “Importar”&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ff-3.jpg&quot; alt=&quot;Instalar FF&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ff-3.jpg&quot; alt=&quot;Instalar FF&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;5º Passo&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;No Chrome e Internet Explorer “Assistente para Importação de Certificados”, clique em “Procurar”, procure a pasta onde estão os arquivos e selecione o arquivo “cieloecommerce.cielo.com.br.crt, clique em “Abrir” e em seguida “Avançar”.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-gc-5.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-gc-5.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-gc-6.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-gc-6.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;6º Passo&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Selecionar a opção desejada: adicionar o Certificado em uma pasta padrão ou procurar a pasta de sua escolha.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-gc-7.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-gc-7.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;7º Passo&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Clique em “Concluir”.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-gc-8.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-gc-8.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;8º Passo&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Clique em “Ok” para concluir a importação.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-gc-9.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-gc-9.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
 
 &lt;aside class=&quot;notice&quot;&gt;No Firefox não consta a mensagem de Importação com Êxito, apenas conclui a importação.&lt;/aside&gt;
 
 &lt;p&gt;O Certificado poderá ser visualizado na aba padrão “Outras Pessoas” ou na escolhida pelo cliente.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/certificado-instalar-ie-gc-10.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/certificado-instalar-ie-gc-10.jpg&quot; alt=&quot;Instalar IE e GC&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;9º Passo&lt;/strong&gt;&lt;/p&gt;
 
@@ -30936,10 +30936,10 @@ Abaixo listamos pontos que devem estar prontos antes da integração:&lt;/p&gt;
 &lt;p&gt;Veja o fluxo abaixo:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Fluxo de integração Checkout Cielo&lt;/strong&gt; - Diagrama sequêncial
-&lt;img src=&quot;https://developercielo.github.io/images/checkout/fluxobasico.svg&quot; alt=&quot;Fluxo de integração Checkout Cielo&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/fluxobasico.svg&quot; alt=&quot;Fluxo de integração Checkout Cielo&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Fluxo de integração Checkout Cielo&lt;/strong&gt; - Fluxograma
-&lt;img src=&quot;https://developercielo.github.io/images/checkout/fluxocheckoutbasico.png&quot; alt=&quot;Fluxo de integração Checkout Cielo&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/fluxocheckoutbasico.png&quot; alt=&quot;Fluxo de integração Checkout Cielo&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Após o portador do cartão (consumidor) selecionar suas compras e apertar o botão “Comprar” de uma loja já integrada ao Checkout Cielo, o fluxo nesta ordem:&lt;/p&gt;
 
@@ -30947,7 +30947,7 @@ Abaixo listamos pontos que devem estar prontos antes da integração:&lt;/p&gt;
   &lt;li&gt;A API da Cielo retorna o &lt;strong&gt;CheckoutURL&lt;/strong&gt;, que é a URL da tela transacional montada com base nos dados enviados pelo Lojista/Botão.&lt;/li&gt;
   &lt;li&gt;A loja redireciona o cliente para a URL retornada pela Cielo. A tela apresentada é parte do &lt;strong&gt;Ambiente de pagamento seguro Cielo&lt;/strong&gt;.&lt;/li&gt;
   &lt;li&gt;O portador escolhe: Meio de pagamento, tipo de frete e endereço de entrega na tela transacional&lt;/li&gt;
-  &lt;li&gt;O Checkout Cielo redireciona o cliente para a &lt;strong&gt;URL de Retorno&lt;/strong&gt; escolhida pela loja, configurada no &lt;a href=&quot;https://developercielo.github.io/tutorial/checkout-tutoriais&quot;&gt;Backoffice Checkout Cielo&lt;/a&gt; ou enviada pela integração via API.&lt;/li&gt;
+  &lt;li&gt;O Checkout Cielo redireciona o cliente para a &lt;strong&gt;URL de Retorno&lt;/strong&gt; escolhida pela loja, configurada no &lt;a href=&quot;https://docscielo.github.io/Pilots/tutorial/checkout-tutoriais&quot;&gt;Backoffice Checkout Cielo&lt;/a&gt; ou enviada pela integração via API.&lt;/li&gt;
   &lt;li&gt;Se a loja possui uma &lt;strong&gt;URL de notificação&lt;/strong&gt;, ela será notificada sobre a situação da transação.&lt;/li&gt;
   &lt;li&gt;A loja avisa ao cliente que o processo foi concluído e que ele receberá mais informações sobre a compra e o pagamento por e-mail.e&lt;/li&gt;
   &lt;li&gt;A loja processa o pedido de compra utilizando os dados do POST de notificação e, se a transação estiver autorizada, libera o pedido.&lt;/li&gt;
@@ -30963,9 +30963,9 @@ Abaixo listamos pontos que devem estar prontos antes da integração:&lt;/p&gt;
 
 &lt;p&gt;O modo de teste pode ser ativado na aba &lt;strong&gt;Configurações&lt;/strong&gt;, onde existe um caixa de seleção, que quando marcada, habilitará o modo de teste do Checkout Cielo. O modo somente se iniciará quando a seleção for salva.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tm01.png&quot; alt=&quot;Ativando Modo de teste&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tm01.png&quot; alt=&quot;Ativando Modo de teste&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Quando a opção for salva, uma tarja vermelha será exibida na parte superior da tela. Ela será exibida em todas as telas do &lt;a href=&quot;https://developercielo.github.io/tutorial/checkout-tutoriais&quot;&gt;Backoffice Cielo Checkout&lt;/a&gt; e na tela transacional do Checkout Cielo.&lt;/p&gt;
+&lt;p&gt;Quando a opção for salva, uma tarja vermelha será exibida na parte superior da tela. Ela será exibida em todas as telas do &lt;a href=&quot;https://docscielo.github.io/Pilots/tutorial/checkout-tutoriais&quot;&gt;Backoffice Cielo Checkout&lt;/a&gt; e na tela transacional do Checkout Cielo.&lt;/p&gt;
 
 &lt;p&gt;Essa tarja indica que a sua loja Checkout Cielo está agora operando em ambiente de teste, ou seja, toda a transação realizada nesse modo será considerada como teste.&lt;/p&gt;
 
@@ -30978,8 +30978,8 @@ Abaixo listamos pontos que devem estar prontos antes da integração:&lt;/p&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tmbackoffice.png&quot; alt=&quot;Tarja vermelha - Backoffice&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/tmtransacional.png&quot; alt=&quot;Tarja vermelha - Transacional&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tmbackoffice.png&quot; alt=&quot;Tarja vermelha - Backoffice&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/tmtransacional.png&quot; alt=&quot;Tarja vermelha - Transacional&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -31092,11 +31092,11 @@ O boleto gerado no modo de teste sempre será um boleto simulado.&lt;/p&gt;
 
 &lt;p&gt;Todas as transações realizadas no modo de teste serão exibidas como transações normais na aba Pedidos do Checkout Cielo, entretanto, elas serão marcadas como transações de teste e não serão contabilizadas em conjunto com as transações realizadas fora do ambiente de teste.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout-cielo-modo-teste-transacoes-de-teste.png&quot; alt=&quot;Transações de teste&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout-cielo-modo-teste-transacoes-de-teste.png&quot; alt=&quot;Transações de teste&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Essas transações terão o símbolo de teste as diferenciando de suas outras transações. Elas podem ser capturadas ou canceladas utilizando os mesmos procedimentos das transações reais.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout-cielo-modo-teste-transacoes-de-teste-cancelamento.png&quot; alt=&quot;Transações de teste&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout-cielo-modo-teste-transacoes-de-teste-cancelamento.png&quot; alt=&quot;Transações de teste&quot; /&gt;&lt;/p&gt;
 
 &lt;aside class=&quot;notice&quot;&gt;É muito importante que ao liberar sua loja para a realização de vendas para seus clientes que **ela não esteja em modo de teste**. Transações realizadas nesse ambiente poderão ser finalizadas normalmente, mas **não serão descontadas do cartão do cliente** e não poderão ser “transferidas” para o ambiente de venda padrão.&lt;/aside&gt;
 
@@ -31124,7 +31124,7 @@ Basta acessar nosso &lt;a href=&quot;https://developercielo.github.io/tutorial/p
 
 &lt;p&gt;Abaixo, é demonstrado como o fluxo de compra ocorre na integração via API:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/int-api.png&quot; alt=&quot;Integração Via API&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/int-api.png&quot; alt=&quot;Integração Via API&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;criando-o-carrinho&quot;&gt;Criando o Carrinho&lt;/h3&gt;
 
@@ -31653,8 +31653,8 @@ Os descontos disponíveis no Checkout Cielo são:&lt;/p&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/checkout-discount-percent.png&quot; alt=&quot;Percentual&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/checkout-discount-amount.png&quot; alt=&quot;Valor&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/checkout-discount-percent.png&quot; alt=&quot;Percentual&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/checkout-discount-amount.png&quot; alt=&quot;Valor&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -31717,7 +31717,7 @@ Os descontos disponíveis no Checkout Cielo são:&lt;/p&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/checkout-discount-mp.png&quot; alt=&quot;Meios de pagamento&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/checkout-discount-mp.png&quot; alt=&quot;Meios de pagamento&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -31769,23 +31769,23 @@ Os descontos disponíveis no Checkout Cielo são:&lt;/p&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;FixedAmount&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/fixedamount.png&quot; alt=&quot;FixedAmount&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/fixedamount.png&quot; alt=&quot;FixedAmount&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Free&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/free.png&quot; alt=&quot;Free&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/free.png&quot; alt=&quot;Free&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;WithoutShippingPickUp&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/withoutshippingpickup.png&quot; alt=&quot;WithoutShippingPickUp&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/withoutshippingpickup.png&quot; alt=&quot;WithoutShippingPickUp&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;WithoutShipping&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/withoutshippingpickup.png&quot; alt=&quot;WithoutShipping&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/withoutshippingpickup.png&quot; alt=&quot;WithoutShipping&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Correios&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/correios.png&quot; alt=&quot;Correios&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/correios.png&quot; alt=&quot;Correios&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -32046,12 +32046,12 @@ Esse tipo de integração é realizado via o cadastro de um conjunto de itens a 
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/botao.png&quot; alt=&quot;Botão&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/botao.png&quot; alt=&quot;Botão&quot; /&gt;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Botão&lt;/strong&gt;&lt;/td&gt;
       &lt;td&gt;É um código HTML que ao ser colado em um site, vai direcionar o comprador a tela transacional - Ideal para uso em &lt;strong&gt;hotSites&lt;/strong&gt; ou &lt;strong&gt;E-mail Marketing&lt;/strong&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/qrcode.png&quot; alt=&quot;QRCODE&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/qrcode.png&quot; alt=&quot;QRCODE&quot; /&gt;&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;QRCODE&lt;/strong&gt;&lt;/td&gt;
       &lt;td&gt;Código interpretável por Smartphones e Tablets - Ideal para uso em &lt;strong&gt;Marketing impressos&lt;/strong&gt; ou &lt;strong&gt;Digital&lt;/strong&gt;&lt;/td&gt;
     &lt;/tr&gt;
@@ -32073,11 +32073,11 @@ Esse tipo de integração é realizado via o cadastro de um conjunto de itens a 
   &lt;li&gt;Sempre que se deseja disponibilizar uma venda rápida.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Para utilizar este recurso, é necessário cadastrar o produto que se deseja vender, suas informações, e depois simplesmente copiar o código fonte gerado para este botão. A inclusão dos produtos é feita dentro do &lt;a href=&quot;https://developercielo.github.io/tutorial/checkout-tutoriais&quot;&gt;Backoffice Cielo Checkout&lt;/a&gt;, no menu de Produtos/Cadastrar Produto.&lt;/p&gt;
+&lt;p&gt;Para utilizar este recurso, é necessário cadastrar o produto que se deseja vender, suas informações, e depois simplesmente copiar o código fonte gerado para este botão. A inclusão dos produtos é feita dentro do &lt;a href=&quot;https://docscielo.github.io/Pilots/tutorial/checkout-tutoriais&quot;&gt;Backoffice Cielo Checkout&lt;/a&gt;, no menu de Produtos/Cadastrar Produto.&lt;/p&gt;
 
 &lt;h3 id=&quot;características-do-botão&quot;&gt;Características do Botão&lt;/h3&gt;
 
-&lt;p&gt;Cada botão possui um código único que só permite comprar aquele determinado produto nas condições de preço e frete cadastrado. Portanto, um fraudador não consegue alterar nenhuma destas informações na hora de submeter à compra, pois o Checkout Cielo vai buscar todos os dados do produto no cadastro do &lt;a href=&quot;https://developercielo.github.io/tutorial/checkout-tutoriais&quot;&gt;Backoffice Cielo Checkout&lt;/a&gt;, e valerão os dados do cadastro.&lt;/p&gt;
+&lt;p&gt;Cada botão possui um código único que só permite comprar aquele determinado produto nas condições de preço e frete cadastrado. Portanto, um fraudador não consegue alterar nenhuma destas informações na hora de submeter à compra, pois o Checkout Cielo vai buscar todos os dados do produto no cadastro do &lt;a href=&quot;https://docscielo.github.io/Pilots/tutorial/checkout-tutoriais&quot;&gt;Backoffice Cielo Checkout&lt;/a&gt;, e valerão os dados do cadastro.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -32104,19 +32104,19 @@ Esse tipo de integração é realizado via o cadastro de um conjunto de itens a 
 
 &lt;p&gt;&lt;strong&gt;Abaixo, o fluxo de pagamento via Botão:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/intbt.png&quot; alt=&quot;Fluxo de integração Checkout Cielo Botão&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/intbt.png&quot; alt=&quot;Fluxo de integração Checkout Cielo Botão&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;criando-o-botão&quot;&gt;Criando o Botão&lt;/h3&gt;
 
-&lt;p&gt;Para utilizar este recurso, é necessário cadastrar o produto que se deseja vender, suas informações, e depois simplesmente copiar o código fonte gerado para este botão. A inclusão dos produtos é feita dentro do &lt;a href=&quot;https://developercielo.github.io/tutorial/checkout-tutoriais&quot;&gt;Backoffice Cielo Checkout&lt;/a&gt;, no menu de Produtos/Cadastrar Produto.&lt;/p&gt;
+&lt;p&gt;Para utilizar este recurso, é necessário cadastrar o produto que se deseja vender, suas informações, e depois simplesmente copiar o código fonte gerado para este botão. A inclusão dos produtos é feita dentro do &lt;a href=&quot;https://docscielo.github.io/Pilots/tutorial/checkout-tutoriais&quot;&gt;Backoffice Cielo Checkout&lt;/a&gt;, no menu de Produtos/Cadastrar Produto.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Tela de Cadastro:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/btcadastro.png&quot; alt=&quot;Cadastro de Botão&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/btcadastro.png&quot; alt=&quot;Cadastro de Botão&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Botão Cadastrado:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/btcadastro2.png&quot; alt=&quot;Cadastro de Botão&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/btcadastro2.png&quot; alt=&quot;Cadastro de Botão&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Abaixo a listagem de itens que devem ser cadastrados para a criação do botão:&lt;/p&gt;
 
@@ -32229,7 +32229,7 @@ Esse tipo de integração é realizado via o cadastro de um conjunto de itens a 
 &lt;/ul&gt;
 
 &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;form&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;method=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'post'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;action=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'https://cieloecommerce.cielo.com.br/transactional/Checkout/BuyNow'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;target=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'blank'&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'hidden'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'id'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;00000000-0000-0000-000000000000/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'image'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'submit'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Comprar'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'https://cieloecommerce.cielo.com.br /BackOffice/Contenthttps://developercielo.github.io/images/botao_comprar_3.jpg'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'hidden'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'id'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;00000000-0000-0000-000000000000/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'image'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'submit'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Comprar'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'https://cieloecommerce.cielo.com.br /BackOffice/Contenthttps://docscielo.github.io/Pilots/images/botao_comprar_3.jpg'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/form&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -32258,7 +32258,7 @@ Esse tipo de integração é realizado via o cadastro de um conjunto de itens a 
 
 &lt;aside class=&quot;notice&quot;&gt;O código deve ser inserido dentro da área adequada no seu HTML.&lt;/aside&gt;
 
-&lt;p&gt;Cada botão possui um código único que só permite comprar aquele determinado produto nas condições de preço e frete cadastrado. Portanto, um fraudador não consegue alterar nenhuma destas informações na hora de submeter a compra, pois o Checkout Cielo vai buscar todos os dados do produto no cadastro do &lt;a href=&quot;https://developercielo.github.io/tutorial/checkout-tutoriais&quot;&gt;Backoffice Cielo Checkout&lt;/a&gt;, e valerão os dados do cadastro.&lt;/p&gt;
+&lt;p&gt;Cada botão possui um código único que só permite comprar aquele determinado produto nas condições de preço e frete cadastrado. Portanto, um fraudador não consegue alterar nenhuma destas informações na hora de submeter a compra, pois o Checkout Cielo vai buscar todos os dados do produto no cadastro do &lt;a href=&quot;https://docscielo.github.io/Pilots/tutorial/checkout-tutoriais&quot;&gt;Backoffice Cielo Checkout&lt;/a&gt;, e valerão os dados do cadastro.&lt;/p&gt;
 
 &lt;h2 id=&quot;fluxos-meios-de-pagamento&quot;&gt;Fluxos Meios de pagamento&lt;/h2&gt;
 
@@ -32266,7 +32266,7 @@ Esse tipo de integração é realizado via o cadastro de um conjunto de itens a 
 
 &lt;p&gt;O Checkout Cielo permite a utilização de Cartões de Crédito das principais bandeiras nacionais e internacionais. Esse meio de pagamento é liberado automaticamente junto a afiliação de Cielo, podendo ser utilizado inicialmente com a integração Checkout.&lt;/p&gt;
 
-&lt;p&gt;Transações de cartão de crédito serão incluídas no &lt;a href=&quot;https://developercielo.github.io/tutorial/checkout-tutoriais&quot;&gt;Backoffice Cielo Checkout&lt;/a&gt; como PENDENTE, AUTORIZADO, PAGO, NEGADO, EXPIRADO OU CHARGEBACK dependendo do resultado da autorização junto ao Banco.&lt;/p&gt;
+&lt;p&gt;Transações de cartão de crédito serão incluídas no &lt;a href=&quot;https://docscielo.github.io/Pilots/tutorial/checkout-tutoriais&quot;&gt;Backoffice Cielo Checkout&lt;/a&gt; como PENDENTE, AUTORIZADO, PAGO, NEGADO, EXPIRADO OU CHARGEBACK dependendo do resultado da autorização junto ao Banco.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Cartão de Crédito&lt;/strong&gt; Ordem de Status:&lt;/p&gt;
 
@@ -32390,11 +32390,11 @@ Esse grau de risco é o que deve guiar a decisão do lojista de capturar ou canc
 
 &lt;p&gt;A analise será apresentada no “Detalhes do Pedido”, como abaixo:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout-cielo-analise-risco.png&quot; alt=&quot;Análise de risco&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout-cielo-analise-risco.png&quot; alt=&quot;Análise de risco&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Você pode visualizar o status do antifraude acessando o detalhe da compra, na aba Pedidos e clicando no (+)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout-status-antifraude.png&quot; alt=&quot;Status Antifraude&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout-status-antifraude.png&quot; alt=&quot;Status Antifraude&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;cartão-de-débito&quot;&gt;Cartão de Débito&lt;/h3&gt;
 
@@ -32447,7 +32447,7 @@ Esse grau de risco é o que deve guiar a decisão do lojista de capturar ou canc
 
 &lt;p&gt;Ao Acessar a tela transacional, o comprador obterá pelo pagamento via Cartão de débito, e será redirecionado ao ambiente bancário para Autenticação e Autorização.&lt;/p&gt;
 
-&lt;p&gt;Transações de cartão de débito serão incluídas no &lt;a href=&quot;https://developercielo.github.io/tutorial/checkout-tutoriais&quot;&gt;Backoffice Cielo Checkout&lt;/a&gt; como PENDENTE, PAGO, NÃO AUTORIZADO ou NÃO FINALIZADO, dependendo do resultado da autorização junto ao Banco.&lt;/p&gt;
+&lt;p&gt;Transações de cartão de débito serão incluídas no &lt;a href=&quot;https://docscielo.github.io/Pilots/tutorial/checkout-tutoriais&quot;&gt;Backoffice Cielo Checkout&lt;/a&gt; como PENDENTE, PAGO, NÃO AUTORIZADO ou NÃO FINALIZADO, dependendo do resultado da autorização junto ao Banco.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Cartão de Débito&lt;/strong&gt; - Ordem de Status&lt;/p&gt;
 
@@ -32485,7 +32485,7 @@ Esse meio de pagamento precisa ser cadastrado pelo Suporte Cielo para que seja d
 
 &lt;p&gt;Ao Acessar a tela transacional, o comprador obterá pelo pagamento via Boleto.&lt;/p&gt;
 
-&lt;p&gt;Transações de boleto  serão incluídas no &lt;a href=&quot;https://developercielo.github.io/tutorial/checkout-tutoriais&quot;&gt;Backoffice Cielo Checkout&lt;/a&gt; como NÃO FINALIZADO ou PAGO.
+&lt;p&gt;Transações de boleto  serão incluídas no &lt;a href=&quot;https://docscielo.github.io/Pilots/tutorial/checkout-tutoriais&quot;&gt;Backoffice Cielo Checkout&lt;/a&gt; como NÃO FINALIZADO ou PAGO.
 Diferentemente de outros meios de pagamento, o boleto não possui atualização de Status. Caberá ao Lojista acessar o Backoffice e modificar o status do boleto manualmente.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Boleto&lt;/strong&gt; - Ordem de Status&lt;/p&gt;
@@ -32504,7 +32504,7 @@ Esse meio de pagamento é liberado via cadastro junto ao Suporte Cielo.&lt;/p&gt
 
 &lt;p&gt;Ao acessar a tela transacional, o comprador obterá pelo pagamento via Débito online, e será redirecionado ao ambiente bancário para Autenticação e Autorização.&lt;/p&gt;
 
-&lt;p&gt;Transações de Débito online serão incluídos no &lt;a href=&quot;https://developercielo.github.io/tutorial/checkout-tutoriais&quot;&gt;Backoffice Cielo Checkout&lt;/a&gt; como PENDENTE, PAGO, NÃO AUTORIZADO ou NÃO FINALIZADO, dependendo do resultado da autorização junto ao Banco.&lt;/p&gt;
+&lt;p&gt;Transações de Débito online serão incluídos no &lt;a href=&quot;https://docscielo.github.io/Pilots/tutorial/checkout-tutoriais&quot;&gt;Backoffice Cielo Checkout&lt;/a&gt; como PENDENTE, PAGO, NÃO AUTORIZADO ou NÃO FINALIZADO, dependendo do resultado da autorização junto ao Banco.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Débito online&lt;/strong&gt; - Ordem de Status&lt;/p&gt;
 
@@ -32598,7 +32598,7 @@ Vale destacar que o Checkout realiza a notificação somente quando uma transaç
   &lt;li&gt;Cadastre as URLS e escolhe o tipo de Notificação desejado&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/urls.png&quot; alt=&quot;Cadastro de URLS&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/urls.png&quot; alt=&quot;Cadastro de URLS&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;notificação-post&quot;&gt;Notificação: POST&lt;/h2&gt;
 
@@ -32613,7 +32613,7 @@ Vale destacar que o Checkout realiza a notificação somente quando uma transaç
 
 &lt;p&gt;Abaixo o Fluxo de uma Notificação POST&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/npost.png&quot; alt=&quot;Fluxo N.POST&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/npost.png&quot; alt=&quot;Fluxo N.POST&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Retorno aguardado para o envio da notificação:&lt;/strong&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;HttpStatus = 200 (OK)&lt;/code&gt; - Post recebido e processado com sucesso&lt;/p&gt;
 
@@ -32621,7 +32621,7 @@ Vale destacar que o Checkout realiza a notificação somente quando uma transaç
 
 &lt;p&gt;Caso o POST não seja recebido, é possível reenvia-lo manualmente, basta acessar o pedido em questão pelo Backoffice e clicar no Ícone de envio:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/reenvipost.png&quot; alt=&quot;Reenvio de notificação&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/reenvipost.png&quot; alt=&quot;Reenvio de notificação&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Veja a descrição dos itens de notificação na sessão &lt;strong&gt;“Conteúdo do POST de NOTIFICAÇÃO”&lt;/strong&gt;&lt;/p&gt;
 
@@ -32641,7 +32641,7 @@ Essa modalidade de notificação é baseada em um &lt;code class=&quot;highlight
 
 &lt;p&gt;Abaixo o Fluxo de uma Notificação JSON (Criação da transação + Mudança de status)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/njson.png&quot; alt=&quot;Fluxo N.JSON&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/njson.png&quot; alt=&quot;Fluxo N.JSON&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Conteúdo do POST de NOTIFICAÇÃO JSON:&lt;/strong&gt;&lt;/p&gt;
 
@@ -32721,7 +32721,7 @@ Essa modalidade de notificação é baseada em um &lt;code class=&quot;highlight
 
 &lt;p&gt;Caso o POST não seja recebido, é possível reenvia-lo manualmente, basta acessar o pedido em questão pelo Backoffice e clicar no Ícone de envio:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/reenvipost.png&quot; alt=&quot;Reenvio de notificação&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/reenvipost.png&quot; alt=&quot;Reenvio de notificação&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;conteúdo-da-notificação&quot;&gt;Conteúdo da Notificação&lt;/h2&gt;
 
@@ -33292,7 +33292,7 @@ Existem dois métodos de parcelamento:&lt;/p&gt;
 
 &lt;p&gt;Neste modo, o lojista controla o limite máximo de parcelas que a loja realizará pelo Backoffice Checkout. O Valor das parcelas é definido acessando a aba &lt;strong&gt;Configurações&lt;/strong&gt; e alterando a sessão &lt;strong&gt;Pagamentos&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/parcelamento.png&quot; alt=&quot;Seleção de Parcelas&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/parcelamento.png&quot; alt=&quot;Seleção de Parcelas&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;OBS:&lt;/strong&gt; O Check Box deve estar marcado para que o meio de pagamento seja exibido na tela transacional.&lt;/p&gt;
 
@@ -33553,7 +33553,7 @@ Se no contrato técnico existir o nó da recorrência, fica obrigatório o tipo 
 
 &lt;p&gt;Basta cadastrar o produto, incluindo um intervalo de cobrança e uma data para encerramento (Opcional), como no exemplo abaixo:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout-botao-recorrencia.png&quot; alt=&quot;Botão recorrência&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout-botao-recorrencia.png&quot; alt=&quot;Botão recorrência&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;ATENÇÃO:&lt;/strong&gt; Caso um botão seja utilizado após a “Data final” cadastrada, a transação apresentará um erro exibindo &lt;strong&gt;Oppss&lt;/strong&gt; na tela transacional. A Data pode ser editada na tela de edição do botão dentro de “Detalhes do Produto”&lt;/p&gt;
 
@@ -33578,7 +33578,7 @@ Se no contrato técnico existir o nó da recorrência, fica obrigatório o tipo 
 
 &lt;p&gt;&lt;strong&gt;ATENÇÃO:&lt;/strong&gt; O valor e data de cobrança das transações recorrentes serão sempre os mesmos da transação inicial. O agendamento passa a funcionar automaticamente a partir da data em que a primeira transação for autorizada.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout-consulta-recorrencia.png&quot; alt=&quot;Consultando transações&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout-consulta-recorrencia.png&quot; alt=&quot;Consultando transações&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Esta tela mostra a data que a 1° transação da recorrência foi autorizada e deverá ser capturada manualmente. &lt;strong&gt;As demais transações da recorrência sempre serão capturadas automaticamente&lt;/strong&gt;, independente se primeira transação foi capturada ou cancelada. Se o Cliente tiver configurado Captura automática, a captura da recorrência também será automática.&lt;/p&gt;
 
@@ -33593,9 +33593,9 @@ Se no contrato técnico existir o nó da recorrência, fica obrigatório o tipo 
   &lt;li&gt;Entrar em Detalhes (o símbolo de “+”)&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout-cancelar-recorrencia.png&quot; alt=&quot;Pedido de recorrência&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout-cancelar-recorrencia.png&quot; alt=&quot;Pedido de recorrência&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://developercielo.github.io/images/checkout/pedidoreccance.png&quot; alt=&quot;Cancelamento de recorrência&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/pedidoreccance.png&quot; alt=&quot;Cancelamento de recorrência&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Tela de detalhes da Recorrência&lt;/p&gt;
 
@@ -33623,7 +33623,7 @@ Se no contrato técnico existir o nó da recorrência, fica obrigatório o tipo 
   &lt;li&gt;&lt;strong&gt;Dia de ocorrência&lt;/strong&gt; - É possivel modificar o dia de execução da transação recorrente.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;A atualização é feita exclusivamente via o Backoffice Cielo. Acesso o &lt;a href=&quot;https://developercielo.github.io/tutorial/checkout-tutoriais&quot;&gt;&lt;strong&gt;Tutorial do Backoffice Checkout Cielo&lt;/strong&gt;&lt;/a&gt; para mais informações.&lt;/p&gt;
+&lt;p&gt;A atualização é feita exclusivamente via o Backoffice Cielo. Acesso o &lt;a href=&quot;https://docscielo.github.io/Pilots/tutorial/checkout-tutoriais&quot;&gt;&lt;strong&gt;Tutorial do Backoffice Checkout Cielo&lt;/strong&gt;&lt;/a&gt; para mais informações.&lt;/p&gt;
 
 &lt;h1 id=&quot;suporte-cielo&quot;&gt;Suporte Cielo&lt;/h1&gt;
 
