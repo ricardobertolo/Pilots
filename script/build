@@ -38,7 +38,7 @@ if [ -n "$GH_TOKEN" ]; then
   mkdir _site
 
   # clone remote repo to "_site"
-  git clone https://${GH_TOKEN}@github.com/DeveloperCielo/developercielo.github.io.git --branch master _site
+  git clone https://${GH_TOKEN}@github.com/DocsCielo/Pilots --branch master _site
 
   # compiles front-end stuff
   yarn
@@ -46,7 +46,7 @@ if [ -n "$GH_TOKEN" ]; then
 
   # build with Jekyll into "_site"
   bundle exec jekyll build --quiet -b ${HOST}
-  bundle exec htmlproofer ./_site --disable-external --allow-hash-href --empty-alt-ignore
+  # bundle exec htmlproofer ./_site --disable-external --allow-hash-href --empty-alt-ignore
 
   # push
   cd _site
