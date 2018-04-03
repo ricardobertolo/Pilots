@@ -13,9 +13,63 @@ language_tabs:
   json: JSON
 ---
 
-# Cielo AUTH
+# Cielo OAUTH
 
-O Cielo AUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce
+O Cielo OUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce. Ele utiliza o **Protocolo Oauth** como base de autenticação de requisições
+
+Para utilizar o Cielo Oauth
+
+| PROPRIEDADE    | DESCRIÇÃO                                                             | TIPO   |
+|----------------|-----------------------------------------------------------------------|--------|
+| `ClientId`     | Identificador chave fornecido pela CIELO                              | guid   |
+| `ClientSecret` | Chave que valida o ClientID. Fornecida pela Cielo junto ao `ClientID` | string |
+
+> Para obter o `ClientID` e o `ClientSecret`, acione a equipe de Produtos Cielo. Credênciais liberadas apenas para lojistas selecionados,
+
+## Token de acesso
+
+Para obter acesso a serviços Cielo que utilizam o `Cielo Oauth`, será necessário obter um token de acesso, conforme os passos abaixo:
+
+1. Concatenar o _ClientId_ e o _ClientSecret_, **ClientId:ClientSecret**
+2. Codificar o resultado em **Base64**
+3. Enviar uma requisição, utilizando o método HTTP POST para o Endpoint abaixo
+
+<aside class="request"><span class="method post">POST</span> <span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v2/token/</span></aside>
+
+### Concatenação
+
+|**ClientId** | b521b6b2-b9b4-4a30-881d-3b63dece0006|
+|**ClientSecret**| 08Qkje79NwWRx5BdgNJsIkBuITt5cIVO
+|**ClientId:ClientSecret**| *b521b6b2-b9b4-4a30-881d-3b63dece0006:08Qkje79NwWRx5BdgNJsIkBuITt5cIVO*|
+|**Base64**| *YjUyMWI2YjItYjliNC00YTMwLTg4MWQtM2I2M2RlY2UwMDA2OiAwOFFramU3OU53V1J4NUJkZ05Kc0lrQnVJVHQ1Y0lWTw*|
+
+### Request
+
+``` json
+"POST": https://cieloecommerce.cielo.com.br/v2/public/v2/token
+"Headers"
+"Authorization": Basic YjUyMWI2YjItYjliNC00YTMwLTg4MWQtM2I2M2RlY2UwMDA2OiAwOFFramU3OU53V1J4NUJkZ05Kc0lrQnVJVHQ1Y0lWTw
+```
+
+### Response
+
+
+``` json
+{
+    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnRfbmFtZSI6Ik1ldUNoZWNrb3V0IE1hc3RlciBLZXkiLCJjbGllbnRfaWQiOiJjODlmZGasdasdasdmUyLTRlNzctODA2YS02ZDc1Y2QzOTdkYWMiLCJzY29wZXMiOiJ7XCJTY29wZVwiOlwiQ2hlY2tvdXRBcGlcIixcIkNsYWltc1wiOltdfSIsInJvbGUiOiJasdasdasd291dEFwaSIsImlzc47I6Imh0dHBzOi8vYXV0aGhvbasdasdnJhc3BhZy5jb20uYnIiLCJhdWQiOiJVVlF4Y1VBMmNTSjFma1EzSVVFbk9pSTNkbTl0ZmasdsadQjVKVVV1UVdnPSIsImV4cCI6MTQ5Nzk5NjY3NywibmJmIjoxNDk3OTEwMjc3fQ.ozj4xnH9PA3dji-ARPSbI7Nakn9dw5I8w6myBRkF-uA",
+    "token_type": "bearer",
+    "expires_in": 1199
+}
+```
+
+|PROPRIEDADE   | DESCRIÇÃO                                                 |TIPO  |
+|--------------|-----------------------------------------------------------|------|
+|`Access_token`| Utilizado para acesso aos serviços da API                 |string|
+|`Token_type`  | Sempre será do tipo `bearer`                              |texto |
+|`Expires_in`  | Validade do token em segundos. Aproximadamente 20 minutos |int   |
+
+> O token possui um tempo de expiração aproximado de 20 minutos (1.200 segundos). Após esse intervalo, será necessário obter um novo token para acesso aos serviços Cielo. 
+
 
 # API - CONTROLE TRANSACIONAL 
 
