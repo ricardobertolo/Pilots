@@ -2857,6 +2857,274 @@ O Submergível pode usar a consulta bins no carrinho para alertar compradores in
   <p><em>Atenção</em>: Em SANDBOX os valores retornados são simulações e não validações reais de BINS. Deve ser considerado apenas o retorno do Request e o seu formato. Para identificação real dos BINS, o ambiente de Produção deverá ser utilizado</p>
 </blockquote>
 
+<h1 id="avs">AVS</h1>
+
+<p>O <strong>AVS</strong> é um serviço para transações online onde é realizada uma validação cadastral através do batimento dos dados do endereço informado pelo comprador (endereço de entrega da fatura) na loja virtual, com os dados cadastrais do banco emissor do cartão.
+Isso auxilia na redução do risco de chargeback. Deve ser utilizada para análise de vendas, auxiliando na decisão de captura da transação.</p>
+
+<h2 id="integração-3">Integração</h2>
+
+<p>Para realizar uma transação utilizando o <strong>AVS</strong>, o lojista deverá enviar uma requisição <code class="highlighter-rouge">POST</code> para a API Cielo Ecommerce,criando uma  transação que contenha o nó <strong>AVS</strong> dentro do nó <code class="highlighter-rouge">Payment.CreditCard</code>.</p>
+
+<p>Vale Destacar que o AVS deve ser utilizado valendo-se das regras abaixo:</p>
+
+<p><strong>Regras do AVS</strong></p>
+
+<ul>
+  <li>Produtos permitidos: somente crédito.</li>
+  <li>Disponível apenas para as bandeiras <strong>Visa, Mastercard e Amex</strong>.</li>
+  <li>O retorno da consulta ao AVS é separado em dois itens: CEP e endereço.</li>
+  <li>Cada um deles pode ter os seguintes valores:</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Valor</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">C</td>
+      <td>Confere</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">N</td>
+      <td>Não confere</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">I</td>
+      <td>Indisponível</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">T</td>
+      <td>Temporariamente indisponível</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">X</td>
+      <td>Serviço não suportado para esta Bandeira</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">E</td>
+      <td>Dados enviados incorretos. Verificar se todos os campos foram enviados</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>É necessário que todos os campos contidos no nó AVS sejam preenchidos para que a analise seja realizada.</li>
+  <li>Quando o campo não for aplicável (exemplo: complemento), deve ser enviada preenchido com NULL ou N/A</li>
+  <li>Necessário habilitar a opção do AVS no cadastro. Para habilitar a opção AVS no cadastro ou consultar os bancos participantes, entre em contato com o Suporte Cielo eCommerce</li>
+</ul>
+
+<p>Conteudo do <strong>Nó AVS</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Paramêtro</th>
+      <th>Descrição</th>
+      <th>Tipo</th>
+      <th style="text-align: center">Tamanho</th>
+      <th style="text-align: center">Obrigatório</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Avs.Cpf</td>
+      <td>CPF do portador</td>
+      <td>texto</td>
+      <td style="text-align: center">11</td>
+      <td style="text-align: center">Não</td>
+    </tr>
+    <tr>
+      <td>Avs.ZipCode</td>
+      <td>CEP do endereço de cobrança do portador</td>
+      <td>texto</td>
+      <td style="text-align: center">8</td>
+      <td style="text-align: center">Não</td>
+    </tr>
+    <tr>
+      <td>Avs.Street</td>
+      <td>Logradouro do endereço de cobrança do portador</td>
+      <td>texto</td>
+      <td style="text-align: center">50</td>
+      <td style="text-align: center">Não</td>
+    </tr>
+    <tr>
+      <td>Avs.Number</td>
+      <td>Número do endereço de cobrança do portador</td>
+      <td>texto</td>
+      <td style="text-align: center">6</td>
+      <td style="text-align: center">Não</td>
+    </tr>
+    <tr>
+      <td>Avs.Complement</td>
+      <td>Complemento do endereço de cobrança do portador</td>
+      <td>texto</td>
+      <td style="text-align: center">30</td>
+      <td style="text-align: center">Não</td>
+    </tr>
+    <tr>
+      <td>Avs.District</td>
+      <td>Bairro do endereço de cobrança do portador</td>
+      <td>texto</td>
+      <td style="text-align: center">20</td>
+      <td style="text-align: center">Não</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="request">Request</h3>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+   </span><span class="s2">"MerchantOrderId"</span><span class="p">:</span><span class="s2">"2014111703"</span><span class="p">,</span><span class="w">
+   </span><span class="s2">"Payment"</span><span class="p">:{</span><span class="w">
+     </span><span class="s2">"Type"</span><span class="p">:</span><span class="s2">"CreditCard"</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"Amount"</span><span class="p">:</span><span class="mi">15700</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"Installments"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"SoftDescriptor"</span><span class="p">:</span><span class="s2">"123456789ABCD"</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"CreditCard"</span><span class="p">:{</span><span class="w">
+         </span><span class="s2">"CardNumber"</span><span class="p">:</span><span class="s2">"4551870000000181"</span><span class="p">,</span><span class="w">
+         </span><span class="s2">"Holder"</span><span class="p">:</span><span class="s2">"Teste Holder"</span><span class="p">,</span><span class="w">
+         </span><span class="s2">"ExpirationDate"</span><span class="p">:</span><span class="s2">"12/2021"</span><span class="p">,</span><span class="w">
+         </span><span class="s2">"SecurityCode"</span><span class="p">:</span><span class="s2">"123"</span><span class="p">,</span><span class="w">
+         </span><span class="s2">"Brand"</span><span class="p">:</span><span class="s2">"Visa"</span><span class="p">,</span><span class="w">
+         </span><span class="s2">"Avs"</span><span class="p">:{</span><span class="w">
+        	</span><span class="s2">"Cpf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10939107716"</span><span class="p">,</span><span class="w">
+        	</span><span class="s2">"ZipCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24320570"</span><span class="p">,</span><span class="w">
+        	</span><span class="s2">"Street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Estrada Caetano Monteiro"</span><span class="p">,</span><span class="w">
+        	</span><span class="s2">"Number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"391"</span><span class="p">,</span><span class="w">
+        	</span><span class="s2">"Complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bl"</span><span class="p">,</span><span class="w">
+        	</span><span class="s2">"District"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Niteroi"</span><span class="w">
+    	</span><span class="p">}</span><span class="w">
+     </span><span class="p">}</span><span class="w">
+   </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="response">Response</h3>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"MerchantOrderId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014111703"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Customer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[Guest]"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"Payment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"ServiceTaxAmount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Installments"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Interest"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Capture"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Authenticate"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Recurrent"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"CreditCard"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"CardNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"455187******0181"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Holder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Teste Holder"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"ExpirationDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12/2021"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"SaveCard"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Visa"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Avs"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"Cpf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10939107716"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"ZipCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"24320570"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"Street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Estrada Caetano Monteiro"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"Number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"391"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"Complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bl"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"District"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Niteroi"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"Status"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"ReturnCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"Tid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10447480686IHEHPA33B"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ProofOfSale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"279003"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"SoftDescriptor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123456789ABCD"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cielo"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Eci"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"VelocityAnalysis"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"Id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"467a37d0-435e-4729-b1b4-6a2c4ea7360e"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"ResultMessage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Accept"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Score"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"PaymentId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"467a37d0-435e-4729-b1b4-6a2c4ea7360e"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CreditCard"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">15700</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ReceivedDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-08-22 15:45:06"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRA"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ReturnCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"14"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ReturnMessage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Autorizacao negada"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Status"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Links"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"Method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"Rel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"self"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"Href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://apiquery.cieloecommerce.cielo.com.br/1/sales/467a37d0-435e-4729-b1b4-6a2c4ea7360e"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Paramêtro</th>
+      <th>Descrição</th>
+      <th>Tipo</th>
+      <th style="text-align: center">Tamanho</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Avs.Cpf</td>
+      <td>CPF do portador</td>
+      <td>texto</td>
+      <td style="text-align: center">11</td>
+    </tr>
+    <tr>
+      <td>Avs.ZipCode</td>
+      <td>CEP do endereço de cobrança do portador</td>
+      <td>texto</td>
+      <td style="text-align: center">8</td>
+    </tr>
+    <tr>
+      <td>Avs.Street</td>
+      <td>Logradouro do endereço de cobrança do portador</td>
+      <td>texto</td>
+      <td style="text-align: center">50</td>
+    </tr>
+    <tr>
+      <td>Avs.Number</td>
+      <td>Número do endereço de cobrança do portador</td>
+      <td>texto</td>
+      <td style="text-align: center">6</td>
+    </tr>
+    <tr>
+      <td>Avs.Complement</td>
+      <td>Complemento do endereço de cobrança do portador</td>
+      <td>texto</td>
+      <td style="text-align: center">30</td>
+    </tr>
+    <tr>
+      <td>Avs.District</td>
+      <td>Bairro do endereço de cobrança do portador</td>
+      <td>texto</td>
+      <td style="text-align: center">20</td>
+    </tr>
+    <tr>
+      <td>AvsCepReturnCode</td>
+      <td>Situação do CEP enviado:<br /><strong>C</strong> - Confere<br /><strong>N</strong> - Não confere<br /><strong>I</strong> - Indisponível<br /><strong>T</strong> - Temporariamente indisponível<br /><strong>X</strong> - Serviço não suportado para esta Bandeira<br /><strong>E</strong> - Dados enviados incorretos. Verificar se todos os campos foram enviados<br /></td>
+      <td>Texto</td>
+      <td style="text-align: center">1</td>
+    </tr>
+    <tr>
+      <td>AvsAddressReturnCode</td>
+      <td>Analise do endereço enviado:<br /><strong>C</strong> - Confere<br /><strong>N</strong> - Não confere<br /><strong>I</strong> - Indisponível<br /><strong>T</strong> - Temporariamente indisponível<br /><strong>X</strong> - Serviço não suportado para esta Bandeira<br /><strong>E</strong> - Dados enviados incorretos. Verificar se todos os campos foram enviados<br /></td>
+      <td>Texto</td>
+      <td style="text-align: center">1</td>
+    </tr>
+  </tbody>
+</table>
 
 </div>
 
