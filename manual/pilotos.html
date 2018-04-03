@@ -3126,6 +3126,297 @@ Isso auxilia na redução do risco de chargeback. Deve ser utilizada para análi
   </tbody>
 </table>
 
+<h1 id="cartões-alelo">Cartões ALELO</h1>
+
+<p>Para criar uma venda que utilizará cartão de Alelo, é necessário fazer um <code class="highlighter-rouge">POST</code> para o recurso Payment utilizando o contrato técnico de uma venda de <code class="highlighter-rouge">Cartão de Débito</code>.</p>
+
+<blockquote>
+  <p>Para mais informações sobre a integração de cartão de Débito via API Cielo Ecommerce, acesse o <a href="https://developercielo.github.io/manual/cielo-ecommerce#criando-uma-venda-simplificada">Manual de integração</a></p>
+</blockquote>
+
+<p><strong>OBS:</strong> Em transações de Cartão ALELO, os seguintes parametros devem possuir configurações estáticas</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parametro</th>
+      <th>Padrão ALELO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">Payment.Authenticate</code></td>
+      <td><strong>FALSE</strong> ou não enviado</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">DebitCard.Brand</code></td>
+      <td>Precisa ser enviado como ELO</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="requisição-6">Requisição</h3>
+
+<p>EndPoints de Produção</p>
+
+<blockquote>
+  <p><strong>Requisição de transação</strong>: https://api.cieloecommerce.cielo.com.br/
+<strong>Consulta transação</strong>: https://apiquery.cieloecommerce.cielo.com.br/</p>
+</blockquote>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl
+<span class="nt">--request</span> POST <span class="s2">"https://apisandbox.cieloecommerce.cielo.com.br/1/sales/"</span>
+<span class="nt">--header</span> <span class="s2">"Content-Type: application/json"</span>
+<span class="nt">--header</span> <span class="s2">"MerchantId: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"</span>
+<span class="nt">--header</span> <span class="s2">"MerchantKey: 0123456789012345678901234567890123456789"</span>
+<span class="nt">--header</span> <span class="s2">"RequestId: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"</span>
+<span class="nt">--data-binary</span>
+<span class="o">{</span>  
+   <span class="s2">"MerchantOrderId"</span>:<span class="s2">"2014121201"</span>,
+   <span class="s2">"Customer"</span>:<span class="o">{</span>  
+      <span class="s2">"Name"</span>:<span class="s2">"Comprador Cartão de Alelo"</span>
+   <span class="o">}</span>,
+   <span class="s2">"Payment"</span>:<span class="o">{</span>  
+     <span class="s2">"Type"</span>:<span class="s2">"DebitCard"</span>,
+     <span class="s2">"Authenticate"</span>:false,
+     <span class="s2">"Amount"</span>:50,
+     <span class="s2">"ReturnUrl"</span>:<span class="s2">"http://www.cielo.com.br"</span>,
+     <span class="s2">"DebitCard"</span>:<span class="o">{</span>  
+         <span class="s2">"CardNumber"</span>:<span class="s2">"5080540487508044"</span>,
+         <span class="s2">"Holder"</span>:<span class="s2">"Comprador Cartão de Alelo"</span>,
+         <span class="s2">"ExpirationDate"</span>:<span class="s2">"07/2029"</span>,
+         <span class="s2">"SecurityCode"</span>:<span class="s2">"841"</span>,
+         <span class="s2">"brand"</span>: <span class="s2">"Elo"</span>
+     <span class="o">}</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="nt">--verbose</span>
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Propriedade</th>
+      <th>Descrição</th>
+      <th>Tipo</th>
+      <th>Tamanho</th>
+      <th>Obrigatório</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">MerchantId</code></td>
+      <td>Identificador da loja na API Cielo eCommerce.</td>
+      <td>Guid</td>
+      <td>36</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">MerchantKey</code></td>
+      <td>Chave Publica para Autenticação Dupla na API Cielo eCommerce.</td>
+      <td>Texto</td>
+      <td>40</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">RequestId</code></td>
+      <td>Identificador do Request, utilizado quando o lojista usa diferentes servidores para cada GET/POST/PUT</td>
+      <td>Guid</td>
+      <td>36</td>
+      <td>Não</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">MerchantOrderId</code></td>
+      <td>Numero de identificação do Pedido.</td>
+      <td>Texto</td>
+      <td>50</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Customer.Name</code></td>
+      <td>Nome do Comprador.</td>
+      <td>Texto</td>
+      <td>255</td>
+      <td>Não</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Customer.Status</code></td>
+      <td>Status de cadastro do comprador na loja (NEW / EXISTING) - Utilizado pela análise de fraude</td>
+      <td>Texto</td>
+      <td>255</td>
+      <td>Não</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Payment.Authenticate</code></td>
+      <td>Define se o comprador será direcionado ao Banco emissor para autenticação do cartão</td>
+      <td>Booleano</td>
+      <td> </td>
+      <td>Não (Default false)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Payment.Type</code></td>
+      <td>Tipo do Meio de Pagamento.</td>
+      <td>Texto</td>
+      <td>100</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Payment.Amount</code></td>
+      <td>Valor do Pedido (ser enviado em centavos).</td>
+      <td>Número</td>
+      <td>15</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Payment.ReturnUrl</code></td>
+      <td>Url de retorno do lojista.</td>
+      <td>Texto</td>
+      <td>1024</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Payment.ReturnUrl</code></td>
+      <td>URI para onde o usuário será redirecionado após o fim do pagamento</td>
+      <td>Texto</td>
+      <td>1024</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">DebitCard.CardNumber</code></td>
+      <td>Número do Cartão do Comprador.</td>
+      <td>Texto</td>
+      <td>19</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">DebitCard.Holder</code></td>
+      <td>Nome do Comprador impresso no cartão.</td>
+      <td>Texto</td>
+      <td>25</td>
+      <td>Não</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">DebitCard.ExpirationDate</code></td>
+      <td>Data de validade impresso no cartão.</td>
+      <td>Texto</td>
+      <td>7</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">DebitCard.SecurityCode</code></td>
+      <td>Código de segurança impresso no verso do cartão.</td>
+      <td>Texto</td>
+      <td>4</td>
+      <td><strong>Sim</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="resposta-6">Resposta</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">--header</span> <span class="s2">"Content-Type: application/json"</span>
+<span class="nt">--header</span> <span class="s2">"RequestId: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"</span>
+<span class="o">{</span>
+    <span class="s2">"MerchantOrderId"</span>: <span class="s2">"2014121201"</span>,
+    <span class="s2">"Customer"</span>: <span class="o">{</span>
+        <span class="s2">"Name"</span>: <span class="s2">"Comprador Cartão de Alelo"</span>
+    <span class="o">}</span>,
+    <span class="s2">"Payment"</span>: <span class="o">{</span>
+        <span class="s2">"DebitCard"</span>: <span class="o">{</span>
+            <span class="s2">"CardNumber"</span>: <span class="s2">"508054******8044"</span>,
+            <span class="s2">"Holder"</span>: <span class="s2">"Comprador Cartão de Alelo"</span>,
+            <span class="s2">"ExpirationDate"</span>: <span class="s2">"07/2029"</span>,
+            <span class="s2">"SaveCard"</span>: <span class="nb">false</span>,
+            <span class="s2">"Brand"</span>: <span class="s2">"Elo"</span>
+        <span class="o">}</span>,
+        <span class="s2">"Provider"</span>: <span class="s2">"Cielo"</span>,
+        <span class="s2">"AuthorizationCode"</span>: <span class="s2">"803247"</span>,
+        <span class="s2">"Eci"</span>: <span class="s2">"7"</span>,
+        <span class="s2">"Tid"</span>: <span class="s2">"107703563079N41O9DJB"</span>,
+        <span class="s2">"ProofOfSale"</span>: <span class="s2">"770857"</span>,
+        <span class="s2">"Authenticate"</span>: <span class="nb">false</span>,
+        <span class="s2">"Recurrent"</span>: <span class="nb">false</span>,
+        <span class="s2">"Amount"</span>: 50,
+        <span class="s2">"ReceivedDate"</span>: <span class="s2">"2018-01-30 15:00:24"</span>,
+        <span class="s2">"CapturedAmount"</span>: 50,
+        <span class="s2">"CapturedDate"</span>: <span class="s2">"2018-01-30 15:00:25"</span>,
+        <span class="s2">"ReturnUrl"</span>: <span class="s2">"http://www.cielo.com.br"</span>,
+        <span class="s2">"Status"</span>: 2,
+        <span class="s2">"IsSplitted"</span>: <span class="nb">false</span>,
+        <span class="s2">"ReturnMessage"</span>: <span class="s2">"Transacao capturada com sucesso"</span>,
+        <span class="s2">"ReturnCode"</span>: <span class="s2">"00"</span>,
+        <span class="s2">"PaymentId"</span>: <span class="s2">"f8504766-4ae4-4a1f-811f-035964b6c4ee"</span>,
+        <span class="s2">"Type"</span>: <span class="s2">"DebitCard"</span>,
+        <span class="s2">"Currency"</span>: <span class="s2">"BRL"</span>,
+        <span class="s2">"Country"</span>: <span class="s2">"BRA"</span>,
+        <span class="s2">"Links"</span>: <span class="o">[</span>
+            <span class="o">{</span>
+                <span class="s2">"Method"</span>: <span class="s2">"GET"</span>,
+                <span class="s2">"Rel"</span>: <span class="s2">"self"</span>,
+                <span class="s2">"Href"</span>: <span class="s2">"https://apiquery.cieloecommerce.cielo.com.br/1/sales/f8504766-4ae4-4a1f-811f-035964b6c4ee"</span>
+            <span class="o">}</span>
+        <span class="o">]</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Propriedade</th>
+      <th>Descrição</th>
+      <th>Tipo</th>
+      <th>Tamanho</th>
+      <th>Formato</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">AuthenticationUrl</code></td>
+      <td>URL para qual o Lojista deve redirecionar o Cliente para o fluxo de Débito.</td>
+      <td>Texto</td>
+      <td>56</td>
+      <td>Url de Autenticação</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Tid</code></td>
+      <td>Id da transação na adquirente.</td>
+      <td>Texto</td>
+      <td>20</td>
+      <td>Texto alfanumérico</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">PaymentId</code></td>
+      <td>Campo Identificador do Pedido.</td>
+      <td>Guid</td>
+      <td>36</td>
+      <td>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ReturnUrl</code></td>
+      <td>Url de retorno do lojista. URL para onde o lojista vai ser redirecionado no final do fluxo.</td>
+      <td>Texto</td>
+      <td>1024</td>
+      <td>http://www.urllogista.com.br</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Status</code></td>
+      <td>Status da Transação.</td>
+      <td>Byte</td>
+      <td>—</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ReturnCode</code></td>
+      <td>Código de retorno da Adquirência.</td>
+      <td>Texto</td>
+      <td>32</td>
+      <td>Texto alfanumérico</td>
+    </tr>
+  </tbody>
+</table>
+
 </div>
 
 
