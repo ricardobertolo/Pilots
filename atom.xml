@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-03T18:04:15+00:00</updated>
+    <updated>2018-04-03T18:05:40+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -19445,7 +19445,11 @@ Mais informações e integração completa, você encontra no link: https://deve
         <link href="https://docscielo.github.io/Pilots/manual/pilotos"/>
         <updated>2000-01-01T00:00:00+00:00</updated>
         <id>https://docscielo.github.io/Pilots/manual/pilotos</id>
-        <content type="html">&lt;h1 id=&quot;api---controle-transacional&quot;&gt;API - CONTROLE TRANSACIONAL&lt;/h1&gt;
+        <content type="html">&lt;h1 id=&quot;cielo-auth&quot;&gt;Cielo AUTH&lt;/h1&gt;
+
+&lt;p&gt;O Cielo AUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce&lt;/p&gt;
+
+&lt;h1 id=&quot;api---controle-transacional&quot;&gt;API - CONTROLE TRANSACIONAL&lt;/h1&gt;
 
 &lt;p&gt;A &lt;strong&gt;API de Controle Transacional&lt;/strong&gt; permite ao lojista realizar operações sobre os pedidos que antes eram possíveis somente através do Backoffice do Checkout Cielo.&lt;/p&gt;
 
