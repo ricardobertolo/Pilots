@@ -3417,6 +3417,42 @@ Isso auxilia na redução do risco de chargeback. Deve ser utilizada para análi
   </tbody>
 </table>
 
+<h1 id="consulta-de-cartão-aberto-via-token">Consulta de cartão aberto via Token</h1>
+
+<p>Para consultar uma cartão aberto via API 3.0, é necessario realizar um <code class="highlighter-rouge">GET</code> utilizando o endpoint abaixo:</p>
+
+<aside class="request"><span class="method get">GET</span> <span class="endpoint">https://apiquery.cieloecommerce.cielo.com.br/1/card/opencard/{token}</span></aside>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">  
+   </span><span class="s2">"CardNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cartão aberto"</span><span class="p">,</span><span class="w"> 
+   </span><span class="s2">"Holder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Portador do cartão"</span><span class="p">,</span><span class="w"> 
+   </span><span class="s2">"ExpirationDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12/2018"</span><span class="w"> 
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parametro</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">CardNumber</code></td>
+      <td>Número do cartão tokenizado</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Holder</code></td>
+      <td>Nome do portador tokenizado</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ExpirationDate</code></td>
+      <td>Data de validade do cartão tokenizado</td>
+    </tr>
+  </tbody>
+</table>
+
 </div>
 
 
