@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-03T18:05:40+00:00</updated>
+    <updated>2018-04-03T18:08:10+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -19442,9 +19442,9 @@ Mais informações e integração completa, você encontra no link: https://deve
     <entry>
         <title>Pilotos Checkout Cielo</title>
         <category term="manual" />
-        <link href="https://docscielo.github.io/Pilots/manual/pilotos"/>
+        <link href="https://docscielo.github.io/Pilots/manual/pilotoscheckout"/>
         <updated>2000-01-01T00:00:00+00:00</updated>
-        <id>https://docscielo.github.io/Pilots/manual/pilotos</id>
+        <id>https://docscielo.github.io/Pilots/manual/pilotoscheckout</id>
         <content type="html">&lt;h1 id=&quot;cielo-auth&quot;&gt;Cielo AUTH&lt;/h1&gt;
 
 &lt;p&gt;O Cielo AUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce&lt;/p&gt;
