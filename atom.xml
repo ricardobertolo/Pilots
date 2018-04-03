@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-03T18:03:42+00:00</updated>
+    <updated>2018-04-03T18:04:15+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -19780,7 +19780,7 @@ O mesmo deve ser enviado no header da requisição, conforme abaixo:&lt;/p&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;api---link-de-pagamento&quot;&gt;API - LINK DE PAGAMENTO&lt;/h3&gt;
+&lt;h1 id=&quot;api---link-de-pagamento&quot;&gt;API - LINK DE PAGAMENTO&lt;/h1&gt;
 
 &lt;p&gt;A &lt;strong&gt;API de Gerenciamento de Link de Pagamentos&lt;/strong&gt; permite ao lojista criar, editar e consultar links de pagamentos.&lt;/p&gt;
 
@@ -19798,7 +19798,7 @@ O mesmo deve ser enviado no header da requisição, conforme abaixo:&lt;/p&gt;
   &lt;p&gt;&lt;strong&gt;Atenção&lt;/strong&gt;: Para receber notificações sobre transações originadas de Links de pagamento é OBRIGATÓRIO o cadastro da URL de Notificação.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&quot;caso-de-uso&quot;&gt;Caso de uso&lt;/h3&gt;
+&lt;h2 id=&quot;caso-de-uso&quot;&gt;Caso de uso&lt;/h2&gt;
 
 &lt;p&gt;Está é um exemplo de como usar a ferramenta de link / Qr code / Botão de pagamentos para elevar suas vendas!&lt;/p&gt;
 
