@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-03T20:45:51+00:00</updated>
+    <updated>2018-04-03T20:48:47+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -4436,7 +4436,7 @@ Isso auxilia na redução do risco de chargeback. Deve ser utilizada para análi
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h1 id=&quot;cartões-alelo&quot;&gt;Cartões ALELO&lt;/h1&gt;
+&lt;h1 id=&quot;cartões-alelo&quot;&gt;Cartões Alelo&lt;/h1&gt;
 
 &lt;p&gt;Para criar uma venda que utilizará cartão de Alelo, é necessário fazer um &lt;code class=&quot;highlighter-rouge&quot;&gt;POST&lt;/code&gt; para o recurso Payment utilizando o contrato técnico de uma venda de &lt;code class=&quot;highlighter-rouge&quot;&gt;Cartão de Débito&lt;/code&gt;.&lt;/p&gt;
 
