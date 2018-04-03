@@ -127,9 +127,119 @@
             </div>
 
             <div class="post">
-  <h1 id="cielo-auth">Cielo AUTH</h1>
+  <h1 id="cielo-oauth">Cielo OAUTH</h1>
 
-<p>O Cielo AUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce</p>
+<p>O Cielo OUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce. Ele utiliza o <strong>Protocolo Oauth</strong> como base de autenticação de requisições</p>
+
+<p>Para utilizar o Cielo Oauth</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>PROPRIEDADE</th>
+      <th>DESCRIÇÃO</th>
+      <th>TIPO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">ClientId</code></td>
+      <td>Identificador chave fornecido pela CIELO</td>
+      <td>guid</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ClientSecret</code></td>
+      <td>Chave que valida o ClientID. Fornecida pela Cielo junto ao <code class="highlighter-rouge">ClientID</code></td>
+      <td>string</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>Para obter o <code class="highlighter-rouge">ClientID</code> e o <code class="highlighter-rouge">ClientSecret</code>, acione a equipe de Produtos Cielo. Credênciais liberadas apenas para lojistas selecionados,</p>
+</blockquote>
+
+<h2 id="token-de-acesso">Token de acesso</h2>
+
+<p>Para obter acesso a serviços Cielo que utilizam o <code class="highlighter-rouge">Cielo Oauth</code>, será necessário obter um token de acesso, conforme os passos abaixo:</p>
+
+<ol>
+  <li>Concatenar o <em>ClientId</em> e o <em>ClientSecret</em>, <strong>ClientId:ClientSecret</strong></li>
+  <li>Codificar o resultado em <strong>Base64</strong></li>
+  <li>Enviar uma requisição, utilizando o método HTTP POST para o Endpoint abaixo</li>
+</ol>
+
+<aside class="request"><span class="method post">POST</span> <span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v2/token/</span></aside>
+
+<h3 id="concatenação">Concatenação</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>ClientId</strong></td>
+      <td>b521b6b2-b9b4-4a30-881d-3b63dece0006</td>
+    </tr>
+    <tr>
+      <td><strong>ClientSecret</strong></td>
+      <td>08Qkje79NwWRx5BdgNJsIkBuITt5cIVO</td>
+    </tr>
+    <tr>
+      <td><strong>ClientId:ClientSecret</strong></td>
+      <td><em>b521b6b2-b9b4-4a30-881d-3b63dece0006:08Qkje79NwWRx5BdgNJsIkBuITt5cIVO</em></td>
+    </tr>
+    <tr>
+      <td><strong>Base64</strong></td>
+      <td><em>YjUyMWI2YjItYjliNC00YTMwLTg4MWQtM2I2M2RlY2UwMDA2OiAwOFFramU3OU53V1J4NUJkZ05Kc0lrQnVJVHQ1Y0lWTw</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="request">Request</h3>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"POST"</span><span class="p">:</span><span class="w"> </span><span class="err">https</span><span class="p">:</span><span class="err">//cieloecommerce.cielo.com.br/v</span><span class="mi">2</span><span class="err">/public/v</span><span class="mi">2</span><span class="err">/token</span><span class="w">
+</span><span class="s2">"Headers"</span><span class="w">
+</span><span class="s2">"Authorization"</span><span class="p">:</span><span class="w"> </span><span class="err">Basic</span><span class="w"> </span><span class="err">YjUyMWI</span><span class="mi">2</span><span class="err">YjItYjliNC</span><span class="mi">00</span><span class="err">YTMwLTg</span><span class="mi">4</span><span class="err">MWQtM</span><span class="mi">2</span><span class="err">I</span><span class="mi">2</span><span class="err">M</span><span class="mi">2</span><span class="err">RlY</span><span class="mi">2</span><span class="err">UwMDA</span><span class="mi">2</span><span class="err">OiAwOFFramU</span><span class="mi">3</span><span class="err">OU</span><span class="mi">53</span><span class="err">V</span><span class="mi">1</span><span class="err">J</span><span class="mi">4</span><span class="err">NUJkZ</span><span class="mi">05</span><span class="err">Kc</span><span class="mi">0</span><span class="err">lrQnVJVHQ</span><span class="mi">1</span><span class="err">Y</span><span class="mi">0</span><span class="err">lWTw</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="response">Response</h3>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnRfbmFtZSI6Ik1ldUNoZWNrb3V0IE1hc3RlciBLZXkiLCJjbGllbnRfaWQiOiJjODlmZGasdasdasdmUyLTRlNzctODA2YS02ZDc1Y2QzOTdkYWMiLCJzY29wZXMiOiJ7XCJTY29wZVwiOlwiQ2hlY2tvdXRBcGlcIixcIkNsYWltc1wiOltdfSIsInJvbGUiOiJasdasdasd291dEFwaSIsImlzc47I6Imh0dHBzOi8vYXV0aGhvbasdasdnJhc3BhZy5jb20uYnIiLCJhdWQiOiJVVlF4Y1VBMmNTSjFma1EzSVVFbk9pSTNkbTl0ZmasdsadQjVKVVV1UVdnPSIsImV4cCI6MTQ5Nzk5NjY3NywibmJmIjoxNDk3OTEwMjc3fQ.ozj4xnH9PA3dji-ARPSbI7Nakn9dw5I8w6myBRkF-uA"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"token_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bearer"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"expires_in"</span><span class="p">:</span><span class="w"> </span><span class="mi">1199</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>PROPRIEDADE</th>
+      <th>DESCRIÇÃO</th>
+      <th>TIPO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">Access_token</code></td>
+      <td>Utilizado para acesso aos serviços da API</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Token_type</code></td>
+      <td>Sempre será do tipo <code class="highlighter-rouge">bearer</code></td>
+      <td>texto</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Expires_in</code></td>
+      <td>Validade do token em segundos. Aproximadamente 20 minutos</td>
+      <td>int</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>O token possui um tempo de expiração aproximado de 20 minutos (1.200 segundos). Após esse intervalo, será necessário obter um novo token para acesso aos serviços Cielo.</p>
+</blockquote>
 
 <h1 id="api---controle-transacional">API - CONTROLE TRANSACIONAL</h1>
 
@@ -233,14 +343,14 @@ Para acessá-la será necessário possuir:</p>
   <li><strong>Base64</strong> - YjUyMWI2YjItYjliNC00YTMwLTg4MWQtM2I2M2RlY2UwMDA2OiAwOFFramU3OU53V1J4NUJkZ05Kc0lrQnVJVHQ1Y0lWTw</li>
 </ul>
 
-<h3 id="request">Request</h3>
+<h3 id="request-1">Request</h3>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"POST"</span><span class="p">:</span><span class="w"> </span><span class="err">https</span><span class="p">:</span><span class="err">//cieloecommerce.cielo.com.br/v</span><span class="mi">2</span><span class="err">/public/v</span><span class="mi">2</span><span class="err">/token</span><span class="w">
 </span><span class="s2">"Headers"</span><span class="w">
 </span><span class="s2">"Authorization"</span><span class="p">:</span><span class="w"> </span><span class="err">Basic</span><span class="w"> </span><span class="err">YjUyMWI</span><span class="mi">2</span><span class="err">YjItYjliNC</span><span class="mi">00</span><span class="err">YTMwLTg</span><span class="mi">4</span><span class="err">MWQtM</span><span class="mi">2</span><span class="err">I</span><span class="mi">2</span><span class="err">M</span><span class="mi">2</span><span class="err">RlY</span><span class="mi">2</span><span class="err">UwMDA</span><span class="mi">2</span><span class="err">OiAwOFFramU</span><span class="mi">3</span><span class="err">OU</span><span class="mi">53</span><span class="err">V</span><span class="mi">1</span><span class="err">J</span><span class="mi">4</span><span class="err">NUJkZ</span><span class="mi">05</span><span class="err">Kc</span><span class="mi">0</span><span class="err">lrQnVJVHQ</span><span class="mi">1</span><span class="err">Y</span><span class="mi">0</span><span class="err">lWTw</span><span class="w">
 </span></code></pre></div></div>
 
-<h3 id="response">Response</h3>
+<h3 id="response-1">Response</h3>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnRfbmFtZSI6Ik1ldUNoZWNrb3V0IE1hc3RlciBLZXkiLCJjbGllbnRfaWQiOiJjODlmZGasdasdasdmUyLTRlNzctODA2YS02ZDc1Y2QzOTdkYWMiLCJzY29wZXMiOiJ7XCJTY29wZVwiOlwiQ2hlY2tvdXRBcGlcIixcIkNsYWltc1wiOltdfSIsInJvbGUiOiJasdasdasd291dEFwaSIsImlzc47I6Imh0dHBzOi8vYXV0aGhvbasdasdnJhc3BhZy5jb20uYnIiLCJhdWQiOiJVVlF4Y1VBMmNTSjFma1EzSVVFbk9pSTNkbTl0ZmasdsadQjVKVVV1UVdnPSIsImV4cCI6MTQ5Nzk5NjY3NywibmJmIjoxNDk3OTEwMjc3fQ.ozj4xnH9PA3dji-ARPSbI7Nakn9dw5I8w6myBRkF-uA"</span><span class="p">,</span><span class="w">
