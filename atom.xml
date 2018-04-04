@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-04T20:24:14+00:00</updated>
+    <updated>2018-04-04T20:24:42+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -1233,203 +1233,918 @@ tags:&lt;/p&gt;
     </entry>
     
     <entry>
-        <title>Tutoriais</title>
-        <category term="tutorial" />
-        <link href="https://docscielo.github.io/Pilots/tutorial/tutoriais-3-0"/>
+        <title>Manual de Integração</title>
+        <category term="manual" />
+        <link href="https://docscielo.github.io/Pilots/manual/wallets"/>
         <updated>2003-03-03T00:00:00+00:00</updated>
-        <id>https://docscielo.github.io/Pilots/tutorial/tutoriais-3.0</id>
-        <content type="html">&lt;h1 id=&quot;backoffice-api-cielo&quot;&gt;Backoffice API Cielo&lt;/h1&gt;
+        <id>https://docscielo.github.io/Pilots/manual/wallets</id>
+        <content type="html"># Wallet/Carteiras
 
-&lt;p&gt;O objetivo deste documento é orientar o lojista sobre como acessar Backoffice da API Cielo Ecommerce. Descrevendo as funcionalidades, os métodos a serem utilizados, listando informações necessárias e provendo exemplos.&lt;/p&gt;
+## O que são Wallets / Carteiras
 
-&lt;h2 id=&quot;visão-geral&quot;&gt;Visão Geral&lt;/h2&gt;
+São repositorios de cartões e dados de pagamentos para consumidores online. As Carteiras digitais permitem que um consumidor realizar o cadastro de seus dados de pagamento, assim agilizando o processo de compra em lojas habilitadas em suas compras por possuir apenas um cadastro.
 
-&lt;p&gt;O Backoffice da API Cielo Ecommerce permite que o lojista possa acessar 4 menus com diferentes funcionalidades:&lt;/p&gt;
+&gt; *Para utilizar carteiras na API Cielo eCommerce, o lojista deverá possuir as carteiras integradas em seu checkout*. 
 
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;Área do desenvolvedor Cielo&lt;/strong&gt; – Onde desenvolvedores podem acessar informações como manuais de integração, FAQs e suporte&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Pesquisa de transações&lt;/strong&gt; – Busca todas as transações executadas pela loja e exibe como captura ou cancelar transações&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Extrato de cobrança&lt;/strong&gt; – Detalha os valores cobradas pela a Cielo por cada função utilizada na API Cielo Ecommerce.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Configuração da recorrência&lt;/strong&gt; – Alterar quantidades de tentativas de execução de recorrências em caso de cartão negado.&lt;/li&gt;
-&lt;/ol&gt;
+Para maiores informações, sugerimos que entre em contato com o setor tecnico da carteira a qual deseja implementar.
 
-&lt;h2 id=&quot;acessando-o-backoffice&quot;&gt;Acessando o Backoffice&lt;/h2&gt;
+## Wallets / Carteiras Disponiveis
 
-&lt;p&gt;Para acessar o Backoffice, é necessário que o lojista realize login no Site Cielo, inserindo sua Afiliação (Nº de estabelecimento) e Usuário:&lt;/p&gt;
+A API Cielo Ecommerce possui integração com:
 
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i0.png&quot; alt=&quot;Acessando o Backoffice&quot; /&gt;&lt;/p&gt;
+| Carteira                                                           | 
+|--------------------------------------------------------------------|
+| [*Apple Pay*](https://www.apple.com/br/apple-pay/)                 |
+| [*Samsung Pay*](https://www.samsung.com.br/samsungpay/)            |
+| [*Android Pay*](https://www.android.com/intl/pt-BR_br/pay/)        | 
+| [*VisaCheckout*](https://vaidevisa.visa.com.br/site/visa-checkout) | 
+| [*MasterPass*](https://masterpass.com/pt-br/)                      | 
 
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i1.png&quot; alt=&quot;Acessando o Backoffice&quot; /&gt;&lt;/p&gt;
+&lt;aside class=&quot;notice&quot;&gt;&lt;strong&gt;Atenção:&lt;/strong&gt; Quando o nó “Wallet” for enviado na requisição, o nó “CreditCard” passa a ser opcional.&lt;/aside&gt;
 
-&lt;p&gt;Em seguida é necessário incluir sua Senha:&lt;/p&gt;
+&lt;aside class=&quot;notice&quot;&gt;&lt;strong&gt;Atenção:&lt;/strong&gt; Para o cartão de débito, quando for enviado na requisição o nó “Wallet”, será necessário o nó “DebitCard” contendo a “ReturnUrl”.&lt;/aside&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i2.png&quot; alt=&quot;Acessando o Backoffice&quot; /&gt;&lt;/p&gt;
+## Integração
 
-&lt;p&gt;Na área de “Vendas Online” basta clicar em Webservice 3.0&lt;/p&gt;
+### Requisição Padrão
 
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i3.png&quot; alt=&quot;Acessando o Backoffice&quot; /&gt;&lt;/p&gt;
+```json
+{
+  &quot;MerchantOrderId&quot;: &quot;2014111708&quot;,
+  &quot;Customer&quot;: {
+    &quot;Name&quot;: &quot;Exemplo Wallet Padrão&quot;,
+    &quot;Identity&quot;: &quot;11225468954&quot;,
+    &quot;IdentityType&quot;: &quot;CPF&quot;
+  },
+  &quot;Payment&quot;: {
+    &quot;Type&quot;: &quot;CreditCard&quot;,
+    &quot;Amount&quot;: 100,
+    &quot;Installments&quot;: 1,
+    &quot;Currency&quot;: &quot;BRL&quot;,
+    &quot;Wallet&quot;: {
+      &quot;Type&quot;: &quot;TIPO DE WALLET&quot;,
+      &quot;WalletKey&quot;: &quot;IDENTIFICADOR DA LOJA NA WALLET&quot;,
+      &quot;AdditionalData&quot;: {
+        &quot;EphemeralPublicKey&quot;: &quot;TOKEN INFORMADO PELA WALLET&quot;
+      }
+    }
+  }
+}
 
-&lt;p&gt;Você será direcionado para o Backoffice:&lt;/p&gt;
+```
 
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i4.png&quot; alt=&quot;Acessando o Backoffice&quot; /&gt;&lt;/p&gt;
+| Propriedade                | Tipo   | Tamanho | Obrigatório | Descrição                                                                                               |
+|----------------------------|--------|---------|-------------|---------------------------------------------------------------------------------------------------------|
+| `MerchantId`               | Guid   | 36      | Sim         | Identificador da loja na Cielo.                                                                         |
+| `MerchantKey`              | Texto  | 40      | Sim         | Chave Publica para Autenticação Dupla na Cielo.                                                         |
+| `RequestId`                | Guid   | 36      | Não         | Identificador do Request, utilizado quando o lojista usa diferentes servidores para cada GET/POST/PUT.  |
+| `MerchantOrderId`          | Texto  | 50      | Sim         | Numero de identificação do Pedido.                                                                      |
+| `Customer.Name`            | Texto  | 255     | Não         | Nome do Comprador.                                                                                      |
+| `Customer.Status`          | Texto  | 255     | Não         | Status de cadastro do comprador na loja (NEW / EXISTING)                                                |
+| `Payment.Type`             | Texto  | 100     | Sim         | Tipo do Meio de Pagamento.                                                                              |
+| `Payment.Amount`           | Número | 15      | Sim         | Valor do Pedido (ser enviado em centavos).                                                              |
+| `Payment.Installments`     | Número | 2       | Sim         | Número de Parcelas.                                                                                     |
+| `CreditCard.CardNumber.`   | Texto  | 19      | Sim         | Número do Cartão do Comprador                                                                           |
+| `CreditCard.SecurityCode`  | Texto  | 4       | Não         | Código de segurança impresso no verso do cartão - Ver Anexo.                                            |
+| `Wallet.Type`              | Texto  | 255     | Sim         | indica qual o tipo de carteira: `ApplePay` / `SamsungPay` / `AndroidPay` / `VisaCheckout`/ `Masterpass` |
+| `Wallet.Walletkey`         | Texto  | 255     | Sim         | Chave criptografica que identifica lojas nas Wallets - Ver tabela WalletKey para mais informações       |
+| `Wallet.AdditionalData.EphemeralPublicKey`| Texto  | 255    | Sim  | Token retornado pela Wallet. Deve ser enviado em Integrações: `ApplePay`/ `AndroidPay`           |
+| `Wallet.AdditionalData.capturecode`       | Texto  | 255    | Sim  | Código informado pela `MasterPass` ao lojista                                                    |                                                      
 
-&lt;p&gt;Nesta área você pode acessar as outras funcionalidades do Backoffice&lt;/p&gt;
+#### Walletkey
 
-&lt;h2 id=&quot;acessando-a-área-do-desenvolvedor&quot;&gt;Acessando a área do Desenvolvedor&lt;/h2&gt;
+Formato de `WalletKeys` utilizados pelas Wallets na API Cielo
 
-&lt;p&gt;Clique no link destacado abaixo:&lt;/p&gt;
+| Carteira       | Exemplo        |
+|----------------|----------------|
+| *Apple Pay*    | `9zcCAciwoTS+qBx8jWb++64eHT2QZTWBs6qMVJ0GO+AqpcDVkxGPNpOR/D1bv5AZ62+5lKvucati0+eu7hdilwUYT3n5swkHuIzX2KO80Apx/SkhoVM5dqgyKrak5VD2/drcGh9xqEanWkyd7wl200sYj4QUMbeLhyaY7bCdnnpKDJgpOY6J883fX3TiHoZorb/QlEEOpvYcbcFYs3ELZ7QVtjxyrO2LmPsIkz2BgNm5f+JaJUSAOectahgLZnZR+sRXTDtqLOJQAprs0MNTkPzF95nXGKCCnPV2mfR7z8FHcP7AGqO7aTLBGJLgxFOnRKaFnYlY2E9uTPBbB5JjZywlLIWsPKur5G4m1/E9A6DwjMd0fDYnxjj0bQDfaZpBPeGGPFLu5YYn1IDc`   |
+| *Samsung Pay*  | `eyJhbGciOiJSU0ExXzUiLCJraWQiOiIvam1iMU9PL2hHdFRVSWxHNFpxY2VYclVEbmFOUFV1ZUR5M2FWeHBzYXVRPSIsInR5cCI6IkpPU0UiLCJjaGFubmVsU2VjdXJpdHlDb250ZXh0IjoiUlNBX1BLSSIsImVuYyI6IkExMjhHQ00ifQ.cCsGbqgFdzVb1jhXNR--gApzoXH-LldMArSoG59x6i0BbI7jttqxyAdcriSy8q_77VAp3854P9kekjj54RKLrP6APDIr46DI97kjG9E99ONXImnEyamHj95ZH_AW8lvkfa09KAr4537RM8GEXyZoys2vfIW8zqjjicZ8EKIpAixNlmrFJu6-Bo_utsmDN_DuGm69Kk2_nh6txa7ML9PCI59LFfOMniAf7ZwoZUBDCY7Oh8kx3wsZ0kxNBwfyLBCMEYzET0qcIYxePezQpkNcaZ4oogmdNSpYY-KbZGMcWpo1DKhWphDVp0lZcLxA6Q25K78e5AtarR5whN4HUAkurQ.CFjWpHkAVoLCG8q0.NcsTuauebemJXmos_mLMTyLhEHL-p5Wv6J88WkgzyjAt_DW7laiPMYw2sqRXkOiMJLwhifRzbSp8ZgJBM25IX05dKKSS4XfFjJQQjOBHw6PYtEF5pUDMLHML3jcddCrX07abfef_DuP41PqOQYsjwesLZ8XsRj-R0TH4diOZ_GQop8_oawjRIo9eJr9Wbtho0h8kAzHYpfuhamOPT718EaGAY6SSrR7t6nBkzGNkrKAmHkC7aRwe.AbZG53wRqgF0XRG3wUK_UQ`   |
+| *Android Pay*  | `En6NrAzy/V9l7U9FukJTlOkXLx8lsHJ9Lp3aO16WbZuXX+dHI6fy3G8PES5Leu63x+ZSAKQTQxJC/+hFCU3N3Vzl2Eo0bhQDv9pZwU9oghS1rx0QlqNPslspQ8ufTqfDDg2IlsVh7ANh8BXC1pi4YzhUXhAB5J2xSu7ivJwWL4/9FVJ2u0mZIK6QHtuGJXdvol54HtNn9Cik9IA7xeh/gutJ/z9K8rVk1KrCBSSTE1cgxbUbpBp535IXsP//okqXIf7qlTi/sUkfIjXVWLPVP/JPcm+MHE0s/37aVyprz0xfkJjHkUExsJ2h1v7LU5nnK7uYmyUdEI42wUuzfGkwvjvfS3xllxGwqy3Of4ts5mkPLNXdLnPNGvP8RE4uYyrQM4hXdie3tTPgW6FK5ExDsKyw8Qm0ikvbb4Clo9JvALTjqJkr1VkT20UITdetra/8JUWOX/PbcxDYv2oOPLG9hDumRExuifi04cNtwzFvyFVBnV1SO3GKp+k/gGNDs7EziHNjToEq7JOWoaAlhNEUu2nxQxNiDEaRckgYd5A=`   |
+| *VisaCheckout* | `1140814777695873901`   |
 
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i45.png&quot; alt=&quot;Desenvolvedor&quot; /&gt;&lt;/p&gt;
+&gt; A Wallet MasterPass não possui WalletKey
 
-&lt;p&gt;Você será redirecionado para&lt;/p&gt;
+#### EphemeralPublicKey
 
-&lt;h2 id=&quot;pesquisando-e-editando-transações&quot;&gt;Pesquisando e editando transações&lt;/h2&gt;
+Formato de `EphemeralPublicKey` utilizados pelas Wallets na API Cielo
 
-&lt;h3 id=&quot;pesquisar-transações&quot;&gt;Pesquisar Transações&lt;/h3&gt;
+| Carteira       | Exemplo                                                                                                                          |
+|----------------|----------------------------------------------------------------------------------------------------------------------------------|
+| *Apple Pay*    | `MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEoedz1NqI6hs9hEO6dBsnn0X0xp5/DKj3gXirjEqxNIJ8JyhGxVB3ITd0E+6uG4W6Evt+kugG8gOhCBrdUU6JwQ==`   |
+| *Android Pay*  | `BG9mGFe2/kSo6PJDEoO5bRXRS4RKQ4b3jikXio0FUhZPqQe5f6SMlZQI3sfyiKteM0PRSeNDnQQ10XYeobN9avM=`                                       |
 
-&lt;p&gt;Ao acessar a opção abaixo:&lt;/p&gt;
+### Respostas
 
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i5.png&quot; alt=&quot;Pesquisa de transações&quot; /&gt;&lt;/p&gt;
+```json
+{
+    &quot;MerchantOrderId&quot;: &quot;2014111703&quot;,
+    &quot;Customer&quot;: {
+        &quot;Name&quot;: &quot;[Guest]&quot;
+    },
+    &quot;Payment&quot;: {
+        &quot;ServiceTaxAmount&quot;: 0,
+        &quot;Installments&quot;: 1,
+        &quot;Interest&quot;: 0,
+        &quot;Capture&quot;: false,
+        &quot;Authenticate&quot;: false,
+        &quot;Recurrent&quot;: false,
+        &quot;CreditCard&quot;: {
+            &quot;CardNumber&quot;: &quot;453211******1521&quot;,
+            &quot;Holder&quot;: &quot;Leonardo Romano&quot;,
+            &quot;ExpirationDate&quot;: &quot;08/2020&quot;,
+            &quot;SaveCard&quot;: false,
+            &quot;Brand&quot;: &quot;Visa&quot;
+        },
+        &quot;Tid&quot;: &quot;0319040817883&quot;,
+        &quot;ProofOfSale&quot;: &quot;817883&quot;,
+        &quot;AuthorizationCode&quot;: &quot;027795&quot;,
+        &quot;Wallet&quot;: {
+            &quot;Type&quot;: &quot;TIPO DE WALLET&quot;,
+            &quot;WalletKey&quot;: &quot;IDENTIFICADOR DA LOJA NA WALLET&quot;,
+            &quot;Eci&quot;: 0
+            &quot;AdditionalData&quot;: {
+                &quot;EphemeralPublicKey&quot;: &quot;TOKEN INFORMADO PELA WALLET&quot;
+                              },                
+                 },
+        &quot;SoftDescriptor&quot;: &quot;123456789ABCD&quot;,
+        &quot;Amount&quot;: 100,
+        &quot;ReceivedDate&quot;: &quot;2018-03-19 16:08:16&quot;,
+        &quot;Status&quot;: 1,
+        &quot;IsSplitted&quot;: false,
+        &quot;ReturnMessage&quot;: &quot;Operation Successful&quot;,
+        &quot;ReturnCode&quot;: &quot;4&quot;,
+        &quot;PaymentId&quot;: &quot;e57b09eb-475b-44b6-ac71-01b9b82f2491&quot;,
+        &quot;Type&quot;: &quot;CreditCard&quot;,
+        &quot;Currency&quot;: &quot;BRL&quot;,
+        &quot;Country&quot;: &quot;BRA&quot;,
+        &quot;Links&quot;: [
+            {
+                &quot;Method&quot;: &quot;GET&quot;,
+                &quot;Rel&quot;: &quot;self&quot;,
+                &quot;Href&quot;: &quot;https://apiquerysandbox.cieloecommerce.cielo.com.br/1/sales/e57b09eb-475b-44b6-ac71-01b9b82f2491&quot;
+            },
+            {
+                &quot;Method&quot;: &quot;PUT&quot;,
+                &quot;Rel&quot;: &quot;capture&quot;,
+                &quot;Href&quot;: &quot;https://apisandbox.cieloecommerce.cielo.com.br/1/sales/e57b09eb-475b-44b6-ac71-01b9b82f2491/capture&quot;
+            },
+            {
+                &quot;Method&quot;: &quot;PUT&quot;,
+                &quot;Rel&quot;: &quot;void&quot;,
+                &quot;Href&quot;: &quot;https://apisandbox.cieloecommerce.cielo.com.br/1/sales/e57b09eb-475b-44b6-ac71-01b9b82f2491/void&quot;
+            }
+        ]
+    }
+}
+```
 
-&lt;p&gt;Você será direcionado a tela de pesquisa de transações:&lt;/p&gt;
+| Propriedade         | Descrição                                                                                                                      | Tipo  | Tamanho | Formato                              |
+|---------------------|--------------------------------------------------------------------------------------------------------------------------------|-------|---------|--------------------------------------|
+| `ProofOfSale`       | Número da autorização, identico ao NSU.                                                                                        | Texto | 6       | Texto alfanumérico                   |
+| `Tid`               | Id da transação na adquirente.                                                                                                 | Texto | 20      | Texto alfanumérico                   |
+| `AuthorizationCode` | Código de autorização.                                                                                                         | Texto | 6       | Texto alfanumérico                   |
+| `SoftDescriptor`    | Texto que será impresso na fatura bancaria do portador - Disponivel apenas para VISA/MASTER - nao permite caracteres especiais | Texto | 13      | Texto alfanumérico                   |
+| `PaymentId`         | Campo Identificador do Pedido.                                                                                                 | Guid  | 36      | xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx |
+| `ECI`               | Eletronic Commerce Indicator. Representa o quão segura é uma transação.                                                        | Texto | 2       | Exemplos: 7                          |
+| `Status`            | Status da Transação.                                                                                                           | Byte  | ---     | 2                                    |
+| `ReturnCode`        | Código de retorno da Adquirência.                                                                                              | Texto | 32      | Texto alfanumérico                   |
+| `ReturnMessage`     | Mensagem de retorno da Adquirência.                                                                                            | Texto | 512     | Texto alfanumérico                   |
+| `Type`              |  indica qual o tipo de carteira: `ApplePay` / `SamsungPay` / `AndroidPay` / `VisaCheckout`/ `Masterpass`                       | Texto | 255     | Texto alfanumérico                   |
+| `Walletkey`         | Chave criptografica que identifica lojas nas Wallets - Ver tabela WalletKey para mais informações                              | Texto | 255     | Ver tabela `WalletKey`               |       
+| `AdditionalData.EphemeralPublicKey` | Token retornado pela Wallet. Deve ser enviado em Integrações: `ApplePay`/ `AndroidPay`                         | Texto | 255     | Ver Tabela `EphemeralPublicKey`      |  
+| `AdditionalData.capturecode`        | Código informado pela `MasterPass` ao lojista                                                                  | Texto | 255     | 3                                    | 
 
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i6.png&quot; alt=&quot;Pesquisa de transações&quot; /&gt;&lt;/p&gt;
+## Exemplos
 
-&lt;p&gt;Essa tela permite buscar todas as transações realizadas com sucesso na API Cielo Ecommerce e realizar a captura ou cancelamento de transações.&lt;/p&gt;
+### Apple Pay
 
-&lt;p&gt;Sobre os Filtros:&lt;/p&gt;
+#### Requisição
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Filtros&lt;/th&gt;
-      &lt;th&gt;Descrição&lt;/th&gt;
-      &lt;th&gt; &lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Tid&lt;/td&gt;
-      &lt;td&gt;Identificador da transação Cielo. Retornado via response e disponivel no site Cielo&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;EC&lt;/td&gt;
-      &lt;td&gt;Número da Afiliação Cielo&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Payment Id&lt;/td&gt;
-      &lt;td&gt;Identificador da transação e-commerce&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Número do Pedido&lt;/td&gt;
-      &lt;td&gt;Número do pedido enviado pelo lojista&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;NSU&lt;/td&gt;
-      &lt;td&gt;Identificação da autorização. Enviado via response&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Código de Erro&lt;/td&gt;
-      &lt;td&gt;Código retornado caso uma transação gere um erro.&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Tipos de meio de pagamento&lt;/td&gt;
-      &lt;td&gt;Grupo de meios de pagamento como Boletos ou cartão de crédito. Não diferencia&lt;/td&gt;
-      &lt;td&gt;bandeira ou banco.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Meios de pagamento&lt;/td&gt;
-      &lt;td&gt;Meio de pagamento especifico usado na transação (EX: Boleto Bradesco)&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Análise de Fraude&lt;/td&gt;
-      &lt;td&gt;Qual o status de antifraude da transação no momento da pesquisa&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Status da Transação&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;Cancelado&lt;/strong&gt; - Transação cancelada pelo lojista&lt;br /&gt;&lt;strong&gt;Estornado&lt;/strong&gt; - Transações canceladas com menos de 24 horas&lt;br /&gt;&lt;strong&gt;Não Autorizado&lt;/strong&gt; - Transações negadas pelo Autorizador Cielo&lt;br /&gt;&lt;strong&gt;Não Pago&lt;/strong&gt; - Transações autorizadas, mas não capturadas&lt;br /&gt;&lt;strong&gt;Pago&lt;/strong&gt; - Transações capturadas&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+Exemplo de Requisição padrão *Apple Pay*
 
-&lt;p&gt;Os filtros podem ser combinados para realizar uma pesquisa personalizada.&lt;/p&gt;
+&gt; É necessário que a loja ja possua cadastro e uma integração Apple Pay, caso contrario não será possivel a integração com a API
 
-&lt;h3 id=&quot;capturando-ou-cancelando-transações&quot;&gt;Capturando ou Cancelando Transações&lt;/h3&gt;
+&lt;aside class=&quot;request&quot;&gt;&lt;span class=&quot;method post&quot;&gt;POST&lt;/span&gt; &lt;span class=&quot;endpoint&quot;&gt;/1/sales/&lt;/span&gt;&lt;/aside&gt;
 
-&lt;p&gt;Ao realizar uma pesquisa, é possível realizar a captura ou cancelamento de transações. Ao identificar a transação que deseje cancelar ou capturar:&lt;/p&gt;
+```json
+{
+  &quot;MerchantOrderId&quot;: &quot;6242-642-723&quot;,
+  &quot;Customer&quot;: {
+    &quot;Name&quot;: &quot;Exemplo Wallet Padrão&quot;,
+    &quot;Identity&quot;: &quot;11225468954&quot;,
+    &quot;IdentityType&quot;: &quot;CPF&quot;
+  },
+  &quot;Payment&quot;: {
+    &quot;Type&quot;: &quot;CreditCard&quot;,
+    &quot;Amount&quot;: 1100,
+    &quot;Provider&quot;: &quot;Cielo&quot;,
+    &quot;Installments&quot;: 1,
+    &quot;Currency&quot;: &quot;BRL&quot;,
+    &quot;Wallet&quot;: {
+      &quot;Type&quot;: &quot;ApplePay&quot;,
+      &quot;WalletKey&quot;: &quot;9zcCAciwoTS+qBx8jWb++64eHT2QZTWBs6qMVJ0GO+AqpcDVkxGPNpOR/D1bv5AZ62+5lKvucati0+eu7hdilwUYT3n5swkHuIzX2KO80Apx/SkhoVM5dqgyKrak5VD2/drcGh9xqEanWkyd7wl200sYj4QUMbeLhyaY7bCdnnpKDJgpOY6J883fX3TiHoZorb/QlEEOpvYcbcFYs3ELZ7QVtjxyrO2LmPsIkz2BgNm5f+JaJUSAOectahgLZnZR+sRXTDtqLOJQAprs0MNTkPzF95nXGKCCnPV2mfR7z8FHcP7AGqO7aTLBGJLgxFOnRKaFnYlY2E9uTPBbB5JjZywlLIWsPKur5G4m1/E9A6DwjMd0fDYnxjj0bQDfaZpBPeGGPFLu5YYn1IDc&quot;,
+      &quot;AdditionalData&quot;: {
+        &quot;EphemeralPublicKey&quot;: &quot;MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEoedz1NqI6hs9hEO6dBsnn0X0xp5/DKj3gXirjEqxNIJ8JyhGxVB3ITd0E+6uG4W6Evt+kugG8gOhCBrdUU6JwQ==&quot;
+      }
+    }
+  }
+}
+```
 
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i7.png&quot; alt=&quot;capturando transações&quot; /&gt;&lt;/p&gt;
+| Propriedade                | Tipo   | Tamanho | Obrigatório | Descrição                                                                                               |
+|----------------------------|--------|---------|-------------|---------------------------------------------------------------------------------------------------------|
+| `MerchantId`               | Guid   | 36      | Sim         | Identificador da loja na Cielo.                                                                         |
+| `MerchantKey`              | Texto  | 40      | Sim         | Chave Publica para Autenticação Dupla na Cielo.                                                         |
+| `RequestId`                | Guid   | 36      | Não         | Identificador do Request, utilizado quando o lojista usa diferentes servidores para cada GET/POST/PUT.  |
+| `MerchantOrderId`          | Texto  | 50      | Sim         | Numero de identificação do Pedido.                                                                      |
+| `Customer.Name`            | Texto  | 255     | Não         | Nome do Comprador.                                                                                      |
+| `Customer.Status`          | Texto  | 255     | Não         | Status de cadastro do comprador na loja (NEW / EXISTING)                                                |
+| `Payment.Type`             | Texto  | 100     | Sim         | Tipo do Meio de Pagamento.                                                                              |
+| `Payment.Amount`           | Número | 15      | Sim         | Valor do Pedido (ser enviado em centavos).                                                              |
+| `Payment.Installments`     | Número | 2       | Sim         | Número de Parcelas.                                                                                     |
+| `CreditCard.CardNumber.`   | Texto  | 19      | Sim         | Número do Cartão do Comprador                                                                           |
+| `CreditCard.SecurityCode`  | Texto  | 4       | Não         | Código de segurança impresso no verso do cartão - Ver Anexo.                                            |
+| `Wallet.Type`              | Texto  | 255     | Sim         | indica qual o tipo de carteira: `ApplePay` / `SamsungPay` / `AndroidPay` / `VisaCheckout`/ `Masterpass` |
+| `Wallet.Walletkey`         | Texto  | 255     | Sim         | Chave criptografica que identifica lojas nas Wallets - Ver tabela WalletKey para mais informações       |
+| `Wallet.AdditionalData.EphemeralPublicKey`| Texto  | 255    | Sim  | Token retornado pela Wallet. Deve ser enviado em Integrações: `ApplePay`/ `AndroidPay`           |
+| `Wallet.AdditionalData.capturecode`       | Texto  | 255    | Sim  | Código informado pela `MasterPass` ao lojista                                                    | 
 
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i8.png&quot; alt=&quot;capturando transações&quot; /&gt;&lt;/p&gt;
+#### Resposta
 
-&lt;p&gt;Basta realizar o cancelamento ou a Captura (O botão apresentado depende do status da transação no momento de exibição.&lt;/p&gt;
+```json
+{
+    &quot;MerchantOrderId&quot;: &quot;2014111703&quot;,
+    &quot;Customer&quot;: {
+        &quot;Name&quot;: &quot;[Guest]&quot;
+    },
+    &quot;Payment&quot;: {
+        &quot;ServiceTaxAmount&quot;: 0,
+        &quot;Installments&quot;: 1,
+        &quot;Interest&quot;: 0,
+        &quot;Capture&quot;: false,
+        &quot;Authenticate&quot;: false,
+        &quot;Recurrent&quot;: false,
+        &quot;CreditCard&quot;: {
+            &quot;CardNumber&quot;: &quot;453211******1521&quot;,
+            &quot;Holder&quot;: &quot;Leonardo Romano&quot;,
+            &quot;ExpirationDate&quot;: &quot;08/2020&quot;,
+            &quot;SaveCard&quot;: false,
+            &quot;Brand&quot;: &quot;Visa&quot;
+        },
+        &quot;Tid&quot;: &quot;0319040817883&quot;,
+        &quot;ProofOfSale&quot;: &quot;817883&quot;,
+        &quot;AuthorizationCode&quot;: &quot;027795&quot;,
+        &quot;Wallet&quot;: {
+            &quot;Type&quot;: &quot;ApplePay&quot;,
+            &quot;WalletKey&quot;: &quot;9zcCAciwoTS+qBx8jWb++64eHT2QZTWBs6qMVJ0GO+AqpcDVkxGPNpOR/D1bv5AZ62+5lKvucati0+eu7hdilwUYT3n5swkHuIzX2KO80Apx/SkhoVM5dqgyKrak5VD2/drcGh9xqEanWkyd7wl200sYj4QUMbeLhyaY7bCdnnpKDJgpOY6J883fX3TiHoZorb/QlEEOpvYcbcFYs3ELZ7QVtjxyrO2LmPsIkz2BgNm5f+JaJUSAOectahgLZnZR+sRXTDtqLOJQAprs0MNTkPzF95nXGKCCnPV2mfR7z8FHcP7AGqO7aTLBGJLgxFOnRKaFnYlY2E9uTPBbB5JjZywlLIWsPKur5G4m1/E9A6DwjMd0fDYnxjj0bQDfaZpBPeGGPFLu5YYn1IDc&quot;,
+            &quot;Eci&quot;: 0
+            &quot;AdditionalData&quot;: {
+                &quot;EphemeralPublicKey&quot;: &quot;MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEoedz1NqI6hs9hEO6dBsnn0X0xp5/DKj3gXirjEqxNIJ8JyhGxVB3ITd0E+6uG4W6Evt+kugG8gOhCBrdUU6JwQ==&quot;
+                              },                
+                 },
+        &quot;SoftDescriptor&quot;: &quot;123456789ABCD&quot;,
+        &quot;Amount&quot;: 100,
+        &quot;ReceivedDate&quot;: &quot;2018-03-19 16:08:16&quot;,
+        &quot;Status&quot;: 1,
+        &quot;IsSplitted&quot;: false,
+        &quot;ReturnMessage&quot;: &quot;Operation Successful&quot;,
+        &quot;ReturnCode&quot;: &quot;4&quot;,
+        &quot;PaymentId&quot;: &quot;e57b09eb-475b-44b6-ac71-01b9b82f2491&quot;,
+        &quot;Type&quot;: &quot;CreditCard&quot;,
+        &quot;Currency&quot;: &quot;BRL&quot;,
+        &quot;Country&quot;: &quot;BRA&quot;,
+        &quot;Links&quot;: [
+            {
+                &quot;Method&quot;: &quot;GET&quot;,
+                &quot;Rel&quot;: &quot;self&quot;,
+                &quot;Href&quot;: &quot;https://apiquerysandbox.cieloecommerce.cielo.com.br/1/sales/e57b09eb-475b-44b6-ac71-01b9b82f2491&quot;
+            },
+            {
+                &quot;Method&quot;: &quot;PUT&quot;,
+                &quot;Rel&quot;: &quot;capture&quot;,
+                &quot;Href&quot;: &quot;https://apisandbox.cieloecommerce.cielo.com.br/1/sales/e57b09eb-475b-44b6-ac71-01b9b82f2491/capture&quot;
+            },
+            {
+                &quot;Method&quot;: &quot;PUT&quot;,
+                &quot;Rel&quot;: &quot;void&quot;,
+                &quot;Href&quot;: &quot;https://apisandbox.cieloecommerce.cielo.com.br/1/sales/e57b09eb-475b-44b6-ac71-01b9b82f2491/void&quot;
+            }
+        ]
+    }
+}
+```
 
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i9.png&quot; alt=&quot;capturando transações&quot; /&gt;&lt;/p&gt;
+| Propriedade         | Descrição                                                                                                                      | Tipo  | Tamanho | Formato                              |
+|---------------------|--------------------------------------------------------------------------------------------------------------------------------|-------|---------|--------------------------------------|
+| `ProofOfSale`       | Número da autorização, identico ao NSU.                                                                                        | Texto | 6       | Texto alfanumérico                   |
+| `Tid`               | Id da transação na adquirente.                                                                                                 | Texto | 20      | Texto alfanumérico                   |
+| `AuthorizationCode` | Código de autorização.                                                                                                         | Texto | 6       | Texto alfanumérico                   |
+| `SoftDescriptor`    | Texto que será impresso na fatura bancaria do portador - Disponivel apenas para VISA/MASTER - nao permite caracteres especiais | Texto | 13      | Texto alfanumérico                   |
+| `PaymentId`         | Campo Identificador do Pedido.                                                                                                 | Guid  | 36      | xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx |
+| `ECI`               | Eletronic Commerce Indicator. Representa o quão segura é uma transação.                                                        | Texto | 2       | Exemplos: 7                          |
+| `Status`            | Status da Transação.                                                                                                           | Byte  | ---     | 2                                    |
+| `ReturnCode`        | Código de retorno da Adquirência.                                                                                              | Texto | 32      | Texto alfanumérico                   |
+| `ReturnMessage`     | Mensagem de retorno da Adquirência.                                                                                            | Texto | 512     | Texto alfanumérico                   |
+| `Type`              |  indica qual o tipo de carteira: `ApplePay` / `SamsungPay` / `AndroidPay` / `VisaCheckout`/ `Masterpass`                       | Texto | 255     | Texto alfanumérico                   |
+| `Walletkey`         | Chave criptografica que identifica lojas nas Wallets - Ver tabela WalletKey para mais informações                              | Texto | 255     | Ver tabela `WalletKey`               |       
+| `AdditionalData.EphemeralPublicKey` | Token retornado pela Wallet. Deve ser enviado em Integrações: `ApplePay`/ `AndroidPay`                         | Texto | 255     | Ver Tabela `EphemeralPublicKey`      |  
+| `AdditionalData.capturecode`        | Código informado pela `MasterPass` ao lojista                                                                  | Texto | 255     | 3                                    | 
 
-&lt;p&gt;Confirme o valor a ser capturado ou cancelado.
-&lt;strong&gt;OBS:&lt;/strong&gt; Alterar o valor no menu acima, define o comportamento do Cancelamento/Captura Parcial.&lt;/p&gt;
+### Samsung Pay
 
-&lt;h3 id=&quot;capturando-ou-cancelando-transações-em-bloco&quot;&gt;Capturando ou cancelando Transações em bloco.&lt;/h3&gt;
+#### Requisição
 
-&lt;p&gt;Ao realizar uma pesquisa, é possível realizar a captura ou cancelamento de transações em bloco. Basta selecionar quais serão modificadas e clique em “Opções”:&lt;/p&gt;
+Exemplo de Requisição padrão *Samsung Pay*
 
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i10.png&quot; alt=&quot;bloco de transações&quot; /&gt;&lt;/p&gt;
+&gt; É necessário que a loja ja possua cadastro e uma integração Samsung Pay, caso contrario não será possivel a integração com a API
 
-&lt;p&gt;Selecione a opção desejada:&lt;/p&gt;
+&lt;aside class=&quot;request&quot;&gt;&lt;span class=&quot;method post&quot;&gt;POST&lt;/span&gt; &lt;span class=&quot;endpoint&quot;&gt;/1/sales/&lt;/span&gt;&lt;/aside&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i11.png&quot; alt=&quot;bloco de transações&quot; /&gt;&lt;/p&gt;
+```json
+{
+  &quot;MerchantOrderId&quot;:&quot;6242-642-723&quot;,
+  &quot;Customer&quot;:{
+     &quot;Name&quot;:&quot;Exemplo Wallet Padrão&quot;,
+     &quot;Identity&quot;:&quot;11225468954&quot;,
+      &quot;IdentityType&quot;:&quot;CPF&quot;
+  },
+  &quot;Payment&quot;:{
+     &quot;Type&quot;:&quot;CreditCard&quot;,
+     &quot;Amount&quot;:1,
+     &quot;Provider&quot;:&quot;Cielo&quot;,
+     &quot;Installments&quot;:1,
+     &quot;Currency&quot;:&quot;BRL&quot;,
+     &quot;Wallet&quot;:{
+       &quot;Type&quot;:&quot;SamsungPay&quot;,
+       &quot;WalletKey&quot;:&quot;eyJhbGciOiJSU0ExXzUiLCJraWQiOiIvam1iMU9PL2hHdFRVSWxHNFpxY2VYclVEbmFOUFV1ZUR5M2FWeHBzYXVRPSIsInR5cCI6IkpPU0UiLCJjaGFubmVsU2VjdXJpdHlDb250ZXh0IjoiUlNBX1BLSSIsImVuYyI6IkExMjhHQ00ifQ.cCsGbqgFdzVb1jhXNR--gApzoXH-LldMArSoG59x6i0BbI7jttqxyAdcriSy8q_77VAp3854P9kekjj54RKLrP6APDIr46DI97kjG9E99ONXImnEyamHj95ZH_AW8lvkfa09KAr4537RM8GEXyZoys2vfIW8zqjjicZ8EKIpAixNlmrFJu6-Bo_utsmDN_DuGm69Kk2_nh6txa7ML9PCI59LFfOMniAf7ZwoZUBDCY7Oh8kx3wsZ0kxNBwfyLBCMEYzET0qcIYxePezQpkNcaZ4oogmdNSpYY-KbZGMcWpo1DKhWphDVp0lZcLxA6Q25K78e5AtarR5whN4HUAkurQ.CFjWpHkAVoLCG8q0.NcsTuauebemJXmos_mLMTyLhEHL-p5Wv6J88WkgzyjAt_DW7laiPMYw2sqRXkOiMJLwhifRzbSp8ZgJBM25IX05dKKSS4XfFjJQQjOBHw6PYtEF5pUDMLHML3jcddCrX07abfef_DuP41PqOQYsjwesLZ8XsRj-R0TH4diOZ_GQop8_oawjRIo9eJr9Wbtho0h8kAzHYpfuhamOPT718EaGAY6SSrR7t6nBkzGNkrKAmHkC7aRwe.AbZG53wRqgF0XRG3wUK_UQ&quot;
+    }
+  }
+}
 
-&lt;p&gt;Ao selecionar a opção desejada, você será direcionado a uma tela onde poderá ser definido o valor da captura/cancelamento.&lt;/p&gt;
+```
 
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i12.png&quot; alt=&quot;bloco de transações&quot; /&gt;&lt;/p&gt;
+| Propriedade                | Tipo   | Tamanho | Obrigatório | Descrição                                                                                               |
+|----------------------------|--------|---------|-------------|---------------------------------------------------------------------------------------------------------|
+| `MerchantId`               | Guid   | 36      | Sim         | Identificador da loja na Cielo.                                                                         |
+| `MerchantKey`              | Texto  | 40      | Sim         | Chave Publica para Autenticação Dupla na Cielo.                                                         |
+| `RequestId`                | Guid   | 36      | Não         | Identificador do Request, utilizado quando o lojista usa diferentes servidores para cada GET/POST/PUT.  |
+| `MerchantOrderId`          | Texto  | 50      | Sim         | Numero de identificação do Pedido.                                                                      |
+| `Customer.Name`            | Texto  | 255     | Não         | Nome do Comprador.                                                                                      |
+| `Customer.Status`          | Texto  | 255     | Não         | Status de cadastro do comprador na loja (NEW / EXISTING)                                                |
+| `Payment.Type`             | Texto  | 100     | Sim         | Tipo do Meio de Pagamento.                                                                              |
+| `Payment.Amount`           | Número | 15      | Sim         | Valor do Pedido (ser enviado em centavos).                                                              |
+| `Payment.Installments`     | Número | 2       | Sim         | Número de Parcelas.                                                                                     |
+| `CreditCard.CardNumber.`   | Texto  | 19      | Sim         | Número do Cartão do Comprador                                                                           |
+| `CreditCard.SecurityCode`  | Texto  | 4       | Não         | Código de segurança impresso no verso do cartão - Ver Anexo.                                            |
+| `Wallet.Type`              | Texto  | 255     | Sim         | indica qual o tipo de carteira: `ApplePay` / `SamsungPay` / `AndroidPay` / `VisaCheckout`/ `Masterpass` |
+| `Wallet.Walletkey`         | Texto  | 255     | Sim         | Chave criptografica que identifica lojas nas Wallets - Ver tabela WalletKey para mais informações       |
+| `Wallet.AdditionalData.EphemeralPublicKey`| Texto  | 255    | Sim  | Token retornado pela Wallet. Deve ser enviado em Integrações: `ApplePay`/ `AndroidPay`           |
+| `Wallet.AdditionalData.capturecode`       | Texto  | 255    | Sim  | Código informado pela `MasterPass` ao lojista                                                    | 
 
-&lt;h2 id=&quot;utilizando-o-extrato&quot;&gt;Utilizando o Extrato&lt;/h2&gt;
+#### Resposta
 
-&lt;p&gt;O Extrato de cobrança permite visualizar o valor a ser cobrado pela utilização das funcionalidades da API Cielo Ecommerce. Basta selecionar o mês e ano que se deseja exibir.&lt;/p&gt;
+```json
+{
+    &quot;MerchantOrderId&quot;: &quot;2014111703&quot;,
+    &quot;Customer&quot;: {
+        &quot;Name&quot;: &quot;[Guest]&quot;
+    },
+    &quot;Payment&quot;: {
+        &quot;ServiceTaxAmount&quot;: 0,
+        &quot;Installments&quot;: 1,
+        &quot;Interest&quot;: 0,
+        &quot;Capture&quot;: false,
+        &quot;Authenticate&quot;: false,
+        &quot;Recurrent&quot;: false,
+        &quot;CreditCard&quot;: {
+            &quot;CardNumber&quot;: &quot;453211******1521&quot;,
+            &quot;Holder&quot;: &quot;Leonardo Romano&quot;,
+            &quot;ExpirationDate&quot;: &quot;08/2020&quot;,
+            &quot;SaveCard&quot;: false,
+            &quot;Brand&quot;: &quot;Visa&quot;
+        },
+        &quot;Tid&quot;: &quot;0319040817883&quot;,
+        &quot;ProofOfSale&quot;: &quot;817883&quot;,
+        &quot;AuthorizationCode&quot;: &quot;027795&quot;,
+        &quot;Wallet&quot;: {
+            &quot;Type&quot;: &quot;SamsungPay&quot;,
+            &quot;WalletKey&quot;: &quot;eyJhbGciOiJSU0ExXzUiLCJraWQiOiIvam1iMU9PL2hHdFRVSWxHNFpxY2VYclVEbmFOUFV1ZUR5M2FWeHBzYXVRPSIsInR5cCI6IkpPU0UiLCJjaGFubmVsU2VjdXJpdHlDb250ZXh0IjoiUlNBX1BLSSIsImVuYyI6IkExMjhHQ00ifQ.cCsGbqgFdzVb1jhXNR--gApzoXH-LldMArSoG59x6i0BbI7jttqxyAdcriSy8q_77VAp3854P9kekjj54RKLrP6APDIr46DI97kjG9E99ONXImnEyamHj95ZH_AW8lvkfa09KAr4537RM8GEXyZoys2vfIW8zqjjicZ8EKIpAixNlmrFJu6-Bo_utsmDN_DuGm69Kk2_nh6txa7ML9PCI59LFfOMniAf7ZwoZUBDCY7Oh8kx3wsZ0kxNBwfyLBCMEYzET0qcIYxePezQpkNcaZ4oogmdNSpYY-KbZGMcWpo1DKhWphDVp0lZcLxA6Q25K78e5AtarR5whN4HUAkurQ.CFjWpHkAVoLCG8q0.NcsTuauebemJXmos_mLMTyLhEHL-p5Wv6J88WkgzyjAt_DW7laiPMYw2sqRXkOiMJLwhifRzbSp8ZgJBM25IX05dKKSS4XfFjJQQjOBHw6PYtEF5pUDMLHML3jcddCrX07abfef_DuP41PqOQYsjwesLZ8XsRj-R0TH4diOZ_GQop8_oawjRIo9eJr9Wbtho0h8kAzHYpfuhamOPT718EaGAY6SSrR7t6nBkzGNkrKAmHkC7aRwe.AbZG53wRqgF0XRG3wUK_UQ&quot;,
+            &quot;Eci&quot;: 0
+                 },
+        &quot;SoftDescriptor&quot;: &quot;123456789ABCD&quot;,
+        &quot;Amount&quot;: 100,
+        &quot;ReceivedDate&quot;: &quot;2018-03-19 16:08:16&quot;,
+        &quot;Status&quot;: 1,
+        &quot;IsSplitted&quot;: false,
+        &quot;ReturnMessage&quot;: &quot;Operation Successful&quot;,
+        &quot;ReturnCode&quot;: &quot;4&quot;,
+        &quot;PaymentId&quot;: &quot;e57b09eb-475b-44b6-ac71-01b9b82f2491&quot;,
+        &quot;Type&quot;: &quot;CreditCard&quot;,
+        &quot;Currency&quot;: &quot;BRL&quot;,
+        &quot;Country&quot;: &quot;BRA&quot;,
+        &quot;Links&quot;: [
+            {
+                &quot;Method&quot;: &quot;GET&quot;,
+                &quot;Rel&quot;: &quot;self&quot;,
+                &quot;Href&quot;: &quot;https://apiquerysandbox.cieloecommerce.cielo.com.br/1/sales/e57b09eb-475b-44b6-ac71-01b9b82f2491&quot;
+            },
+            {
+                &quot;Method&quot;: &quot;PUT&quot;,
+                &quot;Rel&quot;: &quot;capture&quot;,
+                &quot;Href&quot;: &quot;https://apisandbox.cieloecommerce.cielo.com.br/1/sales/e57b09eb-475b-44b6-ac71-01b9b82f2491/capture&quot;
+            },
+            {
+                &quot;Method&quot;: &quot;PUT&quot;,
+                &quot;Rel&quot;: &quot;void&quot;,
+                &quot;Href&quot;: &quot;https://apisandbox.cieloecommerce.cielo.com.br/1/sales/e57b09eb-475b-44b6-ac71-01b9b82f2491/void&quot;
+            }
+        ]
+    }
+}
+```
 
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i13.png&quot; alt=&quot;extrato&quot; /&gt;&lt;/p&gt;
+| Propriedade         | Descrição                                                                                                                      | Tipo  | Tamanho | Formato                              |
+|---------------------|--------------------------------------------------------------------------------------------------------------------------------|-------|---------|--------------------------------------|
+| `ProofOfSale`       | Número da autorização, identico ao NSU.                                                                                        | Texto | 6       | Texto alfanumérico                   |
+| `Tid`               | Id da transação na adquirente.                                                                                                 | Texto | 20      | Texto alfanumérico                   |
+| `AuthorizationCode` | Código de autorização.                                                                                                         | Texto | 6       | Texto alfanumérico                   |
+| `SoftDescriptor`    | Texto que será impresso na fatura bancaria do portador - Disponivel apenas para VISA/MASTER - nao permite caracteres especiais | Texto | 13      | Texto alfanumérico                   |
+| `PaymentId`         | Campo Identificador do Pedido.                                                                                                 | Guid  | 36      | xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx |
+| `ECI`               | Eletronic Commerce Indicator. Representa o quão segura é uma transação.                                                        | Texto | 2       | Exemplos: 7                          |
+| `Status`            | Status da Transação.                                                                                                           | Byte  | ---     | 2                                    |
+| `ReturnCode`        | Código de retorno da Adquirência.                                                                                              | Texto | 32      | Texto alfanumérico                   |
+| `ReturnMessage`     | Mensagem de retorno da Adquirência.                                                                                            | Texto | 512     | Texto alfanumérico                   |
+| `Type`              |  indica qual o tipo de carteira: `ApplePay` / `SamsungPay` / `AndroidPay` / `VisaCheckout`/ `Masterpass`                       | Texto | 255     | Texto alfanumérico                   |
+| `Walletkey`         | Chave criptografica que identifica lojas nas Wallets - Ver tabela WalletKey para mais informações                              | Texto | 255     | Ver tabela `WalletKey`               |       
+| `AdditionalData.EphemeralPublicKey` | Token retornado pela Wallet. Deve ser enviado em Integrações: `ApplePay`/ `AndroidPay`                         | Texto | 255     | Ver Tabela `EphemeralPublicKey`      |  
+| `AdditionalData.capturecode`        | Código informado pela `MasterPass` ao lojista                                                                  | Texto | 255     | 3                                    | 
 
-&lt;p&gt;Para maiores informações a respeito dos serviços cobrados, entre em contato com nossa equipe de suporte:&lt;/p&gt;
+### Android Pay
 
-&lt;ul&gt;
-  &lt;li&gt;+55 4002-9700 – Capitais e Regiões Metropolitanas&lt;/li&gt;
-  &lt;li&gt;+55 0800-570-1700 – Demais Localidades&lt;/li&gt;
-  &lt;li&gt;+55 11 2860-1348 – Internacionais
-    &lt;ul&gt;
-      &lt;li&gt;Opção 1 – Suporte técnico;&lt;/li&gt;
-      &lt;li&gt;Opção 2 – Credenciamento eCommerce.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Email: cieloeCommerce@cielo.com.br&lt;/li&gt;
-&lt;/ul&gt;
+#### Requisição
 
-&lt;h2 id=&quot;configurando-a-recorrência&quot;&gt;Configurando a Recorrência&lt;/h2&gt;
+Exemplo de Requisição padrão *Android Pay*
 
-&lt;p&gt;A área de configuração da recorrência permite modificar o número e o intervalo das tentativas de transações. Essas tentativas ocorrem quando uma transação (dentro de uma recorrência) é negada. A API Cielo Ecommerce possui a inteligência para identificar esse cenário, e executar uma nova transação.&lt;/p&gt;
+&gt; É necessário que a loja ja possua cadastro e uma integração Android Pay, caso contrario não será possivel a integração com a API
 
-&lt;p&gt;Acesse a tela de configuração e use o link “&lt;strong&gt;Tipo de pagamento&lt;/strong&gt;”:&lt;/p&gt;
+&lt;aside class=&quot;request&quot;&gt;&lt;span class=&quot;method post&quot;&gt;POST&lt;/span&gt; &lt;span class=&quot;endpoint&quot;&gt;/1/sales/&lt;/span&gt;&lt;/aside&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i14.png&quot; alt=&quot;Recorrência&quot; /&gt;&lt;/p&gt;
+```json
+{
+  &quot;MerchantOrderId&quot;:&quot;6242-642-723&quot;,
+  &quot;Customer&quot;:{
+     &quot;Name&quot;:&quot;Exemplo Wallet Padrão&quot;,
+     &quot;Identity&quot;:&quot;11225468954&quot;,
+      &quot;IdentityType&quot;:&quot;CPF&quot;
+  },
+  &quot;Payment&quot;:{
+     &quot;Type&quot;:&quot;CreditCard&quot;,
+     &quot;Amount&quot;:1,
+     &quot;Provider&quot;:&quot;Cielo&quot;,
+     &quot;Installments&quot;:1,
+     &quot;Currency&quot;:&quot;BRL&quot;,
+     &quot;Wallet&quot;:{
+       &quot;Type&quot;:&quot;AndroidPay&quot;,
+       &quot;WalletKey&quot;:&quot;En6NrAzy/V9l7U9FukJTlOkXLx8lsHJ9Lp3aO16WbZuXX+dHI6fy3G8PES5Leu63x+ZSAKQTQxJC/+hFCU3N3Vzl2Eo0bhQDv9pZwU9oghS1rx0QlqNPslspQ8ufTqfDDg2IlsVh7ANh8BXC1pi4YzhUXhAB5J2xSu7ivJwWL4/9FVJ2u0mZIK6QHtuGJXdvol54HtNn9Cik9IA7xeh/gutJ/z9K8rVk1KrCBSSTE1cgxbUbpBp535IXsP//okqXIf7qlTi/sUkfIjXVWLPVP/JPcm+MHE0s/37aVyprz0xfkJjHkUExsJ2h1v7LU5nnK7uYmyUdEI42wUuzfGkwvjvfS3xllxGwqy3Of4ts5mkPLNXdLnPNGvP8RE4uYyrQM4hXdie3tTPgW6FK5ExDsKyw8Qm0ikvbb4Clo9JvALTjqJkr1VkT20UITdetra/8JUWOX/PbcxDYv2oOPLG9hDumRExuifi04cNtwzFvyFVBnV1SO3GKp+k/gGNDs7EziHNjToEq7JOWoaAlhNEUu2nxQxNiDEaRckgYd5A=&quot;,
+       &quot;AdditionalData&quot;:{
+           &quot;EphemeralPublicKey&quot;:&quot;BG9mGFe2/kSo6PJDEoO5bRXRS4RKQ4b3jikXio0FUhZPqQe5f6SMlZQI3sfyiKteM0PRSeNDnQQ10XYeobN9avM=&quot;
+       }
+    }
+  }
+}
+```
 
-&lt;p&gt;Você será direcionado para a tela de configuração:&lt;/p&gt;
+| Propriedade                | Tipo   | Tamanho | Obrigatório | Descrição                                                                                               |
+|----------------------------|--------|---------|-------------|---------------------------------------------------------------------------------------------------------|
+| `MerchantId`               | Guid   | 36      | Sim         | Identificador da loja na Cielo.                                                                         |
+| `MerchantKey`              | Texto  | 40      | Sim         | Chave Publica para Autenticação Dupla na Cielo.                                                         |
+| `RequestId`                | Guid   | 36      | Não         | Identificador do Request, utilizado quando o lojista usa diferentes servidores para cada GET/POST/PUT.  |
+| `MerchantOrderId`          | Texto  | 50      | Sim         | Numero de identificação do Pedido.                                                                      |
+| `Customer.Name`            | Texto  | 255     | Não         | Nome do Comprador.                                                                                      |
+| `Customer.Status`          | Texto  | 255     | Não         | Status de cadastro do comprador na loja (NEW / EXISTING)                                                |
+| `Payment.Type`             | Texto  | 100     | Sim         | Tipo do Meio de Pagamento.                                                                              |
+| `Payment.Amount`           | Número | 15      | Sim         | Valor do Pedido (ser enviado em centavos).                                                              |
+| `Payment.Installments`     | Número | 2       | Sim         | Número de Parcelas.                                                                                     |
+| `CreditCard.CardNumber.`   | Texto  | 19      | Sim         | Número do Cartão do Comprador                                                                           |
+| `CreditCard.SecurityCode`  | Texto  | 4       | Não         | Código de segurança impresso no verso do cartão - Ver Anexo.                                            |
+| `Wallet.Type`              | Texto  | 255     | Sim         | indica qual o tipo de carteira: `ApplePay` / `SamsungPay` / `AndroidPay` / `VisaCheckout`/ `Masterpass` |
+| `Wallet.Walletkey`         | Texto  | 255     | Sim         | Chave criptografica que identifica lojas nas Wallets - Ver tabela WalletKey para mais informações       |
+| `Wallet.AdditionalData.EphemeralPublicKey`| Texto  | 255    | Sim  | Token retornado pela Wallet. Deve ser enviado em Integrações: `ApplePay`/ `AndroidPay`           |
+| `Wallet.AdditionalData.capturecode`       | Texto  | 255    | Sim  | Código informado pela `MasterPass` ao lojista                                                    | 
 
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/i15.png&quot; alt=&quot;Recorrência&quot; /&gt;&lt;/p&gt;
+#### Resposta
 
-&lt;p&gt;Nessa tela é possível alterar:&lt;/p&gt;
+```json
+{
+    &quot;MerchantOrderId&quot;: &quot;2014111703&quot;,
+    &quot;Customer&quot;: {
+        &quot;Name&quot;: &quot;[Guest]&quot;
+    },
+    &quot;Payment&quot;: {
+        &quot;ServiceTaxAmount&quot;: 0,
+        &quot;Installments&quot;: 1,
+        &quot;Interest&quot;: 0,
+        &quot;Capture&quot;: false,
+        &quot;Authenticate&quot;: false,
+        &quot;Recurrent&quot;: false,
+        &quot;CreditCard&quot;: {
+            &quot;CardNumber&quot;: &quot;453211******1521&quot;,
+            &quot;Holder&quot;: &quot;Leonardo Romano&quot;,
+            &quot;ExpirationDate&quot;: &quot;08/2020&quot;,
+            &quot;SaveCard&quot;: false,
+            &quot;Brand&quot;: &quot;Visa&quot;
+        },
+        &quot;Tid&quot;: &quot;0319040817883&quot;,
+        &quot;ProofOfSale&quot;: &quot;817883&quot;,
+        &quot;AuthorizationCode&quot;: &quot;027795&quot;,
+        &quot;Wallet&quot;: {
+            &quot;Type&quot;: &quot;AndroidPay&quot;,
+            &quot;WalletKey&quot;: &quot;En6NrAzy/V9l7U9FukJTlOkXLx8lsHJ9Lp3aO16WbZuXX+dHI6fy3G8PES5Leu63x+ZSAKQTQxJC/+hFCU3N3Vzl2Eo0bhQDv9pZwU9oghS1rx0QlqNPslspQ8ufTqfDDg2IlsVh7ANh8BXC1pi4YzhUXhAB5J2xSu7ivJwWL4/9FVJ2u0mZIK6QHtuGJXdvol54HtNn9Cik9IA7xeh/gutJ/z9K8rVk1KrCBSSTE1cgxbUbpBp535IXsP//okqXIf7qlTi/sUkfIjXVWLPVP/JPcm+MHE0s/37aVyprz0xfkJjHkUExsJ2h1v7LU5nnK7uYmyUdEI42wUuzfGkwvjvfS3xllxGwqy3Of4ts5mkPLNXdLnPNGvP8RE4uYyrQM4hXdie3tTPgW6FK5ExDsKyw8Qm0ikvbb4Clo9JvALTjqJkr1VkT20UITdetra/8JUWOX/PbcxDYv2oOPLG9hDumRExuifi04cNtwzFvyFVBnV1SO3GKp+k/gGNDs7EziHNjToEq7JOWoaAlhNEUu2nxQxNiDEaRckgYd5A&quot;,
+            &quot;Eci&quot;: 0
+            &quot;AdditionalData&quot;:{
+                &quot;EphemeralPublicKey&quot;:&quot;BG9mGFe2/kSo6PJDEoO5bRXRS4RKQ4b3jikXio0FUhZPqQe5f6SMlZQI3sfyiKteM0PRSeNDnQQ10XYeobN9avM=&quot;
+                 },
+        &quot;SoftDescriptor&quot;: &quot;123456789ABCD&quot;,
+        &quot;Amount&quot;: 100,
+        &quot;ReceivedDate&quot;: &quot;2018-03-19 16:08:16&quot;,
+        &quot;Status&quot;: 1,
+        &quot;IsSplitted&quot;: false,
+        &quot;ReturnMessage&quot;: &quot;Operation Successful&quot;,
+        &quot;ReturnCode&quot;: &quot;4&quot;,
+        &quot;PaymentId&quot;: &quot;e57b09eb-475b-44b6-ac71-01b9b82f2491&quot;,
+        &quot;Type&quot;: &quot;CreditCard&quot;,
+        &quot;Currency&quot;: &quot;BRL&quot;,
+        &quot;Country&quot;: &quot;BRA&quot;,
+        &quot;Links&quot;: [
+            {
+                &quot;Method&quot;: &quot;GET&quot;,
+                &quot;Rel&quot;: &quot;self&quot;,
+                &quot;Href&quot;: &quot;https://apiquerysandbox.cieloecommerce.cielo.com.br/1/sales/e57b09eb-475b-44b6-ac71-01b9b82f2491&quot;
+            },
+            {
+                &quot;Method&quot;: &quot;PUT&quot;,
+                &quot;Rel&quot;: &quot;capture&quot;,
+                &quot;Href&quot;: &quot;https://apisandbox.cieloecommerce.cielo.com.br/1/sales/e57b09eb-475b-44b6-ac71-01b9b82f2491/capture&quot;
+            },
+            {
+                &quot;Method&quot;: &quot;PUT&quot;,
+                &quot;Rel&quot;: &quot;void&quot;,
+                &quot;Href&quot;: &quot;https://apisandbox.cieloecommerce.cielo.com.br/1/sales/e57b09eb-475b-44b6-ac71-01b9b82f2491/void&quot;
+            }
+        ]
+    }
+}
+```
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Quantidades de tentativas:&lt;/strong&gt; Número de vezes a API vai realizar uma nova transação em caso de não autorização dentro de uma recorrência. Limitada a 4 tentativas&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Intervalo de tentativas:&lt;/strong&gt; Espaço de tempo entre a execução de cada nova tentativa de autorização de uma transação dentro de uma recorrência. Limitado a 4 dias entre cada tentativa.&lt;/li&gt;
-&lt;/ul&gt;
+| Propriedade         | Descrição                                                                                                                      | Tipo  | Tamanho | Formato                              |
+|---------------------|--------------------------------------------------------------------------------------------------------------------------------|-------|---------|--------------------------------------|
+| `ProofOfSale`       | Número da autorização, identico ao NSU.                                                                                        | Texto | 6       | Texto alfanumérico                   |
+| `Tid`               | Id da transação na adquirente.                                                                                                 | Texto | 20      | Texto alfanumérico                   |
+| `AuthorizationCode` | Código de autorização.                                                                                                         | Texto | 6       | Texto alfanumérico                   |
+| `SoftDescriptor`    | Texto que será impresso na fatura bancaria do portador - Disponivel apenas para VISA/MASTER - nao permite caracteres especiais | Texto | 13      | Texto alfanumérico                   |
+| `PaymentId`         | Campo Identificador do Pedido.                                                                                                 | Guid  | 36      | xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx |
+| `ECI`               | Eletronic Commerce Indicator. Representa o quão segura é uma transação.                                                        | Texto | 2       | Exemplos: 7                          |
+| `Status`            | Status da Transação.                                                                                                           | Byte  | ---     | 2                                    |
+| `ReturnCode`        | Código de retorno da Adquirência.                                                                                              | Texto | 32      | Texto alfanumérico                   |
+| `ReturnMessage`     | Mensagem de retorno da Adquirência.                                                                                            | Texto | 512     | Texto alfanumérico                   |
+| `Type`              |  indica qual o tipo de carteira: `ApplePay` / `SamsungPay` / `AndroidPay` / `VisaCheckout`/ `Masterpass`                       | Texto | 255     | Texto alfanumérico                   |
+| `Walletkey`         | Chave criptografica que identifica lojas nas Wallets - Ver tabela WalletKey para mais informações                              | Texto | 255     | Ver tabela `WalletKey`               |       
+| `AdditionalData.EphemeralPublicKey` | Token retornado pela Wallet. Deve ser enviado em Integrações: `ApplePay`/ `AndroidPay`                         | Texto | 255     | Ver Tabela `EphemeralPublicKey`      |  
+| `AdditionalData.capturecode`        | Código informado pela `MasterPass` ao lojista                                                                  | Texto | 255     | 3                                    | 
+
+### MasterPass
+
+Para utilizar o Masterpass é necessário entrar em contato diretamente com a Mastercard pelo site: https://masterpass.com/pt-br/ e solicitar as credenciais.
+Mais informações e integração completa, você encontra no link: https://developer.mastercard.com/product/masterpass “ 
+
+#### Requisição
+
+&lt;aside class=&quot;request&quot;&gt;&lt;span class=&quot;method post&quot;&gt;POST&lt;/span&gt; &lt;span class=&quot;endpoint&quot;&gt;/1/sales/&lt;/span&gt;&lt;/aside&gt;
+
+```json
+{  
+   &quot;MerchantOrderId&quot;:&quot;2014111708&quot;,
+   &quot;Customer&quot;:{  
+      &quot;Name&quot;:&quot;Comprador MasterPass&quot;     
+   },
+   &quot;Payment&quot;:{  
+     &quot;Type&quot;:&quot;CreditCard&quot;,
+     &quot;Amount&quot;:15700,
+     &quot;Installments&quot;:1,
+     &quot;CreditCard&quot;:{
+               &quot;CardNumber&quot;: &quot;4532117080573703&quot;,
+               &quot;Brand&quot;: &quot;Visa&quot;,
+         &quot;SecurityCode&quot;:&quot;023&quot;
+     },
+     &quot;Wallet&quot;:{
+         &quot;Type&quot;:&quot;MasterPass&quot;,
+         &quot;AdditionalData&quot;:{
+               &quot;CaptureCode&quot;: &quot;103&quot;
+         }
+     }
+   }
+}
+
+```
+
+|Propriedade|Tipo|Tamanho|Obrigatório|Descrição|
+|---|---|---|---|---|
+|`MerchantId`|Guid|36|Sim|Identificador da loja na Cielo.|
+|`MerchantKey`|Texto|40|Sim|Chave Publica para Autenticação Dupla na Cielo.|
+|`RequestId`|Guid|36|Não|Identificador do Request, utilizado quando o lojista usa diferentes servidores para cada GET/POST/PUT.|
+|`MerchantOrderId`|Texto|50|Sim|Numero de identificação do Pedido.|
+|`Customer.Name`|Texto|255|Não|Nome do Comprador.|
+|`Customer.Status`|Texto|255|Não|Status de cadastro do comprador na loja (NEW / EXISTING)|
+|`Payment.Type`|Texto|100|Sim|Tipo do Meio de Pagamento.|
+|`Payment.Amount`|Número|15|Sim|Valor do Pedido (ser enviado em centavos).|
+|`Payment.Installments`|Número|2|Sim|Número de Parcelas.|
+|`CreditCard.CardNumber.`|Texto|19|Sim|Número do Cartão do Comprador|
+|`CreditCard.SecurityCode`|Texto|4|Não|Código de segurança impresso no verso do cartão - Ver Anexo.|
+|`Wallet.Type`|Texto|255|Sim|indica qual o tipo de carteira: &quot;VisaCheckout&quot; ou &quot;Masterpass&quot;|
+|`Wallet.AdditionalData`|---|---|---|Instancia para dados extras informados pela MasterPass. Obrigatório apenas se TYPE = &quot;MasterPass&quot;|
+|`Wallet.capturecode`|Texto|255|Sim|Código informado pela MasterPass ao lojista|
+
+#### Resposta
+
+```json
+{
+  &quot;MerchantOrderId&quot;: &quot;2014111708&quot;,
+  &quot;Customer&quot;: {
+    &quot;Name&quot;: &quot;comprador Masterpass&quot;
+  },
+  &quot;Payment&quot;: {
+    &quot;ServiceTaxAmount&quot;: 0,
+    &quot;Installments&quot;: 1,
+    &quot;Interest&quot;: 0,
+    &quot;Capture&quot;: false,
+    &quot;Authenticate&quot;: false,
+    &quot;Recurrent&quot;: false,
+    &quot;CreditCard&quot;: {
+      &quot;CardNumber&quot;: &quot;453211******3703&quot;,
+      &quot;Holder&quot;: &quot;Teste Holder&quot;,
+      &quot;ExpirationDate&quot;: &quot;12/2016&quot;,
+      &quot;SaveCard&quot;: false,
+      &quot;Brand&quot;: &quot;Visa&quot;
+    },
+    &quot;Tid&quot;: &quot;0915052536103&quot;,
+    &quot;Provider&quot;: &quot;Simulado&quot;,
+    &quot;Wallet&quot;: {
+      &quot;Type&quot;: &quot;Masterpass&quot;,
+      &quot;Eci&quot;: 0,
+      &quot;AdditionalData&quot;: {
+        &quot;CaptureCode&quot;: &quot;103&quot;
+      }
+    },
+    &quot;PaymentId&quot;: &quot;689da793-fc99-4900-89f1-9e7fdaa06ef8&quot;,
+    &quot;Type&quot;: &quot;CreditCard&quot;,
+    &quot;Amount&quot;: 15700,
+    &quot;ReceivedDate&quot;: &quot;2016-09-15 17:25:35&quot;,
+    &quot;Currency&quot;: &quot;BRL&quot;,
+    &quot;Country&quot;: &quot;BRA&quot;,
+    &quot;ReturnCode&quot;: &quot;57&quot;,
+    &quot;ReturnMessage&quot;: &quot;Card Expired&quot;,
+    &quot;Status&quot;: 3,
+    &quot;Links&quot;: [
+      {
+        &quot;Method&quot;: &quot;GET&quot;,
+        &quot;Rel&quot;: &quot;self&quot;,
+        &quot;Href&quot;: &quot;https://apiquerysandbox.cieloecommerce.cielo.com.br/1/sales/689da793-fc99-4900-89f1-9e7fdaa06ef8&quot;
+      }
+    ]
+  }
+}
+```
+
+|Propriedade|Descrição|Tipo|Tamanho|Formato|
+|---|---|---|---|---|
+|`ProofOfSale`|Número da autorização, identico ao NSU.|Texto|6|Texto alfanumérico|
+|`Tid`|Id da transação na adquirente.|Texto|20|Texto alfanumérico|
+|`AuthorizationCode`|Código de autorização.|Texto|6|Texto alfanumérico|
+|`SoftDescriptor`|Texto que será impresso na fatura bancaria do portador - Disponivel apenas para VISA/MASTER - nao permite caracteres especiais|Texto|13|Texto alfanumérico|
+|`PaymentId`|Campo Identificador do Pedido.|Guid|36|xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx|
+|`ECI`|Eletronic Commerce Indicator. Representa o quão segura é uma transação.|Texto|2|Exemplos: 7|
+|`Status`|Status da Transação.|Byte|---|2|
+|`ReturnCode`|Código de retorno da Adquirência.|Texto|32|Texto alfanumérico|
+|`ReturnMessage`|Mensagem de retorno da Adquirência.|Texto|512|Texto alfanumérico|
+|`Type`|indica qual o tipo de carteira: &quot;VisaCheckout&quot; ou &quot;Masterpass&quot;|Texto|255|Sim|
+|`Capturecode`|Código informado pela MasterPass ao lojista|Texto|255|Sim|
+
+### VisaCheckout
+
+É possivel realizar uma transação com VisaCheckout de duas maneiras:
+
+1. Sem enviar dados do cartão
+2. Enviando dados do cartão
+
+&lt;aside class=&quot;notice&quot;&gt;&lt;strong&gt;Atenção:&lt;/strong&gt;  Para VisaCheckout, o nó Wallet pode ser enviado apenas com o &quot;Type&quot;, assim marcado a transação com sendo da carteira. Nesse contexto, o cartão de crédito deve ser enviado. &lt;/aside&gt;
+
+#### Sem dados do Cartão
+
+**Requisição** 
+
+&lt;aside class=&quot;request&quot;&gt;&lt;span class=&quot;method post&quot;&gt;POST&lt;/span&gt; &lt;span class=&quot;endpoint&quot;&gt;/1/sales/&lt;/span&gt;&lt;/aside&gt;
+
+```json
+{  
+   &quot;MerchantOrderId&quot;:&quot;2014111703&quot;,
+   &quot;Customer&quot;:{  
+      &quot;Name&quot;:&quot;Comprador Teste&quot;
+   },
+   &quot;Payment&quot;:{  
+      &quot;Type&quot;:&quot;CreditCard&quot;,
+      &quot;Amount&quot;:15700,
+      &quot;Installments&quot;:1,
+      &quot;SoftDescriptor&quot;:&quot;123456789ABCD&quot;,
+      &quot;CreditCard&quot;:{  
+         &quot;SecurityCode&quot;:&quot;123&quot;
+      },
+      &quot;Wallet&quot;:{  
+         &quot;Type&quot;:&quot;VisaCheckout&quot;,
+         &quot;WalletKey&quot;:&quot;1140814777695873901&quot;
+      }
+   }
+}
+
+```
+
+|Propriedade|Tipo|Tamanho|Obrigatório|Descrição|
+|---|---|---|---|---|
+|`MerchantId`|Guid|36|Sim|Identificador da loja na Cielo.|
+|`MerchantKey`|Texto|40|Sim|Chave Publica para Autenticação Dupla na Cielo.|
+|`RequestId`|Guid|36|Não|Identificador do Request, utilizado quando o lojista usa diferentes servidores para cada GET/POST/PUT.|
+|`MerchantOrderId`|Texto|50|Sim|Numero de identificação do Pedido.|
+|`Customer.Name`|Texto|255|Não|Nome do Comprador.|
+|`Customer.Status`|Texto|255|Não|Status de cadastro do comprador na loja (NEW / EXISTING)|
+|`Payment.Type`|Texto|100|Sim|Tipo do Meio de Pagamento.|
+|`Payment.Amount`|Número|15|Sim|Valor do Pedido (ser enviado em centavos).|
+|`Payment.Installments`|Número|2|Sim|Número de Parcelas.|
+|`Payment.ReturnUrl`|Texto|1024|---|Obrigatório para cartão de débito|
+|`CreditCard.SecurityCode`|Texto|4|Não|Código de segurança impresso no verso do cartão - Ver Anexo.|
+|`Wallet.Type`|Texto|255|Sim|indica qual o tipo de carteira: &quot;VisaCheckout&quot; ou &quot;Masterpass&quot;|
+|`Wallet.Walletkey`|Texto|255|---|Chave criptografica enviada pelo VisaCheckout. Obrigatoria se TYPE =  &quot;Visa Checkout&quot;|
+
+**Resposta**
+
+```json
+{
+  &quot;MerchantOrderId&quot;: &quot;2014111708&quot;,
+  &quot;Customer&quot;: {
+    &quot;Name&quot;: &quot;comprador VisaCheckout&quot;
+  },
+  &quot;Payment&quot;: {
+    &quot;ServiceTaxAmount&quot;: 0,
+    &quot;Installments&quot;: 1,
+    &quot;Interest&quot;: 0,
+    &quot;Capture&quot;: false,
+    &quot;Authenticate&quot;: false,
+    &quot;Recurrent&quot;: false,
+    &quot;CreditCard&quot;: {
+      &quot;SaveCard&quot;: false,
+      &quot;Brand&quot;: &quot;Undefined&quot;
+    },
+    &quot;Tid&quot;: &quot;0915052340115&quot;,
+    &quot;Provider&quot;: &quot;Simulado&quot;,
+    &quot;Wallet&quot;: {
+      &quot;Type&quot;: &quot;VisaCheckout&quot;,
+      &quot;WalletKey&quot;: &quot;1140814777695873901&quot;,
+      &quot;Eci&quot;: 0
+    },
+    &quot;PaymentId&quot;: &quot;efdb3338-9c8f-445a-8836-2cc93d8beacf&quot;,
+    &quot;Type&quot;: &quot;CreditCard&quot;,
+    &quot;Amount&quot;: 15700,
+    &quot;ReceivedDate&quot;: &quot;2016-09-15 17:23:39&quot;,
+    &quot;Currency&quot;: &quot;BRL&quot;,
+    &quot;Country&quot;: &quot;BRA&quot;,
+    &quot;ReturnCode&quot;: &quot;77&quot;,
+    &quot;ReturnMessage&quot;: &quot;Card Canceled&quot;,
+    &quot;Status&quot;: 3,
+    &quot;Links&quot;: [
+      {
+        &quot;Method&quot;: &quot;GET&quot;,
+        &quot;Rel&quot;: &quot;self&quot;,
+        &quot;Href&quot;: &quot;https://apiquerysandbox.cieloecommerce.cielo.com.br/1/sales/efdb3338-9c8f-445a-8836-2cc93d8beacf&quot;
+      }
+    ]
+  }
+}
+```
+
+#### Com dados do Cartão
+
+**Requisição**
+
+&lt;aside class=&quot;request&quot;&gt;&lt;span class=&quot;method post&quot;&gt;POST&lt;/span&gt; &lt;span class=&quot;endpoint&quot;&gt;/1/sales/&lt;/span&gt;&lt;/aside&gt;
+
+```json
+{  
+   &quot;MerchantOrderId&quot;:&quot;2014111703&quot;,
+   &quot;Customer&quot;:{  
+      &quot;Name&quot;:&quot;Comprador Teste&quot;
+   },
+   &quot;Payment&quot;:{  
+      &quot;Type&quot;:&quot;CreditCard&quot;,
+      &quot;Amount&quot;:15700,
+      &quot;Installments&quot;:1,
+      &quot;SoftDescriptor&quot;:&quot;123456789ABCD&quot;,
+      &quot;Wallet&quot;:{  
+         &quot;Type&quot;:&quot;VisaCheckout&quot;
+    },
+      &quot;CreditCard&quot;:{  
+         &quot;CardNumber&quot;:&quot;1234123412341231&quot;,
+         &quot;Holder&quot;:&quot;Teste Holder&quot;,
+         &quot;ExpirationDate&quot;:&quot;12/2030&quot;,
+         &quot;Brand&quot;:&quot;Visa&quot;
+    },
+  },
+}
+```
+
+|Propriedade|Tipo|Tamanho|Obrigatório|Descrição|
+|---|---|---|---|---|
+|`MerchantId`|Guid|36|Sim|Identificador da loja na Cielo.|
+|`MerchantKey`|Texto|40|Sim|Chave Publica para Autenticação Dupla na Cielo.|
+|`RequestId`|Guid|36|Não|Identificador do Request, utilizado quando o lojista usa diferentes servidores para cada GET/POST/PUT.|
+|`MerchantOrderId`|Texto|50|Sim|Numero de identificação do Pedido.|
+|`Customer.Name`|Texto|255|Não|Nome do Comprador.|
+|`Customer.Status`|Texto|255|Não|Status de cadastro do comprador na loja (NEW / EXISTING)|
+|`Payment.Type`|Texto|100|Sim|Tipo do Meio de Pagamento.|
+|`Payment.Amount`|Número|15|Sim|Valor do Pedido (ser enviado em centavos).|
+|`Payment.Installments`|Número|2|Sim|Número de Parcelas.|
+|`Payment.ReturnUrl`|Texto|1024|---|Obrigatório para cartão de débito|
+|`CreditCard.CardNumber`|Texto|19|Sim|Número do Cartão do Comprador.|
+|`CreditCard.Holder`|Texto|25|Não|Nome do Comprador impresso no cartão.|
+|`CreditCard.ExpirationDate`|Texto|7|Sim|Data de validade impresso no cartão.|
+|`CreditCard.SecurityCode`|Texto|4|Não|Código de segurança impresso no verso do cartão - Ver Anexo.|
+|`CreditCard.Brand`|Texto|10|Não|Bandeira do cartão (Visa / Master / Amex / Elo / Aura / JCB / Diners / Discover / Hipercard).|
+|`CreditCard.SecurityCode`|Texto|4|Não|Código de segurança impresso no verso do cartão - Ver Anexo.|
+|`Wallet.Type`|Texto|255|Sim|indica qual o tipo de carteira: &quot;VisaCheckout&quot; ou &quot;Masterpass&quot;|
+
+**Resposta**
+
+```json
+{
+    &quot;MerchantOrderId&quot;: &quot;2014111706&quot;,
+    &quot;Customer&quot;: {
+        &quot;Name&quot;: &quot;Comprador Visa Checkout&quot;
+    },
+    &quot;Payment&quot;: {
+        &quot;ServiceTaxAmount&quot;: 0,
+        &quot;Installments&quot;: 1,
+        &quot;Interest&quot;: &quot;ByMerchant&quot;,
+        &quot;Capture&quot;: false,
+        &quot;Authenticate&quot;: false,
+        &quot;CreditCard&quot;: {
+            &quot;CardNumber&quot;: &quot;455187******0183&quot;,
+            &quot;Holder&quot;: &quot;Teste Holder&quot;,
+            &quot;ExpirationDate&quot;: &quot;12/2030&quot;,
+            &quot;SaveCard&quot;: false,
+            &quot;Brand&quot;: &quot;Visa&quot;
+        },
+        &quot;ProofOfSale&quot;: &quot;674532&quot;,
+        &quot;Tid&quot;: &quot;0305023644309&quot;,
+        &quot;AuthorizationCode&quot;: &quot;123456&quot;,
+        &quot;PaymentId&quot;: &quot;24bc8366-fc31-4d6c-8555-17049a836a07&quot;,
+        &quot;Type&quot;: &quot;CreditCard&quot;,
+        &quot;Amount&quot;: 15700,
+        &quot;Currency&quot;: &quot;BRL&quot;,
+        &quot;Country&quot;: &quot;BRA&quot;,
+        &quot;ExtraDataCollection&quot;: [],
+        &quot;Status&quot;: 1,
+        &quot;ReturnCode&quot;: &quot;4&quot;,
+        &quot;ReturnMessage&quot;: &quot;Operation Successful&quot;,
+        &quot;Links&quot;: [
+            {
+                &quot;Method&quot;: &quot;GET&quot;,
+                &quot;Rel&quot;: &quot;self&quot;,
+                &quot;Href&quot;: &quot;https://apiquerysandbox.cieloecommerce.cielo.com.br/1/sales/{PaymentId}&quot;
+            },
+            {
+                &quot;Method&quot;: &quot;PUT&quot;,
+                &quot;Rel&quot;: &quot;capture&quot;,
+                &quot;Href&quot;: &quot;https://apisandbox.cieloecommerce.cielo.com.br/1/sales/{PaymentId}/capture&quot;
+            },
+            {
+                &quot;Method&quot;: &quot;PUT&quot;,
+                &quot;Rel&quot;: &quot;void&quot;,
+                &quot;Href&quot;: &quot;https://apisandbox.cieloecommerce.cielo.com.br/1/sales/{PaymentId}/void&quot;
+            }
+        ]
+    }
+}
+```
+
+|Propriedade|Descrição|Tipo|Tamanho|Formato|
+|---|---|---|---|---|
+|`ProofOfSale`|Número da autorização, identico ao NSU.|Texto|6|Texto alfanumérico|
+|`Tid`|Id da transação na adquirente.|Texto|20|Texto alfanumérico|
+|`AuthorizationCode`|Código de autorização.|Texto|6|Texto alfanumérico|
+|`SoftDescriptor`|Texto que será impresso na fatura bancaria do portador - Disponivel apenas para VISA/MASTER - nao permite caracteres especiais|Texto|13|Texto alfanumérico|
+|`PaymentId`|Campo Identificador do Pedido.|Guid|36|xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx|
+|`ECI`|Eletronic Commerce Indicator. Representa o quão segura é uma transação.|Texto|2|Exemplos: 7|
+|`Status`|Status da Transação.|Byte|---|2|
+|`ReturnCode`|Código de retorno da Adquirência.|Texto|32|Texto alfanumérico|
+|`ReturnMessage`|Mensagem de retorno da Adquirência.|Texto|512|Texto alfanumérico|
+|`Type`|indica qual o tipo de carteira: &quot;VisaCheckout&quot; ou &quot;Masterpass&quot;|Texto|255|Sim|
 </content>
     </entry>
     
@@ -4762,501 +5477,6 @@ Isso auxilia na redução do risco de chargeback. Deve ser utilizada para análi
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-</content>
-    </entry>
-    
-    <entry>
-        <title>FAQ</title>
-        <category term="faq" />
-        <link href="https://docscielo.github.io/Pilots/faq/faq-api-3-0"/>
-        <updated>2003-03-03T00:00:00+00:00</updated>
-        <id>https://docscielo.github.io/Pilots/faq/faq-api-3.0</id>
-        <content type="html">&lt;h1 id=&quot;dúvidas-de-negócio&quot;&gt;Dúvidas de negócio&lt;/h1&gt;
-
-&lt;h2 id=&quot;1-o-que-é-a-api-cielo-ecommerce&quot;&gt;1. O que é a API Cielo eCommerce?&lt;/h2&gt;
-
-&lt;p&gt;A API Cielo eCommerce é a evolução do webservice 1.5 como motor transacional online CIELO. Ele fornece uma API que permite ao lojista cielo realizar uma integração simplificada e modular
-A solução API Cielo eCommerce da plataforma Cielo eCommerce foi desenvolvida com a tecnologia REST, que é padrão de mercado e independe da tecnologia utilizada por nossos clientes, dessa forma, é possível integrar-se utilizando as mais variadas linguagens de programação, tais como: ASP, ASP. Net, Java, PHP, Ruby, Python, etc.&lt;/p&gt;
-
-&lt;h2 id=&quot;2-qual-a-diferença-entre-o-webservice-15-e-a-api-cielo-ecommerce&quot;&gt;2. Qual a diferença entre o Webservice 1.5 e a API Cielo eCommerce?&lt;/h2&gt;
-
-&lt;p&gt;A API Cielo eCommerce oferece novas funcionalidades além de um modelo de integração simplificado&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Integração simplificada - Utilizando um API REST, substituindo o envio de XMLs para a autorização de pagamentos&lt;/li&gt;
-  &lt;li&gt;Novos meios de pagamento - Além de cartões de crédito e débito a API Cielo eCommerce permite aos lojistas o pagamento via Boletos e transferência eletrônica do Banco do Brasil e Bradesco&lt;/li&gt;
-  &lt;li&gt;Recorrência Programada - A API Cielo eCommerce permite ao lojista criar um processo de recorrência automática, sem a necessidade de armazenar dados do cartão. Basta enviar a transação e o intervalo de execução&lt;/li&gt;
-  &lt;li&gt;Tokenização de cartões - A API Cielo eCommerce permite que o lojista salve cartões de seus clientes, seja para transações de recorrência ou para criação de wallets. O lojista recebe tokens que podem ser utilizados para realizar novas transações. Dessa maneira a cielo garante a segurança e a facilidade de acesso do lojista a uma base própria de cartões e dados de pagamento.&lt;/li&gt;
-  &lt;li&gt;Zero Auth - Nova feature que permite ao lojista testar um cartão e verificar se ele se encontra apto a realizar uma determinada transação  - Disponibilidade sugeita a aprovação comercial.&lt;/li&gt;
-  &lt;li&gt;Consulta de Bins - feature que permite a validação do tipo de cartão (Crédito/débito) - Disponibilidade sugeita a aprovação comercial.&lt;/li&gt;
-  &lt;li&gt;Integração com as principais Wallets - A API Cielo eCommerce ja está integrada com a Visa Checkout e a MasterPass, carteiras das bandeiras Visa e MasterCard, permitindo assim o lojista ter acesso a uma maior gama de clientes.&lt;/li&gt;
-  &lt;li&gt;Antifraude - é disponibilizado na API Cielo eCommerce Cielo uma análise de risco das transações de cartões de crédito, assim elevando a segurança do lojista e diminuindo o risco de chargebacks&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;3-quais-são-os-meios-de-pagamentos-aceitos-na-api-cielo-ecommerce&quot;&gt;3. Quais são os meios de pagamentos aceitos na API Cielo eCommerce?&lt;/h2&gt;
-
-&lt;p&gt;A API Cielo eCommerce Cielo aceita os seguintes meios de pagamento:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Cartões de crédito: Visa / Mastercard / American Express / ELO / Aura / Diners / Discovery / JCB&lt;/li&gt;
-  &lt;li&gt;Cartões de Débito: Visa Eletron / MasterCard&lt;/li&gt;
-  &lt;li&gt;Boletos: Banco do Brasil e Bradesco&lt;/li&gt;
-  &lt;li&gt;Transferencia eletrônica (Débito online): Banco do Brasil e Bradesco&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;4-posso-manter-uma-integração-15-e-uma-api-cielo-ecommerce-ao-mesmo-tempo&quot;&gt;4. Posso manter uma integração 1.5 e uma API Cielo eCommerce ao mesmo tempo?&lt;/h2&gt;
-
-&lt;p&gt;Não é possível manter duas integrações simultâneas do webservice 1.5 e da API Cielo eCommerce
-Ao realizar o cadastro de uma das integrações junto ao Cielo Ecommerce será necessário escolher entre uma das plataformas
-Para maiores informações acesse: https://www.cielo.com.br/desenvolvedores&lt;/p&gt;
-
-&lt;h2 id=&quot;5-não-possuo-a-integração-15-posso-utilizar-a-api-cielo-ecommerce&quot;&gt;5. Não possuo a integração 1.5, posso utilizar a API Cielo eCommerce?&lt;/h2&gt;
-
-&lt;p&gt;Sim, a integração da API Cielo eCommerce não depende uma integração previa ao webservice 1.5.
-Basta realizar um cadastro junto a Cielo, obtendo assim suas credenciais para transacionar
-Acesse https://www.cielo.com.br/desenvolvedores para maiores informações.&lt;/p&gt;
-
-&lt;h2 id=&quot;6-como-posso-realizar-a-migração-da-15-para-a-api-cielo-ecommerce&quot;&gt;6. Como posso realizar a migração da 1.5 para a API Cielo eCommerce?&lt;/h2&gt;
-
-&lt;p&gt;A Cielo disponibiliza um ambiente de Sandbox (https://bit.ly/2cHdrzr), onde desenvolvedor pode iniciar um processo de aprendizagem sobre a integração da API.&lt;/p&gt;
-
-&lt;p&gt;Após entender a integração, é necessário entrar em contato com o suporte e-commerce Cielo e solicitar a criação de novas credenciais de acesso ao ambiente de produção, assim será possível iniciar a integração em produção.&lt;/p&gt;
-
-&lt;p&gt;Para mais informações, acesse: https://developercielo.github.io/Guia-de-migracao-1.5x3.0&lt;/p&gt;
-
-&lt;h2 id=&quot;7-possuo-a-15-é-necessário-realizar-uma-nova-homologação-para-utilizar-a-api-cielo-ecommerce&quot;&gt;7. Possuo a 1.5, é necessário realizar uma nova homologação para utilizar a API Cielo eCommerce?&lt;/h2&gt;
-
-&lt;p&gt;Sim, é necessário realizar uma nova homologação para validar a capacidade transacional de seu site.
-Para se integrar a API Cielo eCommerce em produção será necessário solicitar novas credenciais e iniciar uma nova homologação&lt;/p&gt;
-
-&lt;h2 id=&quot;8-como-posso-liberar-outros-meios-de-pagamento-além-do-cartão-de-crédito&quot;&gt;8. Como posso liberar outros meios de pagamento além do cartão de crédito?&lt;/h2&gt;
-
-&lt;p&gt;Para liberar novos meios de pagamento, você deve entrar em contato com o suporte do Cielo ecommerce e solicitar a ativação do meio de pagamento desejado
-Apenas os boletos necessitam de dados adicionais:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Banco emissor&lt;/li&gt;
-  &lt;li&gt;Agência&lt;/li&gt;
-  &lt;li&gt;Conta corrente&lt;/li&gt;
-  &lt;li&gt;Convenio&lt;/li&gt;
-  &lt;li&gt;Código cedente&lt;/li&gt;
-  &lt;li&gt;Validade&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;9-como-posso-receber-suporte-cielo&quot;&gt;9. Como posso receber suporte Cielo?&lt;/h2&gt;
-
-&lt;p&gt;O suporte ao lojista integrado a API Cielo eCommerce se dá pelos seguintes canais:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;+55 4002-9700 – Capitais e Regiões Metropolitanas&lt;/li&gt;
-  &lt;li&gt;+55 0800-570-1700 – Demais Localidades&lt;/li&gt;
-  &lt;li&gt;+55 11 2860-1348 – Internacionais (Opção 1 – Suporte técnico/Opção 2 – Credenciamento eCommerce)&lt;/li&gt;
-  &lt;li&gt;E-mail: cieloeCommerce@cielo.com.br&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;10-onde-posso-acompanhar-minhas-vendas-pela-api-cielo-ecommerce&quot;&gt;10. Onde posso acompanhar minhas vendas pela API Cielo eCommerce?&lt;/h2&gt;
-
-&lt;p&gt;Via a área do lojista, no site https://minhaconta.cielo.com.br/wps/portal/est2/login&lt;/p&gt;
-
-&lt;h1 id=&quot;dúvidas-de-técnicas--integração&quot;&gt;Dúvidas de Técnicas / Integração&lt;/h1&gt;
-
-&lt;h2 id=&quot;11-como-funciona-a-solução-api-cielo-ecommerce-da-cielo&quot;&gt;11. Como funciona a solução API Cielo eCommerce da Cielo?&lt;/h2&gt;
-
-&lt;p&gt;A solução API Cielo eCommerce da plataforma Cielo eCommerce foi desenvolvida com a tecnologia REST. O modelo empregado é bastante simples: Existem duas URLs (endpoint), uma específica operações que causam efeitos colaterais - como autorização, captura e cancelamento de transações, e uma URL específica para operações que não causam efeitos colaterais, como pesquisa de transações.&lt;/p&gt;
-
-&lt;h2 id=&quot;12-há-mudanças-nas-credenciais-da-15-para-a-api-cielo-ecommerce&quot;&gt;12. Há mudanças nas credenciais da 1.5 para a API Cielo eCommerce?&lt;/h2&gt;
-
-&lt;p&gt;Sim, as credenciais utilizadas em cada plataforma são diferentes:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;1.5 - São utilizadas a AFILIAÇÃO  e a CHAVE DE PRODUÇÃO. Essas crendenciais identificam a loja e a conta destino ao qual o valor da transação será depositado de acordo com a agenda financeira Cielo. Devem ser enviadas no corpo da requisição. A Afiliação é o código de identificação do cadastro da loja na Cielo.&lt;/li&gt;
-  &lt;li&gt;API Cielo eCommerce - São utilizadas novas credenciais, MerchantId e MerchantKey. Essas credenciais são utilizadas para identificar a loja. Caso não sejam enviadas no Header da requisição, a transação será bloqueada pela API, retornando “Error”. Numa integração com a API Cielo eCommerce não é possível enviar credenciais da 1.5. A API negará as requisições.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;exemplos&quot;&gt;Exemplos&lt;/h3&gt;
-
-&lt;h4 id=&quot;15&quot;&gt;&lt;strong&gt;1.5&lt;/strong&gt;&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Afiliação&lt;/strong&gt;: &lt;code class=&quot;highlighter-rouge&quot;&gt;1000000000&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Chave de produção&lt;/strong&gt;: &lt;code class=&quot;highlighter-rouge&quot;&gt;bf7001e4a4530004090d782b0b7d0a932d07fedffscb2332d7S3fc2b6S8f7c3c&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;api-cielo-ecommerce&quot;&gt;&lt;strong&gt;API Cielo eCommerce&lt;/strong&gt;&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;MerchantId&lt;/strong&gt;: &lt;code class=&quot;highlighter-rouge&quot;&gt;0d8b08ab-26ea-400e-9a22-47e58057642b&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;MerchantKey&lt;/strong&gt;: &lt;code class=&quot;highlighter-rouge&quot;&gt;keR10a0P3R01T0h0C0a0T00U0vsoOy0X0p0Dqyib&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;13-como-consigo-as-credenciais-de-cada-ambiente&quot;&gt;13. Como consigo as credenciais de cada ambiente?&lt;/h2&gt;
-
-&lt;p&gt;Existem dois ambientes na API Cielo eCommerce, Sandbox e Produção.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Sandbox&lt;/strong&gt;: basta acessar https://cadastrosandbox.cieloecommerce.cielo.com.br/ e realizar um cadastro, suas credenciais serão exibidas após o cadastro&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Produção&lt;/strong&gt;: é necessário entrar em contato com a central de credenciamento Cielo e solicitar suas credenciais. Elas serão enviadas via e-mail. Sobre a central de credenciamento acesse https://developercielo.github.io/Guia-de-migracao-1.5x3.0/#suporte-cielo&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;14-É-preciso-algum-software-proprietário-como-dlls-para-fazer-a-integração&quot;&gt;14. É preciso algum software proprietário, como DLLs, para fazer a integração?&lt;/h2&gt;
-
-&lt;p&gt;Não. A ausência de aplicativos proprietários é uma das características da solução: Não é necessário instalar aplicativos no ambiente da loja em nenhuma hipótese.&lt;/p&gt;
-
-&lt;h2 id=&quot;15-preciso-fazer-uma-afiliação-antes-de-testar-a-integração&quot;&gt;15. Preciso fazer uma afiliação antes de testar a integração?&lt;/h2&gt;
-
-&lt;p&gt;Não é necessária uma afiliação para utilizar o Sanbox Cielo. Basta acessar o &lt;a href=&quot;https://bit.ly/2cHdrzr&quot;&gt;Cadastro do Sandbox&lt;/a&gt; e criar uma conta de testes. Ao fim do cadastro você receberá um &lt;code class=&quot;highlighter-rouge&quot;&gt;MerchantId&lt;/code&gt; e um &lt;code class=&quot;highlighter-rouge&quot;&gt;MerchantKey&lt;/code&gt;, que deverão ser utilizados para autenticar todas as requisições feitas para os endpoints da API.&lt;/p&gt;
-
-&lt;h2 id=&quot;16-que-tipo-de-conteúdo-é-enviado-na-integração&quot;&gt;16. Que tipo de conteúdo é enviado na integração?&lt;/h2&gt;
-
-&lt;p&gt;Para simplificar ao máximo a solução API Cielo eCommerce, a integração é feita através do envio de JSONs numa arquitetura REST. Cada tipo de mensagem deve ser enviada para um recurso identificado através do path e enviada segundo o método HTTP adequado:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;POST&lt;/strong&gt; - O método HTTP POST é utilizado na criação dos recursos ou no envio de informações que serão processadas. Por exemplo, criação de uma transação.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;PUT&lt;/strong&gt; - O método HTTP PUT é utilizado para atualização de um recurso já existente. Por exemplo, captura ou cancelamento de uma transação previamente autorizada.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;GET&lt;/strong&gt; - O método HTTP GET é utilizado para consultas de recursos já existentes. Por exemplo, consulta de transações&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;17-como-testar-transações-com-meios-de-pagamento-simulado&quot;&gt;17. Como testar transações com meios de pagamento simulado?&lt;/h2&gt;
-
-&lt;p&gt;Para realizar testes na API Cielo eCommerce, não é necessário utilizar cartões / meios de pagamentos reais.
-Cada meio de pagamento (Crédito, Débito, boleto e Transferência online) possui uma contra parte simulada.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;C. Crédito - Basta utilizar o Provider “Simulado” e enviar um dos cartões contidos aqui: https://developercielo.github.io/Webservice-3.0/#sandbox&lt;/li&gt;
-  &lt;li&gt;Boleto - Será gerado um boleto invalido.&lt;/li&gt;
-  &lt;li&gt;C. Debito - Você será redirecionado a uma tela onde poderá selecionar o resultado da operação&lt;/li&gt;
-  &lt;li&gt;Transferência online - Você será redirecionado a uma tela onde poderá selecionar o resultado da operação&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;18-existe-alguma-regra-para-leitura-de-cartões&quot;&gt;18. Existe alguma regra para leitura de cartões?&lt;/h2&gt;
-
-&lt;p&gt;A leitura dos dados do cartão no ambiente próprio é controlada por regras definidas pelo programa de segurança imposto pelas bandeiras de cartões.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Para a Visa, esse programa é o conhecido como AIS (Account Information Security) PCI. Para maiores informações acesse: www.cielo.com.br &amp;gt; Serviços &amp;gt; Serviços de Segurança &amp;gt; AIS – Programa de Segurança da Informação, ou entre em contato conosco.&lt;/li&gt;
-  &lt;li&gt;Para a Mastercard o programa de segurança é o SDP (Site Data Protection) PCI. Para maiores informações acesse: http://www.mastercard.com/us/sdp/index.html, ou entre em contato conosco.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Ademais, atendidos os requisitos, no momento do credenciamento E-commerce deve ser mencionada a escolha por leitura do cartão na própria loja.&lt;/p&gt;
-
-&lt;h2 id=&quot;19-É-necessário-usar-algum-certificado-em-para-realizar-a-conexão-com-a-api-cielo-ecommerce&quot;&gt;19. É necessário usar algum certificado em para realizar a conexão com a API Cielo eCommerce&lt;/h2&gt;
-
-&lt;p&gt;Sim, é necessário realizar a instalação do certificado SSL EV. Mais informações em https://developercielo.github.io/Webservice-3.0/#o-que-é-certificado-ev-ssl&lt;/p&gt;
-
-&lt;h2 id=&quot;20-É-necessário-algum-protocolo-de-segurança-para-a-utilização-da-api-cielo-ecommerce&quot;&gt;20. É necessário algum protocolo de segurança para a utilização da API Cielo eCommerce&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;É obrigatório o uso de TLS 1.2 na comunicação a API.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;SSL,TLS 1.0 e 1.1 não são suportados. Integrações utilizando esses protocolos não poderão realizar transações.&lt;/p&gt;
-
-&lt;h2 id=&quot;21-existe-alguma-restrição-de-ips-para-consumir-a-api&quot;&gt;21. Existe alguma restrição de Ips para consumir a API&lt;/h2&gt;
-
-&lt;p&gt;Não há restrições de IP ou necessidade de uso de PROXYs para se integrar a API Cielo eCommerce&lt;/p&gt;
-
-&lt;h2 id=&quot;22-como-consultar-transações-de-sandbox&quot;&gt;22. Como consultar transações de Sandbox??&lt;/h2&gt;
-
-&lt;p&gt;O ambiente de Sandbox não possui uma área de relatórios, sendo necessario realizar uma consulta via API para visualizar transações nesse ambiente.
-Veja como realizar essa consulta em nosso manual de integração: https://developercielo.github.io/Webservice-3.0/#consultando-vendas&lt;/p&gt;
-
-&lt;h2 id=&quot;23-a-api-cielo-ecommerce-possui-sdks-em-quais-linguagens&quot;&gt;23. A API Cielo eCommerce possui SDKs em quais linguagens?&lt;/h2&gt;
-
-&lt;p&gt;Sim, a API possui SDKs para:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;iOS&lt;/li&gt;
-  &lt;li&gt;Android&lt;/li&gt;
-  &lt;li&gt;Java&lt;/li&gt;
-  &lt;li&gt;.net&lt;/li&gt;
-  &lt;li&gt;PHP&lt;/li&gt;
-  &lt;li&gt;Python&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Mais informações em: https://github.com/DeveloperCielo&lt;/p&gt;
-
-&lt;h2 id=&quot;24-a-api-cielo-ecommerce-aceita-pagamento-com-diferentes-moedas-e-cartões-internacionais&quot;&gt;24. A API Cielo eCommerce aceita pagamento com diferentes moedas e cartões internacionais?&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Moedas&lt;/strong&gt;:No momento a API Cielo eCommerce aceita somente transações em Reais (R$/BRL).&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Cartões internacionais&lt;/strong&gt;: Sim, a API aceita cartãoes internacionais, mas as transações são processadas em Reais (R$/BRL) e transações parceladas são negadas pelo emissor do cartão.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;OBS&lt;/strong&gt;: Cartões internacionais não podem realizar parcelamento.&lt;/p&gt;
-
-&lt;h2 id=&quot;25-poderei-consultar-informações-sobre-o-meu-contrato-junto-a-cielo-taxa-prazo-de-deposito-dos-valores&quot;&gt;25. Poderei consultar informações sobre o meu contrato junto a Cielo (Taxa, prazo de deposito dos valores)?&lt;/h2&gt;
-
-&lt;p&gt;Não, dados sobre tarifas e valores de cobrança não estão passiveis de consulta via API Cielo eCommerce
-Esses dados poderão ser consultados via a área do lojista no site Cielo ou via o suporte-cielo.&lt;/p&gt;
-
-&lt;h2 id=&quot;26-poderei-realizar-antecipação-de-pagamentos-pela-api-cielo-ecommerce&quot;&gt;26. Poderei realizar antecipação de pagamentos pela API Cielo eCommerce?&lt;/h2&gt;
-
-&lt;p&gt;Não, a API Cielo eCommerce se destina apenas ao processo de autorização de transações e atualização de dados de pedidos online.
-Dúvidas ou questões a respeito de agenda financeira e antecipação de recebíveis devem ser direcionadas ao Suporte-Cielo&lt;/p&gt;
-
-&lt;h2 id=&quot;27-como-minha-integração-será-notificada-a-respeito-das-mudanças-de-status&quot;&gt;27. Como minha integração será notificada a respeito das mudanças de status?&lt;/h2&gt;
-
-&lt;p&gt;Mudanças de status serão notificadas via um POST HTTP direcionado a URL de notificação que deve ser cadastrada pelo suporte Cielo.&lt;/p&gt;
-
-&lt;h2 id=&quot;28-como-posso-consultar-dados-a-respeito-das-minhas-vendas&quot;&gt;28. Como posso consultar dados a respeito das minhas vendas?&lt;/h2&gt;
-
-&lt;p&gt;Será possível consultar via API ou via o portal Cielo:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;API: Toda transação enviada via POST gera uma URL onde pode ser realizado um GET, onde serão retornados os dados do pedido. Mais informações em: https://developercielo.github.io/Webservice-3.0/#criando-uma-transação-simples&lt;/li&gt;
-  &lt;li&gt;Portal Cielo: é possível extrair relatórios e pesquisar pedidos a partir do site Cielo. Mais informações em: www.cielo.com.br&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;29-o-que-é-uma-transação&quot;&gt;29. O que é uma transação?&lt;/h2&gt;
-
-&lt;p&gt;O elemento central do Cielo E-commerce é a transação, criada a partir de uma requisição HTTP ao Webservice da Cielo. A identificação única de uma transação na Cielo é feita através do campo TID, que está presente no retorno das mensagens de autorização. Esse campo é essencial para realizar consultas, capturas e cancelamentos.&lt;/p&gt;
-
-&lt;h2 id=&quot;30-qual-o-prazo-para-uma-autorização-expirar&quot;&gt;30. Qual o prazo para uma autorização expirar?&lt;/h2&gt;
-
-&lt;p&gt;O prazo para captura de uma transação é definido em seu cadastro Cielo e depende do ramo de atividade de sua empresa.
-Caso uma transação não seja capturada dentro desse limite, ela deixa de ser válida, não podendo mais ser capturada. O status da venda continuará como autorizado, mas não será possível altera-lo.&lt;/p&gt;
-
-&lt;h2 id=&quot;31-É-possível-fazer-uma-captura-em-um-momento-após-a-autorização&quot;&gt;31. É possível fazer uma captura em um momento após a autorização?&lt;/h2&gt;
-
-&lt;p&gt;Uma transação autorizada somente gera o crédito para o estabelecimento comercial caso ela seja capturada. Por isso, toda venda que o lojista queira efetivar será preciso realizar a captura (ou confirmação) da transação.&lt;/p&gt;
-
-&lt;p&gt;Para vendas na modalidade de Crédito, essa confirmação pode ocorrer em dois momentos:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Imediatamente após a autorização (captura total) - não é necessário enviar uma requisição de captura, pois ela é feita automaticamente pela Cielo após a autorização da transação. Para tanto, é preciso configurar a requisição de transação definindo-se o valor “true” para a TAG  conforme visto na seção “Criando uma transação”.&lt;/li&gt;
-  &lt;li&gt;Posterior à autorização (captura total ou parcial) - Já no segundo caso, é preciso fazer uma “captura posterior”, através de uma nova requisição ao Webservice da Cielo para confirmar a transação e receber o valor da venda.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;aside class=&quot;warning&quot;&gt;Atenção!&lt;br /&gt;&lt;br /&gt;Na modalidade de débito não existe a opção de captura. Toda transação de débito autorizada é capturada automaticamente.&lt;/aside&gt;
-
-&lt;h2 id=&quot;32-É-possível-cancelar-uma-transação&quot;&gt;32. É possível cancelar uma transação?&lt;/h2&gt;
-
-&lt;p&gt;O cancelamento é utilizado quando o lojista decide não efetivar um pedido de compra, seja por insuficiência de estoque, por desistência da compra pelo consumidor, ou qualquer outro motivo. Seu uso faz-se necessário principalmente se a transação estiver capturada, pois haverá débito na fatura do portador, caso ela não seja cancelada.&lt;/p&gt;
-
-&lt;p&gt;Se a transação estiver apenas autorizada e a loja queira cancelá-la, o pedido de cancelamento não é necessário, pois após o prazo de captura expirar, o valor não será cobrado do comprador e a transação será invalidada.&lt;/p&gt;
-
-&lt;h2 id=&quot;33-qual-diferença-entra-a-notificação-para-cada-tipo-de-pagamento&quot;&gt;33. Qual diferença entra a notificação para cada tipo de pagamento?&lt;/h2&gt;
-
-&lt;p&gt;Todas as alterações no status de seus pedidos serão notificadas via a URL de notificação, que deve ser cadastrada junto a Cielo.
-Cada meio de pagamento possui diferentes status, podendo variar em relação a informação retornada.&lt;/p&gt;
-
-&lt;p&gt;Exemplo: Boletos não possuem retorno para confirmação de pagamento. A conciliação do meio de pagamento deve ser feita pela lojista.&lt;/p&gt;
-
-&lt;h1 id=&quot;dúvidas-sobre-recursos-e-features&quot;&gt;Dúvidas sobre Recursos e Features&lt;/h1&gt;
-
-&lt;h2 id=&quot;1-quais-features-precisam-ser-habilitadas-pela-cielo-para-utilização-na-api-cielo-ecommerce-em-produção&quot;&gt;1. Quais features precisam ser habilitadas pela Cielo para utilização na API Cielo eCommerce em produção?&lt;/h2&gt;
-
-&lt;p&gt;Por padrão, cada lojista utilizando a API Cielo eCommerce deve solicitar ao Suporte Cielo a habilitação das seguintes funcionalidades:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Recorrência&lt;/li&gt;
-  &lt;li&gt;Antifraude&lt;/li&gt;
-  &lt;li&gt;Zero Auth&lt;/li&gt;
-  &lt;li&gt;Consulta Bins&lt;/li&gt;
-  &lt;li&gt;Velocity&lt;/li&gt;
-  &lt;li&gt;Retentativa&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;2-quais-features-estão-disponíveis-em-sandbox&quot;&gt;2. Quais Features estão disponíveis em sandbox?&lt;/h2&gt;
-
-&lt;p&gt;Features Disponiveis em Sandbox:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Transações com todos os meios de pagamento&lt;/li&gt;
-  &lt;li&gt;Tokenização de cartões&lt;/li&gt;
-  &lt;li&gt;Recorrência&lt;/li&gt;
-  &lt;li&gt;Zero Auth&lt;/li&gt;
-  &lt;li&gt;Consulta Bins&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Features Não Disponiveis em Sandbox:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Antifraude&lt;/li&gt;
-  &lt;li&gt;Velocity&lt;/li&gt;
-  &lt;li&gt;Retentativa&lt;/li&gt;
-  &lt;li&gt;Boletos Registrados&lt;/li&gt;
-  &lt;li&gt;Backoffice&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;recorrência&quot;&gt;Recorrência&lt;/h1&gt;
-
-&lt;h2 id=&quot;1-o-que-é-a-recorrência&quot;&gt;1. O que é a Recorrência?&lt;/h2&gt;
-
-&lt;p&gt;A Recorrência é um recurso para estabelecimentos que precisam cobrar regularmente por seus produtos/serviços. A recorrência é a execução de transações periódicas e pré-agendadas pelo lojista ou comprador.
-É um recurso muito utilizado para assinaturas de revistas, mensalidades, licenças de software, entre outros.&lt;/p&gt;
-
-&lt;h2 id=&quot;2-quais-são-os-tipos-de-recorrência-da-api-cielo-ecommerce&quot;&gt;2. Quais são os tipos de recorrência da API Cielo eCommerce?&lt;/h2&gt;
-
-&lt;p&gt;A API Cielo eCommerce disponibiliza duas estruturas de recorrência:&lt;/p&gt;
-
-&lt;p&gt;Recorrência Inteligente:  O lojista envia uma transação de agendamento, com dados de pagamento e do comportamento da recorrência, A API replicará o conteúdo dessa transação e a executará automaticamente, sem a necessidade de interferência do lojista. Nesse método, serão disponibilizados recursos diferenciados para modelar a cobrança de acordo com o modelo de negócio adotado. Toda a parametrização é configurável, tais como: periodicidade, data de início e fim, quantidade de tentativas e intervalo.&lt;/p&gt;
-
-&lt;p&gt;Recorrência própria: Nesse método, o lojista deverá automatizar o envio das transações de acordo com a sua necessidade. A API apenas reconhece que se trata de uma transação de recorrência, não exigindo como o CVV como obrigatório. Todo o processo de execução periódica da recorrência fica a cargo do lojista&lt;/p&gt;
-
-&lt;h2 id=&quot;3-quando-uma-recorrência-é-criada&quot;&gt;3. Quando uma recorrência é criada?&lt;/h2&gt;
-
-&lt;p&gt;No caso da recorrência inteligente, a recorrência é criada no momento que a primeira transação (transação de agendamento) é “autorizada”, ou seja, mesmo que a venda não seja capturada, futuras transações ocorrerão com base nos dados de agendamento.&lt;/p&gt;
-
-&lt;p&gt;Para a recorrência própria, o início da recorrência e seu agendamento fica a cargo do lojista.&lt;/p&gt;
-
-&lt;h2 id=&quot;4-posso-personalizar-o-intervalo-de-recorrência&quot;&gt;4. Posso personalizar o intervalo de recorrência?&lt;/h2&gt;
-
-&lt;p&gt;Sim, é possível atualizar o intervalo da recorrência inteligente, mas somente para uma das opções de agendamento disponíveis&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Mensal&lt;/li&gt;
-  &lt;li&gt;Bimestral&lt;/li&gt;
-  &lt;li&gt;Trimestral&lt;/li&gt;
-  &lt;li&gt;Semestral&lt;/li&gt;
-  &lt;li&gt;Anual&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;aside class=&quot;notice&quot;&gt;OBS: Não há intervalos menos que mensais.&lt;/aside&gt;
-
-&lt;h2 id=&quot;5-como-ocorre-a-notificação-de-novas-recorrências&quot;&gt;5. Como ocorre a notificação de novas recorrências?&lt;/h2&gt;
-
-&lt;p&gt;A notificação de transações de recorrência inteligente são as mesmas enviadas para transações padrão. Para mais informações sobre as notificações de transações, acesse: https://developercielo.github.io/Webservice-3.0/#autorizando-a-primeira-recorrência&lt;/p&gt;
-
-&lt;h2 id=&quot;6-É-possível-atualizar-dados-de-uma-recorrência-quais&quot;&gt;6. É possível atualizar dados de uma recorrência? Quais?&lt;/h2&gt;
-
-&lt;p&gt;Sim, na recorrência inteligente, é possível atualizar dados de uma recorrência via um PUT dentro da API Cielo eCommerce. Os dados passiveis de modificação são:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Dados do comprador&lt;/li&gt;
-  &lt;li&gt;Data de encerramento da recorrência&lt;/li&gt;
-  &lt;li&gt;Número de parcelas da recorrência&lt;/li&gt;
-  &lt;li&gt;Intervalo de execução da recorrência&lt;/li&gt;
-  &lt;li&gt;Dia da recorrência.&lt;/li&gt;
-  &lt;li&gt;Valor da recorrência.&lt;/li&gt;
-  &lt;li&gt;Dados do meio de pagamento da recorrência&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;7-quais-são-as-regras-para-atualizar-o-intervalo-da-recorrência&quot;&gt;7. Quais são as regras para atualizar o intervalo da recorrência.&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;A&lt;/strong&gt;.Se o novo dia informado for depois do atual dia de agendamento, a atualização do dia da recorrência terá efeito na próxima recorrência.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Ex.: Hoje é dia 5, e a próxima recorrência é dia 25/05. Quando eu atualizar para o dia 10, a data da próxima recorrência será dia10/05.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;B&lt;/strong&gt;.Se o novo dia informado for antes do atual dia de agendamento, a atualização do dia da recorrência, só terá efeito depois que a próxima recorrência for executada com sucesso.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Ex.: Hoje é dia 5, e a próxima recorrência é dia 25/05. Quando eu atualizar para o dia 3, a data da próxima recorrência permanecerá dia 25/05, e após ela ser executada, a próxima será agendada para o dia 03/06.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;C&lt;/strong&gt;.Se o novo dia informado for antes do atual dia de agendamento, mas a próxima recorrência for em outro mês, a atualização do dia da recorrência terá efeito na próxima recorrência.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Ex.: Hoje é dia 5, e a próxima recorrência é dia 25/09. Quando eu atualizar para o dia 3, a data da próxima recorrência será 03/09&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;tokenizaçãocartão-protegido&quot;&gt;Tokenização/Cartão protegido&lt;/h1&gt;
-
-&lt;h2 id=&quot;1o-que-é-a-tokenizaçãocartão-protegido-da-api-cielo-ecommerce&quot;&gt;1.O que é a tokenização/cartão protegido da API Cielo eCommerce&lt;/h2&gt;
-
-&lt;p&gt;É uma plataforma que permite o armazenamento seguro de dados sensíveis de cartão de crédito. Estes dados são transformados em um código criptografado chamado de “token”, que poderá ser armazenado em banco de dados. Com a plataforma, a loja poderá oferecer recursos como “Compra com 1 clique” e “Retentativa de envio de transação”, sempre preservando a integridade e a confidencialidade das informações.&lt;/p&gt;
-
-&lt;h2 id=&quot;2quando-é-possível-tokenizar-um-cartão&quot;&gt;2.Quando é possível tokenizar um cartão?&lt;/h2&gt;
-
-&lt;p&gt;É possível tokenizar o cartão em 2 momentos:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;No envio de uma transação: Ao se agendar uma recorrência ou em uma transação normal, mas indicar no contrato técnico que deseja salvar o cartão.&lt;/li&gt;
-  &lt;li&gt;Utilizando o contrato de salvamento de cartão disponível na documentação tecnica&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;3É-necessário-ser-pci-para-armazenar-os-tokens&quot;&gt;3.É necessário ser PCI para armazenar os Tokens?&lt;/h2&gt;
-
-&lt;p&gt;Não, para armazenar os tokens não é necessário ser certificado PCI&lt;/p&gt;
-
-&lt;h2 id=&quot;4É-necessário-enviar-o-cvv-para-realizar-uma-transação-somente-com-o-token&quot;&gt;4.É necessário enviar o CVV para realizar uma transação somente com o token?&lt;/h2&gt;
-
-&lt;p&gt;Sim, por questão de segurança, a API Cielo eCommerce exige o envio do CVV caso um token seja utilizado para transacionar.&lt;/p&gt;
-
-&lt;h1 id=&quot;autenticação&quot;&gt;Autenticação&lt;/h1&gt;
-
-&lt;h2 id=&quot;1o-que-é-autenticação&quot;&gt;1.O que é autenticação?&lt;/h2&gt;
-
-&lt;p&gt;A Autenticação é um fluxo de pagamento onde o comprador é direcionado ao banco emissor do cartão, para que o comprador seja identificado como o real portador no momento da compra&lt;/p&gt;
-
-&lt;h2 id=&quot;2a-autenticação-é-obrigatória&quot;&gt;2.A Autenticação é obrigatória?&lt;/h2&gt;
-
-&lt;p&gt;A autenticação é obrigatória apenas para cartão de débito, sendo uma opção para lojistas que desejem autenticar cartões de crédito&lt;/p&gt;
-
-&lt;h2 id=&quot;3o-redirecionamento-é-obrigatório&quot;&gt;3.O redirecionamento é obrigatório?&lt;/h2&gt;
-
-&lt;p&gt;Sim, o processo de autenticação exige que o comprador seja direcionado para o ambiente do banco.&lt;/p&gt;
-
-&lt;h2 id=&quot;4É-necessário-habilitar-a-autenticação-em-meu-cadastro-cielo&quot;&gt;4.É necessário habilitar a autenticação em meu cadastro Cielo?&lt;/h2&gt;
-
-&lt;p&gt;Sim, é necessário que o lojista entre em contato com o suporte cielo e solicite que sua Afiliação possa estar apta a realizar autenticações online.&lt;/p&gt;
-
-&lt;h2 id=&quot;5quais-bandeiras-podem-realizar-a-autenticação&quot;&gt;5.Quais bandeiras podem realizar a autenticação?&lt;/h2&gt;
-
-&lt;p&gt;Visa e Mastercard&lt;/p&gt;
-
-&lt;h1 id=&quot;analise-de-fraude&quot;&gt;Analise de Fraude&lt;/h1&gt;
-
-&lt;h2 id=&quot;1o-que-é-a-análise-de-fraude-cielo&quot;&gt;1.O que é a análise de fraude Cielo?&lt;/h2&gt;
-
-&lt;p&gt;É uma plataforma de prevenção à fraude que fornece uma análise de risco detalhada das compras on-line. Cada transação é submetida a mais de 260 regras, além das regras específicas de cada segmento, e geram uma recomendação de risco em aproximadamente dois segundos. Este processo é totalmente transparente para o portador do cartão. De acordo com os critérios preestabelecidos, o pedido pode ser automaticamente aceito, recusado ou encaminhado para análise manual.&lt;/p&gt;
-
-&lt;h2 id=&quot;2a-análise-de-fraude-é-obrigatória&quot;&gt;2.A análise de fraude é obrigatória?&lt;/h2&gt;
-
-&lt;p&gt;Não, a análise de fraude ocorre como um adendo ao processo de autorização de cartões de crédito. Basta que o Antifraude esteja habilitado em seu cadastro na Cielo.
-Para mais informações sobre como realizar uma análise de fraude, veja: https://developercielo.github.io/Webservice-3.0/#criando-uma-venda-com-analise-de-fraude&lt;/p&gt;
-
-&lt;h2 id=&quot;3caso-ocorre-um-chargeback-em-uma-venda-analisada-serei-reembolsado&quot;&gt;3.Caso ocorre um chargeback em uma venda analisada, serei reembolsado?&lt;/h2&gt;
-
-&lt;p&gt;Não, a análise de fraude oferecida pela cielo apenas informa quais dados fogem do padrão de compra/atividades do comprador, indicando quais pontos apresentam maiores evidencias/risco de uma suposta fraude.
-A decisão de aceite da transação e sua captura são de inteira responsabilidade do lojista.
-Caso um chargeback seja realizado, a Cielo não se responsabiliza por reembolsar o lojista.&lt;/p&gt;
-
-&lt;h2 id=&quot;4posso-utilizar-um-antifraude-próprio-junto-a-api-cielo-ecommerce&quot;&gt;4.Posso utilizar um Antifraude próprio junto a API Cielo eCommerce?&lt;/h2&gt;
-
-&lt;p&gt;Não, o lojista pode apenas utilizar o próprio AF Cielo como meio de analise dentro da API Cielo eCommerce&lt;/p&gt;
-
-&lt;h1 id=&quot;zero-auth&quot;&gt;Zero Auth&lt;/h1&gt;
-
-&lt;h2 id=&quot;1o-que-é-o-zero-auth&quot;&gt;1.O que é o Zero Auth&lt;/h2&gt;
-
-&lt;p&gt;O Zero Auth é uma ferramenta de validação de cartões da API Cielo. A validação permite que o lojista saiba se o cartão é valido ou não antes de enviar a transação para autorização, antecipando o motivo de uma provável não autorização.&lt;/p&gt;
-
-&lt;h2 id=&quot;2o-que-o-zero-auth-faz&quot;&gt;2.O que o Zero Auth faz?&lt;/h2&gt;
-
-&lt;p&gt;O Zero Auth simula uma autorização Cielo, validando dados como:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Se o cartão está valido junto ao banco emissor&lt;/li&gt;
-  &lt;li&gt;Se o cartão possui limite disponível&lt;/li&gt;
-  &lt;li&gt;Se o cartão funciona no Brasil&lt;/li&gt;
-  &lt;li&gt;Se o número do cartão está correto&lt;/li&gt;
-  &lt;li&gt;Se o CVV é valido&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;3o-que-o-zero-auth-não-pode-fazer&quot;&gt;3.O que o Zero Auth não pode fazer:&lt;/h2&gt;
-
-&lt;p&gt;O Zero auth não informa:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Limite de crédito do cartão&lt;/li&gt;
-  &lt;li&gt;Informações sobre o portador&lt;/li&gt;
-  &lt;li&gt;Informa dados sobre um cartão em especifico&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;4em-quais-cartões-o-zero-auth-funciona&quot;&gt;4.Em quais cartões o Zero Auth funciona?&lt;/h2&gt;
-
-&lt;p&gt;Apenas em cartões de crédito MasterCard e Visa.&lt;/p&gt;
-
-&lt;h2 id=&quot;5como-integrar-ao-zero-auth&quot;&gt;5.Como integrar ao Zero Auth&lt;/h2&gt;
-
-&lt;p&gt;O Zerto Auth é uma feature disponibilizada penas a alguns lojistas Cielo. Para saber mais sobre o modo de integração, entre em contato com o Suporte Ecommerce Cielo.&lt;/p&gt;
-
-&lt;h1 id=&quot;integração-de-gateways&quot;&gt;Integração de Gateways&lt;/h1&gt;
-
-&lt;h2 id=&quot;1utilizo-um-gateway-de-pagamentos-posso-usar-a-api-cielo-ecommerce&quot;&gt;1.Utilizo um Gateway de pagamentos. Posso usar a API Cielo Ecommerce?&lt;/h2&gt;
-
-&lt;p&gt;Sim, mas é necessarios que o seu Gateway esteja integrado a API Cielo Ecommerce e possua suas credenciais de acesso (MerchantKey e MerchantID)&lt;/p&gt;
-
-&lt;h2 id=&quot;2como-um-gateway-de-pagamentos-pode-se-integrar&quot;&gt;2.Como um gateway de pagamentos pode se integrar?&lt;/h2&gt;
-
-&lt;p&gt;Utilizando a mesma integração padrão de um lojista Cielo, entretando o Gateway precisará possuir as credenciais do lojista para poder realizar autorizações de pagamentos.&lt;/p&gt;
 </content>
     </entry>
     
