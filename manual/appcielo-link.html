@@ -47,6 +47,8 @@
                     
                     <li><a data-language-name='json'>JSON</a></li>
                     
+                    <li><a data-language-name='shell'>cURL</a></li>
+                    
                 </ul>
             </div>
             <div class="dark-box"></div>
@@ -131,6 +133,10 @@
 
 <p>O Cielo OAUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce. Ele utiliza o <strong>Protocolo Oauth</strong> como base de autenticação de requisições</p>
 
+<blockquote>
+  <p>Para obter o <code class="highlighter-rouge">ClientID</code> e o <code class="highlighter-rouge">ClientSecret</code>, acione a equipe de Produtos Cielo. Credênciais liberadas apenas para lojistas selecionados,</p>
+</blockquote>
+
 <p>Para utilizar o Cielo Oauth</p>
 
 <table>
@@ -154,10 +160,6 @@
     </tr>
   </tbody>
 </table>
-
-<blockquote>
-  <p>Para obter o <code class="highlighter-rouge">ClientID</code> e o <code class="highlighter-rouge">ClientSecret</code>, acione a equipe de Produtos Cielo. Credênciais liberadas apenas para lojistas selecionados,</p>
-</blockquote>
 
 <h2 id="token-de-acesso">Token de acesso</h2>
 
@@ -254,6 +256,46 @@
 </blockquote>
 
 <h1 id="consulta-ec">Consulta EC</h1>
+
+<p>O processo de consulta de EC busca a existencia de afiliações e MerchanIDs na base de lojas Checkout Cielo.</p>
+
+<aside class="warning">Não são retornadas "lojas legado" do checkout cielo, sendo essas  CHECKOUT SIMPLIFICADO OU CHECKOUT WEBSERVICE </aside>
+
+<blockquote>
+  <p>Caso um lojistas Checkout Simplificado deseje usar o link de pagamentos, ele deve ser convertido em Checkout Completo. Essa mudança impacta a integração da loja.</p>
+</blockquote>
+
+<p>A Consulta consiste em um <code class="highlighter-rouge">GET</code> ao Endpoint abaixo:</p>
+
+<aside class="request"><span class="method get">GET</span> <span class="endpoint">https://cieloecommerce.cielo.com.br/api/"public"/v1/Merchant/GetByAffiliationCode/{EC}</span></aside>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+	</span><span class="err">Affiliation</span><span class="p">:</span><span class="w"> </span><span class="mi">10101010101</span><span class="w">
+	</span><span class="err">MerchantID</span><span class="p">:</span><span class="w">  </span><span class="err">dc</span><span class="mi">9</span><span class="err">d</span><span class="mi">6</span><span class="err">efa-b</span><span class="mi">582-4</span><span class="err">ac</span><span class="mi">8</span><span class="err">-ac</span><span class="mi">59-12</span><span class="err">c</span><span class="mi">57245</span><span class="err">df</span><span class="mi">2</span><span class="err">a</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>PROPRIEDADE</th>
+      <th>DESCRIÇÃO</th>
+      <th>TIPO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">Affiliation</code></td>
+      <td>Numero de afiliação cadastrado no Checkout Cielo</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">MerchantID</code></td>
+      <td>Identificador da loja no Checkout Cielo e Identificado para Criação de Links e consulta transacional</td>
+      <td>GUID</td>
+    </tr>
+  </tbody>
+</table>
 
 <h1 id="pré-cadastro">Pré-cadastro</h1>
 
@@ -1043,6 +1085,9 @@
             
             langs += "<a data-language-name='json'>JSON</a>";
             langsArray.push('json');
+            
+            langs += "<a data-language-name='shell'>cURL</a>";
+            langsArray.push('shell');
             
 
             var toggleCode = 'Comutar';

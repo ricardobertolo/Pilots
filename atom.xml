@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-06T14:28:57+00:00</updated>
+    <updated>2018-04-06T14:46:08+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -26347,6 +26347,10 @@ Se no contrato técnico existir o nó da recorrência, fica obrigatório o tipo 
 
 &lt;p&gt;O Cielo OAUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce. Ele utiliza o &lt;strong&gt;Protocolo Oauth&lt;/strong&gt; como base de autenticação de requisições&lt;/p&gt;
 
+&lt;blockquote&gt;
+  &lt;p&gt;Para obter o &lt;code class=&quot;highlighter-rouge&quot;&gt;ClientID&lt;/code&gt; e o &lt;code class=&quot;highlighter-rouge&quot;&gt;ClientSecret&lt;/code&gt;, acione a equipe de Produtos Cielo. Credênciais liberadas apenas para lojistas selecionados,&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;p&gt;Para utilizar o Cielo Oauth&lt;/p&gt;
 
 &lt;table&gt;
@@ -26370,10 +26374,6 @@ Se no contrato técnico existir o nó da recorrência, fica obrigatório o tipo 
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Para obter o &lt;code class=&quot;highlighter-rouge&quot;&gt;ClientID&lt;/code&gt; e o &lt;code class=&quot;highlighter-rouge&quot;&gt;ClientSecret&lt;/code&gt;, acione a equipe de Produtos Cielo. Credênciais liberadas apenas para lojistas selecionados,&lt;/p&gt;
-&lt;/blockquote&gt;
 
 &lt;h2 id=&quot;token-de-acesso&quot;&gt;Token de acesso&lt;/h2&gt;
 
@@ -26470,6 +26470,46 @@ Se no contrato técnico existir o nó da recorrência, fica obrigatório o tipo 
 &lt;/blockquote&gt;
 
 &lt;h1 id=&quot;consulta-ec&quot;&gt;Consulta EC&lt;/h1&gt;
+
+&lt;p&gt;O processo de consulta de EC busca a existencia de afiliações e MerchanIDs na base de lojas Checkout Cielo.&lt;/p&gt;
+
+&lt;aside class=&quot;warning&quot;&gt;Não são retornadas &quot;lojas legado&quot; do checkout cielo, sendo essas  CHECKOUT SIMPLIFICADO OU CHECKOUT WEBSERVICE &lt;/aside&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Caso um lojistas Checkout Simplificado deseje usar o link de pagamentos, ele deve ser convertido em Checkout Completo. Essa mudança impacta a integração da loja.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A Consulta consiste em um &lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; ao Endpoint abaixo:&lt;/p&gt;
+
+&lt;aside class=&quot;request&quot;&gt;&lt;span class=&quot;method get&quot;&gt;GET&lt;/span&gt; &lt;span class=&quot;endpoint&quot;&gt;https://cieloecommerce.cielo.com.br/api/&quot;public&quot;/v1/Merchant/GetByAffiliationCode/{EC}&lt;/span&gt;&lt;/aside&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Affiliation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10101010101&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;MerchantID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;dc&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;efa-b&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;582-4&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;ac&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;-ac&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;59-12&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;57245&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;PROPRIEDADE&lt;/th&gt;
+      &lt;th&gt;DESCRIÇÃO&lt;/th&gt;
+      &lt;th&gt;TIPO&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Affiliation&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Numero de afiliação cadastrado no Checkout Cielo&lt;/td&gt;
+      &lt;td&gt;string&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;MerchantID&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Identificador da loja no Checkout Cielo e Identificado para Criação de Links e consulta transacional&lt;/td&gt;
+      &lt;td&gt;GUID&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;h1 id=&quot;pré-cadastro&quot;&gt;Pré-cadastro&lt;/h1&gt;
 
