@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-06T13:26:59+00:00</updated>
+    <updated>2018-04-06T13:36:10+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -1235,9 +1235,9 @@ tags:&lt;/p&gt;
     <entry>
         <title>Zero Auth</title>
         <category term="manual" />
-        <link href="https://docscielo.github.io/Pilots/manual/zeroauth"/>
+        <link href="https://docscielo.github.io/Pilots/manual/zeroauth4"/>
         <updated>2003-03-03T00:00:00+00:00</updated>
-        <id>https://docscielo.github.io/Pilots/manual/zeroauth</id>
+        <id>https://docscielo.github.io/Pilots/manual/zeroauth4</id>
         <content type="html">&lt;h1 id=&quot;zero-auth&quot;&gt;Zero Auth&lt;/h1&gt;
 
 &lt;p&gt;O &lt;strong&gt;Zero Auth&lt;/strong&gt; é uma ferramenta de validação de cartões da API Cielo. A validação permite que o lojista saiba se o cartão é valido ou não antes de enviar a transação para autorização, antecipando o motivo de uma provável não autorização..&lt;/p&gt;
@@ -1682,9 +1682,9 @@ Isso auxilia na redução do risco de chargeback. Deve ser utilizada para análi
     <entry>
         <title>Wallets</title>
         <category term="manual" />
-        <link href="https://docscielo.github.io/Pilots/manual/wallets"/>
+        <link href="https://docscielo.github.io/Pilots/manual/wallets5"/>
         <updated>2003-03-03T00:00:00+00:00</updated>
-        <id>https://docscielo.github.io/Pilots/manual/wallets</id>
+        <id>https://docscielo.github.io/Pilots/manual/wallets5</id>
         <content type="html">&lt;h1 id=&quot;walletcarteiras&quot;&gt;Wallet/Carteiras&lt;/h1&gt;
 
 &lt;h2 id=&quot;o-que-são-wallets--carteiras&quot;&gt;O que são Wallets / Carteiras&lt;/h2&gt;
@@ -7184,9 +7184,9 @@ Isso auxilia na redução do risco de chargeback. Deve ser utilizada para análi
     <entry>
         <title>Consulta Bin</title>
         <category term="manual" />
-        <link href="https://docscielo.github.io/Pilots/manual/consultabin"/>
+        <link href="https://docscielo.github.io/Pilots/manual/consultabin6"/>
         <updated>2003-03-03T00:00:00+00:00</updated>
-        <id>https://docscielo.github.io/Pilots/manual/consultabin</id>
+        <id>https://docscielo.github.io/Pilots/manual/consultabin6</id>
         <content type="html">&lt;h1 id=&quot;consulta-bin&quot;&gt;Consulta Bin&lt;/h1&gt;
 
 &lt;p&gt;A “&lt;strong&gt;Consulta de Bins&lt;/strong&gt;”  é um serviço de &lt;strong&gt;pesquisa de dados do cartão&lt;/strong&gt;, de crédito ou débito, que os lojistas da API Cielo Ecommerce podem utilizar para validar se os dados preenchidos em tela sobre o cartão são válidos.&lt;/p&gt;
@@ -7588,9 +7588,9 @@ Isso auxilia na redução do risco de chargeback. Deve ser utilizada para análi
     <entry>
         <title>Cartões Alelo</title>
         <category term="manual" />
-        <link href="https://docscielo.github.io/Pilots/manual/cartaoalelo"/>
+        <link href="https://docscielo.github.io/Pilots/manual/cartaoalelo3"/>
         <updated>2003-03-03T00:00:00+00:00</updated>
-        <id>https://docscielo.github.io/Pilots/manual/cartaoalelo</id>
+        <id>https://docscielo.github.io/Pilots/manual/cartaoalelo3</id>
         <content type="html">&lt;h1 id=&quot;cartões-alelo&quot;&gt;Cartões Alelo&lt;/h1&gt;
 
 &lt;p&gt;Para criar uma venda que utilizará cartão de Alelo, é necessário fazer um &lt;code class=&quot;highlighter-rouge&quot;&gt;POST&lt;/code&gt; para o recurso Payment utilizando o contrato técnico de uma venda de &lt;code class=&quot;highlighter-rouge&quot;&gt;Cartão de Débito&lt;/code&gt;.&lt;/p&gt;
