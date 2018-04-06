@@ -11,11 +11,14 @@ tags:
   - Checkout Cielo
 language_tabs:
   json: JSON
+  shell: cURL
 ---
 
 # Cielo OAUTH
 
 O Cielo OAUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce. Ele utiliza o **Protocolo Oauth** como base de autenticação de requisições
+
+> Para obter o `ClientID` e o `ClientSecret`, acione a equipe de Produtos Cielo. Credênciais liberadas apenas para lojistas selecionados,
 
 Para utilizar o Cielo Oauth
 
@@ -23,8 +26,6 @@ Para utilizar o Cielo Oauth
 |----------------|-----------------------------------------------------------------------|--------|
 | `ClientId`     | Identificador chave fornecido pela CIELO                              | guid   |
 | `ClientSecret` | Chave que valida o ClientID. Fornecida pela Cielo junto ao `ClientID` | string |
-
-> Para obter o `ClientID` e o `ClientSecret`, acione a equipe de Produtos Cielo. Credênciais liberadas apenas para lojistas selecionados,
 
 ## Token de acesso
 
@@ -79,6 +80,28 @@ O response possuirá o Token utilizado para novas requisições em Serviços Cie
 
 # Consulta EC
 
+O processo de consulta de EC busca a existencia de afiliações e MerchanIDs na base de lojas Checkout Cielo.
+
+<aside class="warning">Não são retornadas "lojas legado" do checkout cielo, sendo essas  CHECKOUT SIMPLIFICADO OU CHECKOUT WEBSERVICE </aside>
+
+> Caso um lojistas Checkout Simplificado deseje usar o link de pagamentos, ele deve ser convertido em Checkout Completo. Essa mudança impacta a integração da loja.
+
+A Consulta consiste em um `GET` ao Endpoint abaixo:
+
+<aside class="request"><span class="method get">GET</span> <span class="endpoint">https://cieloecommerce.cielo.com.br/api/"public"/v1/Merchant/GetByAffiliationCode/{EC}</span></aside>
+
+``` json
+{
+	Affiliation: 10101010101
+	MerchantID:  dc9d6efa-b582-4ac8-ac59-12c57245df2a
+}
+```
+
+|PROPRIEDADE   | DESCRIÇÃO                                                 |TIPO  |
+|--------------|-----------------------------------------------------------|------|
+|`Affiliation` | Numero de afiliação cadastrado no Checkout Cielo          |string|
+|`MerchantID`  | Identificador da loja no Checkout Cielo e Identificado para Criação de Links e consulta transacional |GUID  |
+
 # Pré-cadastro
 
 ## Criar lojas
@@ -97,9 +120,7 @@ Seu principal objetivo é permitir que lojas possam criar links de pagamento (Bo
 
 > Endereço: <https://cieloecommerce.cielo.com.br/api/public/v1/products>
 
-
 > **Atenção**: O link de pagamentos não é uma URL DE **PEDIDO/TRANSAÇÃO**. Ele é um "carrinho" que pode ser reutilizado inúmeras vezes.
-
 
 > **Atenção**: Para receber notificações sobre transações originadas de Links de pagamento é OBRIGATÓRIO o cadastro da URL de Notificação.
 
