@@ -320,7 +320,7 @@ curl
 |:-|:-|:-|:-|:-|
 |`Customer.Address`|-|-|-|Nó contendo dados do endereço do comprador|
 |`Customer.Address.Street`|Texto|24|Sim|Endereço do comprador|
-|`Customer.Address.Number`|Texto|5||Sim|Número do endereço do comprador|
+|`Customer.Address.Number`|Texto|5|Sim|Número do endereço do comprador|
 |`Customer.Address.Complement`|Texto|14|Não|Complemento do endereço do comprador|
 |`Customer.Address.District`|Texto|15|Sim|Distrito ou Bairro do endereço do comprador|
 |`Customer.Address.ZipCode`|Texto|9|Sim|CEP do endereço do comprador|
@@ -332,7 +332,7 @@ curl
 |:-|:-|:-|:-|:-|
 |`Customer.DeliveryAddress`|-|-|-|Nó contendo dados do endereço de entrega do comprador|
 |`Customer.DeliveryAddress.Street`|Texto|24|Não|Endereço de entrega do comprador|
-|`Customer.DeliveryAddress.Number`|Texto|5||Não|Número do endereço de entrega do comprador|
+|`Customer.DeliveryAddress.Number`|Texto|5|Não|Número do endereço de entrega do comprador|
 |`Customer.DeliveryAddress.Complement`|Texto|14|Não|Complemento do endereço de entrega do comprador|
 |`Customer.DeliveryAddress.District`|Texto|15|Não|Distrito ou Bairro do endereço de entrega do comprador|
 |`Customer.DeliveryAddress.ZipCode`|Texto|9|Não|CEP do endereço de entrega do comprador|
@@ -344,7 +344,7 @@ curl
 |:-|:-|:-|:-|:-|
 |`Customer.BillingAddress`|-|-|-|Nó contendo dados do endereço de cobrança do comprador|
 |`Customer.BillingAddress.Street`|Texto|24|Sim|Endereço de cobrança do comprador|
-|`Customer.BillingAddress.Number`|Texto|5||Sim|Número do endereço de cobrança do comprador|
+|`Customer.BillingAddress.Number`|Texto|5|Sim|Número do endereço de cobrança do comprador|
 |`Customer.BillingAddress.Complement`|Texto|14|Não|Complemento do endereço de cobrança do comprador|
 |`Customer.BillingAddress.District`|Texto|15|Sim|Distrito ou Bairro do endereço de cobrança do comprador|
 |`Customer.BillingAddress.ZipCode`|Texto|9|Sim|CEP do endereço de cobrança do comprador|
@@ -407,7 +407,7 @@ especiais|
 |`Payment.FraudAnalysis.Cart.Items[].GiftMessage`|Texto|160|Não|Mensagem de presente|
 |`Payment.FraudAnalysis.Cart.Items[].Description`|Texto|76|Não|Descrição do produto|
 |`Payment.FraudAnalysis.Cart.Items[].ShippingInstructions`|Texto|160|Não|Instruções para entrega do item do carrinho|
-|`Payment.FraudAnalysis.Cart.Items[].ShippingMethod`|Texto|-|Não|Método de entrega do item do carrinho <br/> Possíveis valores: <br/> ReDShield: None / SameDay / NextDay / TwoDay / ThreeDay / LowCost / CarrierDesignatedByCustomer / Pickup / International / Military / Other <br/> CyberSource: None | SameDay | OneDay | TwoDay | ThreeDay | LowCost | Pickup | Other|
+|`Payment.FraudAnalysis.Cart.Items[].ShippingMethod`|Texto|-|Não|Método de entrega do item do carrinho <br/> Possíveis valores: <br/> ReDShield: None / SameDay / NextDay / TwoDay / ThreeDay / LowCost / CarrierDesignatedByCustomer / Pickup / International / Military / Other <br/> CyberSource: None / SameDay / OneDay / TwoDay / ThreeDay / LowCost / Pickup / Other|
 |`Payment.FraudAnalysis.Cart.Items[].ShippingTrackingNumber`|Texto|19|Não|Número de rastreamento da entrega do item do carrinho|
 
 |CAMPOS|TIPO|TAMANHO|OBRIGATÓRIO|DESCRIÇÃO|
