@@ -114,29 +114,25 @@ A Consulta consiste em um `GET` ao Endpoint abaixo:
 
 # Link de Pagamento
 
-A **API de Gerenciamento de Link de Pagamentos** permite ao lojista criar, editar e consultar links de pagamentos. 
+A **API Link de Pagamentos** permite ao lojista criar, editar e consultar links de pagamentos. 
 
 Seu principal objetivo é permitir que lojas possam criar links de pagamento (Botões ou QR Codes), através de seus próprios sistemas, sem a necessidade de acessar o Backoffice do Checkout Cielo e compartilhar com seus clientes.
 
-> Endereço: <https://cieloecommerce.cielo.com.br/api/public/v1/products>
-
 > **Atenção**: O link de pagamentos não é uma URL DE **PEDIDO/TRANSAÇÃO**. Ele é um "carrinho" que pode ser reutilizado inúmeras vezes.
 
-> **Atenção**: Para receber notificações sobre transações originadas de Links de pagamento é OBRIGATÓRIO o cadastro da URL de Notificação.
+> **Atenção**: Para receber notificações sobre transações originadas de Links de pagamento é **OBRIGATÓRIO** o cadastro da URL de Notificação.
 
 ## Criar um Link
 
 Você pode criar um link para disponibilizá-los aos seus clientes para pagamentos. Para criar diversos links, você pode efetuar várias requisições.
 
-> URL de POST <https://cieloecommerce.cielo.com.br/api/public/v1/products/>
+<aside class="request"><span class="method post">POST</span><span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v1/products/</span></aside>
 
-**Header:**
+> Header: `Authorization: Bearer {access_token}`
 
-```
-Authorization: Bearer {access_token}
-```
 
 **Requisição:**
+
 ```
 {
    "Type":"Digital",
