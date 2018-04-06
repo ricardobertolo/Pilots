@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-06T17:58:21+00:00</updated>
+    <updated>2018-04-06T18:32:01+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -26488,6 +26488,12 @@ Se no contrato técnico existir o nó da recorrência, fica obrigatório o tipo 
 	&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;MerchantID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;dc&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;efa-b&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;582-4&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;ac&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;-ac&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;59-12&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;57245&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	Affiliation: 10101010101
+	MerchantID:  dc9d6efa-b582-4ac8-ac59-12c57245df2a
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
