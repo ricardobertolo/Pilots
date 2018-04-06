@@ -51,7 +51,7 @@ O Request dever ser envaido apenas no Header da requisição.
 
 <aside class="request"><span class="method post">POST</span><span class="endpoint">https://cieloecommerce.cielo.com.br/v2/public/v2/token</span></aside>
 
-``` json
+```
 "POST": https://cieloecommerce.cielo.com.br/v2/public/v2/token
 "Headers"
 "Authorization": Basic YjUyMWI2YjItYjliNC00YTMwLTg4MWQtM2I2M2RlY2UwMDA2OiAwOFFramU3OU53V1J4NUJkZ05Kc0lrQnVJVHQ1Y0lWTw
