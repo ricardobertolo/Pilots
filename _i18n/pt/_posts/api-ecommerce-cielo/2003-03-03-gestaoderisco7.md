@@ -5,7 +5,7 @@ description: Integração técnica API Antifraude Gateway Braspag
 search: true
 toc_footers: false
 categories: manual
-sort_order: 1
+sort_order: 7
 hub_visible: false
 tags:
   - API e-Commerce Cielo
