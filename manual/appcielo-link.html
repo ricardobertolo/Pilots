@@ -129,7 +129,7 @@
             <div class="post">
   <h1 id="cielo-oauth">Cielo OAUTH</h1>
 
-<p>O Cielo OUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce. Ele utiliza o <strong>Protocolo Oauth</strong> como base de autenticação de requisições</p>
+<p>O Cielo OAUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce. Ele utiliza o <strong>Protocolo Oauth</strong> como base de autenticação de requisições</p>
 
 <p>Para utilizar o Cielo Oauth</p>
 
@@ -174,6 +174,12 @@
 <h3 id="concatenação">Concatenação</h3>
 
 <table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+      <th>Formato</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
       <td><strong>ClientId</strong></td>
@@ -196,12 +202,18 @@
 
 <h3 id="request">Request</h3>
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"POST"</span><span class="p">:</span><span class="w"> </span><span class="err">https</span><span class="p">:</span><span class="err">//cieloecommerce.cielo.com.br/v</span><span class="mi">2</span><span class="err">/public/v</span><span class="mi">2</span><span class="err">/token</span><span class="w">
-</span><span class="s2">"Headers"</span><span class="w">
-</span><span class="s2">"Authorization"</span><span class="p">:</span><span class="w"> </span><span class="err">Basic</span><span class="w"> </span><span class="err">YjUyMWI</span><span class="mi">2</span><span class="err">YjItYjliNC</span><span class="mi">00</span><span class="err">YTMwLTg</span><span class="mi">4</span><span class="err">MWQtM</span><span class="mi">2</span><span class="err">I</span><span class="mi">2</span><span class="err">M</span><span class="mi">2</span><span class="err">RlY</span><span class="mi">2</span><span class="err">UwMDA</span><span class="mi">2</span><span class="err">OiAwOFFramU</span><span class="mi">3</span><span class="err">OU</span><span class="mi">53</span><span class="err">V</span><span class="mi">1</span><span class="err">J</span><span class="mi">4</span><span class="err">NUJkZ</span><span class="mi">05</span><span class="err">Kc</span><span class="mi">0</span><span class="err">lrQnVJVHQ</span><span class="mi">1</span><span class="err">Y</span><span class="mi">0</span><span class="err">lWTw</span><span class="w">
-</span></code></pre></div></div>
+<p>O Request dever ser envaido apenas no Header da requisição.</p>
+
+<aside class="request"><span class="method post">POST</span><span class="endpoint">https://cieloecommerce.cielo.com.br/v2/public/v2/token</span></aside>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"POST": https://cieloecommerce.cielo.com.br/v2/public/v2/token
+"Headers"
+"Authorization": Basic YjUyMWI2YjItYjliNC00YTMwLTg4MWQtM2I2M2RlY2UwMDA2OiAwOFFramU3OU53V1J4NUJkZ05Kc0lrQnVJVHQ1Y0lWTw
+</code></pre></div></div>
 
 <h3 id="response">Response</h3>
+
+<p>O response possuirá o Token utilizado para novas requisições em Serviços Cielo</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnRfbmFtZSI6Ik1ldUNoZWNrb3V0IE1hc3RlciBLZXkiLCJjbGllbnRfaWQiOiJjODlmZGasdasdasdmUyLTRlNzctODA2YS02ZDc1Y2QzOTdkYWMiLCJzY29wZXMiOiJ7XCJTY29wZVwiOlwiQ2hlY2tvdXRBcGlcIixcIkNsYWltc1wiOltdfSIsInJvbGUiOiJasdasdasd291dEFwaSIsImlzc47I6Imh0dHBzOi8vYXV0aGhvbasdasdnJhc3BhZy5jb20uYnIiLCJhdWQiOiJVVlF4Y1VBMmNTSjFma1EzSVVFbk9pSTNkbTl0ZmasdsadQjVKVVV1UVdnPSIsImV4cCI6MTQ5Nzk5NjY3NywibmJmIjoxNDk3OTEwMjc3fQ.ozj4xnH9PA3dji-ARPSbI7Nakn9dw5I8w6myBRkF-uA"</span><span class="p">,</span><span class="w">
