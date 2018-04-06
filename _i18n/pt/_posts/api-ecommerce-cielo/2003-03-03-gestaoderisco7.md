@@ -8,7 +8,7 @@ categories: manual
 sort_order: 1
 hub_visible: false
 tags:
-  - Pagador
+  - API e-Commerce Cielo
 language_tabs:
   json: JSON
   shell: cURL
