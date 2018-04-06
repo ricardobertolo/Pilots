@@ -17,7 +17,11 @@ language_tabs:
 
 Para consultar uma cartão aberto via API 3.0, é necessario realizar um `GET` utilizando o endpoint abaixo:
 
+## Request 
+
 <aside class="request"><span class="method get">GET</span> <span class="endpoint">https://apiquery.cieloecommerce.cielo.com.br/1/card/opencard/{token}</span></aside> 
+
+## Response
 
 ``` json
 {  
