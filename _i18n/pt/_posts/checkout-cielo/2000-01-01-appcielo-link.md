@@ -62,7 +62,7 @@ O Request dever ser envaido apenas no Header da requisição.
 
 O response possuirá o Token utilizado para novas requisições em Serviços Cielo
 
-``` json
+```json
 {
     "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnRfbmFtZSI6Ik1ldUNoZWNrb3V0IE1hc3RlciBLZXkiLCJjbGllbnRfaWQiOiJjODlmZGasdasdasdmUyLTRlNzctODA2YS02ZDc1Y2QzOTdkYWMiLCJzY29wZXMiOiJ7XCJTY29wZVwiOlwiQ2hlY2tvdXRBcGlcIixcIkNsYWltc1wiOltdfSIsInJvbGUiOiJasdasdasd291dEFwaSIsImlzc47I6Imh0dHBzOi8vYXV0aGhvbasdasdnJhc3BhZy5jb20uYnIiLCJhdWQiOiJVVlF4Y1VBMmNTSjFma1EzSVVFbk9pSTNkbTl0ZmasdsadQjVKVVV1UVdnPSIsImV4cCI6MTQ5Nzk5NjY3NywibmJmIjoxNDk3OTEwMjc3fQ.ozj4xnH9PA3dji-ARPSbI7Nakn9dw5I8w6myBRkF-uA",
     "token_type": "bearer",
@@ -90,7 +90,14 @@ A Consulta consiste em um `GET` ao Endpoint abaixo:
 
 <aside class="request"><span class="method get">GET</span> <span class="endpoint">https://cieloecommerce.cielo.com.br/api/"public"/v1/Merchant/GetByAffiliationCode/{EC}</span></aside>
 
-``` json
+```json
+{
+	Affiliation: 10101010101
+	MerchantID:  dc9d6efa-b582-4ac8-ac59-12c57245df2a
+}
+```
+
+```shell
 {
 	Affiliation: 10101010101
 	MerchantID:  dc9d6efa-b582-4ac8-ac59-12c57245df2a
