@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-06T23:00:41+00:00</updated>
+    <updated>2018-04-06T23:05:37+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -18468,7 +18468,6 @@ curl
       &lt;th style=&quot;text-align: left&quot;&gt;TAMANHO&lt;/th&gt;
       &lt;th style=&quot;text-align: left&quot;&gt;OBRIGATÓRIO&lt;/th&gt;
       &lt;th style=&quot;text-align: left&quot;&gt;DESCRIÇÃO&lt;/th&gt;
-      &lt;th&gt; &lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
@@ -18478,7 +18477,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;-&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;-&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Nó contendo dados do endereço do comprador&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer.Address.Street&lt;/code&gt;&lt;/td&gt;
@@ -18486,15 +18484,13 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;24&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Sim&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Endereço do comprador&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer.Address.Number&lt;/code&gt;&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Texto&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;5&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Sim&lt;/td&gt;
-      &lt;td&gt;Número do endereço do comprador&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Número do endereço do comprador&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer.Address.Complement&lt;/code&gt;&lt;/td&gt;
@@ -18502,7 +18498,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;14&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Não&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Complemento do endereço do comprador&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer.Address.District&lt;/code&gt;&lt;/td&gt;
@@ -18510,7 +18505,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;15&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Sim&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Distrito ou Bairro do endereço do comprador&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer.Address.ZipCode&lt;/code&gt;&lt;/td&gt;
@@ -18518,7 +18512,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;9&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Sim&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;CEP do endereço do comprador&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer.Address.City&lt;/code&gt;&lt;/td&gt;
@@ -18526,7 +18519,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;20&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Sim&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Cidade do endereço do comprador&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer.Address.State&lt;/code&gt;&lt;/td&gt;
@@ -18534,7 +18526,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;2&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Sim&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Estado do endereço do comprador&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer.Address.Country&lt;/code&gt;&lt;/td&gt;
@@ -18542,7 +18533,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;2&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Sim&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;País do endereço do comprador&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -18555,7 +18545,6 @@ curl
       &lt;th style=&quot;text-align: left&quot;&gt;TAMANHO&lt;/th&gt;
       &lt;th style=&quot;text-align: left&quot;&gt;OBRIGATÓRIO&lt;/th&gt;
       &lt;th style=&quot;text-align: left&quot;&gt;DESCRIÇÃO&lt;/th&gt;
-      &lt;th&gt; &lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
@@ -18565,7 +18554,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;-&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;-&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Nó contendo dados do endereço de entrega do comprador&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer.DeliveryAddress.Street&lt;/code&gt;&lt;/td&gt;
@@ -18573,15 +18561,13 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;24&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Não&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Endereço de entrega do comprador&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer.DeliveryAddress.Number&lt;/code&gt;&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Texto&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;5&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Não&lt;/td&gt;
-      &lt;td&gt;Número do endereço de entrega do comprador&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Número do endereço de entrega do comprador&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer.DeliveryAddress.Complement&lt;/code&gt;&lt;/td&gt;
@@ -18589,7 +18575,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;14&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Não&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Complemento do endereço de entrega do comprador&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer.DeliveryAddress.District&lt;/code&gt;&lt;/td&gt;
@@ -18597,7 +18582,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;15&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Não&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Distrito ou Bairro do endereço de entrega do comprador&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer.DeliveryAddress.ZipCode&lt;/code&gt;&lt;/td&gt;
@@ -18605,7 +18589,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;9&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Não&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;CEP do endereço de entrega do comprador&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer.DeliveryAddress.City&lt;/code&gt;&lt;/td&gt;
@@ -18613,7 +18596,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;20&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Não&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Cidade do endereço de entrega do comprador&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer.DeliveryAddress.State&lt;/code&gt;&lt;/td&gt;
@@ -18621,7 +18603,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;2&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Não&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Estado do endereço de entrega do comprador&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer.DeliveryAddress.Country&lt;/code&gt;&lt;/td&gt;
@@ -18629,7 +18610,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;2&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Não&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;País do endereço de entrega do comprador&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -18642,7 +18622,6 @@ curl
       &lt;th style=&quot;text-align: left&quot;&gt;TAMANHO&lt;/th&gt;
       &lt;th style=&quot;text-align: left&quot;&gt;OBRIGATÓRIO&lt;/th&gt;
       &lt;th style=&quot;text-align: left&quot;&gt;DESCRIÇÃO&lt;/th&gt;
-      &lt;th&gt; &lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
@@ -18652,7 +18631,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;-&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;-&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Nó contendo dados do endereço de cobrança do comprador&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer.BillingAddress.Street&lt;/code&gt;&lt;/td&gt;
@@ -18660,15 +18638,13 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;24&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Sim&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Endereço de cobrança do comprador&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer.BillingAddress.Number&lt;/code&gt;&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Texto&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;5&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Sim&lt;/td&gt;
-      &lt;td&gt;Número do endereço de cobrança do comprador&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Número do endereço de cobrança do comprador&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer.BillingAddress.Complement&lt;/code&gt;&lt;/td&gt;
@@ -18676,7 +18652,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;14&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Não&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Complemento do endereço de cobrança do comprador&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer.BillingAddress.District&lt;/code&gt;&lt;/td&gt;
@@ -18684,7 +18659,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;15&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Sim&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Distrito ou Bairro do endereço de cobrança do comprador&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer.BillingAddress.ZipCode&lt;/code&gt;&lt;/td&gt;
@@ -18692,7 +18666,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;9&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Sim&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;CEP do endereço de cobrança do comprador&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer.BillingAddress.City&lt;/code&gt;&lt;/td&gt;
@@ -18700,7 +18673,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;20&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Sim&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Cidade do endereço de cobrança do comprador&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer.BillingAddress.State&lt;/code&gt;&lt;/td&gt;
@@ -18708,7 +18680,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;2&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Sim&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Estado do endereço de cobrança do comprador&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Customer.BillingAddress.Country&lt;/code&gt;&lt;/td&gt;
@@ -18716,7 +18687,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;2&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Sim&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;País do endereço de cobrança do comprador&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -19002,13 +18972,6 @@ curl
       &lt;th style=&quot;text-align: left&quot;&gt;TAMANHO&lt;/th&gt;
       &lt;th style=&quot;text-align: left&quot;&gt;OBRIGATÓRIO&lt;/th&gt;
       &lt;th style=&quot;text-align: left&quot;&gt;DESCRIÇÃO&lt;/th&gt;
-      &lt;th&gt; &lt;/th&gt;
-      &lt;th&gt; &lt;/th&gt;
-      &lt;th&gt; &lt;/th&gt;
-      &lt;th&gt; &lt;/th&gt;
-      &lt;th&gt; &lt;/th&gt;
-      &lt;th&gt; &lt;/th&gt;
-      &lt;th&gt; &lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
@@ -19018,13 +18981,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;-&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;-&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Nó contendo as informações do carrinho para análise de fraude&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Payment.FraudAnalysis.Cart.Items[].Name&lt;/code&gt;&lt;/td&gt;
@@ -19032,13 +18988,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;50&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Não&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Nome do produto&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Payment.FraudAnalysis.Cart.Items[].Sku&lt;/code&gt;&lt;/td&gt;
@@ -19046,13 +18995,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;12&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Não&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Sku do produto&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Payment.FraudAnalysis.Cart.Items[].MerchantItemId&lt;/code&gt;&lt;/td&gt;
@@ -19060,13 +19002,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;30&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Não&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;ID do produto na loja&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Payment.FraudAnalysis.Cart.Items[].UnitPrice&lt;/code&gt;&lt;/td&gt;
@@ -19074,13 +19009,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;15&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Não&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Preço unitário do produto em centavos &lt;br /&gt; Ex.: r$ 1.559,85 = 155985&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Payment.FraudAnalysis.Cart.Items[].OriginalPrice&lt;/code&gt;&lt;/td&gt;
@@ -19088,13 +19016,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;15&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Não&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Preço original do produto em centavos &lt;br /&gt; Ex.: r$ 1.559,85 = 155985&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Payment.FraudAnalysis.Cart.Items[].Quantity&lt;/code&gt;&lt;/td&gt;
@@ -19102,13 +19023,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;-&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Não&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Quantidade do produto&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Payment.FraudAnalysis.Cart.Items[].GiftMessage&lt;/code&gt;&lt;/td&gt;
@@ -19116,13 +19030,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;160&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Não&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Mensagem de presente&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Payment.FraudAnalysis.Cart.Items[].Description&lt;/code&gt;&lt;/td&gt;
@@ -19130,13 +19037,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;76&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Não&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Descrição do produto&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Payment.FraudAnalysis.Cart.Items[].ShippingInstructions&lt;/code&gt;&lt;/td&gt;
@@ -19144,27 +19044,13 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;160&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Não&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Instruções para entrega do item do carrinho&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Payment.FraudAnalysis.Cart.Items[].ShippingMethod&lt;/code&gt;&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Texto&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;-&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Não&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;Método de entrega do item do carrinho &lt;br /&gt; Possíveis valores: &lt;br /&gt; ReDShield: None / SameDay / NextDay / TwoDay / ThreeDay / LowCost / CarrierDesignatedByCustomer / Pickup / International / Military / Other &lt;br /&gt; CyberSource: None&lt;/td&gt;
-      &lt;td&gt;SameDay&lt;/td&gt;
-      &lt;td&gt;OneDay&lt;/td&gt;
-      &lt;td&gt;TwoDay&lt;/td&gt;
-      &lt;td&gt;ThreeDay&lt;/td&gt;
-      &lt;td&gt;LowCost&lt;/td&gt;
-      &lt;td&gt;Pickup&lt;/td&gt;
-      &lt;td&gt;Other&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Método de entrega do item do carrinho &lt;br /&gt; Possíveis valores: &lt;br /&gt; ReDShield: None / SameDay / NextDay / TwoDay / ThreeDay / LowCost / CarrierDesignatedByCustomer / Pickup / International / Military / Other &lt;br /&gt; CyberSource: None / SameDay / OneDay / TwoDay / ThreeDay / LowCost / Pickup / Other&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Payment.FraudAnalysis.Cart.Items[].ShippingTrackingNumber&lt;/code&gt;&lt;/td&gt;
@@ -19172,13 +19058,6 @@ curl
       &lt;td style=&quot;text-align: left&quot;&gt;19&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Não&lt;/td&gt;
       &lt;td style=&quot;text-align: left&quot;&gt;Número de rastreamento da entrega do item do carrinho&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
