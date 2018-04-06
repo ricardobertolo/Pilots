@@ -15,7 +15,7 @@ language_tabs:
 
 # Cielo OAUTH
 
-O Cielo OUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce. Ele utiliza o **Protocolo Oauth** como base de autenticação de requisições
+O Cielo OAUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce. Ele utiliza o **Protocolo Oauth** como base de autenticação de requisições
 
 Para utilizar o Cielo Oauth
 
@@ -38,12 +38,18 @@ Para obter acesso a serviços Cielo que utilizam o `Cielo Oauth`, será necessá
 
 ### Concatenação
 
+|Campo|Formato|
+|-|-|
 |**ClientId** | b521b6b2-b9b4-4a30-881d-3b63dece0006|
-|**ClientSecret**| 08Qkje79NwWRx5BdgNJsIkBuITt5cIVO
+|**ClientSecret**| 08Qkje79NwWRx5BdgNJsIkBuITt5cIVO |
 |**ClientId:ClientSecret**| *b521b6b2-b9b4-4a30-881d-3b63dece0006:08Qkje79NwWRx5BdgNJsIkBuITt5cIVO*|
 |**Base64**| *YjUyMWI2YjItYjliNC00YTMwLTg4MWQtM2I2M2RlY2UwMDA2OiAwOFFramU3OU53V1J4NUJkZ05Kc0lrQnVJVHQ1Y0lWTw*|
 
 ### Request
+
+O Request dever ser envaido apenas no Header da requisição.
+
+<aside class="request"><span class="method post">POST</span><span class="endpoint">https://cieloecommerce.cielo.com.br/v2/public/v2/token</span></aside>
 
 ``` json
 "POST": https://cieloecommerce.cielo.com.br/v2/public/v2/token
@@ -53,6 +59,7 @@ Para obter acesso a serviços Cielo que utilizam o `Cielo Oauth`, será necessá
 
 ### Response
 
+O response possuirá o Token utilizado para novas requisições em Serviços Cielo
 
 ``` json
 {
