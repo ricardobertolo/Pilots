@@ -309,36 +309,30 @@
 
 <h1 id="link-de-pagamento">Link de Pagamento</h1>
 
-<p>A <strong>API de Gerenciamento de Link de Pagamentos</strong> permite ao lojista criar, editar e consultar links de pagamentos.</p>
+<p>A <strong>API Link de Pagamentos</strong> permite ao lojista criar, editar e consultar links de pagamentos.</p>
 
 <p>Seu principal objetivo é permitir que lojas possam criar links de pagamento (Botões ou QR Codes), através de seus próprios sistemas, sem a necessidade de acessar o Backoffice do Checkout Cielo e compartilhar com seus clientes.</p>
-
-<blockquote>
-  <p>Endereço:</p>
-</blockquote>
 
 <blockquote>
   <p><strong>Atenção</strong>: O link de pagamentos não é uma URL DE <strong>PEDIDO/TRANSAÇÃO</strong>. Ele é um “carrinho” que pode ser reutilizado inúmeras vezes.</p>
 </blockquote>
 
 <blockquote>
-  <p><strong>Atenção</strong>: Para receber notificações sobre transações originadas de Links de pagamento é OBRIGATÓRIO o cadastro da URL de Notificação.</p>
+  <p><strong>Atenção</strong>: Para receber notificações sobre transações originadas de Links de pagamento é <strong>OBRIGATÓRIO</strong> o cadastro da URL de Notificação.</p>
 </blockquote>
 
 <h2 id="criar-um-link">Criar um Link</h2>
 
 <p>Você pode criar um link para disponibilizá-los aos seus clientes para pagamentos. Para criar diversos links, você pode efetuar várias requisições.</p>
 
+<aside class="request"><span class="method post">POST</span><span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v1/products/</span></aside>
+
 <blockquote>
-  <p>URL de POST</p>
+  <p>Header: <code class="highlighter-rouge">Authorization: Bearer {access_token}</code></p>
 </blockquote>
 
-<p><strong>Header:</strong></p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Authorization: Bearer {access_token}
-</code></pre></div></div>
-
 <p><strong>Requisição:</strong></p>
+
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
    "Type":"Digital",
    "name" : "Pedido",
