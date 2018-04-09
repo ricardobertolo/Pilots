@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-09T17:34:10+00:00</updated>
+    <updated>2018-04-09T17:39:05+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -25643,8 +25643,8 @@ O Fluxo de pré-cadastro é descrito na seguinte ordem:&lt;/p&gt;
       &lt;td&gt;Sim&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;CompanyData.&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;CompanyData.&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Informações sobre a loja, se IntegrationType = 2&lt;/strong&gt;&lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
@@ -25671,8 +25671,8 @@ O Fluxo de pré-cadastro é descrito na seguinte ordem:&lt;/p&gt;
       &lt;td&gt;Sim&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;PersonalData.&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;PersonalData.&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Informações sobre a loja, se IntegrationType = 1&lt;/strong&gt;&lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
@@ -25692,8 +25692,8 @@ O Fluxo de pré-cadastro é descrito na seguinte ordem:&lt;/p&gt;
       &lt;td&gt;Sim&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;BusinessAddress.&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;BusinessAddress.&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Informações sobre endereço da loja&lt;/strong&gt;&lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
@@ -25748,8 +25748,8 @@ O Fluxo de pré-cadastro é descrito na seguinte ordem:&lt;/p&gt;
       &lt;td&gt;Sim&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;TechnicalContact.&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;TechnicalContact.&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Dados de contato do responsável tecnico da loja&lt;/strong&gt;&lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
@@ -25783,8 +25783,8 @@ O Fluxo de pré-cadastro é descrito na seguinte ordem:&lt;/p&gt;
       &lt;td&gt;Sim&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;TransactionalConfiguration.&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;TransactionalConfiguration.&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Caso a loja ja possua um cadastro na Cielo (Afiliação), este nó deve ser enviado&lt;/strong&gt;&lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt;Sim&lt;/td&gt;
@@ -25811,8 +25811,8 @@ O Fluxo de pré-cadastro é descrito na seguinte ordem:&lt;/p&gt;
       &lt;td&gt;Sim&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;BankingData.&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;BankingData.&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Informações bancárias para cadastro de contas junto a Cielo&lt;/strong&gt;&lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
