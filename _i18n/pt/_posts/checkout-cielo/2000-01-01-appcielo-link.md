@@ -124,11 +124,13 @@ O Fluxo de pré-cadastro é descrito na seguinte ordem:
 
 ## Criar lojas
 
-Para realizar a criação de lojas via pré-cadastro é necessario que a Plataforma esteja devidamente cadastrada juntoi a Cielo e possuas as chave de acesso ao **Cielo Oauth**
+Para realizar a criação de lojas via pré-cadastro é necessario que a Plataforma esteja devidamente cadastrada juntoi a Cielo e possuas as chave de acesso ao **Cielo Oauth**.
+
+Após realizar o processo de Autenticação descrito na sessão [Cielo OAUTH](https://docscielo.github.io/Pilots/manual/appcielo-link#cielo-oauth), a plataforma poderá realizar o `POST` de criação de lojas
 
 ### Post de criação
 
-> https://cieloecommerce.cielo.com.br/api/public/v1/PreRegistration
+<aside class="request"><span class="method post">POST</span><span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v1/PreRegistration/</span></aside>
 
 ``` json
 {
@@ -177,6 +179,10 @@ Para realizar a criação de lojas via pré-cadastro é necessario que a Platafo
    }
 }
 ```
+
+| PROPRIEDADE            | DESCRIÇÃO                                                                                      | TIPO   | TAMANHO | OBRIGATÓRIO |
+|------------------------|------------------------------------------------------------------------------------------------|--------|---------|-------------|
+| shipping               | Nó contendo informações de entrega do produto                                                  |        |         |             |
 
 ### Post de Notificação
 
