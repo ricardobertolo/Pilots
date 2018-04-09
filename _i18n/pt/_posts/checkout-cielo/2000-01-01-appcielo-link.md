@@ -234,14 +234,18 @@ A URL de Ativação (`ActivationURL`) receberá um POST contendo os dados abaixo
 
 ```
 
-| PROPRIEDADE    | DESCRIÇÃO                                                                                                    | TIPO   |
-|----------------|--------------------------------------------------------------------------------------------------------------|--------|
-| `Affiliation`  | Numero de afiliação cadastrado no Checkout Cielo                                                             | string |
-| `MerchantID`   | Identificador da loja no Checkout Cielo e Identificado para Criação de Links e consulta transacional         | GUID   |
-| `Merchantkey`  | Chave de validação do MerchantID - Exclusivo para integração API Cielo Ecommerce                             | string |
-| `IntegrationType`| Identificador do tipo de loja criada <br><br> 1 = API Cielo Ecommercer <br> 2 = Checkout Cielo             | GUID   |
-
+| PROPRIEDADE      | DESCRIÇÃO                                                                                                    | TIPO   |
+|------------------|--------------------------------------------------------------------------------------------------------------|--------|
+| `Affiliation`    | Numero de afiliação cadastrado no Checkout Cielo                                                             | string |
+| `MerchantID`     | Identificador da loja no Checkout Cielo e Identificado para Criação de Links e consulta transacional         | GUID   |
+| `Merchantkey`    | Chave de validação do MerchantID - Exclusivo para integração API Cielo Ecommerce                             | string |
+| `IntegrationType`| Identificador do tipo de loja criada <br><br> 1 = API Cielo Ecommercer <br> 2 = Checkout Cielo               | GUID   |
+ 
 ## Ativar lojas
+
+A Ativação de lojas é feita pela equipe de credenciamento Cielo. A Ativação ocorre apenas quando uma loja em pré-cadastro recebe uma Afiliação e uma chave de produção.
+
+Caso uma loja cadastrada não seja ativada, entre em contato com a equipe de credenciamento e solicite informações.
 
 # Link de Pagamento
 
