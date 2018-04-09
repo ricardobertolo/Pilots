@@ -194,6 +194,20 @@ Todas essas etapas exigem que transações sejam realizadas para obter acesso a 
 
 <p>Cada tipo de validação necessita de um contrato tecnico diferente. Eles resultarão em <em>responses diferenciados</em>.</p>
 
+<h3 id="requisição">Requisição</h3>
+
+<h4 id="padrÃo">PADRÃO</h4>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"CardNumber"</span><span class="p">:</span><span class="s2">"1234123412341231"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Holder"</span><span class="p">:</span><span class="s2">"Alexsander Rosa"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ExpirationDate"</span><span class="p">:</span><span class="s2">"12/2021"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"SecurityCode"</span><span class="p">:</span><span class="s2">"123"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"SaveCard"</span><span class="p">:</span><span class="s2">"false"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Brand"</span><span class="p">:</span><span class="s2">"Visa"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
 <p>Abaixo, a listagem de campos da Requisição:</p>
 
 <table>
@@ -266,28 +280,44 @@ Todas essas etapas exigem que transações sejam realizadas para obter acesso a 
   </tbody>
 </table>
 
-<h3 id="requisição">Requisição</h3>
-
-<h4 id="padrÃo">PADRÃO</h4>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"CardNumber"</span><span class="p">:</span><span class="s2">"1234123412341231"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Holder"</span><span class="p">:</span><span class="s2">"Alexsander Rosa"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"ExpirationDate"</span><span class="p">:</span><span class="s2">"12/2021"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"SecurityCode"</span><span class="p">:</span><span class="s2">"123"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"SaveCard"</span><span class="p">:</span><span class="s2">"false"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Brand"</span><span class="p">:</span><span class="s2">"Visa"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
-
 <h4 id="com-token">COM TOKEN</h4>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"CardToken"</span><span class="p">:</span><span class="s2">"23712c39-bb08-4030-86b3-490a223a8cc9"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"SaveCard"</span><span class="p">:</span><span class="s2">"false"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Brand"</span><span class="p">:</span><span class="s2">"Visa"</span><span class="w">
+  </span><span class="s2">"SaveCard"</span><span class="p">:</span><span class="s2">"false"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Brand"</span><span class="p">:</span><span class="s2">"Visa"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
+
+<p>Abaixo, a listagem de campos da Requisição:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Paramêtro</th>
+      <th>Descrição</th>
+      <th>Tipo</th>
+      <th>Tamanho</th>
+      <th style="text-align: center">Obrigatório</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">Brand</code></td>
+      <td>Bandeira do cartão: <br />Visa<br />Master<br /></td>
+      <td>Texto</td>
+      <td>10</td>
+      <td style="text-align: center">não</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">CardToken</code></td>
+      <td>Token do cartão na 3.0</td>
+      <td>GUID</td>
+      <td>36</td>
+      <td style="text-align: center">Condicional</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="resposta">Resposta</h3>
 
