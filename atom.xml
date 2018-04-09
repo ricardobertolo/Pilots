@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-09T18:00:39+00:00</updated>
+    <updated>2018-04-09T18:18:47+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -25907,16 +25907,18 @@ A URL de Ativação (&lt;code class=&quot;highlighter-rouge&quot;&gt;ActivationU
 &lt;p&gt;Seu principal objetivo é permitir que lojas possam criar links de pagamento (Botões ou QR Codes), através de seus próprios sistemas, sem a necessidade de acessar o Backoffice do Checkout Cielo e compartilhar com seus clientes.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Atenção&lt;/strong&gt;: O link de pagamentos não é uma URL DE &lt;strong&gt;PEDIDO/TRANSAÇÃO&lt;/strong&gt;. Ele é um “carrinho” que pode ser reutilizado inúmeras vezes.&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;Atenção&lt;/strong&gt;:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;O link de pagamentos não é uma URL DE &lt;strong&gt;PEDIDO/TRANSAÇÃO&lt;/strong&gt;. Ele é um “carrinho” que pode ser reutilizado inúmeras vezes.&lt;/li&gt;
+    &lt;li&gt;Para receber notificações sobre transações originadas de Links de pagamento é &lt;strong&gt;OBRIGATÓRIO&lt;/strong&gt; o cadastro da &lt;strong&gt;URL de Notificação&lt;/strong&gt; no backoffice do Checkout.&lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/blockquote&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Atenção&lt;/strong&gt;: Para receber notificações sobre transações originadas de Links de pagamento é &lt;strong&gt;OBRIGATÓRIO&lt;/strong&gt; o cadastro da URL de Notificação.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h2 id=&quot;autenticação&quot;&gt;Autenticação&lt;/h2&gt;
 
-&lt;h2 id=&quot;criar-um-link&quot;&gt;Criar um Link&lt;/h2&gt;
+&lt;p&gt;O Processo de autenticação na API do link de pagamento é o &lt;strong&gt;&lt;a href=&quot;https://docscielo.github.io/Pilots/manual/appcielo-link#cielo-oauth&quot;&gt;Cielo OAUTH&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Você pode criar um link para disponibilizá-los aos seus clientes para pagamentos. Para criar diversos links, você pode efetuar várias requisições.&lt;/p&gt;
+&lt;h2 id=&quot;criar-link&quot;&gt;Criar Link&lt;/h2&gt;
 
 &lt;aside class=&quot;request&quot;&gt;&lt;span class=&quot;method post&quot;&gt;POST&lt;/span&gt;&lt;span class=&quot;endpoint&quot;&gt;https://cieloecommerce.cielo.com.br/api/public/v1/products/&lt;/span&gt;&lt;/aside&gt;
 
@@ -26180,7 +26182,7 @@ A URL de Ativação (&lt;code class=&quot;highlighter-rouge&quot;&gt;ActivationU
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&quot;consultar-um-link&quot;&gt;Consultar um Link&lt;/h2&gt;
+&lt;h2 id=&quot;consultar-link&quot;&gt;Consultar Link&lt;/h2&gt;
 
 &lt;p&gt;Consultar um link existente pelo seu identificador.
 &lt;strong&gt;Definição&lt;/strong&gt;&lt;/p&gt;
@@ -26234,7 +26236,7 @@ A URL de Ativação (&lt;code class=&quot;highlighter-rouge&quot;&gt;ActivationU
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;OBS&lt;/strong&gt;: Mesmos dados retornados na resposta de criação do link.&lt;/p&gt;
 
-&lt;h2 id=&quot;atualizar-um-link&quot;&gt;Atualizar um Link&lt;/h2&gt;
+&lt;h2 id=&quot;atualizar-link&quot;&gt;Atualizar Link&lt;/h2&gt;
 
 &lt;p&gt;Atualiza um link pelo seu identificador.
 &lt;strong&gt;Definição&lt;/strong&gt;&lt;/p&gt;
@@ -26309,7 +26311,7 @@ A URL de Ativação (&lt;code class=&quot;highlighter-rouge&quot;&gt;ActivationU
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;OBS&lt;/strong&gt;: Mesmos dados retornados na resposta de criação do link.&lt;/p&gt;
 
-&lt;h2 id=&quot;excluir-um-link&quot;&gt;Excluir um Link&lt;/h2&gt;
+&lt;h2 id=&quot;excluir-link&quot;&gt;Excluir Link&lt;/h2&gt;
 
 &lt;p&gt;Exclui um link pelo seu identificador.&lt;/p&gt;
 
