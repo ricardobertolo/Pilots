@@ -261,7 +261,6 @@ Você pode criar um link para disponibilizá-los aos seus clientes para pagament
 
 > Header: `Authorization: Bearer {access_token}`
 
-
 **Requisição:**
 
 ``` json
