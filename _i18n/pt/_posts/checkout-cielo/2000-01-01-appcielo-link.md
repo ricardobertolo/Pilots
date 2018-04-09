@@ -16,7 +16,7 @@ language_tabs:
 
 # Cielo OAUTH
 
-O Cielo OAUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce. Ele utiliza como segurança o protocolo [OAUTH2](https://oauth.net/2/), onde é necessário primeiramente obter um token de acesso, utlizando suas credenciais, que deverá posteriormente ser enviado à API CieloOAuth
+O Cielo OAUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce. Ele utiliza como segurança o protocolo **[OAUTH2](https://oauth.net/2/)**, onde é necessário primeiramente obter um token de acesso, utlizando suas credenciais, que deverá posteriormente ser enviado à API CieloOAuth
 
 > Para obter o `ClientID` e o `ClientSecret`, acione a equipe de Produtos Cielo. Credênciais liberadas apenas para lojistas selecionados,
 
@@ -46,7 +46,7 @@ Para obter acesso a serviços Cielo que utilizam o `Cielo Oauth`, será necessá
 
 ### Request
 
-O Request dever ser envaido apenas no Header da requisição.
+O Request dever ser enviado apenas no Header da requisição.
 
 <aside class="request"><span class="method post">POST</span><span class="endpoint">https://cieloecommerce.cielo.com.br/v2/public/v2/token</span></aside>
 
@@ -112,9 +112,66 @@ A Consulta consiste em um `GET` ao Endpoint abaixo:
 
 # Pré-cadastro
 
+O Pré-cadastro Cielo tem como objetivo permitir que plataformas parceiras possam criar lojas para a API Cielo Ecommerce e Checkout Cielo de maneira automatizada.
+O Fluxo de pré-cadastro é descrito na seguinte ordem:
+
+1. A Plataforma recebe da Cielo um identificador (`PlatformID`) + Credenciais do Cielo OAuth (`ClientID`+`ClientSecret`)
+2. Com as credenciais, a plataforma envia de dados cadastrais para o sistema Cielo
+3. O setor de credenciamento Cielo avalia o cadastro 
+
 ## Criar lojas
 
 ### Post de criação
+
+> https://cieloecommerce.cielo.com.br/api/public/v1/PreRegistration
+
+``` json
+{
+  "Email": "json40@email.com",
+  "DocumentType": 1,
+  "INtegrationType":2,
+  "ContactName": "Contact Name",
+  "Phone": "(99) 99999-9999",
+  "ActivationUrl":"http://www.google.com",
+
+  "CompanyData": {
+    "FancyName": "json sa",
+    "CorporateName": "My Company Ltda.",
+    "Cnpj": "99.999.999/9999-99"
+  },
+  "PlatformId":"6A87A6E1-E080-462E-1CCB-08D58DD4E419",
+  "PersonalData": {
+    "Cpf": "999.999.999-99",
+    "FullName": "Customer Name"
+  },
+  "BusinessAddress": {
+    "ZipCode": "99999-999",
+    "Address": "Av. Lorem Ipsum Dolor",
+    "Number": "99999",
+    "Complement": "Lorem 999",
+    "District": "Lorem Ipsum",
+    "City": "Rio de Janeiro",
+    "State": "RJ"
+  },
+  "TechnicalContact":{
+      "ContactName":"ContactNameTest",
+      "ContactPhone":"99 99999-9999",
+      "ContactEmail":"json@email.com",
+      "CompanyDeveloper":"CompanyDeveloperTest"
+  },
+  "TransactionalConfiguration": {
+    "EC": "1010208045",
+    "ProductionKey": "98348349849",
+    "Mcc": "7032"
+  },
+  "BankingData":{
+      "Bank":"Abc",
+      "Agency":"1111",
+      "Account":"22222",
+      "AccountType":"CurrentAccount"
+   }
+}
+```
 
 ### Post de Notificação
 
