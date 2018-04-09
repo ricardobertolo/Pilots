@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-09T14:21:44+00:00</updated>
+    <updated>2018-04-09T14:22:19+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -25360,10 +25360,8 @@ Se no contrato técnico existir o nó da recorrência, fica obrigatório o tipo 
 &lt;ol&gt;
   &lt;li&gt;Concatenar o &lt;em&gt;ClientId&lt;/em&gt; e o &lt;em&gt;ClientSecret&lt;/em&gt;, &lt;strong&gt;ClientId:ClientSecret&lt;/strong&gt;&lt;/li&gt;
   &lt;li&gt;Codificar o resultado em &lt;strong&gt;Base64&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Enviar uma requisição, utilizando o método HTTP POST para o Endpoint abaixo&lt;/li&gt;
+  &lt;li&gt;Enviar uma requisição, utilizando o método HTTP POST&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;aside class=&quot;request&quot;&gt;&lt;span class=&quot;method post&quot;&gt;POST&lt;/span&gt; &lt;span class=&quot;endpoint&quot;&gt;https://cieloecommerce.cielo.com.br/api/public/v2/token/&lt;/span&gt;&lt;/aside&gt;
 
 &lt;h3 id=&quot;concatenação&quot;&gt;Concatenação&lt;/h3&gt;
 
