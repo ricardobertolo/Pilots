@@ -112,14 +112,19 @@ A Consulta consiste em um `GET` ao Endpoint abaixo:
 
 # Pré-cadastro
 
-O Pré-cadastro Cielo tem como objetivo permitir que plataformas parceiras possam criar lojas para a API Cielo Ecommerce e Checkout Cielo de maneira automatizada.
+O Pré-cadastro Cielo tem como objetivo permitir que plataformas parceiras possam criar lojas para a **API Cielo Ecommerce** e **Checkout Cielo** de maneira automatizada.
 O Fluxo de pré-cadastro é descrito na seguinte ordem:
 
 1. A Plataforma recebe da Cielo um identificador (`PlatformID`) + Credenciais do Cielo OAuth (`ClientID`+`ClientSecret`)
 2. Com as credenciais, a plataforma envia de dados cadastrais para o sistema Cielo
-3. O setor de credenciamento Cielo avalia o cadastro 
+3. O setor de credenciamento Cielo avalia o cadastro e Ativa a loja
+4. Dados da loja são enviadas via `POST` para a URL de notificação da Plataforma.
+
+> **OBS**: O Cadastro da plataforma junto a Cielo é pré-requisito para acesso as APIs de pré-cadastro. 
 
 ## Criar lojas
+
+Para realizar a criação de lojas via pré-cadastro é necessario que a Plataforma esteja devidamente cadastrada juntoi a Cielo e possuas as chave de acesso ao **Cielo Oauth**
 
 ### Post de criação
 
