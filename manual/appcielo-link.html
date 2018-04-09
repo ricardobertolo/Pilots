@@ -658,6 +658,50 @@ O Fluxo de pré-cadastro é descrito na seguinte ordem:</p>
 
 <h3 id="post-de-notificação">Post de Notificação</h3>
 
+<p>O Post de notificação será enviado quando a loja em pré-cadastro for ativada.
+A URL de Ativação (<code class="highlighter-rouge">ActivationURL</code>) receberá um POST contendo os dados abaixo</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+	</span><span class="s2">"Affiliation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10101010101"</span><span class="p">,</span><span class="w">
+	</span><span class="s2">"MerchantID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dc9d6efa-b582-4ac8-ac59-12c57245df2a"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Merchantkey"</span><span class="p">:</span><span class="s2">"dd6efab5824ac8ac5912c57245df2ac9d6efab5824ac8ac5912c57245df2a"</span><span class="w">
+    </span><span class="s2">"IntegrationType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>PROPRIEDADE</th>
+      <th>DESCRIÇÃO</th>
+      <th>TIPO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">Affiliation</code></td>
+      <td>Numero de afiliação cadastrado no Checkout Cielo</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">MerchantID</code></td>
+      <td>Identificador da loja no Checkout Cielo e Identificado para Criação de Links e consulta transacional</td>
+      <td>GUID</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Merchantkey</code></td>
+      <td>Chave de validação do MerchantID - Exclusivo para integração API Cielo Ecommerce</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">IntegrationType</code></td>
+      <td>Identificador do tipo de loja criada <br /> 1 = API Cielo Ecommercer <br /> 2 = Checkout Cielo</td>
+      <td>GUID</td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="ativar-lojas">Ativar lojas</h2>
 
 <h1 id="link-de-pagamento">Link de Pagamento</h1>
