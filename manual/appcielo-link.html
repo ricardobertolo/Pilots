@@ -266,11 +266,13 @@
 
 <p>A Consulta consiste em um <code class="highlighter-rouge">GET</code> ao Endpoint abaixo:</p>
 
-<aside class="request"><span class="method get">GET</span> <span class="endpoint">https://cieloecommerce.cielo.com.br/api/"public"/v1/Merchant/GetByAffiliationCode/{EC}</span></aside>
+<aside class="request"><span class="method get">GET</span> <span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v1/merchant/credentials/}</span></aside>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-	</span><span class="err">Affiliation</span><span class="p">:</span><span class="w"> </span><span class="mi">10101010101</span><span class="w">
-	</span><span class="err">MerchantID</span><span class="p">:</span><span class="w">  </span><span class="err">dc</span><span class="mi">9</span><span class="err">d</span><span class="mi">6</span><span class="err">efa-b</span><span class="mi">582-4</span><span class="err">ac</span><span class="mi">8</span><span class="err">-ac</span><span class="mi">59-12</span><span class="err">c</span><span class="mi">57245</span><span class="err">df</span><span class="mi">2</span><span class="err">a</span><span class="w">
+	</span><span class="s2">"Affiliation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10101010101"</span><span class="w">
+	</span><span class="s2">"MerchantId"</span><span class="p">:</span><span class="w">  </span><span class="s2">"dc9d6efa-b582-4ac8-ac59-12c5724"</span><span class="w">
+	</span><span class="s2">"ClientId"</span><span class="err">;</span><span class="w">   </span><span class="s2">"dc9d6efa-b582-4ac8-ac59-12c5724"</span><span class="w">
+	</span><span class="s2">"ClientSecret"</span><span class="p">:</span><span class="w">  </span><span class="s2">"ClientSecretXX"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
@@ -293,8 +295,27 @@
       <td>Identificador da loja no Checkout Cielo e Identificado para Criação de Links e consulta transacional</td>
       <td>GUID</td>
     </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ClientId</code></td>
+      <td>Identificador da loja no Cielo OAUTH - <br /> Para lojas <strong>Checkout Cielo</strong>, é o mesmo valor do MerchandID</td>
+      <td>GUID</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ClientSecret</code></td>
+      <td>Chave que valida o ClientID.</td>
+      <td>string</td>
+    </tr>
   </tbody>
 </table>
+
+<blockquote>
+  <p>Tipos de Retorno para ECs não encontrados:
+<br /></p>
+  <ul>
+    <li><strong>EC inexistente</strong>: NotFound</li>
+    <li><strong>EC inválido</strong>: Forbidden</li>
+  </ul>
+</blockquote>
 
 <h1 id="pré-cadastro">Pré-cadastro</h1>
 
