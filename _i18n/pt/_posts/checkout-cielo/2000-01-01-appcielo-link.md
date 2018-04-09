@@ -98,13 +98,6 @@ A Consulta consiste em um `GET` ao Endpoint abaixo:
 }
 ```
 
-```shell
-{
-	Affiliation: 10101010101
-	MerchantID:  dc9d6efa-b582-4ac8-ac59-12c57245df2a
-}
-```
-
 |PROPRIEDADE   | DESCRIÇÃO                                                 |TIPO  |
 |--------------|-----------------------------------------------------------|------|
 |`Affiliation` | Numero de afiliação cadastrado no Checkout Cielo          |string|
@@ -141,7 +134,7 @@ Você pode criar um link para disponibilizá-los aos seus clientes para pagament
 
 **Requisição:**
 
-```
+``` json
 {
    "Type":"Digital",
    "name" : "Pedido",
