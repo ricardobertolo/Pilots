@@ -16,11 +16,11 @@ language_tabs:
 
 # Cielo OAUTH
 
-O Cielo OAUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce. Ele utiliza o **Protocolo Oauth** como base de autenticação de requisições
+O Cielo OAUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce. Ele utiliza como segurança o protocolo [OAUTH2](https://oauth.net/2/), onde é necessário primeiramente obter um token de acesso, utlizando suas credenciais, que deverá posteriormente ser enviado à API CieloOAuth
 
 > Para obter o `ClientID` e o `ClientSecret`, acione a equipe de Produtos Cielo. Credênciais liberadas apenas para lojistas selecionados,
 
-Para utilizar o Cielo Oauth
+Para utilizar o Cielo Oauth são necessarias as seguintes credenciais:
 
 | PROPRIEDADE    | DESCRIÇÃO                                                             | TIPO   |
 |----------------|-----------------------------------------------------------------------|--------|
@@ -52,10 +52,11 @@ O Request dever ser envaido apenas no Header da requisição.
 
 <aside class="request"><span class="method post">POST</span><span class="endpoint">https://cieloecommerce.cielo.com.br/v2/public/v2/token</span></aside>
 
-```
-"POST": https://cieloecommerce.cielo.com.br/v2/public/v2/token
-"Headers"
-"Authorization": Basic YjUyMWI2YjItYjliNC00YTMwLTg4MWQtM2I2M2RlY2UwMDA2OiAwOFFramU3OU53V1J4NUJkZ05Kc0lrQnVJVHQ1Y0lWTw
+``` json
+x-www-form-urlencoded
+--header "Authorization: Basic {base64}"  
+--header "Content-Type: application/x-www-form-urlencoded"  
+grant_type=client_credentials
 ```
 
 ### Response
