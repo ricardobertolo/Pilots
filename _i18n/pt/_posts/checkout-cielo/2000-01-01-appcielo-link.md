@@ -226,10 +226,10 @@ A URL de Ativação (`ActivationURL`) receberá um POST contendo os dados abaixo
 
 ``` json
 {
-	"Affiliation": "10101010101",
-	"MerchantID": "dc9d6efa-b582-4ac8-ac59-12c57245df2a",
-    "Merchantkey":"dd6efab5824ac8ac5912c57245df2ac9d6efab5824ac8ac5912c57245df2a"
-    "IntegrationType": "1"
+ "Affiliation": "10101010101",
+ "MerchantID": "dc9d6efa-b582-4ac8-ac59-12c57245df2a",
+ "Merchantkey":"dd6efab5824ac8ac5912c57245df2ac9d6efab5824ac8ac5912c57245df2a",
+ "IntegrationType": "1"
 }
 
 ```
