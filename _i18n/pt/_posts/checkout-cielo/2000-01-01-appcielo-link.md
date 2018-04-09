@@ -247,19 +247,24 @@ A Ativação de lojas é feita pela equipe de credenciamento Cielo. A Ativação
 
 Caso uma loja cadastrada não seja ativada, entre em contato com a equipe de credenciamento e solicite informações.
 
+
 # Link de Pagamento
 
 A **API Link de Pagamentos** permite ao lojista criar, editar e consultar links de pagamentos. 
 
 Seu principal objetivo é permitir que lojas possam criar links de pagamento (Botões ou QR Codes), através de seus próprios sistemas, sem a necessidade de acessar o Backoffice do Checkout Cielo e compartilhar com seus clientes.
 
-> **Atenção**: O link de pagamentos não é uma URL DE **PEDIDO/TRANSAÇÃO**. Ele é um "carrinho" que pode ser reutilizado inúmeras vezes.
+> **Atenção**: 
+> * O link de pagamentos não é uma URL DE **PEDIDO/TRANSAÇÃO**. Ele é um "carrinho" que pode ser reutilizado inúmeras vezes.
+> * Para receber notificações sobre transações originadas de Links de pagamento é **OBRIGATÓRIO** o cadastro da **URL de Notificação** no backoffice do Checkout.
 
-> **Atenção**: Para receber notificações sobre transações originadas de Links de pagamento é **OBRIGATÓRIO** o cadastro da URL de Notificação.
+## Autenticação
 
-## Criar um Link
+O Processo de autenticação na API do link de pagamento é o **[Cielo OAUTH](https://docscielo.github.io/Pilots/manual/appcielo-link#cielo-oauth)**
 
-Você pode criar um link para disponibilizá-los aos seus clientes para pagamentos. Para criar diversos links, você pode efetuar várias requisições.
+## Criar Link
+
+
 
 <aside class="request"><span class="method post">POST</span><span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v1/products/</span></aside>
 
@@ -369,7 +374,7 @@ Os dados retornados na resposta contemplam todos os enviados na requisição e d
 | shortUrl    | string | Representa o link de pagamento que ao ser aberto, em um browser, apresentará a tela do Checkout Cielo.                        |
 | links       | object | Apresenta as operações disponíveis e possíveis (RESTful hypermedia) de serem efetuadas após a criação ou atualização do link. |
 
-## Consultar um Link
+## Consultar Link
 
 Consultar um link existente pelo seu identificador.
 **Definição**
@@ -425,7 +430,7 @@ HTTP Status: 200 – OK
 ```
 **OBS**: Mesmos dados retornados na resposta de criação do link.
 
-## Atualizar um Link
+## Atualizar Link
 
 Atualiza um link pelo seu identificador.
 **Definição**
@@ -504,7 +509,7 @@ HTTP Status: 200 – OK
 ```
 **OBS**: Mesmos dados retornados na resposta de criação do link.
 
-## Excluir um Link
+## Excluir Link
 
 Exclui um link pelo seu identificador.
 
