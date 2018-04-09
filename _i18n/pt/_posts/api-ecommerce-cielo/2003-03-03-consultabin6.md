@@ -64,8 +64,8 @@ Basta realizar um `GET` enviado o BIN a nossa URL de consulta:
 https://apiquerysandbox.cieloecommerce.cielo.com.br/1/cardBin/420020
 ```
 
-|Campo|Descrição|
-|-----|---------|
+|Campo|Descrição                    |
+|-----|-----------------------------|
 |`BIN`|6 primeiros dígitos do cartão|
 
 ### Response
