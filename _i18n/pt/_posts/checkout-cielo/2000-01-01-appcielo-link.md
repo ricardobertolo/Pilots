@@ -184,6 +184,99 @@ Após realizar o processo de Autenticação descrito na sessão [Cielo OAUTH](ht
 |------------------------|------------------------------------------------------------------------------------------------|--------|---------|-------------|
 | shipping               | Nó contendo informações de entrega do produto                                                  |        |         |             |
 
+
+
+Email
+DocumentType
+INtegrationType
+ContactName
+Phone
+ActivationUrl
+PlatformId
+
+CompanyData.
+CompanyData.FancyName
+CompanyData.CorporateName
+CompanyData.Cnpj
+  
+PersonalData.
+PersonalData.Cpf
+PersonalData.FullName
+
+BusinessAddress.
+BusinessAddress.ZipCode
+BusinessAddress.Address
+BusinessAddress.Number
+BusinessAddress.NumberComplement
+BusinessAddress.NumberDistrict
+BusinessAddress.NumberCity
+BusinessAddress.NumberState
+
+TechnicalContact.
+TechnicalContact.ContactName
+TechnicalContact.ContactPhone
+TechnicalContact."ContactEmail
+TechnicalContact.CompanyDeveloper
+
+TransactionalConfiguration.
+TransactionalConfiguration.EC
+TransactionalConfiguration.ProductionKey
+TransactionalConfiguration.Mcc
+
+BankingData.
+BankingData.Bank
+BankingData.Agency
+BankingData.Account
+BankingData.AccountType
+
+
+| Campo                                      | Descrição | Tipo | Tamanho | Obrigatóriedade |
+|--------------------------------------------|-----------|------|---------|-----------------|
+| `Email`                                    | E-mail de comunicação com o lojista           |      |         |                 |
+| `DocumentType`                             | Tipo de documentação <br><br>CPF = 1 <br>CNPJ = 2           |      |         |                 |
+| `IntegrationType`                          | Produto Cielo: <br><br> Api Cielo Ecommerce = 1 <br> Checkout Cielo = 2          |      |         |                 |
+| `ContactName`                              | Nome do lojista          |      |         |                 |
+| `Phone`                                    | Telefone do lojista          |      |         |                 |
+| `ActivationUrl`                            | URL de Notificação da Plataforma          |      |         |                 |
+| `PlatformId`                               | Identificação da plataforma na Cielo          |      |         |                 |
+
+| `CompanyData.`                             |           |      |         |                 |
+| `CompanyData.FancyName`                    | Nome fantasia          |      |         |                 |
+| `CompanyData.CorporateName`                | Razão social          |      |         |                 |
+| `CompanyData.Cnpj`                         | CNPJ (Sem Formatação)          |      |         |                 |
+
+| `PersonalData.`                            |           |      |         |                 |
+| `PersonalData.Cpf`                         | CPF (Sem formatação)         |      |         |                 |
+| `PersonalData.FullName`                    | Nome do lojista          |      |         |                 |
+
+| `BusinessAddress.`                         |           |      |         |                 |
+| `BusinessAddress.ZipCode`                  | CEP da loja          |      |         |                 |
+| `BusinessAddress.Address`                  | Endereço da loja          |      |         |                 |
+| `BusinessAddress.Number`                   | Numero da loja          |      |         |                 |
+| `BusinessAddress.Complement`               | Complemento          |      |         |                 |
+| `BusinessAddress.District`                 | Bairro da loja         |      |         |                 |
+| `BusinessAddress.City`                     | Cidade da loja          |      |         |                 |
+| `BusinessAddress.State`                    | Estado - Unidade Federativa (Ex: SP/RJ)         |      |         |                 |
+
+| `TechnicalContact.`                        |           |      |         |                 |
+| `TechnicalContact.ContactName`             | Nome do desenvolvedor          |      |         |                 |
+| `TechnicalContact.ContactPhone`            | Telefone do desenvolvedor          |      |         |                 |
+| `TechnicalContact.ContactEmail`            | E-mail do desenvolvedor          |      |         |                 |
+| `TechnicalContact.CompanyDeveloper`        | Nome da empresa de desenvolvimento          |      |         |                 |
+
+| `TransactionalConfiguration.`              |           |      |         |                 |
+| `TransactionalConfiguration.EC`            | Afiliação Cielo da loja          |      |         |                 |
+| `TransactionalConfiguration.ProductionKey` | Chave de produção Cielo          |      |         |                 |
+| `TransactionalConfiguration.Mcc`           | Código de identificação de setor Cielo  |      |         |                 |
+
+| `BankingData.`                             |           |      |         |                 |
+| `BankingData.Bank`                         | Banco           |      |         |                 |
+| `BankingData.Agency`                       | Agência Bancaria          |      |         |                 |
+| `BankingData.Account`                      |           |      |         |                 |
+| `BankingData.AccountType`                  |           |      |         |                 |
+
+
+
 ### Post de Notificação
 
 ## Ativar lojas
