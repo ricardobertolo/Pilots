@@ -131,13 +131,13 @@
             <div class="post">
   <h1 id="cielo-oauth">Cielo OAUTH</h1>
 
-<p>O Cielo OAUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce. Ele utiliza o <strong>Protocolo Oauth</strong> como base de autenticação de requisições</p>
+<p>O Cielo OAUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce. Ele utiliza como segurança o protocolo <a href="https://oauth.net/2/">OAUTH2</a>, onde é necessário primeiramente obter um token de acesso, utlizando suas credenciais, que deverá posteriormente ser enviado à API CieloOAuth</p>
 
 <blockquote>
   <p>Para obter o <code class="highlighter-rouge">ClientID</code> e o <code class="highlighter-rouge">ClientSecret</code>, acione a equipe de Produtos Cielo. Credênciais liberadas apenas para lojistas selecionados,</p>
 </blockquote>
 
-<p>Para utilizar o Cielo Oauth</p>
+<p>Para utilizar o Cielo Oauth são necessarias as seguintes credenciais:</p>
 
 <table>
   <thead>
@@ -208,10 +208,11 @@
 
 <aside class="request"><span class="method post">POST</span><span class="endpoint">https://cieloecommerce.cielo.com.br/v2/public/v2/token</span></aside>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"POST": https://cieloecommerce.cielo.com.br/v2/public/v2/token
-"Headers"
-"Authorization": Basic YjUyMWI2YjItYjliNC00YTMwLTg4MWQtM2I2M2RlY2UwMDA2OiAwOFFramU3OU53V1J4NUJkZ05Kc0lrQnVJVHQ1Y0lWTw
-</code></pre></div></div>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">x-www-form-urlencoded</span><span class="w">
+</span><span class="err">--header</span><span class="w"> </span><span class="s2">"Authorization: Basic {base64}"</span><span class="w">  
+</span><span class="err">--header</span><span class="w"> </span><span class="s2">"Content-Type: application/x-www-form-urlencoded"</span><span class="w">  
+</span><span class="err">grant_type=client_credentials</span><span class="w">
+</span></code></pre></div></div>
 
 <h3 id="response">Response</h3>
 

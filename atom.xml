@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-06T23:05:37+00:00</updated>
+    <updated>2018-04-09T14:12:22+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -25323,13 +25323,13 @@ Se no contrato técnico existir o nó da recorrência, fica obrigatório o tipo 
         <id>https://docscielo.github.io/Pilots/manual/appcielo-link</id>
         <content type="html">&lt;h1 id=&quot;cielo-oauth&quot;&gt;Cielo OAUTH&lt;/h1&gt;
 
-&lt;p&gt;O Cielo OAUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce. Ele utiliza o &lt;strong&gt;Protocolo Oauth&lt;/strong&gt; como base de autenticação de requisições&lt;/p&gt;
+&lt;p&gt;O Cielo OAUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce. Ele utiliza como segurança o protocolo &lt;a href=&quot;https://oauth.net/2/&quot;&gt;OAUTH2&lt;/a&gt;, onde é necessário primeiramente obter um token de acesso, utlizando suas credenciais, que deverá posteriormente ser enviado à API CieloOAuth&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Para obter o &lt;code class=&quot;highlighter-rouge&quot;&gt;ClientID&lt;/code&gt; e o &lt;code class=&quot;highlighter-rouge&quot;&gt;ClientSecret&lt;/code&gt;, acione a equipe de Produtos Cielo. Credênciais liberadas apenas para lojistas selecionados,&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Para utilizar o Cielo Oauth&lt;/p&gt;
+&lt;p&gt;Para utilizar o Cielo Oauth são necessarias as seguintes credenciais:&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -25400,10 +25400,11 @@ Se no contrato técnico existir o nó da recorrência, fica obrigatório o tipo 
 
 &lt;aside class=&quot;request&quot;&gt;&lt;span class=&quot;method post&quot;&gt;POST&lt;/span&gt;&lt;span class=&quot;endpoint&quot;&gt;https://cieloecommerce.cielo.com.br/v2/public/v2/token&lt;/span&gt;&lt;/aside&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;POST&quot;: https://cieloecommerce.cielo.com.br/v2/public/v2/token
-&quot;Headers&quot;
-&quot;Authorization&quot;: Basic YjUyMWI2YjItYjliNC00YTMwLTg4MWQtM2I2M2RlY2UwMDA2OiAwOFFramU3OU53V1J4NUJkZ05Kc0lrQnVJVHQ1Y0lWTw
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;x-www-form-urlencoded&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;--header&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Authorization: Basic {base64}&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;--header&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Content-Type: application/x-www-form-urlencoded&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;grant_type=client_credentials&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;response&quot;&gt;Response&lt;/h3&gt;
 
