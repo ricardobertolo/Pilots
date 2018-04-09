@@ -221,6 +221,26 @@ Após realizar o processo de Autenticação descrito na sessão [Cielo OAUTH](ht
 
 ### Post de Notificação
 
+O Post de notificação será enviado quando a loja em pré-cadastro for ativada.
+A URL de Ativação (`ActivationURL`) receberá um POST contendo os dados abaixo
+
+``` json
+{
+	"Affiliation": "10101010101",
+	"MerchantID": "dc9d6efa-b582-4ac8-ac59-12c57245df2a",
+    "Merchantkey":"dd6efab5824ac8ac5912c57245df2ac9d6efab5824ac8ac5912c57245df2a"
+    "IntegrationType": "1"
+}
+
+```
+
+| PROPRIEDADE    | DESCRIÇÃO                                                                                                    | TIPO   |
+|----------------|--------------------------------------------------------------------------------------------------------------|--------|
+| `Affiliation`  | Numero de afiliação cadastrado no Checkout Cielo                                                             | string |
+| `MerchantID`   | Identificador da loja no Checkout Cielo e Identificado para Criação de Links e consulta transacional         | GUID   |
+| `Merchantkey`  | Chave de validação do MerchantID - Exclusivo para integração API Cielo Ecommerce                             | string |
+| `IntegrationType`| Identificador do tipo de loja criada <br><br> 1 = API Cielo Ecommercer <br> 2 = Checkout Cielo             | GUID   |
+
 ## Ativar lojas
 
 # Link de Pagamento
