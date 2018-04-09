@@ -131,7 +131,7 @@
             <div class="post">
   <h1 id="cielo-oauth">Cielo OAUTH</h1>
 
-<p>O Cielo OAUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce. Ele utiliza como segurança o protocolo <a href="https://oauth.net/2/">OAUTH2</a>, onde é necessário primeiramente obter um token de acesso, utlizando suas credenciais, que deverá posteriormente ser enviado à API CieloOAuth</p>
+<p>O Cielo OAUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce. Ele utiliza como segurança o protocolo <strong><a href="https://oauth.net/2/">OAUTH2</a></strong>, onde é necessário primeiramente obter um token de acesso, utlizando suas credenciais, que deverá posteriormente ser enviado à API CieloOAuth</p>
 
 <blockquote>
   <p>Para obter o <code class="highlighter-rouge">ClientID</code> e o <code class="highlighter-rouge">ClientSecret</code>, acione a equipe de Produtos Cielo. Credênciais liberadas apenas para lojistas selecionados,</p>
@@ -202,7 +202,7 @@
 
 <h3 id="request">Request</h3>
 
-<p>O Request dever ser envaido apenas no Header da requisição.</p>
+<p>O Request dever ser enviado apenas no Header da requisição.</p>
 
 <aside class="request"><span class="method post">POST</span><span class="endpoint">https://cieloecommerce.cielo.com.br/v2/public/v2/token</span></aside>
 
@@ -319,9 +319,69 @@
 
 <h1 id="pré-cadastro">Pré-cadastro</h1>
 
+<p>O Pré-cadastro Cielo tem como objetivo permitir que plataformas parceiras possam criar lojas para a API Cielo Ecommerce e Checkout Cielo de maneira automatizada.
+O Fluxo de pré-cadastro é descrito na seguinte ordem:</p>
+
+<ol>
+  <li>A Plataforma recebe da Cielo um identificador (<code class="highlighter-rouge">PlatformID</code>) + Credenciais do Cielo OAuth (<code class="highlighter-rouge">ClientID</code>+<code class="highlighter-rouge">ClientSecret</code>)</li>
+  <li>Com as credenciais, a plataforma envia de dados cadastrais para o sistema Cielo</li>
+  <li>O setor de credenciamento Cielo avalia o cadastro</li>
+</ol>
+
 <h2 id="criar-lojas">Criar lojas</h2>
 
 <h3 id="post-de-criação">Post de criação</h3>
+
+<blockquote>
+  <p>https://cieloecommerce.cielo.com.br/api/public/v1/PreRegistration</p>
+</blockquote>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"Email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"json40@email.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"DocumentType"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"INtegrationType"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ContactName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Contact Name"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(99) 99999-9999"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ActivationUrl"</span><span class="p">:</span><span class="s2">"http://www.google.com"</span><span class="p">,</span><span class="w">
+
+  </span><span class="s2">"CompanyData"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"FancyName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"json sa"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"CorporateName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Company Ltda."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Cnpj"</span><span class="p">:</span><span class="w"> </span><span class="s2">"99.999.999/9999-99"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"PlatformId"</span><span class="p">:</span><span class="s2">"6A87A6E1-E080-462E-1CCB-08D58DD4E419"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"PersonalData"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"Cpf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"999.999.999-99"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"FullName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Customer Name"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"BusinessAddress"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"ZipCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"99999-999"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Av. Lorem Ipsum Dolor"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"99999"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lorem 999"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"District"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lorem Ipsum"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"City"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rio de Janeiro"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"State"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RJ"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"TechnicalContact"</span><span class="p">:{</span><span class="w">
+      </span><span class="s2">"ContactName"</span><span class="p">:</span><span class="s2">"ContactNameTest"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ContactPhone"</span><span class="p">:</span><span class="s2">"99 99999-9999"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ContactEmail"</span><span class="p">:</span><span class="s2">"json@email.com"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"CompanyDeveloper"</span><span class="p">:</span><span class="s2">"CompanyDeveloperTest"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"TransactionalConfiguration"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"EC"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1010208045"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ProductionKey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"98348349849"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Mcc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7032"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"BankingData"</span><span class="p">:{</span><span class="w">
+      </span><span class="s2">"Bank"</span><span class="p">:</span><span class="s2">"Abc"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Agency"</span><span class="p">:</span><span class="s2">"1111"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Account"</span><span class="p">:</span><span class="s2">"22222"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"AccountType"</span><span class="p">:</span><span class="s2">"CurrentAccount"</span><span class="w">
+   </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
 <h3 id="post-de-notificação">Post de Notificação</h3>
 
