@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-09T14:12:22+00:00</updated>
+    <updated>2018-04-09T14:18:47+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -25445,7 +25445,7 @@ Se no contrato técnico existir o nó da recorrência, fica obrigatório o tipo 
 &lt;/table&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;O token possui um tempo de expiração aproximado de 20 minutos (1.200 segundos). Após esse intervalo, será necessário obter um novo token para acesso aos serviços Cielo.&lt;/p&gt;
+  &lt;p&gt;O token retornado (access_token) deverá ser utilizado em toda requisição como uma chave de autorização, destacando que este possui uma validade de 20 minutos (1200 segundos) e após esse intervalo, será necessário obter um novo token para acesso aos serviços Cielo.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h1 id=&quot;consulta-ec&quot;&gt;Consulta EC&lt;/h1&gt;
