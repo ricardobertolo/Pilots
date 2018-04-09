@@ -77,7 +77,7 @@ O response possuirá o Token utilizado para novas requisições em Serviços Cie
 |`Token_type`  | Sempre será do tipo `bearer`                              |texto |
 |`Expires_in`  | Validade do token em segundos. Aproximadamente 20 minutos |int   |
 
-> O token possui um tempo de expiração aproximado de 20 minutos (1.200 segundos). Após esse intervalo, será necessário obter um novo token para acesso aos serviços Cielo. 
+> O token retornado (access_token) deverá ser utilizado em toda requisição como uma chave de autorização, destacando que este possui uma validade de 20 minutos (1200 segundos) e após esse intervalo, será necessário obter um novo token para acesso aos serviços Cielo. 
 
 # Consulta EC
 
