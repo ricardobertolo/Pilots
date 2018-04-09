@@ -87,19 +87,28 @@ O processo de consulta de EC busca a existencia de afiliações e MerchanIDs na 
 
 A Consulta consiste em um `GET` ao Endpoint abaixo:
 
-<aside class="request"><span class="method get">GET</span> <span class="endpoint">https://cieloecommerce.cielo.com.br/api/"public"/v1/Merchant/GetByAffiliationCode/{EC}</span></aside>
+<aside class="request"><span class="method get">GET</span> <span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v1/merchant/credentials/{{EC}}}</span></aside>
 
 ```json
 {
-	Affiliation: 10101010101
-	MerchantID:  dc9d6efa-b582-4ac8-ac59-12c57245df2a
+	"Affiliation": "10101010101"
+	"MerchantId":  "dc9d6efa-b582-4ac8-ac59-12c5724"
+	"ClientId";   "dc9d6efa-b582-4ac8-ac59-12c5724"
+	"ClientSecret":  "ClientSecretXX"
 }
 ```
 
-|PROPRIEDADE   | DESCRIÇÃO                                                 |TIPO  |
-|--------------|-----------------------------------------------------------|------|
-|`Affiliation` | Numero de afiliação cadastrado no Checkout Cielo          |string|
-|`MerchantID`  | Identificador da loja no Checkout Cielo e Identificado para Criação de Links e consulta transacional |GUID  |
+| PROPRIEDADE    | DESCRIÇÃO                                                                                                    | TIPO   |
+|----------------|--------------------------------------------------------------------------------------------------------------|--------|
+| `Affiliation`  | Numero de afiliação cadastrado no Checkout Cielo                                                             | string |
+| `MerchantID`   | Identificador da loja no Checkout Cielo e Identificado para Criação de Links e consulta transacional         | GUID   |
+| `ClientId`     | Identificador da loja no Cielo OAUTH - <br><br> Para lojas **Checkout Cielo**, é o mesmo valor do MerchandID | GUID   |
+| `ClientSecret` | Chave que valida o ClientID.                                                                                 | string |
+
+> Tipos de Retorno para ECs não encontrados:
+> <br>
+> * **EC inexistente**: NotFound
+> * **EC inválido**: Forbidden
 
 # Pré-cadastro
 
