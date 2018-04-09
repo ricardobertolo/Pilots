@@ -180,102 +180,44 @@ Após realizar o processo de Autenticação descrito na sessão [Cielo OAUTH](ht
 }
 ```
 
-| PROPRIEDADE            | DESCRIÇÃO                                                                                      | TIPO   | TAMANHO | OBRIGATÓRIO |
-|------------------------|------------------------------------------------------------------------------------------------|--------|---------|-------------|
-| shipping               | Nó contendo informações de entrega do produto                                                  |        |         |             |
-
-
-
-Email
-DocumentType
-INtegrationType
-ContactName
-Phone
-ActivationUrl
-PlatformId
-
-CompanyData.
-CompanyData.FancyName
-CompanyData.CorporateName
-CompanyData.Cnpj
-  
-PersonalData.
-PersonalData.Cpf
-PersonalData.FullName
-
-BusinessAddress.
-BusinessAddress.ZipCode
-BusinessAddress.Address
-BusinessAddress.Number
-BusinessAddress.NumberComplement
-BusinessAddress.NumberDistrict
-BusinessAddress.NumberCity
-BusinessAddress.NumberState
-
-TechnicalContact.
-TechnicalContact.ContactName
-TechnicalContact.ContactPhone
-TechnicalContact."ContactEmail
-TechnicalContact.CompanyDeveloper
-
-TransactionalConfiguration.
-TransactionalConfiguration.EC
-TransactionalConfiguration.ProductionKey
-TransactionalConfiguration.Mcc
-
-BankingData.
-BankingData.Bank
-BankingData.Agency
-BankingData.Account
-BankingData.AccountType
-
-
-| Campo                                      | Descrição | Tipo | Tamanho | Obrigatóriedade |
-|--------------------------------------------|-----------|------|---------|-----------------|
-| `Email`                                    | E-mail de comunicação com o lojista           |      |         |                 |
-| `DocumentType`                             | Tipo de documentação <br><br>CPF = 1 <br>CNPJ = 2           |      |         |                 |
-| `IntegrationType`                          | Produto Cielo: <br><br> Api Cielo Ecommerce = 1 <br> Checkout Cielo = 2          |      |         |                 |
-| `ContactName`                              | Nome do lojista          |      |         |                 |
-| `Phone`                                    | Telefone do lojista          |      |         |                 |
-| `ActivationUrl`                            | URL de Notificação da Plataforma          |      |         |                 |
-| `PlatformId`                               | Identificação da plataforma na Cielo          |      |         |                 |
-
-| `CompanyData.`                             |           |      |         |                 |
-| `CompanyData.FancyName`                    | Nome fantasia          |      |         |                 |
-| `CompanyData.CorporateName`                | Razão social          |      |         |                 |
-| `CompanyData.Cnpj`                         | CNPJ (Sem Formatação)          |      |         |                 |
-
-| `PersonalData.`                            |           |      |         |                 |
-| `PersonalData.Cpf`                         | CPF (Sem formatação)         |      |         |                 |
-| `PersonalData.FullName`                    | Nome do lojista          |      |         |                 |
-
-| `BusinessAddress.`                         |           |      |         |                 |
-| `BusinessAddress.ZipCode`                  | CEP da loja          |      |         |                 |
-| `BusinessAddress.Address`                  | Endereço da loja          |      |         |                 |
-| `BusinessAddress.Number`                   | Numero da loja          |      |         |                 |
-| `BusinessAddress.Complement`               | Complemento          |      |         |                 |
-| `BusinessAddress.District`                 | Bairro da loja         |      |         |                 |
-| `BusinessAddress.City`                     | Cidade da loja          |      |         |                 |
-| `BusinessAddress.State`                    | Estado - Unidade Federativa (Ex: SP/RJ)         |      |         |                 |
-
-| `TechnicalContact.`                        |           |      |         |                 |
-| `TechnicalContact.ContactName`             | Nome do desenvolvedor          |      |         |                 |
-| `TechnicalContact.ContactPhone`            | Telefone do desenvolvedor          |      |         |                 |
-| `TechnicalContact.ContactEmail`            | E-mail do desenvolvedor          |      |         |                 |
-| `TechnicalContact.CompanyDeveloper`        | Nome da empresa de desenvolvimento          |      |         |                 |
-
-| `TransactionalConfiguration.`              |           |      |         |                 |
-| `TransactionalConfiguration.EC`            | Afiliação Cielo da loja          |      |         |                 |
-| `TransactionalConfiguration.ProductionKey` | Chave de produção Cielo          |      |         |                 |
-| `TransactionalConfiguration.Mcc`           | Código de identificação de setor Cielo  |      |         |                 |
-
-| `BankingData.`                             |           |      |         |                 |
-| `BankingData.Bank`                         | Banco           |      |         |                 |
-| `BankingData.Agency`                       | Agência Bancaria          |      |         |                 |
-| `BankingData.Account`                      |           |      |         |                 |
-| `BankingData.AccountType`                  |           |      |         |                 |
-
-
+| Campo                                      | Descrição                                                                                                                          | Tipo   | Tamanho | Obrigatório |
+|--------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|--------|---------|-------------|
+| `Email`                                    | E-mail de comunicação com o lojista                                                                                                | String | 60      | Sim         |
+| `DocumentType`                             | Tipo de documentação <br><br>CPF = 1 <br>CNPJ = 2                                                                                  | Enum   | 1       | Sim         |
+| `IntegrationType`                          | Produto Cielo: <br><br> Api Cielo Ecommerce = 1 <br> Checkout Cielo = 2                                                            | Enum   | 1       | Sim         |
+| `ContactName`                              | Nome do lojista                                                                                                                    | String | 255     | Não         |
+| `Phone`                                    | Telefone do lojista                                                                                                                | String | 10      | Não         |
+| `ActivationUrl`                            | URL de Notificação da Plataforma                                                                                                   |        |         | Sim         |
+| `PlatformId`                               | Identificação da plataforma na Cielo                                                                                               | GUID   | -       |             |
+| `CompanyData.`                             |                                                                                                                                    | String | 255     |             |
+| `CompanyData.FancyName`                    | Nome fantasia                                                                                                                      | String |         | Sim         |
+| `CompanyData.CorporateName`                | Razão social                                                                                                                       | String |         | Sim         |
+| `CompanyData.Cnpj`                         | CNPJ (Sem Formatação)                                                                                                              | String |         | Sim         |
+| `PersonalData.`                            |                                                                                                                                    |        |         |             |
+| `PersonalData.Cpf`                         | CPF (Sem formatação)                                                                                                               | String |         | Sim         |
+| `PersonalData.FullName`                    | Nome do lojista                                                                                                                    | String |         | Sim         |
+| `BusinessAddress.`                         |                                                                                                                                    |        |         |             |
+| `BusinessAddress.ZipCode`                  | CEP da loja                                                                                                                        | String | 9       | Sim         |
+| `BusinessAddress.Address`                  | Endereço da loja                                                                                                                   | String | 32      | Sim         |
+| `BusinessAddress.Number`                   | Numero da loja                                                                                                                     | String | 3       | Sim         |
+| `BusinessAddress.Complement`               | Complemento                                                                                                                        | String | 26      | Sim         |
+| `BusinessAddress.District`                 | Bairro da loja                                                                                                                     | String | 28      | Sim         |
+| `BusinessAddress.City`                     | Cidade da loja                                                                                                                     | String | 28      | Sim         |
+| `BusinessAddress.State`                    | Estado - Unidade Federativa (Ex: SP/RJ)                                                                                            | String | 2       | Sim         |
+| `TechnicalContact.`                        |                                                                                                                                    |        |         | Sim         |
+| `TechnicalContact.ContactName`             | Nome do desenvolvedor                                                                                                              | String | 32      | Sim         |
+| `TechnicalContact.ContactPhone`            | Telefone do desenvolvedor                                                                                                          | String | 15      | Sim         |
+| `TechnicalContact.ContactEmail`            | E-mail do desenvolvedor                                                                                                            | String | 64      | Sim         |
+| `TechnicalContact.CompanyDeveloper`        | Nome da empresa de desenvolvimento                                                                                                 | String | 32      | Sim         |
+| `TransactionalConfiguration.`              |                                                                                                                                    |        |         | Sim         |
+| `TransactionalConfiguration.EC`            | Afiliação Cielo da loja                                                                                                            | String | 10      | Sim         |
+| `TransactionalConfiguration.ProductionKey` | Chave de produção Cielo                                                                                                            | String | 255     | Sim         |
+| `TransactionalConfiguration.Mcc`           | Código de identificação de setor Cielo                                                                                             | String | 4       | Sim         |
+| `BankingData.`                             |                                                                                                                                    |        |         | Sim         |
+| `BankingData.Bank`                         | Banco                                                                                                                              | String | 3       | Sim         |
+| `BankingData.Agency`                       | Agência Bancária                                                                                                                   | String | 5       | Sim         |
+| `BankingData.Account`                      | Conta bancária                                                                                                                     | String | 13      | Sim         |
+| `BankingData.AccountType`                  | Tipo de conta (Para Caixa Econômica Federal) <br><br> 001 = CurrentAccount/Conta Corrente/ <br> 002 = SimpleAccount /Conta Simples | Enum   | 3       | Sim         |
 
 ### Post de Notificação
 
