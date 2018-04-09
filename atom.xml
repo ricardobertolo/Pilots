@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-09T18:35:35+00:00</updated>
+    <updated>2018-04-09T19:11:44+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -19459,11 +19459,14 @@ O Submergível pode usar a consulta bins no carrinho para alertar compradores in
 
 &lt;h2 id=&quot;integração&quot;&gt;Integração&lt;/h2&gt;
 
-&lt;h2 id=&quot;request&quot;&gt;Request&lt;/h2&gt;
+&lt;h3 id=&quot;request&quot;&gt;Request&lt;/h3&gt;
 
 &lt;p&gt;Basta realizar um &lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; enviado o BIN a nossa URL de consulta:&lt;/p&gt;
 
 &lt;aside class=&quot;request&quot;&gt;&lt;span class=&quot;method get&quot;&gt;GET&lt;/span&gt;&lt;span class=&quot;endpoint&quot;&gt;https://`apiquerysandbox`.cieloecommerce.cielo.com.br/1/cardBin/`BIN`&lt;/span&gt;&lt;/aside&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//apiquerysandbox.cieloecommerce.cielo.com.br/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/cardBin/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;420020&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -19480,10 +19483,7 @@ O Submergível pode usar a consulta bins no carrinho para alertar compradores in
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//apiquerysandbox.cieloecommerce.cielo.com.br/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/cardBin/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;420020&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;response&quot;&gt;Response&lt;/h2&gt;
+&lt;h3 id=&quot;response&quot;&gt;Response&lt;/h3&gt;
 
 &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Status&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;00&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -19531,7 +19531,7 @@ O Submergível pode usar a consulta bins no carrinho para alertar compradores in
 &lt;/table&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;em&gt;Atenção&lt;/em&gt;: Em SANDBOX os valores retornados são simulações e não validações reais de BINS. Deve ser considerado apenas o retorno do Request e o seu formato. Para identificação real dos BINS, o ambiente de Produção deverá ser utilizado&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;Atenção&lt;/strong&gt;: Em SANDBOX os valores retornados são simulações e não validações reais de BINS. Deve ser considerado apenas o retorno do Request e o seu formato. Para identificação real dos BINS, o ambiente de Produção deverá ser utilizado.&lt;/p&gt;
 &lt;/blockquote&gt;
 </content>
     </entry>

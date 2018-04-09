@@ -170,11 +170,14 @@ O Submergível pode usar a consulta bins no carrinho para alertar compradores in
 
 <h2 id="integração">Integração</h2>
 
-<h2 id="request">Request</h2>
+<h3 id="request">Request</h3>
 
 <p>Basta realizar um <code class="highlighter-rouge">GET</code> enviado o BIN a nossa URL de consulta:</p>
 
 <aside class="request"><span class="method get">GET</span><span class="endpoint">https://`apiquerysandbox`.cieloecommerce.cielo.com.br/1/cardBin/`BIN`</span></aside>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">https</span><span class="p">:</span><span class="err">//apiquerysandbox.cieloecommerce.cielo.com.br/</span><span class="mi">1</span><span class="err">/cardBin/</span><span class="mi">420020</span><span class="w">
+</span></code></pre></div></div>
 
 <table>
   <thead>
@@ -191,10 +194,7 @@ O Submergível pode usar a consulta bins no carrinho para alertar compradores in
   </tbody>
 </table>
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">https</span><span class="p">:</span><span class="err">//apiquerysandbox.cieloecommerce.cielo.com.br/</span><span class="mi">1</span><span class="err">/cardBin/</span><span class="mi">420020</span><span class="w">
-</span></code></pre></div></div>
-
-<h2 id="response">Response</h2>
+<h3 id="response">Response</h3>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
 </span><span class="s2">"Status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00"</span><span class="p">,</span><span class="w">
@@ -242,7 +242,7 @@ O Submergível pode usar a consulta bins no carrinho para alertar compradores in
 </table>
 
 <blockquote>
-  <p><em>Atenção</em>: Em SANDBOX os valores retornados são simulações e não validações reais de BINS. Deve ser considerado apenas o retorno do Request e o seu formato. Para identificação real dos BINS, o ambiente de Produção deverá ser utilizado</p>
+  <p><strong>Atenção</strong>: Em SANDBOX os valores retornados são simulações e não validações reais de BINS. Deve ser considerado apenas o retorno do Request e o seu formato. Para identificação real dos BINS, o ambiente de Produção deverá ser utilizado.</p>
 </blockquote>
 
 </div>
