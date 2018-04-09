@@ -335,13 +335,13 @@ O Fluxo de pré-cadastro é descrito na seguinte ordem:</p>
 
 <h2 id="criar-lojas">Criar lojas</h2>
 
-<p>Para realizar a criação de lojas via pré-cadastro é necessario que a Plataforma esteja devidamente cadastrada juntoi a Cielo e possuas as chave de acesso ao <strong>Cielo Oauth</strong></p>
+<p>Para realizar a criação de lojas via pré-cadastro é necessario que a Plataforma esteja devidamente cadastrada juntoi a Cielo e possuas as chave de acesso ao <strong>Cielo Oauth</strong>.</p>
+
+<p>Após realizar o processo de Autenticação descrito na sessão <a href="https://docscielo.github.io/Pilots/manual/appcielo-link#cielo-oauth">Cielo OAUTH</a>, a plataforma poderá realizar o <code class="highlighter-rouge">POST</code> de criação de lojas</p>
 
 <h3 id="post-de-criação">Post de criação</h3>
 
-<blockquote>
-  <p>https://cieloecommerce.cielo.com.br/api/public/v1/PreRegistration</p>
-</blockquote>
+<aside class="request"><span class="method post">POST</span><span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v1/PreRegistration/</span></aside>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"Email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"json40@email.com"</span><span class="p">,</span><span class="w">
@@ -389,6 +389,27 @@ O Fluxo de pré-cadastro é descrito na seguinte ordem:</p>
    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>PROPRIEDADE</th>
+      <th>DESCRIÇÃO</th>
+      <th>TIPO</th>
+      <th>TAMANHO</th>
+      <th>OBRIGATÓRIO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>shipping</td>
+      <td>Nó contendo informações de entrega do produto</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="post-de-notificação">Post de Notificação</h3>
 
