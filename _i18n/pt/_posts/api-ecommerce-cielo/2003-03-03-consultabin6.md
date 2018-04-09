@@ -54,21 +54,21 @@ O Submergível pode usar a consulta bins no carrinho para alertar compradores in
 
 ## Integração
 
-## Request
+### Request
 
 Basta realizar um `GET` enviado o BIN a nossa URL de consulta:
 
 <aside class="request"><span class="method get">GET</span><span class="endpoint">https://`apiquerysandbox`.cieloecommerce.cielo.com.br/1/cardBin/`BIN`</span></aside>
 
-|Campo|Descrição|
-|-----|---------|
-|`BIN`|6 primeiros dígitos do cartão|
-
 ``` json
 https://apiquerysandbox.cieloecommerce.cielo.com.br/1/cardBin/420020
 ```
 
-## Response
+|Campo|Descrição|
+|-----|---------|
+|`BIN`|6 primeiros dígitos do cartão|
+
+### Response
 
 ``` json
 {
@@ -86,4 +86,4 @@ https://apiquerysandbox.cieloecommerce.cielo.com.br/1/cardBin/420020
 | `CardType`    | Texto | 20      | Tipo do cartão em uso : <br><br> Credito <br> Debito <br>Multiplo                                                                                                                          |
 | `ForeingCard` | Texto | 255     | Se o cartão é emitido no exterior (False/True)                                                                                                                                             |
 
-> *Atenção*: Em SANDBOX os valores retornados são simulações e não validações reais de BINS. Deve ser considerado apenas o retorno do Request e o seu formato. Para identificação real dos BINS, o ambiente de Produção deverá ser utilizado
+> **Atenção**: Em SANDBOX os valores retornados são simulações e não validações reais de BINS. Deve ser considerado apenas o retorno do Request e o seu formato. Para identificação real dos BINS, o ambiente de Produção deverá ser utilizado.
