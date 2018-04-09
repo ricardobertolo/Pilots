@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-09T14:44:34+00:00</updated>
+    <updated>2018-04-09T14:49:06+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -25511,16 +25511,23 @@ Se no contrato técnico existir o nó da recorrência, fica obrigatório o tipo 
 
 &lt;h1 id=&quot;pré-cadastro&quot;&gt;Pré-cadastro&lt;/h1&gt;
 
-&lt;p&gt;O Pré-cadastro Cielo tem como objetivo permitir que plataformas parceiras possam criar lojas para a API Cielo Ecommerce e Checkout Cielo de maneira automatizada.
+&lt;p&gt;O Pré-cadastro Cielo tem como objetivo permitir que plataformas parceiras possam criar lojas para a &lt;strong&gt;API Cielo Ecommerce&lt;/strong&gt; e &lt;strong&gt;Checkout Cielo&lt;/strong&gt; de maneira automatizada.
 O Fluxo de pré-cadastro é descrito na seguinte ordem:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;A Plataforma recebe da Cielo um identificador (&lt;code class=&quot;highlighter-rouge&quot;&gt;PlatformID&lt;/code&gt;) + Credenciais do Cielo OAuth (&lt;code class=&quot;highlighter-rouge&quot;&gt;ClientID&lt;/code&gt;+&lt;code class=&quot;highlighter-rouge&quot;&gt;ClientSecret&lt;/code&gt;)&lt;/li&gt;
   &lt;li&gt;Com as credenciais, a plataforma envia de dados cadastrais para o sistema Cielo&lt;/li&gt;
-  &lt;li&gt;O setor de credenciamento Cielo avalia o cadastro&lt;/li&gt;
+  &lt;li&gt;O setor de credenciamento Cielo avalia o cadastro e Ativa a loja&lt;/li&gt;
+  &lt;li&gt;Dados da loja são enviadas via &lt;code class=&quot;highlighter-rouge&quot;&gt;POST&lt;/code&gt; para a URL de notificação da Plataforma.&lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;OBS&lt;/strong&gt;: O Cadastro da plataforma junto a Cielo é pré-requisito para acesso as APIs de pré-cadastro.&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;h2 id=&quot;criar-lojas&quot;&gt;Criar lojas&lt;/h2&gt;
+
+&lt;p&gt;Para realizar a criação de lojas via pré-cadastro é necessario que a Plataforma esteja devidamente cadastrada juntoi a Cielo e possuas as chave de acesso ao &lt;strong&gt;Cielo Oauth&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;post-de-criação&quot;&gt;Post de criação&lt;/h3&gt;
 
