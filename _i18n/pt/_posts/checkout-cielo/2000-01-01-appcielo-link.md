@@ -33,9 +33,7 @@ Para obter acesso a serviços Cielo que utilizam o `Cielo Oauth`, será necessá
 
 1. Concatenar o _ClientId_ e o _ClientSecret_, **ClientId:ClientSecret**
 2. Codificar o resultado em **Base64**
-3. Enviar uma requisição, utilizando o método HTTP POST para o Endpoint abaixo
-
-<aside class="request"><span class="method post">POST</span> <span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v2/token/</span></aside>
+3. Enviar uma requisição, utilizando o método HTTP POST
 
 ### Concatenação
 
