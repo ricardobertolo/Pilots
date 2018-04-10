@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="theme-color" content="#00aeef">
+    <meta http-equiv="Content-Language" content="pt">
+
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <title>
+        
+        Pré-cadastro Cielo &middot; Documentações e tutoriais
+        
+    </title>
+
+    <link rel="shortcut icon" href="https://docscielo.github.io/Pilots/assets/favicon.ico">
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
+    <script async src="https://use.fontawesome.com/3ae06f1030.js"></script>
+
+    <link rel="stylesheet" href="https://docscielo.github.io/Pilots/assets/bundles/css/bundle.min.css">
+
+    
+        
+            <link rel="alternate" hreflang="pt" href="https://docscielo.github.io/Pilots/manual/precadastro" />
+        
+    
+        
+            <link rel="alternate" hreflang="en" href="https://docscielo.github.io/Pilots/en/manual/precadastro" />
+        
+    
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="https://docscielo.github.io/Pilots/atom.xml">
+</head>
+
+    <body>
+        
+        <div class="content-container">
+            <div class="language-tabs">
+                <a class='hide-btn' id="hide-button" title="Comutar"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                <ul class="language-buttons">
+                    
+                    <li><a data-language-name='json'>JSON</a></li>
+                    
+                    <li><a data-language-name='shell'>cURL</a></li>
+                    
+                </ul>
+            </div>
+            <div class="dark-box"></div>
+            <div class="overlay"></div>
+        
+            <div id="submenu">
+                <div class="submenu-container">
+                    <div class="submenu-row sub-items">
+                        <div class="submenu-itens">
+                            <a href="https://desenvolvedores.cielo.com.br/api-portal/pt-br/contact" class="help">Ajuda</a>
+
+                            
+                            <div class="lang">
+                                <span>Idiomas</span>
+
+                                
+                                    
+                                    <a href="https://docscielo.github.io/Pilots/Pilots//manual/precadastro">
+                                    
+
+                                        <img alt="Português" src="https://docscielo.github.io/Pilots/assets/images/pt.png"/>
+                                    </a>
+                                
+                                    
+                                    <a href="https://docscielo.github.io/Pilots/Pilots/en/manual/precadastro">
+                                    
+
+                                        <img alt="English" src="https://docscielo.github.io/Pilots/assets/images/en.png"/>
+                                    </a>
+                                
+                            </div>
+                            
+                        </div>
+
+                        
+                        <div class="search">
+                            <input type="text" class="search" id="input-search">
+                        </div>
+                    </div>
+                    <div class="submenu-row results">
+                        <div class="search-results-container">
+                            <ul class="search-results"></ul>
+                        </div>
+                    </div>
+                        
+
+                    <div class="submenu-row breads">
+                        <ol class="breadcrumb">
+                            
+                            <li><a href="/">Início</a></li>
+                            
+                            
+                            
+                            
+                                
+                                    
+                                    
+                                    
+                                    
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                
+                            
+                                
+                                    
+                                    <li class="active">&gt; <a href="https://docscielo.github.io/Pilots/manual/precadastro">Pré-cadastro Cielo</a></li>
+                                    
+                                
+                            
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+  <h1 id="cielo-oauth">Cielo OAUTH</h1>
+
+<p>O Cielo OAUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce. Ele utiliza como segurança o protocolo <strong><a href="https://oauth.net/2/">OAUTH2</a></strong>, onde é necessário primeiramente obter um token de acesso, utlizando suas credenciais, que deverá posteriormente ser enviado à API CieloOAuth</p>
+
+<blockquote>
+  <p>Para obter o <code class="highlighter-rouge">ClientID</code> e o <code class="highlighter-rouge">ClientSecret</code>, acione a equipe de Produtos Cielo. Credênciais liberadas apenas para lojistas selecionados,</p>
+</blockquote>
+
+<p>Para utilizar o Cielo Oauth são necessarias as seguintes credenciais:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>PROPRIEDADE</th>
+      <th>DESCRIÇÃO</th>
+      <th>TIPO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">ClientId</code></td>
+      <td>Identificador chave fornecido pela CIELO</td>
+      <td>guid</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ClientSecret</code></td>
+      <td>Chave que valida o ClientID. Fornecida pela Cielo junto ao <code class="highlighter-rouge">ClientID</code></td>
+      <td>string</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="token-de-acesso">Token de acesso</h2>
+
+<p>Para obter acesso a serviços Cielo que utilizam o <code class="highlighter-rouge">Cielo Oauth</code>, será necessário obter um token de acesso, conforme os passos abaixo:</p>
+
+<ol>
+  <li>Concatenar o <em>ClientId</em> e o <em>ClientSecret</em>, <strong>ClientId:ClientSecret</strong></li>
+  <li>Codificar o resultado em <strong>Base64</strong></li>
+  <li>Enviar uma requisição, utilizando o método HTTP POST</li>
+</ol>
+
+<h3 id="concatenação">Concatenação</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+      <th>Formato</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>ClientId</strong></td>
+      <td>b521b6b2-b9b4-4a30-881d-3b63dece0006</td>
+    </tr>
+    <tr>
+      <td><strong>ClientSecret</strong></td>
+      <td>08Qkje79NwWRx5BdgNJsIkBuITt5cIVO</td>
+    </tr>
+    <tr>
+      <td><strong>ClientId:ClientSecret</strong></td>
+      <td><em>b521b6b2-b9b4-4a30-881d-3b63dece0006:08Qkje79NwWRx5BdgNJsIkBuITt5cIVO</em></td>
+    </tr>
+    <tr>
+      <td><strong>Base64</strong></td>
+      <td><em>YjUyMWI2YjItYjliNC00YTMwLTg4MWQtM2I2M2RlY2UwMDA2OiAwOFFramU3OU53V1J4NUJkZ05Kc0lrQnVJVHQ1Y0lWTw</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="request">Request</h3>
+
+<p>O Request dever ser enviado apenas no Header da requisição.</p>
+
+<aside class="request"><span class="method post">POST</span><span class="endpoint">https://cieloecommerce.cielo.com.br/v2/public/v2/token</span></aside>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">x-www-form-urlencoded</span><span class="w">
+</span><span class="err">--header</span><span class="w"> </span><span class="s2">"Authorization: Basic {base64}"</span><span class="w">  
+</span><span class="err">--header</span><span class="w"> </span><span class="s2">"Content-Type: application/x-www-form-urlencoded"</span><span class="w">  
+</span><span class="err">grant_type=client_credentials</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="response">Response</h3>
+
+<p>O response possuirá o Token utilizado para novas requisições em Serviços Cielo</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnRfbmFtZSI6Ik1ldUNoZWNrb3V0IE1hc3RlciBLZXkiLCJjbGllbnRfaWQiOiJjODlmZGasdasdasdmUyLTRlNzctODA2YS02ZDc1Y2QzOTdkYWMiLCJzY29wZXMiOiJ7XCJTY29wZVwiOlwiQ2hlY2tvdXRBcGlcIixcIkNsYWltc1wiOltdfSIsInJvbGUiOiJasdasdasd291dEFwaSIsImlzc47I6Imh0dHBzOi8vYXV0aGhvbasdasdnJhc3BhZy5jb20uYnIiLCJhdWQiOiJVVlF4Y1VBMmNTSjFma1EzSVVFbk9pSTNkbTl0ZmasdsadQjVKVVV1UVdnPSIsImV4cCI6MTQ5Nzk5NjY3NywibmJmIjoxNDk3OTEwMjc3fQ.ozj4xnH9PA3dji-ARPSbI7Nakn9dw5I8w6myBRkF-uA"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"token_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bearer"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"expires_in"</span><span class="p">:</span><span class="w"> </span><span class="mi">1199</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>PROPRIEDADE</th>
+      <th>DESCRIÇÃO</th>
+      <th>TIPO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">Access_token</code></td>
+      <td>Utilizado para acesso aos serviços da API</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Token_type</code></td>
+      <td>Sempre será do tipo <code class="highlighter-rouge">bearer</code></td>
+      <td>texto</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Expires_in</code></td>
+      <td>Validade do token em segundos. Aproximadamente 20 minutos</td>
+      <td>int</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>O token retornado (access_token) deverá ser utilizado em toda requisição como uma chave de autorização, destacando que este possui uma validade de 20 minutos (1200 segundos) e após esse intervalo, será necessário obter um novo token para acesso aos serviços Cielo.</p>
+</blockquote>
+
+<h1 id="consulta-ec">Consulta EC</h1>
+
+<p>O processo de consulta de EC busca a existencia de afiliações e MerchanIDs na base de lojas Checkout Cielo.</p>
+
+<aside class="warning">Não são retornadas "lojas legado" do checkout cielo, sendo essas  CHECKOUT SIMPLIFICADO OU CHECKOUT WEBSERVICE </aside>
+
+<blockquote>
+  <p>Caso um lojistas Checkout Simplificado deseje usar o link de pagamentos, ele deve ser convertido em Checkout Completo. Essa mudança impacta a integração da loja.</p>
+</blockquote>
+
+<p>A Consulta consiste em um <code class="highlighter-rouge">GET</code> ao Endpoint abaixo:</p>
+
+<aside class="request"><span class="method get">GET</span> <span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v1/merchant/credentials/}</span></aside>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+	</span><span class="s2">"Affiliation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10101010101"</span><span class="w">
+	</span><span class="s2">"MerchantId"</span><span class="p">:</span><span class="w">  </span><span class="s2">"dc9d6efa-b582-4ac8-ac59-12c5724"</span><span class="w">
+	</span><span class="s2">"ClientId"</span><span class="err">;</span><span class="w">   </span><span class="s2">"dc9d6efa-b582-4ac8-ac59-12c5724"</span><span class="w">
+	</span><span class="s2">"ClientSecret"</span><span class="p">:</span><span class="w">  </span><span class="s2">"ClientSecretXX"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>PROPRIEDADE</th>
+      <th>DESCRIÇÃO</th>
+      <th>TIPO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">Affiliation</code></td>
+      <td>Numero de afiliação cadastrado no Checkout Cielo</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">MerchantID</code></td>
+      <td>Identificador da loja no Checkout Cielo e Identificado para Criação de Links e consulta transacional</td>
+      <td>GUID</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ClientId</code></td>
+      <td>Identificador da loja no Cielo OAUTH - <br /> Para lojas <strong>Checkout Cielo</strong>, é o mesmo valor do MerchandID</td>
+      <td>GUID</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ClientSecret</code></td>
+      <td>Chave que valida o ClientID.</td>
+      <td>string</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>Tipos de Retorno para ECs não encontrados:
+<br /></p>
+  <ul>
+    <li><strong>EC inexistente</strong>: NotFound</li>
+    <li><strong>EC inválido</strong>: Forbidden</li>
+  </ul>
+</blockquote>
+
+<h1 id="pré-cadastro">Pré-cadastro</h1>
+
+<p>O Pré-cadastro Cielo tem como objetivo permitir que plataformas parceiras possam criar lojas para a <strong>API Cielo Ecommerce</strong> e <strong>Checkout Cielo</strong> de maneira automatizada.
+O Fluxo de pré-cadastro é descrito na seguinte ordem:</p>
+
+<ol>
+  <li>A Plataforma recebe da Cielo um identificador (<code class="highlighter-rouge">PlatformID</code>) + Credenciais do Cielo OAuth (<code class="highlighter-rouge">ClientID</code>+<code class="highlighter-rouge">ClientSecret</code>)</li>
+  <li>Com as credenciais, a plataforma envia de dados cadastrais para o sistema Cielo</li>
+  <li>O setor de credenciamento Cielo avalia o cadastro e Ativa a loja</li>
+  <li>Dados da loja são enviadas via <code class="highlighter-rouge">POST</code> para a URL de notificação da Plataforma.</li>
+</ol>
+
+<blockquote>
+  <p><strong>OBS</strong>: O Cadastro da plataforma junto a Cielo é pré-requisito para acesso as APIs de pré-cadastro.</p>
+</blockquote>
+
+<h2 id="criar-lojas">Criar lojas</h2>
+
+<p>Para realizar a criação de lojas via pré-cadastro é necessario que a Plataforma esteja devidamente cadastrada juntoi a Cielo e possuas as chave de acesso ao <strong>Cielo Oauth</strong>.</p>
+
+<p>Após realizar o processo de Autenticação descrito na sessão <a href="https://docscielo.github.io/Pilots/manual/appcielo-link#cielo-oauth">Cielo OAUTH</a>, a plataforma poderá realizar o <code class="highlighter-rouge">POST</code> de criação de lojas</p>
+
+<h3 id="post-de-criação">Post de criação</h3>
+
+<aside class="request"><span class="method post">POST</span><span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v1/PreRegistration/</span></aside>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"Email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"json40@email.com"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"DocumentType"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"INtegrationType"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ContactName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Contact Name"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(99) 99999-9999"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ActivationUrl"</span><span class="p">:</span><span class="s2">"http://www.google.com"</span><span class="p">,</span><span class="w">
+
+  </span><span class="s2">"CompanyData"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"FancyName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"json sa"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"CorporateName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Company Ltda."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Cnpj"</span><span class="p">:</span><span class="w"> </span><span class="s2">"99.999.999/9999-99"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"PlatformId"</span><span class="p">:</span><span class="s2">"6A87A6E1-E080-462E-1CCB-08D58DD4E419"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"PersonalData"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"Cpf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"999.999.999-99"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"FullName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Customer Name"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"BusinessAddress"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"ZipCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"99999-999"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Av. Lorem Ipsum Dolor"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"99999"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lorem 999"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"District"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lorem Ipsum"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"City"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rio de Janeiro"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"State"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RJ"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"TechnicalContact"</span><span class="p">:{</span><span class="w">
+      </span><span class="s2">"ContactName"</span><span class="p">:</span><span class="s2">"ContactNameTest"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ContactPhone"</span><span class="p">:</span><span class="s2">"99 99999-9999"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ContactEmail"</span><span class="p">:</span><span class="s2">"json@email.com"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"CompanyDeveloper"</span><span class="p">:</span><span class="s2">"CompanyDeveloperTest"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"TransactionalConfiguration"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"EC"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1010208045"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ProductionKey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"98348349849"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Mcc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7032"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"BankingData"</span><span class="p">:{</span><span class="w">
+      </span><span class="s2">"Bank"</span><span class="p">:</span><span class="s2">"Abc"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Agency"</span><span class="p">:</span><span class="s2">"1111"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"Account"</span><span class="p">:</span><span class="s2">"22222"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"AccountType"</span><span class="p">:</span><span class="s2">"CurrentAccount"</span><span class="w">
+   </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+      <th>Descrição</th>
+      <th>Tipo</th>
+      <th>Tamanho</th>
+      <th>Obrigatório</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">Email</code></td>
+      <td>E-mail de comunicação com o lojista</td>
+      <td>String</td>
+      <td>60</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">DocumentType</code></td>
+      <td>Tipo de documentação <br />CPF = 1 <br />CNPJ = 2</td>
+      <td>Enum</td>
+      <td>1</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">IntegrationType</code></td>
+      <td>Produto Cielo: <br /> Api Cielo Ecommerce = 1 <br /> Checkout Cielo = 2</td>
+      <td>Enum</td>
+      <td>1</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ContactName</code></td>
+      <td>Nome do lojista</td>
+      <td>String</td>
+      <td>255</td>
+      <td>Não</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Phone</code></td>
+      <td>Telefone do lojista</td>
+      <td>String</td>
+      <td>10</td>
+      <td>Não</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ActivationUrl</code></td>
+      <td>URL de Notificação da Plataforma</td>
+      <td>String</td>
+      <td>255</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">PlatformId</code></td>
+      <td>Identificação da plataforma na Cielo</td>
+      <td>GUID</td>
+      <td>-</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><strong>CompanyData.</strong></td>
+      <td><strong>Informações sobre a loja, se IntegrationType = 2</strong></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">CompanyData.FancyName</code></td>
+      <td>Nome fantasia</td>
+      <td>String</td>
+      <td> </td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">CompanyData.CorporateName</code></td>
+      <td>Razão social</td>
+      <td>String</td>
+      <td> </td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">CompanyData.Cnpj</code></td>
+      <td>CNPJ (Sem Formatação)</td>
+      <td>String</td>
+      <td> </td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><strong>PersonalData.</strong></td>
+      <td><strong>Informações sobre a loja, se IntegrationType = 1</strong></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">PersonalData.Cpf</code></td>
+      <td>CPF (Sem formatação)</td>
+      <td>String</td>
+      <td> </td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">PersonalData.FullName</code></td>
+      <td>Nome do lojista</td>
+      <td>String</td>
+      <td> </td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><strong>BusinessAddress.</strong></td>
+      <td><strong>Informações sobre endereço da loja</strong></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">BusinessAddress.ZipCode</code></td>
+      <td>CEP da loja</td>
+      <td>String</td>
+      <td>9</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">BusinessAddress.Address</code></td>
+      <td>Endereço da loja</td>
+      <td>String</td>
+      <td>32</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">BusinessAddress.Number</code></td>
+      <td>Numero da loja</td>
+      <td>String</td>
+      <td>3</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">BusinessAddress.Complement</code></td>
+      <td>Complemento</td>
+      <td>String</td>
+      <td>26</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">BusinessAddress.District</code></td>
+      <td>Bairro da loja</td>
+      <td>String</td>
+      <td>28</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">BusinessAddress.City</code></td>
+      <td>Cidade da loja</td>
+      <td>String</td>
+      <td>28</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">BusinessAddress.State</code></td>
+      <td>Estado - Unidade Federativa (Ex: SP/RJ)</td>
+      <td>String</td>
+      <td>2</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><strong>TechnicalContact.</strong></td>
+      <td><strong>Dados de contato do responsável tecnico da loja</strong></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">TechnicalContact.ContactName</code></td>
+      <td>Nome do desenvolvedor</td>
+      <td>String</td>
+      <td>32</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">TechnicalContact.ContactPhone</code></td>
+      <td>Telefone do desenvolvedor</td>
+      <td>String</td>
+      <td>15</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">TechnicalContact.ContactEmail</code></td>
+      <td>E-mail do desenvolvedor</td>
+      <td>String</td>
+      <td>64</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">TechnicalContact.CompanyDeveloper</code></td>
+      <td>Nome da empresa de desenvolvimento</td>
+      <td>String</td>
+      <td>32</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><strong>TransactionalConfiguration.</strong></td>
+      <td><strong>Caso a loja ja possua um cadastro na Cielo (Afiliação), este nó deve ser enviado</strong></td>
+      <td> </td>
+      <td> </td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">TransactionalConfiguration.EC</code></td>
+      <td>Afiliação Cielo da loja</td>
+      <td>String</td>
+      <td>10</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">TransactionalConfiguration.ProductionKey</code></td>
+      <td>Chave de produção Cielo</td>
+      <td>String</td>
+      <td>255</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">TransactionalConfiguration.Mcc</code></td>
+      <td>Código de identificação de setor Cielo</td>
+      <td>String</td>
+      <td>4</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><strong>BankingData.</strong></td>
+      <td><strong>Informações bancárias para cadastro de contas junto a Cielo</strong></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">BankingData.Bank</code></td>
+      <td>Banco</td>
+      <td>String</td>
+      <td>3</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">BankingData.Agency</code></td>
+      <td>Agência Bancária</td>
+      <td>String</td>
+      <td>5</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">BankingData.Account</code></td>
+      <td>Conta bancária</td>
+      <td>String</td>
+      <td>13</td>
+      <td>Sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">BankingData.AccountType</code></td>
+      <td>Tipo de conta (Para Caixa Econômica Federal) <br /> 001 = CurrentAccount/Conta Corrente/ <br /> 002 = SimpleAccount /Conta Simples</td>
+      <td>Enum</td>
+      <td>3</td>
+      <td>Sim</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="post-de-notificação">Post de Notificação</h3>
+
+<p>O Post de notificação será enviado quando a loja em pré-cadastro for ativada.
+A URL de Ativação (<code class="highlighter-rouge">ActivationURL</code>) receberá um POST contendo os dados abaixo</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+ </span><span class="s2">"Affiliation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10101010101"</span><span class="p">,</span><span class="w">
+ </span><span class="s2">"MerchantID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dc9d6efa-b582-4ac8-ac59-12c57245df2a"</span><span class="p">,</span><span class="w">
+ </span><span class="s2">"Merchantkey"</span><span class="p">:</span><span class="s2">"dd6efab5824ac8ac5912c57245df2ac9d6efab5824ac8ac5912c57245df2a"</span><span class="p">,</span><span class="w">
+ </span><span class="s2">"IntegrationType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>PROPRIEDADE</th>
+      <th>DESCRIÇÃO</th>
+      <th>TIPO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">Affiliation</code></td>
+      <td>Numero de afiliação cadastrado no Checkout Cielo</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">MerchantID</code></td>
+      <td>Identificador da loja no Checkout Cielo e Identificado para Criação de Links e consulta transacional</td>
+      <td>GUID</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Merchantkey</code></td>
+      <td>Chave de validação do MerchantID - Exclusivo para integração API Cielo Ecommerce</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">IntegrationType</code></td>
+      <td>Identificador do tipo de loja criada <br /> 1 = API Cielo Ecommercer <br /> 2 = Checkout Cielo</td>
+      <td>GUID</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="ativar-lojas">Ativar lojas</h2>
+
+<p>A Ativação de lojas é feita pela equipe de credenciamento Cielo. A Ativação ocorre apenas quando uma loja em pré-cadastro recebe uma Afiliação e uma chave de produção.</p>
+
+<p>Caso uma loja cadastrada não seja ativada, entre em contato com a equipe de credenciamento e solicite informações.</p>
+
+</div>
+
+
+            <div class="footer-conteudo">
+    <div id="footer-conteudo-img" class="col-lg-1 col-md-1">
+            <img src="https://docscielo.github.io/Pilots/assets/images/icon-doubt.svg" width="55px" height="53px" alt="Precisa de ajuda?">
+    </div>
+
+    <div id="footer-conteudo-texto" class="col-lg-11 col-md-11">
+        <h2>Precisa de ajuda?</h2>
+        <p>Se você não conseguiu encontrar sua resposta acima, <a href="https://desenvolvedores.cielo.com.br/api-portal/pt-br/content/suporte">entre em contato conosco</a>.</p>
+    </div>
+</div>
+
+        </div>
+
+        <div class="sidebar">
+  <div class="sidebar-sticky">
+    <div class="sidebar-about">
+      <a title="Comutar a coluna da esquerda" class="hamburger">
+        <i class="fa fa-bars hamb-menu" aria-hidden="true"></i>
+      </a>
+      <a href="https://docscielo.github.io/Pilots/">
+        <img src="https://docscielo.github.io/Pilots/assets/images/logo.png" alt="Documentações e tutoriais">
+      </a>
+      <div></div>
+    </div>
+
+    <div id="toc"></div>
+
+    <div class="fixed-footer">
+        
+        <div class="toc-footer">
+            <h2 class="no-toc toc-footer-title">Materiais complementares</h2>
+            
+
+            
+            
+            
+
+            <ul class="toc-footer">
+            
+                
+            
+            </ul>
+        </div>
+        
+
+    <div class="toc-contact">
+      <div class="contact">
+        <a title="Contato" href="#">
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+          <span>Contato</span>
+        </a>
+      </div>
+      <div class="github">
+        <a title="GitHub" href="https://github.com/developercielo">
+          <i class="fa fa-github" aria-hidden="true"></i>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+        <script src="https://docscielo.github.io/Pilots/assets/bundles/js/bundle.min.js"></script>
+        <script>
+            
+            var selectors = 'h1,h2,h3,h4,h5,h6';
+            
+        </script>
+
+        
+        <script src="https://docscielo.github.io/Pilots/assets/bundles/js/search.min.js"></script>
+        
+
+        
+        <script>
+            let langs = '';
+            let langsArray = [];
+
+            
+            langs += "<a data-language-name='json'>JSON</a>";
+            langsArray.push('json');
+            
+            langs += "<a data-language-name='shell'>cURL</a>";
+            langsArray.push('shell');
+            
+
+            var toggleCode = 'Comutar';
+        </script>
+
+        <script src='https://docscielo.github.io/Pilots/assets/bundles/js/language_buttons.min.js'></script>
+        
+
+        <!-- Hotjar Tracking Code for https://developercielo.github.io/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:674586,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+    </body>
+</html>

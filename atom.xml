@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-10T20:19:47+00:00</updated>
+    <updated>2018-04-10T20:23:48+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -13,287 +13,589 @@
     </author>
     
     <entry>
-        <title>Postman Cielo</title>
-        <category term="tutorial" />
-        <link href="https://docscielo.github.io/Pilots/tutorial/precadastro"/>
+        <title>Pré-cadastro Cielo</title>
+        <category term="manual" />
+        <link href="https://docscielo.github.io/Pilots/manual/precadastro"/>
         <updated>2017-07-26T00:00:00+00:00</updated>
-        <id>https://docscielo.github.io/Pilots/tutorial/precadastro</id>
-        <content type="html">&lt;h1 id=&quot;o-que-é-o-postman&quot;&gt;O que é o POSTMAN?&lt;/h1&gt;
+        <id>https://docscielo.github.io/Pilots/manual/precadastro</id>
+        <content type="html">&lt;h1 id=&quot;cielo-oauth&quot;&gt;Cielo OAUTH&lt;/h1&gt;
 
-&lt;p&gt;O Postman é um API Client que facilita aos desenvolvedores criar, compartilhar, testar e documentar APIs. Isso é feito, permitindo aos usuários criar e salvar solicitações &lt;strong&gt;HTTP e HTTPs&lt;/strong&gt; simples e complexas, bem como ler suas respostas.&lt;/p&gt;
-
-&lt;h1 id=&quot;por-que-utilizar-o-postman&quot;&gt;Por que utilizar o POSTMAN?&lt;/h1&gt;
-
-&lt;p&gt;Além da praticidade de ter todos os exemplos e códigos de integração prontos, o POSTMAN é a ferramenta oficial de teste pelas equipes de desenvolvimento e suporte Cielo. Dessa maneira ao realizar integrações, caso você possua duvidas, será mais rápido e simples de confirmar o que pode estar ocorrendo com o seu código.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Outras vantagens do POSTMAN&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Ferramenta gratuita&lt;/li&gt;
-  &lt;li&gt;Não é necessário instalar EXE - é uma extensão do Google Chrome&lt;/li&gt;
-  &lt;li&gt;Funciona em qualquer plataforma: Windows, MacOS e Linux&lt;/li&gt;
-  &lt;li&gt;Converte JSON em várias linguagens (EX: Python, PHP, RUBY)&lt;/li&gt;
-  &lt;li&gt;Sincronização entre diversos aplicativos&lt;/li&gt;
-  &lt;li&gt;Sincroniza código entre equipes (Versão paga)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;download-e-cadastro&quot;&gt;Download e cadastro&lt;/h1&gt;
-
-&lt;p&gt;Para utilizar o Postman, basta instalar o APP em seu computador. Isso pode ser realizado de duas maneiras:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Instalando a versão desktop&lt;/strong&gt;: Basta acessar  , baixar a versão para sua plataforma e instalar o executável&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Instalando a extensão do Chrome&lt;/strong&gt;: Basta acessar a Chrome Store e instalar a extensão do Postman&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;instalando-a-extensão-do-chrome&quot;&gt;Instalando a extensão do Chrome&lt;/h2&gt;
-
-&lt;p&gt;1.Acesse a Chrome Store, pesquise por POSTMAN  em APPs&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/documentos-adicionais/tutorial-postman/p1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;2.Na aba de Apps no seu Google Chrome acesse o ícone do Postman&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/p2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;3.Ao acessar o Postman pela primeira vez, o App ira requisitar um login. Essa etapa é opcional, mas sugerismos que uma conta seja criada, pois isso sincroniza suas configurações com a sua conta POSTMAN, ou seja, se for necessario realiza um login em outro computador, suas configurações já estarão prontas para serem usadas&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/p3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;4.Pronto, basta configurar suas Coleções  e ambientes para iniciar os testes&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/p4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;explicando-componentes-do-postman&quot;&gt;Explicando Componentes do POSTMAN&lt;/h1&gt;
-
-&lt;p&gt;Nesta área vamos explicar os diferentes componentes do Postman e suas funções. Depois dessa introdução, as próximas partes deste tutorial vão focar na configurações e usos para teste das APIs&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/pc.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;A&lt;/strong&gt; - &lt;strong&gt;Environment (Ambiente)&lt;/strong&gt;:
-Ambiente para onde serão direcionadas as requisições. Nesta área que serão definidos dados de:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Dados&lt;/th&gt;
-      &lt;th&gt;Descrição&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;MerchantId&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Identificador de sua loja nas APIs Cielo&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;MerchantKey&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Chave de segurança da sua loja nas APIs Cielo&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;URL do POST/PUT&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Endpoint Para criar ou editar transações&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;strong&gt;URL do GET&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Endpoint para consulta de transações&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Sugerimos que sejam criados dois ambientes, um com dados de produção e outro para Sandbox, cada um com suas respectivas credenciais e URLs.
-Desta maneira se torna muito mais simples realizar testes com o mesmo contrato para ambos os ambientes.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;B&lt;/strong&gt; - &lt;strong&gt;Header&lt;/strong&gt;
-Aqui existem o MerchantId/MerchantKey, que por padrão usam os mesmos dados registrados em &lt;code class=&quot;highlighter-rouge&quot;&gt;Environment&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;C&lt;/strong&gt; - &lt;strong&gt;Body&lt;/strong&gt;:
-É o conteúdo das Requisições. Aqui é onde você pode alterar ou criar exemplos para a API e validar o conteúdo do seu &lt;code class=&quot;highlighter-rouge&quot;&gt;POST&lt;/code&gt;/&lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt;/&lt;code class=&quot;highlighter-rouge&quot;&gt;PUT&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;D&lt;/strong&gt; - &lt;strong&gt;Collection (Coleções)&lt;/strong&gt; :
-Local que contém todas os exemplos e códigos que podem ser utilizados na API. Aqui existem as criações de transações, consultas e outras funcionalidades que existem nas APIs Cielo.
-O número de coleções é ilimitado, ou seja, você pode criar várias coleções para se adequar ao seu estilo de uso do Postman.&lt;/p&gt;
-
-&lt;h2 id=&quot;criando-environment-cielo&quot;&gt;Criando Environment Cielo&lt;/h2&gt;
-
-&lt;p&gt;O primeiro passo na utilização do postman é a criação do ambiente (environment) da API. Essa configuração vai definir quais credenciais e endpoints serão utilizados como padrão, assim evitando a necessidade de realizar configurações a cada teste.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Realizando a criação do ambiente&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;p&gt;1 - No canto superior direito, clique na engrenagem e selecione “Manage environment”.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/p7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;2 - Na tela de gerenciamento, basta preencher as configurações de acordo com a tela abaixo:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/p8.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;3 - Pronto,  agora os endereços e credenciais para teste já estão cadastrada. Sugerimos que você crie um ambiente para Produção e um para Sandbox assim,&lt;/p&gt;
+&lt;p&gt;O Cielo OAUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce. Ele utiliza como segurança o protocolo &lt;strong&gt;&lt;a href=&quot;https://oauth.net/2/&quot;&gt;OAUTH2&lt;/a&gt;&lt;/strong&gt;, onde é necessário primeiramente obter um token de acesso, utlizando suas credenciais, que deverá posteriormente ser enviado à API CieloOAuth&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Na &lt;strong&gt;API Cielo Ecommerce&lt;/strong&gt; as credenciais, &lt;code class=&quot;highlighter-rouge&quot;&gt;MerchantID&lt;/code&gt; e &lt;code class=&quot;highlighter-rouge&quot;&gt;MerchantKey&lt;/code&gt;, devem coincindir com o ambiente das URLs, ou seja, Credenciais de sandbox funcionam apenas com URLs de Sandbox
-No &lt;strong&gt;Checkout Cielo&lt;/strong&gt; não há &lt;code class=&quot;highlighter-rouge&quot;&gt;MerchantKey&lt;/code&gt; nem diferença entre Sandbox e produção. Para realizar testes, deve ser ativado o &lt;strong&gt;“Modo de Teste”&lt;/strong&gt;. Para mais informações sobre o Modo de teste, acesso o &lt;a href=&quot;https://developercielo.github.io/Checkout-Backoffice/&quot;&gt;Tutorial do backoffice&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;Para obter o &lt;code class=&quot;highlighter-rouge&quot;&gt;ClientID&lt;/code&gt; e o &lt;code class=&quot;highlighter-rouge&quot;&gt;ClientSecret&lt;/code&gt;, acione a equipe de Produtos Cielo. Credênciais liberadas apenas para lojistas selecionados,&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&quot;importando-uma-collection&quot;&gt;Importando uma Collection&lt;/h2&gt;
-
-&lt;p&gt;A Cielo dispõe de coleções padrões para suas APIs. Você pode importa-las diretamente para o seu POSTMAN e ter todos os exemplos prontos para utilização instantaneamente, sem a necessidade de copia-los diretamente do manual.&lt;/p&gt;
-
-&lt;p&gt;Para realizar a importação basta:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Acessar a &lt;a href=&quot;https://developercielo.github.io/tutorial/postman#collections-e-environments-cielo5&quot;&gt;área deste tutorial&lt;/a&gt; onde o link da Coleção está disponível e copiá-lo&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;*IMPORTANTE:&lt;/strong&gt; para que a sua coleção sempre esteja atualizada, sugerimos que sempre busque a ultima versão da coleção no manual. O link NÃO ATUALIZA A COLEÇÃO IMPORTADA AUTOMATICAMENTE&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Com o Postman aberto, use o botão IMPORT, e selecione a opção “IMPORT FROM LINK”.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/p5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Pronto, sua coleção Cielo já está disponível. Basta selecionar Environment e a requisição. Ao clicar em SEND, o Postman vai executar a comunicação com a Cielo.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/p6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;collections-e-environments--cielo&quot;&gt;Collections e Environments  Cielo&lt;/h2&gt;
-
-&lt;p&gt;Abaixo, listamos as collections e os Environments Cielo. Use-as em seu Postman para realizar testes e integrações.&lt;/p&gt;
-
-&lt;h3 id=&quot;api-cielo-ecommerce&quot;&gt;Api Cielo Ecommerce&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Collection&lt;/strong&gt; -&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Para utilizar o Cielo Oauth são necessarias as seguintes credenciais:&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th&gt;Ambiente&lt;/th&gt;
-      &lt;th&gt;URLs&lt;/th&gt;
+      &lt;th&gt;PROPRIEDADE&lt;/th&gt;
+      &lt;th&gt;DESCRIÇÃO&lt;/th&gt;
+      &lt;th&gt;TIPO&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;Sandbox&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;Envio de transação&lt;/strong&gt;:  https://apisandbox.cieloecommerce.cielo.com.br &lt;br /&gt; &lt;strong&gt;Consulta transação&lt;/strong&gt;: https://apiquerysandbox.cieloecommerce.cielo.com.br/&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ClientId&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Identificador chave fornecido pela CIELO&lt;/td&gt;
+      &lt;td&gt;guid&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;Produção&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;Envio de transação&lt;/strong&gt;: https://api.cieloecommerce.cielo.com.br/ &lt;br /&gt; &lt;strong&gt;Consulta transação&lt;/strong&gt;: https://apiquery.cieloecommerce.cielo.com.br/&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ClientSecret&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Chave que valida o ClientID. Fornecida pela Cielo junto ao &lt;code class=&quot;highlighter-rouge&quot;&gt;ClientID&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;string&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h3 id=&quot;checkout-cielo&quot;&gt;Checkout Cielo&lt;/h3&gt;
+&lt;h2 id=&quot;token-de-acesso&quot;&gt;Token de acesso&lt;/h2&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Collection&lt;/strong&gt;  -&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Ambiente&lt;/th&gt;
-      &lt;th&gt;URLs&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Produção&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;Envio de transação&lt;/strong&gt;: https://cieloecommerce.cielo.com.br/api&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h1 id=&quot;realizando-uma-requisição&quot;&gt;Realizando uma requisição&lt;/h1&gt;
-
-&lt;p&gt;Com a sua Collection e Environmet configurados, realizar uma transação junto a Cielo é extremamente facil:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/pr.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Para obter acesso a serviços Cielo que utilizam o &lt;code class=&quot;highlighter-rouge&quot;&gt;Cielo Oauth&lt;/code&gt;, será necessário obter um token de acesso, conforme os passos abaixo:&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Seleciona qual requisição você deseja usar.&lt;/li&gt;
-  &lt;li&gt;Verifique que o Environment correto está selecionado&lt;/li&gt;
-  &lt;li&gt;Clique em SEND.&lt;/li&gt;
-  &lt;li&gt;Na parte inferior você verá 2 informações:
-  a. O Body do Response - Aqui é onde ficam listadas os dados retornados de suas transações
-  b. O HTTP Status - Aqui você verifica se a sua requisição funcionou.&lt;/li&gt;
+  &lt;li&gt;Concatenar o &lt;em&gt;ClientId&lt;/em&gt; e o &lt;em&gt;ClientSecret&lt;/em&gt;, &lt;strong&gt;ClientId:ClientSecret&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Codificar o resultado em &lt;strong&gt;Base64&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Enviar uma requisição, utilizando o método HTTP POST&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;strong&gt;OBS&lt;/strong&gt;:Se você não receber um response verifique o status HTTP.&lt;/p&gt;
-
-&lt;h2 id=&quot;gerando-exemplos-em-outras-linguagens&quot;&gt;Gerando exemplos em outras linguagens.&lt;/h2&gt;
-
-&lt;p&gt;O POSTMAN permite criar exemplos de outras linguagens baseadas nas requisições JSON dos produtos Cielo.&lt;/p&gt;
-
-&lt;p&gt;Abaixo demonstramos como gerar um exemplo em Python&lt;/p&gt;
-
-&lt;p&gt;1 - Acesse a requisição que você deseja converter e clique em &lt;code class=&quot;highlighter-rouge&quot;&gt;CODE&lt;/code&gt; no canto direito da tela.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;OBS&lt;/em&gt;:Caso esse link não exista em sua tela, clique em &lt;code class=&quot;highlighter-rouge&quot;&gt;Params&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/p10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;2 - Selecione a Linguagem que deseje converter, neste caso, Python.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/pcode.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;3 - Pronto. O exemplo Json está convertido para Python&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/pcode2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;collections-e-environments--cielo-1&quot;&gt;Collections e Environments  Cielo&lt;/h1&gt;
-
-&lt;p&gt;Abaixo, listamos as collections e os Environments Cielo. Use-as em seu Postman para realizar testes e integrações.&lt;/p&gt;
-
-&lt;h3 id=&quot;api-cielo-ecommerce-1&quot;&gt;Api Cielo Ecommerce&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Collection&lt;/strong&gt; -  https://www.getpostman.com/collections/139520c8fe2210654d7c&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;concatenação&quot;&gt;Concatenação&lt;/h3&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th&gt;Ambiente&lt;/th&gt;
-      &lt;th&gt;Endpoints&lt;/th&gt;
+      &lt;th&gt;Campo&lt;/th&gt;
+      &lt;th&gt;Formato&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;Sandbox&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;Envio de transação&lt;/strong&gt;:  https://apisandbox.cieloecommerce.cielo.com.br &lt;br /&gt; &lt;strong&gt;Consulta transação&lt;/strong&gt;: https://apiquerysandbox.cieloecommerce.cielo.com.br/&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;ClientId&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;b521b6b2-b9b4-4a30-881d-3b63dece0006&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;Produção&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;Envio de transação&lt;/strong&gt;: https://api.cieloecommerce.cielo.com.br/ &lt;br /&gt; &lt;strong&gt;Consulta transação&lt;/strong&gt;: https://apiquery.cieloecommerce.cielo.com.br/&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;ClientSecret&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;08Qkje79NwWRx5BdgNJsIkBuITt5cIVO&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;ClientId:ClientSecret&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;em&gt;b521b6b2-b9b4-4a30-881d-3b63dece0006:08Qkje79NwWRx5BdgNJsIkBuITt5cIVO&lt;/em&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Base64&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;em&gt;YjUyMWI2YjItYjliNC00YTMwLTg4MWQtM2I2M2RlY2UwMDA2OiAwOFFramU3OU53V1J4NUJkZ05Kc0lrQnVJVHQ1Y0lWTw&lt;/em&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h3 id=&quot;checkout-cielo-1&quot;&gt;Checkout Cielo&lt;/h3&gt;
+&lt;h3 id=&quot;request&quot;&gt;Request&lt;/h3&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Collection&lt;/strong&gt;  - https://www.getpostman.com/collections/97969ec643738aac42f4&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;O Request dever ser enviado apenas no Header da requisição.&lt;/p&gt;
+
+&lt;aside class=&quot;request&quot;&gt;&lt;span class=&quot;method post&quot;&gt;POST&lt;/span&gt;&lt;span class=&quot;endpoint&quot;&gt;https://cieloecommerce.cielo.com.br/v2/public/v2/token&lt;/span&gt;&lt;/aside&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;x-www-form-urlencoded&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;--header&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Authorization: Basic {base64}&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;--header&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Content-Type: application/x-www-form-urlencoded&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;grant_type=client_credentials&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;response&quot;&gt;Response&lt;/h3&gt;
+
+&lt;p&gt;O response possuirá o Token utilizado para novas requisições em Serviços Cielo&lt;/p&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;access_token&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnRfbmFtZSI6Ik1ldUNoZWNrb3V0IE1hc3RlciBLZXkiLCJjbGllbnRfaWQiOiJjODlmZGasdasdasdmUyLTRlNzctODA2YS02ZDc1Y2QzOTdkYWMiLCJzY29wZXMiOiJ7XCJTY29wZVwiOlwiQ2hlY2tvdXRBcGlcIixcIkNsYWltc1wiOltdfSIsInJvbGUiOiJasdasdasd291dEFwaSIsImlzc47I6Imh0dHBzOi8vYXV0aGhvbasdasdnJhc3BhZy5jb20uYnIiLCJhdWQiOiJVVlF4Y1VBMmNTSjFma1EzSVVFbk9pSTNkbTl0ZmasdsadQjVKVVV1UVdnPSIsImV4cCI6MTQ5Nzk5NjY3NywibmJmIjoxNDk3OTEwMjc3fQ.ozj4xnH9PA3dji-ARPSbI7Nakn9dw5I8w6myBRkF-uA&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;token_type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;bearer&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;expires_in&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1199&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th&gt;Ambiente&lt;/th&gt;
-      &lt;th&gt;Endpoints&lt;/th&gt;
+      &lt;th&gt;PROPRIEDADE&lt;/th&gt;
+      &lt;th&gt;DESCRIÇÃO&lt;/th&gt;
+      &lt;th&gt;TIPO&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;Produção&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;Envio de transação&lt;/strong&gt;: https://cieloecommerce.cielo.com.br/api&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Access_token&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Utilizado para acesso aos serviços da API&lt;/td&gt;
+      &lt;td&gt;string&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Token_type&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Sempre será do tipo &lt;code class=&quot;highlighter-rouge&quot;&gt;bearer&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;texto&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Expires_in&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Validade do token em segundos. Aproximadamente 20 minutos&lt;/td&gt;
+      &lt;td&gt;int&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;O token retornado (access_token) deverá ser utilizado em toda requisição como uma chave de autorização, destacando que este possui uma validade de 20 minutos (1200 segundos) e após esse intervalo, será necessário obter um novo token para acesso aos serviços Cielo.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;consulta-ec&quot;&gt;Consulta EC&lt;/h1&gt;
+
+&lt;p&gt;O processo de consulta de EC busca a existencia de afiliações e MerchanIDs na base de lojas Checkout Cielo.&lt;/p&gt;
+
+&lt;aside class=&quot;warning&quot;&gt;Não são retornadas &quot;lojas legado&quot; do checkout cielo, sendo essas  CHECKOUT SIMPLIFICADO OU CHECKOUT WEBSERVICE &lt;/aside&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Caso um lojistas Checkout Simplificado deseje usar o link de pagamentos, ele deve ser convertido em Checkout Completo. Essa mudança impacta a integração da loja.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A Consulta consiste em um &lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; ao Endpoint abaixo:&lt;/p&gt;
+
+&lt;aside class=&quot;request&quot;&gt;&lt;span class=&quot;method get&quot;&gt;GET&lt;/span&gt; &lt;span class=&quot;endpoint&quot;&gt;https://cieloecommerce.cielo.com.br/api/public/v1/merchant/credentials/}&lt;/span&gt;&lt;/aside&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Affiliation&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;10101010101&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;MerchantId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;dc9d6efa-b582-4ac8-ac59-12c5724&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ClientId&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;   &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;dc9d6efa-b582-4ac8-ac59-12c5724&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+	&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ClientSecret&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ClientSecretXX&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;PROPRIEDADE&lt;/th&gt;
+      &lt;th&gt;DESCRIÇÃO&lt;/th&gt;
+      &lt;th&gt;TIPO&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Affiliation&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Numero de afiliação cadastrado no Checkout Cielo&lt;/td&gt;
+      &lt;td&gt;string&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;MerchantID&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Identificador da loja no Checkout Cielo e Identificado para Criação de Links e consulta transacional&lt;/td&gt;
+      &lt;td&gt;GUID&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ClientId&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Identificador da loja no Cielo OAUTH - &lt;br /&gt; Para lojas &lt;strong&gt;Checkout Cielo&lt;/strong&gt;, é o mesmo valor do MerchandID&lt;/td&gt;
+      &lt;td&gt;GUID&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ClientSecret&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Chave que valida o ClientID.&lt;/td&gt;
+      &lt;td&gt;string&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Tipos de Retorno para ECs não encontrados:
+&lt;br /&gt;&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;strong&gt;EC inexistente&lt;/strong&gt;: NotFound&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;EC inválido&lt;/strong&gt;: Forbidden&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;pré-cadastro&quot;&gt;Pré-cadastro&lt;/h1&gt;
+
+&lt;p&gt;O Pré-cadastro Cielo tem como objetivo permitir que plataformas parceiras possam criar lojas para a &lt;strong&gt;API Cielo Ecommerce&lt;/strong&gt; e &lt;strong&gt;Checkout Cielo&lt;/strong&gt; de maneira automatizada.
+O Fluxo de pré-cadastro é descrito na seguinte ordem:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;A Plataforma recebe da Cielo um identificador (&lt;code class=&quot;highlighter-rouge&quot;&gt;PlatformID&lt;/code&gt;) + Credenciais do Cielo OAuth (&lt;code class=&quot;highlighter-rouge&quot;&gt;ClientID&lt;/code&gt;+&lt;code class=&quot;highlighter-rouge&quot;&gt;ClientSecret&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Com as credenciais, a plataforma envia de dados cadastrais para o sistema Cielo&lt;/li&gt;
+  &lt;li&gt;O setor de credenciamento Cielo avalia o cadastro e Ativa a loja&lt;/li&gt;
+  &lt;li&gt;Dados da loja são enviadas via &lt;code class=&quot;highlighter-rouge&quot;&gt;POST&lt;/code&gt; para a URL de notificação da Plataforma.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;OBS&lt;/strong&gt;: O Cadastro da plataforma junto a Cielo é pré-requisito para acesso as APIs de pré-cadastro.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;criar-lojas&quot;&gt;Criar lojas&lt;/h2&gt;
+
+&lt;p&gt;Para realizar a criação de lojas via pré-cadastro é necessario que a Plataforma esteja devidamente cadastrada juntoi a Cielo e possuas as chave de acesso ao &lt;strong&gt;Cielo Oauth&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Após realizar o processo de Autenticação descrito na sessão &lt;a href=&quot;https://docscielo.github.io/Pilots/manual/appcielo-link#cielo-oauth&quot;&gt;Cielo OAUTH&lt;/a&gt;, a plataforma poderá realizar o &lt;code class=&quot;highlighter-rouge&quot;&gt;POST&lt;/code&gt; de criação de lojas&lt;/p&gt;
+
+&lt;h3 id=&quot;post-de-criação&quot;&gt;Post de criação&lt;/h3&gt;
+
+&lt;aside class=&quot;request&quot;&gt;&lt;span class=&quot;method post&quot;&gt;POST&lt;/span&gt;&lt;span class=&quot;endpoint&quot;&gt;https://cieloecommerce.cielo.com.br/api/public/v1/PreRegistration/&lt;/span&gt;&lt;/aside&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Email&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;json40@email.com&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;DocumentType&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;INtegrationType&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ContactName&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Contact Name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Phone&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;(99) 99999-9999&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ActivationUrl&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;http://www.google.com&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;CompanyData&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;FancyName&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;json sa&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;CorporateName&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;My Company Ltda.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Cnpj&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;99.999.999/9999-99&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;PlatformId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;6A87A6E1-E080-462E-1CCB-08D58DD4E419&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;PersonalData&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Cpf&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;999.999.999-99&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;FullName&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Customer Name&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;BusinessAddress&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ZipCode&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;99999-999&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Address&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Av. Lorem Ipsum Dolor&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Number&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;99999&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Complement&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Lorem 999&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;District&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Lorem Ipsum&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;City&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Rio de Janeiro&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;State&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;RJ&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;TechnicalContact&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ContactName&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ContactNameTest&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ContactPhone&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;99 99999-9999&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ContactEmail&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;json@email.com&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;CompanyDeveloper&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;CompanyDeveloperTest&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;TransactionalConfiguration&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;EC&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1010208045&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ProductionKey&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;98348349849&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Mcc&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;7032&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;BankingData&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Bank&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Abc&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Agency&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1111&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Account&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;22222&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;AccountType&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;CurrentAccount&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+   &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Campo&lt;/th&gt;
+      &lt;th&gt;Descrição&lt;/th&gt;
+      &lt;th&gt;Tipo&lt;/th&gt;
+      &lt;th&gt;Tamanho&lt;/th&gt;
+      &lt;th&gt;Obrigatório&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Email&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;E-mail de comunicação com o lojista&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt;60&lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;DocumentType&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Tipo de documentação &lt;br /&gt;CPF = 1 &lt;br /&gt;CNPJ = 2&lt;/td&gt;
+      &lt;td&gt;Enum&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;IntegrationType&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Produto Cielo: &lt;br /&gt; Api Cielo Ecommerce = 1 &lt;br /&gt; Checkout Cielo = 2&lt;/td&gt;
+      &lt;td&gt;Enum&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ContactName&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Nome do lojista&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt;255&lt;/td&gt;
+      &lt;td&gt;Não&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Phone&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Telefone do lojista&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;Não&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ActivationUrl&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;URL de Notificação da Plataforma&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt;255&lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;PlatformId&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Identificação da plataforma na Cielo&lt;/td&gt;
+      &lt;td&gt;GUID&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;CompanyData.&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Informações sobre a loja, se IntegrationType = 2&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;CompanyData.FancyName&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Nome fantasia&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;CompanyData.CorporateName&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Razão social&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;CompanyData.Cnpj&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;CNPJ (Sem Formatação)&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;PersonalData.&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Informações sobre a loja, se IntegrationType = 1&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;PersonalData.Cpf&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;CPF (Sem formatação)&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;PersonalData.FullName&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Nome do lojista&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;BusinessAddress.&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Informações sobre endereço da loja&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;BusinessAddress.ZipCode&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;CEP da loja&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;BusinessAddress.Address&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Endereço da loja&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt;32&lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;BusinessAddress.Number&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Numero da loja&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;BusinessAddress.Complement&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Complemento&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt;26&lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;BusinessAddress.District&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Bairro da loja&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt;28&lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;BusinessAddress.City&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Cidade da loja&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt;28&lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;BusinessAddress.State&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Estado - Unidade Federativa (Ex: SP/RJ)&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;TechnicalContact.&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Dados de contato do responsável tecnico da loja&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;TechnicalContact.ContactName&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Nome do desenvolvedor&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt;32&lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;TechnicalContact.ContactPhone&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Telefone do desenvolvedor&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt;15&lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;TechnicalContact.ContactEmail&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;E-mail do desenvolvedor&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt;64&lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;TechnicalContact.CompanyDeveloper&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Nome da empresa de desenvolvimento&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt;32&lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;TransactionalConfiguration.&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Caso a loja ja possua um cadastro na Cielo (Afiliação), este nó deve ser enviado&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;TransactionalConfiguration.EC&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Afiliação Cielo da loja&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;TransactionalConfiguration.ProductionKey&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Chave de produção Cielo&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt;255&lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;TransactionalConfiguration.Mcc&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Código de identificação de setor Cielo&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;BankingData.&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Informações bancárias para cadastro de contas junto a Cielo&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;BankingData.Bank&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Banco&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;BankingData.Agency&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Agência Bancária&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;BankingData.Account&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Conta bancária&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt;13&lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;BankingData.AccountType&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Tipo de conta (Para Caixa Econômica Federal) &lt;br /&gt; 001 = CurrentAccount/Conta Corrente/ &lt;br /&gt; 002 = SimpleAccount /Conta Simples&lt;/td&gt;
+      &lt;td&gt;Enum&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Sim&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;post-de-notificação&quot;&gt;Post de Notificação&lt;/h3&gt;
+
+&lt;p&gt;O Post de notificação será enviado quando a loja em pré-cadastro for ativada.
+A URL de Ativação (&lt;code class=&quot;highlighter-rouge&quot;&gt;ActivationURL&lt;/code&gt;) receberá um POST contendo os dados abaixo&lt;/p&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+ &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Affiliation&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;10101010101&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+ &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;MerchantID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;dc9d6efa-b582-4ac8-ac59-12c57245df2a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+ &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Merchantkey&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;dd6efab5824ac8ac5912c57245df2ac9d6efab5824ac8ac5912c57245df2a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+ &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;IntegrationType&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;PROPRIEDADE&lt;/th&gt;
+      &lt;th&gt;DESCRIÇÃO&lt;/th&gt;
+      &lt;th&gt;TIPO&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Affiliation&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Numero de afiliação cadastrado no Checkout Cielo&lt;/td&gt;
+      &lt;td&gt;string&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;MerchantID&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Identificador da loja no Checkout Cielo e Identificado para Criação de Links e consulta transacional&lt;/td&gt;
+      &lt;td&gt;GUID&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Merchantkey&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Chave de validação do MerchantID - Exclusivo para integração API Cielo Ecommerce&lt;/td&gt;
+      &lt;td&gt;string&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;IntegrationType&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Identificador do tipo de loja criada &lt;br /&gt; 1 = API Cielo Ecommercer &lt;br /&gt; 2 = Checkout Cielo&lt;/td&gt;
+      &lt;td&gt;GUID&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;ativar-lojas&quot;&gt;Ativar lojas&lt;/h2&gt;
+
+&lt;p&gt;A Ativação de lojas é feita pela equipe de credenciamento Cielo. A Ativação ocorre apenas quando uma loja em pré-cadastro recebe uma Afiliação e uma chave de produção.&lt;/p&gt;
+
+&lt;p&gt;Caso uma loja cadastrada não seja ativada, entre em contato com a equipe de credenciamento e solicite informações.&lt;/p&gt;
 </content>
     </entry>
     
