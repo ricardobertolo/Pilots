@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-10T20:08:29+00:00</updated>
+    <updated>2018-04-10T20:18:37+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -15,9 +15,9 @@
     <entry>
         <title>Postman Cielo</title>
         <category term="tutorial" />
-        <link href="https://docscielo.github.io/Pilots/tutorial/postman"/>
+        <link href="https://docscielo.github.io/Pilots/tutorial/precadastro"/>
         <updated>2017-07-26T00:00:00+00:00</updated>
-        <id>https://docscielo.github.io/Pilots/tutorial/postman</id>
+        <id>https://docscielo.github.io/Pilots/tutorial/precadastro</id>
         <content type="html">&lt;h1 id=&quot;o-que-é-o-postman&quot;&gt;O que é o POSTMAN?&lt;/h1&gt;
 
 &lt;p&gt;O Postman é um API Client que facilita aos desenvolvedores criar, compartilhar, testar e documentar APIs. Isso é feito, permitindo aos usuários criar e salvar solicitações &lt;strong&gt;HTTP e HTTPs&lt;/strong&gt; simples e complexas, bem como ler suas respostas.&lt;/p&gt;
