@@ -643,7 +643,7 @@ Para consultar uma transação pelo `Checkout_Cielo_Order_Number`, basta realiza
 
 ## Capturar transação
 
-## Request
+### Request
 
 Para capturar uma transação pelo `Checkout_Cielo_Order_Number`, basta realizar um `PUT`.
 
@@ -691,7 +691,7 @@ Para capturar uma transação pelo `Checkout_Cielo_Order_Number`, basta realizar
 
 ## Cancelar transação
 
-## Request
+### Request
 
 Para cancelar uma transação pelo `Checkout_Cielo_Order_Number`, basta realizar um `PUT`.
 
