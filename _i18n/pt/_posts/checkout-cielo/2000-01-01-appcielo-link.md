@@ -247,7 +247,6 @@ A Ativação de lojas é feita pela equipe de credenciamento Cielo. A Ativação
 
 Caso uma loja cadastrada não seja ativada, entre em contato com a equipe de credenciamento e solicite informações.
 
-
 # Link de Pagamento
 
 A **API Link de Pagamentos** permite ao lojista criar, editar e consultar links de pagamentos. 
@@ -291,7 +290,6 @@ Para criar link de pagamentos Checkout, basta enviar realizar um POST com os dad
    "SoftDescriptor" : "Pedido1234"
 }
 ```
-
 **Dados do produto**
 
 | PROPRIEDADE               | DESCRIÇÃO                                                                                                                                                   | TIPO   | TAMANHO    | OBRIGATÓRIO |
@@ -427,6 +425,12 @@ Para consultar um link existente basta realizar um `GET` informando o `ID` do li
 }
 ```
 
+| PROPRIEDADE   | TIPO   | DESCRIÇÃO                                                                                                                     |
+|---------------|--------|-------------------------------------------------------------------------------------------------------------------------------|
+| `id`          | guid   | Identificador único do link de pagamento.Pode ser utilizado para consultar, atualizar ou excluir o link.                      |
+| `shortUrl`    | string | Representa o link de pagamento que ao ser aberto, em um browser, apresentará a tela do Checkout Cielo.                        |
+| `links`       | object | Apresenta as operações disponíveis e possíveis (RESTful hypermedia) de serem efetuadas após a criação ou atualização do link. |
+
 > **OBS**: O Response da consulta contem os mesmos dados retornados na criação do link.
 
 ## Atualizar Link
@@ -500,6 +504,12 @@ Para Atualizar um link existente basta realizar um `GET` informando o `ID` do li
 
 ```
 
+| PROPRIEDADE   | TIPO   | DESCRIÇÃO                                                                                                                     |
+|---------------|--------|-------------------------------------------------------------------------------------------------------------------------------|
+| `id`          | guid   | Identificador único do link de pagamento.Pode ser utilizado para consultar, atualizar ou excluir o link.                      |
+| `shortUrl`    | string | Representa o link de pagamento que ao ser aberto, em um browser, apresentará a tela do Checkout Cielo.                        |
+| `links`       | object | Apresenta as operações disponíveis e possíveis (RESTful hypermedia) de serem efetuadas após a criação ou atualização do link. |
+
 > **OBS**: O Response da consulta contem os mesmos dados retornados na criação do link.
 
 ## Excluir Link
@@ -518,26 +528,31 @@ Para excluir um link existente basta realizar um `DELETE` informando o `ID` do l
 
 ## Códigos de Status HTTP
 
-| CÓDIGO                      | DESCRIÇÃO                                                                                                  |
-|-----------------------------|------------------------------------------------------------------------------------------------------------|
-| 200 - OK                    | Tudo funcionou corretamente.                                                                               |
-| 400 – Bad Request           | A requisição não foi aceita. Algum parâmetro não foi informado ou foi informado incorretamente.            |
-| 401 - Unauthorized          | O token de acesso enviado no header da requisição não é válido.                                            |
-| 404 – Not Found             | O recurso sendo acessado não existe. Ocorre ao tentar atualizar, consultar ou excluir um link inexistente. |
-| 500 – Internal Server Error | Ocorreu um erro no sistema.                                                                                |
+| CÓDIGO                          | DESCRIÇÃO                                                                                                  |
+|---------------------------------|------------------------------------------------------------------------------------------------------------|
+| **200 - OK**                    | Tudo funcionou corretamente.                                                                               |
+| **400 – Bad Request**           | A requisição não foi aceita. Algum parâmetro não foi informado ou foi informado incorretamente.            |
+| **401 - Unauthorized**          | O token de acesso enviado no header da requisição não é válido.                                            |
+| **404 – Not Found**             | O recurso sendo acessado não existe. Ocorre ao tentar atualizar, consultar ou excluir um link inexistente. |
+| **500 – Internal Server Error** | Ocorreu um erro no sistema.                                                                                |
 
 # Controle transacional 
 
-A **API de Controle Transacional** permite ao lojista realizar operações sobre os pedidos que antes eram possíveis somente através do Backoffice do Checkout Cielo. 
+A **API de Controle Transacional** permite ao lojista modificar o status de os pedidos sem acessar o Backoffice do Checkout Cielo. 
 
 As operações possíveis de serem realizadas são: 
+
 * **Consulta** – consultar uma transação
 * **Captura** – capturar uma transação com valor total
 * **Cancelamento** – cancelar uma transação com valor total
 
 Seu principal objetivo é permitir que lojas e plataformas possam automatizar as operações através de seus próprios sistemas. 
 
-> Endereço: https://cieloecommerce.cielo.com.br/api/public/v2/orders/  
+> **Endpoint Central** https://cieloecommerce.cielo.com.br/api/public/v2/orders/  
+
+## Autenticação
+
+O Processo de autenticação na API do link de pagamento é o **[Cielo OAUTH](https://docscielo.github.io/Pilots/manual/appcielo-link#cielo-oauth)**
 
 ## Pré-requisitos
 
@@ -546,24 +561,21 @@ Para realizar o controle transacional no Checkout Cielo é OBRIGATÓRIO que a lo
 * URL de Notificação via **POST**
 * URL de Notificação via **JSON**
 
-A notificação é obrigatorio pois todos os comandos da API (Consulta / Captura / Cancelamento) usam o identificado unico da transação, chamado de `Checkout_Cielo_Order_Number`.
+A notificação é obrigatorio pois todos os comandos da API (Consulta / Captura / Cancelamento) usam o identificador único da transação, chamado de `Checkout_Cielo_Order_Number`.
 
-O `Checkout_Cielo_Order_Number` é um identificado único gerado apenas quando o pagamento é *finalizado na tela transacional*. Ele é enviado apenas pela *URL de Notificação* e não pelo Response da criação da tela transacional. 
+O `Checkout_Cielo_Order_Number` é gerado apenas quando o pagamento é *finalizado na tela transacional*. Ele é enviado apenas pela *URL de Notificação* e não pelo Response da criação da tela transacional. 
 
 ## Consultar transação
 
-Permite consultar uma transação pelo número do pedido gerado pelo Checkout Cielo
+### Request 
 
-> `GET` https://cieloecommerce.cielo.com.br/api/public/v2/orders/`{checkout_cielo_order_number}`
+Para consultar uma transação pelo `Checkout_Cielo_Order_Number`, basta realizar um `GET`.
 
-**Header:**
+<aside class="request"><span class="method get">GET</span><span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v2/orders/{checkout_cielo_order_number}</span></aside>
 
-```
-Authorization: Bearer {access_token}
-```
+> **Header:** Authorization: Bearer {access_token}
 
-
-**Resposta**
+### Response
 
 > "HTTP Status": 200 – OK
 
@@ -626,6 +638,72 @@ Authorization: Bearer {access_token}
     ] 
 }
 ```
+
+merchantId 
+orderNumber
+softDescriptor 
+    
+    "cart": { 
+        "items": [ 
+            { 
+                "name": "Pedido ABC", 
+                "description": "50 canetas - R$30,00 | 10 cadernos - R$50,00 | 10 Borrachas - R$10,00", 
+                "unitPrice": 9000, 
+                "quantity": 1, 
+                "type": "1" 
+            } 
+        ] 
+    }, 
+    
+    "shipping": { 
+        "type": "FixedAmount", 
+        "services": [ 
+            { 
+              "name": "Entrega Rápida", 
+                "price": 2000 
+            } 
+        ], 
+        "address": { 
+            "street": "Estrada Caetano Monteiro", 
+            "number": "391A", 
+            "complement": "BL 10 AP 208", 
+            "district": "Badu", 
+            "city": "Niterói", 
+            "state": "RJ" 
+        } 
+    }, 
+    
+    
+    "payment": { 
+        "status": "Paid", 
+        "antifraud": { 
+            "description": "Lojista optou não realizar a análise do antifraude." 
+        } 
+    }, 
+   
+   
+    "customer": { 
+        "identity": "12345678911", 
+        "fullName": "Fulano da Silva", 
+        "email": "exemplo@email.com.br", 
+        "phone": "11123456789" 
+    }, 
+   
+   
+   
+    "links": [ 
+        { 
+            "method": "GET", 
+            "rel": "self", 
+            "href": "https://cieloecommerce.cielo.com.br/api/public/v2/orders/054f5b509f7149d6aec3b4023a6a2957" 
+        }, 
+        { 
+            "method": "PUT", 
+            "rel": "void", 
+            "href": "https://cieloecommerce.cielo.com.br/api/public/v2/orders/054f5b509f7149d6aec3b4023a6a2957/void" 
+
+
+
 
 ## Capturar transação
 
