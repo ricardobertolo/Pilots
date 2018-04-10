@@ -657,7 +657,7 @@ Para capturar uma transação pelo `Checkout_Cielo_Order_Number`, basta realizar
 
 > **Header:** Authorization: Bearer {access_token}
 
-### Request
+### Response
 
 > HTTP Status: 200 – OK
 
@@ -682,12 +682,12 @@ Para capturar uma transação pelo `Checkout_Cielo_Order_Number`, basta realizar
 } 
 ```
 
-| PROPRIEDADE   - | DESCRIÇÃO                                                                                                                                                                   | TIPO    | TAMANHO |
-|-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|---------|
-| `success`       | Define o status do processo de atualização                                                                                                                                  | Boolean |         |
-| `status`        | Status da transação no Checkout -  [STATUS](https://developercielo.github.io/manual/checkout-cielo#fluxos-meios-de-pagamento)                                               | int     | 2       |
-| `returnCode`    | Código de explicação o motivo de transações negadas ou autorizadas  - [Tabela de códigos](https://developercielo.github.io/manual/checkout-cielo#fluxos-meios-de-pagamento) | String  | 2       |
-| `returnMessage` | Mensagem que explica o motivo de transações negadas ou autorizadas  - [Tabela de códigos](https://developercielo.github.io/manual/checkout-cielo#fluxos-meios-de-pagamento() | String  | 255     |
+| PROPRIEDADE   - | DESCRIÇÃO                                                                                                                                                                | TIPO    | TAMANHO |
+|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|---------|
+| `success`       | Define o status do processo de atualização                                                                                                                               | Boolean |         |
+| `status`        | Status da transação no Checkout -  [STATUS](https://docscielo.github.io/Pilots/manual/appcielo-link#status-e-c%C3%B3digos)                                               | int     | 2       |
+| `returnCode`    | Código de explicação o motivo de transações negadas ou autorizadas  - [Tabela de códigos](https://docscielo.github.io/Pilots/manual/appcielo-link#status-e-c%C3%B3digos) | String  | 2       |
+| `returnMessage` | Mensagem que explica o motivo de transações negadas ou autorizadas  - [Tabela de códigos](https://docscielo.github.io/Pilots/manual/appcielo-link#status-e-c%C3%B3digos) | String  | 255     |
 
 ## Cancelar transação
 
@@ -705,7 +705,7 @@ Para cancelar uma transação pelo `Checkout_Cielo_Order_Number`, basta realizar
 
 > **Header:** Authorization: Bearer {access_token}
 
-### Request
+### Response
 
 > HTTP Status: 200 – OK
 
@@ -730,6 +730,13 @@ Para cancelar uma transação pelo `Checkout_Cielo_Order_Number`, basta realizar
 } 
 
 ```
+
+| PROPRIEDADE   - | DESCRIÇÃO                                                                                                                                                                | TIPO    | TAMANHO |
+|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|---------|
+| `success`       | Define o status do processo de atualização                                                                                                                               | Boolean |         |
+| `status`        | Status da transação no Checkout -  [STATUS](https://docscielo.github.io/Pilots/manual/appcielo-link#status-e-c%C3%B3digos)                                               | int     | 2       |
+| `returnCode`    | Código de explicação o motivo de transações negadas ou autorizadas  - [Tabela de códigos](https://docscielo.github.io/Pilots/manual/appcielo-link#status-e-c%C3%B3digos) | String  | 2       |
+| `returnMessage` | Mensagem que explica o motivo de transações negadas ou autorizadas  - [Tabela de códigos](https://docscielo.github.io/Pilots/manual/appcielo-link#status-e-c%C3%B3digos) | String  | 255     |
 
 ## Status e Códigos
 
