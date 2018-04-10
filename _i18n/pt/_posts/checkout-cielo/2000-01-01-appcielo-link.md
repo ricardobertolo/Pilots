@@ -561,6 +561,8 @@ Para realizar o controle transacional no Checkout Cielo é OBRIGATÓRIO que a lo
 * URL de Notificação via **POST**
 * URL de Notificação via **JSON**
 
+<br>
+
 A notificação é obrigatorio pois todos os comandos da API (Consulta / Captura / Cancelamento) usam o identificador único da transação, chamado de `Checkout_Cielo_Order_Number`.
 
 O `Checkout_Cielo_Order_Number` é gerado apenas quando o pagamento é *finalizado na tela transacional*. Ele é enviado apenas pela *URL de Notificação* e não pelo Response da criação da tela transacional. 
