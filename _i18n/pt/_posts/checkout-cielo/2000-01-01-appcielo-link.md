@@ -543,8 +543,8 @@ A **API de Controle Transacional** permite ao lojista modificar o status de os p
 As operações possíveis de serem realizadas são: 
 
 * **Consulta** – consultar uma transação
-* **Captura** – capturar uma transação com valor total
-* **Cancelamento** – cancelar uma transação com valor total
+* **Captura** – capturar uma transação com valor total/Parcial
+* **Cancelamento** – cancelar uma transação com valor total/Parcial
 
 Seu principal objetivo é permitir que lojas e plataformas possam automatizar as operações através de seus próprios sistemas. 
 
@@ -639,97 +639,27 @@ Para consultar uma transação pelo `Checkout_Cielo_Order_Number`, basta realiza
 }
 ```
 
-merchantId 
-orderNumber
-softDescriptor 
-    
-    "cart": { 
-        "items": [ 
-            { 
-                "name": "Pedido ABC", 
-                "description": "50 canetas - R$30,00 | 10 cadernos - R$50,00 | 10 Borrachas - R$10,00", 
-                "unitPrice": 9000, 
-                "quantity": 1, 
-                "type": "1" 
-            } 
-        ] 
-    }, 
-    
-    "shipping": { 
-        "type": "FixedAmount", 
-        "services": [ 
-            { 
-              "name": "Entrega Rápida", 
-                "price": 2000 
-            } 
-        ], 
-        "address": { 
-            "street": "Estrada Caetano Monteiro", 
-            "number": "391A", 
-            "complement": "BL 10 AP 208", 
-            "district": "Badu", 
-            "city": "Niterói", 
-            "state": "RJ" 
-        } 
-    }, 
-    
-    
-    "payment": { 
-        "status": "Paid", 
-        "antifraud": { 
-            "description": "Lojista optou não realizar a análise do antifraude." 
-        } 
-    }, 
-   
-   
-    "customer": { 
-        "identity": "12345678911", 
-        "fullName": "Fulano da Silva", 
-        "email": "exemplo@email.com.br", 
-        "phone": "11123456789" 
-    }, 
-   
-   
-   
-    "links": [ 
-        { 
-            "method": "GET", 
-            "rel": "self", 
-            "href": "https://cieloecommerce.cielo.com.br/api/public/v2/orders/054f5b509f7149d6aec3b4023a6a2957" 
-        }, 
-        { 
-            "method": "PUT", 
-            "rel": "void", 
-            "href": "https://cieloecommerce.cielo.com.br/api/public/v2/orders/054f5b509f7149d6aec3b4023a6a2957/void" 
-
-
-
-
 ## Capturar transação
 
-Permite capturar uma transação pelo número do pedido.
+## Request
+
+Para capturar uma transação pelo `Checkout_Cielo_Order_Number`, basta realizar um `PUT`.
 
 **Captura Total**
-> `PUT` https://cieloecommerce.cielo.com.br/api/public/v2/orders/`{checkout_cielo_order_number}`/capture 
+<aside class="request"><span class="method put">PUT</span><span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v2/orders/`{checkout_cielo_order_number}`/capture</span></aside>
 
 **Captura Parcial**
-
-> `PUT` https://cieloecommerce.cielo.com.br/api/public/v2/orders/`{checkout_cielo_order_number}`/capture?amount={Valor}
-
+<aside class="request"><span class="method put">PUT</span><span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v2/orders/`{checkout_cielo_order_number}`/capture?amount={Valor}</span></aside>
 
 **OBS**: A captura parcial pode ser realizada apenas 1 vez e é exclusiva para cartão de crédito.
 
-**Header:**
+> **Header:** Authorization: Bearer {access_token}
 
-```
-Authorization: Bearer {access_token}
-```
-
-**Resposta**
+### Request
 
 > HTTP Status: 200 – OK
 
-```
+``` json
 { 
     "success": true, 
     "status": 2, 
@@ -752,33 +682,25 @@ Authorization: Bearer {access_token}
 
 ## Cancelar transação
 
-Permite cancelar uma transação pelo número do pedido.
+## Request
+
+Para cancelar uma transação pelo `Checkout_Cielo_Order_Number`, basta realizar um `PUT`.
 
 **Cancelamento total**
-
-> `PUT` https://cieloecommerce.cielo.com.br/api/public/v2/orders/`{checkout_cielo_order_number}`/void  
+<aside class="request"><span class="method put">PUT</span><span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v2/orders/`{checkout_cielo_order_number}`/void</span></aside>
 
 **Camcelamento Parcial**
-
-> `PUT` https://cieloecommerce.cielo.com.br/api/public/v2/orders/`{checkout_cielo_order_number}`/void?amount={Valor}
-
+<aside class="request"><span class="method put">PUT</span><span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v2/orders/`{checkout_cielo_order_number}`/void?amount={Valor}</span></aside>
 
 **OBS**: O cancelamento parcial pode ser realizada apenas após a captura. O cancelamento parcial pode ser realizado inumeras vezes até que o valor total seja cancelado.
 
+> **Header:** Authorization: Bearer {access_token}
 
-
-**Header:**
-
-```
-Authorization: Bearer {access_token}
-```
-
-**Resposta**
+### Request
 
 > HTTP Status: 200 – OK
 
-
-```
+``` json
 { 
     "success": true, 
     "status": 2, 
