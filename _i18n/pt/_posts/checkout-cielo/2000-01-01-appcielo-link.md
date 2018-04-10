@@ -264,13 +264,13 @@ O Processo de autenticação na API do link de pagamento é o **[Cielo OAUTH](ht
 
 ## Criar Link
 
+### Request
 
+Para criar link de pagamentos Checkout, basta enviar realizar um POST com os dados do Link ao endpoint: 
 
 <aside class="request"><span class="method post">POST</span><span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v1/products/</span></aside>
 
 > Header: `Authorization: Bearer {access_token}`
-
-**Requisição:**
 
 ``` json
 {
@@ -294,41 +294,43 @@ O Processo de autenticação na API do link de pagamento é o **[Cielo OAUTH](ht
 
 **Dados do produto**
 
-| PROPRIEDADE                 | DESCRIÇÃO              | TIPO                                                                                | TAMANHO    | OBRIGATÓRIO |
-|-----------------------------|------------------------|-------------------------------------------------------------------------------------|------------|-------------|
-| type                        | Tipo de venda a ser realizada através do link de pagamento: <br><br>**Asset** – Material Físico<br>**Digital** – Produto Digital<br>**Service** – Serviço<br>**Payment** – Pagamentos Simples<br>**Recurrent** – Pagamento Recorrente | String                                                                          | 255        | SIM        |
-| name                        | Nome do produto        | String                                                                              | 128        | SIM        |
-| description                 | Descrição do produto que será exibida na tela de Checkout caso a opção show_description seja verdadeira.Pode-se utilizar o caracter pipe ` | ` caso seja desejável quebrar a linha ao apresentar a descrição na tela de Checkout | String     | 512        |
-| showDescription             | Flag indicando se a descrição deve ou não ser exibida na tela de Checkout                                    | String     | --         | Não         |
-| price                       | Valor do produto em **centavos**                                                                             | Int        | 1000000    | SIM         |
-| expirationDate              | Data de expiração do link. Caso uma data senha informada, o link se torna indisponível na data informada. Se nenhuma data for informada, o link não expira.| String                                                                             | YYYY-MM-DD | Não         |
-| weight                      | Peso do produto em **gramas**| String                                                                        | 2000000    | Não         |
-| softDescriptor              | Descrição a ser apresentada na fatura do cartão de crédito do portador.| String                              | 13         | Não         |
-| maxNumberOf<br>Installments | Número máximo de parcelas que o comprador pode selecionar na tela de Checkout.Se não informado será utilizada as configurações da loja no Checkout Cielo.| int| 2| Não|
+| PROPRIEDADE               | DESCRIÇÃO                                                                                                                                                   | TIPO   | TAMANHO    | OBRIGATÓRIO |
+|---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|------------|-------------|
+| `name`                    | Nome do produto                                                                                                                                             | String | 128        | SIM         |
+| `description`             | Descrição do produto que será exibida na tela de Checkout caso a opção `show_description` seja verdadeira.                                                  | String | 512        |             |
+| `showDescription`         | Flag indicando se a descrição deve ou não ser exibida na tela de Checkout                                                                                   | String | --         | Não         |
+| `price`                   | Valor do produto em **centavos**                                                                                                                            | Int    | 1000000    | SIM         |
+| `expirationDate`          | Data de expiração do link. Caso uma data senha informada, o link se torna indisponível na data informada. Se nenhuma data for informada, o link não expira. | String | YYYY-MM-DD | Não         |
+| `weight`                  | Peso do produto em **gramas**                                                                                                                               | String | 2000000    | Não         |
+| `softDescriptor`          | Descrição a ser apresentada na fatura do cartão de crédito do portador.                                                                                     | String | 13         | Não         |
+| `maxNumberOfInstallments` | Número máximo de parcelas que o comprador pode selecionar na tela de Checkout.Se não informado será utilizada as configurações da loja no Checkout Cielo.   | int    | 2          | Não         |
+| `type`                    | Tipo de venda a ser realizada através do link de pagamento: <br><br>**Asset** – Material Físico<br>**Digital** – Produto Digital<br>**Service** – Serviço<br>**Payment** – Pagamentos Simples<br>**Recurrent** – Pagamento Recorrente | String | 255 | SIM|
+
+>  Dentro de `Description` Pode-se utilizar o caracter pipe `|` caso seja desejável quebrar a linha ao apresentar a descrição na tela de Checkout
 
 **Dados do Frete**
 
-| PROPRIEDADE            | DESCRIÇÃO                                                                                      | TIPO   | TAMANHO | OBRIGATÓRIO |
-|------------------------|------------------------------------------------------------------------------------------------|--------|---------|-------------|
-| shipping               | Nó contendo informações de entrega do produto                                                  |        |         |             |
-| shipping.name          | Nome do frete. **Obrigatório para frete tipo “FixedAmount”**                                   | string | 128     | Sim         |
-| shipping.price         | O valor do frete. **Obrigatório para frete tipo “FixedAmount”**                                | int    | 100000  | Sim         |
-| shipping.originZipCode | Cep de origem da encomenda. Obrigatório para frete tipo “Correios”. Deve conter apenas números | string | 8       | Não         |
-|shipping.type|Tipo de frete.<br>**Correios** – Entrega pelos correios<br>**FixedAmount** – Valor Fixo<br>**Free** - Grátis<br>**WithoutShippingPickUp** – Sem entrega com retirada na loja<br>**WithoutShipping** – Sem entrega<br><br>Se o tipo de produto escolhido for “**Asset**”, os tipos permitidos de frete são: _**“Correios, FixedAmount ou Free”**_.<br><br>Se o tipo produto escolhido for “**Digital**” ou “**Service**”, os tipos permitidos de frete são: _**“WithoutShipping, WithoutShippingPickUp”**_.<br><br>Se o tipo produto escolhido for “**Recurrent**” o tipo de frete permitido é: _**“WithoutShipping”**_.|string|255|Sim|
+| PROPRIEDADE              | DESCRIÇÃO                                                                                      | TIPO   | TAMANHO | OBRIGATÓRIO |
+|--------------------------|------------------------------------------------------------------------------------------------|--------|---------|-------------|
+| **shipping**             | Nó contendo informações de entrega do produto                                                  |        |         |             |
+| `shipping.name`          | Nome do frete. **Obrigatório para frete tipo “FixedAmount”**                                   | string | 128     | Sim         |
+| `shipping.price`         | O valor do frete. **Obrigatório para frete tipo “FixedAmount”**                                | int    | 100000  | Sim         |
+| `shipping.originZipCode` | Cep de origem da encomenda. Obrigatório para frete tipo “Correios”. Deve conter apenas números | string | 8       | Não         |
+| `shipping.type` |Tipo de frete.<br>**Correios** – Entrega pelos correios<br>**FixedAmount** – Valor Fixo<br>**Free** - Grátis<br>**WithoutShippingPickUp** – Sem entrega com retirada na loja<br>**WithoutShipping** – Sem entrega<br><br>Se o tipo de produto escolhido for “**Asset**”, os tipos permitidos de frete são: _**“Correios, FixedAmount ou Free”**_.<br><br>Se o tipo produto escolhido for “**Digital**” ou “**Service**”, os tipos permitidos de frete são: _**“WithoutShipping, WithoutShippingPickUp”**_.<br><br>Se o tipo produto escolhido for “**Recurrent**” o tipo de frete permitido é: _**“WithoutShipping”**_.|string|255|Sim|
 
 **Dados da Recorrência**
 
-|PROPRIEDADE|DESCRIÇÃO|TIPO|TAMANHO|OBRIGATÓRIO|
-|-----------|---------|----|-------|-----------|
-|recurrent|Nó contendo informações da recorrência do pagamento.Pode ser informado caso o tipo do produto seja “Recurrent”|-|-|
-|recurrent.interval|Intervalo de cobrança da recorrência.<br><br>**Monthly** - Mensal<br>**Bimonthly** - Bimensal<br>**Quarterly** - Trimestral<br>**SemiAnnual** - Semestral<br>**Annual** – Anual<br>|string|128|Não|
-|recurrrent.endDate|Data de término da recorrência. Se não informado a recorrência não terá fim, a cobrança será realizada de acordo com o intervalo selecionado indefinidamente.|string|128|Não|
+| PROPRIEDADE          | DESCRIÇÃO                                                                                                                                                                           | TIPO   | TAMANHO | OBRIGATÓRIO |
+|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|---------|-------------|
+| **recurrent**        | Nó contendo informações da recorrência do pagamento.Pode ser informado caso o tipo do produto seja “Recurrent”                                                                      |        |         |             |
+| `recurrent.interval` | Intervalo de cobrança da recorrência.<br><br>**Monthly** - Mensal<br>**Bimonthly** - Bimensal<br>**Quarterly** - Trimestral<br>**SemiAnnual** - Semestral<br>**Annual** – Anual<br> | string | 128     | Não         |
+| `recurrrent.endDate` | Data de término da recorrência. Se não informado a recorrência não terá fim, a cobrança será realizada de acordo com o intervalo selecionado indefinidamente.                       | string | 128     | Não         |
+
+### Response
+
+> "HTTP Status": 201 – Created
 
 
-**Resposta**
-```
-"HTTP Status": 201 – Created
-```
 ```
 {
     "id": "529aca91-2961-4976-8f7d-9e3f2fa8a0c9",
@@ -368,30 +370,26 @@ O Processo de autenticação na API do link de pagamento é o **[Cielo OAUTH](ht
 
 Os dados retornados na resposta contemplam todos os enviados na requisição e dados adicionais referentes a criação do link.
 
-| PROPRIEDADE | TIPO   | DESCRIÇÃO                                                                                                                     |
-|-------------|--------|-------------------------------------------------------------------------------------------------------------------------------|
-| id          | guid   | Identificador único do link de pagamento.Pode ser utilizado para consultar, atualizar ou excluir o link.                      |
-| shortUrl    | string | Representa o link de pagamento que ao ser aberto, em um browser, apresentará a tela do Checkout Cielo.                        |
-| links       | object | Apresenta as operações disponíveis e possíveis (RESTful hypermedia) de serem efetuadas após a criação ou atualização do link. |
+| PROPRIEDADE   | TIPO   | DESCRIÇÃO                                                                                                                     |
+|---------------|--------|-------------------------------------------------------------------------------------------------------------------------------|
+| `id`          | guid   | Identificador único do link de pagamento.Pode ser utilizado para consultar, atualizar ou excluir o link.                      |
+| `shortUrl`    | string | Representa o link de pagamento que ao ser aberto, em um browser, apresentará a tela do Checkout Cielo.                        |
+| `links`       | object | Apresenta as operações disponíveis e possíveis (RESTful hypermedia) de serem efetuadas após a criação ou atualização do link. |
 
 ## Consultar Link
 
-Consultar um link existente pelo seu identificador.
-**Definição**
+### Request
 
-> `GET`: https://cieloecommerce.cielo.com.br/api/public/v1/products/`{id}` 
+Para consultar um link existente basta realizar um `GET` informando o `ID` do link.
 
+<aside class="request"><span class="method get">GET</span><span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v1/products/{id}</span></aside>
 
-**Header:**
+> **Header:** Authorization: Bearer {access_token}
 
-```
-Authorization: Bearer {access_token}
-```
+### Response
 
-**Resposta**
-```
-HTTP Status: 200 – OK
-```
+> HTTP Status: 200 – OK
+
 ```
 {
     "id": "529aca91-2961-4976-8f7d-9e3f2fa8a0c9",
@@ -428,21 +426,18 @@ HTTP Status: 200 – OK
     ]
 }
 ```
-**OBS**: Mesmos dados retornados na resposta de criação do link.
+
+> **OBS**: O Response da consulta contem os mesmos dados retornados na criação do link.
 
 ## Atualizar Link
 
-Atualiza um link pelo seu identificador.
-**Definição**
+### Request
 
-> `PUT`: https://cieloecommerce.cielo.com.br/api/public/v1/products/`{id}` 
+Para Atualizar um link existente basta realizar um `GET` informando o `ID` do link.
 
+<aside class="request"><span class="method put">PUT</span><span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v1/products/{id}</span></aside>
 
-**Header:**
-
-```
-Authorization: Bearer {access_token}
-```
+> **Header**: Authorization: Bearer {access_token}
 
 **Requisição**
 ```
@@ -463,11 +458,9 @@ Authorization: Bearer {access_token}
 }
 ```
 
- 
-**Resposta**
-```
-HTTP Status: 200 – OK
-```
+### Response
+
+> HTTP Status: 200 – OK
 
 ```
 {
@@ -507,30 +500,24 @@ HTTP Status: 200 – OK
 }
 
 ```
-**OBS**: Mesmos dados retornados na resposta de criação do link.
+
+> **OBS**: O Response da consulta contem os mesmos dados retornados na criação do link.
 
 ## Excluir Link
 
-Exclui um link pelo seu identificador.
+### Request
 
-**Definição**
+Para excluir um link existente basta realizar um `DELETE` informando o `ID` do link.
 
-> `DELETE`: https://cieloecommerce.cielo.com.br/api/public/v1/products/`{id}` 
+<aside class="request"><span class="method put">DELETE</span><span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v1/products/{id}</span></aside>
 
+> **Header:** Authorization: Bearer {access_token}
 
-**Header:**
+### Response
 
-```
-Authorization: Bearer {access_token}
-```
+> HTTP Status: 204 – No Content
 
-**Resposta**
-
-```
-HTTP Status: 204 – No Content
-```
-
-### Códigos de Status HTTP
+## Códigos de Status HTTP
 
 | CÓDIGO                      | DESCRIÇÃO                                                                                                  |
 |-----------------------------|------------------------------------------------------------------------------------------------------------|
@@ -710,9 +697,9 @@ Authorization: Bearer {access_token}
 ```
 
 **Resposta**
-```
-HTTP Status: 200 – OK
-```
+
+> HTTP Status: 200 – OK
+
 
 ```
 { 
