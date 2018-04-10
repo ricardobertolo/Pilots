@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-10T19:47:35+00:00</updated>
+    <updated>2018-04-10T19:48:43+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -20791,9 +20791,9 @@ O mesmo deve ser enviado no header da requisição, conforme abaixo:&lt;/p&gt;
     <entry>
         <title>Link de Pagamentos</title>
         <category term="manual" />
-        <link href="https://docscielo.github.io/Pilots/manual/pilotos-checkout"/>
+        <link href="https://docscielo.github.io/Pilots/manual/linkdepagamentos5"/>
         <updated>2000-01-01T00:00:00+00:00</updated>
-        <id>https://docscielo.github.io/Pilots/manual/pilotos-checkout</id>
+        <id>https://docscielo.github.io/Pilots/manual/linkdepagamentos5</id>
         <content type="html">&lt;h1 id=&quot;cielo-oauth&quot;&gt;Cielo OAUTH&lt;/h1&gt;
 
 &lt;p&gt;O Cielo OAUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce. Ele utiliza como segurança o protocolo &lt;strong&gt;&lt;a href=&quot;https://oauth.net/2/&quot;&gt;OAUTH2&lt;/a&gt;&lt;/strong&gt;, onde é necessário primeiramente obter um token de acesso, utlizando suas credenciais, que deverá posteriormente ser enviado à API CieloOAuth&lt;/p&gt;
