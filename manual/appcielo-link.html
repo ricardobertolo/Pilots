@@ -1368,7 +1368,7 @@ A URL de Ativação (<code class="highlighter-rouge">ActivationURL</code>) receb
   <p><strong>Header:</strong> Authorization: Bearer {access_token}</p>
 </blockquote>
 
-<h3 id="request-7">Request</h3>
+<h3 id="response-6">Response</h3>
 
 <blockquote>
   <p>HTTP Status: 200 – OK</p>
@@ -1412,19 +1412,19 @@ A URL de Ativação (<code class="highlighter-rouge">ActivationURL</code>) receb
     </tr>
     <tr>
       <td><code class="highlighter-rouge">status</code></td>
-      <td>Status da transação no Checkout -  <a href="https://developercielo.github.io/manual/checkout-cielo#fluxos-meios-de-pagamento">STATUS</a></td>
+      <td>Status da transação no Checkout -  <a href="https://docscielo.github.io/Pilots/manual/appcielo-link#status-e-c%C3%B3digos">STATUS</a></td>
       <td>int</td>
       <td>2</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">returnCode</code></td>
-      <td>Código de explicação o motivo de transações negadas ou autorizadas  - <a href="https://developercielo.github.io/manual/checkout-cielo#fluxos-meios-de-pagamento">Tabela de códigos</a></td>
+      <td>Código de explicação o motivo de transações negadas ou autorizadas  - <a href="https://docscielo.github.io/Pilots/manual/appcielo-link#status-e-c%C3%B3digos">Tabela de códigos</a></td>
       <td>String</td>
       <td>2</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">returnMessage</code></td>
-      <td>Mensagem que explica o motivo de transações negadas ou autorizadas  - [Tabela de códigos](https://developercielo.github.io/manual/checkout-cielo#fluxos-meios-de-pagamento()</td>
+      <td>Mensagem que explica o motivo de transações negadas ou autorizadas  - <a href="https://docscielo.github.io/Pilots/manual/appcielo-link#status-e-c%C3%B3digos">Tabela de códigos</a></td>
       <td>String</td>
       <td>255</td>
     </tr>
@@ -1433,7 +1433,7 @@ A URL de Ativação (<code class="highlighter-rouge">ActivationURL</code>) receb
 
 <h2 id="cancelar-transação">Cancelar transação</h2>
 
-<h3 id="request-8">Request</h3>
+<h3 id="request-7">Request</h3>
 
 <p>Para cancelar uma transação pelo <code class="highlighter-rouge">Checkout_Cielo_Order_Number</code>, basta realizar um <code class="highlighter-rouge">PUT</code>.</p>
 
@@ -1449,7 +1449,7 @@ A URL de Ativação (<code class="highlighter-rouge">ActivationURL</code>) receb
   <p><strong>Header:</strong> Authorization: Bearer {access_token}</p>
 </blockquote>
 
-<h3 id="request-9">Request</h3>
+<h3 id="response-7">Response</h3>
 
 <blockquote>
   <p>HTTP Status: 200 – OK</p>
@@ -1475,6 +1475,43 @@ A URL de Ativação (<code class="highlighter-rouge">ActivationURL</code>) receb
 </span><span class="p">}</span><span class="w"> 
 
 </span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>PROPRIEDADE   -</th>
+      <th>DESCRIÇÃO</th>
+      <th>TIPO</th>
+      <th>TAMANHO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">success</code></td>
+      <td>Define o status do processo de atualização</td>
+      <td>Boolean</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">status</code></td>
+      <td>Status da transação no Checkout -  <a href="https://docscielo.github.io/Pilots/manual/appcielo-link#status-e-c%C3%B3digos">STATUS</a></td>
+      <td>int</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">returnCode</code></td>
+      <td>Código de explicação o motivo de transações negadas ou autorizadas  - <a href="https://docscielo.github.io/Pilots/manual/appcielo-link#status-e-c%C3%B3digos">Tabela de códigos</a></td>
+      <td>String</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">returnMessage</code></td>
+      <td>Mensagem que explica o motivo de transações negadas ou autorizadas  - <a href="https://docscielo.github.io/Pilots/manual/appcielo-link#status-e-c%C3%B3digos">Tabela de códigos</a></td>
+      <td>String</td>
+      <td>255</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="status-e-códigos">Status e Códigos</h2>
 

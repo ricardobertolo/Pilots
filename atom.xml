@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-10T14:47:38+00:00</updated>
+    <updated>2018-04-10T14:52:27+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -26121,7 +26121,7 @@ A URL de Ativação (&lt;code class=&quot;highlighter-rouge&quot;&gt;ActivationU
   &lt;p&gt;&lt;strong&gt;Header:&lt;/strong&gt; Authorization: Bearer {access_token}&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&quot;request-7&quot;&gt;Request&lt;/h3&gt;
+&lt;h3 id=&quot;response-6&quot;&gt;Response&lt;/h3&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;HTTP Status: 200 – OK&lt;/p&gt;
@@ -26165,19 +26165,19 @@ A URL de Ativação (&lt;code class=&quot;highlighter-rouge&quot;&gt;ActivationU
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;status&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Status da transação no Checkout -  &lt;a href=&quot;https://developercielo.github.io/manual/checkout-cielo#fluxos-meios-de-pagamento&quot;&gt;STATUS&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Status da transação no Checkout -  &lt;a href=&quot;https://docscielo.github.io/Pilots/manual/appcielo-link#status-e-c%C3%B3digos&quot;&gt;STATUS&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;int&lt;/td&gt;
       &lt;td&gt;2&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;returnCode&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Código de explicação o motivo de transações negadas ou autorizadas  - &lt;a href=&quot;https://developercielo.github.io/manual/checkout-cielo#fluxos-meios-de-pagamento&quot;&gt;Tabela de códigos&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Código de explicação o motivo de transações negadas ou autorizadas  - &lt;a href=&quot;https://docscielo.github.io/Pilots/manual/appcielo-link#status-e-c%C3%B3digos&quot;&gt;Tabela de códigos&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;String&lt;/td&gt;
       &lt;td&gt;2&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;returnMessage&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Mensagem que explica o motivo de transações negadas ou autorizadas  - [Tabela de códigos](https://developercielo.github.io/manual/checkout-cielo#fluxos-meios-de-pagamento()&lt;/td&gt;
+      &lt;td&gt;Mensagem que explica o motivo de transações negadas ou autorizadas  - &lt;a href=&quot;https://docscielo.github.io/Pilots/manual/appcielo-link#status-e-c%C3%B3digos&quot;&gt;Tabela de códigos&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;String&lt;/td&gt;
       &lt;td&gt;255&lt;/td&gt;
     &lt;/tr&gt;
@@ -26186,7 +26186,7 @@ A URL de Ativação (&lt;code class=&quot;highlighter-rouge&quot;&gt;ActivationU
 
 &lt;h2 id=&quot;cancelar-transação&quot;&gt;Cancelar transação&lt;/h2&gt;
 
-&lt;h3 id=&quot;request-8&quot;&gt;Request&lt;/h3&gt;
+&lt;h3 id=&quot;request-7&quot;&gt;Request&lt;/h3&gt;
 
 &lt;p&gt;Para cancelar uma transação pelo &lt;code class=&quot;highlighter-rouge&quot;&gt;Checkout_Cielo_Order_Number&lt;/code&gt;, basta realizar um &lt;code class=&quot;highlighter-rouge&quot;&gt;PUT&lt;/code&gt;.&lt;/p&gt;
 
@@ -26202,7 +26202,7 @@ A URL de Ativação (&lt;code class=&quot;highlighter-rouge&quot;&gt;ActivationU
   &lt;p&gt;&lt;strong&gt;Header:&lt;/strong&gt; Authorization: Bearer {access_token}&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&quot;request-9&quot;&gt;Request&lt;/h3&gt;
+&lt;h3 id=&quot;response-7&quot;&gt;Response&lt;/h3&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;HTTP Status: 200 – OK&lt;/p&gt;
@@ -26228,6 +26228,43 @@ A URL de Ativação (&lt;code class=&quot;highlighter-rouge&quot;&gt;ActivationU
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
 
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;PROPRIEDADE   -&lt;/th&gt;
+      &lt;th&gt;DESCRIÇÃO&lt;/th&gt;
+      &lt;th&gt;TIPO&lt;/th&gt;
+      &lt;th&gt;TAMANHO&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;success&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Define o status do processo de atualização&lt;/td&gt;
+      &lt;td&gt;Boolean&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;status&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Status da transação no Checkout -  &lt;a href=&quot;https://docscielo.github.io/Pilots/manual/appcielo-link#status-e-c%C3%B3digos&quot;&gt;STATUS&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;int&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;returnCode&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Código de explicação o motivo de transações negadas ou autorizadas  - &lt;a href=&quot;https://docscielo.github.io/Pilots/manual/appcielo-link#status-e-c%C3%B3digos&quot;&gt;Tabela de códigos&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;returnMessage&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Mensagem que explica o motivo de transações negadas ou autorizadas  - &lt;a href=&quot;https://docscielo.github.io/Pilots/manual/appcielo-link#status-e-c%C3%B3digos&quot;&gt;Tabela de códigos&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;String&lt;/td&gt;
+      &lt;td&gt;255&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;h2 id=&quot;status-e-códigos&quot;&gt;Status e Códigos&lt;/h2&gt;
 
