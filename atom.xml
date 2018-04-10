@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-10T13:59:54+00:00</updated>
+    <updated>2018-04-10T14:23:36+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -25509,7 +25509,6 @@ A URL de Ativação (&lt;code class=&quot;highlighter-rouge&quot;&gt;ActivationU
    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;SoftDescriptor&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Pedido1234&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;p&gt;&lt;strong&gt;Dados do produto&lt;/strong&gt;&lt;/p&gt;
 
 &lt;table&gt;
@@ -25806,6 +25805,33 @@ A URL de Ativação (&lt;code class=&quot;highlighter-rouge&quot;&gt;ActivationU
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;PROPRIEDADE&lt;/th&gt;
+      &lt;th&gt;TIPO&lt;/th&gt;
+      &lt;th&gt;DESCRIÇÃO&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;id&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;guid&lt;/td&gt;
+      &lt;td&gt;Identificador único do link de pagamento.Pode ser utilizado para consultar, atualizar ou excluir o link.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;shortUrl&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;string&lt;/td&gt;
+      &lt;td&gt;Representa o link de pagamento que ao ser aberto, em um browser, apresentará a tela do Checkout Cielo.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;links&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;object&lt;/td&gt;
+      &lt;td&gt;Apresenta as operações disponíveis e possíveis (RESTful hypermedia) de serem efetuadas após a criação ou atualização do link.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;OBS&lt;/strong&gt;: O Response da consulta contem os mesmos dados retornados na criação do link.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -25883,6 +25909,33 @@ A URL de Ativação (&lt;code class=&quot;highlighter-rouge&quot;&gt;ActivationU
 
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;PROPRIEDADE&lt;/th&gt;
+      &lt;th&gt;TIPO&lt;/th&gt;
+      &lt;th&gt;DESCRIÇÃO&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;id&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;guid&lt;/td&gt;
+      &lt;td&gt;Identificador único do link de pagamento.Pode ser utilizado para consultar, atualizar ou excluir o link.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;shortUrl&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;string&lt;/td&gt;
+      &lt;td&gt;Representa o link de pagamento que ao ser aberto, em um browser, apresentará a tela do Checkout Cielo.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;links&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;object&lt;/td&gt;
+      &lt;td&gt;Apresenta as operações disponíveis e possíveis (RESTful hypermedia) de serem efetuadas após a criação ou atualização do link.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;OBS&lt;/strong&gt;: O Response da consulta contem os mesmos dados retornados na criação do link.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -25916,23 +25969,23 @@ A URL de Ativação (&lt;code class=&quot;highlighter-rouge&quot;&gt;ActivationU
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;200 - OK&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;200 - OK&lt;/strong&gt;&lt;/td&gt;
       &lt;td&gt;Tudo funcionou corretamente.&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;400 – Bad Request&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;400 – Bad Request&lt;/strong&gt;&lt;/td&gt;
       &lt;td&gt;A requisição não foi aceita. Algum parâmetro não foi informado ou foi informado incorretamente.&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;401 - Unauthorized&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;401 - Unauthorized&lt;/strong&gt;&lt;/td&gt;
       &lt;td&gt;O token de acesso enviado no header da requisição não é válido.&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;404 – Not Found&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;404 – Not Found&lt;/strong&gt;&lt;/td&gt;
       &lt;td&gt;O recurso sendo acessado não existe. Ocorre ao tentar atualizar, consultar ou excluir um link inexistente.&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;500 – Internal Server Error&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;500 – Internal Server Error&lt;/strong&gt;&lt;/td&gt;
       &lt;td&gt;Ocorreu um erro no sistema.&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
@@ -25940,9 +25993,10 @@ A URL de Ativação (&lt;code class=&quot;highlighter-rouge&quot;&gt;ActivationU
 
 &lt;h1 id=&quot;controle-transacional&quot;&gt;Controle transacional&lt;/h1&gt;
 
-&lt;p&gt;A &lt;strong&gt;API de Controle Transacional&lt;/strong&gt; permite ao lojista realizar operações sobre os pedidos que antes eram possíveis somente através do Backoffice do Checkout Cielo.&lt;/p&gt;
+&lt;p&gt;A &lt;strong&gt;API de Controle Transacional&lt;/strong&gt; permite ao lojista modificar o status de os pedidos sem acessar o Backoffice do Checkout Cielo.&lt;/p&gt;
 
 &lt;p&gt;As operações possíveis de serem realizadas são:&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Consulta&lt;/strong&gt; – consultar uma transação&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Captura&lt;/strong&gt; – capturar uma transação com valor total&lt;/li&gt;
@@ -25952,8 +26006,12 @@ A URL de Ativação (&lt;code class=&quot;highlighter-rouge&quot;&gt;ActivationU
 &lt;p&gt;Seu principal objetivo é permitir que lojas e plataformas possam automatizar as operações através de seus próprios sistemas.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Endereço: https://cieloecommerce.cielo.com.br/api/public/v2/orders/&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;Endpoint Central&lt;/strong&gt; https://cieloecommerce.cielo.com.br/api/public/v2/orders/&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;h2 id=&quot;autenticação-1&quot;&gt;Autenticação&lt;/h2&gt;
+
+&lt;p&gt;O Processo de autenticação na API do link de pagamento é o &lt;strong&gt;&lt;a href=&quot;https://docscielo.github.io/Pilots/manual/appcielo-link#cielo-oauth&quot;&gt;Cielo OAUTH&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;pré-requisitos&quot;&gt;Pré-requisitos&lt;/h2&gt;
 
@@ -25964,24 +26022,23 @@ A URL de Ativação (&lt;code class=&quot;highlighter-rouge&quot;&gt;ActivationU
   &lt;li&gt;URL de Notificação via &lt;strong&gt;JSON&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;A notificação é obrigatorio pois todos os comandos da API (Consulta / Captura / Cancelamento) usam o identificado unico da transação, chamado de &lt;code class=&quot;highlighter-rouge&quot;&gt;Checkout_Cielo_Order_Number&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;A notificação é obrigatorio pois todos os comandos da API (Consulta / Captura / Cancelamento) usam o identificador único da transação, chamado de &lt;code class=&quot;highlighter-rouge&quot;&gt;Checkout_Cielo_Order_Number&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;O &lt;code class=&quot;highlighter-rouge&quot;&gt;Checkout_Cielo_Order_Number&lt;/code&gt; é um identificado único gerado apenas quando o pagamento é &lt;em&gt;finalizado na tela transacional&lt;/em&gt;. Ele é enviado apenas pela &lt;em&gt;URL de Notificação&lt;/em&gt; e não pelo Response da criação da tela transacional.&lt;/p&gt;
+&lt;p&gt;O &lt;code class=&quot;highlighter-rouge&quot;&gt;Checkout_Cielo_Order_Number&lt;/code&gt; é gerado apenas quando o pagamento é &lt;em&gt;finalizado na tela transacional&lt;/em&gt;. Ele é enviado apenas pela &lt;em&gt;URL de Notificação&lt;/em&gt; e não pelo Response da criação da tela transacional.&lt;/p&gt;
 
 &lt;h2 id=&quot;consultar-transação&quot;&gt;Consultar transação&lt;/h2&gt;
 
-&lt;p&gt;Permite consultar uma transação pelo número do pedido gerado pelo Checkout Cielo&lt;/p&gt;
+&lt;h3 id=&quot;request-5&quot;&gt;Request&lt;/h3&gt;
+
+&lt;p&gt;Para consultar uma transação pelo &lt;code class=&quot;highlighter-rouge&quot;&gt;Checkout_Cielo_Order_Number&lt;/code&gt;, basta realizar um &lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt;.&lt;/p&gt;
+
+&lt;aside class=&quot;request&quot;&gt;&lt;span class=&quot;method get&quot;&gt;GET&lt;/span&gt;&lt;span class=&quot;endpoint&quot;&gt;https://cieloecommerce.cielo.com.br/api/public/v2/orders/{checkout_cielo_order_number}&lt;/span&gt;&lt;/aside&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; https://cieloecommerce.cielo.com.br/api/public/v2/orders/&lt;code class=&quot;highlighter-rouge&quot;&gt;{checkout_cielo_order_number}&lt;/code&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;Header:&lt;/strong&gt; Authorization: Bearer {access_token}&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;strong&gt;Header:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Authorization: Bearer {access_token}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Resposta&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;response-5&quot;&gt;Response&lt;/h3&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;“HTTP Status”: 200 – OK&lt;/p&gt;
@@ -26045,6 +26102,70 @@ A URL de Ativação (&lt;code class=&quot;highlighter-rouge&quot;&gt;ActivationU
     &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;merchantId 
+orderNumber
+softDescriptor&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;cart&quot;: { 
+    &quot;items&quot;: [ 
+        { 
+            &quot;name&quot;: &quot;Pedido ABC&quot;, 
+            &quot;description&quot;: &quot;50 canetas - R$30,00 | 10 cadernos - R$50,00 | 10 Borrachas - R$10,00&quot;, 
+            &quot;unitPrice&quot;: 9000, 
+            &quot;quantity&quot;: 1, 
+            &quot;type&quot;: &quot;1&quot; 
+        } 
+    ] 
+}, 
+
+&quot;shipping&quot;: { 
+    &quot;type&quot;: &quot;FixedAmount&quot;, 
+    &quot;services&quot;: [ 
+        { 
+          &quot;name&quot;: &quot;Entrega Rápida&quot;, 
+            &quot;price&quot;: 2000 
+        } 
+    ], 
+    &quot;address&quot;: { 
+        &quot;street&quot;: &quot;Estrada Caetano Monteiro&quot;, 
+        &quot;number&quot;: &quot;391A&quot;, 
+        &quot;complement&quot;: &quot;BL 10 AP 208&quot;, 
+        &quot;district&quot;: &quot;Badu&quot;, 
+        &quot;city&quot;: &quot;Niterói&quot;, 
+        &quot;state&quot;: &quot;RJ&quot; 
+    } 
+}, 
+
+
+&quot;payment&quot;: { 
+    &quot;status&quot;: &quot;Paid&quot;, 
+    &quot;antifraud&quot;: { 
+        &quot;description&quot;: &quot;Lojista optou não realizar a análise do antifraude.&quot; 
+    } 
+}, 
+   
+   
+&quot;customer&quot;: { 
+    &quot;identity&quot;: &quot;12345678911&quot;, 
+    &quot;fullName&quot;: &quot;Fulano da Silva&quot;, 
+    &quot;email&quot;: &quot;exemplo@email.com.br&quot;, 
+    &quot;phone&quot;: &quot;11123456789&quot; 
+}, 
+   
+   
+   
+&quot;links&quot;: [ 
+    { 
+        &quot;method&quot;: &quot;GET&quot;, 
+        &quot;rel&quot;: &quot;self&quot;, 
+        &quot;href&quot;: &quot;https://cieloecommerce.cielo.com.br/api/public/v2/orders/054f5b509f7149d6aec3b4023a6a2957&quot; 
+    }, 
+    { 
+        &quot;method&quot;: &quot;PUT&quot;, 
+        &quot;rel&quot;: &quot;void&quot;, 
+        &quot;href&quot;: &quot;https://cieloecommerce.cielo.com.br/api/public/v2/orders/054f5b509f7149d6aec3b4023a6a2957/void&quot; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;capturar-transação&quot;&gt;Capturar transação&lt;/h2&gt;
 

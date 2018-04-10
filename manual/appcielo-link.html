@@ -756,7 +756,6 @@ A URL de Ativação (<code class="highlighter-rouge">ActivationURL</code>) receb
    </span><span class="s2">"SoftDescriptor"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Pedido1234"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
-
 <p><strong>Dados do produto</strong></p>
 
 <table>
@@ -1053,6 +1052,33 @@ A URL de Ativação (<code class="highlighter-rouge">ActivationURL</code>) receb
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
+<table>
+  <thead>
+    <tr>
+      <th>PROPRIEDADE</th>
+      <th>TIPO</th>
+      <th>DESCRIÇÃO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">id</code></td>
+      <td>guid</td>
+      <td>Identificador único do link de pagamento.Pode ser utilizado para consultar, atualizar ou excluir o link.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">shortUrl</code></td>
+      <td>string</td>
+      <td>Representa o link de pagamento que ao ser aberto, em um browser, apresentará a tela do Checkout Cielo.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">links</code></td>
+      <td>object</td>
+      <td>Apresenta as operações disponíveis e possíveis (RESTful hypermedia) de serem efetuadas após a criação ou atualização do link.</td>
+    </tr>
+  </tbody>
+</table>
+
 <blockquote>
   <p><strong>OBS</strong>: O Response da consulta contem os mesmos dados retornados na criação do link.</p>
 </blockquote>
@@ -1130,6 +1156,33 @@ A URL de Ativação (<code class="highlighter-rouge">ActivationURL</code>) receb
 
 </span></code></pre></div></div>
 
+<table>
+  <thead>
+    <tr>
+      <th>PROPRIEDADE</th>
+      <th>TIPO</th>
+      <th>DESCRIÇÃO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">id</code></td>
+      <td>guid</td>
+      <td>Identificador único do link de pagamento.Pode ser utilizado para consultar, atualizar ou excluir o link.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">shortUrl</code></td>
+      <td>string</td>
+      <td>Representa o link de pagamento que ao ser aberto, em um browser, apresentará a tela do Checkout Cielo.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">links</code></td>
+      <td>object</td>
+      <td>Apresenta as operações disponíveis e possíveis (RESTful hypermedia) de serem efetuadas após a criação ou atualização do link.</td>
+    </tr>
+  </tbody>
+</table>
+
 <blockquote>
   <p><strong>OBS</strong>: O Response da consulta contem os mesmos dados retornados na criação do link.</p>
 </blockquote>
@@ -1163,23 +1216,23 @@ A URL de Ativação (<code class="highlighter-rouge">ActivationURL</code>) receb
   </thead>
   <tbody>
     <tr>
-      <td>200 - OK</td>
+      <td><strong>200 - OK</strong></td>
       <td>Tudo funcionou corretamente.</td>
     </tr>
     <tr>
-      <td>400 – Bad Request</td>
+      <td><strong>400 – Bad Request</strong></td>
       <td>A requisição não foi aceita. Algum parâmetro não foi informado ou foi informado incorretamente.</td>
     </tr>
     <tr>
-      <td>401 - Unauthorized</td>
+      <td><strong>401 - Unauthorized</strong></td>
       <td>O token de acesso enviado no header da requisição não é válido.</td>
     </tr>
     <tr>
-      <td>404 – Not Found</td>
+      <td><strong>404 – Not Found</strong></td>
       <td>O recurso sendo acessado não existe. Ocorre ao tentar atualizar, consultar ou excluir um link inexistente.</td>
     </tr>
     <tr>
-      <td>500 – Internal Server Error</td>
+      <td><strong>500 – Internal Server Error</strong></td>
       <td>Ocorreu um erro no sistema.</td>
     </tr>
   </tbody>
@@ -1187,9 +1240,10 @@ A URL de Ativação (<code class="highlighter-rouge">ActivationURL</code>) receb
 
 <h1 id="controle-transacional">Controle transacional</h1>
 
-<p>A <strong>API de Controle Transacional</strong> permite ao lojista realizar operações sobre os pedidos que antes eram possíveis somente através do Backoffice do Checkout Cielo.</p>
+<p>A <strong>API de Controle Transacional</strong> permite ao lojista modificar o status de os pedidos sem acessar o Backoffice do Checkout Cielo.</p>
 
 <p>As operações possíveis de serem realizadas são:</p>
+
 <ul>
   <li><strong>Consulta</strong> – consultar uma transação</li>
   <li><strong>Captura</strong> – capturar uma transação com valor total</li>
@@ -1199,8 +1253,12 @@ A URL de Ativação (<code class="highlighter-rouge">ActivationURL</code>) receb
 <p>Seu principal objetivo é permitir que lojas e plataformas possam automatizar as operações através de seus próprios sistemas.</p>
 
 <blockquote>
-  <p>Endereço: https://cieloecommerce.cielo.com.br/api/public/v2/orders/</p>
+  <p><strong>Endpoint Central</strong> https://cieloecommerce.cielo.com.br/api/public/v2/orders/</p>
 </blockquote>
+
+<h2 id="autenticação-1">Autenticação</h2>
+
+<p>O Processo de autenticação na API do link de pagamento é o <strong><a href="https://docscielo.github.io/Pilots/manual/appcielo-link#cielo-oauth">Cielo OAUTH</a></strong></p>
 
 <h2 id="pré-requisitos">Pré-requisitos</h2>
 
@@ -1211,24 +1269,23 @@ A URL de Ativação (<code class="highlighter-rouge">ActivationURL</code>) receb
   <li>URL de Notificação via <strong>JSON</strong></li>
 </ul>
 
-<p>A notificação é obrigatorio pois todos os comandos da API (Consulta / Captura / Cancelamento) usam o identificado unico da transação, chamado de <code class="highlighter-rouge">Checkout_Cielo_Order_Number</code>.</p>
+<p>A notificação é obrigatorio pois todos os comandos da API (Consulta / Captura / Cancelamento) usam o identificador único da transação, chamado de <code class="highlighter-rouge">Checkout_Cielo_Order_Number</code>.</p>
 
-<p>O <code class="highlighter-rouge">Checkout_Cielo_Order_Number</code> é um identificado único gerado apenas quando o pagamento é <em>finalizado na tela transacional</em>. Ele é enviado apenas pela <em>URL de Notificação</em> e não pelo Response da criação da tela transacional.</p>
+<p>O <code class="highlighter-rouge">Checkout_Cielo_Order_Number</code> é gerado apenas quando o pagamento é <em>finalizado na tela transacional</em>. Ele é enviado apenas pela <em>URL de Notificação</em> e não pelo Response da criação da tela transacional.</p>
 
 <h2 id="consultar-transação">Consultar transação</h2>
 
-<p>Permite consultar uma transação pelo número do pedido gerado pelo Checkout Cielo</p>
+<h3 id="request-5">Request</h3>
+
+<p>Para consultar uma transação pelo <code class="highlighter-rouge">Checkout_Cielo_Order_Number</code>, basta realizar um <code class="highlighter-rouge">GET</code>.</p>
+
+<aside class="request"><span class="method get">GET</span><span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v2/orders/{checkout_cielo_order_number}</span></aside>
 
 <blockquote>
-  <p><code class="highlighter-rouge">GET</code> https://cieloecommerce.cielo.com.br/api/public/v2/orders/<code class="highlighter-rouge">{checkout_cielo_order_number}</code></p>
+  <p><strong>Header:</strong> Authorization: Bearer {access_token}</p>
 </blockquote>
 
-<p><strong>Header:</strong></p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Authorization: Bearer {access_token}
-</code></pre></div></div>
-
-<p><strong>Resposta</strong></p>
+<h3 id="response-5">Response</h3>
 
 <blockquote>
   <p>“HTTP Status”: 200 – OK</p>
@@ -1292,6 +1349,70 @@ A URL de Ativação (<code class="highlighter-rouge">ActivationURL</code>) receb
     </span><span class="p">]</span><span class="w"> 
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
+
+<p>merchantId 
+orderNumber
+softDescriptor</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"cart": { 
+    "items": [ 
+        { 
+            "name": "Pedido ABC", 
+            "description": "50 canetas - R$30,00 | 10 cadernos - R$50,00 | 10 Borrachas - R$10,00", 
+            "unitPrice": 9000, 
+            "quantity": 1, 
+            "type": "1" 
+        } 
+    ] 
+}, 
+
+"shipping": { 
+    "type": "FixedAmount", 
+    "services": [ 
+        { 
+          "name": "Entrega Rápida", 
+            "price": 2000 
+        } 
+    ], 
+    "address": { 
+        "street": "Estrada Caetano Monteiro", 
+        "number": "391A", 
+        "complement": "BL 10 AP 208", 
+        "district": "Badu", 
+        "city": "Niterói", 
+        "state": "RJ" 
+    } 
+}, 
+
+
+"payment": { 
+    "status": "Paid", 
+    "antifraud": { 
+        "description": "Lojista optou não realizar a análise do antifraude." 
+    } 
+}, 
+   
+   
+"customer": { 
+    "identity": "12345678911", 
+    "fullName": "Fulano da Silva", 
+    "email": "exemplo@email.com.br", 
+    "phone": "11123456789" 
+}, 
+   
+   
+   
+"links": [ 
+    { 
+        "method": "GET", 
+        "rel": "self", 
+        "href": "https://cieloecommerce.cielo.com.br/api/public/v2/orders/054f5b509f7149d6aec3b4023a6a2957" 
+    }, 
+    { 
+        "method": "PUT", 
+        "rel": "void", 
+        "href": "https://cieloecommerce.cielo.com.br/api/public/v2/orders/054f5b509f7149d6aec3b4023a6a2957/void" 
+</code></pre></div></div>
 
 <h2 id="capturar-transação">Capturar transação</h2>
 
