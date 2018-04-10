@@ -687,7 +687,7 @@ Para capturar uma transação pelo `Checkout_Cielo_Order_Number`, basta realizar
 | `success`       | Define o status do processo de atualização                                                                                                                                  | Boolean |         |
 | `status`        | Status da transação no Checkout -  [STATUS](https://developercielo.github.io/manual/checkout-cielo#fluxos-meios-de-pagamento)                                               | int     | 2       |
 | `returnCode`    | Código de explicação o motivo de transações negadas ou autorizadas  - [Tabela de códigos](https://developercielo.github.io/manual/checkout-cielo#fluxos-meios-de-pagamento) | String  | 2       |
-| `returnMessage` | Mensagem que explica o motivo de transações negadas ou autorizadas  - [Tabela de códigos]https://developercielo.github.io/manual/checkout-cielo#fluxos-meios-de-pagamento() | String  | 255     |
+| `returnMessage` | Mensagem que explica o motivo de transações negadas ou autorizadas  - [Tabela de códigos](https://developercielo.github.io/manual/checkout-cielo#fluxos-meios-de-pagamento() | String  | 255     |
 
 ## Cancelar transação
 
