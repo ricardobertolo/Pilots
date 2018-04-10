@@ -331,7 +331,7 @@ Para criar link de pagamentos Checkout, basta enviar realizar um POST com os dad
 > "HTTP Status": 201 – Created
 
 
-```
+``` json
 {
     "id": "529aca91-2961-4976-8f7d-9e3f2fa8a0c9",
     "shortUrl": "http://bit.ly/2smqdhD",
@@ -390,7 +390,7 @@ Para consultar um link existente basta realizar um `GET` informando o `ID` do li
 
 > HTTP Status: 200 – OK
 
-```
+``` json
 {
     "id": "529aca91-2961-4976-8f7d-9e3f2fa8a0c9",
     "shortUrl": "http://bit.ly/2smqdhD",
@@ -439,8 +439,7 @@ Para Atualizar um link existente basta realizar um `GET` informando o `ID` do li
 
 > **Header**: Authorization: Bearer {access_token}
 
-**Requisição**
-```
+``` json
 {
    "Type":"Asset",
    "name" : "Pedido ABC",
@@ -462,7 +461,7 @@ Para Atualizar um link existente basta realizar um `GET` informando o `ID` do li
 
 > HTTP Status: 200 – OK
 
-```
+``` json
 {
     "id": "529aca91-2961-4976-8f7d-9e3f2fa8a0c9",
     "shortUrl": "http://bit.ly/2smqdhD",
