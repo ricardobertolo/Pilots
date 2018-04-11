@@ -2439,6 +2439,63 @@ A URL de Ativação (<code class="highlighter-rouge">ActivationURL</code>) receb
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="o">{</span>
+<span class="nt">--REQUEST</span>
+   <span class="s2">"Type"</span>:<span class="s2">"Digital"</span>,
+   <span class="s2">"name"</span> : <span class="s2">"Pedido"</span>,
+   <span class="s2">"description"</span> : <span class="s2">"teste description"</span>,
+   <span class="s2">"price"</span>:<span class="s2">"1000000"</span>,
+   <span class="s2">"weight"</span>: 2000000,
+   <span class="s2">"ExpirationDate"</span>:<span class="s2">"2037-06-19"</span>,
+   <span class="s2">"maxNumberOfInstallments"</span>:<span class="s2">"1"</span>,
+   <span class="s2">"quantity"</span>: 2,
+   <span class="s2">"Sku"</span>:<span class="s2">"teste"</span>,
+   <span class="s2">"shipping"</span>:<span class="o">{</span>
+     <span class="s2">"type"</span>:<span class="s2">"WithoutShipping"</span>,
+     <span class="s2">"name"</span>: <span class="s2">"teste"</span>,
+     <span class="s2">"price"</span>:<span class="s2">"1000000000"</span>
+   <span class="o">}</span>,
+   <span class="s2">"SoftDescriptor"</span> : <span class="s2">"Pedido1234"</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">{</span>
+<span class="nt">--RESPONSE</span>
+    <span class="s2">"id"</span>: <span class="s2">"529aca91-2961-4976-8f7d-9e3f2fa8a0c9"</span>,
+    <span class="s2">"shortUrl"</span>: <span class="s2">"http://bit.ly/2smqdhD"</span>,
+    <span class="s2">"type"</span>: <span class="s2">"Asset"</span>,
+    <span class="s2">"name"</span>: <span class="s2">"Pedido ABC"</span>,
+    <span class="s2">"description"</span>: <span class="s2">"50 canetas - R</span><span class="nv">$30</span><span class="s2">,00 | 10 cadernos - R</span><span class="nv">$50</span><span class="s2">,00"</span>,
+    <span class="s2">"showDescription"</span>: <span class="nb">false</span>,
+    <span class="s2">"price"</span>: 8000,
+    <span class="s2">"weight"</span>: 4500,
+    <span class="s2">"shipping"</span>: <span class="o">{</span>
+        <span class="s2">"type"</span>: <span class="s2">"Correios"</span>,
+        <span class="s2">"originZipcode"</span>: <span class="s2">"06455030"</span>
+    <span class="o">}</span>,
+    <span class="s2">"softDescriptor"</span>: <span class="s2">"Pedido1234"</span>,
+    <span class="s2">"expirationDate"</span>: <span class="s2">"2017-06-30T00:00:00"</span>,
+    <span class="s2">"maxNumberOfInstallments"</span>: 2,
+    <span class="s2">"links"</span>: <span class="o">[</span>
+        <span class="o">{</span>
+            <span class="s2">"method"</span>: <span class="s2">"GET"</span>,
+            <span class="s2">"rel"</span>: <span class="s2">"self"</span>,
+            <span class="s2">"href"</span>: <span class="s2">"https://cieloecommerce.cielo.com.br/Api/public/v1/product/529aca91-2961-4976-8f7d-9e3f2fa8a0c9"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"method"</span>: <span class="s2">"PUT"</span>,
+            <span class="s2">"rel"</span>: <span class="s2">"update"</span>,
+            <span class="s2">"href"</span>: <span class="s2">"https://cieloecommerce.cielo.com.br/Api/public/v1/product/529aca91-2961-4976-8f7d-9e3f2fa8a0c9"</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">"method"</span>: <span class="s2">"DELETE"</span>,
+            <span class="s2">"rel"</span>: <span class="s2">"delete"</span>,
+            <span class="s2">"href"</span>: <span class="s2">"https://cieloecommerce.cielo.com.br/Api/public/v1/product/529aca91-2961-4976-8f7d-9e3f2fa8a0c9"</span>
+        <span class="o">}</span>
+    <span class="o">]</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 </div>
 
