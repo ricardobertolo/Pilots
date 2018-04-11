@@ -254,6 +254,16 @@
   <p>O token retornado (access_token) deverá ser utilizado em toda requisição como uma chave de autorização, destacando que este possui uma validade de 20 minutos (1200 segundos) e após esse intervalo, será necessário obter um novo token para acesso aos serviços Cielo.</p>
 </blockquote>
 
+<h2 id="usando-o-token">Usando o Token,</h2>
+
+<p>Para cada requisição das APIs Cielo decritas nessa manual, o token deverá ser enviado no formato definido no exemplo</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">x-www-form-urlencoded</span><span class="w">
+</span><span class="err">--header</span><span class="w"> </span><span class="s2">"Authorization: Bearer {TOKEN DE ACESSO} 
+--header "</span><span class="err">Content-Type</span><span class="p">:</span><span class="w"> </span><span class="err">application/json</span><span class="w">
+
+</span></code></pre></div></div>
+
 <h1 id="consulta-ec">Consulta EC</h1>
 
 <p>O processo de consulta de EC busca a existencia de afiliações e MerchanIDs na base de lojas Checkout Cielo.</p>
@@ -722,9 +732,25 @@ A URL de Ativação (<code class="highlighter-rouge">ActivationURL</code>) receb
   </ul>
 </blockquote>
 
-<h2 id="autenticação">Autenticação</h2>
+<h2 id="autenticação---app-cielo">Autenticação - APP Cielo</h2>
 
 <p>O Processo de autenticação na API do link de pagamento é o <strong><a href="https://docscielo.github.io/Pilots/manual/appcielo-link#cielo-oauth">Cielo OAUTH</a></strong></p>
+
+<p>Para o <strong>APP Cielo</strong>, será necessario completar os sequintes passos:</p>
+
+<ol>
+  <li>Com o <code class="highlighter-rouge">ClientID</code>+<code class="highlighter-rouge">ClientSecret</code> obter o AccessToke</li>
+  <li>Envia o MID da loja Checkout que será modificada.</li>
+</ol>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">x-www-form-urlencoded</span><span class="w">
+</span><span class="err">--header</span><span class="w"> </span><span class="s2">"Authorization: Bearer {TOKEN DE ACESSO} 
+--header "</span><span class="err">MechandId</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">Mid</span><span class="w"> </span><span class="err">da</span><span class="w"> </span><span class="err">loja</span><span class="p">}</span><span class="w"> 
+</span><span class="err">--header</span><span class="w"> </span><span class="s2">"Content-Type: application/json
+
+</span></code></pre></div></div>
+
+<aside class="warning">Apenas o APP Cielo envia o dado do MID no Header de requisições para manipulação de links de pagamentos</aside>
 
 <h2 id="criar-link">Criar Link</h2>
 
@@ -735,7 +761,10 @@ A URL de Ativação (<code class="highlighter-rouge">ActivationURL</code>) receb
 <aside class="request"><span class="method post">POST</span><span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v1/products/</span></aside>
 
 <blockquote>
-  <p>Header: <code class="highlighter-rouge">Authorization: Bearer {access_token}</code></p>
+  <p>Header: 
+–header “Authorization: Bearer {TOKEN DE ACESSO} 
+–header “MechandId: {Mid da loja} 
+–header “Content-Type: application/json</p>
 </blockquote>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
@@ -1256,7 +1285,7 @@ A URL de Ativação (<code class="highlighter-rouge">ActivationURL</code>) receb
   <p><strong>Endpoint Central</strong> https://cieloecommerce.cielo.com.br/api/public/v2/orders/</p>
 </blockquote>
 
-<h2 id="autenticação-1">Autenticação</h2>
+<h2 id="autenticação">Autenticação</h2>
 
 <p>O Processo de autenticação na API do link de pagamento é o <strong><a href="https://docscielo.github.io/Pilots/manual/appcielo-link#cielo-oauth">Cielo OAUTH</a></strong></p>
 
