@@ -574,6 +574,7 @@
          </span><span class="s2">"ExpirationDate"</span><span class="p">:</span><span class="s2">"08/2020"</span><span class="p">,</span><span class="w">
          </span><span class="s2">"SecurityCode"</span><span class="p">:</span><span class="s2">"420"</span><span class="p">,</span><span class="w">
          </span><span class="s2">"Brand"</span><span class="p">:</span><span class="s2">"visa
+         }
     "</span><span class="err">Wallet</span><span class="s2">": {
          "</span><span class="err">Type</span><span class="s2">": "</span><span class="err">TIPO</span><span class="w"> </span><span class="err">DE</span><span class="w"> </span><span class="err">WALLET</span><span class="s2">",
           "</span><span class="err">WalletKey</span><span class="s2">": "</span><span class="err">IDENTIFICADOR</span><span class="w"> </span><span class="err">DA</span><span class="w"> </span><span class="err">LOJA</span><span class="w"> </span><span class="err">NA</span><span class="w"> </span><span class="err">WALLET</span><span class="s2">",
@@ -856,11 +857,9 @@
   </tbody>
 </table>
 
-<h2 id="exemplos">Exemplos</h2>
+<h2 id="apple-pay">Apple Pay</h2>
 
-<h3 id="apple-pay">Apple Pay</h3>
-
-<h4 id="pré-requisitos">Pré-Requisitos</h4>
+<h3 id="pré-requisitos">Pré-Requisitos</h3>
 
 <p>Para utilização da Apple Pay no formato <strong>Descriptografia</strong> é necessario que a loja ja esteja cadastrada junto a Apple e possua um <code class="highlighter-rouge">MerchantIdentifier</code>
 A integração <strong>Descriptografia</strong> exige que o lojista realize o upload manual de um <strong>certificado CSR no formato PEM</strong> fornecido pela Cielo. Entre em contato com a equipe de produtos Cielo para maiores informações.</p>
@@ -1018,7 +1017,7 @@ A integração <strong>Descriptografia</strong> exige que o lojista realize o up
   </tbody>
 </table>
 
-<h4 id="resposta">Resposta</h4>
+<h3 id="resposta">Resposta</h3>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"MerchantOrderId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014111703"</span><span class="p">,</span><span class="w">
@@ -1187,9 +1186,9 @@ A integração <strong>Descriptografia</strong> exige que o lojista realize o up
   </tbody>
 </table>
 
-<h3 id="samsung-pay">Samsung Pay</h3>
+<h2 id="samsung-pay">Samsung Pay</h2>
 
-<h4 id="requisição-1">Requisição</h4>
+<h3 id="requisição-1">Requisição</h3>
 
 <p>Exemplo de Requisição padrão <em>Samsung Pay</em></p>
 
@@ -1340,7 +1339,7 @@ A integração <strong>Descriptografia</strong> exige que o lojista realize o up
   </tbody>
 </table>
 
-<h4 id="resposta-1">Resposta</h4>
+<h3 id="resposta-1">Resposta</h3>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"MerchantOrderId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014111703"</span><span class="p">,</span><span class="w">
@@ -1506,9 +1505,9 @@ A integração <strong>Descriptografia</strong> exige que o lojista realize o up
   </tbody>
 </table>
 
-<h3 id="android-pay">Android Pay</h3>
+<h2 id="android-pay">Android Pay</h2>
 
-<h4 id="requisição-2">Requisição</h4>
+<h3 id="requisição-2">Requisição</h3>
 
 <p>Exemplo de Requisição padrão <em>Android Pay</em></p>
 
@@ -1661,7 +1660,7 @@ A integração <strong>Descriptografia</strong> exige que o lojista realize o up
   </tbody>
 </table>
 
-<h4 id="resposta-2">Resposta</h4>
+<h3 id="resposta-2">Resposta</h3>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"MerchantOrderId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014111703"</span><span class="p">,</span><span class="w">
@@ -1829,12 +1828,12 @@ A integração <strong>Descriptografia</strong> exige que o lojista realize o up
   </tbody>
 </table>
 
-<h3 id="masterpass">MasterPass</h3>
+<h2 id="masterpass">MasterPass</h2>
 
 <p>Para utilizar o Masterpass é necessário entrar em contato diretamente com a Mastercard pelo site: https://masterpass.com/pt-br/ e solicitar as credenciais.
 Mais informações e integração completa, você encontra no link: https://developer.mastercard.com/product/masterpass “</p>
 
-<h4 id="requisição-3">Requisição</h4>
+<h3 id="requisição-3">Requisição</h3>
 
 <aside class="request"><span class="method post">POST</span> <span class="endpoint">/1/sales/</span></aside>
 
@@ -1975,7 +1974,7 @@ Mais informações e integração completa, você encontra no link: https://deve
   </tbody>
 </table>
 
-<h4 id="resposta-3">Resposta</h4>
+<h3 id="resposta-3">Resposta</h3>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"MerchantOrderId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014111708"</span><span class="p">,</span><span class="w">
@@ -2116,7 +2115,7 @@ Mais informações e integração completa, você encontra no link: https://deve
   </tbody>
 </table>
 
-<h3 id="visacheckout">VisaCheckout</h3>
+<h2 id="visacheckout">VisaCheckout</h2>
 
 <p>É possivel realizar uma transação com VisaCheckout de duas maneiras:</p>
 
@@ -2127,7 +2126,7 @@ Mais informações e integração completa, você encontra no link: https://deve
 
 <aside class="notice">Atenção:  Para VisaCheckout, o nó Wallet pode ser enviado apenas com o "Type", assim marcado a transação com sendo da carteira. Nesse contexto, o cartão de crédito deve ser enviado. </aside>
 
-<h4 id="sem-dados-do-cartão">Sem dados do Cartão</h4>
+<h3 id="sem-dados-do-cartão">Sem dados do Cartão</h3>
 
 <p><strong>Requisição</strong></p>
 
@@ -2305,7 +2304,7 @@ Mais informações e integração completa, você encontra no link: https://deve
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="com-dados-do-cartão">Com dados do Cartão</h4>
+<h3 id="com-dados-do-cartão">Com dados do Cartão</h3>
 
 <p><strong>Requisição</strong></p>
 
