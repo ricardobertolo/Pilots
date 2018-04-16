@@ -679,6 +679,20 @@
       <td>Sim</td>
       <td>indica qual o tipo de carteira: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
     </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Wallet.Cavv</code></td>
+      <td>Texto</td>
+      <td>255</td>
+      <td>Sim</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Wallet.ECI</code></td>
+      <td>Texto</td>
+      <td>255</td>
+      <td>Sim</td>
+      <td> </td>
+    </tr>
   </tbody>
 </table>
 
@@ -856,7 +870,21 @@
 <h3 id="pré-requisitos">Pré-Requisitos</h3>
 
 <p>Para utilização da Apple Pay no formato <strong>Descriptografia</strong> é necessario que a loja ja esteja cadastrada junto a Apple e possua um <code class="highlighter-rouge">MerchantIdentifier</code>
-A integração <strong>Descriptografia</strong> exige que o lojista realize o upload manual de um <strong>certificado CSR no formato PEM</strong> fornecido pela Cielo. Entre em contato com a equipe de produtos Cielo para maiores informações.</p>
+A integração <strong>Descriptografia</strong> exige que o lojista realize o upload manual de um <strong>certificado CSR no formato PEM</strong> fornecido pela Cielo. Entre em contato com a equipe de produtos Cielo para obeter o Certificado.</p>
+
+<p>Para obter o <code class="highlighter-rouge">MerchantIdentifier</code> realize os passos abaixo:</p>
+
+<ol>
+  <li>Log em <a href="https://developer.apple.com."><strong>Apple Developer</strong></a></li>
+  <li>Selecione <strong>Certificates, IDs &amp; Profiles</strong></li>
+  <li>Dentro da área “Identifiers” clique em “Merchant IDs”</li>
+  <li>Clique no  <strong>+</strong> no canto direito, abaixo de “Registering a Merchant ID”</li>
+  <li>Defina a descrição do MerchantID e o identificador. Exemplo: “merchant.com.CIELO.merchantAccount”</li>
+  <li>Clique em “continuar” e verifique se as informações inseridas estão corretas.</li>
+  <li>Finalize o processo.</li>
+</ol>
+
+<p>O <code class="highlighter-rouge">MerchantIdentifier</code> deve ser enviado a Cielo para a criação de um Certificado CSR no formato PEM.</p>
 
 <h4 id="requisição">Requisição</h4>
 
