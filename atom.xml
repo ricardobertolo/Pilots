@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-16T17:59:45+00:00</updated>
+    <updated>2018-04-16T18:00:55+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -939,7 +939,7 @@ O código de retorno &lt;strong&gt;85 representa sucesso no Zero Auth&lt;/strong
   &lt;li&gt;&lt;strong&gt;Envio do cartão&lt;/strong&gt; - Quando a loja busca o cartão, e o enviar por conta propria a API Cielo e-commerce para processamento&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;requisição&quot;&gt;Requisição&lt;/h3&gt;
+&lt;h3 id=&quot;requisição---descriptografia&quot;&gt;Requisição - Descriptografia&lt;/h3&gt;
 
 &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Descriptografia&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -1629,7 +1629,7 @@ O código de retorno &lt;strong&gt;85 representa sucesso no Zero Auth&lt;/strong
 &lt;p&gt;Para utilização da Apple Pay no formato &lt;strong&gt;Descriptografia&lt;/strong&gt; é necessario que a loja ja esteja cadastrada junto a Apple e possua um &lt;code class=&quot;highlighter-rouge&quot;&gt;MerchantIdentifier&lt;/code&gt;
 A integração &lt;strong&gt;Descriptografia&lt;/strong&gt; exige que o lojista realize o upload manual de um &lt;strong&gt;certificado CSR no formato PEM&lt;/strong&gt; fornecido pela Cielo. Entre em contato com a equipe de produtos Cielo para maiores informações.&lt;/p&gt;
 
-&lt;h4 id=&quot;requisição-1&quot;&gt;Requisição&lt;/h4&gt;
+&lt;h4 id=&quot;requisição&quot;&gt;Requisição&lt;/h4&gt;
 
 &lt;p&gt;Exemplo de Requisição padrão &lt;em&gt;Apple Pay&lt;/em&gt;&lt;/p&gt;
 
@@ -1953,7 +1953,7 @@ A integração &lt;strong&gt;Descriptografia&lt;/strong&gt; exige que o lojista 
 
 &lt;h3 id=&quot;samsung-pay&quot;&gt;Samsung Pay&lt;/h3&gt;
 
-&lt;h4 id=&quot;requisição-2&quot;&gt;Requisição&lt;/h4&gt;
+&lt;h4 id=&quot;requisição-1&quot;&gt;Requisição&lt;/h4&gt;
 
 &lt;p&gt;Exemplo de Requisição padrão &lt;em&gt;Samsung Pay&lt;/em&gt;&lt;/p&gt;
 
@@ -2272,7 +2272,7 @@ A integração &lt;strong&gt;Descriptografia&lt;/strong&gt; exige que o lojista 
 
 &lt;h3 id=&quot;android-pay&quot;&gt;Android Pay&lt;/h3&gt;
 
-&lt;h4 id=&quot;requisição-3&quot;&gt;Requisição&lt;/h4&gt;
+&lt;h4 id=&quot;requisição-2&quot;&gt;Requisição&lt;/h4&gt;
 
 &lt;p&gt;Exemplo de Requisição padrão &lt;em&gt;Android Pay&lt;/em&gt;&lt;/p&gt;
 
@@ -2598,7 +2598,7 @@ A integração &lt;strong&gt;Descriptografia&lt;/strong&gt; exige que o lojista 
 &lt;p&gt;Para utilizar o Masterpass é necessário entrar em contato diretamente com a Mastercard pelo site: https://masterpass.com/pt-br/ e solicitar as credenciais.
 Mais informações e integração completa, você encontra no link: https://developer.mastercard.com/product/masterpass “&lt;/p&gt;
 
-&lt;h4 id=&quot;requisição-4&quot;&gt;Requisição&lt;/h4&gt;
+&lt;h4 id=&quot;requisição-3&quot;&gt;Requisição&lt;/h4&gt;
 
 &lt;aside class=&quot;request&quot;&gt;&lt;span class=&quot;method post&quot;&gt;POST&lt;/span&gt; &lt;span class=&quot;endpoint&quot;&gt;/1/sales/&lt;/span&gt;&lt;/aside&gt;
 
