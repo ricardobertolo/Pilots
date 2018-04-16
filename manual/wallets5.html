@@ -555,36 +555,32 @@
 
 <h3 id="requisição---envio-de-cartão">Requisição - Envio de cartão</h3>
 
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">--</span><span class="w"> </span><span class="err">Envio</span><span class="w"> </span><span class="err">de</span><span class="w"> </span><span class="err">cartão</span><span class="w">
-</span><span class="p">{</span><span class="w">
-  </span><span class="s2">"MerchantOrderId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014111708"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"Customer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Exemplo Wallet Padrão"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Identity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11225468954"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"IdentityType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CPF"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"Payment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"Type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CreditCard"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Installments"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"Currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRL"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"CreditCard"</span><span class="p">:{</span><span class="w">
-         </span><span class="s2">"CardNumber"</span><span class="p">:</span><span class="s2">"4532117132161520"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"Holder"</span><span class="p">:</span><span class="s2">"Leonardo Romano"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"ExpirationDate"</span><span class="p">:</span><span class="s2">"08/2020"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"SecurityCode"</span><span class="p">:</span><span class="s2">"420"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"Brand"</span><span class="p">:</span><span class="s2">"visa
-    "</span><span class="err">Wallet</span><span class="s2">": {
-      "</span><span class="err">Type</span><span class="s2">": "</span><span class="err">TIPO</span><span class="w"> </span><span class="err">DE</span><span class="w"> </span><span class="err">WALLET</span><span class="s2">",
-      "</span><span class="err">WalletKey</span><span class="s2">": "</span><span class="err">IDENTIFICADOR</span><span class="w"> </span><span class="err">DA</span><span class="w"> </span><span class="err">LOJA</span><span class="w"> </span><span class="err">NA</span><span class="w"> </span><span class="err">WALLET</span><span class="s2">",
-      "</span><span class="err">AdditionalData</span><span class="s2">": {
-        "</span><span class="err">EphemeralPublicKey</span><span class="s2">": "</span><span class="err">TOKEN</span><span class="w"> </span><span class="err">INFORMADO</span><span class="w"> </span><span class="err">PELA</span><span class="w"> </span><span class="err">WALLET</span><span class="s2">"
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-- Envio de cartão
+{
+  "MerchantOrderId": "2014111708",
+  "Customer": {
+    "Name": "Exemplo Wallet Padrão",
+    "Identity": "11225468954",
+    "IdentityType": "CPF"
+  },
+  "Payment": {
+    "Type": "CreditCard",
+    "Amount": 100,
+    "Installments": 1,
+    "Currency": "BRL",
+    "CreditCard":{
+         "CardNumber":"4532117132161520",
+         "Holder":"Leonardo Romano",
+         "ExpirationDate":"08/2020",
+         "SecurityCode":"420",
+         "Brand":"visa
+    "Wallet": {
+         "Type": "TIPO DE WALLET",
+          "WalletKey": "IDENTIFICADOR DA LOJA NA WALLET",
       }
-    }
   }
 }
-
-</span></code></pre></div></div>
+</code></pre></div></div>
 
 <table>
   <thead>
