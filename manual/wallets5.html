@@ -1363,16 +1363,16 @@ A integração <strong>Descriptografia</strong> exige que o lojista realize o up
     <tr>
       <td><code class="highlighter-rouge">Wallet.ECI</code></td>
       <td>Texto</td>
-      <td>255</td>
+      <td>3</td>
       <td>Sim</td>
-      <td>Token retornado pela Wallet. Deve ser enviado em Integrações: <code class="highlighter-rouge">ApplePay</code>/ <code class="highlighter-rouge">AndroidPay</code></td>
+      <td>O ECI (Eletronic Commerce Indicator) representa o quão segura é uma transação. Esse valor deve ser levado em consideração pelo lojista para decidir sobre a captura da transação.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Wallet.CAVV</code></td>
       <td>Texto</td>
       <td>255</td>
       <td>Sim</td>
-      <td>Código informado pela <code class="highlighter-rouge">MasterPass</code> ao lojista</td>
+      <td>Campo de validação retornado pela Wallet e utilizado como base de autorização</td>
     </tr>
   </tbody>
 </table>
@@ -1546,6 +1546,20 @@ A integração <strong>Descriptografia</strong> exige que o lojista realize o up
       <td>Texto</td>
       <td>255</td>
       <td>3</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ECI</code></td>
+      <td>O ECI (Eletronic Commerce Indicator) indica a segurança de uma transação. Deve ser levado em conta pelo lojista para decidir sobre a captura</td>
+      <td>Texto</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">CAVV</code></td>
+      <td>Campo de validação retornado pela Wallet e utilizado como base de autorização</td>
+      <td>Texto</td>
+      <td>255</td>
+      <td>–</td>
     </tr>
   </tbody>
 </table>

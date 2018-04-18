@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-18T19:32:29+00:00</updated>
+    <updated>2018-04-18T19:48:39+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -2127,16 +2127,16 @@ A integração &lt;strong&gt;Descriptografia&lt;/strong&gt; exige que o lojista 
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Wallet.ECI&lt;/code&gt;&lt;/td&gt;
       &lt;td&gt;Texto&lt;/td&gt;
-      &lt;td&gt;255&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
       &lt;td&gt;Sim&lt;/td&gt;
-      &lt;td&gt;Token retornado pela Wallet. Deve ser enviado em Integrações: &lt;code class=&quot;highlighter-rouge&quot;&gt;ApplePay&lt;/code&gt;/ &lt;code class=&quot;highlighter-rouge&quot;&gt;AndroidPay&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;O ECI (Eletronic Commerce Indicator) representa o quão segura é uma transação. Esse valor deve ser levado em consideração pelo lojista para decidir sobre a captura da transação.&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Wallet.CAVV&lt;/code&gt;&lt;/td&gt;
       &lt;td&gt;Texto&lt;/td&gt;
       &lt;td&gt;255&lt;/td&gt;
       &lt;td&gt;Sim&lt;/td&gt;
-      &lt;td&gt;Código informado pela &lt;code class=&quot;highlighter-rouge&quot;&gt;MasterPass&lt;/code&gt; ao lojista&lt;/td&gt;
+      &lt;td&gt;Campo de validação retornado pela Wallet e utilizado como base de autorização&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -2310,6 +2310,20 @@ A integração &lt;strong&gt;Descriptografia&lt;/strong&gt; exige que o lojista 
       &lt;td&gt;Texto&lt;/td&gt;
       &lt;td&gt;255&lt;/td&gt;
       &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ECI&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;O ECI (Eletronic Commerce Indicator) indica a segurança de uma transação. Deve ser levado em conta pelo lojista para decidir sobre a captura&lt;/td&gt;
+      &lt;td&gt;Texto&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;CAVV&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Campo de validação retornado pela Wallet e utilizado como base de autorização&lt;/td&gt;
+      &lt;td&gt;Texto&lt;/td&gt;
+      &lt;td&gt;255&lt;/td&gt;
+      &lt;td&gt;–&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
