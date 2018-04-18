@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-18T19:56:04+00:00</updated>
+    <updated>2018-04-18T20:03:11+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -1666,7 +1666,19 @@ A integração &lt;strong&gt;Descriptografia&lt;/strong&gt; exige que o lojista 
 &lt;/ol&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;O Certificado PEM contem o código CSR solicitado pela Apple.&lt;/p&gt;
+  &lt;p&gt;O Certificado PEM contem o código CSR solicitado pela Apple. &lt;br /&gt;
+Formato de um Certificado &lt;code class=&quot;highlighter-rouge&quot;&gt;.PEM&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;—–BEGIN CERTIFICATE REQUEST—–
+MIHwMIGYAgEAMDgxCzAJBgNVBAYTAkJSMRAwDgYDVQQKDAdicmFzcGFnMRcwFQYD
+VQQDDA5icmFzcGFnLmNvbS5icjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABBIP
+ULN00aAwYW+sfTettoIl8l9YrDCkF1HEiI9PgwLcM4jCkIAvnrKZ3loLWDi4J8Jh
+ML01OuTohYS46lqF6p4wCgYIKoZIzj0EAwIDRwAwRAIgWLAPtSWKQ3sJYLc6jmWa
+RNWCoNR2XBQZKdg5bIGNYpYCIHSLsQVSK8taL7dGirOBxXiOqtUA9hWxn0g1Mf3U
+VKeU
+—–END CERTIFICATE REQUEST—–&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h3 id=&quot;descriptografia&quot;&gt;Descriptografia&lt;/h3&gt;
