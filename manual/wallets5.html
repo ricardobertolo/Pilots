@@ -872,10 +872,12 @@
 <p>Para utilização da Apple Pay no formato <strong>Descriptografia</strong> é necessario que a loja ja esteja cadastrada junto a Apple e possua um <code class="highlighter-rouge">MerchantIdentifier</code>
 A integração <strong>Descriptografia</strong> exige que o lojista realize o upload manual de um <strong>certificado CSR no formato PEM</strong> fornecido pela Cielo. Entre em contato com a equipe de produtos Cielo para obeter o Certificado.</p>
 
+<h4 id="merchantidentifier">MerchantIdentifier</h4>
+
 <p>Para obter o <code class="highlighter-rouge">MerchantIdentifier</code> realize os passos abaixo:</p>
 
 <ol>
-  <li>Log em <a href="https://developer.apple.com."><strong>Apple Developer</strong></a></li>
+  <li>Log em <a href="https://developer.apple.com/"><strong>Apple Developer</strong></a></li>
   <li>Selecione <a href="https://developer.apple.com/library/content/ApplePay_Guide/Configuration.html"><strong>Certificates, IDs &amp; Profiles</strong></a></li>
   <li>Dentro da área “Identifiers” clique em “Merchant IDs”</li>
   <li>Clique no  <strong>+</strong> no canto direito, abaixo de “Registering a Merchant ID”</li>
@@ -886,6 +888,21 @@ A integração <strong>Descriptografia</strong> exige que o lojista realize o up
 
 <blockquote>
   <p>O <code class="highlighter-rouge">MerchantIdentifier</code> deve ser enviado a Cielo para a criação de um Certificado CSR no formato PEM.</p>
+</blockquote>
+
+<h4 id="certificado-csr">Certificado CSR</h4>
+
+<p>Após enviar o <code class="highlighter-rouge">MerchantIdentifier</code> para a equipe de produtos Cielo, a loja receberá um certificado de extensão <code class="highlighter-rouge">PEM</code> e deverá seguir os sequintes passos:</p>
+
+<ol>
+  <li>Log em <a href="https://developer.apple.com/"><strong>Apple Developer</strong></a></li>
+  <li>Selecione <a href="https://developer.apple.com/library/content/ApplePay_Guide/Configuration.html"><strong>Certificates, IDs &amp; Profiles</strong></a></li>
+  <li>Realize o Upload do Certificado</li>
+  <li>Finalize o processo.</li>
+</ol>
+
+<blockquote>
+  <p>O Certificado PEM contem o código CSR solicitado pela Apple.</p>
 </blockquote>
 
 <h3 id="descriptografia">Descriptografia</h3>
@@ -1223,8 +1240,8 @@ A integração <strong>Descriptografia</strong> exige que o lojista realize o up
 <p>Nesse modelo, o lojista informa apenas que a transação é de uma Wallet Apple Pay e envia os dados ECI e CAVV fornecidos pela APPLE</p>
 
 <ul>
-  <li><em>CAVV</em> - pode ser extraido do campo <code class="highlighter-rouge">onlinePaymentCryptogram</code> retornado pela Apple no payload</li>
-  <li><em>ECI</em> - pode ser extraido do campo <code class="highlighter-rouge">eciIndicator</code> retornado pela Apple no payload</li>
+  <li><strong>CAVV</strong> - pode ser extraido do campo <code class="highlighter-rouge">onlinePaymentCryptogram</code> retornado pela Apple no payload</li>
+  <li><strong>ECI</strong> - pode ser extraido do campo <code class="highlighter-rouge">eciIndicator</code> retornado pela Apple no payload</li>
 </ul>
 
 <aside class="request"><span class="method post">POST</span> <span class="endpoint">/1/sales/</span></aside>
