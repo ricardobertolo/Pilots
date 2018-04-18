@@ -221,7 +221,7 @@
 
 <p>O Request dever ser enviado apenas no Header da requisição.</p>
 
-<aside class="request"><span class="method delete">DELETE</span><span class="endpoint">https://cieloecommerce.cielo.com.br/v2/public/v2/token</span></aside>
+<aside class="request"><span class="method post">POST</span><span class="endpoint">https://cieloecommerce.cielo.com.br/v2/public/v2/token</span></aside>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">x-www-form-urlencoded</span><span class="w">
 </span><span class="err">--header</span><span class="w"> </span><span class="s2">"Authorization: Basic {base64}"</span><span class="w">  
@@ -769,7 +769,7 @@
 
 <p>Para excluir um link existente basta realizar um <code class="highlighter-rouge">DELETE</code> informando o <code class="highlighter-rouge">ID</code> do link.</p>
 
-<aside class="request"><span class="method put">DELETE</span><span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v1/products/{id}</span></aside>
+<aside class="request"><span class="method delete">DELETE</span><span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v1/products/{id}</span></aside>
 
 <blockquote>
   <p><strong>Header:</strong> Authorization: Bearer {access_token}</p>
