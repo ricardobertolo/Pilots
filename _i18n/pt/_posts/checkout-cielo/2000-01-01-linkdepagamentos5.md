@@ -375,7 +375,7 @@ Para Atualizar um link existente basta realizar um `GET` informando o `ID` do li
 
 Para excluir um link existente basta realizar um `DELETE` informando o `ID` do link.
 
-<aside class="request"><span class="method put">DELETE</span><span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v1/products/{id}</span></aside>
+<aside class="request"><span class="method delete">DELETE</span><span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v1/products/{id}</span></aside>
 
 > **Header:** Authorization: Bearer {access_token}
 
