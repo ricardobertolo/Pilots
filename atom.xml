@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-16T19:19:02+00:00</updated>
+    <updated>2018-04-18T14:50:25+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -19445,6 +19445,23 @@ Para consultar uma cartão aberto via API 3.0, é necessario realizar um `GET` u
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;h2 id=&quot;obter-credênciais&quot;&gt;Obter Credênciais&lt;/h2&gt;
+
+&lt;p&gt;Para obter as credênciais no Checkout Cielo, basta seguir o fluxo abaixo:&lt;/p&gt;
+
+&lt;p&gt;1 - Acesso o Backoffice &lt;strong&gt;Checkout Cielo&lt;/strong&gt;
+2 - Na aba &lt;strong&gt;“Configurações”&lt;/strong&gt;, acesse a opção &lt;strong&gt;“Dados cadastrais”&lt;/strong&gt; clique em &lt;strong&gt;“Gerar Credenciais de acesso às APIs”&lt;/strong&gt; como na imagem abaixo&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/gerarcredenciais.png&quot; alt=&quot;backoffice&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;3 - A mensagem abaixo será enviada para o &lt;strong&gt;e-mail de contato tecnico&lt;/strong&gt;, contendo as credenciais de acesso:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/emailcredencial.png&quot; alt=&quot;e-mail&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Caso o botão de &lt;strong&gt;“Gerar Credenciais de acesso às APIs”&lt;/strong&gt; não esteja disponivel em seu backoffice, acione a equipe de Produtos Cielo para a liberação da funcionalidade&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;h2 id=&quot;token-de-acesso&quot;&gt;Token de acesso&lt;/h2&gt;
 
