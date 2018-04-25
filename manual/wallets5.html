@@ -166,6 +166,8 @@
 
 <aside class="notice">Atenção: Para o cartão de débito, quando for enviado na requisição o nó “Wallet”, será necessário o nó “DebitCard” contendo a “ReturnUrl”.</aside>
 
+<aside class="notice">Atenção:  Devido a necessidade de utilização de Chaves efemeras para realizar operações de crédito, a Recorrnência não está disponivel para transações de Wallets </aside>
+
 <h2 id="integração">Integração</h2>
 
 <p>As wallets na Api Cielo E-commerce possuem duas maneiras de utilização.</p>
@@ -379,7 +381,7 @@ Cada Wallet possui um formato de <code class="highlighter-rouge">EphemeralPublic
       <td>Texto</td>
       <td>255</td>
       <td>Sim</td>
-      <td>Chave retornada pela Wallet. Deve ser enviado em Integrações: <code class="highlighter-rouge">ApplePay</code>/ <code class="highlighter-rouge">AndroidPay</code></td>
+      <td>Chave retornada pela Wallet para descriptografia. Deve ser enviado em Integrações: <code class="highlighter-rouge">ApplePay</code>/ <code class="highlighter-rouge">AndroidPay</code></td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Wallet.AdditionalData.capturecode</code></td>

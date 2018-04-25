@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-25T17:33:24+00:00</updated>
+    <updated>2018-04-25T17:36:05+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -930,6 +930,8 @@ O código de retorno &lt;strong&gt;85 representa sucesso no Zero Auth&lt;/strong
 
 &lt;aside class=&quot;notice&quot;&gt;Atenção: Para o cartão de débito, quando for enviado na requisição o nó “Wallet”, será necessário o nó “DebitCard” contendo a “ReturnUrl”.&lt;/aside&gt;
 
+&lt;aside class=&quot;notice&quot;&gt;Atenção:  Devido a necessidade de utilização de Chaves efemeras para realizar operações de crédito, a Recorrnência não está disponivel para transações de Wallets &lt;/aside&gt;
+
 &lt;h2 id=&quot;integração&quot;&gt;Integração&lt;/h2&gt;
 
 &lt;p&gt;As wallets na Api Cielo E-commerce possuem duas maneiras de utilização.&lt;/p&gt;
@@ -1143,7 +1145,7 @@ Cada Wallet possui um formato de &lt;code class=&quot;highlighter-rouge&quot;&gt
       &lt;td&gt;Texto&lt;/td&gt;
       &lt;td&gt;255&lt;/td&gt;
       &lt;td&gt;Sim&lt;/td&gt;
-      &lt;td&gt;Chave retornada pela Wallet. Deve ser enviado em Integrações: &lt;code class=&quot;highlighter-rouge&quot;&gt;ApplePay&lt;/code&gt;/ &lt;code class=&quot;highlighter-rouge&quot;&gt;AndroidPay&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Chave retornada pela Wallet para descriptografia. Deve ser enviado em Integrações: &lt;code class=&quot;highlighter-rouge&quot;&gt;ApplePay&lt;/code&gt;/ &lt;code class=&quot;highlighter-rouge&quot;&gt;AndroidPay&lt;/code&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Wallet.AdditionalData.capturecode&lt;/code&gt;&lt;/td&gt;
