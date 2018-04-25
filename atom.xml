@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-25T19:21:30+00:00</updated>
+    <updated>2018-04-25T19:22:03+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -932,7 +932,7 @@ O código de retorno &lt;strong&gt;85 representa sucesso no Zero Auth&lt;/strong
 
 &lt;aside class=&quot;Warning&quot;&gt;Atenção:  Devido a necessidade de utilização de Chaves efemeras para realizar operações de crédito, a Recorrnência não está disponivel para transações de Wallets &lt;/aside&gt;
 
-&lt;h2 id=&quot;integração&quot;&gt;Integração&lt;/h2&gt;
+&lt;h2 id=&quot;integração-base&quot;&gt;Integração base&lt;/h2&gt;
 
 &lt;p&gt;As wallets na Api Cielo E-commerce possuem duas maneiras de utilização.&lt;/p&gt;
 
