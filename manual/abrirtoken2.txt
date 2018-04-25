@@ -212,8 +212,6 @@ Para consultar uma cartão aberto via API 3.0, é necessario realizar um `GET` u
             
                 
             
-                
-            
             </ul>
         </div>
         
