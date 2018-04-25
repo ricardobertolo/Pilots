@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-25T17:37:26+00:00</updated>
+    <updated>2018-04-25T17:41:53+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -1655,7 +1655,7 @@ A integração &lt;strong&gt;Descriptografia&lt;/strong&gt; exige que o lojista 
   &lt;li&gt;Log em &lt;a href=&quot;https://developer.apple.com/&quot;&gt;&lt;strong&gt;Apple Developer&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Selecione &lt;a href=&quot;https://developer.apple.com/library/content/ApplePay_Guide/Configuration.html&quot;&gt;&lt;strong&gt;Certificates, IDs &amp;amp; Profiles&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Dentro da área “Identifiers” clique em “Merchant IDs”&lt;/li&gt;
-  &lt;li&gt;Clique no  &lt;strong&gt;+&lt;/strong&gt; no canto direito, abaixo de “Registering a Merchant ID”&lt;/li&gt;
+  &lt;li&gt;Clique no &lt;strong&gt;+&lt;/strong&gt; no canto direito, abaixo de “Registering a Merchant ID”&lt;/li&gt;
   &lt;li&gt;Defina a descrição do MerchantID e o identificador. Exemplo: “merchant.com.CIELO.merchantAccount”&lt;/li&gt;
   &lt;li&gt;Clique em “continuar” e verifique se as informações inseridas estão corretas.&lt;/li&gt;
   &lt;li&gt;Finalize o processo.&lt;/li&gt;
