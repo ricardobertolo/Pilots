@@ -129,7 +129,7 @@ Para consultar uma cartão aberto via API 3.0, é necessario realizar um `GET` u
 
 ## Request 
 
-<aside class="request"><span class="method get">GET</span> <span class="endpoint">https://apiquery.cieloecommerce.cielo.com.br/1/card/opencard/{token}?masked=false</span></aside> 
+<aside class="request"><span class="method get">GET</span> <span class="endpoint">https://apiquery.cieloecommerce.cielo.com.br/1/card/{token}?masked=false</span></aside> 
 
 ## Response
 
