@@ -121,31 +121,50 @@
             </div>
 
             <div class="post">
-  # Abrir Token
+  <h1 id="abrir-token">Abrir Token</h1>
 
-Para consultar uma cartão aberto via API 3.0, é necessario realizar um `GET` utilizando o endpoint abaixo:
+<p>Para consultar uma cartão aberto via API 3.0, é necessario realizar um <code class="highlighter-rouge">GET</code> utilizando o endpoint abaixo:</p>
 
-> Para utilizar esta funcionalidade é necessario que a loja possua uma permissão especial concedida pelo time de Produtos Cielo.
+<blockquote>
+  <p>Para utilizar esta funcionalidade é necessario que a loja possua uma permissão especial concedida pelo time de Produtos Cielo.</p>
+</blockquote>
 
-## Request 
+<h2 id="request">Request</h2>
 
-<aside class="request"><span class="method get">GET</span> <span class="endpoint">https://apiquery.cieloecommerce.cielo.com.br/1/card/{token}?masked=false</span></aside> 
+<aside class="request"><span class="method get">GET</span> <span class="endpoint">https://apiquery.cieloecommerce.cielo.com.br/1/card/{token}?masked=false</span></aside>
 
-## Response
+<h2 id="response">Response</h2>
 
-``` json
-{  
-   "CardNumber": "Cartão aberto", 
-   "Holder": "Portador do cartão", 
-   "ExpirationDate": "12/2018" 
-}
-``` 
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">  
+   </span><span class="s2">"CardNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cartão aberto"</span><span class="p">,</span><span class="w"> 
+   </span><span class="s2">"Holder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Portador do cartão"</span><span class="p">,</span><span class="w"> 
+   </span><span class="s2">"ExpirationDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12/2018"</span><span class="w"> 
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
-|Parametro       |Descrição                            |
-|----------------|-------------------------------------|
-|`CardNumber`    |Número do cartão tokenizado          |
-|`Holder`        |Nome do portador tokenizado          |
-|`ExpirationDate`|Data de validade do cartão tokenizado|
+<table>
+  <thead>
+    <tr>
+      <th>Parametro</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">CardNumber</code></td>
+      <td>Número do cartão tokenizado</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Holder</code></td>
+      <td>Nome do portador tokenizado</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ExpirationDate</code></td>
+      <td>Data de validade do cartão tokenizado</td>
+    </tr>
+  </tbody>
+</table>
+
 </div>
 
 
