@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-25T19:17:44+00:00</updated>
+    <updated>2018-04-25T19:18:27+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -976,7 +976,7 @@ Cada Wallet possui um formato de &lt;code class=&quot;highlighter-rouge&quot;&gt
 &lt;/table&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;**Observações:
+  &lt;p&gt;&lt;strong&gt;Observações:&lt;/strong&gt;
 A Wallet MasterPass não possui &lt;code class=&quot;highlighter-rouge&quot;&gt;WalletKey&lt;/code&gt;
 O &lt;code class=&quot;highlighter-rouge&quot;&gt;WalletKey&lt;/code&gt; Apple Pay pode ser obtido dentro do campo &lt;code class=&quot;highlighter-rouge&quot;&gt;DATA&lt;/code&gt; do payload Apple&lt;/p&gt;
 &lt;/blockquote&gt;
