@@ -1606,6 +1606,60 @@ VKeU<br />
 
 <h2 id="samsung-pay">Samsung Pay</h2>
 
+<h3 id="pré-requisitos-1">Pré-Requisitos</h3>
+
+<p>Para utilização da Samsung no formato <strong>Descriptografia</strong> é necessario que a loja ja esteja cadastrada junto a plataforma da <a href="https://pay.samsung.com/developers"><strong>Samsung</strong></a>.
+A integração <strong>Descriptografia</strong> exige que o lojista realize o upload manual de um <strong>certificado CSR no formato PEM</strong> fornecido pela Cielo. Entre em contato com a equipe de produtos Cielo para obeter o Certificado.</p>
+
+<h4 id="certificado-csr-1">Certificado CSR</h4>
+
+<p>Após enviar o <code class="highlighter-rouge">MerchantIdentifier</code> para a equipe de produtos Cielo, a loja receberá um certificado de extensão <code class="highlighter-rouge">PEM</code> e deverá seguir os sequintes passos:</p>
+
+<ol>
+  <li>Log em <a href="https://pay.samsung.com/developers"><strong>Samsung</strong></a></li>
+  <li>Selecione <a href="https://pay.samsung.com/developers/projects/prdnsvc"><strong>My Projects</strong></a> para criar serviço</li>
+  <li>Realize o Upload do Certificado Cielo</li>
+  <li>Finalize o processo.</li>
+</ol>
+
+<blockquote>
+  <p>O Certificado PEM contem o código CSR solicitado pela Samsung. <br /></p>
+</blockquote>
+
+<blockquote>
+  <p>Formato de um Certificado <code class="highlighter-rouge">.PEM</code></p>
+</blockquote>
+
+<blockquote>
+  <p>—–BEGIN CERTIFICATE REQUEST—–<br />
+MIHwMIGYAgEAMDgxCzAJBgNVBAYTAkJSMRAwDgYDVQQKDAdicmFzcGFnMRcwFQYD<br />
+VQQDDA5icmFzcGFnLmNvbS5icjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABBIP<br />
+ULN00aAwYW+sfTettoIl8l9YrDCkF1HEiI9PgwLcM4jCkIAvnrKZ3loLWDi4J8Jh<br />
+ML01OuTohYS46lqF6p4wCgYIKoZIzj0EAwIDRwAwRAIgWLAPtSWKQ3sJYLc6jmWa<br />
+RNWCoNR2XBQZKdg5bIGNYpYCIHSLsQVSK8taL7dGirOBxXiOqtUA9hWxn0g1Mf3U<br />
+VKeU<br />
+—–END CERTIFICATE REQUEST—–<br /></p>
+</blockquote>
+
+<blockquote>
+  <p>—–BEGIN CERTIFICATE REQUEST—–
+MIICezCCAWMCAQAwODELMAkGA1UEBhMCQlIxEDAOBgNVBAoMB2JyYXNwYWcxFzAV<br />
+BgNVBAMMDmJyYXNwYWcuY29tLmJyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIB<br />
+CgKCAQEApsk94DAhdgvgUgGT/fufNkofB2AeX/sPXRT0mm92DM8XgbyWw6FgsE2T<br />
+3SFi5WmYwDo12tVjAydUCRzMc6HDIrLBFJsfHgrZWLlf9QIPLZFW/zA9+qZLP+VW<br />
+nGyGBil+rgNhylXfDGjCvUMJ5bSLbcC2oC1HGO613HsJrbsB96sE107RkFhDEChD<br />
+9fZi3MoD2lCwVjbAu/zDatoloxy8Bc02HqlK4sVZuPUzFIZ9gg19G/QU6WI2ompv<br />
+akkhc07xS8QIU/XuzMV5KdpCs/mlRH1QQICSHdviu2UKbKlM9KWqpBOeLwGsQ59P<br />
+mQVb5bPgdAix8KvBAWAi8pcdgjWiIwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBh<br />
+4XwAmQabopYgJgb+8UwIV+LbWKszwXVUq9nYfiDN0OT4KguilfNQQMHvULlHVahJ<br />
+ibiRsuFfkmEkvGkrUm1IMCHjwZjDzJmbB/7VwqHzq5HJ9pa9Dt6xRO7psCycSE4N<br />
+m+iQs18muHWkzPFouBw+HDVgD8NJZS0mPKSnOmdWpajUHkpDsXY+XctLI2n6NAc3<br />
+sy65A6ljFGpjdHG+aJc7TjzjSBpNXyY5bys5zGF44wgOKq/md5nMp6IeqYAZ+D1N<br />
+aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
+/mYyDuIyBIna9ij0Ygff<br />
+—–END CERTIFICATE REQUEST—–<br />”,</p>
+</blockquote>
+
 <h3 id="requisição-4">Requisição</h3>
 
 <p>Exemplo de Requisição padrão <em>Samsung Pay</em></p>
