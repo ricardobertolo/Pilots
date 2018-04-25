@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-25T17:36:05+00:00</updated>
+    <updated>2018-04-25T17:37:26+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -1326,7 +1326,9 @@ Cada Wallet possui um formato de &lt;code class=&quot;highlighter-rouge&quot;&gt
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h3 id=&quot;requisição---envio-de-cartão&quot;&gt;Requisição - Envio de cartão&lt;/h3&gt;
+&lt;h3 id=&quot;envio-de-cartão&quot;&gt;Envio de cartão&lt;/h3&gt;
+
+&lt;h4 id=&quot;requisição-1&quot;&gt;Requisição&lt;/h4&gt;
 
 &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Envio&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;de&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;cartão&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -1476,7 +1478,7 @@ Cada Wallet possui um formato de &lt;code class=&quot;highlighter-rouge&quot;&gt
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h3 id=&quot;respostas&quot;&gt;Respostas&lt;/h3&gt;
+&lt;h4 id=&quot;respostas&quot;&gt;Respostas&lt;/h4&gt;
 
 &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
     &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;MerchantOrderId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2014111703&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -1629,13 +1631,6 @@ Cada Wallet possui um formato de &lt;code class=&quot;highlighter-rouge&quot;&gt
       &lt;td&gt;Ver tabela &lt;code class=&quot;highlighter-rouge&quot;&gt;WalletKey&lt;/code&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;AdditionalData.EphemeralPublicKey&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Token retornado pela Wallet. Deve ser enviado em Integrações: &lt;code class=&quot;highlighter-rouge&quot;&gt;ApplePay&lt;/code&gt;/ &lt;code class=&quot;highlighter-rouge&quot;&gt;AndroidPay&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Texto&lt;/td&gt;
-      &lt;td&gt;255&lt;/td&gt;
-      &lt;td&gt;Ver Tabela &lt;code class=&quot;highlighter-rouge&quot;&gt;EphemeralPublicKey&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;AdditionalData.capturecode&lt;/code&gt;&lt;/td&gt;
       &lt;td&gt;Código informado pela &lt;code class=&quot;highlighter-rouge&quot;&gt;MasterPass&lt;/code&gt; ao lojista&lt;/td&gt;
       &lt;td&gt;Texto&lt;/td&gt;
@@ -1701,7 +1696,7 @@ VKeU&lt;br /&gt;
 
 &lt;p&gt;No modelo apresentado a seguir, demonstramos como utilizar a integração Apple Pay Cielo via o envio do WalletKey + EphemeralPublicKey retornados pela Apple via Payload&lt;/p&gt;
 
-&lt;h4 id=&quot;requisição-1&quot;&gt;Requisição&lt;/h4&gt;
+&lt;h4 id=&quot;requisição-2&quot;&gt;Requisição&lt;/h4&gt;
 
 &lt;p&gt;Exemplo de Requisição &lt;em&gt;Apple Pay&lt;/em&gt;&lt;/p&gt;
 
@@ -2023,11 +2018,11 @@ VKeU&lt;br /&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h3 id=&quot;envio-de-cartão&quot;&gt;Envio de cartão&lt;/h3&gt;
+&lt;h3 id=&quot;envio-de-cartão-1&quot;&gt;Envio de cartão&lt;/h3&gt;
 
 &lt;p&gt;No modelo apresentado a seguir, demonstramos como a Apple Pay pode ser utilizada com o envio do cartão aberto, sem a necessidade de WalletKey.&lt;/p&gt;
 
-&lt;h4 id=&quot;requisição-2&quot;&gt;Requisição&lt;/h4&gt;
+&lt;h4 id=&quot;requisição-3&quot;&gt;Requisição&lt;/h4&gt;
 
 &lt;p&gt;Nesse modelo, o lojista informa apenas que a transação é de uma Wallet Apple Pay e envia os dados ECI e CAVV fornecidos pela APPLE&lt;/p&gt;
 
@@ -2375,7 +2370,7 @@ VKeU&lt;br /&gt;
 
 &lt;h2 id=&quot;samsung-pay&quot;&gt;Samsung Pay&lt;/h2&gt;
 
-&lt;h3 id=&quot;requisição-3&quot;&gt;Requisição&lt;/h3&gt;
+&lt;h3 id=&quot;requisição-4&quot;&gt;Requisição&lt;/h3&gt;
 
 &lt;p&gt;Exemplo de Requisição padrão &lt;em&gt;Samsung Pay&lt;/em&gt;&lt;/p&gt;
 
@@ -2694,7 +2689,7 @@ VKeU&lt;br /&gt;
 
 &lt;h2 id=&quot;android-pay&quot;&gt;Android Pay&lt;/h2&gt;
 
-&lt;h3 id=&quot;requisição-4&quot;&gt;Requisição&lt;/h3&gt;
+&lt;h3 id=&quot;requisição-5&quot;&gt;Requisição&lt;/h3&gt;
 
 &lt;p&gt;Exemplo de Requisição padrão &lt;em&gt;Android Pay&lt;/em&gt;&lt;/p&gt;
 
@@ -3020,7 +3015,7 @@ VKeU&lt;br /&gt;
 &lt;p&gt;Para utilizar o Masterpass é necessário entrar em contato diretamente com a Mastercard pelo site: https://masterpass.com/pt-br/ e solicitar as credenciais.
 Mais informações e integração completa, você encontra no link: https://developer.mastercard.com/product/masterpass “&lt;/p&gt;
 
-&lt;h3 id=&quot;requisição-5&quot;&gt;Requisição&lt;/h3&gt;
+&lt;h3 id=&quot;requisição-6&quot;&gt;Requisição&lt;/h3&gt;
 
 &lt;aside class=&quot;request&quot;&gt;&lt;span class=&quot;method post&quot;&gt;POST&lt;/span&gt; &lt;span class=&quot;endpoint&quot;&gt;/1/sales/&lt;/span&gt;&lt;/aside&gt;
 

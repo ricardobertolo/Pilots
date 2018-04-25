@@ -562,7 +562,9 @@ Cada Wallet possui um formato de <code class="highlighter-rouge">EphemeralPublic
   </tbody>
 </table>
 
-<h3 id="requisição---envio-de-cartão">Requisição - Envio de cartão</h3>
+<h3 id="envio-de-cartão">Envio de cartão</h3>
+
+<h4 id="requisição-1">Requisição</h4>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">--</span><span class="w"> </span><span class="err">Envio</span><span class="w"> </span><span class="err">de</span><span class="w"> </span><span class="err">cartão</span><span class="w">
 </span><span class="p">{</span><span class="w">
@@ -712,7 +714,7 @@ Cada Wallet possui um formato de <code class="highlighter-rouge">EphemeralPublic
   </tbody>
 </table>
 
-<h3 id="respostas">Respostas</h3>
+<h4 id="respostas">Respostas</h4>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"MerchantOrderId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014111703"</span><span class="p">,</span><span class="w">
@@ -865,13 +867,6 @@ Cada Wallet possui um formato de <code class="highlighter-rouge">EphemeralPublic
       <td>Ver tabela <code class="highlighter-rouge">WalletKey</code></td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">AdditionalData.EphemeralPublicKey</code></td>
-      <td>Token retornado pela Wallet. Deve ser enviado em Integrações: <code class="highlighter-rouge">ApplePay</code>/ <code class="highlighter-rouge">AndroidPay</code></td>
-      <td>Texto</td>
-      <td>255</td>
-      <td>Ver Tabela <code class="highlighter-rouge">EphemeralPublicKey</code></td>
-    </tr>
-    <tr>
       <td><code class="highlighter-rouge">AdditionalData.capturecode</code></td>
       <td>Código informado pela <code class="highlighter-rouge">MasterPass</code> ao lojista</td>
       <td>Texto</td>
@@ -937,7 +932,7 @@ VKeU<br />
 
 <p>No modelo apresentado a seguir, demonstramos como utilizar a integração Apple Pay Cielo via o envio do WalletKey + EphemeralPublicKey retornados pela Apple via Payload</p>
 
-<h4 id="requisição-1">Requisição</h4>
+<h4 id="requisição-2">Requisição</h4>
 
 <p>Exemplo de Requisição <em>Apple Pay</em></p>
 
@@ -1259,11 +1254,11 @@ VKeU<br />
   </tbody>
 </table>
 
-<h3 id="envio-de-cartão">Envio de cartão</h3>
+<h3 id="envio-de-cartão-1">Envio de cartão</h3>
 
 <p>No modelo apresentado a seguir, demonstramos como a Apple Pay pode ser utilizada com o envio do cartão aberto, sem a necessidade de WalletKey.</p>
 
-<h4 id="requisição-2">Requisição</h4>
+<h4 id="requisição-3">Requisição</h4>
 
 <p>Nesse modelo, o lojista informa apenas que a transação é de uma Wallet Apple Pay e envia os dados ECI e CAVV fornecidos pela APPLE</p>
 
@@ -1611,7 +1606,7 @@ VKeU<br />
 
 <h2 id="samsung-pay">Samsung Pay</h2>
 
-<h3 id="requisição-3">Requisição</h3>
+<h3 id="requisição-4">Requisição</h3>
 
 <p>Exemplo de Requisição padrão <em>Samsung Pay</em></p>
 
@@ -1930,7 +1925,7 @@ VKeU<br />
 
 <h2 id="android-pay">Android Pay</h2>
 
-<h3 id="requisição-4">Requisição</h3>
+<h3 id="requisição-5">Requisição</h3>
 
 <p>Exemplo de Requisição padrão <em>Android Pay</em></p>
 
@@ -2256,7 +2251,7 @@ VKeU<br />
 <p>Para utilizar o Masterpass é necessário entrar em contato diretamente com a Mastercard pelo site: https://masterpass.com/pt-br/ e solicitar as credenciais.
 Mais informações e integração completa, você encontra no link: https://developer.mastercard.com/product/masterpass “</p>
 
-<h3 id="requisição-5">Requisição</h3>
+<h3 id="requisição-6">Requisição</h3>
 
 <aside class="request"><span class="method post">POST</span> <span class="endpoint">/1/sales/</span></aside>
 
