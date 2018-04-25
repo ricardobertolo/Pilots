@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-25T18:43:59+00:00</updated>
+    <updated>2018-04-25T18:44:45+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -4249,22 +4249,6 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl&lt;br /&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h3 id=&quot;pré-requisitos-2&quot;&gt;Pré-Requisitos&lt;/h3&gt;
-
-&lt;p&gt;Para utilização da Samsung no formato &lt;strong&gt;Descriptografia&lt;/strong&gt; é necessario que a loja ja esteja cadastrada junto a plataforma da &lt;a href=&quot;https://pay.samsung.com/developers&quot;&gt;&lt;strong&gt;Samsung&lt;/strong&gt;&lt;/a&gt;.
-A integração &lt;strong&gt;Descriptografia&lt;/strong&gt; exige que o lojista realize o upload manual de um &lt;strong&gt;certificado CSR no formato PEM&lt;/strong&gt; fornecido pela Cielo. Entre em contato com a equipe de produtos Cielo para obter o Certificado.&lt;/p&gt;
-
-&lt;h4 id=&quot;certificado-csr-2&quot;&gt;Certificado CSR&lt;/h4&gt;
-
-&lt;p&gt;Após se cadastrar junto a SamsungPay, a loja deverá requisitar um certificado de extensão &lt;code class=&quot;highlighter-rouge&quot;&gt;PEM&lt;/code&gt; a equipe de produtos Cielo. Com o certificado em mãos, deverá seguir os sequintes passos:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Log em &lt;a href=&quot;https://pay.samsung.com/developers&quot;&gt;&lt;strong&gt;Samsung&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Selecione &lt;a href=&quot;https://pay.samsung.com/developers/projects/prdnsvc&quot;&gt;&lt;strong&gt;My Projects&lt;/strong&gt;&lt;/a&gt; para criar serviço&lt;/li&gt;
-  &lt;li&gt;Realize o Upload do Certificado Cielo&lt;/li&gt;
-  &lt;li&gt;Finalize o processo.&lt;/li&gt;
-&lt;/ol&gt;
-
 &lt;h2 id=&quot;masterpass&quot;&gt;MasterPass&lt;/h2&gt;
 
 &lt;h3 id=&quot;envio-de-cartão-4&quot;&gt;Envio de Cartão&lt;/h3&gt;
@@ -4309,7 +4293,6 @@ A integração &lt;strong&gt;Descriptografia&lt;/strong&gt; exige que o lojista 
      &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;table&gt;
