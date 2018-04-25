@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-25T19:18:27+00:00</updated>
+    <updated>2018-04-25T19:19:32+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -1006,7 +1006,7 @@ Cada Wallet possui um formato de &lt;code class=&quot;highlighter-rouge&quot;&gt
 &lt;/table&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;SamsungPay&lt;/strong&gt; / &lt;strong&gt;VisaCheckout&lt;/strong&gt; / &lt;strong&gt;MasterPass&lt;/strong&gt; Não possuem &lt;code class=&quot;highlighter-rouge&quot;&gt;EphemeralPublicKey&lt;/code&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;em&gt;SamsungPay&lt;/em&gt; / &lt;em&gt;VisaCheckout&lt;/em&gt; / &lt;em&gt;MasterPass&lt;/em&gt; &lt;strong&gt;não possuem&lt;/strong&gt; EphemeralPublicKey&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h3 id=&quot;descriptografia&quot;&gt;Descriptografia&lt;/h3&gt;
