@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-25T18:03:40+00:00</updated>
+    <updated>2018-04-25T18:08:27+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -2377,7 +2377,7 @@ A integração &lt;strong&gt;Descriptografia&lt;/strong&gt; exige que o lojista 
 
 &lt;h4 id=&quot;certificado-csr-1&quot;&gt;Certificado CSR&lt;/h4&gt;
 
-&lt;p&gt;Após enviar o &lt;code class=&quot;highlighter-rouge&quot;&gt;MerchantIdentifier&lt;/code&gt; para a equipe de produtos Cielo, a loja receberá um certificado de extensão &lt;code class=&quot;highlighter-rouge&quot;&gt;PEM&lt;/code&gt; e deverá seguir os sequintes passos:&lt;/p&gt;
+&lt;p&gt;Após se cadastrar junto a SamsungPay, a loja deverá requisitar um certificado de extensão &lt;code class=&quot;highlighter-rouge&quot;&gt;PEM&lt;/code&gt; a equipe de produtos Cielo. Com o certificado em mãos, deverá seguir os sequintes passos:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Log em &lt;a href=&quot;https://pay.samsung.com/developers&quot;&gt;&lt;strong&gt;Samsung&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
