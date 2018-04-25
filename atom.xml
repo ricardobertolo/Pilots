@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-25T19:19:32+00:00</updated>
+    <updated>2018-04-25T19:21:30+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -887,7 +887,7 @@ O código de retorno &lt;strong&gt;85 representa sucesso no Zero Auth&lt;/strong
         <id>https://docscielo.github.io/Pilots/manual/wallets5</id>
         <content type="html">&lt;h1 id=&quot;walletcarteiras&quot;&gt;Wallet/Carteiras&lt;/h1&gt;
 
-&lt;h2 id=&quot;o-que-são-wallets--carteiras&quot;&gt;O que são Wallets / Carteiras&lt;/h2&gt;
+&lt;h2 id=&quot;o-que-são-wallets&quot;&gt;O que são Wallets&lt;/h2&gt;
 
 &lt;p&gt;São repositorios de cartões e dados de pagamentos para consumidores online. As Carteiras digitais permitem que um consumidor realizar o cadastro de seus dados de pagamento, assim agilizando o processo de compra em lojas habilitadas em suas compras por possuir apenas um cadastro.&lt;/p&gt;
 
@@ -897,7 +897,7 @@ O código de retorno &lt;strong&gt;85 representa sucesso no Zero Auth&lt;/strong
 
 &lt;p&gt;Para maiores informações, sugerimos que entre em contato com o setor tecnico da carteira a qual deseja implementar.&lt;/p&gt;
 
-&lt;h2 id=&quot;wallets--carteiras-disponiveis&quot;&gt;Wallets / Carteiras Disponiveis&lt;/h2&gt;
+&lt;h3 id=&quot;wallets-disponiveis&quot;&gt;Wallets Disponiveis&lt;/h3&gt;
 
 &lt;p&gt;A API Cielo Ecommerce possui integração com:&lt;/p&gt;
 
