@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-04-25T12:11:39+00:00</updated>
+    <updated>2018-04-25T12:13:04+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -19803,7 +19803,7 @@ Para consultar uma cartão aberto via API 3.0, é necessario realizar um `GET` u
         <id>https://docscielo.github.io/Pilots/manual/appcielo3</id>
         <content type="html">&lt;h1 id=&quot;cielo-oauth&quot;&gt;Cielo OAUTH&lt;/h1&gt;
 
-&lt;p&gt;O Cielo OAUTH é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce. Ele utiliza como segurança o protocolo &lt;strong&gt;&lt;a href=&quot;https://oauth.net/2/&quot;&gt;OAUTH2&lt;/a&gt;&lt;/strong&gt;, onde é necessário primeiramente obter um token de acesso, utlizando suas credenciais, que deverá posteriormente ser enviado à API CieloOAuth&lt;/p&gt;
+&lt;p&gt;O &lt;strong&gt;Cielo OAUTH&lt;/strong&gt; é um processo de autenticação utilizado em APIs Cielo que são correlacionadas a produtos E-commerce. Ele utiliza como segurança o protocolo &lt;strong&gt;&lt;a href=&quot;https://oauth.net/2/&quot;&gt;OAUTH2&lt;/a&gt;&lt;/strong&gt;, onde é necessário primeiramente obter um token de acesso, utlizando suas credenciais, que deverá posteriormente ser enviado à API CieloOAuth&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Para obter o &lt;code class=&quot;highlighter-rouge&quot;&gt;ClientID&lt;/code&gt; e o &lt;code class=&quot;highlighter-rouge&quot;&gt;ClientSecret&lt;/code&gt;, acione a equipe de Produtos Cielo. Credênciais liberadas apenas para lojistas selecionados,&lt;/p&gt;
