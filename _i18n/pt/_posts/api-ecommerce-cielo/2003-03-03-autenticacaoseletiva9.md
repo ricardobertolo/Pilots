@@ -1,11 +1,11 @@
 ---
 layout: manual
-title: Retentativas
+title: Autenticação Seletiva
 description: Manual integração para Pilotos
 translated: true
 toc_footers: true
 categories: manual
-sort_order: 8
+sort_order: 9
 tags:
   - API e-Commerce Cielo
 language_tabs:
@@ -13,10 +13,6 @@ language_tabs:
   shell: cURL
 ---
 
-# Retentativa Online
-
-> Manual em construção
-
-# Retentativa Offline
+# Autenticação Seletiva
 
 > Manual em construção
