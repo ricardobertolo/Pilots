@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-05-03T20:30:22+00:00</updated>
+    <updated>2018-05-03T20:31:03+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -20481,6 +20481,26 @@ curl
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+</content>
+    </entry>
+    
+    <entry>
+        <title>Retentativas</title>
+        <category term="manual" />
+        <link href="https://docscielo.github.io/Pilots/manual/autenticacaoseletiva9"/>
+        <updated>2003-03-03T00:00:00+00:00</updated>
+        <id>https://docscielo.github.io/Pilots/manual/autenticacaoseletiva9</id>
+        <content type="html">&lt;h1 id=&quot;retentativa-online&quot;&gt;Retentativa Online&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Manual em construção&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;retentativa-offline&quot;&gt;Retentativa Offline&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Manual em construção&lt;/p&gt;
+&lt;/blockquote&gt;
 </content>
     </entry>
     
