@@ -15,8 +15,8 @@ language_tabs:
 
 # Retentativa Online
 
-> Manaual em construção
+> Manual em construção
 
 # Retentativa Offline
 
-> Manaual em construção
+> Manual em construção
