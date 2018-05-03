@@ -15,4 +15,4 @@ language_tabs:
 
 # Autenticação Seletiva
 
-> Manual em construção
+> Manual em construção.
