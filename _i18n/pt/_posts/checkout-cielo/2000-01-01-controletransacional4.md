@@ -124,7 +124,7 @@ O response possuirá o `Checkout_Cielo_Order_Number` que deverá ser usado na co
 
 Para consultar uma transação pelo `Merchant_Order_Number`, basta realizar um `GET`.
 
-<aside class="request"><span class="method get">GET</span><span class="endpoint">https://cieloecommerce.cielo.com.br/api//public/v2/merchantOrderNumber/{merchantordernumber}</span></aside>
+<aside class="request"><span class="method get">GET</span><span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v2/merchantOrderNumber/{merchantordernumber}</span></aside>
 
 > **Header:** Authorization: Bearer {access_token}
 
