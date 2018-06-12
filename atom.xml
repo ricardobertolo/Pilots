@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-05-04T14:31:10+00:00</updated>
+    <updated>2018-06-12T13:37:47+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -627,9 +627,14 @@ A URL de Ativação (&lt;code class=&quot;highlighter-rouge&quot;&gt;ActivationU
 &lt;p&gt;O Zero Auth suporta as seguintes bandeiras:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Visa&lt;/li&gt;
-  &lt;li&gt;MasterCard&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Visa&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;MasterCard&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Elo&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Caso outras bandeiras sejam enviadas, o erro &lt;strong&gt;57-Bandeira inválida&lt;/strong&gt; será exibido.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;h2 id=&quot;caso-de-uso&quot;&gt;Caso de uso&lt;/h2&gt;
 
