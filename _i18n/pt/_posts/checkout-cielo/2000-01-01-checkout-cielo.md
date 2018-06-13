@@ -1501,6 +1501,8 @@ O Checkout Cielo ja é integrado as Wallets, sendo assim não há necessidade po
 * Mudança de fluxos de Captura
 * Mudança de fluxos de Cancelamento
 
+<br>
+
 As Wallets serão apresentadas na tela transacional e o comprador realizará os passos a sequir:
 
 **1º Passo:** <BR> 
