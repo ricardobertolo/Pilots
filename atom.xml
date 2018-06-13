@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-06-13T13:39:43+00:00</updated>
+    <updated>2018-06-13T13:41:14+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -28258,8 +28258,6 @@ Com os dados inclusos na tela, o comprador pode finalizar a transação&lt;/p&gt
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/wallet5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;códigos-de-retorno-das-vendas&quot;&gt;Códigos de Retorno das Vendas&lt;/h1&gt;
 
