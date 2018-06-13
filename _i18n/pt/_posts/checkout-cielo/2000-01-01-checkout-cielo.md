@@ -1526,6 +1526,8 @@ Com os dados inclusos na tela, o comprador pode finalizar a transação
 |-|-|
 |![]({{ site.baseurl_root }}/images/checkout/wallet4.png)|![]({{ site.baseurl_root }}/images/checkout/wallet5.png)|
 
+![]({{ site.baseurl_root }}/images/checkout/wallet5.png)
+
 # Códigos de Retorno das Vendas
 
  Os códigos de retorno são os motivos para uma transação ser não autorizada no Checkout Cielo
