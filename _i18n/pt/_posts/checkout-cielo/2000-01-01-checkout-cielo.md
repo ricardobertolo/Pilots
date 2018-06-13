@@ -1501,8 +1501,6 @@ O Checkout Cielo ja é integrado as Wallets, sendo assim não há necessidade po
 * Mudança de fluxos de Captura
 * Mudança de fluxos de Cancelamento
 
-<br>
-
 As Wallets serão apresentadas na tela transacional e o comprador realizará os passos a sequir:
 
 **1º Passo:** <BR> 
@@ -1525,8 +1523,6 @@ Com os dados inclusos na tela, o comprador pode finalizar a transação
 |Compra Rápido By Cielo|Visa Checkout|
 |-|-|
 |![]({{ site.baseurl_root }}/images/checkout/wallet4.png)|![]({{ site.baseurl_root }}/images/checkout/wallet5.png)|
-
-![]({{ site.baseurl_root }}/images/checkout/wallet5.png)
 
 # Códigos de Retorno das Vendas
 
