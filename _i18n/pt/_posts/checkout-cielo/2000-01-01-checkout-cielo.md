@@ -1485,8 +1485,8 @@ O Checkout Cielo possui integração com:
 
 | Carteira                                                           |Descrição|Observação|
 |:------------------------------------------------------------------:|---------||
-| [*VisaCheckout*](https://vaidevisa.visa.com.br/site/visa-checkout) |Wallet da bandeira Visa, permite que o comprador salve cartões e endereços e os utilize no Checkout |Necessita que o lojista solicite ativação pela Cielo|
-| [*Compre Rápido by Cielo*](https://cieloecommerce.cielo.com.br/backoffice)|Wallet do proprio Checkout Cielo. Permite que o comprador salve dados de endereço e cartão de credito para que seja utilizados entre lojas Checkout|Habilitado automaticamente para lojas Checkout|
+| [**VisaCheckout**](https://vaidevisa.visa.com.br/site/visa-checkout) |Wallet da bandeira Visa, permite que o comprador salve cartões e endereços e os utilize no Checkout |Necessita que o lojista solicite ativação pela Cielo|
+| [**Compre Rápido by Cielo**](https://cieloecommerce.cielo.com.br/backoffice)|Wallet do proprio Checkout Cielo. Permite que o comprador salve dados de endereço e cartão de credito para que seja utilizados entre lojas Checkout|Habilitado automaticamente para lojas Checkout|
 
 ## Wallets no Checkout Cielo
 
@@ -1521,6 +1521,10 @@ Com os dados inclusos na tela, o comprador pode finalizar a transação
 |Dados Preenchidos|
 |-|
 |Imagem 04|
+
+|Compra Rápido By Cielo|Visa Checkout|
+|-|-|
+|Imagem 02|Imagem 03|
 
 # Códigos de Retorno das Vendas
 
