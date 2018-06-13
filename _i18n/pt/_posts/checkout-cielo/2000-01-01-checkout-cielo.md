@@ -1510,6 +1510,8 @@ Na tela transacional, o comprador escolherá a qual wallet deseja utilizar:
 
 Imagem 01
 
+![]({{ site.baseurl_root }}/images/checkout/wallet1.PNG)
+
 **2º Passo:** <BR>
 O comprador fará o login:
 
