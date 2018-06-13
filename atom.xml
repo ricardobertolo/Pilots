@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-06-13T13:44:44+00:00</updated>
+    <updated>2018-06-13T13:51:52+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -28189,7 +28189,7 @@ Se no contrato técnico existir o nó da recorrência, fica obrigatório o tipo 
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;https://vaidevisa.visa.com.br/site/visa-checkout&quot;&gt;&lt;strong&gt;VisaCheckout&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;Wallet da bandeira Visa, permite que o comprador salve cartões e endereços e os utilize no Checkout&lt;/td&gt;
-      &lt;td&gt;Necessita que o lojista solicite ativação pela Cielo&lt;/td&gt;
+      &lt;td&gt;Necessita que o lojista solicite ativação pela &lt;a href=&quot;https://developercielo.github.io/manual/checkout-cielo#suporte-cielo&quot;&gt;&lt;strong&gt;Cielo&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;&lt;a href=&quot;https://cieloecommerce.cielo.com.br/backoffice&quot;&gt;&lt;strong&gt;Compre Rápido by Cielo&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
@@ -28202,6 +28202,8 @@ Se no contrato técnico existir o nó da recorrência, fica obrigatório o tipo 
 &lt;h2 id=&quot;wallets-no-checkout-cielo&quot;&gt;Wallets no Checkout Cielo&lt;/h2&gt;
 
 &lt;p&gt;No Checkout Cielo as wallets são utilizadas para evitar que o comprador preencha todos os dados de pagamento, assim tornando o processo de finalização de compra mais fluido&lt;/p&gt;
+
+&lt;aside class=&quot;warning&quot;&gt;Os cartões salvos são propriedade das respectivas wallets. Não é possivel resgata-los ou vincula-los a lojas especificas dentro do Checkout&lt;/aside&gt;
 
 &lt;h3 id=&quot;utilização&quot;&gt;Utilização&lt;/h3&gt;
 
