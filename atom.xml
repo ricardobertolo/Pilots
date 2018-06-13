@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-06-13T13:22:37+00:00</updated>
+    <updated>2018-06-13T13:27:23+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -28235,8 +28235,8 @@ O comprador fará o login:&lt;/p&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;Imagem 02&lt;/td&gt;
-      &lt;td&gt;Imagem 03&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/wallet2.png&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/wallet3.png&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -28247,27 +28247,14 @@ Com os dados inclusos na tela, o comprador pode finalizar a transação&lt;/p&gt
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th&gt;Dados Preenchidos&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Imagem 04&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
       &lt;th&gt;Compra Rápido By Cielo&lt;/th&gt;
       &lt;th&gt;Visa Checkout&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;Imagem 02&lt;/td&gt;
-      &lt;td&gt;Imagem 03&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/wallet4.png&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/checkout/wallet5.png&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
