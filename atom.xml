@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-06-14T18:57:14+00:00</updated>
+    <updated>2018-06-14T19:01:03+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -4616,22 +4616,49 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl&lt;br /&gt;
     </entry>
     
     <entry>
-        <title>Retentativas</title>
-        <category term="manual" />
-        <link href="https://docscielo.github.io/Pilots/manual/velocity9"/>
+        <title>Velocity</title>
+        <category term="tutorial" />
+        <link href="https://docscielo.github.io/Pilots/tutorial/velocity9"/>
         <updated>2003-03-03T00:00:00+00:00</updated>
-        <id>https://docscielo.github.io/Pilots/manual/velocity9</id>
-        <content type="html">&lt;h1 id=&quot;retentativa-online&quot;&gt;Retentativa Online&lt;/h1&gt;
+        <id>https://docscielo.github.io/Pilots/tutorial/velocity9</id>
+        <content type="html">&lt;h1 id=&quot;o-que-é-velocity&quot;&gt;O que é Velocity&lt;/h1&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Manual em construção&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;O Velocity é um tipo de mecanismo de prevenção à tentativas de fraude, que analisa especificamente o conceito de &lt;strong&gt;“velocidade X dados transacionais”&lt;/strong&gt;. Ela analisa a frequência que determinados dados são utilizados e se esse dados estão inscritos em uma lista de comportamentos passiveis de ações de segurança.&lt;/p&gt;
 
-&lt;h1 id=&quot;retentativa-offline&quot;&gt;Retentativa Offline&lt;/h1&gt;
+&lt;p&gt;Para estabelecimentos comerciais que atuam no mercado de comércio eletrônico e eventualmente recebem transações fraudulentas, o Velocity é um produto que identificará os comportamentos suspeitos de fraude. A ferramenta tem o intuito de auxiliar na análise de fraude por um custo bem menor que uma ferramenta mais tradicional de mercado.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Manual em construção&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Ela é uma aliada na avaliação de comportamentos suspeitos de compra, pois os cálculos serão baseados em &lt;code class=&quot;highlighter-rouge&quot;&gt;elementos de rastreabilidade&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;O Velocity oferece 4 tipos de funcionalidades para validar dados transacionais:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Funcionalidade&lt;/th&gt;
+      &lt;th&gt;Descrição&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Regras de segurança velocity&lt;/td&gt;
+      &lt;td&gt;O Lojista defini um grupo de regras de segurança que vão avaliar se determinados dados transacionais se repetem em um intervalo de tempo suspeito&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Quarentena&lt;/td&gt;
+      &lt;td&gt;Criação de uma lista de dados que serão analisados por um periodo de tempo determinado antes de serem considerados validos ou fraudulentos&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;BlackList&lt;/td&gt;
+      &lt;td&gt;Criação de uma lista de dados que ao serem identificados impedem a transação de ser executada, evitando a criação de uma transação fraudulenta&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Whitelist&lt;/td&gt;
+      &lt;td&gt;Criação de uma lista de dados que ao serem identificados permitem que a transação de seja executada, mesmo que existam regras de segurança em ação&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;A funcionalidade deve ser contratada à parte, e posteriormente habilitada em sua loja pela equipe de Suporte Cielo Ecommerce via o Admin 3.0&lt;/p&gt;
 </content>
     </entry>
     
