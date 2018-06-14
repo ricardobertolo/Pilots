@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-06-13T13:53:18+00:00</updated>
+    <updated>2018-06-14T18:56:36+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -4621,6 +4621,26 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl&lt;br /&gt;
         <link href="https://docscielo.github.io/Pilots/manual/retentativas8"/>
         <updated>2003-03-03T00:00:00+00:00</updated>
         <id>https://docscielo.github.io/Pilots/manual/retentativas8</id>
+        <content type="html">&lt;h1 id=&quot;retentativa-online&quot;&gt;Retentativa Online&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Manual em construção&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;retentativa-offline&quot;&gt;Retentativa Offline&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Manual em construção&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    </entry>
+    
+    <entry>
+        <title>Retentativas</title>
+        <category term="manual" />
+        <link href="https://docscielo.github.io/Pilots/manual/retentativas8-copy"/>
+        <updated>2003-03-03T00:00:00+00:00</updated>
+        <id>https://docscielo.github.io/Pilots/manual/retentativas8-copy</id>
         <content type="html">&lt;h1 id=&quot;retentativa-online&quot;&gt;Retentativa Online&lt;/h1&gt;
 
 &lt;blockquote&gt;
