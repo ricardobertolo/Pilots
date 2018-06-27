@@ -11,7 +11,7 @@ tags:
   - Documentos
 ---
 
-# I.PALAVRA DO PRESIDENTE
+# I. PALAVRA DO PRESIDENTE
 
 Na Braspag, simplificar compras de forma ética é cumprir com a legislação brasileira, com os compromissos financeiros assumidos e com as normas regulatórias dos mercados nos quais atuamos.
 O Código de Conduta e Ética da Braspag tem por objetivo direcionar nossas práticas de trabalho de forma correta, justa e honesta. Nele estão relacionadas as boas práticas estabelecidas em nossa companhia por meio das políticas, normas e procedimentos.
@@ -19,10 +19,10 @@ Os colaboradores devem conhecer e praticar este Código, pois nele estão as dir
 Transformar a experiência de consumo em algo simples é a nossa motivação para sermos melhores a cada dia e, desta forma, construirmos uma empresa capaz de fazer a diferença e também contribuir para o desenvolvimento sustentável do nosso País.
 Convido os colaboradores e os públicos com os quais nos relacionamos, a ler e conhecer os termos descritos nesse documento.
 
-**Rogério Signorini**
+**Rogério Signorini**<br>
 **Diretor Geral da Braspag**
 
-# II.ABRANGÊNCIA
+# II. ABRANGÊNCIA
 
 Este é um documento de referência não só para os colaboradores, mas também para os demais públicos com os quais a Braspag se relaciona. São esses diferentes públicos envolvidos no negócio que, ao fazerem suas escolhas cotidianas, reforçam a conduta e a ética que a Empresa acredita.
 O Código de Conduta e Ética da Braspag considera as relações com os seguintes públicos, embora não se limite a eles:
@@ -40,23 +40,25 @@ O Código de Conduta e Ética da Braspag considera as relações com os seguinte
 * Imprensa
 * Portadores de cartões
  
-# III.OBJETIVO
+# III. OBJETIVO
 
 As páginas a seguir apresentam os elementos essenciais que devem ser considerados nas relações estabelecidas pela Braspag com os seus mais diferentes públicos. Com este código, a empresa busca contribuir para a criação de parcerias de longo prazo que sejam compatíveis com os interesses e as aspirações mais legítimas da sociedade. 
-É esperado que este documento não contemple todas as situações de conflitos éticos que possam surgir no dia a dia e o objetivo é definir os princípios básicos que deverão nortear as relações e atividades cotidianas, além de reforçar a necessidade de cumprir a legislação vigente. 
+
+É esperado que este documento não contemple todas as situações de conflitos éticos que possam surgir no dia a dia e o objetivo é definir os princípios básicos que deverão nortear as relações e atividades cotidianas, além de reforçar a necessidade de cumprir a legislação vigente.
+
 A Braspag conta com a colaboração de todos para que este Código de Conduta e Ética seja praticado diariamente, uma vez que a sua legitimidade é dada com o tempo e com a prática constante.
 
-# IV.VISÃO, MISSÃO E VALORES
+# IV. VISÃO, MISSÃO E VALORES
 
-## 1.VISÃO
+## 1. VISÃO
 
 “Transformar a experiência de consumo em algo simples, conveniente e prazeroso”.
 
-## 2.MISSÃO
+## 2. MISSÃO
 
-“Simplificar Compras”.
+**“Simplificar Compras”.**
 
-## 3.VALORES
+## 3. VALORES
 
 * Empreendorismo e Inovação
 * Paixão pelo que faz
@@ -65,21 +67,21 @@ A Braspag conta com a colaboração de todos para que este Código de Conduta e 
 * Cliente encantado
 * Ética
 
-# V.ORIENTAÇÕES GERAIS DE CONDUTA
+# V. ORIENTAÇÕES GERAIS DE CONDUTA
 
-## A.IGUALDADE DE OPORTUNIDADES
+## A. IGUALDADE DE OPORTUNIDADES
 
 A Braspag valoriza a igualdade de oportunidades. Acreditamos que todas as pessoas devem ter as mesmas chances de desenvolvimento profissional.
 O direito de igualdade deve ser assegurado por todos os profissionais envolvidos nos processos de contratação e de gestão de pessoas da Companhia. A seleção dos candidatos elegíveis às posições é feita de forma objetiva, e considera o perfil para cada cargo, as características profissionais e os conhecimentos necessários para o desempenho das funções. 
 
-## B.RESPEITO PELAS PESSOAS
+## B. RESPEITO PELAS PESSOAS
 
 A Braspag valoriza e segue os princípios da Declaração Universal dos Direitos Humanos, que baseia-se no direito a vida, a liberdade de expressão e a segurança. Esses princípios são a base para a justiça, a liberdade e paz.
 A empresa valoriza a diversidade e é contra qualquer tipo de discriminação em razão de gênero, deficiência, origem, religião, raça, orientação sexual, estado civil, idade, condição social ou quaisquer outras formas de discriminação.
 A Braspag repudia qualquer forma de intimidação ou assédio sexual, moral, religioso, econômico, político ou organizacional. Tampouco tolera agressões físicas e verbais, desrespeito, constrangimento e humilhações. 
 Contribuímos para um ambiente de trabalho que promova a realização pessoal e ofereça perspectivas de desenvolvimento profissional.
 
-## C.CONFLITO DE INTERESSES
+## C. CONFLITO DE INTERESSES
 
 É fundamental que os interesses pessoais não estejam em conflito com os interesses da Braspag. Algumas situações em que estes conflitos podem estar presentes são: 
 
@@ -93,6 +95,7 @@ Estas e outras situações deverão ser imediatamente reportadas por meio do “
 ## D.CONSELHOS DE ADMINISTRAÇÃO, CONSELHOS FISCAIS, COMITÊS OU OUTROS ÓRGÃOS EQUIPARADOS 
 
 A participação em Conselhos e Comitês de Empresas que não estejam sob controle da Braspag, bem como em sociedades filantrópicas e organizações não governamentais, deve ser comunicada pelo colaborador e será avaliada e deliberada pela Diretoria-Executiva ou Comitê Executivo, quando envolver membros da Diretoria-Executiva.
+
 Essas e outras situações que caracterizam potenciais desvios e conflitos de interesse deverão ser imediatamente informadas ao gestor imediato e formalizadas por meio do Canal de Ética para que sejam devidamente avaliadas. Até a conclusão da avaliação, as pessoas envolvidas no potencial conflito deverão, quando possível, ausentar-se da situação em questão e aguardar as orientações do gestor e das áreas competentes.
 
 ## E.CONTRIBUIÇÕES E AFILIAÇÕES A PARTIDOS POLÍTICOS
@@ -103,6 +106,7 @@ A Braspag não realiza contribuições a candidatos, políticos e partidos polí
 
 A Braspag repudia todas as formas de condutas corruptas, tais como suborno, desvios e concessões de vantagens indevidas, assim como a ocultação ou dissimulação desses atos e o impedimento às atividades de investigação e fiscalização.
 Não se pode oferecer ou entregar, direta ou indiretamente, qualquer vantagem indevida, pagamento, presente ou cortesia com a intenção de influenciar a imparcialidade de qualquer autoridade, servidor público, funcionário ou executivo de empresas, em qualquer ato ou decisão a fim de obter benefício impróprio para a empresa.
+
 Da mesma forma, nenhum colaborador da Braspag – independente da hierarquia – devem aceitar vantagens indevidas.
 
 ## G.PREVENÇÃO A FRAUDES
