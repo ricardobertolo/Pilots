@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-02T12:50:32+00:00</updated>
+    <updated>2018-07-02T13:13:11+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -22000,6 +22000,91 @@ Existem 3 tipos de analise de fraude disponiveis:&lt;/p&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;h2 id=&quot;device-fingerprint&quot;&gt;Device FingerPrint&lt;/h2&gt;
+
+&lt;h3 id=&quot;o-que-é-o-dfingerprint&quot;&gt;O que é o D.FingerPrint&lt;/h3&gt;
+
+&lt;h3 id=&quot;configurando-fingerprint&quot;&gt;Configurando FingerPrint&lt;/h3&gt;
+
+&lt;p&gt;Será necessário adicionar uma imagem de 1-pixel, que não é mostrada na tela, e 2 segmentos de código à tag ** da sua página de checkout, se certificando que serão necessários de 10 segundos entre a execução do código e a submissão da página para o servidor.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;IMPORTANTE:&lt;/strong&gt; Se os 3 segmentos de código não forem colocados na página de checkout, os resultados podem não ser precisos.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Colocando os segmentos de código e substituindo os valores das variáveis&lt;/p&gt;
+
+&lt;p&gt;Coloque os segmentos de código imediatamente acima da tag ** para garantir que a página Web será renderizada corretamente. Nunca adicione os segmentos de código em elementos HTML visíveis. Os segmentos de código precisam ser carregados antes que o comprador finalize o pedido de compra, caso contrário um erro será gerado.&lt;/p&gt;
+
+&lt;p&gt;Em cada segmento abaixo, substitua as variáveis com os valores referentes a loja e número do pedido.&lt;/p&gt;
+
+&lt;h4 id=&quot;domain&quot;&gt;Domain&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Ambiente&lt;/th&gt;
+      &lt;th&gt;Descrição&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Testing&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Use &lt;strong&gt;h.online-metrix.net&lt;/strong&gt;, que é o DNS do servidor de fingerprint, como apresentado no exemplo de HTML abaixo&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Production&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Altere o domínio para uma URL local, e configure seu servidor Web para redirecionar esta URL para &lt;strong&gt;h.online-metrix.net&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;variáveis&quot;&gt;Variáveis&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Variável&lt;/th&gt;
+      &lt;th&gt;Descrição&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;ProviderOrgId&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Para obter este valor, entre em contato com a Braspag&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;ProviderMerchantId&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Para obter este valor, entre em contato com a Braspag&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;ProviderSessionId&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Prencha este campo com o mesmo valor do campo MerchantOrderId que será enviado na requisição da análise de fraude&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;XML
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Flashcode
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;JavaScript
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;IMPORTANTE:&lt;/strong&gt; Certifique-se de copiar todos os dados corretamente e de ter substituído as variáveis corretamente pelos respectivos valores.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;configurando-seu-servidor-web&quot;&gt;Configurando seu Servidor Web&lt;/h4&gt;
+
+&lt;p&gt;Na seção Colocando os segmentos de código e substituindo os valores das variáveis (Domain), todos os objetos se referem a h.online-metrix.net, que é o DNS do servidor de fingerprint. Quando você estiver pronto para produção, você deve alterar o nome do servidor para uma URL local, e configurar no seu servidor Web um redirecionamento de URL para h.online-metrix.net.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;IMPORTANTE:&lt;/strong&gt; Se você não completar essa seção, você não receberá resultados corretos, e o domínio (URL) do fornecedor de fingerprint ficará visível, sendo mais provável que seu consumidor o bloqueie&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;h2 id=&quot;valores-da-análise-de-fraude&quot;&gt;Valores da Análise de Fraude&lt;/h2&gt;
 
