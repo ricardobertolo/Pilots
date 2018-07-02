@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-02T13:45:35+00:00</updated>
+    <updated>2018-07-02T14:04:22+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -21360,15 +21360,15 @@ Existem 3 tipos de analise de fraude disponiveis:&lt;/p&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Payment.Capture&lt;/code&gt;&lt;/td&gt;
       &lt;td&gt;Booleano&lt;/td&gt;
       &lt;td&gt;—&lt;/td&gt;
-      &lt;td&gt;Não (Default false)&lt;/td&gt;
-      &lt;td&gt;Booleano que identifica que a autorização deve ser com captura automática.&lt;/td&gt;
+      &lt;td&gt;Não&lt;/td&gt;
+      &lt;td&gt;Booleano que identifica que a autorização deve ser com captura automática. (Default false)&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Payment.Authenticate&lt;/code&gt;&lt;/td&gt;
       &lt;td&gt;Booleano&lt;/td&gt;
       &lt;td&gt;—&lt;/td&gt;
-      &lt;td&gt;Não (Default false)&lt;/td&gt;
-      &lt;td&gt;Define se o comprador será direcionado ao Banco emissor para autenticação do cartão&lt;/td&gt;
+      &lt;td&gt;Não&lt;/td&gt;
+      &lt;td&gt;Define se o comprador será direcionado ao Banco emissor para autenticação do cartão (Default false)&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;CreditCard.CardNumber&lt;/code&gt;&lt;/td&gt;
@@ -21402,8 +21402,8 @@ Existem 3 tipos de analise de fraude disponiveis:&lt;/p&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;CreditCard.SaveCard&lt;/code&gt;&lt;/td&gt;
       &lt;td&gt;Booleano&lt;/td&gt;
       &lt;td&gt;—&lt;/td&gt;
-      &lt;td&gt;Não (Default false)&lt;/td&gt;
-      &lt;td&gt;Booleano que identifica se o cartão será salvo para gerar o CardToken.&lt;/td&gt;
+      &lt;td&gt;Não&lt;/td&gt;
+      &lt;td&gt;Booleano que identifica se o cartão será salvo para gerar o CardToken.  (Default false)&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;CreditCard.Brand&lt;/code&gt;&lt;/td&gt;
