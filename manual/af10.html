@@ -1109,6 +1109,18 @@ Existem 3 tipos de analise de fraude disponiveis:</p>
       <td>Sequência de códigos que indicam que existe uma excessiva alteração de identidades do comprador. Os códigos são concatenados usando o caractere ^.</td>
       <td>Texto</td>
       <td>255</td>
+      <td>Ver tabela <strong>InternetInfoCode</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">InternetInfoCode</code></td>
+      <td>Sequência de códigos que indicam que existe uma excessiva alteração de identidades do comprador. Os códigos são concatenados usando o caractere ^.</td>
+      <td>Texto</td>
+      <td>255</td>
       <td>Ex: <br /><br />MORPH-B - O mesmo endereço de cobrança tem sido utilizado várias vezes com identidades de clientes múltiplos.<br />MORPH-C - O mesmo número de conta tem sido utilizado várias vezes com identidades de clientes múltiplos.<br />MORPH-E - O mesmo endereço de e-mail tem sido utilizado várias vezes com identidades de clientes múltiplos. MORPH-I O mesmo endereço IP tem sido utilizado várias vezes com identidades de clientes múltiplos.<br />MORPH-P - O mesmo número de telefone tem sido usado várias vezes com identidades de clientes múltiplos.<br />MORPH-S - O mesmo endereço de entrega tem sido utilizado várias vezes com identidades de clientes múltiplos.<br /></td>
     </tr>
     <tr>
@@ -1138,6 +1150,78 @@ Existem 3 tipos de analise de fraude disponiveis:</p>
       <td>Texto</td>
       <td>100</td>
       <td>Ex: B^D^R^Z<br /><br />A - Mudança de endereço excessiva. O cliente mudou o endereço de cobrança duas ou mais vezes nos últimos seis meses.<br />B - BIN do cartão ou autorização de risco. Os fatores de risco estão relacionados com BIN de cartão de crédito e/ou verificações de autorização do cartão.<br />C - Elevado números de cartões de créditos. O cliente tem usado mais de seis números de cartões de créditos nos últimos seis meses.<br />D - Impacto do endereço de e-mail. O cliente usa um provedor de e-mail gratuito ou o endereço de email é arriscado.<br />E - Lista positiva. O cliente está na sua lista positiva.<br />F - Lista negativa. O número da conta, endereço, endereço de e-mail ou endereço IP para este fim aparece sua lista negativa.<br />G - Inconsistências de geolocalização. O domínio do cliente de e-mail, número de telefone, endereço de cobrança, endereço de envio ou endereço IP é suspeito.<br />H - Excessivas mudanças de nome. O cliente mudou o nome duas ou mais vezes nos últimos seis meses.<br />I - Inconsistências de internet. O endereço IP e de domínio de e-mail não são consistentes com o endereço de cobrança.<br />N - Entrada sem sentido. O nome do cliente e os campos de endereço contém palavras sem sentido ou idioma.<br />O - Obscenidades. Dados do cliente contém palavras obscenas.<br />P - Identidade morphing. Vários valores de um elemento de identidade estão ligados a um valor de um elemento de identidade diferentes. Por exemplo, vários números de telefone estão ligados a um número de conta única.<br />Q - Inconsistências do telefone. O número de telefone do cliente é suspeito.<br />R - Ordem arriscada. A transação, o cliente e o lojista mostram informações correlacionadas de alto risco.<br />T - Cobertura Time. O cliente está a tentar uma compra fora do horário esperado.<br />U - Endereço não verificável. O endereço de cobrança ou de entrega não pode ser verificado.<br />V - Velocity. O número da conta foi usado muitas vezes nos últimos 15 minutos.<br />W - Marcado como suspeito. O endereço de cobrança ou de entrega é semelhante a um endereço previamente marcado como suspeito.<br />Y - O endereço, cidade, estado ou país dos endereços de cobrança e entrega não se correlacionam.<br />Z - Valor inválido. Como a solicitação contém um valor inesperado, um valor padrão foi substituído. Embora a transação ainda possa ser processada, examinar o pedido com cuidado para detectar anomalias.<br /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>CardScheme</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tipo da bandeira</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">MaestroInternational</code></td>
+      <td>Maestro International</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">MaestroUkDomestic</code></td>
+      <td>Maestro UK Domestic</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">MastercardCredit</code></td>
+      <td>MasterCard Credit</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">MastercardDebit</code></td>
+      <td>MasterCard Debit</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">VisaCredit</code></td>
+      <td>Visa Credit</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">VisaDebit</code></td>
+      <td>Visa Debit</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">VisaElectron</code></td>
+      <td>Visa Electron</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>InternetInfoCode</strong></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">MORPH-B</code></td>
+      <td>O mesmo endereço de cobrança tem sido utilizado várias vezes com identidades de clientes múltiplos</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">MORPH-C</code></td>
+      <td>O mesmo número de conta tem sido utilizado várias vezes com identidades de clientes múltiplos</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">MORPH-E</code></td>
+      <td>O mesmo endereço de e-mail tem sido utilizado várias vezes com identidades de clientes múltiplos</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">MORPH-I</code></td>
+      <td>O mesmo endereço IP tem sido utilizado várias vezes com identidades de clientes múltiplos</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">MORPH-P</code></td>
+      <td>O mesmo número de telefone tem sido usado várias vezes com identidades de clientes múltiplos</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">MORPH-S</code></td>
+      <td>O mesmo endereço de entrega tem sido utilizado várias vezes com identidades de clientes múltiplos</td>
     </tr>
   </tbody>
 </table>

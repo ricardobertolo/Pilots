@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-02T14:04:22+00:00</updated>
+    <updated>2018-07-02T14:13:11+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -21968,6 +21968,18 @@ Existem 3 tipos de analise de fraude disponiveis:&lt;/p&gt;
       &lt;td&gt;Sequência de códigos que indicam que existe uma excessiva alteração de identidades do comprador. Os códigos são concatenados usando o caractere ^.&lt;/td&gt;
       &lt;td&gt;Texto&lt;/td&gt;
       &lt;td&gt;255&lt;/td&gt;
+      &lt;td&gt;Ver tabela &lt;strong&gt;InternetInfoCode&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;InternetInfoCode&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Sequência de códigos que indicam que existe uma excessiva alteração de identidades do comprador. Os códigos são concatenados usando o caractere ^.&lt;/td&gt;
+      &lt;td&gt;Texto&lt;/td&gt;
+      &lt;td&gt;255&lt;/td&gt;
       &lt;td&gt;Ex: &lt;br /&gt;&lt;br /&gt;MORPH-B - O mesmo endereço de cobrança tem sido utilizado várias vezes com identidades de clientes múltiplos.&lt;br /&gt;MORPH-C - O mesmo número de conta tem sido utilizado várias vezes com identidades de clientes múltiplos.&lt;br /&gt;MORPH-E - O mesmo endereço de e-mail tem sido utilizado várias vezes com identidades de clientes múltiplos. MORPH-I O mesmo endereço IP tem sido utilizado várias vezes com identidades de clientes múltiplos.&lt;br /&gt;MORPH-P - O mesmo número de telefone tem sido usado várias vezes com identidades de clientes múltiplos.&lt;br /&gt;MORPH-S - O mesmo endereço de entrega tem sido utilizado várias vezes com identidades de clientes múltiplos.&lt;br /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
@@ -21997,6 +22009,78 @@ Existem 3 tipos de analise de fraude disponiveis:&lt;/p&gt;
       &lt;td&gt;Texto&lt;/td&gt;
       &lt;td&gt;100&lt;/td&gt;
       &lt;td&gt;Ex: B^D^R^Z&lt;br /&gt;&lt;br /&gt;A - Mudança de endereço excessiva. O cliente mudou o endereço de cobrança duas ou mais vezes nos últimos seis meses.&lt;br /&gt;B - BIN do cartão ou autorização de risco. Os fatores de risco estão relacionados com BIN de cartão de crédito e/ou verificações de autorização do cartão.&lt;br /&gt;C - Elevado números de cartões de créditos. O cliente tem usado mais de seis números de cartões de créditos nos últimos seis meses.&lt;br /&gt;D - Impacto do endereço de e-mail. O cliente usa um provedor de e-mail gratuito ou o endereço de email é arriscado.&lt;br /&gt;E - Lista positiva. O cliente está na sua lista positiva.&lt;br /&gt;F - Lista negativa. O número da conta, endereço, endereço de e-mail ou endereço IP para este fim aparece sua lista negativa.&lt;br /&gt;G - Inconsistências de geolocalização. O domínio do cliente de e-mail, número de telefone, endereço de cobrança, endereço de envio ou endereço IP é suspeito.&lt;br /&gt;H - Excessivas mudanças de nome. O cliente mudou o nome duas ou mais vezes nos últimos seis meses.&lt;br /&gt;I - Inconsistências de internet. O endereço IP e de domínio de e-mail não são consistentes com o endereço de cobrança.&lt;br /&gt;N - Entrada sem sentido. O nome do cliente e os campos de endereço contém palavras sem sentido ou idioma.&lt;br /&gt;O - Obscenidades. Dados do cliente contém palavras obscenas.&lt;br /&gt;P - Identidade morphing. Vários valores de um elemento de identidade estão ligados a um valor de um elemento de identidade diferentes. Por exemplo, vários números de telefone estão ligados a um número de conta única.&lt;br /&gt;Q - Inconsistências do telefone. O número de telefone do cliente é suspeito.&lt;br /&gt;R - Ordem arriscada. A transação, o cliente e o lojista mostram informações correlacionadas de alto risco.&lt;br /&gt;T - Cobertura Time. O cliente está a tentar uma compra fora do horário esperado.&lt;br /&gt;U - Endereço não verificável. O endereço de cobrança ou de entrega não pode ser verificado.&lt;br /&gt;V - Velocity. O número da conta foi usado muitas vezes nos últimos 15 minutos.&lt;br /&gt;W - Marcado como suspeito. O endereço de cobrança ou de entrega é semelhante a um endereço previamente marcado como suspeito.&lt;br /&gt;Y - O endereço, cidade, estado ou país dos endereços de cobrança e entrega não se correlacionam.&lt;br /&gt;Z - Valor inválido. Como a solicitação contém um valor inesperado, um valor padrão foi substituído. Embora a transação ainda possa ser processada, examinar o pedido com cuidado para detectar anomalias.&lt;br /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;CardScheme&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Tipo da bandeira&lt;/th&gt;
+      &lt;th&gt;Descrição&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;MaestroInternational&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Maestro International&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;MaestroUkDomestic&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Maestro UK Domestic&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;MastercardCredit&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;MasterCard Credit&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;MastercardDebit&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;MasterCard Debit&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;VisaCredit&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Visa Credit&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;VisaDebit&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Visa Debit&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;VisaElectron&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Visa Electron&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;InternetInfoCode&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;MORPH-B&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;O mesmo endereço de cobrança tem sido utilizado várias vezes com identidades de clientes múltiplos&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;MORPH-C&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;O mesmo número de conta tem sido utilizado várias vezes com identidades de clientes múltiplos&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;MORPH-E&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;O mesmo endereço de e-mail tem sido utilizado várias vezes com identidades de clientes múltiplos&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;MORPH-I&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;O mesmo endereço IP tem sido utilizado várias vezes com identidades de clientes múltiplos&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;MORPH-P&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;O mesmo número de telefone tem sido usado várias vezes com identidades de clientes múltiplos&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;MORPH-S&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;O mesmo endereço de entrega tem sido utilizado várias vezes com identidades de clientes múltiplos&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
