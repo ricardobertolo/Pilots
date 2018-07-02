@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-02T12:48:44+00:00</updated>
+    <updated>2018-07-02T12:50:32+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -21016,6 +21016,10 @@ Existem 3 tipos de analise de fraude disponiveis:&lt;/p&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A Analise de Fraude está disponivel apenas para transações de cartão de crédito.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;h2 id=&quot;transação-com-analise-de-fraude-af&quot;&gt;Transação com Analise de Fraude (AF)&lt;/h2&gt;
 
