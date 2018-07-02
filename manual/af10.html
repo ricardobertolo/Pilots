@@ -1142,7 +1142,372 @@ Existem 3 tipos de analise de fraude disponiveis:</p>
   </tbody>
 </table>
 
-<p><strong>CardScheme</strong></p>
+<h2 id="tabelas-af">Tabelas AF</h2>
+
+<h3 id="status">status</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">Started</code></td>
+      <td>Transação recebida pela Cielo.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Accept</code></td>
+      <td>Transação aceita após análise de fraude.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Review</code></td>
+      <td>Transação em revisão após análise de fraude.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Reject</code></td>
+      <td>Transação rejeitada após análise de fraude.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Unfinished</code></td>
+      <td>Transação não finalizada por algum erro interno no sistema.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Pendent</code></td>
+      <td>Transação esperando analise</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ProviderError</code></td>
+      <td>Transação com erro no provedor de antifraude.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="giftcategory">GiftCategory</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">Yes</code></td>
+      <td>Em caso de divergência entre endereços de cobrança e entrega, marca com risco pequeno.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">No</code></td>
+      <td>Em caso de divergência entre endereços de cobrança e entrega, marca com risco alto.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Off</code></td>
+      <td>Ignora a análise de risco para endereços divergentes.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="hosthedge">HostHedge</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Low</td>
+      <td>Baixa importância do e-mail e endereço IP na análise de risco.</td>
+    </tr>
+    <tr>
+      <td>Normal</td>
+      <td>Média importância do e-mail e endereço IP na análise de risco.</td>
+    </tr>
+    <tr>
+      <td>High</td>
+      <td>Alta importância do e-mail e endereço IP na análise de risco.</td>
+    </tr>
+    <tr>
+      <td>Off</td>
+      <td>E-mail e endereço IP não afetam a análise de risco.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="nonsensicalhedge">NonSensicalHedge</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Low</td>
+      <td>Baixa importância da verificação feita sobre o pedido do comprador, na análise de risco.</td>
+    </tr>
+    <tr>
+      <td>Normal</td>
+      <td>Média importância da verificação feita sobre o pedido do comprador, na análise de risco.</td>
+    </tr>
+    <tr>
+      <td>High</td>
+      <td>Alta importância da verificação feita sobre o pedido do comprador, na análise de risco.</td>
+    </tr>
+    <tr>
+      <td>Off</td>
+      <td>Verificação do pedido do comprador não afeta a análise de risco.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="obscenitieshedge">ObscenitiesHedge</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Low</td>
+      <td>Baixa importância da verificação sobre obscenidades do pedido do comprador, na análise de risco.</td>
+    </tr>
+    <tr>
+      <td>Normal</td>
+      <td>Média importância da verificação sobre obscenidades do pedido do comprador, na análise de risco.</td>
+    </tr>
+    <tr>
+      <td>High</td>
+      <td>Alta importância da verificação sobre obscenidades do pedido do comprador, na análise de risco.</td>
+    </tr>
+    <tr>
+      <td>Off</td>
+      <td>Verificação de obscenidade no pedido do comprador não afeta a análise de risco.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="phonehedge">PhoneHedge</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Low</td>
+      <td>Baixa importância nos testes realizados com números de telefone.</td>
+    </tr>
+    <tr>
+      <td>Normal</td>
+      <td>Média importância nos testes realizados com números de telefone.</td>
+    </tr>
+    <tr>
+      <td>High</td>
+      <td>Alta importância nos testes realizados com números de telefone.</td>
+    </tr>
+    <tr>
+      <td>Off</td>
+      <td>Testes de números de telefone não afetam a análise de risco.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="risk">Risk</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Low</td>
+      <td>O produto tem um histórico de poucos chargebacks.</td>
+    </tr>
+    <tr>
+      <td>Normal</td>
+      <td>O produto tem um histórico de chargebacks considerado normal.</td>
+    </tr>
+    <tr>
+      <td>High</td>
+      <td>O produto tem um histórico de chargebacks acima da média.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="timehedge">TimeHedge</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Low</td>
+      <td>Baixa importância no horário do dia em que foi feita a compra, para a análise de risco.</td>
+    </tr>
+    <tr>
+      <td>Normal</td>
+      <td>Média importância no horário do dia em que foi feita a compra, para a análise de risco.</td>
+    </tr>
+    <tr>
+      <td>High</td>
+      <td>Alta importância no horário do dia em que foi feita a compra, para a análise de risco.</td>
+    </tr>
+    <tr>
+      <td>Off</td>
+      <td>O horário da compra não afeta a análise de risco.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="type">Type</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CN</td>
+      <td>Comprador particular</td>
+    </tr>
+    <tr>
+      <td>CP</td>
+      <td>Comprador de negócios</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="velocityhedge">VelocityHedge</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Low</td>
+      <td>Baixa importância no número de compras realizadas pelo cliente nos últimos 15 minutos.</td>
+    </tr>
+    <tr>
+      <td>Normal</td>
+      <td>Média importância no número de compras realizadas pelo cliente nos últimos 15 minutos.</td>
+    </tr>
+    <tr>
+      <td>High</td>
+      <td>Alta importância no número de compras realizadas pelo cliente nos últimos 15 minutos.</td>
+    </tr>
+    <tr>
+      <td>Off</td>
+      <td>A frequência de compras realizadas pelo cliente não afeta a análise de fraude.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="rating">Rating</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Adult</td>
+      <td>Passageiro adulto.</td>
+    </tr>
+    <tr>
+      <td>Child</td>
+      <td>Passageiro criança.</td>
+    </tr>
+    <tr>
+      <td>Infant</td>
+      <td>Passageiro infantil.</td>
+    </tr>
+    <tr>
+      <td>Youth</td>
+      <td>Passageiro adolescente.</td>
+    </tr>
+    <tr>
+      <td>Student</td>
+      <td>Passageiro estudante.</td>
+    </tr>
+    <tr>
+      <td>SeniorCitizen</td>
+      <td>Passageiro idoso.</td>
+    </tr>
+    <tr>
+      <td>Military</td>
+      <td>Passageiro militar.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="method">Method</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>SameDay</td>
+    </tr>
+    <tr>
+      <td>OneDay</td>
+    </tr>
+    <tr>
+      <td>TwoDay</td>
+    </tr>
+    <tr>
+      <td>ThreeDay</td>
+    </tr>
+    <tr>
+      <td>LowCost</td>
+    </tr>
+    <tr>
+      <td>Pickup</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cardscheme">CardScheme</h3>
 
 <table>
   <thead>
@@ -1183,7 +1548,7 @@ Existem 3 tipos de analise de fraude disponiveis:</p>
   </tbody>
 </table>
 
-<p><strong>InternetInfoCode</strong></p>
+<h3 id="internetinfocode">InternetInfoCode</h3>
 
 <table>
   <thead>
@@ -1220,7 +1585,7 @@ Existem 3 tipos de analise de fraude disponiveis:</p>
   </tbody>
 </table>
 
-<p><strong>FraudAnalysisReasonCode</strong></p>
+<h3 id="fraudanalysisreasoncode">FraudAnalysisReasonCode</h3>
 
 <table>
   <thead>
@@ -1281,7 +1646,7 @@ Existem 3 tipos de analise de fraude disponiveis:</p>
   </tbody>
 </table>
 
-<p><strong>AddressInfoCode</strong></p>
+<h3 id="addressinfocode">AddressInfoCode**</h3>
 
 <table>
   <thead>
@@ -1338,7 +1703,7 @@ Existem 3 tipos de analise de fraude disponiveis:</p>
   </tbody>
 </table>
 
-<p><strong>FactorCode</strong></p>
+<h3 id="factorcode">FactorCode</h3>
 
 <table>
   <thead>
@@ -1511,371 +1876,6 @@ Existem 3 tipos de analise de fraude disponiveis:</p>
 <blockquote>
   <p><strong>IMPORTANTE:</strong> Se você não completar essa seção, você não receberá resultados corretos, e o domínio (URL) do fornecedor de fingerprint ficará visível, sendo mais provável que seu consumidor o bloqueie</p>
 </blockquote>
-
-<h2 id="tabelas-af">Tabelas AF</h2>
-
-<h3 id="fraudanalysisstatus">FraudAnalysis.status</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>Campo</th>
-      <th>Descrição</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Started</td>
-      <td>Transação recebida pela Cielo.</td>
-    </tr>
-    <tr>
-      <td>Accept</td>
-      <td>Transação aceita após análise de fraude.</td>
-    </tr>
-    <tr>
-      <td>Review</td>
-      <td>Transação em revisão após análise de fraude.</td>
-    </tr>
-    <tr>
-      <td>Reject</td>
-      <td>Transação rejeitada após análise de fraude.</td>
-    </tr>
-    <tr>
-      <td>Unfinished</td>
-      <td>Transação não finalizada por algum erro interno no sistema.</td>
-    </tr>
-    <tr>
-      <td>Pendent</td>
-      <td>Transação esperando analise</td>
-    </tr>
-    <tr>
-      <td>ProviderError</td>
-      <td>Transação com erro no provedor de antifraude.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="fraudanalysisitemsgiftcategory">FraudAnalysis.Items.GiftCategory</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>Campo</th>
-      <th>Descrição</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Yes</td>
-      <td>Em caso de divergência entre endereços de cobrança e entrega, marca com risco pequeno.</td>
-    </tr>
-    <tr>
-      <td>No</td>
-      <td>Em caso de divergência entre endereços de cobrança e entrega, marca com risco alto.</td>
-    </tr>
-    <tr>
-      <td>Off</td>
-      <td>Ignora a análise de risco para endereços divergentes.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="fraudanalysisitemshosthedge">FraudAnalysis.Items.HostHedge</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>Campo</th>
-      <th>Descrição</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Low</td>
-      <td>Baixa importância do e-mail e endereço IP na análise de risco.</td>
-    </tr>
-    <tr>
-      <td>Normal</td>
-      <td>Média importância do e-mail e endereço IP na análise de risco.</td>
-    </tr>
-    <tr>
-      <td>High</td>
-      <td>Alta importância do e-mail e endereço IP na análise de risco.</td>
-    </tr>
-    <tr>
-      <td>Off</td>
-      <td>E-mail e endereço IP não afetam a análise de risco.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="fraudanalysisitemsnonsensicalhedge">FraudAnalysis.Items.NonSensicalHedge</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>Campo</th>
-      <th>Descrição</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Low</td>
-      <td>Baixa importância da verificação feita sobre o pedido do comprador, na análise de risco.</td>
-    </tr>
-    <tr>
-      <td>Normal</td>
-      <td>Média importância da verificação feita sobre o pedido do comprador, na análise de risco.</td>
-    </tr>
-    <tr>
-      <td>High</td>
-      <td>Alta importância da verificação feita sobre o pedido do comprador, na análise de risco.</td>
-    </tr>
-    <tr>
-      <td>Off</td>
-      <td>Verificação do pedido do comprador não afeta a análise de risco.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="fraudanalysiscartitemsobscenitieshedge">FraudAnalysis.Cart.Items.ObscenitiesHedge</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>Campo</th>
-      <th>Descrição</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Low</td>
-      <td>Baixa importância da verificação sobre obscenidades do pedido do comprador, na análise de risco.</td>
-    </tr>
-    <tr>
-      <td>Normal</td>
-      <td>Média importância da verificação sobre obscenidades do pedido do comprador, na análise de risco.</td>
-    </tr>
-    <tr>
-      <td>High</td>
-      <td>Alta importância da verificação sobre obscenidades do pedido do comprador, na análise de risco.</td>
-    </tr>
-    <tr>
-      <td>Off</td>
-      <td>Verificação de obscenidade no pedido do comprador não afeta a análise de risco.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="fraudanalysiscartitemsphonehedge">FraudAnalysis.Cart.Items.PhoneHedge</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>Campo</th>
-      <th>Descrição</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Low</td>
-      <td>Baixa importância nos testes realizados com números de telefone.</td>
-    </tr>
-    <tr>
-      <td>Normal</td>
-      <td>Média importância nos testes realizados com números de telefone.</td>
-    </tr>
-    <tr>
-      <td>High</td>
-      <td>Alta importância nos testes realizados com números de telefone.</td>
-    </tr>
-    <tr>
-      <td>Off</td>
-      <td>Testes de números de telefone não afetam a análise de risco.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="fraudanalysiscartitemsrisk">FraudAnalysis.Cart.Items.Risk</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>Campo</th>
-      <th>Descrição</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Low</td>
-      <td>O produto tem um histórico de poucos chargebacks.</td>
-    </tr>
-    <tr>
-      <td>Normal</td>
-      <td>O produto tem um histórico de chargebacks considerado normal.</td>
-    </tr>
-    <tr>
-      <td>High</td>
-      <td>O produto tem um histórico de chargebacks acima da média.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="fraudanalysiscartitemstimehedge">FraudAnalysis.Cart.Items.TimeHedge</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>Campo</th>
-      <th>Descrição</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Low</td>
-      <td>Baixa importância no horário do dia em que foi feita a compra, para a análise de risco.</td>
-    </tr>
-    <tr>
-      <td>Normal</td>
-      <td>Média importância no horário do dia em que foi feita a compra, para a análise de risco.</td>
-    </tr>
-    <tr>
-      <td>High</td>
-      <td>Alta importância no horário do dia em que foi feita a compra, para a análise de risco.</td>
-    </tr>
-    <tr>
-      <td>Off</td>
-      <td>O horário da compra não afeta a análise de risco.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="fraudanalysiscartitemstype">FraudAnalysis.Cart.Items.Type</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>Campo</th>
-      <th>Descrição</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>CN</td>
-      <td>Comprador particular</td>
-    </tr>
-    <tr>
-      <td>CP</td>
-      <td>Comprador de negócios</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="fraudanalysiscartitemsvelocityhedge">FraudAnalysis.Cart.Items.VelocityHedge</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>Campo</th>
-      <th>Descrição</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Low</td>
-      <td>Baixa importância no número de compras realizadas pelo cliente nos últimos 15 minutos.</td>
-    </tr>
-    <tr>
-      <td>Normal</td>
-      <td>Média importância no número de compras realizadas pelo cliente nos últimos 15 minutos.</td>
-    </tr>
-    <tr>
-      <td>High</td>
-      <td>Alta importância no número de compras realizadas pelo cliente nos últimos 15 minutos.</td>
-    </tr>
-    <tr>
-      <td>Off</td>
-      <td>A frequência de compras realizadas pelo cliente não afeta a análise de fraude.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="fraudanalysiscartitemspassengerrating">FraudAnalysis.Cart.Items.Passenger.Rating</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>Campo</th>
-      <th>Descrição</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Adult</td>
-      <td>Passageiro adulto.</td>
-    </tr>
-    <tr>
-      <td>Child</td>
-      <td>Passageiro criança.</td>
-    </tr>
-    <tr>
-      <td>Infant</td>
-      <td>Passageiro infantil.</td>
-    </tr>
-    <tr>
-      <td>Youth</td>
-      <td>Passageiro adolescente.</td>
-    </tr>
-    <tr>
-      <td>Student</td>
-      <td>Passageiro estudante.</td>
-    </tr>
-    <tr>
-      <td>SeniorCitizen</td>
-      <td>Passageiro idoso.</td>
-    </tr>
-    <tr>
-      <td>Military</td>
-      <td>Passageiro militar.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="fraudanalysisshippingmethod">FraudAnalysis.Shipping.Method</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>Campo</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>None</td>
-    </tr>
-    <tr>
-      <td>SameDay</td>
-    </tr>
-    <tr>
-      <td>OneDay</td>
-    </tr>
-    <tr>
-      <td>TwoDay</td>
-    </tr>
-    <tr>
-      <td>ThreeDay</td>
-    </tr>
-    <tr>
-      <td>LowCost</td>
-    </tr>
-    <tr>
-      <td>Pickup</td>
-    </tr>
-    <tr>
-      <td>Other</td>
-    </tr>
-  </tbody>
-</table>
 
 </div>
 
