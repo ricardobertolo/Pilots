@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-02T14:51:09+00:00</updated>
+    <updated>2018-07-02T15:32:25+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -22372,7 +22372,7 @@ Existem 3 tipos de configurações de analise de fraude disponiveis:&lt;/p&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;FraudAnalysis.ReplyData&lt;/p&gt;
+&lt;h3 id=&quot;fraudanalysisreplydata&quot;&gt;FraudAnalysis.ReplyData&lt;/h3&gt;
 
 &lt;h4 id=&quot;cardscheme&quot;&gt;CardScheme&lt;/h4&gt;
 
