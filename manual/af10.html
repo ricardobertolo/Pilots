@@ -129,7 +129,7 @@ Essa analise retorna fatores de risco e permite que o lojista tome a decisão se
 <aside class="warning">A análise de fraude oferecida pela Cielo avalia o risco de uma transação, mas não vincula o resultado da analise com a cobertura de ChargeBacks. A Cielo não realiza transações "garantidas"</aside>
 
 <p>Para utilizar o AF, é necessario que o serviço seja ativado junto a Cielo.
-Existem 3 tipos de analise de fraude disponiveis:</p>
+Existem 3 tipos de configurações de analise de fraude disponiveis:</p>
 
 <table>
   <thead>
@@ -1185,7 +1185,9 @@ Existem 3 tipos de analise de fraude disponiveis:</p>
   </tbody>
 </table>
 
-<h3 id="giftcategory">GiftCategory</h3>
+<h3 id="fraudanalysisitems">FraudAnalysis.Items</h3>
+
+<h4 id="giftcategory">GiftCategory</h4>
 
 <table>
   <thead>
@@ -1210,7 +1212,7 @@ Existem 3 tipos de analise de fraude disponiveis:</p>
   </tbody>
 </table>
 
-<h3 id="hosthedge">HostHedge</h3>
+<h4 id="hosthedge">HostHedge</h4>
 
 <table>
   <thead>
@@ -1239,7 +1241,7 @@ Existem 3 tipos de analise de fraude disponiveis:</p>
   </tbody>
 </table>
 
-<h3 id="nonsensicalhedge">NonSensicalHedge</h3>
+<h4 id="nonsensicalhedge">NonSensicalHedge</h4>
 
 <table>
   <thead>
@@ -1268,7 +1270,9 @@ Existem 3 tipos de analise de fraude disponiveis:</p>
   </tbody>
 </table>
 
-<h3 id="obscenitieshedge">ObscenitiesHedge</h3>
+<h3 id="fraudanalysiscart">FraudAnalysis.Cart</h3>
+
+<h4 id="obscenitieshedge">ObscenitiesHedge</h4>
 
 <table>
   <thead>
@@ -1297,7 +1301,7 @@ Existem 3 tipos de analise de fraude disponiveis:</p>
   </tbody>
 </table>
 
-<h3 id="phonehedge">PhoneHedge</h3>
+<h4 id="phonehedge">PhoneHedge</h4>
 
 <table>
   <thead>
@@ -1326,7 +1330,7 @@ Existem 3 tipos de analise de fraude disponiveis:</p>
   </tbody>
 </table>
 
-<h3 id="risk">Risk</h3>
+<h4 id="risk">Risk</h4>
 
 <table>
   <thead>
@@ -1351,7 +1355,7 @@ Existem 3 tipos de analise de fraude disponiveis:</p>
   </tbody>
 </table>
 
-<h3 id="timehedge">TimeHedge</h3>
+<h4 id="timehedge">TimeHedge</h4>
 
 <table>
   <thead>
@@ -1380,7 +1384,7 @@ Existem 3 tipos de analise de fraude disponiveis:</p>
   </tbody>
 </table>
 
-<h3 id="type">Type</h3>
+<h4 id="type">Type</h4>
 
 <table>
   <thead>
@@ -1401,7 +1405,7 @@ Existem 3 tipos de analise de fraude disponiveis:</p>
   </tbody>
 </table>
 
-<h3 id="velocityhedge">VelocityHedge</h3>
+<h4 id="velocityhedge">VelocityHedge</h4>
 
 <table>
   <thead>
@@ -1430,7 +1434,7 @@ Existem 3 tipos de analise de fraude disponiveis:</p>
   </tbody>
 </table>
 
-<h3 id="rating">Rating</h3>
+<h4 id="rating">Rating</h4>
 
 <table>
   <thead>
@@ -1471,7 +1475,9 @@ Existem 3 tipos de analise de fraude disponiveis:</p>
   </tbody>
 </table>
 
-<h3 id="method">Method</h3>
+<h3 id="fraudanalysisshipping">FraudAnalysis.Shipping</h3>
+
+<h4 id="method">Method</h4>
 
 <table>
   <thead>
@@ -1507,7 +1513,9 @@ Existem 3 tipos de analise de fraude disponiveis:</p>
   </tbody>
 </table>
 
-<h3 id="cardscheme">CardScheme</h3>
+<p>FraudAnalysis.ReplyData</p>
+
+<h4 id="cardscheme">CardScheme</h4>
 
 <table>
   <thead>
@@ -1548,7 +1556,64 @@ Existem 3 tipos de analise de fraude disponiveis:</p>
   </tbody>
 </table>
 
-<h3 id="internetinfocode">InternetInfoCode</h3>
+<h4 id="addressinfocode">AddressInfoCode</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tipo</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">COR-BA</code></td>
+      <td>O endereço de cobrança pode ser normalizado</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">COR-SA</code></td>
+      <td>O endereço de entrega pode ser normalizado</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">INTL-SA</code></td>
+      <td>O país de entrega é fora dos U.S</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">MIL-USA</code></td>
+      <td>Este é um endereço militar nos U.S</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">MM-A</code></td>
+      <td>Os endereços de cobrança e entrega usam nomes de ruas diferentes</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">MM-BIN</code></td>
+      <td>O BIN do cartão (os seis primeiros dígitos do número) não corresponde ao país</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">MM-C</code></td>
+      <td>Os endereços de cobrança e entrega usam cidades diferentes</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">MM-CO</code></td>
+      <td>Os endereços de cobrança e entrega usam países diferentes</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">MM-ST</code></td>
+      <td>Os endereços de cobrança e entrega usam estados diferentes</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">MM-Z</code></td>
+      <td>Os endereços de cobrança e entrega usam códidos postais diferentes</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">UNV-ADDR</code></td>
+      <td>O endereço é inverificável</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="internetinfocode">InternetInfoCode</h4>
 
 <table>
   <thead>
@@ -1585,7 +1650,7 @@ Existem 3 tipos de analise de fraude disponiveis:</p>
   </tbody>
 </table>
 
-<h3 id="fraudanalysisreasoncode">FraudAnalysisReasonCode</h3>
+<h4 id="fraudanalysisreasoncode">FraudAnalysisReasonCode</h4>
 
 <table>
   <thead>
@@ -1646,64 +1711,7 @@ Existem 3 tipos de analise de fraude disponiveis:</p>
   </tbody>
 </table>
 
-<h3 id="addressinfocode">AddressInfoCode**</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>Tipo</th>
-      <th>Descrição</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="highlighter-rouge">COR-BA</code></td>
-      <td>O endereço de cobrança pode ser normalizado</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">COR-SA</code></td>
-      <td>O endereço de entrega pode ser normalizado</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">INTL-SA</code></td>
-      <td>O país de entrega é fora dos U.S</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">MIL-USA</code></td>
-      <td>Este é um endereço militar nos U.S</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">MM-A</code></td>
-      <td>Os endereços de cobrança e entrega usam nomes de ruas diferentes</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">MM-BIN</code></td>
-      <td>O BIN do cartão (os seis primeiros dígitos do número) não corresponde ao país</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">MM-C</code></td>
-      <td>Os endereços de cobrança e entrega usam cidades diferentes</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">MM-CO</code></td>
-      <td>Os endereços de cobrança e entrega usam países diferentes</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">MM-ST</code></td>
-      <td>Os endereços de cobrança e entrega usam estados diferentes</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">MM-Z</code></td>
-      <td>Os endereços de cobrança e entrega usam códidos postais diferentes</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">UNV-ADDR</code></td>
-      <td>O endereço é inverificável</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="factorcode">FactorCode</h3>
+<h4 id="factorcode">FactorCode</h4>
 
 <table>
   <thead>
