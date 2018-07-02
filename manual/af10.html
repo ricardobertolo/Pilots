@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="theme-color" content="#00aeef">
+    <meta http-equiv="Content-Language" content="pt">
+
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <title>
+        
+        Análise de Fraude &middot; Documentações e tutoriais
+        
+    </title>
+
+    <link rel="shortcut icon" href="https://docscielo.github.io/Pilots/assets/favicon.ico">
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
+    <script async src="https://use.fontawesome.com/3ae06f1030.js"></script>
+
+    <link rel="stylesheet" href="https://docscielo.github.io/Pilots/assets/bundles/css/bundle.min.css">
+
+    
+        
+            <link rel="alternate" hreflang="pt" href="https://docscielo.github.io/Pilots/manual/af10" />
+        
+    
+        
+            <link rel="alternate" hreflang="en" href="https://docscielo.github.io/Pilots/en/manual/af10" />
+        
+    
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="https://docscielo.github.io/Pilots/atom.xml">
+</head>
+
+    <body>
+        
+        <div class="content-container">
+            <div class="language-tabs">
+                <a class='hide-btn' id="hide-button" title="Comutar"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                <ul class="language-buttons">
+                    
+                    <li><a data-language-name='json'>JSON</a></li>
+                    
+                    <li><a data-language-name='shell'>cURL</a></li>
+                    
+                </ul>
+            </div>
+            <div class="dark-box"></div>
+            <div class="overlay"></div>
+        
+            <div id="submenu">
+                <div class="submenu-container">
+                    <div class="submenu-row sub-items">
+                        <div class="submenu-itens">
+                            <a href="https://desenvolvedores.cielo.com.br/api-portal/pt-br/contact" class="help">Ajuda</a>
+
+                            
+                            <div class="lang">
+                                <span>Idiomas</span>
+
+                                
+                                    
+                                    <a href="https://docscielo.github.io/Pilots/Pilots//manual/af10">
+                                    
+
+                                        <img alt="Português" src="https://docscielo.github.io/Pilots/assets/images/pt.png"/>
+                                    </a>
+                                
+                                    
+                                    <a href="https://docscielo.github.io/Pilots/Pilots/en/manual/af10">
+                                    
+
+                                        <img alt="English" src="https://docscielo.github.io/Pilots/assets/images/en.png"/>
+                                    </a>
+                                
+                            </div>
+                            
+                        </div>
+
+                        
+                    </div>
+                        
+
+                    <div class="submenu-row breads">
+                        <ol class="breadcrumb">
+                            
+                            <li><a href="/">Início</a></li>
+                            
+                            
+                            
+                            
+                                
+                                    
+                                    
+                                    
+                                    
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                
+                            
+                                
+                                    
+                                    <li class="active">&gt; <a href="https://docscielo.github.io/Pilots/manual/af10">Análise de Fraude</a></li>
+                                    
+                                
+                            
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+  <h1 id="análise-de-fraude">Análise de Fraude</h1>
+
+<h2 id="valores-da-análise-de-fraude">Valores da Análise de Fraude</h2>
+
+<h3 id="fraudanalysisstatus">FraudAnalysis.status</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Started</td>
+      <td>Transação recebida pela Cielo.</td>
+    </tr>
+    <tr>
+      <td>Accept</td>
+      <td>Transação aceita após análise de fraude.</td>
+    </tr>
+    <tr>
+      <td>Review</td>
+      <td>Transação em revisão após análise de fraude.</td>
+    </tr>
+    <tr>
+      <td>Reject</td>
+      <td>Transação rejeitada após análise de fraude.</td>
+    </tr>
+    <tr>
+      <td>Unfinished</td>
+      <td>Transação não finalizada por algum erro interno no sistema.</td>
+    </tr>
+    <tr>
+      <td>Pendent</td>
+      <td>Transação esperando analise</td>
+    </tr>
+    <tr>
+      <td>ProviderError</td>
+      <td>Transação com erro no provedor de antifraude.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="fraudanalysisitemsgiftcategory">FraudAnalysis.Items.GiftCategory</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Yes</td>
+      <td>Em caso de divergência entre endereços de cobrança e entrega, marca com risco pequeno.</td>
+    </tr>
+    <tr>
+      <td>No</td>
+      <td>Em caso de divergência entre endereços de cobrança e entrega, marca com risco alto.</td>
+    </tr>
+    <tr>
+      <td>Off</td>
+      <td>Ignora a análise de risco para endereços divergentes.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="fraudanalysisitemshosthedge">FraudAnalysis.Items.HostHedge</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Low</td>
+      <td>Baixa importância do e-mail e endereço IP na análise de risco.</td>
+    </tr>
+    <tr>
+      <td>Normal</td>
+      <td>Média importância do e-mail e endereço IP na análise de risco.</td>
+    </tr>
+    <tr>
+      <td>High</td>
+      <td>Alta importância do e-mail e endereço IP na análise de risco.</td>
+    </tr>
+    <tr>
+      <td>Off</td>
+      <td>E-mail e endereço IP não afetam a análise de risco.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="fraudanalysisitemsnonsensicalhedge">FraudAnalysis.Items.NonSensicalHedge</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Low</td>
+      <td>Baixa importância da verificação feita sobre o pedido do comprador, na análise de risco.</td>
+    </tr>
+    <tr>
+      <td>Normal</td>
+      <td>Média importância da verificação feita sobre o pedido do comprador, na análise de risco.</td>
+    </tr>
+    <tr>
+      <td>High</td>
+      <td>Alta importância da verificação feita sobre o pedido do comprador, na análise de risco.</td>
+    </tr>
+    <tr>
+      <td>Off</td>
+      <td>Verificação do pedido do comprador não afeta a análise de risco.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="fraudanalysiscartitemsobscenitieshedge">FraudAnalysis.Cart.Items.ObscenitiesHedge</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Low</td>
+      <td>Baixa importância da verificação sobre obscenidades do pedido do comprador, na análise de risco.</td>
+    </tr>
+    <tr>
+      <td>Normal</td>
+      <td>Média importância da verificação sobre obscenidades do pedido do comprador, na análise de risco.</td>
+    </tr>
+    <tr>
+      <td>High</td>
+      <td>Alta importância da verificação sobre obscenidades do pedido do comprador, na análise de risco.</td>
+    </tr>
+    <tr>
+      <td>Off</td>
+      <td>Verificação de obscenidade no pedido do comprador não afeta a análise de risco.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="fraudanalysiscartitemsphonehedge">FraudAnalysis.Cart.Items.PhoneHedge</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Low</td>
+      <td>Baixa importância nos testes realizados com números de telefone.</td>
+    </tr>
+    <tr>
+      <td>Normal</td>
+      <td>Média importância nos testes realizados com números de telefone.</td>
+    </tr>
+    <tr>
+      <td>High</td>
+      <td>Alta importância nos testes realizados com números de telefone.</td>
+    </tr>
+    <tr>
+      <td>Off</td>
+      <td>Testes de números de telefone não afetam a análise de risco.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="fraudanalysiscartitemsrisk">FraudAnalysis.Cart.Items.Risk</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Low</td>
+      <td>O produto tem um histórico de poucos chargebacks.</td>
+    </tr>
+    <tr>
+      <td>Normal</td>
+      <td>O produto tem um histórico de chargebacks considerado normal.</td>
+    </tr>
+    <tr>
+      <td>High</td>
+      <td>O produto tem um histórico de chargebacks acima da média.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="fraudanalysiscartitemstimehedge">FraudAnalysis.Cart.Items.TimeHedge</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Low</td>
+      <td>Baixa importância no horário do dia em que foi feita a compra, para a análise de risco.</td>
+    </tr>
+    <tr>
+      <td>Normal</td>
+      <td>Média importância no horário do dia em que foi feita a compra, para a análise de risco.</td>
+    </tr>
+    <tr>
+      <td>High</td>
+      <td>Alta importância no horário do dia em que foi feita a compra, para a análise de risco.</td>
+    </tr>
+    <tr>
+      <td>Off</td>
+      <td>O horário da compra não afeta a análise de risco.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="fraudanalysiscartitemstype">FraudAnalysis.Cart.Items.Type</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CN</td>
+      <td>Comprador particular</td>
+    </tr>
+    <tr>
+      <td>CP</td>
+      <td>Comprador de negócios</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="fraudanalysiscartitemsvelocityhedge">FraudAnalysis.Cart.Items.VelocityHedge</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Low</td>
+      <td>Baixa importância no número de compras realizadas pelo cliente nos últimos 15 minutos.</td>
+    </tr>
+    <tr>
+      <td>Normal</td>
+      <td>Média importância no número de compras realizadas pelo cliente nos últimos 15 minutos.</td>
+    </tr>
+    <tr>
+      <td>High</td>
+      <td>Alta importância no número de compras realizadas pelo cliente nos últimos 15 minutos.</td>
+    </tr>
+    <tr>
+      <td>Off</td>
+      <td>A frequência de compras realizadas pelo cliente não afeta a análise de fraude.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="fraudanalysiscartitemspassengerrating">FraudAnalysis.Cart.Items.Passenger.Rating</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Adult</td>
+      <td>Passageiro adulto.</td>
+    </tr>
+    <tr>
+      <td>Child</td>
+      <td>Passageiro criança.</td>
+    </tr>
+    <tr>
+      <td>Infant</td>
+      <td>Passageiro infantil.</td>
+    </tr>
+    <tr>
+      <td>Youth</td>
+      <td>Passageiro adolescente.</td>
+    </tr>
+    <tr>
+      <td>Student</td>
+      <td>Passageiro estudante.</td>
+    </tr>
+    <tr>
+      <td>SeniorCitizen</td>
+      <td>Passageiro idoso.</td>
+    </tr>
+    <tr>
+      <td>Military</td>
+      <td>Passageiro militar.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="fraudanalysisshippingmethod">FraudAnalysis.Shipping.Method</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>SameDay</td>
+    </tr>
+    <tr>
+      <td>OneDay</td>
+    </tr>
+    <tr>
+      <td>TwoDay</td>
+    </tr>
+    <tr>
+      <td>ThreeDay</td>
+    </tr>
+    <tr>
+      <td>LowCost</td>
+    </tr>
+    <tr>
+      <td>Pickup</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+
+            <div class="footer-conteudo">
+    <div id="footer-conteudo-img" class="col-lg-1 col-md-1">
+            <img src="https://docscielo.github.io/Pilots/assets/images/icon-doubt.svg" width="55px" height="53px" alt="Precisa de ajuda?">
+    </div>
+
+    <div id="footer-conteudo-texto" class="col-lg-11 col-md-11">
+        <h2>Precisa de ajuda?</h2>
+        <p>Se você não conseguiu encontrar sua resposta acima, <a href="https://desenvolvedores.cielo.com.br/api-portal/pt-br/content/suporte">entre em contato conosco</a>.</p>
+    </div>
+</div>
+
+        </div>
+
+        <div class="sidebar">
+  <div class="sidebar-sticky">
+    <div class="sidebar-about">
+      <a title="Comutar a coluna da esquerda" class="hamburger">
+        <i class="fa fa-bars hamb-menu" aria-hidden="true"></i>
+      </a>
+      <a href="https://docscielo.github.io/Pilots/">
+        <img src="https://docscielo.github.io/Pilots/assets/images/logo.png" alt="Documentações e tutoriais">
+      </a>
+      <div></div>
+    </div>
+
+    <div id="toc"></div>
+
+    <div class="fixed-footer">
+        
+        <div class="toc-footer">
+            <h2 class="no-toc toc-footer-title">Materiais complementares</h2>
+            
+
+            
+            
+            
+
+            <ul class="toc-footer">
+            
+                
+                    
+                    <li><a href="https://docscielo.github.io/Pilots/manual/pilotos1" title="Manual integração técnica via API">Manual de Integração</a></li>
+                
+            
+                
+                    
+                    <li><a href="https://docscielo.github.io/Pilots/manual/abrirtoken2" title="Manual integração para Pilotos">Abrir Token</a></li>
+                
+            
+                
+            
+                
+                    
+                    <li><a href="https://docscielo.github.io/Pilots/manual/cartaoalelo3" title="Manual integração para Pilotos">Cartões Alelo</a></li>
+                
+            
+                
+                    
+                    <li><a href="https://docscielo.github.io/Pilots/manual/zeroauth4" title="Manual integração para Pilotos">Zero Auth</a></li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </ul>
+        </div>
+        
+
+    <div class="toc-contact">
+      <div class="contact">
+        <a title="Contato" href="#">
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+          <span>Contato</span>
+        </a>
+      </div>
+      <div class="github">
+        <a title="GitHub" href="https://github.com/developercielo">
+          <i class="fa fa-github" aria-hidden="true"></i>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+        <script src="https://docscielo.github.io/Pilots/assets/bundles/js/bundle.min.js"></script>
+        <script>
+            
+            var selectors = 'h1,h2,h3,h4,h5,h6';
+            
+        </script>
+
+        
+
+        
+        <script>
+            let langs = '';
+            let langsArray = [];
+
+            
+            langs += "<a data-language-name='json'>JSON</a>";
+            langsArray.push('json');
+            
+            langs += "<a data-language-name='shell'>cURL</a>";
+            langsArray.push('shell');
+            
+
+            var toggleCode = 'Comutar';
+        </script>
+
+        <script src='https://docscielo.github.io/Pilots/assets/bundles/js/language_buttons.min.js'></script>
+        
+
+        <!-- Hotjar Tracking Code for https://developercielo.github.io/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:674586,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+    </body>
+</html>
