@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-02T12:23:32+00:00</updated>
+    <updated>2018-07-02T12:48:44+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -20980,7 +20980,42 @@ curl
         <link href="https://docscielo.github.io/Pilots/manual/af10"/>
         <updated>2003-03-03T00:00:00+00:00</updated>
         <id>https://docscielo.github.io/Pilots/manual/af10</id>
-        <content type="html">&lt;h1 id=&quot;análise-de-fraude&quot;&gt;Análise de Fraude&lt;/h1&gt;
+        <content type="html">&lt;h1 id=&quot;análise-de-fraude-af&quot;&gt;Análise de Fraude (AF)&lt;/h1&gt;
+
+&lt;p&gt;A API Cielo e-commerce Cielo oferece um serviço de analise de risco de fraudes em transações online. A Cielo se integra a empresas de analise de risco, como CyberSource, que realizam uma validação dos dados transacionais e do historico de compras do portador do cartão.
+Essa analise retorna fatores de risco e permite que o lojista tome a decisão se dará continuidade a venda.&lt;/p&gt;
+
+&lt;aside class=&quot;warning&quot;&gt;A análise de fraude oferecida pela Cielo avalia o risco de uma transação, mas não vincula o resultado da analise com a cobertura de ChargeBacks. A Cielo não realiza transações &quot;garantidas&quot;&lt;/aside&gt;
+
+&lt;p&gt;Para utilizar o AF, é necessario que o serviço seja ativado junto a Cielo.
+Existem 3 tipos de analise de fraude disponiveis:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Tipo&lt;/th&gt;
+      &lt;th&gt;Descrição&lt;/th&gt;
+      &lt;th&gt;Fornecedor&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;SuperMID Sem BPO&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Regras de analise definidas pela Cielo &lt;br /&gt; Não é possivel costumizar as regras no fornecedor &lt;br /&gt; Não há analista de risco dedicado&lt;/td&gt;
+      &lt;td&gt;CyberSource&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;SuperMID Com BPO&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Regras de analise definidas pela Cielo &lt;br /&gt; Não é possivel costumizar as regras no fornecedor &lt;br /&gt; Analista de risco dedicado contratado pelo lojista junto ao fornecedor&lt;/td&gt;
+      &lt;td&gt;CyberSource&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Hierarquia ou Enterprise&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;O Lojista tem um contrato fechado diretamente com o fornecedor da AF, com regras especificas para analise. Cielo deve configurar as credenciais fornecidas pelo Fornecedor da AF no API Cielo E-commerce&lt;/td&gt;
+      &lt;td&gt;CyberSource&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;h2 id=&quot;transação-com-analise-de-fraude-af&quot;&gt;Transação com Analise de Fraude (AF)&lt;/h2&gt;
 

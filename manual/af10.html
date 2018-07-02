@@ -121,7 +121,42 @@
             </div>
 
             <div class="post">
-  <h1 id="análise-de-fraude">Análise de Fraude</h1>
+  <h1 id="análise-de-fraude-af">Análise de Fraude (AF)</h1>
+
+<p>A API Cielo e-commerce Cielo oferece um serviço de analise de risco de fraudes em transações online. A Cielo se integra a empresas de analise de risco, como CyberSource, que realizam uma validação dos dados transacionais e do historico de compras do portador do cartão.
+Essa analise retorna fatores de risco e permite que o lojista tome a decisão se dará continuidade a venda.</p>
+
+<aside class="warning">A análise de fraude oferecida pela Cielo avalia o risco de uma transação, mas não vincula o resultado da analise com a cobertura de ChargeBacks. A Cielo não realiza transações "garantidas"</aside>
+
+<p>Para utilizar o AF, é necessario que o serviço seja ativado junto a Cielo.
+Existem 3 tipos de analise de fraude disponiveis:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tipo</th>
+      <th>Descrição</th>
+      <th>Fornecedor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>SuperMID Sem BPO</strong></td>
+      <td>Regras de analise definidas pela Cielo <br /> Não é possivel costumizar as regras no fornecedor <br /> Não há analista de risco dedicado</td>
+      <td>CyberSource</td>
+    </tr>
+    <tr>
+      <td><strong>SuperMID Com BPO</strong></td>
+      <td>Regras de analise definidas pela Cielo <br /> Não é possivel costumizar as regras no fornecedor <br /> Analista de risco dedicado contratado pelo lojista junto ao fornecedor</td>
+      <td>CyberSource</td>
+    </tr>
+    <tr>
+      <td><strong>Hierarquia ou Enterprise</strong></td>
+      <td>O Lojista tem um contrato fechado diretamente com o fornecedor da AF, com regras especificas para analise. Cielo deve configurar as credenciais fornecidas pelo Fornecedor da AF no API Cielo E-commerce</td>
+      <td>CyberSource</td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="transação-com-analise-de-fraude-af">Transação com Analise de Fraude (AF)</h2>
 
