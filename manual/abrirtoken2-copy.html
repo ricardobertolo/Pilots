@@ -12,7 +12,7 @@
 
     <title>
         
-        Retentativas &middot; Documentações e tutoriais
+        Abrir Token &middot; Documentações e tutoriais
         
     </title>
 
@@ -26,11 +26,11 @@
 
     
         
-            <link rel="alternate" hreflang="pt" href="https://docscielo.github.io/Pilots/manual/retentativas8" />
+            <link rel="alternate" hreflang="pt" href="https://docscielo.github.io/Pilots/manual/abrirtoken2-copy" />
         
     
         
-            <link rel="alternate" hreflang="en" href="https://docscielo.github.io/Pilots/en/manual/retentativas8" />
+            <link rel="alternate" hreflang="en" href="https://docscielo.github.io/Pilots/en/manual/abrirtoken2-copy" />
         
     
 
@@ -66,14 +66,14 @@
 
                                 
                                     
-                                    <a href="https://docscielo.github.io/Pilots/Pilots//manual/retentativas8">
+                                    <a href="https://docscielo.github.io/Pilots/Pilots//manual/abrirtoken2-copy">
                                     
 
                                         <img alt="Português" src="https://docscielo.github.io/Pilots/assets/images/pt.png"/>
                                     </a>
                                 
                                     
-                                    <a href="https://docscielo.github.io/Pilots/Pilots/en/manual/retentativas8">
+                                    <a href="https://docscielo.github.io/Pilots/Pilots/en/manual/abrirtoken2-copy">
                                     
 
                                         <img alt="English" src="https://docscielo.github.io/Pilots/assets/images/en.png"/>
@@ -111,7 +111,7 @@
                             
                                 
                                     
-                                    <li class="active">&gt; <a href="https://docscielo.github.io/Pilots/manual/retentativas8">Retentativas</a></li>
+                                    <li class="active">&gt; <a href="https://docscielo.github.io/Pilots/manual/abrirtoken2-copy">Abrir Token</a></li>
                                     
                                 
                             
@@ -121,17 +121,49 @@
             </div>
 
             <div class="post">
-  <h1 id="retentativa-online">Retentativa Online</h1>
+  <h1 id="abrir-token">Abrir Token</h1>
+
+<p>Para consultar uma cartão aberto via API 3.0, é necessario realizar um <code class="highlighter-rouge">GET</code> utilizando o endpoint abaixo:</p>
 
 <blockquote>
-  <p>Manual em construção</p>
+  <p>Para utilizar esta funcionalidade é necessario que a loja possua uma permissão especial concedida pelo time de Produtos Cielo.</p>
 </blockquote>
 
-<h1 id="retentativa-offline">Retentativa Offline</h1>
+<h2 id="request">Request</h2>
 
-<blockquote>
-  <p>Manual em construção</p>
-</blockquote>
+<aside class="request"><span class="method get">GET</span> <span class="endpoint">https://apiquery.cieloecommerce.cielo.com.br/1/card/{token}?masked=false</span></aside>
+
+<h2 id="response">Response</h2>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">  
+   </span><span class="s2">"CardNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cartão aberto"</span><span class="p">,</span><span class="w"> 
+   </span><span class="s2">"Holder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Portador do cartão"</span><span class="p">,</span><span class="w"> 
+   </span><span class="s2">"ExpirationDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12/2018"</span><span class="w"> 
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parametro</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">CardNumber</code></td>
+      <td>Número do cartão tokenizado</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Holder</code></td>
+      <td>Nome do portador tokenizado</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ExpirationDate</code></td>
+      <td>Data de validade do cartão tokenizado</td>
+    </tr>
+  </tbody>
+</table>
 
 </div>
 
@@ -181,13 +213,7 @@
                 
             
                 
-                    
-                    <li><a href="https://docscielo.github.io/Pilots/manual/abrirtoken2" title="Manual integração para Pilotos">Abrir Token</a></li>
-                
             
-                
-                    
-                    <li><a href="https://docscielo.github.io/Pilots/manual/abrirtoken2-copy" title="Manual integração para Pilotos">Abrir Token</a></li>
                 
             
                 
@@ -196,7 +222,13 @@
                 
             
                 
+                    
+                    <li><a href="https://docscielo.github.io/Pilots/manual/zeroauth4" title="Manual integração para Pilotos">Zero Auth</a></li>
+                
             
+                
+                    
+                    <li><a href="https://docscielo.github.io/Pilots/manual/wallets5" >Wallets</a></li>
                 
             
                 
