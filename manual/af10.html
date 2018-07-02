@@ -1151,36 +1151,44 @@ Existem 3 tipos de configurações de analise de fraude disponiveis:</p>
     <tr>
       <th>Campo</th>
       <th>Descrição</th>
+      <th>Observações</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">Started</code></td>
       <td>Transação recebida pela Cielo.</td>
+      <td>Dados da transação foram aceitos e enviados para analise</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Accept</code></td>
       <td>Transação aceita após análise de fraude.</td>
+      <td>Transação aprovada pela analise de risco</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Review</code></td>
-      <td>Transação em revisão após análise de fraude.</td>
+      <td>Transação em revisão após análise de fraude</td>
+      <td>Transaçãoi encaminhada para analise manual - será analisada por BPO</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Reject</code></td>
       <td>Transação rejeitada após análise de fraude.</td>
+      <td>Transação rejeitada pela analise de risco</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Unfinished</code></td>
-      <td>Transação não finalizada por algum erro interno no sistema.</td>
+      <td>Transação não finalizada por algum erro sistémico</td>
+      <td>N/A</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Pendent</code></td>
       <td>Transação esperando analise</td>
+      <td>N/A</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">ProviderError</code></td>
       <td>Transação com erro no provedor de antifraude.</td>
+      <td>N/A</td>
     </tr>
   </tbody>
 </table>

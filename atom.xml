@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-02T15:50:30+00:00</updated>
+    <updated>2018-07-02T17:36:25+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -22010,36 +22010,44 @@ Existem 3 tipos de configurações de analise de fraude disponiveis:&lt;/p&gt;
     &lt;tr&gt;
       &lt;th&gt;Campo&lt;/th&gt;
       &lt;th&gt;Descrição&lt;/th&gt;
+      &lt;th&gt;Observações&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Started&lt;/code&gt;&lt;/td&gt;
       &lt;td&gt;Transação recebida pela Cielo.&lt;/td&gt;
+      &lt;td&gt;Dados da transação foram aceitos e enviados para analise&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Accept&lt;/code&gt;&lt;/td&gt;
       &lt;td&gt;Transação aceita após análise de fraude.&lt;/td&gt;
+      &lt;td&gt;Transação aprovada pela analise de risco&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Review&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Transação em revisão após análise de fraude.&lt;/td&gt;
+      &lt;td&gt;Transação em revisão após análise de fraude&lt;/td&gt;
+      &lt;td&gt;Transaçãoi encaminhada para analise manual - será analisada por BPO&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Reject&lt;/code&gt;&lt;/td&gt;
       &lt;td&gt;Transação rejeitada após análise de fraude.&lt;/td&gt;
+      &lt;td&gt;Transação rejeitada pela analise de risco&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Unfinished&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Transação não finalizada por algum erro interno no sistema.&lt;/td&gt;
+      &lt;td&gt;Transação não finalizada por algum erro sistémico&lt;/td&gt;
+      &lt;td&gt;N/A&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Pendent&lt;/code&gt;&lt;/td&gt;
       &lt;td&gt;Transação esperando analise&lt;/td&gt;
+      &lt;td&gt;N/A&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ProviderError&lt;/code&gt;&lt;/td&gt;
       &lt;td&gt;Transação com erro no provedor de antifraude.&lt;/td&gt;
+      &lt;td&gt;N/A&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
