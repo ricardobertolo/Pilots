@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-02T14:39:41+00:00</updated>
+    <updated>2018-07-02T14:40:45+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -21021,11 +21021,11 @@ Existem 3 tipos de analise de fraude disponiveis:&lt;/p&gt;
   &lt;p&gt;A Analise de Fraude está disponivel apenas para transações de cartão de crédito.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&quot;transação-com-analise-de-fraude-af&quot;&gt;Transação com Analise de Fraude (AF)&lt;/h2&gt;
+&lt;h2 id=&quot;requisição&quot;&gt;Requisição&lt;/h2&gt;
 
 &lt;p&gt;Para criar uma venda com cartão de crédito e analise de fraude, é necessário enviar uma requisição utilizando o método &lt;code class=&quot;highlighter-rouge&quot;&gt;POST&lt;/code&gt; para o recurso Payment conforme o exemplo.&lt;/p&gt;
 
-&lt;h4 id=&quot;requisição&quot;&gt;Requisição&lt;/h4&gt;
+&lt;h3 id=&quot;requisição-1&quot;&gt;Requisição&lt;/h3&gt;
 
 &lt;aside class=&quot;request&quot;&gt;&lt;span class=&quot;method post&quot;&gt;POST&lt;/span&gt; &lt;span class=&quot;endpoint&quot;&gt;/1/sales/&lt;/span&gt;&lt;/aside&gt;
 
@@ -21688,7 +21688,7 @@ Existem 3 tipos de analise de fraude disponiveis:&lt;/p&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h4 id=&quot;resposta&quot;&gt;Resposta&lt;/h4&gt;
+&lt;h3 id=&quot;resposta&quot;&gt;Resposta&lt;/h3&gt;
 
 &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
     &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;MerchantOrderId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;201411173454307&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
