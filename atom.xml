@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-02T13:13:36+00:00</updated>
+    <updated>2018-07-02T13:33:19+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -21492,9 +21492,9 @@ Existem 3 tipos de analise de fraude disponiveis:&lt;/p&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;FraudAnalysis.Cart.Items.HostHedge&lt;/code&gt;&lt;/td&gt;
       &lt;td&gt;Texto&lt;/td&gt;
+      &lt;td&gt;—&lt;/td&gt;
       &lt;td&gt;Não&lt;/td&gt;
       &lt;td&gt;Nível de importância do e-mail e endereços IP dos clientes em risco de pontuação.&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;FraudAnalysis.Cart.Items.NonSensicalHedge&lt;/code&gt;&lt;/td&gt;
@@ -21555,16 +21555,16 @@ Existem 3 tipos de analise de fraude disponiveis:&lt;/p&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;FraudAnalysis.Cart.Items.TimeHedge&lt;/code&gt;&lt;/td&gt;
       &lt;td&gt;Texto&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
       &lt;td&gt;Não&lt;/td&gt;
       &lt;td&gt;Nível de importância da hora do dia do pedido do cliente.&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;FraudAnalysis.Cart.Items.Type&lt;/code&gt;&lt;/td&gt;
       &lt;td&gt;Texto&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
       &lt;td&gt;Não&lt;/td&gt;
       &lt;td&gt;Tipo do produto.)&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;FraudAnalysis.Cart.Items.VelocityHedge&lt;/code&gt;&lt;/td&gt;
@@ -21597,9 +21597,9 @@ Existem 3 tipos de analise de fraude disponiveis:&lt;/p&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;FraudAnalysis.Cart.Items.Passenger.Rating&lt;/code&gt;&lt;/td&gt;
       &lt;td&gt;Texto&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
       &lt;td&gt;Não&lt;/td&gt;
       &lt;td&gt;Classificação do Passageiro.&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;FraudAnalysis.Cart.Items.Passenger.Phone&lt;/code&gt;&lt;/td&gt;
@@ -21639,9 +21639,9 @@ Existem 3 tipos de analise de fraude disponiveis:&lt;/p&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;FraudAnalysis.Shipping.Method&lt;/code&gt;&lt;/td&gt;
       &lt;td&gt;Texto&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
       &lt;td&gt;Não&lt;/td&gt;
       &lt;td&gt;Tipo de serviço de entrega do produto.&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;FraudAnalysis.Shipping.Phone&lt;/code&gt;&lt;/td&gt;
@@ -22086,7 +22086,7 @@ Existem 3 tipos de analise de fraude disponiveis:&lt;/p&gt;
   &lt;p&gt;&lt;strong&gt;IMPORTANTE:&lt;/strong&gt; Se você não completar essa seção, você não receberá resultados corretos, e o domínio (URL) do fornecedor de fingerprint ficará visível, sendo mais provável que seu consumidor o bloqueie&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&quot;valores-da-análise-de-fraude&quot;&gt;Valores da Análise de Fraude&lt;/h2&gt;
+&lt;h2 id=&quot;tabelas-af&quot;&gt;Tabelas AF&lt;/h2&gt;
 
 &lt;h3 id=&quot;fraudanalysisstatus&quot;&gt;FraudAnalysis.status&lt;/h3&gt;
 
