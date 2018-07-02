@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-02T15:41:56+00:00</updated>
+    <updated>2018-07-02T15:50:30+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -22662,6 +22662,8 @@ Existem 3 tipos de configurações de analise de fraude disponiveis:&lt;/p&gt;
 &lt;h2 id=&quot;device-fingerprint&quot;&gt;Device FingerPrint&lt;/h2&gt;
 
 &lt;h3 id=&quot;o-que-é-o-dfingerprint&quot;&gt;O que é o D.FingerPrint&lt;/h3&gt;
+
+&lt;p&gt;O Device FingerPrint é um javascript que uma vez instalado no checkout da loja captura dados de navegação e informações sobre o equipamento utilizado na compra. Essas informações são utlizadas pela AF para identificar compras fora do padrão do comprador.&lt;/p&gt;
 
 &lt;h3 id=&quot;configurando-fingerprint&quot;&gt;Configurando FingerPrint&lt;/h3&gt;
 
