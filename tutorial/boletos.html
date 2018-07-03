@@ -166,12 +166,76 @@ O banco emissor tem conhecimento da emissão do boleto desde sua geração até 
 
 <h3 id="ambiente-bradesco">Ambiente Bradesco</h3>
 
-<p><strong>Criando Credenciais</strong></p>
+<p>O lojista precisará realizar configurações dentro do ambiente bancario para que a geração</p>
+
+<h4 id="painel-de-controle">Painel de controle</h4>
+
+<p>O lojista deverá contatar o gerente de relacionamento do Banco Bradesco para solicitar a contratação do Boleto Registrado via Gerenciador API/Painel de controle
+A equipe técnica do Banco enviará para o e-mail do solicitante os dados de acesso ao Gerenciador API/Painel de controle.</p>
+
+<blockquote>
+  <p><strong>PAINEL DE CONTROLE BRADESCO</strong>: https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp</p>
+</blockquote>
+
+<h4 id="configurando-o-boleto-1">Configurando o boleto</h4>
+
+<p>No <strong>painel do Bradesco</strong>, o lojista deverá acessar a aba <strong>“Configurações”</strong> e escolher a opção <strong>“Meios de Pagamento”</strong> e modifique as sequintes configurações.</p>
+
+<ul>
+  <li><strong>Habilitar “frase” do boleto</strong>: Inativo</li>
+  <li><strong>Habilitar “referência” do boleto</strong>: Ativo</li>
+  <li><strong>Apresentar Agência e Conta</strong>: Inativo</li>
+  <li><strong>Vencimento</strong>: 5 dias</li>
+</ul>
+
+<p><img src="https://docscielo.github.io/Pilots/images/boleto-bradesco-passo-2.png" alt="Boleto Bradesco" /></p>
+
+<aside class="notice">Obs: O vencimento pode ser defindo nos produtos Cielo.</aside>
+
+<ul>
+  <li><strong>URL de notificação</strong>: https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost</li>
+  <li>No campo <strong>Chave de Segurança</strong> clique em “<strong>Gerar chave de segurança</strong>”</li>
+  <li><strong>Endereço de IP da loja</strong>  (numérico)</li>
+  <li>Para os campos de <strong>URL de resposta, URL de falha e URL de redirecionamento</strong>, inserir o seguinte link: <code class="highlighter-rouge">https://www.pagador.com.br/post/BoletoBradescoSps/ReceivePost</code></li>
+</ul>
+
+<p><img src="https://docscielo.github.io/Pilots/images/boleto-bradesco-passo-3.png" alt="Boleto Bradesco" /></p>
+
+<p>Em cada um dos três Paramêtros a seguir, preencher com o Parâmetro de Comunicação abaixo:</p>
+
+<ul>
+  <li><strong>Parâmetro de notificação</strong>:
+    <ul>
+      <li><code class="highlighter-rouge">numOrder=[%lid_m%]&amp;merchantid=[%merchantid%]&amp;cod=[%errorcod%]&amp;cctype=[%cctype%]&amp;ccname=[%ccname%]&amp;ccemail=[%ccemail%]&amp;numparc=[%numparc%]&amp;valparc=[%valparc%]&amp;valtotal=[%valtotal%]&amp;prazo=[%prazo%]&amp;comb=[%comb%]&amp;assinatura=[%assinatura%]&amp;</code></li>
+    </ul>
+  </li>
+  <li><strong>Parâmetro de confirmação</strong>:
+    <ul>
+      <li><code class="highlighter-rouge">numOrder=[%lid_m%]&amp;merchantid=[%merchantid%]&amp;cod=[%errorcod%]&amp;cctype=[%cctype%]&amp;ccname=[%ccname%]&amp;ccemail=[%ccemail%]&amp;numparc=[%numparc%]&amp;valparc=[%valparc%]&amp;valtotal=[%valtotal%]&amp;prazo=[%prazo%]&amp;comb=[%comb%]&amp;assinatura=[%assinatura%]&amp;</code></li>
+    </ul>
+  </li>
+  <li><strong>Parâmetro de falha</strong>:
+    <ul>
+      <li><code class="highlighter-rouge">numOrder=[%lid_m%]&amp;merchantid=[%merchantid%]&amp;cod=[%errorcod%]&amp;cctype=[%cctype%]&amp;ccname=[%ccname%]&amp;ccemail=[%ccemail%]&amp;numparc=[%numparc%]&amp;valparc=[%valparc%]&amp;valtotal=[%valtotal%]&amp;prazo=[%prazo%]&amp;comb=[%comb%]&amp;assinatura=[%assinatura%]&amp;</code></li>
+    </ul>
+  </li>
+  <li><strong>Paramêtro de Comunicação</strong>
+    <ul>
+      <li><code class="highlighter-rouge">numOrder=[%lid_m%]&amp;merchantid=[%merchantid%]&amp;cod=[%errorcod%]&amp;cctype=[%cctype%]&amp;ccname=[%ccname%]&amp;ccemail=[%ccemail%]&amp;numparc=[%numparc%]&amp;valparc=[%valparc%]&amp;valtotal=[%valtotal%]&amp;prazo=[%prazo%]&amp;comb=[%comb%]&amp;assinatura=[%assinatura%]&amp;</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://docscielo.github.io/Pilots/images/boleto-bradesco-passo-4.png" alt="Boleto Bradesco" /></p>
+
+<aside class="notice">Obs: Não podem existir espaços ou quebras de texto nos parâmetros expostos acima.</aside>
+
+<p>Clique no botão “<strong>Gravar todas as configurações realizadas</strong>”</p>
+
+<h4 id="configurando-credenciais">Configurando credenciais</h4>
 
 <ol>
-  <li>O lojista deverá contatar o gerente de relacionamento do Banco Bradesco para solicitar a contratação do Boleto Registrado via Gerenciador API;</li>
-  <li>A equipe técnica do Banco enviará para o e-mail do solicitante os dados de acesso ao Gerenciador API.</li>
-  <li>No <strong>painel do Bradesco</strong>, o lojista deverá acessar a aba <strong>“Configurações”</strong> e escolher a opção <strong>“Meios de Pagamento”</strong>.</li>
+  <li>No <strong>painel do Bradesco</strong>, o lojista deverá acessar a aba <strong>“Configurações”</strong> e escolher a opção <strong>“Meios de Pagamento”</strong></li>
   <li>O campo <strong>“Palavra-secreta”</strong> deve ser preenchido com uma senha. A operação é confirmada clicando em <strong>“Gerar nova chave de segurança”</strong></li>
   <li>Ainda no <a href="https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp"><strong>Painel do Bradesco</strong></a>, o cliente deve criar um Usuário de Consulta para atualizações de status.</li>
   <li>O Lojista deverá realizar atualização dos dados cadastrais Bradesco para poder Transacionar. Ver <a href="https://developercielo.github.io/Habilitacao-meios-de-pagamento/#bradesco">Tutorial</a>.</li>
@@ -179,7 +243,20 @@ O banco emissor tem conhecimento da emissão do boleto desde sua geração até 
 
 <p><img src="https://docscielo.github.io/Pilots/images/tutoriais/boletos/b3.png" alt="Tela Bradesco" /></p>
 
+<h4 id="suporte-bradesco">Suporte Bradesco</h4>
+
+<p>Para obter ajuda com os passos acima, entre em contato com o suporte Bradesco:</p>
+
+<ul>
+  <li>kit@scopus.com.br</li>
+  <li>homologacao@scopus.com.br</li>
+  <li>com.eletronico@bradesco.com.br</li>
+  <li>comerciobradesco@scopus.com.br</li>
+</ul>
+
 <h3 id="ambiente-cielo">Ambiente Cielo</h3>
+
+<h4 id="dados-de-cadastro">Dados de cadastro</h4>
 
 <p>O Lojista precisará informar ao suporte Cielo os sequintes dados:</p>
 
@@ -272,6 +349,17 @@ O banco emissor tem conhecimento da emissão do boleto desde sua geração até 
   </tbody>
 </table>
 
+<h4 id="suporte-cielo">Suporte Cielo</h4>
+
+<p>Em caso de dúvidas em qualquer etapa ou outras informações técnicas, entre em contato com o Suporte Web do Cielo e-Commerce nos seguintes canais:</p>
+
+<ul>
+  <li><strong>E-mail:</strong> cieloeCommerce@cielo.com.br</li>
+  <li><strong>Capitais:</strong> 4002-9700</li>
+  <li><strong>Demais Cidades:</strong> 0800 570 1700</li>
+  <li><strong>*Horário de atendimento:</strong> 24h por dia, 7 dias por semana.</li>
+</ul>
+
 <h3 id="atualização-de-status">Atualização de Status</h3>
 
 <p>Para o meio de pagamento Boleto Registrado Bradesco a atualização de status é feita via sondagem em lote:</p>
@@ -289,17 +377,6 @@ O banco emissor tem conhecimento da emissão do boleto desde sua geração até 
 <h2 id="conciliação-manual-de-boletos">Conciliação Manual de Boletos</h2>
 
 <p>Para conciliar o boleto de forma manual, basta localizar o pedido no site Cielo e dentro dos Detalhes da Transação localizar o botão “Conciliar”. Desta forma o pedido terá o status alterado de “Não Pago” para “Pago”.</p>
-
-<h2 id="contatos-bradesco">Contatos Bradesco</h2>
-
-<p>Suporte Bradesco:</p>
-
-<ul>
-  <li>kit@scopus.com.br</li>
-  <li>homologacao@scopus.com.br</li>
-  <li>com.eletronico@bradesco.com.br</li>
-  <li>comerciobradesco@scopus.com.br</li>
-</ul>
 
 <hr />
 
