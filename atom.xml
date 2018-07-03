@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-03T21:05:10+00:00</updated>
+    <updated>2018-07-03T21:08:19+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -691,28 +691,32 @@ A equipe técnica do Banco enviará para o e-mail do solicitante os dados de ace
 
 &lt;p&gt;Em cada um dos três Paramêtros a seguir, preencher com o Parâmetro de Comunicação abaixo:&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Parâmetro de notificação&lt;/strong&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;numOrder=[%lid_m%]&amp;amp;merchantid=[%merchantid%]&amp;amp;cod=[%errorcod%]&amp;amp;cctype=[%cctype%]&amp;amp;ccname=[%ccname%]&amp;amp;ccemail=[%ccemail%]&amp;amp;numparc=[%numparc%]&amp;amp;valparc=[%valparc%]&amp;amp;valtotal=[%valtotal%]&amp;amp;prazo=[%prazo%]&amp;amp;comb=[%comb%]&amp;amp;assinatura=[%assinatura%]&amp;amp;&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Parâmetro de confirmação&lt;/strong&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;numOrder=[%lid_m%]&amp;amp;merchantid=[%merchantid%]&amp;amp;cod=[%errorcod%]&amp;amp;cctype=[%cctype%]&amp;amp;ccname=[%ccname%]&amp;amp;ccemail=[%ccemail%]&amp;amp;numparc=[%numparc%]&amp;amp;valparc=[%valparc%]&amp;amp;valtotal=[%valtotal%]&amp;amp;prazo=[%prazo%]&amp;amp;comb=[%comb%]&amp;amp;assinatura=[%assinatura%]&amp;amp;&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Parâmetro de falha&lt;/strong&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;numOrder=[%lid_m%]&amp;amp;merchantid=[%merchantid%]&amp;amp;cod=[%errorcod%]&amp;amp;cctype=[%cctype%]&amp;amp;ccname=[%ccname%]&amp;amp;ccemail=[%ccemail%]&amp;amp;numparc=[%numparc%]&amp;amp;valparc=[%valparc%]&amp;amp;valtotal=[%valtotal%]&amp;amp;prazo=[%prazo%]&amp;amp;comb=[%comb%]&amp;amp;assinatura=[%assinatura%]&amp;amp;&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Paramêtro de Comunicação&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;numOrder=[%lid_m%]&amp;amp;merchantid=[%merchantid%]&amp;amp;cod=[%errorcod%]&amp;amp;cctype=[%cctype%]&amp;amp;ccname=[%ccname%]&amp;amp;ccemail=[%ccemail%]&amp;amp;numparc=[%numparc%]&amp;amp;valparc=[%valparc%]&amp;amp;valtotal=[%valtotal%]&amp;amp;prazo=[%prazo%]&amp;amp;comb=[%comb%]&amp;amp;assinatura=[%assinatura%]&amp;amp;&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Parâmetros&lt;/th&gt;
+      &lt;th&gt;Dados&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Notificação&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;numOrder=[%lid_m%]&amp;amp;merchantid=[%merchantid%]&amp;amp;cod=[%errorcod%]&amp;amp;cctype=[%cctype%]&amp;amp;ccname=[%ccname%]&amp;amp;ccemail=[%ccemail%]&amp;amp;numparc=[%numparc%]&amp;amp;valparc=[%valparc%]&amp;amp;valtotal=[%valtotal%]&amp;amp;prazo=[%prazo%]&amp;amp;comb=[%comb%]&amp;amp;assinatura=[%assinatura%]&amp;amp;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Confirmação&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;numOrder=[%lid_m%]&amp;amp;merchantid=[%merchantid%]&amp;amp;cod=[%errorcod%]&amp;amp;cctype=[%cctype%]&amp;amp;ccname=[%ccname%]&amp;amp;ccemail=[%ccemail%]&amp;amp;numparc=[%numparc%]&amp;amp;valparc=[%valparc%]&amp;amp;valtotal=[%valtotal%]&amp;amp;prazo=[%prazo%]&amp;amp;comb=[%comb%]&amp;amp;assinatura=[%assinatura%]&amp;amp;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Falha&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;numOrder=[%lid_m%]&amp;amp;merchantid=[%merchantid%]&amp;amp;cod=[%errorcod%]&amp;amp;cctype=[%cctype%]&amp;amp;ccname=[%ccname%]&amp;amp;ccemail=[%ccemail%]&amp;amp;numparc=[%numparc%]&amp;amp;valparc=[%valparc%]&amp;amp;valtotal=[%valtotal%]&amp;amp;prazo=[%prazo%]&amp;amp;comb=[%comb%]&amp;amp;assinatura=[%assinatura%]&amp;amp;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Comunicação&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;numOrder=[%lid_m%]&amp;amp;merchantid=[%merchantid%]&amp;amp;cod=[%errorcod%]&amp;amp;cctype=[%cctype%]&amp;amp;ccname=[%ccname%]&amp;amp;ccemail=[%ccemail%]&amp;amp;numparc=[%numparc%]&amp;amp;valparc=[%valparc%]&amp;amp;valtotal=[%valtotal%]&amp;amp;prazo=[%prazo%]&amp;amp;comb=[%comb%]&amp;amp;assinatura=[%assinatura%]&amp;amp;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/boleto-bradesco-passo-4.png&quot; alt=&quot;Boleto Bradesco&quot; /&gt;&lt;/p&gt;
 
