@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="theme-color" content="#00aeef">
+    <meta http-equiv="Content-Language" content="pt">
+
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <title>
+        
+        Boletos &middot; Documentações e tutoriais
+        
+    </title>
+
+    <link rel="shortcut icon" href="https://docscielo.github.io/Pilots/assets/favicon.ico">
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
+    <script async src="https://use.fontawesome.com/3ae06f1030.js"></script>
+
+    <link rel="stylesheet" href="https://docscielo.github.io/Pilots/assets/bundles/css/bundle.min.css">
+
+    
+        
+            <link rel="alternate" hreflang="pt" href="https://docscielo.github.io/Pilots/tutorial/boletos" />
+        
+    
+        
+            <link rel="alternate" hreflang="en" href="https://docscielo.github.io/Pilots/en/tutorial/boletos" />
+        
+    
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="https://docscielo.github.io/Pilots/atom.xml">
+</head>
+
+    <body>
+        
+        <div class="content-container no-dark-box">
+        
+            <div id="submenu">
+                <div class="submenu-container">
+                    <div class="submenu-row sub-items">
+                        <div class="submenu-itens">
+                            <a href="https://desenvolvedores.cielo.com.br/api-portal/pt-br/contact" class="help">Ajuda</a>
+
+                            
+                            <div class="lang">
+                                <span>Idiomas</span>
+
+                                
+                                    
+                                    <a href="https://docscielo.github.io/Pilots/Pilots//tutorial/boletos">
+                                    
+
+                                        <img alt="Português" src="https://docscielo.github.io/Pilots/assets/images/pt.png"/>
+                                    </a>
+                                
+                                    
+                                    <a href="https://docscielo.github.io/Pilots/Pilots/en/tutorial/boletos">
+                                    
+
+                                        <img alt="English" src="https://docscielo.github.io/Pilots/assets/images/en.png"/>
+                                    </a>
+                                
+                            </div>
+                            
+                        </div>
+
+                        
+                        <div class="search">
+                            <input type="text" class="search" id="input-search">
+                        </div>
+                    </div>
+                    <div class="submenu-row results">
+                        <div class="search-results-container">
+                            <ul class="search-results"></ul>
+                        </div>
+                    </div>
+                        
+
+                    <div class="submenu-row breads">
+                        <ol class="breadcrumb">
+                            
+                            <li><a href="/">Início</a></li>
+                            
+                            
+                            
+                            
+                                
+                                    
+                                    
+                                    
+                                    
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                
+                            
+                                
+                                    
+                                    <li class="active">&gt; <a href="https://docscielo.github.io/Pilots/tutorial/boletos">Boletos</a></li>
+                                    
+                                
+                            
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+    <h1 id="boletos">Boletos</h1>
+
+<h2 id="o-que-é-boleto-registrado">O que é Boleto Registrado?</h2>
+
+<p>O Boleto Registrado é um dos meios de pagamentos disponibilizados no E-commerce. Com o objetivo de mitigar fraudes, a Febraban em conjunto com os Bancos desenvolveu a modalidade registrada, tendo um controle centralizado de todos os boletos emitidos.</p>
+
+<h2 id="qual-o-benefício-em-utilizá-lo">Qual o benefício em utilizá-lo?</h2>
+
+<p>A Cobrança Registrada foi desenvolvida para promover maior confiabilidade e segurança na compra online. O banco emissor tem conhecimento do boleto desde sua geração até sua liquidação. O lojista tem a opção de negativar o comprador que gerou e não pagou uma cobrança registrada.</p>
+
+<p>Esta modalidade de cobrança permite que o comprador efetue o pagamento do boleto em qualquer agência bancária mesmo depois do vencimento.</p>
+
+<p><img src="https://docscielo.github.io/Pilots/images/tutoriais/boletos/b1.png" alt="" /></p>
+
+<h3 id="como-a-integração-ocorre-na-30">Como a Integração ocorre na 3.0?</h3>
+
+<p>A 3.0 possui apenas um tipo de chamado, tanto para boletos do “Registrado” quanto “Não Registrados”.
+O mesmo código é usado para todos os bancos, e podem ser visualizado em:</p>
+
+<blockquote>
+  <p>https://developercielo.github.io/Webservice-3.0/#criando-uma-venda-de-boleto</p>
+</blockquote>
+
+<hr />
+
+<p><img src="https://docscielo.github.io/Pilots/images/tutoriais/boletos/bradesco.jpg" alt="" /></p>
+
+<h3 id="como-funciona---fluxo-transacional-bradesco">Como funciona - Fluxo Transacional Bradesco?</h3>
+
+<ol>
+  <li>O comprador, após escolher o produto na loja virtual, seleciona a forma de pagamento Boleto Bradesco;</li>
+  <li>A loja virtual envia para a Cielo uma requisição chamando o meio de pagamento correspondente;</li>
+  <li>A Cielo se comunica com a aplicação do Banco Bradesco solicitando o registro do boleto;</li>
+  <li>Caso o registro seja realizado com sucesso, o Banco responde à solicitação devolvendo os dados de cobrança (código de barras, linha digitável, etc) e a <strong>URL do Boleto</strong>;</li>
+  <li>A Cielo envia no response o link para que a loja possa encaminhar ao comprador am ambiente Bancário;</li>
+  <li>O cliente acessa a URL do boleto (renderização) e então pode realizar o pagamento;</li>
+  <li>A conciliação do documento é feita via serviço de consulta da Cielo ao sistema do Bradesco.</li>
+  <li>Para receber as notificações de pagamento, a loja deve ter cadastrada a URL de Notificação e eventualmente utilizar nosso serviço de consulta.</li>
+</ol>
+
+<p><img src="https://docscielo.github.io/Pilots/images/tutoriais/boletos/b2png" alt="" /></p>
+
+<h3 id="lojista---ativando-o-boleto-no-bradesco">Lojista - Ativando o Boleto no Bradesco</h3>
+
+<ol>
+  <li>O lojista deverá contatar o gerente de relacionamento do Banco Bradesco para solicitar a contratação do Boleto Registrado via Gerenciador API;</li>
+  <li>A equipe técnica do Banco enviará para o e-mail do solicitante os dados de acesso ao Gerenciador API.</li>
+  <li>No painel do Bradesco, o lojista deverá acesse a aba “Configurações” e escolher a opção “Meios de Pagamento”.</li>
+  <li>O campo “Palavra-secreta” deve ser preenchido com uma senha. A operação é confirmada clicando em “Gerar nova chave de segurança”:</li>
+  <li>Ainda no <a href="https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp">Painel do Bradesco</a>, o cliente deve criar um Usuário de Consulta para atualizações de status.</li>
+  <li>O Lojista deverá realizar atualização dos dados cadastrais Bradesco para poder Transacionar. Ver <a href="https://developercielo.github.io/Habilitacao-meios-de-pagamento/#bradesco">Tutorial</a>.</li>
+</ol>
+
+<p><img src="https://docscielo.github.io/Pilots/images/tutoriais/boletos/b3.png" alt="" /></p>
+
+<h3 id="hd-cielo---ativando-o-boleto-no-admin">HD Cielo - Ativando o Boleto no Admin</h3>
+
+<p>O Lojista precisará informar ao HD os sequintes dados:</p>
+
+<ul>
+  <li><strong>Agência:</strong> código agência com traço ou sem Hifen.</li>
+  <li><strong>Conta:</strong> Conta corrente com traço.</li>
+  <li><strong>Carteira:</strong> Não é necessário para este boleto</li>
+  <li><strong>Conciliação</strong>: Número do convênio de cobrança</li>
+  <li><strong>Convênio</strong> Convênio de comércio eletrônico</li>
+</ul>
+
+<p>Além desses dados, é necessario as credenciais do Bradesco:</p>
+
+<ul>
+  <li><strong>Usuário</strong>: E-mail usado no acesso do <a href="https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp">Painel do Bradesco</a></li>
+  <li><strong>Senha</strong>: Chave de segurança criada dentro do <a href="https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp">Painel do Bradesco</a>. <strong>Não é a senha de acesso ao Painel Bradesco</strong></li>
+</ul>
+
+<blockquote>
+  <p>Essas credenciais são usadas para que a 3.0 possa consultar o status do Boleto. <br /> <strong>Exemplos:</strong> <br /> <strong>Usuário</strong>: cielo@cielo.com <br /> <strong>Senha / Chave de Segurança</strong>: qcnmFA-Y2rGm4meWLzrEzSpdPARBsmblZSqfKLwq7DM</p>
+</blockquote>
+
+<p>Com esses dados, acesse o Admin e siga os passos abaixo:</p>
+
+<p>1 - Acesse o  Admin Braspag e selecione a opção “<strong>Pesquisar Estabelecimento</strong>”, existente dentro da aba “Admin” do menu superior:</p>
+
+<p><img src="https://docscielo.github.io/Pilots/images/tutoriais/boletos/ab1.png" alt="" /></p>
+
+<p>2 - Utilize os filtros para localizar a loja:</p>
+
+<p><img src="https://docscielo.github.io/Pilots/images/tutoriais/boletos/ab2.png" alt="" /></p>
+
+<p>3 - Dentro do cadastro da loja, vá até a sessão “<strong>Meios de pagamento</strong>” e clique no botão “<strong>Editar</strong>” ao lado do Boleto:</p>
+
+<p><img src="https://docscielo.github.io/Pilots/images/tutoriais/boletos/ab3.png" alt="" /></p>
+
+<p>4 - Digite os dados exibidos na tela de cadastros</p>
+
+<p><img src="https://docscielo.github.io/Pilots/images/tutoriais/boletos/br.png" alt="" /></p>
+
+<p>Dados e formatos a serem inseridos:</p>
+
+<blockquote>
+  <p>No momento, é necessario solicitar a equipe de Suporte Braspag que o <strong>Usuário</strong> e <strong>Senha</strong> sejam cadastradas no boleto Bradesco. Após preencher os dados acima, entrem em contato com a Braspag fornecendo os dados de acesso a Sonda Bradesco <br /> <strong>Exemplos:</strong> <br /> <strong>Usuário:</strong> cielo@cielo.com <br /> <strong>Senha / Chave de Segurança:</strong> qcnmFA-Y2rGm4meWLzrEzSpdPARBsmblZSqfKLwq7DM</p>
+</blockquote>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dados</th>
+      <th>Descrição</th>
+      <th>Formato</th>
+      <th>OBS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Agência</strong></td>
+      <td>Código agência</td>
+      <td>4 Dígitos</td>
+      <td>com  ou sem Hifen</td>
+    </tr>
+    <tr>
+      <td><strong>Conta:</strong></td>
+      <td>Conta corrente</td>
+      <td>7 Dígitos</td>
+      <td>com Hifen</td>
+    </tr>
+    <tr>
+      <td><strong>Carteira:</strong></td>
+      <td><strong>Não é necessário boleto Registrado</strong></td>
+      <td>2 dígitos</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td><strong>Conciliação</strong></td>
+      <td>Número do convênio de cobrança</td>
+      <td>7 Dígitos</td>
+      <td>Informado dentro <a href="https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp">Painel do Bradesco</a> - Valida com o banco se é necessario Preenchimento</td>
+    </tr>
+    <tr>
+      <td><strong>Convênio</strong></td>
+      <td>Convênio de comércio eletrônico</td>
+      <td>6 Dígitos</td>
+      <td>Valida com o banco se é necessario Preenchimento para a carteira</td>
+    </tr>
+    <tr>
+      <td><strong>Nosso Numero</strong></td>
+      <td>Contador incremental</td>
+      <td>5 Dígitos</td>
+      <td>Inserir “10000” -  A cada emissão de boleto esse numero aumenta em +1</td>
+    </tr>
+    <tr>
+      <td><strong>Vencimento</strong></td>
+      <td>Prazo de validade do boleto</td>
+      <td>6 Dígitos</td>
+      <td>é o valor padrão, se nenhum outro valor for enviado via API</td>
+    </tr>
+    <tr>
+      <td><strong>Assinatura de Afiliação</strong></td>
+      <td>Chave de segurança do <strong>Bradesco</strong></td>
+      <td>50 Dígitos</td>
+      <td>Informado dentro <a href="https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp">Painel do Bradesco</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>5 - Basta salvar as alterações. Pronto, o boleto está cadastrado na loja.</p>
+
+<h3 id="como-funciona-a-conciliação-automática-atualização-de-status">Como funciona a Conciliação Automática (Atualização de Status)?</h3>
+
+<p>Para o meio de pagamento Boleto Registrado Bradesco  a conciliação é feita via sondagem em lote.</p>
+
+<p>A Sondagem em lote funciona da seguinte forma: diariamente a Braspag consulta o sistema do Bradesco em busca de boletos pagos na data anterior. Essa sondagem ocorre pela manhã <strong>(às 4h, 6h, 8h, 10h e 12h)</strong>.
+Para receber as notificações de pagamento, a loja deve ter cadastrada a URL de Notificação em conjunto com a realização de GETs</p>
+
+<p><strong>OBS:</strong> Hoje, a sonda considera transações que estejam com a data de vencimento dentro do intervalo de 30 dias anteriores e 30 dias posteriores à data de Sondagem Este intervalo existe devido ao alto volume de boletos gerados, para que haja limitação do processo de sondagem.</p>
+
+<h3 id="conciliação-manual-de-boletos">Conciliação Manual de Boletos</h3>
+
+<p>Para conciliar o boleto de forma manual, basta localizar o pedido no Admin e dentro dos Detalhes da Transação localizar o botão “Conciliar”. Desta forma o pedido terá o status alterado de “Não Pago” para “Pago”.</p>
+
+<h3 id="contatos-bradesco">Contatos Bradesco</h3>
+
+<p>Suporte:</p>
+<ul>
+  <li>kit@scopus.com.br</li>
+  <li>homologacao@scopus.com.br</li>
+  <li>com.eletronico@bradesco.com.br</li>
+  <li>comerciobradesco@scopus.com.br</li>
+</ul>
+
+<hr />
+
+<p><img src="https://docscielo.github.io/Pilots/images/tutoriais/boletos/bancodobrasil.jpg" alt="" /></p>
+
+<h3 id="como-funciona---fluxo-transacional-banco-do-brasil">Como funciona - Fluxo Transacional Banco do Brasil?</h3>
+
+<ol>
+  <li>O comprador, após escolher o produto na loja virtual, seleciona a forma de pagamento Boleto Registrado Banco do Brasil;</li>
+  <li>A loja virtual envia para a Braspag uma requisição chamando o meio de pagamento correspondente;</li>
+  <li>A Braspag se comunica com a aplicação do Banco solicitando o registro do boleto;</li>
+  <li>O Banco responde à solicitação de registro;</li>
+  <li>Caso o registro seja realizado com sucesso, a Braspag “gera” o boleto conforme os dados retornados pelo banco;</li>
+  <li>A Braspag envia no response, o link para imprimir o boleto</li>
+  <li>A loja retorna este link ao comprador</li>
+  <li>Para receber as notificações de pagamento, a loja deve ter cadastrada a URL de Notificação e eventualmente utilizar nosso serviço de consulta.</li>
+</ol>
+
+<p><img src="https://docscielo.github.io/Pilots/images/tutoriais/boletos/fluxobb.png" alt="" /></p>
+
+<h3 id="lojista---ativando-o-boleto-no-banco-do-brasil">Lojista - Ativando o Boleto no Banco do Brasil</h3>
+
+<ul>
+  <li>O lojista deverá contatar o gerente de relacionamento do Banco do Brasil para solicitar a habilitação do produto Boleto Registrado; o formulário a seguir deve ser preenchido conforme abaixo e entregue ao gerente. <br /></li>
+  <li><strong>URL (site) retorno à loja</strong>: https://www.pagador.com.br</li>
+  <li><strong>Formato arquivo Retorno</strong>: (X) CBR643</li>
+  <li><strong>Meio de retorno</strong>: {X) Mainframe – para empresa com sistema próprio, que não usam o GFN. <br /></li>
+</ul>
+
+<p><img src="https://docscielo.github.io/Pilots/images/tutoriais/boletos/regbb00.png" alt="" />
+<img src="https://docscielo.github.io/Pilots/images/tutoriais/boletos/regbb01.png" alt="" /></p>
+
+<p>*Ao final do credenciamento, o lojista receberá um documento com como o que segue abaixo</p>
+
+<p><img src="https://docscielo.github.io/Pilots/images/tutoriais/boletos/regbb02.jpg" alt="" /></p>
+
+<ul>
+  <li>As informações que o lojista deve passar, via ticket na ferramenta de suporte da Braspag, são:</li>
+  <li>Convênio do Comércio Eletrônico</li>
+  <li>Número do Convênio de Cobrança</li>
+  <li>Agência</li>
+  <li>Conta</li>
+  <li>Após habilitar o meio de pagamento no cadastro da loja, gerar um pedido teste enviando as informações obrigatórias para registro (nome do comprador, CPF e endereço completo).</li>
+</ul>
+
+<p><em>OBS</em>: A loja deverá obrigatóriamente enviar no contrato da API os dados: Nome do Comprador, CPF e Endereço.</p>
+
+<h3 id="particularidades-boleto-registrado-banco-do-brasil">Particularidades Boleto Registrado Banco do Brasil</h3>
+
+<p>No Boleto Registrado Banco do Brasil, a linha digitável não será retornado no response da requisição.</p>
+
+<p>Esta informação ficará disponível após conciliação.</p>
+
+<p>Para todos os campos texto, inclusive o campo de instruções e relacionados ao endereço, são aceitos como caracteres válidos:</p>
+
+<ul>
+  <li>as letras de A a Z (MAIÚSCULAS);</li>
+  <li>caracteres especiais de conjunção: hífen (-), apóstrofo (‘) quando utilizados, <em>não pode conter espaços entre as letras</em>;</li>
+  <li><em>Exemplos corretos:</em> D’EL-REI, D’ALCORTIVO, SANT’ANA</li>
+  <li><em>Exemplos incorretos:</em> D’EL - REI</li>
+  <li>até um espaço em branco entre palavras</li>
+</ul>
+
+<h3 id="hd-cielo---ativando-o-boleto-no-admin-1">HD Cielo - Ativando o Boleto no Admin</h3>
+
+<p>O Lojista precisará informar ao HD os sequintes dados:</p>
+
+<ul>
+  <li><strong>Agência:</strong> código agência com traço ou sem Hifen.</li>
+  <li><strong>Conta:</strong> Conta corrente com traço.</li>
+  <li><strong>Carteira:</strong> Não é necessário para este boleto</li>
+  <li><strong>Conciliação</strong>: Número do convênio de cobrança</li>
+  <li><strong>Convênio</strong> Convênio de comércio eletrônico</li>
+</ul>
+
+<p>Com esses dados, acesse o Admin e siga os passos abaixo:</p>
+
+<p>1 - Acesse o  Admin Braspag e selecione a opção “<strong>Pesquisar Estabelecimento</strong>”, existente dentro da aba “Admin” do menu superior:</p>
+
+<p><img src="https://docscielo.github.io/Pilots/images/tutoriais/boletos/ab1.png" alt="" /></p>
+
+<p>2 - Utilize os filtros para localizar a loja:</p>
+
+<p><img src="https://docscielo.github.io/Pilots/images/tutoriais/boletos/ab2.png" alt="" /></p>
+
+<p>3 - Dentro do cadastro da loja, vá até a sessão “<strong>Meios de pagamento</strong>” e clique no botão “<strong>Editar</strong>” ao lado do Boleto:</p>
+
+<p><img src="https://docscielo.github.io/Pilots/images/tutoriais/boletos/ab3.png" alt="" /></p>
+
+<p>4 - Digite os dados exibidos na tela de cadastros</p>
+
+<p><img src="https://docscielo.github.io/Pilots/images/tutoriais/boletos/bb.png" alt="" /></p>
+
+<p>Dados e formatos a serem inseridos:</p>
+
+<p><strong>Obs</strong>: O “Cedente” no Banco do Brasil deve ser “vazio”</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dados</th>
+      <th>Descrição</th>
+      <th>Formato</th>
+      <th>OBS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Agência</strong></td>
+      <td>Código agência</td>
+      <td>4 Dígitos</td>
+      <td>Hifen Obrigátório - Não pode haver espaços antes ou depois d agência</td>
+    </tr>
+    <tr>
+      <td><strong>Conta:</strong></td>
+      <td>Conta corrente</td>
+      <td>7 Dígitos</td>
+      <td>Hifen Obrigátório</td>
+    </tr>
+    <tr>
+      <td><strong>Carteira:</strong></td>
+      <td><strong>Não é necessário boleto Registrado</strong></td>
+      <td>2 dígitos</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td><strong>Conciliação</strong></td>
+      <td>Número do convênio de cobrança</td>
+      <td>7 Dígitos</td>
+      <td>inserir o <em>Convênio de cobrança</em> fornecido pelo banco</td>
+    </tr>
+    <tr>
+      <td><strong>Convênio</strong></td>
+      <td>Convênio de comércio eletrônico</td>
+      <td>6 Dígitos</td>
+      <td>inserir o <em>Convênio de Comercio Eletrônico</em> fornecido pelo banco</td>
+    </tr>
+    <tr>
+      <td><strong>Nosso Numero</strong></td>
+      <td>Contador incremental</td>
+      <td>5 Dígitos</td>
+      <td>Inserir “10000” -  A cada emissão de boleto esse numero aumenta em +1</td>
+    </tr>
+    <tr>
+      <td><strong>Vencimento</strong></td>
+      <td>Prazo de validade do boleto</td>
+      <td>6 Dígitos</td>
+      <td>é o valor padrão, se nenhum outro valor for enviado via API</td>
+    </tr>
+    <tr>
+      <td><strong>Instruções</strong></td>
+      <td>Informações exibidas no boleto</td>
+      <td>50 Dígitos</td>
+      <td>Somente numeros e letras de A-Z, não pode haver caractéres especiais ou mais de um espaçamento entre cada palavra</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>5 - Basta salvar as alterações. Pronto, o boleto está cadastrado na loja.</p>
+
+<h3 id="como-funciona-a-conciliação-automática-atualização-de-status-1">Como funciona a Conciliação Automática (Atualização de Status)?</h3>
+
+<blockquote>
+  <p><strong>NO MOMENTO, O BOLETO REGISTRADO BANCO DO BRASIL NÃO REALIZA ATUALIZAÇÃO DE STATUS AUTOMÁTICA</strong></p>
+</blockquote>
+
+<p>As instruções abaixo são para a criação e definição de troca de arquivos para conciliação bancaria entre BB e Braspag. ** O fluxo abaixo ainda não foi implementado para API Cielo**</p>
+
+<p>O lojista pode optar por utilizar a Conciliação Automática de Boletos. Para que seja estabelecido o relacionamento entre o Banco e a VAN Nexxera, o lojista deve preencher a carta de abertura de relacionamento bancário (carta disponível na última página deste documento). Esta deve ser devidamente preenchida pelo cliente e entregue ao gerente de relacionamento responsável pela conta corrente onde o valor dos boletos será creditado.</p>
+
+<p>O gerente deverá encaminhar esta carta ao setor de conectividade de seu banco. Este setor também é conhecido com setor de EDI ou setor de troca de arquivos eletrônicos do banco, e é responsável por abrir um relacionamento para tráfego dos arquivos de retorno entre banco e Nexxera.</p>
+
+<p>Verificação de Abertura de Relacionamento</p>
+
+<p>Para certificar-se de que foi realizada a abertura de relacionamento, encaminhar um e-mail para implantacao@nexxera.com</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Exemplo de e-mail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>“Prezados,<br /> Por gentileza, verificar se a empresa abaixo possui relacionamento para tráfego de arquivos de retorno do banco [<strong>Nome do Banco</strong>]. <br />- Nome Fantasia:<br />- Razão Social:<br />- CNPJ:<br />- Agência:<br />- Conta:<br />- Convenio/Cedente:<br />Em caso positivo, informar o Código de Conciliação, Nomenclatura de Retorno, tipo de serviço e layout dos arquivos de retorno <br /> Atenciosamente,”</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>Cada lojista deverá realizar uma troca de arquivos de conciliação com a Cielo/Braspag para ter uma sistema de atualização de status funcional na API Cielo ecommerce. <br /> O Fluxo de cadastro e troca de arquivos ainda será definido. Hoje os lojistas precisarão realizar conciliação manual</p>
+</blockquote>
+
+</div>
+
+
+            <div class="footer-conteudo">
+    <div id="footer-conteudo-img" class="col-lg-1 col-md-1">
+            <img src="https://docscielo.github.io/Pilots/assets/images/icon-doubt.svg" width="55px" height="53px" alt="Precisa de ajuda?">
+    </div>
+
+    <div id="footer-conteudo-texto" class="col-lg-11 col-md-11">
+        <h2>Precisa de ajuda?</h2>
+        <p>Se você não conseguiu encontrar sua resposta acima, <a href="https://desenvolvedores.cielo.com.br/api-portal/pt-br/content/suporte">entre em contato conosco</a>.</p>
+    </div>
+</div>
+
+        </div>
+
+        <div class="sidebar">
+  <div class="sidebar-sticky">
+    <div class="sidebar-about">
+      <a title="Comutar a coluna da esquerda" class="hamburger">
+        <i class="fa fa-bars hamb-menu" aria-hidden="true"></i>
+      </a>
+      <a href="https://docscielo.github.io/Pilots/">
+        <img src="https://docscielo.github.io/Pilots/assets/images/logo.png" alt="Documentações e tutoriais">
+      </a>
+      <div></div>
+    </div>
+
+    <div id="toc"></div>
+
+    <div class="fixed-footer">
+        
+        <div class="toc-footer">
+            <h2 class="no-toc toc-footer-title">Materiais complementares</h2>
+            
+
+            
+            
+            
+
+            <ul class="toc-footer">
+            
+                
+            
+                
+                    
+                    <li><a href="https://docscielo.github.io/Pilots/manual/precadastro" title="Manual integração técnica via API">Pré-cadastro Cielo</a></li>
+                
+            
+                
+                    
+                    <li><a href="https://docscielo.github.io/Pilots/manual/appcielo3" title="Integração técnica via API">App Cielo</a></li>
+                
+            
+            </ul>
+        </div>
+        
+
+    <div class="toc-contact">
+      <div class="contact">
+        <a title="Contato" href="#">
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+          <span>Contato</span>
+        </a>
+      </div>
+      <div class="github">
+        <a title="GitHub" href="https://github.com/developercielo">
+          <i class="fa fa-github" aria-hidden="true"></i>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+        <script src="https://docscielo.github.io/Pilots/assets/bundles/js/bundle.min.js"></script>
+        <script>
+            
+            var selectors = 'h1,h2,h3,h4,h5,h6';
+            
+        </script>
+
+        
+        <script src="https://docscielo.github.io/Pilots/assets/bundles/js/search.min.js"></script>
+        
+
+        
+
+        <!-- Hotjar Tracking Code for https://developercielo.github.io/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:674586,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+    </body>
+</html>
