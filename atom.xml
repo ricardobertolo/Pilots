@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-03T20:08:32+00:00</updated>
+    <updated>2018-07-03T20:16:40+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -607,28 +607,18 @@ A URL de Ativação (&lt;code class=&quot;highlighter-rouge&quot;&gt;ActivationU
         <id>https://docscielo.github.io/Pilots/tutorial/boletos</id>
         <content type="html">&lt;h1 id=&quot;boletos&quot;&gt;Boletos&lt;/h1&gt;
 
-&lt;h2 id=&quot;o-que-é-boleto-registrado&quot;&gt;O que é Boleto Registrado?&lt;/h2&gt;
+&lt;h2 id=&quot;o-que-são-boletos-registrados&quot;&gt;O que são Boletos Registrados?&lt;/h2&gt;
 
-&lt;p&gt;O Boleto Registrado é um dos meios de pagamentos disponibilizados no E-commerce. Com o objetivo de mitigar fraudes, a Febraban em conjunto com os Bancos desenvolveu a modalidade registrada, tendo um controle centralizado de todos os boletos emitidos.&lt;/p&gt;
-
-&lt;h2 id=&quot;qual-o-benefício-em-utilizá-lo&quot;&gt;Qual o benefício em utilizá-lo?&lt;/h2&gt;
-
-&lt;p&gt;A Cobrança Registrada foi desenvolvida para promover maior confiabilidade e segurança na compra online. O banco emissor tem conhecimento do boleto desde sua geração até sua liquidação. O lojista tem a opção de negativar o comprador que gerou e não pagou uma cobrança registrada.&lt;/p&gt;
+&lt;p&gt;O Boleto Registrado é um dos meios de pagamentos disponibilizados no E-commerce com o objetivo de mitigar fraudes.
+O banco emissor tem conhecimento da emissão do boleto desde sua geração até sua liquidação diferente dos antigos boletos não registrados. O lojista tem a opção de negativar o comprador que gerou e não pagou uma cobrança registrada.&lt;/p&gt;
 
 &lt;p&gt;Esta modalidade de cobrança permite que o comprador efetue o pagamento do boleto em qualquer agência bancária mesmo depois do vencimento.&lt;/p&gt;
 
+&lt;p&gt;Datas estabelecidas pela Febraban (Federação Brasileira de Bancos) para que boletos Registrados possam ser utilizados.&lt;/p&gt;
+
 &lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/tutoriais/boletos/b1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;como-a-integração-ocorre-na-30&quot;&gt;Como a Integração ocorre na 3.0?&lt;/h3&gt;
-
-&lt;p&gt;A 3.0 possui apenas um tipo de chamado, tanto para boletos do “Registrado” quanto “Não Registrados”.
-O mesmo código é usado para todos os bancos, e podem ser visualizado em:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;https://developercielo.github.io/Webservice-3.0/#criando-uma-venda-de-boleto&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
+&lt;h2 id=&quot;bradesco&quot;&gt;Bradesco&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/tutoriais/boletos/bradesco.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -645,7 +635,7 @@ O mesmo código é usado para todos os bancos, e podem ser visualizado em:&lt;/p
   &lt;li&gt;Para receber as notificações de pagamento, a loja deve ter cadastrada a URL de Notificação e eventualmente utilizar nosso serviço de consulta.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/tutoriais/boletos/b2png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/tutoriais/boletos/b2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;lojista---ativando-o-boleto-no-bradesco&quot;&gt;Lojista - Ativando o Boleto no Bradesco&lt;/h3&gt;
 
@@ -794,6 +784,8 @@ Para receber as notificações de pagamento, a loja deve ter cadastrada a URL de
 &lt;/ul&gt;
 
 &lt;hr /&gt;
+
+&lt;h2 id=&quot;banco-do-brasil&quot;&gt;Banco do Brasil&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/tutoriais/boletos/bancodobrasil.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
