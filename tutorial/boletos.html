@@ -130,13 +130,13 @@ O banco emissor tem conhecimento da emissão do boleto desde sua geração até 
 
 <p><img src="https://docscielo.github.io/Pilots/images/tutoriais/boletos/b1.png" alt="Tabela de Prazos" /></p>
 
-<h2 id="bradesco">Bradesco</h2>
+<h1 id="bradesco">Bradesco</h1>
 
 <p><img src="https://docscielo.github.io/Pilots/images/tutoriais/boletos/bradesco.jpg" alt="Logo Bradesco" /></p>
 
-<h3 id="como-funciona">Como funciona</h3>
+<h2 id="como-funciona">Como funciona</h2>
 
-<h4 id="api-cielo-e-commerce">API Cielo E-commerce</h4>
+<h3 id="api-cielo-e-commerce">API Cielo E-commerce</h3>
 
 <ol>
   <li>O comprador, após escolher o produto na loja, seleciona a forma de pagamento Boleto Bradesco;</li>
@@ -149,7 +149,7 @@ O banco emissor tem conhecimento da emissão do boleto desde sua geração até 
   <li>Para receber as notificações de pagamento, a loja deve ter cadastrada a URL de Notificação ou  utilizar o serviço de consulta.</li>
 </ol>
 
-<h4 id="checkout-cielo">Checkout Cielo</h4>
+<h3 id="checkout-cielo">Checkout Cielo</h3>
 
 <ol>
   <li>O comprador, após escolher o produto na loja, seleciona a forma de pagamento Boleto Bradesco;</li>
@@ -162,22 +162,24 @@ O banco emissor tem conhecimento da emissão do boleto desde sua geração até 
 
 <p><img src="https://docscielo.github.io/Pilots/images/tutoriais/boletos/b2.png" alt="Fluxo do Boleto" /></p>
 
-<h3 id="configurando-o-boleto">Configurando o Boleto</h3>
+<h2 id="configurando-o-boleto">Configurando o Boleto</h2>
 
-<h4 id="ambiente-bradesco">Ambiente Bradesco</h4>
+<h3 id="ambiente-bradesco">Ambiente Bradesco</h3>
+
+<p><strong>Criando Credenciais</strong></p>
 
 <ol>
   <li>O lojista deverá contatar o gerente de relacionamento do Banco Bradesco para solicitar a contratação do Boleto Registrado via Gerenciador API;</li>
   <li>A equipe técnica do Banco enviará para o e-mail do solicitante os dados de acesso ao Gerenciador API.</li>
-  <li>No <strong>painel do Bradesco, o lojista deverá acessar a aba “Configurações” e escolher a opção “Meios de Pagamento”.</strong></li>
-  <li>O campo <strong>“Palavra-secreta”</strong> deve ser preenchido com uma senha. A operação é confirmada clicando em “Gerar nova chave de segurança”:</li>
-  <li>Ainda no <a href="https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp">Painel do Bradesco</a>, o cliente deve criar um Usuário de Consulta para atualizações de status.</li>
+  <li>No <strong>painel do Bradesco</strong>, o lojista deverá acessar a aba <strong>“Configurações”</strong> e escolher a opção <strong>“Meios de Pagamento”</strong>.</li>
+  <li>O campo <strong>“Palavra-secreta”</strong> deve ser preenchido com uma senha. A operação é confirmada clicando em <strong>“Gerar nova chave de segurança”</strong></li>
+  <li>Ainda no <a href="https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp"><strong>Painel do Bradesco</strong></a>, o cliente deve criar um Usuário de Consulta para atualizações de status.</li>
   <li>O Lojista deverá realizar atualização dos dados cadastrais Bradesco para poder Transacionar. Ver <a href="https://developercielo.github.io/Habilitacao-meios-de-pagamento/#bradesco">Tutorial</a>.</li>
 </ol>
 
-<p><img src="https://docscielo.github.io/Pilots/images/tutoriais/boletos/b3.png" alt="" /></p>
+<p><img src="https://docscielo.github.io/Pilots/images/tutoriais/boletos/b3.png" alt="Tela Bradesco" /></p>
 
-<h4 id="ambiente-cielo">Ambiente Cielo</h4>
+<h3 id="ambiente-cielo">Ambiente Cielo</h3>
 
 <p>O Lojista precisará informar ao suporte Cielo os sequintes dados:</p>
 
@@ -225,7 +227,7 @@ O banco emissor tem conhecimento da emissão do boleto desde sua geração até 
       <td><strong>Nosso Numero</strong></td>
       <td>Contador incremental</td>
       <td>5 Dígitos</td>
-      <td>Inserir “10000” -  A cada emissão de boleto esse numero aumenta em +1</td>
+      <td><strong>Opcional</strong> - Numero de controle que a cada emissão dp boleto  aumenta em +1</td>
     </tr>
     <tr>
       <td><strong>Vencimento</strong></td>
@@ -284,11 +286,11 @@ O banco emissor tem conhecimento da emissão do boleto desde sua geração até 
   <p><strong>OBS:</strong> Hoje, a sonda considera transações que estejam com a data de vencimento dentro do intervalo de 30 dias anteriores e 30 dias posteriores à data de Sondagem.</p>
 </blockquote>
 
-<h3 id="conciliação-manual-de-boletos">Conciliação Manual de Boletos</h3>
+<h2 id="conciliação-manual-de-boletos">Conciliação Manual de Boletos</h2>
 
-<p>Para conciliar o boleto de forma manual, basta localizar o pedido no Admin e dentro dos Detalhes da Transação localizar o botão “Conciliar”. Desta forma o pedido terá o status alterado de “Não Pago” para “Pago”.</p>
+<p>Para conciliar o boleto de forma manual, basta localizar o pedido no site Cielo e dentro dos Detalhes da Transação localizar o botão “Conciliar”. Desta forma o pedido terá o status alterado de “Não Pago” para “Pago”.</p>
 
-<h3 id="contatos-bradesco">Contatos Bradesco</h3>
+<h2 id="contatos-bradesco">Contatos Bradesco</h2>
 
 <p>Suporte Bradesco:</p>
 
@@ -301,11 +303,11 @@ O banco emissor tem conhecimento da emissão do boleto desde sua geração até 
 
 <hr />
 
-<h2 id="banco-do-brasil">Banco do Brasil</h2>
+<h1 id="banco-do-brasil">Banco do Brasil</h1>
 
 <p><img src="https://docscielo.github.io/Pilots/images/tutoriais/boletos/bancodobrasil.jpg" alt="" /></p>
 
-<h3 id="como-funciona---fluxo-transacional-banco-do-brasil">Como funciona - Fluxo Transacional Banco do Brasil?</h3>
+<h2 id="como-funciona---fluxo-transacional-banco-do-brasil">Como funciona - Fluxo Transacional Banco do Brasil?</h2>
 
 <ol>
   <li>O comprador, após escolher o produto na loja virtual, seleciona a forma de pagamento Boleto Registrado Banco do Brasil;</li>
@@ -320,7 +322,7 @@ O banco emissor tem conhecimento da emissão do boleto desde sua geração até 
 
 <p><img src="https://docscielo.github.io/Pilots/images/tutoriais/boletos/fluxobb.png" alt="" /></p>
 
-<h3 id="lojista---ativando-o-boleto-no-banco-do-brasil">Lojista - Ativando o Boleto no Banco do Brasil</h3>
+<h2 id="lojista---ativando-o-boleto-no-banco-do-brasil">Lojista - Ativando o Boleto no Banco do Brasil</h2>
 
 <ul>
   <li>O lojista deverá contatar o gerente de relacionamento do Banco do Brasil para solicitar a habilitação do produto Boleto Registrado; o formulário a seguir deve ser preenchido conforme abaixo e entregue ao gerente. <br /></li>
@@ -347,7 +349,7 @@ O banco emissor tem conhecimento da emissão do boleto desde sua geração até 
 
 <p><em>OBS</em>: A loja deverá obrigatóriamente enviar no contrato da API os dados: Nome do Comprador, CPF e Endereço.</p>
 
-<h3 id="particularidades-boleto-registrado-banco-do-brasil">Particularidades Boleto Registrado Banco do Brasil</h3>
+<h2 id="particularidades-boleto-registrado-banco-do-brasil">Particularidades Boleto Registrado Banco do Brasil</h2>
 
 <p>No Boleto Registrado Banco do Brasil, a linha digitável não será retornado no response da requisição.</p>
 
@@ -363,7 +365,7 @@ O banco emissor tem conhecimento da emissão do boleto desde sua geração até 
   <li>até um espaço em branco entre palavras</li>
 </ul>
 
-<h3 id="hd-cielo---ativando-o-boleto-no-admin">HD Cielo - Ativando o Boleto no Admin</h3>
+<h2 id="hd-cielo---ativando-o-boleto-no-admin">HD Cielo - Ativando o Boleto no Admin</h2>
 
 <p>O Lojista precisará informar ao HD os sequintes dados:</p>
 
@@ -460,7 +462,7 @@ O banco emissor tem conhecimento da emissão do boleto desde sua geração até 
 
 <p>5 - Basta salvar as alterações. Pronto, o boleto está cadastrado na loja.</p>
 
-<h3 id="como-funciona-a-conciliação-automática-atualização-de-status">Como funciona a Conciliação Automática (Atualização de Status)?</h3>
+<h2 id="como-funciona-a-conciliação-automática-atualização-de-status">Como funciona a Conciliação Automática (Atualização de Status)?</h2>
 
 <blockquote>
   <p><strong>NO MOMENTO, O BOLETO REGISTRADO BANCO DO BRASIL NÃO REALIZA ATUALIZAÇÃO DE STATUS AUTOMÁTICA</strong></p>
