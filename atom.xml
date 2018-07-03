@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-03T20:59:53+00:00</updated>
+    <updated>2018-07-03T21:05:10+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -726,7 +726,6 @@ A equipe técnica do Banco enviará para o e-mail do solicitante os dados de ace
   &lt;li&gt;No &lt;strong&gt;painel do Bradesco&lt;/strong&gt;, o lojista deverá acessar a aba &lt;strong&gt;“Configurações”&lt;/strong&gt; e escolher a opção &lt;strong&gt;“Meios de Pagamento”&lt;/strong&gt;&lt;/li&gt;
   &lt;li&gt;O campo &lt;strong&gt;“Palavra-secreta”&lt;/strong&gt; deve ser preenchido com uma senha. A operação é confirmada clicando em &lt;strong&gt;“Gerar nova chave de segurança”&lt;/strong&gt;&lt;/li&gt;
   &lt;li&gt;Ainda no &lt;a href=&quot;https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp&quot;&gt;&lt;strong&gt;Painel do Bradesco&lt;/strong&gt;&lt;/a&gt;, o cliente deve criar um Usuário de Consulta para atualizações de status.&lt;/li&gt;
-  &lt;li&gt;O Lojista deverá realizar atualização dos dados cadastrais Bradesco para poder Transacionar. Ver &lt;a href=&quot;https://developercielo.github.io/Habilitacao-meios-de-pagamento/#bradesco&quot;&gt;Tutorial&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/tutoriais/boletos/b3.png&quot; alt=&quot;Tela Bradesco&quot; /&gt;&lt;/p&gt;
