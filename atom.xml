@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-03T20:16:40+00:00</updated>
+    <updated>2018-07-03T20:36:07+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -616,86 +616,58 @@ O banco emissor tem conhecimento da emissão do boleto desde sua geração até 
 
 &lt;p&gt;Datas estabelecidas pela Febraban (Federação Brasileira de Bancos) para que boletos Registrados possam ser utilizados.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/tutoriais/boletos/b1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/tutoriais/boletos/b1.png&quot; alt=&quot;Tabela de Prazos&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;bradesco&quot;&gt;Bradesco&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/tutoriais/boletos/bradesco.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/tutoriais/boletos/bradesco.jpg&quot; alt=&quot;Logo Bradesco&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;como-funciona---fluxo-transacional-bradesco&quot;&gt;Como funciona - Fluxo Transacional Bradesco?&lt;/h3&gt;
+&lt;h3 id=&quot;como-funciona&quot;&gt;Como funciona&lt;/h3&gt;
+
+&lt;h4 id=&quot;api-cielo-e-commerce&quot;&gt;API Cielo E-commerce&lt;/h4&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;O comprador, após escolher o produto na loja virtual, seleciona a forma de pagamento Boleto Bradesco;&lt;/li&gt;
-  &lt;li&gt;A loja virtual envia para a Cielo uma requisição chamando o meio de pagamento correspondente;&lt;/li&gt;
+  &lt;li&gt;O comprador, após escolher o produto na loja, seleciona a forma de pagamento Boleto Bradesco;&lt;/li&gt;
+  &lt;li&gt;A loja envia para a Cielo uma requisição chamando o meio de pagamento correspondente;&lt;/li&gt;
   &lt;li&gt;A Cielo se comunica com a aplicação do Banco Bradesco solicitando o registro do boleto;&lt;/li&gt;
   &lt;li&gt;Caso o registro seja realizado com sucesso, o Banco responde à solicitação devolvendo os dados de cobrança (código de barras, linha digitável, etc) e a &lt;strong&gt;URL do Boleto&lt;/strong&gt;;&lt;/li&gt;
-  &lt;li&gt;A Cielo envia no response o link para que a loja possa encaminhar ao comprador am ambiente Bancário;&lt;/li&gt;
+  &lt;li&gt;A Cielo envia no response o link para que a loja possa abrir um pop-up exibindo o boleto;&lt;/li&gt;
   &lt;li&gt;O cliente acessa a URL do boleto (renderização) e então pode realizar o pagamento;&lt;/li&gt;
-  &lt;li&gt;A conciliação do documento é feita via serviço de consulta da Cielo ao sistema do Bradesco.&lt;/li&gt;
-  &lt;li&gt;Para receber as notificações de pagamento, a loja deve ter cadastrada a URL de Notificação e eventualmente utilizar nosso serviço de consulta.&lt;/li&gt;
+  &lt;li&gt;A conciliação do boleto é feita via serviço de consulta da Cielo ao sistema do Bradesco.&lt;/li&gt;
+  &lt;li&gt;Para receber as notificações de pagamento, a loja deve ter cadastrada a URL de Notificação ou  utilizar o serviço de consulta.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/tutoriais/boletos/b2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;checkout-cielo&quot;&gt;Checkout Cielo&lt;/h4&gt;
 
-&lt;h3 id=&quot;lojista---ativando-o-boleto-no-bradesco&quot;&gt;Lojista - Ativando o Boleto no Bradesco&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;O comprador, após escolher o produto na loja, seleciona a forma de pagamento Boleto Bradesco;&lt;/li&gt;
+  &lt;li&gt;O Checkout exibirá a URL do Boleto&lt;/li&gt;
+  &lt;li&gt;O cliente acessa a URL do boleto (renderização) e então pode realizar o pagamento;&lt;/li&gt;
+  &lt;li&gt;A conciliação do boleto é feita via serviço de consulta da Cielo ao sistema do Bradesco.&lt;/li&gt;
+  &lt;li&gt;No Backoffice do Checkout, o status do Boleto será atualizado.&lt;/li&gt;
+  &lt;li&gt;Para receber as notificações de pagamento, a loja deve ter cadastrada a URL de Notificação ou  utilizar o serviço de consulta.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/tutoriais/boletos/b2.png&quot; alt=&quot;Fluxo do Boleto&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;configurando-o-boleto&quot;&gt;Configurando o Boleto&lt;/h3&gt;
+
+&lt;h4 id=&quot;ambiente-bradesco&quot;&gt;Ambiente Bradesco&lt;/h4&gt;
 
 &lt;ol&gt;
   &lt;li&gt;O lojista deverá contatar o gerente de relacionamento do Banco Bradesco para solicitar a contratação do Boleto Registrado via Gerenciador API;&lt;/li&gt;
   &lt;li&gt;A equipe técnica do Banco enviará para o e-mail do solicitante os dados de acesso ao Gerenciador API.&lt;/li&gt;
-  &lt;li&gt;No painel do Bradesco, o lojista deverá acesse a aba “Configurações” e escolher a opção “Meios de Pagamento”.&lt;/li&gt;
-  &lt;li&gt;O campo “Palavra-secreta” deve ser preenchido com uma senha. A operação é confirmada clicando em “Gerar nova chave de segurança”:&lt;/li&gt;
+  &lt;li&gt;No &lt;strong&gt;painel do Bradesco, o lojista deverá acessar a aba “Configurações” e escolher a opção “Meios de Pagamento”.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;O campo &lt;strong&gt;“Palavra-secreta”&lt;/strong&gt; deve ser preenchido com uma senha. A operação é confirmada clicando em “Gerar nova chave de segurança”:&lt;/li&gt;
   &lt;li&gt;Ainda no &lt;a href=&quot;https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp&quot;&gt;Painel do Bradesco&lt;/a&gt;, o cliente deve criar um Usuário de Consulta para atualizações de status.&lt;/li&gt;
   &lt;li&gt;O Lojista deverá realizar atualização dos dados cadastrais Bradesco para poder Transacionar. Ver &lt;a href=&quot;https://developercielo.github.io/Habilitacao-meios-de-pagamento/#bradesco&quot;&gt;Tutorial&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/tutoriais/boletos/b3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;hd-cielo---ativando-o-boleto-no-admin&quot;&gt;HD Cielo - Ativando o Boleto no Admin&lt;/h3&gt;
+&lt;h4 id=&quot;ambiente-cielo&quot;&gt;Ambiente Cielo&lt;/h4&gt;
 
-&lt;p&gt;O Lojista precisará informar ao HD os sequintes dados:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Agência:&lt;/strong&gt; código agência com traço ou sem Hifen.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Conta:&lt;/strong&gt; Conta corrente com traço.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Carteira:&lt;/strong&gt; Não é necessário para este boleto&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Conciliação&lt;/strong&gt;: Número do convênio de cobrança&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Convênio&lt;/strong&gt; Convênio de comércio eletrônico&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Além desses dados, é necessario as credenciais do Bradesco:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Usuário&lt;/strong&gt;: E-mail usado no acesso do &lt;a href=&quot;https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp&quot;&gt;Painel do Bradesco&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Senha&lt;/strong&gt;: Chave de segurança criada dentro do &lt;a href=&quot;https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp&quot;&gt;Painel do Bradesco&lt;/a&gt;. &lt;strong&gt;Não é a senha de acesso ao Painel Bradesco&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Essas credenciais são usadas para que a 3.0 possa consultar o status do Boleto. &lt;br /&gt; &lt;strong&gt;Exemplos:&lt;/strong&gt; &lt;br /&gt; &lt;strong&gt;Usuário&lt;/strong&gt;: cielo@cielo.com &lt;br /&gt; &lt;strong&gt;Senha / Chave de Segurança&lt;/strong&gt;: qcnmFA-Y2rGm4meWLzrEzSpdPARBsmblZSqfKLwq7DM&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Com esses dados, acesse o Admin e siga os passos abaixo:&lt;/p&gt;
-
-&lt;p&gt;1 - Acesse o  Admin Braspag e selecione a opção “&lt;strong&gt;Pesquisar Estabelecimento&lt;/strong&gt;”, existente dentro da aba “Admin” do menu superior:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/tutoriais/boletos/ab1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;2 - Utilize os filtros para localizar a loja:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/tutoriais/boletos/ab2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;3 - Dentro do cadastro da loja, vá até a sessão “&lt;strong&gt;Meios de pagamento&lt;/strong&gt;” e clique no botão “&lt;strong&gt;Editar&lt;/strong&gt;” ao lado do Boleto:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/tutoriais/boletos/ab3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;4 - Digite os dados exibidos na tela de cadastros&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/tutoriais/boletos/br.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Dados e formatos a serem inseridos:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;No momento, é necessario solicitar a equipe de Suporte Braspag que o &lt;strong&gt;Usuário&lt;/strong&gt; e &lt;strong&gt;Senha&lt;/strong&gt; sejam cadastradas no boleto Bradesco. Após preencher os dados acima, entrem em contato com a Braspag fornecendo os dados de acesso a Sonda Bradesco &lt;br /&gt; &lt;strong&gt;Exemplos:&lt;/strong&gt; &lt;br /&gt; &lt;strong&gt;Usuário:&lt;/strong&gt; cielo@cielo.com &lt;br /&gt; &lt;strong&gt;Senha / Chave de Segurança:&lt;/strong&gt; qcnmFA-Y2rGm4meWLzrEzSpdPARBsmblZSqfKLwq7DM&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;O Lojista precisará informar ao suporte Cielo os sequintes dados:&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -729,7 +701,7 @@ O banco emissor tem conhecimento da emissão do boleto desde sua geração até 
       &lt;td&gt;&lt;strong&gt;Conciliação&lt;/strong&gt;&lt;/td&gt;
       &lt;td&gt;Número do convênio de cobrança&lt;/td&gt;
       &lt;td&gt;7 Dígitos&lt;/td&gt;
-      &lt;td&gt;Informado dentro &lt;a href=&quot;https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp&quot;&gt;Painel do Bradesco&lt;/a&gt; - Valida com o banco se é necessario Preenchimento&lt;/td&gt;
+      &lt;td&gt;Informado dentro &lt;a href=&quot;https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp&quot;&gt;Painel do Bradesco&lt;/a&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;strong&gt;Convênio&lt;/strong&gt;&lt;/td&gt;
@@ -758,16 +730,47 @@ O banco emissor tem conhecimento da emissão do boleto desde sua geração até 
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;5 - Basta salvar as alterações. Pronto, o boleto está cadastrado na loja.&lt;/p&gt;
+&lt;p&gt;Serão necessarias as credenciais do Bradesco:&lt;/p&gt;
 
-&lt;h3 id=&quot;como-funciona-a-conciliação-automática-atualização-de-status&quot;&gt;Como funciona a Conciliação Automática (Atualização de Status)?&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Essas credenciais são usadas para que a Cielo possa consultar o status do Boleto.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;Para o meio de pagamento Boleto Registrado Bradesco  a conciliação é feita via sondagem em lote.&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Credenciais&lt;/th&gt;
+      &lt;th&gt;Descrição&lt;/th&gt;
+      &lt;th&gt;Exemplo&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Usuário&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;E-mail usado no acesso do &lt;a href=&quot;https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp&quot;&gt;Painel do Bradesco&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;cielo@cielo.com&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Senha/Chave de Segurança&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Chave de segurança criada dentro do &lt;a href=&quot;https://meiosdepagamentobradesco.com.br/gerenciadorapi/login.jsp&quot;&gt;Painel do Bradesco&lt;/a&gt;. &lt;br /&gt; &lt;strong&gt;Não é a senha de acesso ao Painel Bradesco&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;qcnmFA-Y2rGm4meWLzrEzSpdPARBsmblZSqfKLwq7DM&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-&lt;p&gt;A Sondagem em lote funciona da seguinte forma: diariamente a Braspag consulta o sistema do Bradesco em busca de boletos pagos na data anterior. Essa sondagem ocorre pela manhã &lt;strong&gt;(às 4h, 6h, 8h, 10h e 12h)&lt;/strong&gt;.
-Para receber as notificações de pagamento, a loja deve ter cadastrada a URL de Notificação em conjunto com a realização de GETs&lt;/p&gt;
+&lt;h3 id=&quot;atualização-de-status&quot;&gt;Atualização de Status&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;OBS:&lt;/strong&gt; Hoje, a sonda considera transações que estejam com a data de vencimento dentro do intervalo de 30 dias anteriores e 30 dias posteriores à data de Sondagem Este intervalo existe devido ao alto volume de boletos gerados, para que haja limitação do processo de sondagem.&lt;/p&gt;
+&lt;p&gt;Para o meio de pagamento Boleto Registrado Bradesco a atualização de status é feita via sondagem em lote:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Essa sondagem ocorre pela manhã: &lt;strong&gt;4h, 6h, 8h, 10h e 12h&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para receber as notificações de pagamento, a loja deve ter cadastrada a URL de Notificação em conjunto com a realização de GETs&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;OBS:&lt;/strong&gt; Hoje, a sonda considera transações que estejam com a data de vencimento dentro do intervalo de 30 dias anteriores e 30 dias posteriores à data de Sondagem.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;h3 id=&quot;conciliação-manual-de-boletos&quot;&gt;Conciliação Manual de Boletos&lt;/h3&gt;
 
@@ -775,7 +778,8 @@ Para receber as notificações de pagamento, a loja deve ter cadastrada a URL de
 
 &lt;h3 id=&quot;contatos-bradesco&quot;&gt;Contatos Bradesco&lt;/h3&gt;
 
-&lt;p&gt;Suporte:&lt;/p&gt;
+&lt;p&gt;Suporte Bradesco:&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;kit@scopus.com.br&lt;/li&gt;
   &lt;li&gt;homologacao@scopus.com.br&lt;/li&gt;
@@ -847,7 +851,7 @@ Para receber as notificações de pagamento, a loja deve ter cadastrada a URL de
   &lt;li&gt;até um espaço em branco entre palavras&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;hd-cielo---ativando-o-boleto-no-admin-1&quot;&gt;HD Cielo - Ativando o Boleto no Admin&lt;/h3&gt;
+&lt;h3 id=&quot;hd-cielo---ativando-o-boleto-no-admin&quot;&gt;HD Cielo - Ativando o Boleto no Admin&lt;/h3&gt;
 
 &lt;p&gt;O Lojista precisará informar ao HD os sequintes dados:&lt;/p&gt;
 
@@ -944,7 +948,7 @@ Para receber as notificações de pagamento, a loja deve ter cadastrada a URL de
 
 &lt;p&gt;5 - Basta salvar as alterações. Pronto, o boleto está cadastrado na loja.&lt;/p&gt;
 
-&lt;h3 id=&quot;como-funciona-a-conciliação-automática-atualização-de-status-1&quot;&gt;Como funciona a Conciliação Automática (Atualização de Status)?&lt;/h3&gt;
+&lt;h3 id=&quot;como-funciona-a-conciliação-automática-atualização-de-status&quot;&gt;Como funciona a Conciliação Automática (Atualização de Status)?&lt;/h3&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;NO MOMENTO, O BOLETO REGISTRADO BANCO DO BRASIL NÃO REALIZA ATUALIZAÇÃO DE STATUS AUTOMÁTICA&lt;/strong&gt;&lt;/p&gt;
