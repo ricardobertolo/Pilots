@@ -48,7 +48,7 @@ Para obter acesso a serviços Cielo que utilizam o `Cielo Oauth`, será necessá
 
 O Request dever ser enviado apenas no Header da requisição.
 
-<aside class="request"><span class="method post">POST</span><span class="endpoint">https://cieloecommerce.cielo.com.br/v2/public/v2/token</span></aside>
+<aside class="request"><span class="method post">POST</span><span class="endpoint">/v2/public/v2/token</span></aside>
 
 ``` json
 x-www-form-urlencoded
@@ -131,6 +131,8 @@ Após realizar o processo de Autenticação descrito na sessão [Cielo OAUTH](ht
 ### Post de criação
 
 <aside class="request"><span class="method post">POST</span><span class="endpoint">https://merchantpreregistration.cieloecommerce.cielo.com.br/api/preregistrations</span></aside>
+
+<aside class="request"><span class="method post">POST</span><span class="endpoint">https://merchantpreregistrationsandbox.cieloecommerce.cielo.com.br/api/preregistrations</span></aside>
 
 ``` json
 {
