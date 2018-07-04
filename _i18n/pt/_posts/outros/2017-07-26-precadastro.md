@@ -79,7 +79,7 @@ O response possuirá o Token utilizado para novas requisições em Serviços Cie
 
 # Consulta EC
 
-O processo de consulta de EC busca a existencia de afiliações e MerchanIDs na base de lojas Checkout Cielo.
+O processo de consulta de EC busca a existencia de afiliações e MerchanIDs na base de lojas **Checkout Cielo**.
 
 <aside class="warning">Não são retornadas "lojas legado" do checkout cielo, sendo essas  CHECKOUT SIMPLIFICADO OU CHECKOUT WEBSERVICE </aside>
 
