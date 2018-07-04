@@ -130,7 +130,7 @@ Após realizar o processo de Autenticação descrito na sessão [Cielo OAUTH](ht
 
 ### Post de criação
 
-<aside class="request"><span class="method post">POST</span><span class="endpoint">https://cieloecommerce.cielo.com.br/api/public/v1/PreRegistration/</span></aside>
+<aside class="request"><span class="method post">POST</span><span class="endpoint">https://merchantpreregistration.cieloecommerce.cielo.com.br/api/preregistrations</span></aside>
 
 ``` json
 {
