@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-04T17:47:21+00:00</updated>
+    <updated>2018-07-04T17:47:54+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -143,7 +143,7 @@
   &lt;p&gt;O token retornado (access_token) deverá ser utilizado em toda requisição como uma chave de autorização, destacando que este possui uma validade de 20 minutos (1200 segundos) e após esse intervalo, será necessário obter um novo token para acesso aos serviços Cielo.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h1 id=&quot;consulta-ec&quot;&gt;Consulta EC&lt;/h1&gt;
+&lt;h1 id=&quot;consulta-ec---checkout-cielo&quot;&gt;Consulta EC - Checkout Cielo&lt;/h1&gt;
 
 &lt;p&gt;O processo de consulta de EC busca a existencia de afiliações e MerchanIDs na base de lojas &lt;strong&gt;Checkout Cielo&lt;/strong&gt;.&lt;/p&gt;
 
