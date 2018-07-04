@@ -77,7 +77,7 @@ O response possuirá o Token utilizado para novas requisições em Serviços Cie
 
 > O token retornado (access_token) deverá ser utilizado em toda requisição como uma chave de autorização, destacando que este possui uma validade de 20 minutos (1200 segundos) e após esse intervalo, será necessário obter um novo token para acesso aos serviços Cielo. 
 
-# Consulta EC
+# Consulta EC - Checkout Cielo
 
 O processo de consulta de EC busca a existencia de afiliações e MerchanIDs na base de lojas **Checkout Cielo**.
 
