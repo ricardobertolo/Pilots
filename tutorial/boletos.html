@@ -387,12 +387,14 @@ A equipe técnica do Banco enviará para o e-mail do solicitante os dados de ace
 
 <p><img src="https://docscielo.github.io/Pilots/images/tutoriais/boletos/bancodobrasil.jpg" alt="" /></p>
 
-<h2 id="como-funciona---fluxo-transacional-banco-do-brasil">Como funciona - Fluxo Transacional Banco do Brasil?</h2>
+<h2 id="como-funciona-1">Como funciona</h2>
+
+<h3 id="api-cielo-e-commerce-1">API Cielo E-commerce</h3>
 
 <ol>
-  <li>O comprador, após escolher o produto na loja virtual, seleciona a forma de pagamento Boleto Registrado Banco do Brasil;</li>
-  <li>A loja virtual envia para a Braspag uma requisição chamando o meio de pagamento correspondente;</li>
-  <li>A Braspag se comunica com a aplicação do Banco solicitando o registro do boleto;</li>
+  <li>O comprador, após escolher o produto na loja , seleciona a forma de pagamento Boleto Registrado Banco do Brasil.</li>
+  <li>A loja envia para a Cielo uma requisição chamando o meio de pagamento correspondente.</li>
+  <li>A Cielo se comunica com a aplicação do Banco solicitando o registro do boleto;</li>
   <li>O Banco responde à solicitação de registro;</li>
   <li>Caso o registro seja realizado com sucesso, a Braspag “gera” o boleto conforme os dados retornados pelo banco;</li>
   <li>A Braspag envia no response, o link para imprimir o boleto</li>

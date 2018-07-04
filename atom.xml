@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-03T21:08:19+00:00</updated>
+    <updated>2018-07-04T17:38:26+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -875,12 +875,14 @@ A equipe técnica do Banco enviará para o e-mail do solicitante os dados de ace
 
 &lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/tutoriais/boletos/bancodobrasil.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;como-funciona---fluxo-transacional-banco-do-brasil&quot;&gt;Como funciona - Fluxo Transacional Banco do Brasil?&lt;/h2&gt;
+&lt;h2 id=&quot;como-funciona-1&quot;&gt;Como funciona&lt;/h2&gt;
+
+&lt;h3 id=&quot;api-cielo-e-commerce-1&quot;&gt;API Cielo E-commerce&lt;/h3&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;O comprador, após escolher o produto na loja virtual, seleciona a forma de pagamento Boleto Registrado Banco do Brasil;&lt;/li&gt;
-  &lt;li&gt;A loja virtual envia para a Braspag uma requisição chamando o meio de pagamento correspondente;&lt;/li&gt;
-  &lt;li&gt;A Braspag se comunica com a aplicação do Banco solicitando o registro do boleto;&lt;/li&gt;
+  &lt;li&gt;O comprador, após escolher o produto na loja , seleciona a forma de pagamento Boleto Registrado Banco do Brasil.&lt;/li&gt;
+  &lt;li&gt;A loja envia para a Cielo uma requisição chamando o meio de pagamento correspondente.&lt;/li&gt;
+  &lt;li&gt;A Cielo se comunica com a aplicação do Banco solicitando o registro do boleto;&lt;/li&gt;
   &lt;li&gt;O Banco responde à solicitação de registro;&lt;/li&gt;
   &lt;li&gt;Caso o registro seja realizado com sucesso, a Braspag “gera” o boleto conforme os dados retornados pelo banco;&lt;/li&gt;
   &lt;li&gt;A Braspag envia no response, o link para imprimir o boleto&lt;/li&gt;
