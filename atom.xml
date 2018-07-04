@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-04T17:44:48+00:00</updated>
+    <updated>2018-07-04T17:47:21+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -145,7 +145,7 @@
 
 &lt;h1 id=&quot;consulta-ec&quot;&gt;Consulta EC&lt;/h1&gt;
 
-&lt;p&gt;O processo de consulta de EC busca a existencia de afiliações e MerchanIDs na base de lojas Checkout Cielo.&lt;/p&gt;
+&lt;p&gt;O processo de consulta de EC busca a existencia de afiliações e MerchanIDs na base de lojas &lt;strong&gt;Checkout Cielo&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;aside class=&quot;warning&quot;&gt;Não são retornadas &quot;lojas legado&quot; do checkout cielo, sendo essas  CHECKOUT SIMPLIFICADO OU CHECKOUT WEBSERVICE &lt;/aside&gt;
 
