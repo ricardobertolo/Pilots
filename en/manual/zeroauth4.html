@@ -123,24 +123,26 @@
             <div class="post">
   <h1 id="zero-auth">Zero Auth</h1>
 
-<p>O <strong>Zero Auth</strong> é uma ferramenta de validação de cartões da API Cielo. A validação permite que o lojista saiba se o cartão é valido ou não antes de enviar a transação para autorização, antecipando o motivo de uma provável não autorização..</p>
+<p>O <strong>Zero Auth</strong> é uma ferramenta de validação de cartões da API Cielo. A validação permite que o lojista saiba se o cartão é valido ou não antes de enviar a transação para autorização, antecipando o motivo de uma provável não autorização.</p>
 
-<p>O <strong>Zero Auth</strong> pode ser usado de 2 maneiras:</p>
+<p><strong>Zero Auth</strong> is a Credit Card validation tool. It allows the merchant to know whether or not the card is valid before sending it for authorization, anticipating the reason for a possible non-authorization.</p>
 
-<ol>
-  <li><strong>Padrão</strong> - Envio de um cartão padrão, sem tokenização ou analises adicionais</li>
-  <li><strong>Com cartão Tokenizado</strong> - Envio de um TOKEN 3.0 para analise</li>
-</ol>
-
-<p>É importante destacar que o Zero Auth <strong>não retorna ou analisa</strong> os seguintes itens:</p>
+<p><strong>Zero Auth</strong> can be used in 2 ways:</p>
 
 <ol>
-  <li>Limite de crédito do cartão</li>
-  <li>Informações sobre o portador</li>
-  <li>Não aciona a base bancaria (dispara SMS so portador)</li>
+  <li><strong>Standard</strong> - Sending a standard card without tokenization or additional analysis</li>
+  <li><strong>Using the “Cardtoken”</strong> - Sending a tokenized card</li>
 </ol>
 
-<p>O Zero Auth suporta as seguintes bandeiras:</p>
+<p>It is important to note that Zero Auth <strong>does not return or analyze</strong> the following items:</p>
+
+<ol>
+  <li>Card credit limit</li>
+  <li>Information about the bearer</li>
+  <li>Does not trigger SMS notification</li>
+</ol>
+
+<p>Zero Auth supports the following flags/Card Brands:</p>
 
 <ul>
   <li><strong>Visa</strong></li>
@@ -149,7 +151,7 @@
 </ul>
 
 <blockquote>
-  <p>Caso outras bandeiras sejam enviadas, o erro <strong>57-Bandeira inválida</strong> será exibido.</p>
+  <p>If other flags/Brand are sent, the error <strong>57-Bandeira inválida</strong> will be displayed.</p>
 </blockquote>
 
 <h2 id="caso-de-uso">Caso de uso</h2>
@@ -161,7 +163,7 @@
 <p>Ela não informa o limite ou características do cartão ou portador, mas simula uma autorização Cielo, validando dados como:</p>
 
 <ol>
-  <li>Se  o cartão está valido junto ao banco emissor</li>
+  <li>Se o cartão está valido junto ao banco emissor</li>
   <li>Se o cartão possui limite disponível</li>
   <li>Se o cartão funciona no Brasil</li>
   <li>Se o número do cartão está correto</li>
@@ -191,7 +193,7 @@ Todas essas etapas exigem que transações sejam realizadas para obter acesso a 
   <li><strong>Recorrência</strong>: todo mês, antes de realizar a cobrança da Assinatura, a Flixnet testa o cartão com o zero auth, assim sabendo se ele será autorizado ou não.  Isso ajuda o FlixNet a prever quais cartões serão negados, já acionando o assinante para atualização do cadastro antes do dia de pagamento.</li>
 </ul>
 
-<h2 id="integração">Integração</h2>
+<h2 id="integration">Integration</h2>
 
 <p>Para realizar a consulta ao Zero Auth, o lojista deverá enviar uma requisição <code class="highlighter-rouge">POST</code> para a API Cielo Ecommerce, simulando uma transação. O <code class="highlighter-rouge">POST</code> deverá ser realizado nas seguintes URL:</p>
 

@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/en/"/>
     <logo>https://docscielo.github.io/Pilots/en/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/en/assets/favicon.ico</icon>
-    <updated>2018-07-19T20:22:50+00:00</updated>
+    <updated>2018-07-19T20:31:45+00:00</updated>
     <id>https://docscielo.github.io/Pilots/en/</id>
     <author>
         <name>João Batista Neto</name>
@@ -386,24 +386,26 @@ You can import them directly into your POSTMAN and have all the examples ready t
         <id>https://docscielo.github.io/Pilots/en/manual/zeroauth4</id>
         <content type="html">&lt;h1 id=&quot;zero-auth&quot;&gt;Zero Auth&lt;/h1&gt;
 
-&lt;p&gt;O &lt;strong&gt;Zero Auth&lt;/strong&gt; é uma ferramenta de validação de cartões da API Cielo. A validação permite que o lojista saiba se o cartão é valido ou não antes de enviar a transação para autorização, antecipando o motivo de uma provável não autorização..&lt;/p&gt;
+&lt;p&gt;O &lt;strong&gt;Zero Auth&lt;/strong&gt; é uma ferramenta de validação de cartões da API Cielo. A validação permite que o lojista saiba se o cartão é valido ou não antes de enviar a transação para autorização, antecipando o motivo de uma provável não autorização.&lt;/p&gt;
 
-&lt;p&gt;O &lt;strong&gt;Zero Auth&lt;/strong&gt; pode ser usado de 2 maneiras:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Zero Auth&lt;/strong&gt; is a Credit Card validation tool. It allows the merchant to know whether or not the card is valid before sending it for authorization, anticipating the reason for a possible non-authorization.&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;Padrão&lt;/strong&gt; - Envio de um cartão padrão, sem tokenização ou analises adicionais&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Com cartão Tokenizado&lt;/strong&gt; - Envio de um TOKEN 3.0 para analise&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;É importante destacar que o Zero Auth &lt;strong&gt;não retorna ou analisa&lt;/strong&gt; os seguintes itens:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Zero Auth&lt;/strong&gt; can be used in 2 ways:&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Limite de crédito do cartão&lt;/li&gt;
-  &lt;li&gt;Informações sobre o portador&lt;/li&gt;
-  &lt;li&gt;Não aciona a base bancaria (dispara SMS so portador)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Standard&lt;/strong&gt; - Sending a standard card without tokenization or additional analysis&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Using the “Cardtoken”&lt;/strong&gt; - Sending a tokenized card&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;O Zero Auth suporta as seguintes bandeiras:&lt;/p&gt;
+&lt;p&gt;It is important to note that Zero Auth &lt;strong&gt;does not return or analyze&lt;/strong&gt; the following items:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Card credit limit&lt;/li&gt;
+  &lt;li&gt;Information about the bearer&lt;/li&gt;
+  &lt;li&gt;Does not trigger SMS notification&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Zero Auth supports the following flags/Card Brands:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Visa&lt;/strong&gt;&lt;/li&gt;
@@ -412,7 +414,7 @@ You can import them directly into your POSTMAN and have all the examples ready t
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Caso outras bandeiras sejam enviadas, o erro &lt;strong&gt;57-Bandeira inválida&lt;/strong&gt; será exibido.&lt;/p&gt;
+  &lt;p&gt;If other flags/Brand are sent, the error &lt;strong&gt;57-Bandeira inválida&lt;/strong&gt; will be displayed.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;caso-de-uso&quot;&gt;Caso de uso&lt;/h2&gt;
@@ -424,7 +426,7 @@ You can import them directly into your POSTMAN and have all the examples ready t
 &lt;p&gt;Ela não informa o limite ou características do cartão ou portador, mas simula uma autorização Cielo, validando dados como:&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;Se  o cartão está valido junto ao banco emissor&lt;/li&gt;
+  &lt;li&gt;Se o cartão está valido junto ao banco emissor&lt;/li&gt;
   &lt;li&gt;Se o cartão possui limite disponível&lt;/li&gt;
   &lt;li&gt;Se o cartão funciona no Brasil&lt;/li&gt;
   &lt;li&gt;Se o número do cartão está correto&lt;/li&gt;
@@ -454,7 +456,7 @@ Todas essas etapas exigem que transações sejam realizadas para obter acesso a 
   &lt;li&gt;&lt;strong&gt;Recorrência&lt;/strong&gt;: todo mês, antes de realizar a cobrança da Assinatura, a Flixnet testa o cartão com o zero auth, assim sabendo se ele será autorizado ou não.  Isso ajuda o FlixNet a prever quais cartões serão negados, já acionando o assinante para atualização do cadastro antes do dia de pagamento.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;integração&quot;&gt;Integração&lt;/h2&gt;
+&lt;h2 id=&quot;integration&quot;&gt;Integration&lt;/h2&gt;
 
 &lt;p&gt;Para realizar a consulta ao Zero Auth, o lojista deverá enviar uma requisição &lt;code class=&quot;highlighter-rouge&quot;&gt;POST&lt;/code&gt; para a API Cielo Ecommerce, simulando uma transação. O &lt;code class=&quot;highlighter-rouge&quot;&gt;POST&lt;/code&gt; deverá ser realizado nas seguintes URL:&lt;/p&gt;
 
