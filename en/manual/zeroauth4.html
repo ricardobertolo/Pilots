@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="theme-color" content="#00aeef">
+    <meta http-equiv="Content-Language" content="en">
+
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <title>
+        
+        Zero Auth &middot; Documentações e tutoriais
+        
+    </title>
+
+    <link rel="shortcut icon" href="https://docscielo.github.io/Pilots/en/assets/favicon.ico">
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
+    <script async src="https://use.fontawesome.com/3ae06f1030.js"></script>
+
+    <link rel="stylesheet" href="https://docscielo.github.io/Pilots/en/assets/bundles/css/bundle.min.css">
+
+    
+        
+            <link rel="alternate" hreflang="pt" href="https://docscielo.github.io/Pilots/en/manual/zeroauth4" />
+        
+    
+        
+            <link rel="alternate" hreflang="en" href="https://docscielo.github.io/Pilots/en/en/manual/zeroauth4" />
+        
+    
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="https://docscielo.github.io/Pilots/en/atom.xml">
+</head>
+
+    <body>
+        
+        <div class="content-container">
+            <div class="language-tabs">
+                <a class='hide-btn' id="hide-button" title="Toggle"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                <ul class="language-buttons">
+                    
+                    <li><a data-language-name='json'>JSON</a></li>
+                    
+                    <li><a data-language-name='shell'>cURL</a></li>
+                    
+                </ul>
+            </div>
+            <div class="dark-box"></div>
+            <div class="overlay"></div>
+        
+            <div id="submenu">
+                <div class="submenu-container">
+                    <div class="submenu-row sub-items">
+                        <div class="submenu-itens">
+                            <a href="https://desenvolvedores.cielo.com.br/api-portal/pt-br/contact" class="help">Help</a>
+
+                            
+                            <div class="lang">
+                                <span>Languages</span>
+
+                                
+                                    
+                                    <a href="https://docscielo.github.io/Pilots/Pilots//manual/zeroauth4">
+                                    
+
+                                        <img alt="Português" src="https://docscielo.github.io/Pilots/en/assets/images/pt.png"/>
+                                    </a>
+                                
+                                    
+                                    <a href="https://docscielo.github.io/Pilots/Pilots/en/manual/zeroauth4">
+                                    
+
+                                        <img alt="English" src="https://docscielo.github.io/Pilots/en/assets/images/en.png"/>
+                                    </a>
+                                
+                            </div>
+                            
+                        </div>
+
+                        
+                    </div>
+                        
+
+                    <div class="submenu-row breads">
+                        <ol class="breadcrumb">
+                            
+                            <li><a href="https://docscielo.github.io/Pilots/en/">Home</a></li>
+                            
+                            
+                            
+                            
+                                
+                                    
+                                    
+                                    
+                                    
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                
+                            
+                                
+                                    
+                                    <li class="active">&gt; <a href="https://docscielo.github.io/Pilots/en/manual/zeroauth4">Zero Auth</a></li>
+                                    
+                                
+                            
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+  <h1 id="zero-auth">Zero Auth</h1>
+
+<p>O <strong>Zero Auth</strong> é uma ferramenta de validação de cartões da API Cielo. A validação permite que o lojista saiba se o cartão é valido ou não antes de enviar a transação para autorização, antecipando o motivo de uma provável não autorização..</p>
+
+<p>O <strong>Zero Auth</strong> pode ser usado de 2 maneiras:</p>
+
+<ol>
+  <li><strong>Padrão</strong> - Envio de um cartão padrão, sem tokenização ou analises adicionais</li>
+  <li><strong>Com cartão Tokenizado</strong> - Envio de um TOKEN 3.0 para analise</li>
+</ol>
+
+<p>É importante destacar que o Zero Auth <strong>não retorna ou analisa</strong> os seguintes itens:</p>
+
+<ol>
+  <li>Limite de crédito do cartão</li>
+  <li>Informações sobre o portador</li>
+  <li>Não aciona a base bancaria (dispara SMS so portador)</li>
+</ol>
+
+<p>O Zero Auth suporta as seguintes bandeiras:</p>
+
+<ul>
+  <li><strong>Visa</strong></li>
+  <li><strong>MasterCard</strong></li>
+  <li><strong>Elo</strong></li>
+</ul>
+
+<blockquote>
+  <p>Caso outras bandeiras sejam enviadas, o erro <strong>57-Bandeira inválida</strong> será exibido.</p>
+</blockquote>
+
+<h2 id="caso-de-uso">Caso de uso</h2>
+
+<p>Este é um exemplo de como usar o zero auth para melhorar sua conversão de vendas</p>
+
+<p>O Zero Auth é uma ferramenta da Cielo que permite verificar se um cartão está valido para realizar uma compra antes que o pedido seja finalizado. Ele faz isso simulando uma autorização, mas sem afetar o limite de crédito ou alertar o portados do cartão sobre o teste.</p>
+
+<p>Ela não informa o limite ou características do cartão ou portador, mas simula uma autorização Cielo, validando dados como:</p>
+
+<ol>
+  <li>Se  o cartão está valido junto ao banco emissor</li>
+  <li>Se o cartão possui limite disponível</li>
+  <li>Se o cartão funciona no Brasil</li>
+  <li>Se o número do cartão está correto</li>
+  <li>Se o CVV é valido</li>
+</ol>
+
+<p>O Zero Auth também funciona com Cartões tokenizados na Api Cielo Ecommerce</p>
+
+<p>Veja um exemplo de uso:</p>
+
+<p><strong>Zero auth como validador de cartão</strong></p>
+
+<p>Uma empresa de Streaming chamada FlixNet possui um serviço via assinatura, onde além de realizar uma recorrência, ela possui cartões salvos e recebe novas inscrições diariamente. 
+Todas essas etapas exigem que transações sejam realizadas para obter acesso a ferramenta, o que eleva o custo da FlixNet caso as transações não sejam autorizadas.</p>
+
+<p>Como ela poderia reduzir esse custo? Validando o cartão antes de envia-lo a autorizado.</p>
+
+<p>A FlixNet usa o Zero Auth em 2 momento diferente:</p>
+
+<ul>
+  <li><strong>Cadastro</strong>: é necessário incluir um cartão para ganhar 30 dias grátis no primeiro mês.</li>
+</ul>
+
+<p>O problema é que ao se encerrar esse período, se o cartão for invalido, o novo cadastro existe, mas não funciona, pois, o cartão salvo é invalido. A Flix Net resolveu esse problema testando o cartão com o Zero Auth no momento do cadastro, assim, ela já sabe se o cartão está valido e libera a criação da conta. Caso não o cartão não seja aceito, a FlixNet pode sugerir o uso de um outro cartão.</p>
+
+<ul>
+  <li><strong>Recorrência</strong>: todo mês, antes de realizar a cobrança da Assinatura, a Flixnet testa o cartão com o zero auth, assim sabendo se ele será autorizado ou não.  Isso ajuda o FlixNet a prever quais cartões serão negados, já acionando o assinante para atualização do cadastro antes do dia de pagamento.</li>
+</ul>
+
+<h2 id="integração">Integração</h2>
+
+<p>Para realizar a consulta ao Zero Auth, o lojista deverá enviar uma requisição <code class="highlighter-rouge">POST</code> para a API Cielo Ecommerce, simulando uma transação. O <code class="highlighter-rouge">POST</code> deverá ser realizado nas seguintes URL:</p>
+
+<aside class="request"><span class="method post">POST</span> <span class="endpoint">https://`api`.cieloecommerce.cielo.com.br/1/`zeroauth`</span></aside>
+
+<p>Cada tipo de validação necessita de um contrato tecnico diferente. Eles resultarão em <em>responses diferenciados</em>.</p>
+
+<h3 id="requisição">Requisição</h3>
+
+<h4 id="padrÃo">PADRÃO</h4>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"CardNumber"</span><span class="p">:</span><span class="s2">"1234123412341231"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Holder"</span><span class="p">:</span><span class="s2">"Alexsander Rosa"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ExpirationDate"</span><span class="p">:</span><span class="s2">"12/2021"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"SecurityCode"</span><span class="p">:</span><span class="s2">"123"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"SaveCard"</span><span class="p">:</span><span class="s2">"false"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Brand"</span><span class="p">:</span><span class="s2">"Visa"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Abaixo, a listagem de campos da Requisição:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Paramêtro</th>
+      <th>Descrição</th>
+      <th>Tipo</th>
+      <th>Tamanho</th>
+      <th style="text-align: center">Obrigatório</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">CardType</code></td>
+      <td>Define o tipo de cartão utilizados:<br /><em>CreditCard</em><br /><em>DebitCard</em><br />Se não enviado, CreditCard como default</td>
+      <td>Texto</td>
+      <td>255</td>
+      <td style="text-align: center">Não</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">CardNumber</code></td>
+      <td>Número do Cartão do Comprador</td>
+      <td>Texto</td>
+      <td>16</td>
+      <td style="text-align: center">sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Holder</code></td>
+      <td>Nome do Comprador impresso no cartão.</td>
+      <td>Texto</td>
+      <td>25</td>
+      <td style="text-align: center">não</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ExpirationDate</code></td>
+      <td>Data de e validade impresso no cartão.</td>
+      <td>Texto</td>
+      <td>7</td>
+      <td style="text-align: center">sim</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">SecurityCode</code></td>
+      <td>Código de segurança impresso no verso do cartão.</td>
+      <td>Texto</td>
+      <td>4</td>
+      <td style="text-align: center">não</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">SaveCard</code></td>
+      <td>Booleano que identifica se o cartão será salvo para gerar o CardToken.</td>
+      <td>Boolean</td>
+      <td>—</td>
+      <td style="text-align: center">Não</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Brand</code></td>
+      <td>Bandeira do cartão: <br />Visa<br />Master<br /></td>
+      <td>Texto</td>
+      <td>10</td>
+      <td style="text-align: center">não</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">CardToken</code></td>
+      <td>Token do cartão na 3.0</td>
+      <td>GUID</td>
+      <td>36</td>
+      <td style="text-align: center">Condicional</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="com-token">COM TOKEN</h4>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"CardToken"</span><span class="p">:</span><span class="s2">"23712c39-bb08-4030-86b3-490a223a8cc9"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"SaveCard"</span><span class="p">:</span><span class="s2">"false"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"Brand"</span><span class="p">:</span><span class="s2">"Visa"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Abaixo, a listagem de campos da Requisição:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Paramêtro</th>
+      <th>Descrição</th>
+      <th>Tipo</th>
+      <th>Tamanho</th>
+      <th style="text-align: center">Obrigatório</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">Brand</code></td>
+      <td>Bandeira do cartão: <br />Visa<br />Master<br /></td>
+      <td>Texto</td>
+      <td>10</td>
+      <td style="text-align: center">não</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">CardToken</code></td>
+      <td>Token do cartão na 3.0</td>
+      <td>GUID</td>
+      <td>36</td>
+      <td style="text-align: center">Condicional</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="resposta">Resposta</h3>
+
+<p>A resposta sempre retorna se o cartão pode ser autorizado no momento. Essa informação apenas significa que o <em>cartão está valido a transacionar</em>, mas não necessariamente indica que um determinado valor será autorizado.</p>
+
+<p>Abaixo os campos retornados após a validação:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Paramêtro</th>
+      <th>Descrição</th>
+      <th>Tipo</th>
+      <th style="text-align: center">Tamanho</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">Valid</code></td>
+      <td>Situação do cartão:<br /> <strong>True</strong> – Cartão válido<br /><strong>False</strong> – Cartão Inválido</td>
+      <td>Boolean</td>
+      <td style="text-align: center">—</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ReturnCode</code></td>
+      <td>Código de retorno</td>
+      <td>texto</td>
+      <td style="text-align: center">2</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ReturnMessage</code></td>
+      <td>Mensagem de retorno</td>
+      <td>texto</td>
+      <td style="text-align: center">255</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="positiva---cartão-válido">POSITIVA - Cartão Válido</h4>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+        </span><span class="s2">"Valid"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ReturnCode"</span><span class="p">:</span><span class="w"> </span><span class="err">“</span><span class="mi">00</span><span class="err">”</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ReturnMessage"</span><span class="p">,</span><span class="w"> </span><span class="err">“Transacao</span><span class="w"> </span><span class="err">autorizada”</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<blockquote>
+  <p>Consulte  para visualizar a descrição dos códigos de retorno. 
+O código de retorno <strong>85 representa sucesso no Zero Auth</strong>, os demais códigos são definidos de acordo com a documentação acima.</p>
+</blockquote>
+
+<h4 id="negativa---cartão-inválido">NEGATIVA - Cartão Inválido</h4>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+       </span><span class="s2">"Valid"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"ReturnCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"57"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"ReturnMessage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Autorizacao negada"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="negativa---bandeira-inválida">NEGATIVA - Bandeira inválida</h4>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="p">{</span><span class="w">    
+      </span><span class="s2">"Code"</span><span class="p">:</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span><span class="w">     
+      </span><span class="s2">"Message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bandeira inválida"</span><span class="w">   
+  </span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Caso ocorra algum erro no fluxo, onde não seja possível validar o cartão, o serviço irá retornar erro:</p>
+
+<ul>
+  <li>500 – Internal Server Erro</li>
+</ul>
+
+</div>
+
+
+            <div class="footer-conteudo">
+    <div id="footer-conteudo-img" class="col-lg-1 col-md-1">
+            <img src="https://docscielo.github.io/Pilots/en/assets/images/icon-doubt.svg" width="55px" height="53px" alt="Need Help?">
+    </div>
+
+    <div id="footer-conteudo-texto" class="col-lg-11 col-md-11">
+        <h2>Need Help?</h2>
+        <p>If you didn't find your answer, <a href="https://desenvolvedores.cielo.com.br/api-portal/pt-br/content/suporte">send us a message</a>.</p>
+    </div>
+</div>
+
+        </div>
+
+        <div class="sidebar">
+  <div class="sidebar-sticky">
+    <div class="sidebar-about">
+      <a title="Toggle left column" class="hamburger">
+        <i class="fa fa-bars hamb-menu" aria-hidden="true"></i>
+      </a>
+      <a href="https://docscielo.github.io/Pilots/en/">
+        <img src="https://docscielo.github.io/Pilots/en/assets/images/logo.png" alt="Documentações e tutoriais">
+      </a>
+      <div></div>
+    </div>
+
+    <div id="toc"></div>
+
+    <div class="fixed-footer">
+        
+        <div class="toc-footer">
+            <h2 class="no-toc toc-footer-title">Complementary materials</h2>
+            
+
+            
+            
+            
+
+            <ul class="toc-footer">
+            
+                
+                    
+                    <li><a href="https://docscielo.github.io/Pilots/en/manual/cielo-ecommerce" title="The purpose of this documentation is to guide the developer on how to integrate with Cielo's API Cielo eCommerce.">Integration Manual</a></li>
+                
+            
+                
+            
+                
+                    
+                    <li><a href="https://docscielo.github.io/Pilots/en/tutorial/sdks-cielo" title="Lista de Sdks Api cielo ecommerce">SDKs</a></li>
+                
+            
+                
+                    
+                    <li><a href="https://docscielo.github.io/Pilots/en/manual/wallets5" >Wallets</a></li>
+                
+            
+            </ul>
+        </div>
+        
+
+    <div class="toc-contact">
+      <div class="contact">
+        <a title="Contact" href="#">
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+          <span>Contact</span>
+        </a>
+      </div>
+      <div class="github">
+        <a title="GitHub" href="https://github.com/developercielo">
+          <i class="fa fa-github" aria-hidden="true"></i>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+        <script src="https://docscielo.github.io/Pilots/en/assets/bundles/js/bundle.min.js"></script>
+        <script>
+            
+            var selectors = 'h1,h2,h3,h4,h5,h6';
+            
+        </script>
+
+        
+
+        
+        <script>
+            let langs = '';
+            let langsArray = [];
+
+            
+            langs += "<a data-language-name='json'>JSON</a>";
+            langsArray.push('json');
+            
+            langs += "<a data-language-name='shell'>cURL</a>";
+            langsArray.push('shell');
+            
+
+            var toggleCode = 'Toggle';
+        </script>
+
+        <script src='https://docscielo.github.io/Pilots/en/assets/bundles/js/language_buttons.min.js'></script>
+        
+
+        <!-- Hotjar Tracking Code for https://developercielo.github.io/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:674586,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+    </body>
+</html>
