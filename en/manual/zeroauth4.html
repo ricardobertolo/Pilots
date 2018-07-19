@@ -154,56 +154,35 @@
   <p>If other flags/Brand are sent, the error <strong>57-Bandeira inválida</strong> will be displayed.</p>
 </blockquote>
 
-<h2 id="caso-de-uso">Caso de uso</h2>
+<h2 id="use-case">Use case</h2>
 
-<p>Este é um exemplo de como usar o zero auth para melhorar sua conversão de vendas</p>
+<p>This is an example of how to use zero auth to improve your sales conversion</p>
 
-<p>O Zero Auth é uma ferramenta da Cielo que permite verificar se um cartão está valido para realizar uma compra antes que o pedido seja finalizado. Ele faz isso simulando uma autorização, mas sem afetar o limite de crédito ou alertar o portados do cartão sobre o teste.</p>
+<p>Zero Auth is a tool from Cielo that allows you to check if a card is valid before the order is finalized. It does this by simulating an authorization, but without affecting the credit limit or alerting the card holders about the test.</p>
 
-<p>Ela não informa o limite ou características do cartão ou portador, mas simula uma autorização Cielo, validando dados como:</p>
+<p>It does not inform the limit or characteristics of the card or carrier, but simulates a Cielo authorization, validating data such as:</p>
 
 <ol>
-  <li>Se o cartão está valido junto ao banco emissor</li>
-  <li>Se o cartão possui limite disponível</li>
-  <li>Se o cartão funciona no Brasil</li>
-  <li>Se o número do cartão está correto</li>
-  <li>Se o CVV é valido</li>
+  <li>If the card is valid with the issuing bank</li>
+  <li>If the card has limit available</li>
+  <li>If the card works in Brazil</li>
+  <li>If the card number is correct</li>
+  <li>If the CVV is valid</li>
 </ol>
 
-<p>O Zero Auth também funciona com Cartões tokenizados na Api Cielo Ecommerce</p>
-
-<p>Veja um exemplo de uso:</p>
-
-<p><strong>Zero auth como validador de cartão</strong></p>
-
-<p>Uma empresa de Streaming chamada FlixNet possui um serviço via assinatura, onde além de realizar uma recorrência, ela possui cartões salvos e recebe novas inscrições diariamente. 
-Todas essas etapas exigem que transações sejam realizadas para obter acesso a ferramenta, o que eleva o custo da FlixNet caso as transações não sejam autorizadas.</p>
-
-<p>Como ela poderia reduzir esse custo? Validando o cartão antes de envia-lo a autorizado.</p>
-
-<p>A FlixNet usa o Zero Auth em 2 momento diferente:</p>
-
-<ul>
-  <li><strong>Cadastro</strong>: é necessário incluir um cartão para ganhar 30 dias grátis no primeiro mês.</li>
-</ul>
-
-<p>O problema é que ao se encerrar esse período, se o cartão for invalido, o novo cadastro existe, mas não funciona, pois, o cartão salvo é invalido. A Flix Net resolveu esse problema testando o cartão com o Zero Auth no momento do cadastro, assim, ela já sabe se o cartão está valido e libera a criação da conta. Caso não o cartão não seja aceito, a FlixNet pode sugerir o uso de um outro cartão.</p>
-
-<ul>
-  <li><strong>Recorrência</strong>: todo mês, antes de realizar a cobrança da Assinatura, a Flixnet testa o cartão com o zero auth, assim sabendo se ele será autorizado ou não.  Isso ajuda o FlixNet a prever quais cartões serão negados, já acionando o assinante para atualização do cadastro antes do dia de pagamento.</li>
-</ul>
+<p>Zero Auth also works with tokenized cards in Api Cielo Ecommerce</p>
 
 <h2 id="integration">Integration</h2>
 
-<p>Para realizar a consulta ao Zero Auth, o lojista deverá enviar uma requisição <code class="highlighter-rouge">POST</code> para a API Cielo Ecommerce, simulando uma transação. O <code class="highlighter-rouge">POST</code> deverá ser realizado nas seguintes URL:</p>
+<p>In order to use Zero Auth, the merchant must send a <code class="highlighter-rouge">POST</code> request to the Cielo Ecommerce API, simulating a transaction. <code class="highlighter-rouge">POST</code> should be done at the following URLs:</p>
 
 <aside class="request"><span class="method post">POST</span> <span class="endpoint">https://`api`.cieloecommerce.cielo.com.br/1/`zeroauth`</span></aside>
 
-<p>Cada tipo de validação necessita de um contrato tecnico diferente. Eles resultarão em <em>responses diferenciados</em>.</p>
+<p>Each type of validation requires a different technical contract. They will result in differentiated responses</p>
 
-<h3 id="requisição">Requisição</h3>
+<h3 id="request">Request</h3>
 
-<h4 id="padrÃo">PADRÃO</h4>
+<h4 id="standard">Standard</h4>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"CardNumber"</span><span class="p">:</span><span class="s2">"1234123412341231"</span><span class="p">,</span><span class="w">
@@ -215,79 +194,70 @@ Todas essas etapas exigem que transações sejam realizadas para obter acesso a 
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Abaixo, a listagem de campos da Requisição:</p>
-
 <table>
   <thead>
     <tr>
-      <th>Paramêtro</th>
-      <th>Descrição</th>
-      <th>Tipo</th>
-      <th>Tamanho</th>
-      <th style="text-align: center">Obrigatório</th>
+      <th>Field</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Contact Us</th>
+      <th>Required</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">CardType</code></td>
-      <td>Define o tipo de cartão utilizados:<br /><em>CreditCard</em><br /><em>DebitCard</em><br />Se não enviado, CreditCard como default</td>
-      <td>Texto</td>
+      <td>Defines the type of card used: <br /> <br /> <em>CreditCard</em> <br /> <em>DebitCard</em> <br /> <br /> If not sent, CreditCard as default</td>
+      <td>Text</td>
       <td>255</td>
-      <td style="text-align: center">Não</td>
+      <td>No</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">CardNumber</code></td>
-      <td>Número do Cartão do Comprador</td>
-      <td>Texto</td>
+      <td>Card Number</td>
+      <td>Text</td>
       <td>16</td>
-      <td style="text-align: center">sim</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Holder</code></td>
-      <td>Nome do Comprador impresso no cartão.</td>
-      <td>Texto</td>
+      <td>Buyer’s name, printed on the card.</td>
+      <td>Text</td>
       <td>25</td>
-      <td style="text-align: center">não</td>
+      <td>No</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">ExpirationDate</code></td>
-      <td>Data de e validade impresso no cartão.</td>
-      <td>Texto</td>
+      <td>Expiration date.</td>
+      <td>Text</td>
       <td>7</td>
-      <td style="text-align: center">sim</td>
+      <td>yes</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">SecurityCode</code></td>
-      <td>Código de segurança impresso no verso do cartão.</td>
-      <td>Texto</td>
+      <td>Card Security code .</td>
+      <td>Text</td>
       <td>4</td>
-      <td style="text-align: center">não</td>
+      <td>No</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">SaveCard</code></td>
-      <td>Booleano que identifica se o cartão será salvo para gerar o CardToken.</td>
+      <td>Defines if the card must be tokenized</td>
       <td>Boolean</td>
       <td>—</td>
-      <td style="text-align: center">Não</td>
+      <td>No</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Brand</code></td>
-      <td>Bandeira do cartão: <br />Visa<br />Master<br /></td>
-      <td>Texto</td>
+      <td>Card Brand: Visa <br /> Master <br /> ELO</td>
+      <td>Text</td>
       <td>10</td>
-      <td style="text-align: center">não</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">CardToken</code></td>
-      <td>Token do cartão na 3.0</td>
-      <td>GUID</td>
-      <td>36</td>
-      <td style="text-align: center">Condicional</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
 
-<h4 id="com-token">COM TOKEN</h4>
+<h4 id="using-cardtoken">Using CardToken</h4>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"CardToken"</span><span class="p">:</span><span class="s2">"23712c39-bb08-4030-86b3-490a223a8cc9"</span><span class="p">,</span><span class="w">
@@ -296,74 +266,43 @@ Todas essas etapas exigem que transações sejam realizadas para obter acesso a 
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p>Abaixo, a listagem de campos da Requisição:</p>
-
 <table>
   <thead>
     <tr>
-      <th>Paramêtro</th>
-      <th>Descrição</th>
-      <th>Tipo</th>
-      <th>Tamanho</th>
-      <th style="text-align: center">Obrigatório</th>
+      <th>Field</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Contact Us</th>
+      <th>Required</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">Brand</code></td>
-      <td>Bandeira do cartão: <br />Visa<br />Master<br /></td>
-      <td>Texto</td>
+      <td>Card Brand: Visa <br /> Master <br /> ELO</td>
+      <td>Text</td>
       <td>10</td>
-      <td style="text-align: center">não</td>
+      <td>not</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">CardToken</code></td>
-      <td>Token do cartão na 3.0</td>
+      <td>Tokenized Card</td>
       <td>GUID</td>
       <td>36</td>
-      <td style="text-align: center">Condicional</td>
+      <td>yes</td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="resposta">Resposta</h3>
+<h3 id="response">Response</h3>
 
-<p>A resposta sempre retorna se o cartão pode ser autorizado no momento. Essa informação apenas significa que o <em>cartão está valido a transacionar</em>, mas não necessariamente indica que um determinado valor será autorizado.</p>
+<p>If there is an error in the request, where it is not possible to validate the card, the service will return error:</p>
 
-<p>Abaixo os campos retornados após a validação:</p>
+<blockquote>
+  <p><strong>500 – Internal Server Erro</strong></p>
+</blockquote>
 
-<table>
-  <thead>
-    <tr>
-      <th>Paramêtro</th>
-      <th>Descrição</th>
-      <th>Tipo</th>
-      <th style="text-align: center">Tamanho</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="highlighter-rouge">Valid</code></td>
-      <td>Situação do cartão:<br /> <strong>True</strong> – Cartão válido<br /><strong>False</strong> – Cartão Inválido</td>
-      <td>Boolean</td>
-      <td style="text-align: center">—</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">ReturnCode</code></td>
-      <td>Código de retorno</td>
-      <td>texto</td>
-      <td style="text-align: center">2</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">ReturnMessage</code></td>
-      <td>Mensagem de retorno</td>
-      <td>texto</td>
-      <td style="text-align: center">255</td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="positiva---cartão-válido">POSITIVA - Cartão Válido</h4>
+<h4 id="valid-card">Valid Card</h4>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
         </span><span class="s2">"Valid"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
@@ -372,12 +311,43 @@ Todas essas etapas exigem que transações sejam realizadas para obter acesso a 
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Contact Us</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">Valid</code></td>
+      <td>Card Status: <br /> <strong>True ** - Valid Card <br /> **False</strong> - Invalid Card</td>
+      <td>Boolean</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ReturnCode</code></td>
+      <td>Return code</td>
+      <td>text</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ReturnMessage</code></td>
+      <td>Return message</td>
+      <td>text</td>
+      <td>255</td>
+    </tr>
+  </tbody>
+</table>
+
 <blockquote>
-  <p>Consulte  para visualizar a descrição dos códigos de retorno. 
-O código de retorno <strong>85 representa sucesso no Zero Auth</strong>, os demais códigos são definidos de acordo com a documentação acima.</p>
+  <p>See <a href="https://developercielo.github.io/en/manual/cielo-ecommerce"><strong>Integration Manual</strong></a> for more information about Return Codes.
+The return code <strong>“85” represents success in Zero Auth</strong>, the other codes are defined according to the above documentation.</p>
 </blockquote>
 
-<h4 id="negativa---cartão-inválido">NEGATIVA - Cartão Inválido</h4>
+<h4 id="invalid-card">Invalid Card</h4>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
        </span><span class="s2">"Valid"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
@@ -386,19 +356,13 @@ O código de retorno <strong>85 representa sucesso no Zero Auth</strong>, os dem
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="negativa---bandeira-inválida">NEGATIVA - Bandeira inválida</h4>
+<h4 id="invalid-card---brand-not-supported">Invalid Card - Brand not Supported</h4>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="p">{</span><span class="w">    
       </span><span class="s2">"Code"</span><span class="p">:</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span><span class="w">     
       </span><span class="s2">"Message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bandeira inválida"</span><span class="w">   
   </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
-
-<p>Caso ocorra algum erro no fluxo, onde não seja possível validar o cartão, o serviço irá retornar erro:</p>
-
-<ul>
-  <li>500 – Internal Server Erro</li>
-</ul>
 
 </div>
 
