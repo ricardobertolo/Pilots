@@ -1641,14 +1641,12 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
 
 <h3 id="decryption-2">Decryption</h3>
 
-<p>No modelo apresentado a seguir, demonstramos como utilizar a integração SamsungPay Cielo via o envio do WalletKey + EphemeralPublicKey retornados pela Samsung via Payload</p>
+<p>Here we describe how to integrate Samsung Pay using the WalletKey provided by Samsung.</p>
 
 <h4 id="request-4">Request</h4>
 
-<p>Exemplo de Request <em>SamsungPay</em></p>
-
 <blockquote>
-  <p>É necessário que a loja ja possua cadastro e uma integração SamsungPay, caso contrario não será possivel a integração com a API</p>
+  <p>The merchant must have uploaded the CSR Certificate to be able to create transactions.</p>
 </blockquote>
 
 <aside class="request"><span class="method post">POST</span> <span class="endpoint">/1/sales/</span></aside>
@@ -1678,11 +1676,11 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
 <table>
   <thead>
     <tr>
-      <th>Propriedade</th>
-      <th>Tipo</th>
-      <th>Tamanho</th>
-      <th>Obrigatório</th>
-      <th>Descrição</th>
+      <th>Property</th>
+      <th>Type</th>
+      <th>Size</th>
+      <th>Required</th>
+      <th>Description</th>
     </tr>
   </thead>
   <tbody>
@@ -1691,105 +1689,77 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
       <td>Guid</td>
       <td>36</td>
       <td>Yes</td>
-      <td>Identificador da loja na Cielo.</td>
+      <td>Store identifier in Cielo.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">MerchantKey</code></td>
       <td>Text</td>
       <td>40</td>
       <td>Yes</td>
-      <td>Chave Publica para Autenticação Dupla na Cielo.</td>
+      <td>Public Key for Double Authentication in Cielo.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">RequestId</code></td>
       <td>Guid</td>
       <td>36</td>
-      <td>Não</td>
-      <td>Identificador do Request, utilizado quando o lojista usa diferentes servidores para cada GET/POST/PUT.</td>
+      <td>No</td>
+      <td>Request Identifier, used when the merchant uses different servers for each GET/POST/PUT.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">MerchantOrderId</code></td>
       <td>Text</td>
       <td>50</td>
       <td>Yes</td>
-      <td>Numero de identificação do Pedido.</td>
+      <td>Order ID number.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Customer.Name</code></td>
       <td>Text</td>
       <td>255</td>
-      <td>Não</td>
-      <td>Nome do Comprador.</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">Customer.Status</code></td>
-      <td>Text</td>
-      <td>255</td>
-      <td>Não</td>
-      <td>Status de cadastro do comprador na loja (NEW / EXISTING)</td>
+      <td>No</td>
+      <td>Buyer’s name.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Payment.Type</code></td>
       <td>Text</td>
       <td>100</td>
       <td>Yes</td>
-      <td>Tipo do Meio de Pagamento.</td>
+      <td>Means of Payment Type.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Payment.Amount</code></td>
       <td>Number</td>
       <td>15</td>
       <td>Yes</td>
-      <td>Valor do Pedido (ser enviado em centavos).</td>
+      <td>Order Amount (to be sent in cents).</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Payment.Installments</code></td>
       <td>Number</td>
       <td>2</td>
       <td>Yes</td>
-      <td>Number de Parcelas.</td>
+      <td>Number of installments.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">CreditCard.CardNumber.</code></td>
+      <td><code class="highlighter-rouge">Payment.SoftDescriptor</code></td>
       <td>Text</td>
-      <td>19</td>
-      <td>Yes</td>
-      <td>Number do Cartão do Comprador</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">CreditCard.SecurityCode</code></td>
-      <td>Text</td>
-      <td>4</td>
-      <td>Não</td>
-      <td>Código de segurança impresso no verso do cartão - Ver Anexo.</td>
+      <td>13</td>
+      <td>No</td>
+      <td>Text printed on buyer’s bank invoice - Available only for VISA/MASTER - does not allow special characters - See Attachment</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Wallet.Type</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Yes</td>
-      <td>indica qual o tipo de carteira: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
+      <td>Defines Type of Wallet: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Wallet.Walletkey</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Yes</td>
-      <td>Chave criptografica que identifica lojas nas Wallets - Ver tabela WalletKey para mais informações</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">Wallet.AdditionalData.EphemeralPublicKey</code></td>
-      <td>Text</td>
-      <td>255</td>
-      <td>Yes</td>
-      <td>Token retornado pela Wallet. Deve ser enviado em Integrações: <code class="highlighter-rouge">ApplePay</code>/ <code class="highlighter-rouge">AndroidPay</code></td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">Wallet.AdditionalData.capturecode</code></td>
-      <td>Text</td>
-      <td>255</td>
-      <td>Yes</td>
-      <td>Código informado pela <code class="highlighter-rouge">MasterPass</code> ao lojista</td>
+      <td>Wallet Decryption Key</td>
     </tr>
   </tbody>
 </table>
@@ -1858,101 +1828,101 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
 <table>
   <thead>
     <tr>
-      <th>Propriedade</th>
-      <th>Descrição</th>
-      <th>Tipo</th>
-      <th>Tamanho</th>
-      <th>Formato</th>
+      <th>Property</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Size</th>
+      <th>Format</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">ProofOfSale</code></td>
-      <td>Number da autorização, identico ao NSU.</td>
+      <td>Authorization number, identical to NSU.</td>
       <td>Text</td>
       <td>6</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Tid</code></td>
-      <td>Id da transação na adquirente.</td>
+      <td>Transaction Id on the acquirer.</td>
       <td>Text</td>
       <td>20</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">AuthorizationCode</code></td>
-      <td>Código de autorização.</td>
+      <td>Authorization code.</td>
       <td>Text</td>
       <td>6</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">SoftDescriptor</code></td>
-      <td>Text que será impresso na fatura bancaria do portador - Disponivel apenas para VISA/MASTER - nao permite caracteres especiais</td>
+      <td>Text printed on the buyer’s bank invoice - Available only for VISA/MASTER - does not allow special characters - See Attachment</td>
       <td>Text</td>
       <td>13</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">PaymentId</code></td>
-      <td>Campo Identificador do Pedido.</td>
+      <td>Order Identifier Field.</td>
       <td>Guid</td>
       <td>36</td>
       <td>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">ECI</code></td>
-      <td>Eletronic Commerce Indicator. Representa o quão segura é uma transação.</td>
+      <td>Eletronic Commerce Indicator. Represents how secure a transaction is.</td>
       <td>Text</td>
       <td>2</td>
-      <td>Exemplos: 7</td>
+      <td>Examples: 7</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Status</code></td>
-      <td>Status da Transação.</td>
+      <td>Transaction Status.</td>
       <td>Byte</td>
       <td>—</td>
       <td>2</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">ReturnCode</code></td>
-      <td>Código de retorno da Adquirência.</td>
+      <td>Return code of Acquiring.</td>
       <td>Text</td>
       <td>32</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">ReturnMessage</code></td>
-      <td>Mensagem de retorno da Adquirência.</td>
+      <td>Return message of Acquiring.</td>
       <td>Text</td>
       <td>512</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Type</code></td>
-      <td>indica qual o tipo de carteira: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
+      <td>Defines Type of Wallet: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Text alfanumérico</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Walletkey</code></td>
-      <td>Chave criptografica que identifica lojas nas Wallets - Ver tabela WalletKey para mais informações</td>
+      <td>Wallet Decryption Key</td>
       <td>Text</td>
       <td>255</td>
       <td>Ver tabela <code class="highlighter-rouge">WalletKey</code></td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">AdditionalData.EphemeralPublicKey</code></td>
-      <td>Token retornado pela Wallet. Deve ser enviado em Integrações: <code class="highlighter-rouge">ApplePay</code>/ <code class="highlighter-rouge">AndroidPay</code></td>
+      <td>Wallet Ephemeral Decryption Key. Received when using: <code class="highlighter-rouge">ApplePay</code>/ <code class="highlighter-rouge">AndroidPay</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Ver Tabela <code class="highlighter-rouge">EphemeralPublicKey</code></td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">AdditionalData.capturecode</code></td>
-      <td>Código informado pela <code class="highlighter-rouge">MasterPass</code> ao lojista</td>
+      <td><code class="highlighter-rouge">MasterPass</code> code sent to the merchant by the wallet</td>
       <td>Text</td>
       <td>255</td>
       <td>3</td>
@@ -1962,15 +1932,15 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
 
 <h3 id="pancard-number-sending-2">PAN/Card Number Sending</h3>
 
-<p>No modelo apresentado a seguir, demonstramos como a SamsungPay pode ser utilizada com o envio do cartão aberto, sem a necessidade de WalletKey.</p>
+<p>Here we describe how to integrate Samsung Pay without using the WalletKey provided by Samsung</p>
 
 <h4 id="request-5">Request</h4>
 
-<p>Nesse modelo, o lojista informa apenas que a transação é da Wallet SamsungPay e envia os dados ECI e CAVV fornecidos pela Samsung</p>
+<p>In this type of integration, the merchant must inform the CAVV and ECI provided by Samsung</p>
 
 <ol>
-  <li><strong>CAVV</strong> - pode ser extraido do campo <code class="highlighter-rouge">Cryptogram</code> retornado pela Samsung no payload</li>
-  <li><strong>ECI</strong> - retornado pela Samsung Pay no payload campo <code class="highlighter-rouge">eci_indicator</code></li>
+  <li><strong>CAVV</strong> - it can be extracted from <code class="highlighter-rouge">Cryptogram</code> provided by Samsung.</li>
+  <li><strong>ECI</strong> - it can be extracted from <code class="highlighter-rouge">eci_indicator</code> provided by Samsung.</li>
 </ol>
 
 <aside class="request"><span class="method post">POST</span> <span class="endpoint">/1/sales/</span></aside>
@@ -2007,11 +1977,11 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
 <table>
   <thead>
     <tr>
-      <th>Propriedade</th>
-      <th>Tipo</th>
-      <th>Tamanho</th>
-      <th>Obrigatório</th>
-      <th>Descrição</th>
+      <th>Property</th>
+      <th>Type</th>
+      <th>Size</th>
+      <th>Required</th>
+      <th>Description</th>
     </tr>
   </thead>
   <tbody>
@@ -2020,105 +1990,105 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
       <td>Guid</td>
       <td>36</td>
       <td>Yes</td>
-      <td>Identificador da loja na Cielo.</td>
+      <td>Store identifier in Cielo.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">MerchantKey</code></td>
       <td>Text</td>
       <td>40</td>
       <td>Yes</td>
-      <td>Chave Publica para Autenticação Dupla na Cielo.</td>
+      <td>Public Key for Double Authentication in Cielo.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">RequestId</code></td>
       <td>Guid</td>
       <td>36</td>
-      <td>Não</td>
-      <td>Identificador do Request, utilizado quando o lojista usa diferentes servidores para cada GET/POST/PUT.</td>
+      <td>No</td>
+      <td>Request Identifier, used when the merchant uses different servers for each GET/POST/PUT.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">MerchantOrderId</code></td>
       <td>Text</td>
       <td>50</td>
       <td>Yes</td>
-      <td>Numero de identificação do Pedido.</td>
+      <td>Order ID number.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Customer.Name</code></td>
       <td>Text</td>
       <td>255</td>
-      <td>Não</td>
-      <td>Nome do Comprador.</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">Customer.Status</code></td>
-      <td>Text</td>
-      <td>255</td>
-      <td>Não</td>
-      <td>Status de cadastro do comprador na loja (NEW / EXISTING)</td>
+      <td>No</td>
+      <td>Buyer’s name.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Payment.Type</code></td>
       <td>Text</td>
       <td>100</td>
       <td>Yes</td>
-      <td>Tipo do Meio de Pagamento.</td>
+      <td>Means of Payment Type.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Payment.Amount</code></td>
       <td>Number</td>
       <td>15</td>
       <td>Yes</td>
-      <td>Valor do Pedido (ser enviado em centavos).</td>
+      <td>Order Amount (to be sent in cents).</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Payment.Installments</code></td>
       <td>Number</td>
       <td>2</td>
       <td>Yes</td>
-      <td>Number de Parcelas.</td>
+      <td>Number of installments.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">CreditCard.CardNumber.</code></td>
+      <td><code class="highlighter-rouge">Payment.SoftDescriptor</code></td>
       <td>Text</td>
-      <td>19</td>
-      <td>Yes</td>
-      <td>Number do Cartão do Comprador</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">CreditCard.SecurityCode</code></td>
-      <td>Text</td>
-      <td>4</td>
-      <td>Não</td>
-      <td>Código de segurança impresso no verso do cartão - Ver Anexo.</td>
+      <td>13</td>
+      <td>No</td>
+      <td>Text printed on buyer’s bank invoice - Available only for VISA/MASTER - does not allow special characters - See Attachment</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Wallet.Type</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Yes</td>
-      <td>indica qual o tipo de carteira: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
+      <td>Defines Type of Wallet: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Wallet.Walletkey</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Yes</td>
-      <td>Chave criptografica que identifica lojas nas Wallets - Ver tabela WalletKey para mais informações</td>
+      <td>Wallet Decryption Key</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Wallet.AdditionalData.EphemeralPublicKey</code></td>
+      <td>Text</td>
+      <td>255</td>
+      <td>Yes</td>
+      <td>Wallet Ephemeral Decryption Key. Must be informed when using: <code class="highlighter-rouge">ApplePay</code>/ <code class="highlighter-rouge">AndroidPay</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Wallet.AdditionalData.capturecode</code></td>
+      <td>Text</td>
+      <td>255</td>
+      <td>Yes</td>
+      <td><code class="highlighter-rouge">MasterPass</code> code sent to the merchant by the wallet</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Wallet.ECI</code></td>
       <td>Text</td>
       <td>3</td>
       <td>Yes</td>
-      <td>O ECI (Eletronic Commerce Indicator) representa o quão segura é uma transação. Esse valor deve ser levado em consideração pelo lojista para decidir sobre a captura da transação.</td>
+      <td>The ECI (Eletronic Commerce Indicator) represents how safe a transaction can be. This data should be taken into consideration by the merchant to decide on the capture of the transaction</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Wallet.CAVV</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Yes</td>
-      <td>Campo de validação retornado pela Wallet e utilizado como base de autorização</td>
+      <td>Security code informed by the Wallet. Used to authenticate and authorize the transaction</td>
     </tr>
   </tbody>
 </table>
@@ -2194,118 +2164,104 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
 <table>
   <thead>
     <tr>
-      <th>Propriedade</th>
-      <th>Descrição</th>
-      <th>Tipo</th>
-      <th>Tamanho</th>
-      <th>Formato</th>
+      <th>Property</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Size</th>
+      <th>Format</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">ProofOfSale</code></td>
-      <td>Number da autorização, identico ao NSU.</td>
+      <td>Authorization number, identical to NSU.</td>
       <td>Text</td>
       <td>6</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Tid</code></td>
-      <td>Id da transação na adquirente.</td>
+      <td>Transaction Id on the acquirer.</td>
       <td>Text</td>
       <td>20</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">AuthorizationCode</code></td>
-      <td>Código de autorização.</td>
+      <td>Authorization code.</td>
       <td>Text</td>
       <td>6</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">SoftDescriptor</code></td>
-      <td>Text que será impresso na fatura bancaria do portador - Disponivel apenas para VISA/MASTER - nao permite caracteres especiais</td>
+      <td>Text printed on the buyer’s bank invoice - Available only for VISA/MASTER - does not allow special characters - See Attachment</td>
       <td>Text</td>
       <td>13</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">PaymentId</code></td>
-      <td>Campo Identificador do Pedido.</td>
+      <td>Order Identifier Field.</td>
       <td>Guid</td>
       <td>36</td>
       <td>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">ECI</code></td>
-      <td>Eletronic Commerce Indicator. Representa o quão segura é uma transação.</td>
+      <td>Eletronic Commerce Indicator. Represents how secure a transaction is.</td>
       <td>Text</td>
       <td>2</td>
-      <td>Exemplos: 7</td>
+      <td>Examples: 7</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Status</code></td>
-      <td>Status da Transação.</td>
+      <td>Transaction Status.</td>
       <td>Byte</td>
       <td>—</td>
       <td>2</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">ReturnCode</code></td>
-      <td>Código de retorno da Adquirência.</td>
+      <td>Return code of Acquiring.</td>
       <td>Text</td>
       <td>32</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">ReturnMessage</code></td>
-      <td>Mensagem de retorno da Adquirência.</td>
+      <td>Return message of Acquiring.</td>
       <td>Text</td>
       <td>512</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Type</code></td>
-      <td>indica qual o tipo de carteira: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
+      <td>Defines Type of Wallet: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Text alfanumérico</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Walletkey</code></td>
-      <td>Chave criptografica que identifica lojas nas Wallets - Ver tabela WalletKey para mais informações</td>
+      <td>Wallet Decryption Key</td>
       <td>Text</td>
       <td>255</td>
       <td>Ver tabela <code class="highlighter-rouge">WalletKey</code></td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">AdditionalData.EphemeralPublicKey</code></td>
-      <td>Token retornado pela Wallet. Deve ser enviado em Integrações: <code class="highlighter-rouge">ApplePay</code>/ <code class="highlighter-rouge">AndroidPay</code></td>
+      <td>Wallet Ephemeral Decryption Key. Received when using: <code class="highlighter-rouge">ApplePay</code>/ <code class="highlighter-rouge">AndroidPay</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Ver Tabela <code class="highlighter-rouge">EphemeralPublicKey</code></td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">AdditionalData.capturecode</code></td>
-      <td>Código informado pela <code class="highlighter-rouge">MasterPass</code> ao lojista</td>
+      <td><code class="highlighter-rouge">MasterPass</code> code sent to the merchant by the wallet</td>
       <td>Text</td>
       <td>255</td>
       <td>3</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">ECI</code></td>
-      <td>O ECI (Eletronic Commerce Indicator) indica a segurança de uma transação. Deve ser levado em conta pelo lojista para decidir sobre a captura</td>
-      <td>Text</td>
-      <td>3</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">CAVV</code></td>
-      <td>Campo de validação retornado pela Wallet e utilizado como base de autorização</td>
-      <td>Text</td>
-      <td>255</td>
-      <td>–</td>
     </tr>
   </tbody>
 </table>
@@ -2314,14 +2270,12 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
 
 <h3 id="decryption-3">Decryption</h3>
 
-<p>No modelo apresentado a seguir, demonstramos como utilizar a integração AndroidPay Cielo via o envio do WalletKey + EphemeralPublicKey retornados pelo Google via Payload</p>
+<p>Here we describe how to integrate Android Pay using the WalletKey + EphemeralPublicKey provided by Google.</p>
 
 <h4 id="request-6">Request</h4>
 
-<p>Exemplo de Request padrão <em>Android Pay</em></p>
-
 <blockquote>
-  <p>É necessário que a loja ja possua cadastro e uma integração Android Pay, caso contrario não será possivel a integração com a API</p>
+  <p>The merchant must be registered on Google Pay to use this integration</p>
 </blockquote>
 
 <aside class="request"><span class="method post">POST</span> <span class="endpoint">/1/sales/</span></aside>
@@ -2353,11 +2307,11 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
 <table>
   <thead>
     <tr>
-      <th>Propriedade</th>
-      <th>Tipo</th>
-      <th>Tamanho</th>
-      <th>Obrigatório</th>
-      <th>Descrição</th>
+      <th>Property</th>
+      <th>Type</th>
+      <th>Size</th>
+      <th>Required</th>
+      <th>Description</th>
     </tr>
   </thead>
   <tbody>
@@ -2366,105 +2320,91 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
       <td>Guid</td>
       <td>36</td>
       <td>Yes</td>
-      <td>Identificador da loja na Cielo.</td>
+      <td>Store identifier in Cielo.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">MerchantKey</code></td>
       <td>Text</td>
       <td>40</td>
       <td>Yes</td>
-      <td>Chave Publica para Autenticação Dupla na Cielo.</td>
+      <td>Public Key for Double Authentication in Cielo.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">RequestId</code></td>
       <td>Guid</td>
       <td>36</td>
-      <td>Não</td>
-      <td>Identificador do Request, utilizado quando o lojista usa diferentes servidores para cada GET/POST/PUT.</td>
+      <td>No</td>
+      <td>Request Identifier, used when the merchant uses different servers for each GET/POST/PUT.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">MerchantOrderId</code></td>
       <td>Text</td>
       <td>50</td>
       <td>Yes</td>
-      <td>Numero de identificação do Pedido.</td>
+      <td>Order ID number.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Customer.Name</code></td>
       <td>Text</td>
       <td>255</td>
-      <td>Não</td>
-      <td>Nome do Comprador.</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">Customer.Status</code></td>
-      <td>Text</td>
-      <td>255</td>
-      <td>Não</td>
-      <td>Status de cadastro do comprador na loja (NEW / EXISTING)</td>
+      <td>No</td>
+      <td>Buyer’s name.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Payment.Type</code></td>
       <td>Text</td>
       <td>100</td>
       <td>Yes</td>
-      <td>Tipo do Meio de Pagamento.</td>
+      <td>Means of Payment Type.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Payment.Amount</code></td>
       <td>Number</td>
       <td>15</td>
       <td>Yes</td>
-      <td>Valor do Pedido (ser enviado em centavos).</td>
+      <td>Order Amount (to be sent in cents).</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Payment.Installments</code></td>
       <td>Number</td>
       <td>2</td>
       <td>Yes</td>
-      <td>Number de Parcelas.</td>
+      <td>Number of installments.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">CreditCard.CardNumber.</code></td>
+      <td><code class="highlighter-rouge">Payment.SoftDescriptor</code></td>
       <td>Text</td>
-      <td>19</td>
-      <td>Yes</td>
-      <td>Number do Cartão do Comprador</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">CreditCard.SecurityCode</code></td>
-      <td>Text</td>
-      <td>4</td>
-      <td>Não</td>
-      <td>Código de segurança impresso no verso do cartão - Ver Anexo.</td>
+      <td>13</td>
+      <td>No</td>
+      <td>Text printed on buyer’s bank invoice - Available only for VISA/MASTER - does not allow special characters - See Attachment</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Wallet.Type</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Yes</td>
-      <td>indica qual o tipo de carteira: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
+      <td>Defines Type of Wallet: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Wallet.Walletkey</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Yes</td>
-      <td>Chave criptografica que identifica lojas nas Wallets - Ver tabela WalletKey para mais informações</td>
+      <td>Wallet Decryption Key</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Wallet.AdditionalData.EphemeralPublicKey</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Yes</td>
-      <td>Token retornado pela Wallet. Deve ser enviado em Integrações: <code class="highlighter-rouge">ApplePay</code>/ <code class="highlighter-rouge">AndroidPay</code></td>
+      <td>Wallet Ephemeral Decryption Key. Must be informed when using: <code class="highlighter-rouge">ApplePay</code>/ <code class="highlighter-rouge">AndroidPay</code></td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Wallet.AdditionalData.capturecode</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Yes</td>
-      <td>Código informado pela <code class="highlighter-rouge">MasterPass</code> ao lojista</td>
+      <td><code class="highlighter-rouge">MasterPass</code> code sent to the merchant by the wallet</td>
     </tr>
   </tbody>
 </table>
@@ -2535,101 +2475,101 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
 <table>
   <thead>
     <tr>
-      <th>Propriedade</th>
-      <th>Descrição</th>
-      <th>Tipo</th>
-      <th>Tamanho</th>
-      <th>Formato</th>
+      <th>Property</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Size</th>
+      <th>Format</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">ProofOfSale</code></td>
-      <td>Number da autorização, identico ao NSU.</td>
+      <td>Authorization number, identical to NSU.</td>
       <td>Text</td>
       <td>6</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Tid</code></td>
-      <td>Id da transação na adquirente.</td>
+      <td>Transaction Id on the acquirer.</td>
       <td>Text</td>
       <td>20</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">AuthorizationCode</code></td>
-      <td>Código de autorização.</td>
+      <td>Authorization code.</td>
       <td>Text</td>
       <td>6</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">SoftDescriptor</code></td>
-      <td>Text que será impresso na fatura bancaria do portador - Disponivel apenas para VISA/MASTER - nao permite caracteres especiais</td>
+      <td>Text printed on the buyer’s bank invoice - Available only for VISA/MASTER - does not allow special characters - See Attachment</td>
       <td>Text</td>
       <td>13</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">PaymentId</code></td>
-      <td>Campo Identificador do Pedido.</td>
+      <td>Order Identifier Field.</td>
       <td>Guid</td>
       <td>36</td>
       <td>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">ECI</code></td>
-      <td>Eletronic Commerce Indicator. Representa o quão segura é uma transação.</td>
+      <td>Eletronic Commerce Indicator. Represents how secure a transaction is.</td>
       <td>Text</td>
       <td>2</td>
-      <td>Exemplos: 7</td>
+      <td>Examples: 7</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Status</code></td>
-      <td>Status da Transação.</td>
+      <td>Transaction Status.</td>
       <td>Byte</td>
       <td>—</td>
       <td>2</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">ReturnCode</code></td>
-      <td>Código de retorno da Adquirência.</td>
+      <td>Return code of Acquiring.</td>
       <td>Text</td>
       <td>32</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">ReturnMessage</code></td>
-      <td>Mensagem de retorno da Adquirência.</td>
+      <td>Return message of Acquiring.</td>
       <td>Text</td>
       <td>512</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Type</code></td>
-      <td>indica qual o tipo de carteira: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
+      <td>Defines Type of Wallet: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Text alfanumérico</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Walletkey</code></td>
-      <td>Chave criptografica que identifica lojas nas Wallets - Ver tabela WalletKey para mais informações</td>
+      <td>Wallet Decryption Key</td>
       <td>Text</td>
       <td>255</td>
       <td>Ver tabela <code class="highlighter-rouge">WalletKey</code></td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">AdditionalData.EphemeralPublicKey</code></td>
-      <td>Token retornado pela Wallet. Deve ser enviado em Integrações: <code class="highlighter-rouge">ApplePay</code>/ <code class="highlighter-rouge">AndroidPay</code></td>
+      <td>Wallet Ephemeral Decryption Key. Received when using: <code class="highlighter-rouge">ApplePay</code>/ <code class="highlighter-rouge">AndroidPay</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Ver Tabela <code class="highlighter-rouge">EphemeralPublicKey</code></td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">AdditionalData.capturecode</code></td>
-      <td>Código informado pela <code class="highlighter-rouge">MasterPass</code> ao lojista</td>
+      <td><code class="highlighter-rouge">MasterPass</code> code sent to the merchant by the wallet</td>
       <td>Text</td>
       <td>255</td>
       <td>3</td>
@@ -2639,15 +2579,15 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
 
 <h3 id="pancard-number-sending-3">PAN/Card Number Sending</h3>
 
-<p>No modelo apresentado a seguir, demonstramos como a AndroidPay pode ser utilizada com o envio do cartão aberto, sem a necessidade de WalletKey.</p>
+<p>Here we describe how to integrate Android Pay without using the WalletKey + EphemeralPublicKey provided by Google</p>
 
 <h4 id="request-7">Request</h4>
 
-<p>Nesse modelo, o lojista informa apenas que a transação é da Wallet AndroidPay e envia os dados ECI e CAVV fornecidos pelo Google</p>
+<p>In this type of integration, the merchant must inform the CAVV and ECI provided by Google</p>
 
 <ol>
-  <li><strong>CAVV</strong> - pode ser extraido do campo <code class="highlighter-rouge">Cryptogram</code> retornado pela Samsung no payload</li>
-  <li><strong>ECI</strong> - retornado pela Samsung Pay no payload campo <code class="highlighter-rouge">ECI</code></li>
+  <li><strong>CAVV</strong> - it can be extracted from <code class="highlighter-rouge">Cryptogram</code> provided by Google.</li>
+  <li><strong>ECI</strong> - it can be extracted from <code class="highlighter-rouge">ECI</code> provided by Google.</li>
 </ol>
 
 <aside class="request"><span class="method post">POST</span> <span class="endpoint">/1/sales/</span></aside>
@@ -2684,11 +2624,11 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
 <table>
   <thead>
     <tr>
-      <th>Propriedade</th>
-      <th>Tipo</th>
-      <th>Tamanho</th>
-      <th>Obrigatório</th>
-      <th>Descrição</th>
+      <th>Property</th>
+      <th>Type</th>
+      <th>Size</th>
+      <th>Required</th>
+      <th>Description</th>
     </tr>
   </thead>
   <tbody>
@@ -2697,105 +2637,105 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
       <td>Guid</td>
       <td>36</td>
       <td>Yes</td>
-      <td>Identificador da loja na Cielo.</td>
+      <td>Store identifier in Cielo.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">MerchantKey</code></td>
       <td>Text</td>
       <td>40</td>
       <td>Yes</td>
-      <td>Chave Publica para Autenticação Dupla na Cielo.</td>
+      <td>Public Key for Double Authentication in Cielo.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">RequestId</code></td>
       <td>Guid</td>
       <td>36</td>
-      <td>Não</td>
-      <td>Identificador do Request, utilizado quando o lojista usa diferentes servidores para cada GET/POST/PUT.</td>
+      <td>No</td>
+      <td>Request Identifier, used when the merchant uses different servers for each GET/POST/PUT.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">MerchantOrderId</code></td>
       <td>Text</td>
       <td>50</td>
       <td>Yes</td>
-      <td>Numero de identificação do Pedido.</td>
+      <td>Order ID number.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Customer.Name</code></td>
       <td>Text</td>
       <td>255</td>
-      <td>Não</td>
-      <td>Nome do Comprador.</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">Customer.Status</code></td>
-      <td>Text</td>
-      <td>255</td>
-      <td>Não</td>
-      <td>Status de cadastro do comprador na loja (NEW / EXISTING)</td>
+      <td>No</td>
+      <td>Buyer’s name.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Payment.Type</code></td>
       <td>Text</td>
       <td>100</td>
       <td>Yes</td>
-      <td>Tipo do Meio de Pagamento.</td>
+      <td>Means of Payment Type.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Payment.Amount</code></td>
       <td>Number</td>
       <td>15</td>
       <td>Yes</td>
-      <td>Valor do Pedido (ser enviado em centavos).</td>
+      <td>Order Amount (to be sent in cents).</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Payment.Installments</code></td>
       <td>Number</td>
       <td>2</td>
       <td>Yes</td>
-      <td>Number de Parcelas.</td>
+      <td>Number of installments.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">CreditCard.CardNumber.</code></td>
+      <td><code class="highlighter-rouge">Payment.SoftDescriptor</code></td>
       <td>Text</td>
-      <td>19</td>
-      <td>Yes</td>
-      <td>Number do Cartão do Comprador</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">CreditCard.SecurityCode</code></td>
-      <td>Text</td>
-      <td>4</td>
-      <td>Não</td>
-      <td>Código de segurança impresso no verso do cartão - Ver Anexo.</td>
+      <td>13</td>
+      <td>No</td>
+      <td>Text printed on buyer’s bank invoice - Available only for VISA/MASTER - does not allow special characters - See Attachment</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Wallet.Type</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Yes</td>
-      <td>indica qual o tipo de carteira: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
+      <td>Defines Type of Wallet: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Wallet.Walletkey</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Yes</td>
-      <td>Chave criptografica que identifica lojas nas Wallets - Ver tabela WalletKey para mais informações</td>
+      <td>Wallet Decryption Key</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Wallet.AdditionalData.EphemeralPublicKey</code></td>
+      <td>Text</td>
+      <td>255</td>
+      <td>Yes</td>
+      <td>Wallet Ephemeral Decryption Key. Must be informed when using: <code class="highlighter-rouge">ApplePay</code>/ <code class="highlighter-rouge">AndroidPay</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Wallet.AdditionalData.capturecode</code></td>
+      <td>Text</td>
+      <td>255</td>
+      <td>Yes</td>
+      <td><code class="highlighter-rouge">MasterPass</code> code sent to the merchant by the wallet</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Wallet.ECI</code></td>
       <td>Text</td>
       <td>3</td>
       <td>Yes</td>
-      <td>O ECI (Eletronic Commerce Indicator) representa o quão segura é uma transação. Esse valor deve ser levado em consideração pelo lojista para decidir sobre a captura da transação.</td>
+      <td>The ECI (Eletronic Commerce Indicator) represents how safe a transaction can be. This data should be taken into consideration by the merchant to decide on the capture of the transaction</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Wallet.CAVV</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Yes</td>
-      <td>Campo de validação retornado pela Wallet e utilizado como base de autorização</td>
+      <td>Security code informed by the Wallet. Used to authenticate and authorize the transaction</td>
     </tr>
   </tbody>
 </table>
@@ -2871,118 +2811,104 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
 <table>
   <thead>
     <tr>
-      <th>Propriedade</th>
-      <th>Descrição</th>
-      <th>Tipo</th>
-      <th>Tamanho</th>
-      <th>Formato</th>
+      <th>Property</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Size</th>
+      <th>Format</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">ProofOfSale</code></td>
-      <td>Number da autorização, identico ao NSU.</td>
+      <td>Authorization number, identical to NSU.</td>
       <td>Text</td>
       <td>6</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Tid</code></td>
-      <td>Id da transação na adquirente.</td>
+      <td>Transaction Id on the acquirer.</td>
       <td>Text</td>
       <td>20</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">AuthorizationCode</code></td>
-      <td>Código de autorização.</td>
+      <td>Authorization code.</td>
       <td>Text</td>
       <td>6</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">SoftDescriptor</code></td>
-      <td>Text que será impresso na fatura bancaria do portador - Disponivel apenas para VISA/MASTER - nao permite caracteres especiais</td>
+      <td>Text printed on the buyer’s bank invoice - Available only for VISA/MASTER - does not allow special characters - See Attachment</td>
       <td>Text</td>
       <td>13</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">PaymentId</code></td>
-      <td>Campo Identificador do Pedido.</td>
+      <td>Order Identifier Field.</td>
       <td>Guid</td>
       <td>36</td>
       <td>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">ECI</code></td>
-      <td>Eletronic Commerce Indicator. Representa o quão segura é uma transação.</td>
+      <td>Eletronic Commerce Indicator. Represents how secure a transaction is.</td>
       <td>Text</td>
       <td>2</td>
-      <td>Exemplos: 7</td>
+      <td>Examples: 7</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Status</code></td>
-      <td>Status da Transação.</td>
+      <td>Transaction Status.</td>
       <td>Byte</td>
       <td>—</td>
       <td>2</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">ReturnCode</code></td>
-      <td>Código de retorno da Adquirência.</td>
+      <td>Return code of Acquiring.</td>
       <td>Text</td>
       <td>32</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">ReturnMessage</code></td>
-      <td>Mensagem de retorno da Adquirência.</td>
+      <td>Return message of Acquiring.</td>
       <td>Text</td>
       <td>512</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Type</code></td>
-      <td>indica qual o tipo de carteira: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
+      <td>Defines Type of Wallet: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Text alfanumérico</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Walletkey</code></td>
-      <td>Chave criptografica que identifica lojas nas Wallets - Ver tabela WalletKey para mais informações</td>
+      <td>Wallet Decryption Key</td>
       <td>Text</td>
       <td>255</td>
       <td>Ver tabela <code class="highlighter-rouge">WalletKey</code></td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">AdditionalData.EphemeralPublicKey</code></td>
-      <td>Token retornado pela Wallet. Deve ser enviado em Integrações: <code class="highlighter-rouge">ApplePay</code>/ <code class="highlighter-rouge">AndroidPay</code></td>
+      <td>Wallet Ephemeral Decryption Key. Received when using: <code class="highlighter-rouge">ApplePay</code>/ <code class="highlighter-rouge">AndroidPay</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Ver Tabela <code class="highlighter-rouge">EphemeralPublicKey</code></td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">AdditionalData.capturecode</code></td>
-      <td>Código informado pela <code class="highlighter-rouge">MasterPass</code> ao lojista</td>
+      <td><code class="highlighter-rouge">MasterPass</code> code sent to the merchant by the wallet</td>
       <td>Text</td>
       <td>255</td>
       <td>3</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">ECI</code></td>
-      <td>O ECI (Eletronic Commerce Indicator) indica a segurança de uma transação. Deve ser levado em conta pelo lojista para decidir sobre a captura</td>
-      <td>Text</td>
-      <td>3</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">CAVV</code></td>
-      <td>Campo de validação retornado pela Wallet e utilizado como base de autorização</td>
-      <td>Text</td>
-      <td>255</td>
-      <td>–</td>
     </tr>
   </tbody>
 </table>
@@ -2991,18 +2917,16 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
 
 <h3 id="decryption-4">Decryption</h3>
 
-<p>No modelo apresentado a seguir, demonstramos como utilizar a integração VisaCheckout Cielo via o envio do WalletKey retornados pela Visa via Payload</p>
+<p>Here we describe how to integrate VisaCheckout using the WalletKey provided by Visa.</p>
 
 <blockquote>
-  <p>O <code class="highlighter-rouge">Walletkey</code> é o parametro <code class="highlighter-rouge">CallID</code> retornado pelo VisaCheckout</p>
+  <p>The <code class="highlighter-rouge">Walletkey</code> is the <code class="highlighter-rouge">CallID</code> returned by Visa.</p>
 </blockquote>
 
 <h4 id="request-8">Request</h4>
 
-<p>Exemplo de Request padrão <em>VisaCheckout</em></p>
-
 <blockquote>
-  <p>É necessário que a loja ja possua cadastro e uma integração VisaCheckout, caso contrario não será possivel a integração com a API</p>
+  <p>the merchant must be registered on Visa to use this integration</p>
 </blockquote>
 
 <aside class="request"><span class="method post">POST</span> <span class="endpoint">/1/sales/</span></aside>
@@ -3032,11 +2956,11 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
 <table>
   <thead>
     <tr>
-      <th>Propriedade</th>
-      <th>Tipo</th>
-      <th>Tamanho</th>
-      <th>Obrigatório</th>
-      <th>Descrição</th>
+      <th>Property</th>
+      <th>Type</th>
+      <th>Size</th>
+      <th>Required</th>
+      <th>Description</th>
     </tr>
   </thead>
   <tbody>
@@ -3045,91 +2969,77 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
       <td>Guid</td>
       <td>36</td>
       <td>Yes</td>
-      <td>Identificador da loja na Cielo.</td>
+      <td>Store identifier in Cielo.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">MerchantKey</code></td>
       <td>Text</td>
       <td>40</td>
       <td>Yes</td>
-      <td>Chave Publica para Autenticação Dupla na Cielo.</td>
+      <td>Public Key for Double Authentication in Cielo.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">RequestId</code></td>
       <td>Guid</td>
       <td>36</td>
-      <td>Não</td>
-      <td>Identificador do Request, utilizado quando o lojista usa diferentes servidores para cada GET/POST/PUT.</td>
+      <td>No</td>
+      <td>Request Identifier, used when the merchant uses different servers for each GET/POST/PUT.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">MerchantOrderId</code></td>
       <td>Text</td>
       <td>50</td>
       <td>Yes</td>
-      <td>Numero de identificação do Pedido.</td>
+      <td>Order ID number.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Customer.Name</code></td>
       <td>Text</td>
       <td>255</td>
-      <td>Não</td>
-      <td>Nome do Comprador.</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">Customer.Status</code></td>
-      <td>Text</td>
-      <td>255</td>
-      <td>Não</td>
-      <td>Status de cadastro do comprador na loja (NEW / EXISTING)</td>
+      <td>No</td>
+      <td>Buyer’s name.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Payment.Type</code></td>
       <td>Text</td>
       <td>100</td>
       <td>Yes</td>
-      <td>Tipo do Meio de Pagamento.</td>
+      <td>Means of Payment Type.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Payment.Amount</code></td>
       <td>Number</td>
       <td>15</td>
       <td>Yes</td>
-      <td>Valor do Pedido (ser enviado em centavos).</td>
+      <td>Order Amount (to be sent in cents).</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Payment.Installments</code></td>
       <td>Number</td>
       <td>2</td>
       <td>Yes</td>
-      <td>Number de Parcelas.</td>
+      <td>Number of installments.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">CreditCard.CardNumber.</code></td>
+      <td><code class="highlighter-rouge">Payment.SoftDescriptor</code></td>
       <td>Text</td>
-      <td>19</td>
-      <td>Yes</td>
-      <td>Number do Cartão do Comprador</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">CreditCard.SecurityCode</code></td>
-      <td>Text</td>
-      <td>4</td>
-      <td>Não</td>
-      <td>Código de segurança impresso no verso do cartão - Ver Anexo.</td>
+      <td>13</td>
+      <td>No</td>
+      <td>Text printed on buyer’s bank invoice - Available only for VISA/MASTER - does not allow special characters - See Attachment</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Wallet.Type</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Yes</td>
-      <td>indica qual o tipo de carteira: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
+      <td>Defines Type of Wallet: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Wallet.Walletkey</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Yes</td>
-      <td>Chave criptografica que identifica lojas nas Wallets - Ver tabela WalletKey para mais informações</td>
+      <td>Wallet Decryption Key</td>
     </tr>
   </tbody>
 </table>
@@ -3195,16 +3105,121 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Size</th>
+      <th>Format</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">ProofOfSale</code></td>
+      <td>Authorization number, identical to NSU.</td>
+      <td>Text</td>
+      <td>6</td>
+      <td>Alphanumeric text</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Tid</code></td>
+      <td>Transaction Id on the acquirer.</td>
+      <td>Text</td>
+      <td>20</td>
+      <td>Alphanumeric text</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">AuthorizationCode</code></td>
+      <td>Authorization code.</td>
+      <td>Text</td>
+      <td>6</td>
+      <td>Alphanumeric text</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">SoftDescriptor</code></td>
+      <td>Text printed on the buyer’s bank invoice - Available only for VISA/MASTER - does not allow special characters - See Attachment</td>
+      <td>Text</td>
+      <td>13</td>
+      <td>Alphanumeric text</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">PaymentId</code></td>
+      <td>Order Identifier Field.</td>
+      <td>Guid</td>
+      <td>36</td>
+      <td>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ECI</code></td>
+      <td>Eletronic Commerce Indicator. Represents how secure a transaction is.</td>
+      <td>Text</td>
+      <td>2</td>
+      <td>Examples: 7</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Status</code></td>
+      <td>Transaction Status.</td>
+      <td>Byte</td>
+      <td>—</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ReturnCode</code></td>
+      <td>Return code of Acquiring.</td>
+      <td>Text</td>
+      <td>32</td>
+      <td>Alphanumeric text</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ReturnMessage</code></td>
+      <td>Return message of Acquiring.</td>
+      <td>Text</td>
+      <td>512</td>
+      <td>Alphanumeric text</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Type</code></td>
+      <td>Defines Type of Wallet: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
+      <td>Text</td>
+      <td>255</td>
+      <td>Text alfanumérico</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Walletkey</code></td>
+      <td>Wallet Decryption Key</td>
+      <td>Text</td>
+      <td>255</td>
+      <td>Ver tabela <code class="highlighter-rouge">WalletKey</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">AdditionalData.EphemeralPublicKey</code></td>
+      <td>Wallet Ephemeral Decryption Key. Received when using: <code class="highlighter-rouge">ApplePay</code>/ <code class="highlighter-rouge">AndroidPay</code></td>
+      <td>Text</td>
+      <td>255</td>
+      <td>Ver Tabela <code class="highlighter-rouge">EphemeralPublicKey</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">AdditionalData.capturecode</code></td>
+      <td><code class="highlighter-rouge">MasterPass</code> code sent to the merchant by the wallet</td>
+      <td>Text</td>
+      <td>255</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+
 <h3 id="pancard-number-sending-4">PAN/Card Number Sending</h3>
 
-<p>No modelo apresentado a seguir, demonstramos como a VisaCheckout pode ser utilizada com o envio do cartão aberto, sem a necessidade de WalletKey.</p>
+<p>Here we describe how to integrate VisaCheckout without using the WalletKey provided by Visa</p>
 
 <h4 id="request-9">Request</h4>
 
-<p>Nesse modelo, o lojista informa apenas que a transação é da Wallet VisaCheckout e envia os dados ECI e CAVV fornecidos pela Visa</p>
+<p>In this type of integration, the merchant must inform the CAVV and ECI provided by Visa</p>
 
 <ol>
-  <li><strong>ECI</strong> - retornado pela Visa no payload como <code class="highlighter-rouge">DSC_ECI</code></li>
+  <li><strong>ECI</strong> - it can be extracted from <code class="highlighter-rouge">DSC_ECI</code> provided by Visa</li>
 </ol>
 
 <aside class="request"><span class="method post">POST</span> <span class="endpoint">/1/sales/</span></aside>
@@ -3236,11 +3251,11 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
 <table>
   <thead>
     <tr>
-      <th>Propriedade</th>
-      <th>Tipo</th>
-      <th>Tamanho</th>
-      <th>Obrigatório</th>
-      <th>Descrição</th>
+      <th>Property</th>
+      <th>Type</th>
+      <th>Size</th>
+      <th>Required</th>
+      <th>Description</th>
     </tr>
   </thead>
   <tbody>
@@ -3249,98 +3264,126 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
       <td>Guid</td>
       <td>36</td>
       <td>Yes</td>
-      <td>Identificador da loja na Cielo.</td>
+      <td>Store identifier in Cielo.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">MerchantKey</code></td>
       <td>Text</td>
       <td>40</td>
       <td>Yes</td>
-      <td>Chave Publica para Autenticação Dupla na Cielo.</td>
+      <td>Public Key for Double Authentication in Cielo.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">RequestId</code></td>
       <td>Guid</td>
       <td>36</td>
-      <td>Não</td>
-      <td>Identificador do Request, utilizado quando o lojista usa diferentes servidores para cada GET/POST/PUT.</td>
+      <td>No</td>
+      <td>Request Identifier, used when the merchant uses different servers for each GET/POST/PUT.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">MerchantOrderId</code></td>
       <td>Text</td>
       <td>50</td>
       <td>Yes</td>
-      <td>Numero de identificação do Pedido.</td>
+      <td>Order ID number.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Customer.Name</code></td>
       <td>Text</td>
       <td>255</td>
-      <td>Não</td>
-      <td>Nome do Comprador.</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">Customer.Status</code></td>
-      <td>Text</td>
-      <td>255</td>
-      <td>Não</td>
-      <td>Status de cadastro do comprador na loja (NEW / EXISTING)</td>
+      <td>No</td>
+      <td>Buyer’s name.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Payment.Type</code></td>
       <td>Text</td>
       <td>100</td>
       <td>Yes</td>
-      <td>Tipo do Meio de Pagamento.</td>
+      <td>Means of Payment Type.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Payment.Amount</code></td>
       <td>Number</td>
       <td>15</td>
       <td>Yes</td>
-      <td>Valor do Pedido (ser enviado em centavos).</td>
+      <td>Order Amount (to be sent in cents).</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Payment.Installments</code></td>
       <td>Number</td>
       <td>2</td>
       <td>Yes</td>
-      <td>Number de Parcelas.</td>
+      <td>Number of installments.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">CreditCard.CardNumber.</code></td>
+      <td><code class="highlighter-rouge">Payment.SoftDescriptor</code></td>
+      <td>Text</td>
+      <td>13</td>
+      <td>No</td>
+      <td>Text printed on buyer’s bank invoice - Available only for VISA/MASTER - does not allow special characters - See Attachment</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">CreditCard.CardNumber</code></td>
       <td>Text</td>
       <td>19</td>
       <td>Yes</td>
-      <td>Number do Cartão do Comprador</td>
+      <td>Buyer’s Card Number.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">CreditCard.Holder</code></td>
+      <td>Text</td>
+      <td>25</td>
+      <td>No</td>
+      <td>Buyer’s name printed on card.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">CreditCard.ExpirationDate</code></td>
+      <td>Text</td>
+      <td>7</td>
+      <td>Yes</td>
+      <td>Expiry date printed on card.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">CreditCard.SecurityCode</code></td>
       <td>Text</td>
       <td>4</td>
-      <td>Não</td>
-      <td>Código de segurança impresso no verso do cartão - Ver Anexo.</td>
+      <td>No</td>
+      <td>Security code printed on back of card - See Annex.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">CreditCard.SaveCard</code></td>
+      <td>Boolean</td>
+      <td>—</td>
+      <td>No (Default false)</td>
+      <td>Boolean that identifies whether the card will be saved to generate the CardToken.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">CreditCard.Brand</code></td>
+      <td>Text</td>
+      <td>10</td>
+      <td>Yes</td>
+      <td>Card issuer (Visa / Master / Amex / Elo / Aura / JCB / Diners / Discover / Hipercard).</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Wallet.Type</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Yes</td>
-      <td>indica qual o tipo de carteira: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
+      <td>Defines Type of Wallet: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Wallet.Walletkey</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Yes</td>
-      <td>Chave criptografica que identifica lojas nas Wallets - Ver tabela WalletKey para mais informações</td>
+      <td>Wallet Decryption Key</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Wallet.ECI</code></td>
       <td>Text</td>
       <td>3</td>
       <td>Yes</td>
-      <td>O ECI (Eletronic Commerce Indicator) representa o quão segura é uma transação. Esse valor deve ser levado em consideração pelo lojista para decidir sobre a captura da transação.</td>
+      <td>The ECI (Eletronic Commerce Indicator) represents how safe a transaction can be. This data should be taken into consideration by the merchant to decide on the capture of the transaction</td>
     </tr>
   </tbody>
 </table>
@@ -3401,90 +3444,104 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
 <table>
   <thead>
     <tr>
-      <th>Propriedade</th>
-      <th>Descrição</th>
-      <th>Tipo</th>
-      <th>Tamanho</th>
-      <th>Formato</th>
+      <th>Property</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Size</th>
+      <th>Format</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">ProofOfSale</code></td>
-      <td>Number da autorização, identico ao NSU.</td>
+      <td>Authorization number, identical to NSU.</td>
       <td>Text</td>
       <td>6</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Tid</code></td>
-      <td>Id da transação na adquirente.</td>
+      <td>Transaction Id on the acquirer.</td>
       <td>Text</td>
       <td>20</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">AuthorizationCode</code></td>
-      <td>Código de autorização.</td>
+      <td>Authorization code.</td>
       <td>Text</td>
       <td>6</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">SoftDescriptor</code></td>
-      <td>Text que será impresso na fatura bancaria do portador - Disponivel apenas para VISA/MASTER - nao permite caracteres especiais</td>
+      <td>Text printed on the buyer’s bank invoice - Available only for VISA/MASTER - does not allow special characters - See Attachment</td>
       <td>Text</td>
       <td>13</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">PaymentId</code></td>
-      <td>Campo Identificador do Pedido.</td>
+      <td>Order Identifier Field.</td>
       <td>Guid</td>
       <td>36</td>
       <td>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">ECI</code></td>
-      <td>Eletronic Commerce Indicator. Representa o quão segura é uma transação.</td>
+      <td>Eletronic Commerce Indicator. Represents how secure a transaction is.</td>
       <td>Text</td>
       <td>2</td>
-      <td>Exemplos: 7</td>
+      <td>Examples: 7</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Status</code></td>
-      <td>Status da Transação.</td>
+      <td>Transaction Status.</td>
       <td>Byte</td>
       <td>—</td>
       <td>2</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">ReturnCode</code></td>
-      <td>Código de retorno da Adquirência.</td>
+      <td>Return code of Acquiring.</td>
       <td>Text</td>
       <td>32</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">ReturnMessage</code></td>
-      <td>Mensagem de retorno da Adquirência.</td>
+      <td>Return message of Acquiring.</td>
       <td>Text</td>
       <td>512</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Type</code></td>
-      <td>indica qual o tipo de carteira: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
+      <td>Defines Type of Wallet: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Text alfanumérico</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Walletkey</code></td>
-      <td>Chave criptografica que identifica lojas nas Wallets - Ver tabela WalletKey para mais informações</td>
+      <td>Wallet Decryption Key</td>
       <td>Text</td>
       <td>255</td>
       <td>Ver tabela <code class="highlighter-rouge">WalletKey</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">AdditionalData.EphemeralPublicKey</code></td>
+      <td>Wallet Ephemeral Decryption Key. Received when using: <code class="highlighter-rouge">ApplePay</code>/ <code class="highlighter-rouge">AndroidPay</code></td>
+      <td>Text</td>
+      <td>255</td>
+      <td>Ver Tabela <code class="highlighter-rouge">EphemeralPublicKey</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">AdditionalData.capturecode</code></td>
+      <td><code class="highlighter-rouge">MasterPass</code> code sent to the merchant by the wallet</td>
+      <td>Text</td>
+      <td>255</td>
+      <td>3</td>
     </tr>
   </tbody>
 </table>
@@ -3493,19 +3550,9 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
 
 <h3 id="pancard-number-sending-5">PAN/Card Number Sending</h3>
 
-<blockquote>
-  <p>A Wallet MasterPass possui integração apenas no formato <code class="highlighter-rouge">PAN/Card Number Sending</code>.</p>
-</blockquote>
-
-<p>Para utilizar a wallet <a href="https://developer.mastercard.com/product/masterpass"><strong>Masterpass</strong></a> é necessario que a loja ja esteja cadastrada junto a Mastercard, e integrada a busca de dados de cartão da plataforma.</p>
+<p>To use <a href="https://developer.mastercard.com/product/masterpass"><strong>Masterpass</strong></a> hte merchant must be registered on Mastercard.</p>
 
 <h4 id="request-10">Request</h4>
-
-<p>Exemplo de Request <em>Masterpass</em></p>
-
-<blockquote>
-  <p>É necessário que a loja ja possua cadastro e uma integração Masterpass, caso contrario não será possivel a integração com a API</p>
-</blockquote>
 
 <aside class="request"><span class="method post">POST</span> <span class="endpoint">/1/sales/</span></aside>
 
@@ -3538,11 +3585,11 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
 <table>
   <thead>
     <tr>
-      <th>Propriedade</th>
-      <th>Tipo</th>
-      <th>Tamanho</th>
-      <th>Obrigatório</th>
-      <th>Descrição</th>
+      <th>Property</th>
+      <th>Type</th>
+      <th>Size</th>
+      <th>Required</th>
+      <th>Description</th>
     </tr>
   </thead>
   <tbody>
@@ -3551,98 +3598,84 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
       <td>Guid</td>
       <td>36</td>
       <td>Yes</td>
-      <td>Identificador da loja na Cielo.</td>
+      <td>Store identifier in Cielo.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">MerchantKey</code></td>
       <td>Text</td>
       <td>40</td>
       <td>Yes</td>
-      <td>Chave Publica para Autenticação Dupla na Cielo.</td>
+      <td>Public Key for Double Authentication in Cielo.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">RequestId</code></td>
       <td>Guid</td>
       <td>36</td>
-      <td>Não</td>
-      <td>Identificador do Request, utilizado quando o lojista usa diferentes servidores para cada GET/POST/PUT.</td>
+      <td>No</td>
+      <td>Request Identifier, used when the merchant uses different servers for each GET/POST/PUT.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">MerchantOrderId</code></td>
       <td>Text</td>
       <td>50</td>
       <td>Yes</td>
-      <td>Numero de identificação do Pedido.</td>
+      <td>Order ID number.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Customer.Name</code></td>
       <td>Text</td>
       <td>255</td>
-      <td>Não</td>
-      <td>Nome do Comprador.</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">Customer.Status</code></td>
-      <td>Text</td>
-      <td>255</td>
-      <td>Não</td>
-      <td>Status de cadastro do comprador na loja (NEW / EXISTING)</td>
+      <td>No</td>
+      <td>Buyer’s name.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Payment.Type</code></td>
       <td>Text</td>
       <td>100</td>
       <td>Yes</td>
-      <td>Tipo do Meio de Pagamento.</td>
+      <td>Means of Payment Type.</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Payment.Amount</code></td>
       <td>Number</td>
       <td>15</td>
       <td>Yes</td>
-      <td>Valor do Pedido (ser enviado em centavos).</td>
+      <td>Order Amount (to be sent in cents).</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Payment.Installments</code></td>
       <td>Number</td>
       <td>2</td>
       <td>Yes</td>
-      <td>Number de Parcelas.</td>
+      <td>Number of installments.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">CreditCard.CardNumber.</code></td>
+      <td><code class="highlighter-rouge">Payment.SoftDescriptor</code></td>
       <td>Text</td>
-      <td>19</td>
-      <td>Yes</td>
-      <td>Number do Cartão do Comprador</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">CreditCard.SecurityCode</code></td>
-      <td>Text</td>
-      <td>4</td>
-      <td>Não</td>
-      <td>Código de segurança impresso no verso do cartão - Ver Anexo.</td>
+      <td>13</td>
+      <td>No</td>
+      <td>Text printed on buyer’s bank invoice - Available only for VISA/MASTER - does not allow special characters - See Attachment</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Wallet.Type</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Yes</td>
-      <td>indica qual o tipo de carteira: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
+      <td>Defines Type of Wallet: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Wallet.Walletkey</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Yes</td>
-      <td>Chave criptografica que identifica lojas nas Wallets - Ver tabela WalletKey para mais informações</td>
+      <td>Wallet Decryption Key</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Wallet.AdditionalData.capturecode</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Yes</td>
-      <td>Código informado pela <code class="highlighter-rouge">MasterPass</code> ao lojista</td>
+      <td><code class="highlighter-rouge">MasterPass</code> code sent to the merchant by the wallet</td>
     </tr>
   </tbody>
 </table>
@@ -3718,118 +3751,104 @@ aWvYpwra9kiVLR3742JWgF7P25rCdpwzXO9KiD9T8VxYnEZeFli+LQXb7c6UJjHl<br />
 <table>
   <thead>
     <tr>
-      <th>Propriedade</th>
-      <th>Descrição</th>
-      <th>Tipo</th>
-      <th>Tamanho</th>
-      <th>Formato</th>
+      <th>Property</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Size</th>
+      <th>Format</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">ProofOfSale</code></td>
-      <td>Number da autorização, identico ao NSU.</td>
+      <td>Authorization number, identical to NSU.</td>
       <td>Text</td>
       <td>6</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Tid</code></td>
-      <td>Id da transação na adquirente.</td>
+      <td>Transaction Id on the acquirer.</td>
       <td>Text</td>
       <td>20</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">AuthorizationCode</code></td>
-      <td>Código de autorização.</td>
+      <td>Authorization code.</td>
       <td>Text</td>
       <td>6</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">SoftDescriptor</code></td>
-      <td>Text que será impresso na fatura bancaria do portador - Disponivel apenas para VISA/MASTER - nao permite caracteres especiais</td>
+      <td>Text printed on the buyer’s bank invoice - Available only for VISA/MASTER - does not allow special characters - See Attachment</td>
       <td>Text</td>
       <td>13</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">PaymentId</code></td>
-      <td>Campo Identificador do Pedido.</td>
+      <td>Order Identifier Field.</td>
       <td>Guid</td>
       <td>36</td>
       <td>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">ECI</code></td>
-      <td>Eletronic Commerce Indicator. Representa o quão segura é uma transação.</td>
+      <td>Eletronic Commerce Indicator. Represents how secure a transaction is.</td>
       <td>Text</td>
       <td>2</td>
-      <td>Exemplos: 7</td>
+      <td>Examples: 7</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Status</code></td>
-      <td>Status da Transação.</td>
+      <td>Transaction Status.</td>
       <td>Byte</td>
       <td>—</td>
       <td>2</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">ReturnCode</code></td>
-      <td>Código de retorno da Adquirência.</td>
+      <td>Return code of Acquiring.</td>
       <td>Text</td>
       <td>32</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">ReturnMessage</code></td>
-      <td>Mensagem de retorno da Adquirência.</td>
+      <td>Return message of Acquiring.</td>
       <td>Text</td>
       <td>512</td>
-      <td>Text alfanumérico</td>
+      <td>Alphanumeric text</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Type</code></td>
-      <td>indica qual o tipo de carteira: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
+      <td>Defines Type of Wallet: <code class="highlighter-rouge">ApplePay</code> / <code class="highlighter-rouge">SamsungPay</code> / <code class="highlighter-rouge">AndroidPay</code> / <code class="highlighter-rouge">VisaCheckout</code>/ <code class="highlighter-rouge">Masterpass</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Text alfanumérico</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Walletkey</code></td>
-      <td>Chave criptografica que identifica lojas nas Wallets - Ver tabela WalletKey para mais informações</td>
+      <td>Wallet Decryption Key</td>
       <td>Text</td>
       <td>255</td>
       <td>Ver tabela <code class="highlighter-rouge">WalletKey</code></td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">AdditionalData.EphemeralPublicKey</code></td>
-      <td>Token retornado pela Wallet. Deve ser enviado em Integrações: <code class="highlighter-rouge">ApplePay</code>/ <code class="highlighter-rouge">AndroidPay</code></td>
+      <td>Wallet Ephemeral Decryption Key. Received when using: <code class="highlighter-rouge">ApplePay</code>/ <code class="highlighter-rouge">AndroidPay</code></td>
       <td>Text</td>
       <td>255</td>
       <td>Ver Tabela <code class="highlighter-rouge">EphemeralPublicKey</code></td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">AdditionalData.capturecode</code></td>
-      <td>Código informado pela <code class="highlighter-rouge">MasterPass</code> ao lojista</td>
+      <td><code class="highlighter-rouge">MasterPass</code> code sent to the merchant by the wallet</td>
       <td>Text</td>
       <td>255</td>
       <td>3</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">ECI</code></td>
-      <td>O ECI (Eletronic Commerce Indicator) indica a segurança de uma transação. Deve ser levado em conta pelo lojista para decidir sobre a captura</td>
-      <td>Text</td>
-      <td>3</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">CAVV</code></td>
-      <td>Campo de validação retornado pela Wallet e utilizado como base de autorização</td>
-      <td>Text</td>
-      <td>255</td>
-      <td>–</td>
     </tr>
   </tbody>
 </table>
