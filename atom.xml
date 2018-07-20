@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-20T13:01:07+00:00</updated>
+    <updated>2018-07-20T13:28:16+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -22375,15 +22375,7 @@ curl
   &lt;li&gt;9 - Banco emissor com sistema indisponível&lt;/li&gt;
   &lt;li&gt;11 - Nada combina&lt;/li&gt;
   &lt;li&gt;12 - Nenhum dado fornecido&lt;/li&gt;
-  &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;14 - Resposta inválida&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
+  &lt;li&gt;14 - Resposta inválida&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Payment.AVS.ReturnCode&lt;/code&gt;&lt;/p&gt;
@@ -22400,15 +22392,7 @@ curl
   &lt;li&gt;I - Banco emissor com sistema indisponível&lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;N - Nada coincide&lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;E - Dado(s) com formato(s) não suportado(s)&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;R - Resposta inválida&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
+  &lt;li&gt;R - Resposta inválida&lt;/li&gt;
 &lt;/ul&gt;
 </content>
     </entry>
