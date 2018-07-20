@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/en/"/>
     <logo>https://docscielo.github.io/Pilots/en/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/en/assets/favicon.ico</icon>
-    <updated>2018-07-20T13:52:05+00:00</updated>
+    <updated>2018-07-20T13:53:44+00:00</updated>
     <id>https://docscielo.github.io/Pilots/en/</id>
     <author>
         <name>João Batista Neto</name>
@@ -18680,7 +18680,7 @@ More information and complete integration, you can find in the link: https://dev
 
 &lt;h2 id=&quot;credit-card-payments-with-avs&quot;&gt;Credit Card Payments with AVS&lt;/h2&gt;
 
-&lt;p&gt;This is an example with AVS data. .&lt;/p&gt;
+&lt;p&gt;This is an example with AVS data.&lt;/p&gt;
 
 &lt;h3 id=&quot;request&quot;&gt;Request&lt;/h3&gt;
 
