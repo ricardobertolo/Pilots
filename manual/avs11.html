@@ -123,7 +123,11 @@
             <div class="post">
   <h1 id="o-que-é-o-avs">O que é o AVS</h1>
 
-<p>Sobre o Avs, nó contendo os dados do endereço de cobrança do portador do cartão</p>
+<p>O Sistema de Verificação de Endereço (AVS) valida se o endereço de fatura informado pelo comprador está de acordo com o endereço de fatura registrado na base de dados do emissor (Banco).</p>
+
+<h2 id="dados-informandos">Dados informandos</h2>
+
+<p>As informações abaixo devem ser enviadas para a Cielo para que uma consulta no AVS seja executada</p>
 
 <table>
   <thead>
@@ -183,12 +187,11 @@
 
 <h2 id="transação-com-avs">Transação com AVS</h2>
 
-<p>Este é um exemplo de uma transação com dados de AVS. O Sistema de Verificação de Endereço (AVS) valida se o endereço de fatura informado pelo comprador está de acordo com o endereço de fatura registrado na base de dados do emissor. 
-As adquirentes que suportam o AVS são Cielo e Rede.</p>
+<p>Este é um exemplo de uma transação com dados de AVS.</p>
 
 <h3 id="requisição">Requisição</h3>
 
-<aside class="request"><span class="method post">POST</span> <span class="endpoint">/v2/sales/</span></aside>
+<aside class="request"><span class="method post">POST</span> <span class="endpoint">/1/sales/</span></aside>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"MerchantOrderId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017051002"</span><span class="p">,</span><span class="w">

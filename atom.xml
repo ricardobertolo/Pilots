@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-20T12:53:40+00:00</updated>
+    <updated>2018-07-20T13:01:07+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -21496,7 +21496,11 @@ curl
         <id>https://docscielo.github.io/Pilots/manual/avs11</id>
         <content type="html">&lt;h1 id=&quot;o-que-é-o-avs&quot;&gt;O que é o AVS&lt;/h1&gt;
 
-&lt;p&gt;Sobre o Avs, nó contendo os dados do endereço de cobrança do portador do cartão&lt;/p&gt;
+&lt;p&gt;O Sistema de Verificação de Endereço (AVS) valida se o endereço de fatura informado pelo comprador está de acordo com o endereço de fatura registrado na base de dados do emissor (Banco).&lt;/p&gt;
+
+&lt;h2 id=&quot;dados-informandos&quot;&gt;Dados informandos&lt;/h2&gt;
+
+&lt;p&gt;As informações abaixo devem ser enviadas para a Cielo para que uma consulta no AVS seja executada&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -21556,12 +21560,11 @@ curl
 
 &lt;h2 id=&quot;transação-com-avs&quot;&gt;Transação com AVS&lt;/h2&gt;
 
-&lt;p&gt;Este é um exemplo de uma transação com dados de AVS. O Sistema de Verificação de Endereço (AVS) valida se o endereço de fatura informado pelo comprador está de acordo com o endereço de fatura registrado na base de dados do emissor. 
-As adquirentes que suportam o AVS são Cielo e Rede.&lt;/p&gt;
+&lt;p&gt;Este é um exemplo de uma transação com dados de AVS.&lt;/p&gt;
 
 &lt;h3 id=&quot;requisição&quot;&gt;Requisição&lt;/h3&gt;
 
-&lt;aside class=&quot;request&quot;&gt;&lt;span class=&quot;method post&quot;&gt;POST&lt;/span&gt; &lt;span class=&quot;endpoint&quot;&gt;/v2/sales/&lt;/span&gt;&lt;/aside&gt;
+&lt;aside class=&quot;request&quot;&gt;&lt;span class=&quot;method post&quot;&gt;POST&lt;/span&gt; &lt;span class=&quot;endpoint&quot;&gt;/1/sales/&lt;/span&gt;&lt;/aside&gt;
 
 &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
     &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;MerchantOrderId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2017051002&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
