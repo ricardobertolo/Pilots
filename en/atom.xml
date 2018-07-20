@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/en/"/>
     <logo>https://docscielo.github.io/Pilots/en/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/en/assets/favicon.ico</icon>
-    <updated>2018-07-20T13:43:54+00:00</updated>
+    <updated>2018-07-20T13:52:05+00:00</updated>
     <id>https://docscielo.github.io/Pilots/en/</id>
     <author>
         <name>João Batista Neto</name>
@@ -19547,37 +19547,125 @@ More information and complete integration, you can find in the link: https://dev
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Payment.AVS.Status&lt;/code&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;0 - Combinação exata&lt;/li&gt;
-  &lt;li&gt;1 - CEP e CPF combinam&lt;/li&gt;
-  &lt;li&gt;2 - Endereço e CPF combinam&lt;/li&gt;
-  &lt;li&gt;3 - Endereço e CEP combinam&lt;/li&gt;
-  &lt;li&gt;4 - CPF exato&lt;/li&gt;
-  &lt;li&gt;5 - Endereço exato&lt;/li&gt;
-  &lt;li&gt;6 - CEP exato&lt;/li&gt;
-  &lt;li&gt;7 - Não suportado ou não verificado para esta bandeira&lt;/li&gt;
-  &lt;li&gt;9 - Banco emissor com sistema indisponível&lt;/li&gt;
-  &lt;li&gt;11 - Nada combina&lt;/li&gt;
-  &lt;li&gt;12 - Nenhum dado fornecido&lt;/li&gt;
-  &lt;li&gt;14 - Resposta inválida&lt;/li&gt;
-&lt;/ul&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;AVS-Status&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;Exactly Match&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;CEP and CPF match&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Address and CPF Match&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Address and Zip Code Match&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Privacy Policy&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;Exact Address&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;Exact zip code&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;Not supported or not verified for this creditcard Flag&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;bank/issuer system unavailable&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;11&lt;/td&gt;
+      &lt;td&gt;Nothing matches&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;12&lt;/td&gt;
+      &lt;td&gt;No data provided&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;14&lt;/td&gt;
+      &lt;td&gt;Invalid answer&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Payment.AVS.ReturnCode&lt;/code&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;W - Todos os dados coincidem&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;X - O CEP e CPF coincidem, endereço não coincide&lt;/li&gt;
-  &lt;li&gt;Z - Endereço e CPF coincidem, CEP não coincide&lt;/li&gt;
-  &lt;li&gt;S - O CEP e endereço coincidem, CPF não coincide&lt;/li&gt;
-  &lt;li&gt;A - CPF coincide, CEP e endereço não coincidem&lt;/li&gt;
-  &lt;li&gt;U - O CEP e CPF não coincidem, endereço coincide&lt;/li&gt;
-  &lt;li&gt;Y - O CEP coincide, CPF e endereço não coincidem&lt;/li&gt;
-  &lt;li&gt;P - Não suportado ou não verificado&lt;/li&gt;
-  &lt;li&gt;I - Banco emissor com sistema indisponível&lt;/li&gt;
-  &lt;li&gt;N - Nada coincide&lt;/li&gt;
-  &lt;li&gt;E - Dado(s) com formato(s) não suportado(s)&lt;/li&gt;
-  &lt;li&gt;R - Resposta inválida&lt;/li&gt;
-&lt;/ul&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;ReturnCode&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;W&lt;/td&gt;
+      &lt;td&gt;All data match&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;X&lt;/td&gt;
+      &lt;td&gt;Zip code and CPF match, address does not match&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Z&lt;/td&gt;
+      &lt;td&gt;Address and CPF match, ZIP code does not match&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;S&lt;/td&gt;
+      &lt;td&gt;Zip code and address match, CPF does not match&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;A&lt;/td&gt;
+      &lt;td&gt;CPF matches, ZIP code and address do not match&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;U&lt;/td&gt;
+      &lt;td&gt;Zip code and CPF do not match, address matches&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Y&lt;/td&gt;
+      &lt;td&gt;Zip code matches, CPF and address do not match&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;P&lt;/td&gt;
+      &lt;td&gt;Unsupported or unverified&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;I&lt;/td&gt;
+      &lt;td&gt;bank/issuer system unavailable&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;N&lt;/td&gt;
+      &lt;td&gt;Nothing matches&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;E&lt;/td&gt;
+      &lt;td&gt;Data with unsupported format (s)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;R&lt;/td&gt;
+      &lt;td&gt;Invalid answer&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 </content>
     </entry>
     

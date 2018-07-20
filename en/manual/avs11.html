@@ -1054,37 +1054,125 @@
 
 <p><code class="highlighter-rouge">Payment.AVS.Status</code></p>
 
-<ul>
-  <li>0 - Combinação exata</li>
-  <li>1 - CEP e CPF combinam</li>
-  <li>2 - Endereço e CPF combinam</li>
-  <li>3 - Endereço e CEP combinam</li>
-  <li>4 - CPF exato</li>
-  <li>5 - Endereço exato</li>
-  <li>6 - CEP exato</li>
-  <li>7 - Não suportado ou não verificado para esta bandeira</li>
-  <li>9 - Banco emissor com sistema indisponível</li>
-  <li>11 - Nada combina</li>
-  <li>12 - Nenhum dado fornecido</li>
-  <li>14 - Resposta inválida</li>
-</ul>
+<table>
+  <thead>
+    <tr>
+      <th>AVS-Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>Exactly Match</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>CEP and CPF match</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Address and CPF Match</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Address and Zip Code Match</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Privacy Policy</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Exact Address</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Exact zip code</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Not supported or not verified for this creditcard Flag</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>bank/issuer system unavailable</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Nothing matches</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>No data provided</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Invalid answer</td>
+    </tr>
+  </tbody>
+</table>
 
 <p><code class="highlighter-rouge">Payment.AVS.ReturnCode</code></p>
 
-<ul>
-  <li>W - Todos os dados coincidem<br /></li>
-  <li>X - O CEP e CPF coincidem, endereço não coincide</li>
-  <li>Z - Endereço e CPF coincidem, CEP não coincide</li>
-  <li>S - O CEP e endereço coincidem, CPF não coincide</li>
-  <li>A - CPF coincide, CEP e endereço não coincidem</li>
-  <li>U - O CEP e CPF não coincidem, endereço coincide</li>
-  <li>Y - O CEP coincide, CPF e endereço não coincidem</li>
-  <li>P - Não suportado ou não verificado</li>
-  <li>I - Banco emissor com sistema indisponível</li>
-  <li>N - Nada coincide</li>
-  <li>E - Dado(s) com formato(s) não suportado(s)</li>
-  <li>R - Resposta inválida</li>
-</ul>
+<table>
+  <thead>
+    <tr>
+      <th>ReturnCode</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>W</td>
+      <td>All data match</td>
+    </tr>
+    <tr>
+      <td>X</td>
+      <td>Zip code and CPF match, address does not match</td>
+    </tr>
+    <tr>
+      <td>Z</td>
+      <td>Address and CPF match, ZIP code does not match</td>
+    </tr>
+    <tr>
+      <td>S</td>
+      <td>Zip code and address match, CPF does not match</td>
+    </tr>
+    <tr>
+      <td>A</td>
+      <td>CPF matches, ZIP code and address do not match</td>
+    </tr>
+    <tr>
+      <td>U</td>
+      <td>Zip code and CPF do not match, address matches</td>
+    </tr>
+    <tr>
+      <td>Y</td>
+      <td>Zip code matches, CPF and address do not match</td>
+    </tr>
+    <tr>
+      <td>P</td>
+      <td>Unsupported or unverified</td>
+    </tr>
+    <tr>
+      <td>I</td>
+      <td>bank/issuer system unavailable</td>
+    </tr>
+    <tr>
+      <td>N</td>
+      <td>Nothing matches</td>
+    </tr>
+    <tr>
+      <td>E</td>
+      <td>Data with unsupported format (s)</td>
+    </tr>
+    <tr>
+      <td>R</td>
+      <td>Invalid answer</td>
+    </tr>
+  </tbody>
+</table>
 
 </div>
 
