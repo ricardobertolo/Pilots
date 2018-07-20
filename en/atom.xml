@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/en/"/>
     <logo>https://docscielo.github.io/Pilots/en/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/en/assets/favicon.ico</icon>
-    <updated>2018-07-20T13:37:17+00:00</updated>
+    <updated>2018-07-20T13:43:54+00:00</updated>
     <id>https://docscielo.github.io/Pilots/en/</id>
     <author>
         <name>João Batista Neto</name>
@@ -18616,71 +18616,71 @@ More information and complete integration, you can find in the link: https://dev
         <id>https://docscielo.github.io/Pilots/en/manual/avs11</id>
         <content type="html">&lt;h1 id=&quot;avs&quot;&gt;AVS&lt;/h1&gt;
 
-&lt;p&gt;O Sistema de Verificação de Endereço (AVS) valida se o endereço de fatura informado pelo comprador está de acordo com o endereço de fatura registrado na base de dados do emissor (Banco).&lt;/p&gt;
+&lt;p&gt;The Address Verification System (AVS) compares the billing address informed by customer with the billing address registered in bank’s data base.&lt;/p&gt;
 
-&lt;h2 id=&quot;dados-informandos&quot;&gt;Dados informandos&lt;/h2&gt;
+&lt;h2 id=&quot;information-required&quot;&gt;Information required&lt;/h2&gt;
 
-&lt;p&gt;As informações abaixo devem ser enviadas para a Cielo para que uma consulta no AVS seja executada&lt;/p&gt;
+&lt;p&gt;The information below must be sent to Cielo for AVS can to be executed&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;Paramêtro&lt;/th&gt;
-      &lt;th&gt;Descrição&lt;/th&gt;
-      &lt;th&gt;Tipo&lt;/th&gt;
-      &lt;th&gt;Tamanho&lt;/th&gt;
-      &lt;th&gt;Obrigatório&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+      &lt;th&gt;Type&lt;/th&gt;
+      &lt;th&gt;size&lt;/th&gt;
+      &lt;th&gt;Required&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Avs.Cpf&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;CPF do portador&lt;/td&gt;
-      &lt;td&gt;texto&lt;/td&gt;
+      &lt;td&gt;Buyer’s CPF&lt;/td&gt;
+      &lt;td&gt;text&lt;/td&gt;
       &lt;td&gt;11&lt;/td&gt;
-      &lt;td&gt;Não&lt;/td&gt;
+      &lt;td&gt;yes&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Avs.ZipCode&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;CEP do endereço de cobrança do portador&lt;/td&gt;
-      &lt;td&gt;texto&lt;/td&gt;
+      &lt;td&gt;billing address Zip code&lt;/td&gt;
+      &lt;td&gt;text&lt;/td&gt;
       &lt;td&gt;8&lt;/td&gt;
-      &lt;td&gt;Não&lt;/td&gt;
+      &lt;td&gt;ues&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Avs.Street&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Logradouro do endereço de cobrança do portador&lt;/td&gt;
-      &lt;td&gt;texto&lt;/td&gt;
+      &lt;td&gt;billing address street&lt;/td&gt;
+      &lt;td&gt;text&lt;/td&gt;
       &lt;td&gt;50&lt;/td&gt;
-      &lt;td&gt;Não&lt;/td&gt;
+      &lt;td&gt;ues&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Avs.Number&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Número do endereço de cobrança do portador&lt;/td&gt;
-      &lt;td&gt;texto&lt;/td&gt;
+      &lt;td&gt;billing address number&lt;/td&gt;
+      &lt;td&gt;text&lt;/td&gt;
       &lt;td&gt;6&lt;/td&gt;
-      &lt;td&gt;Não&lt;/td&gt;
+      &lt;td&gt;yes&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Avs.Complement&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Complemento do endereço de cobrança do portador&lt;/td&gt;
-      &lt;td&gt;texto&lt;/td&gt;
+      &lt;td&gt;billing address Complement&lt;/td&gt;
+      &lt;td&gt;text&lt;/td&gt;
       &lt;td&gt;30&lt;/td&gt;
-      &lt;td&gt;Não&lt;/td&gt;
+      &lt;td&gt;yes&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Avs.District&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Bairro do endereço de cobrança do portador&lt;/td&gt;
-      &lt;td&gt;texto&lt;/td&gt;
+      &lt;td&gt;billing address Neighborhood/District&lt;/td&gt;
+      &lt;td&gt;text&lt;/td&gt;
       &lt;td&gt;20&lt;/td&gt;
-      &lt;td&gt;Não&lt;/td&gt;
+      &lt;td&gt;yes&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
 &lt;h2 id=&quot;credit-card-payments-with-avs&quot;&gt;Credit Card Payments with AVS&lt;/h2&gt;
 
-&lt;p&gt;This is an example with AVS data. The Address Verification System (AVS) compares the billing address informed by customer with the billing address registered in bank’s data base. The acquirers that supports this feature are Cielo and Rede.&lt;/p&gt;
+&lt;p&gt;This is an example with AVS data. .&lt;/p&gt;
 
 &lt;h3 id=&quot;request&quot;&gt;Request&lt;/h3&gt;
 

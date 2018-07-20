@@ -123,71 +123,71 @@
             <div class="post">
   <h1 id="avs">AVS</h1>
 
-<p>O Sistema de Verificação de Endereço (AVS) valida se o endereço de fatura informado pelo comprador está de acordo com o endereço de fatura registrado na base de dados do emissor (Banco).</p>
+<p>The Address Verification System (AVS) compares the billing address informed by customer with the billing address registered in bank’s data base.</p>
 
-<h2 id="dados-informandos">Dados informandos</h2>
+<h2 id="information-required">Information required</h2>
 
-<p>As informações abaixo devem ser enviadas para a Cielo para que uma consulta no AVS seja executada</p>
+<p>The information below must be sent to Cielo for AVS can to be executed</p>
 
 <table>
   <thead>
     <tr>
       <th>Paramêtro</th>
-      <th>Descrição</th>
-      <th>Tipo</th>
-      <th>Tamanho</th>
-      <th>Obrigatório</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>size</th>
+      <th>Required</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="highlighter-rouge">Avs.Cpf</code></td>
-      <td>CPF do portador</td>
-      <td>texto</td>
+      <td>Buyer’s CPF</td>
+      <td>text</td>
       <td>11</td>
-      <td>Não</td>
+      <td>yes</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Avs.ZipCode</code></td>
-      <td>CEP do endereço de cobrança do portador</td>
-      <td>texto</td>
+      <td>billing address Zip code</td>
+      <td>text</td>
       <td>8</td>
-      <td>Não</td>
+      <td>ues</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Avs.Street</code></td>
-      <td>Logradouro do endereço de cobrança do portador</td>
-      <td>texto</td>
+      <td>billing address street</td>
+      <td>text</td>
       <td>50</td>
-      <td>Não</td>
+      <td>ues</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Avs.Number</code></td>
-      <td>Número do endereço de cobrança do portador</td>
-      <td>texto</td>
+      <td>billing address number</td>
+      <td>text</td>
       <td>6</td>
-      <td>Não</td>
+      <td>yes</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Avs.Complement</code></td>
-      <td>Complemento do endereço de cobrança do portador</td>
-      <td>texto</td>
+      <td>billing address Complement</td>
+      <td>text</td>
       <td>30</td>
-      <td>Não</td>
+      <td>yes</td>
     </tr>
     <tr>
       <td><code class="highlighter-rouge">Avs.District</code></td>
-      <td>Bairro do endereço de cobrança do portador</td>
-      <td>texto</td>
+      <td>billing address Neighborhood/District</td>
+      <td>text</td>
       <td>20</td>
-      <td>Não</td>
+      <td>yes</td>
     </tr>
   </tbody>
 </table>
 
 <h2 id="credit-card-payments-with-avs">Credit Card Payments with AVS</h2>
 
-<p>This is an example with AVS data. The Address Verification System (AVS) compares the billing address informed by customer with the billing address registered in bank’s data base. The acquirers that supports this feature are Cielo and Rede.</p>
+<p>This is an example with AVS data. .</p>
 
 <h3 id="request">Request</h3>
 
