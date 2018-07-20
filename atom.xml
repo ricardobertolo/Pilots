@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-20T12:41:26+00:00</updated>
+    <updated>2018-07-20T12:53:40+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -21494,7 +21494,67 @@ curl
         <link href="https://docscielo.github.io/Pilots/manual/avs11"/>
         <updated>2003-03-03T00:00:00+00:00</updated>
         <id>https://docscielo.github.io/Pilots/manual/avs11</id>
-        <content type="html">&lt;h2 id=&quot;criando-uma-transação-com-avs&quot;&gt;Criando uma transação com AVS&lt;/h2&gt;
+        <content type="html">&lt;h1 id=&quot;o-que-é-o-avs&quot;&gt;O que é o AVS&lt;/h1&gt;
+
+&lt;p&gt;Sobre o Avs, nó contendo os dados do endereço de cobrança do portador do cartão&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Paramêtro&lt;/th&gt;
+      &lt;th&gt;Descrição&lt;/th&gt;
+      &lt;th&gt;Tipo&lt;/th&gt;
+      &lt;th&gt;Tamanho&lt;/th&gt;
+      &lt;th&gt;Obrigatório&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Avs.Cpf&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;CPF do portador&lt;/td&gt;
+      &lt;td&gt;texto&lt;/td&gt;
+      &lt;td&gt;11&lt;/td&gt;
+      &lt;td&gt;Não&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Avs.ZipCode&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;CEP do endereço de cobrança do portador&lt;/td&gt;
+      &lt;td&gt;texto&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;Não&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Avs.Street&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Logradouro do endereço de cobrança do portador&lt;/td&gt;
+      &lt;td&gt;texto&lt;/td&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;Não&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Avs.Number&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Número do endereço de cobrança do portador&lt;/td&gt;
+      &lt;td&gt;texto&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;Não&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Avs.Complement&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Complemento do endereço de cobrança do portador&lt;/td&gt;
+      &lt;td&gt;texto&lt;/td&gt;
+      &lt;td&gt;30&lt;/td&gt;
+      &lt;td&gt;Não&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Avs.District&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Bairro do endereço de cobrança do portador&lt;/td&gt;
+      &lt;td&gt;texto&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+      &lt;td&gt;Não&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;transação-com-avs&quot;&gt;Transação com AVS&lt;/h2&gt;
 
 &lt;p&gt;Este é um exemplo de uma transação com dados de AVS. O Sistema de Verificação de Endereço (AVS) valida se o endereço de fatura informado pelo comprador está de acordo com o endereço de fatura registrado na base de dados do emissor. 
 As adquirentes que suportam o AVS são Cielo e Rede.&lt;/p&gt;
@@ -21509,7 +21569,7 @@ As adquirentes que suportam o AVS são Cielo e Rede.&lt;/p&gt;
         &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Nome do Comprador&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
         &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Identity&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;12345678909&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
         &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;IdentityType&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;CPF&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Email&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;comprador@braspag.com.br&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Email&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;comprador@Cielo.com.br&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
         &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Birthdate&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1991-01-02&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
         &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Address&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
             &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Street&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Alameda Xingu&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -21562,7 +21622,7 @@ As adquirentes que suportam o AVS são Cielo e Rede.&lt;/p&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl
-&lt;span class=&quot;nt&quot;&gt;--request&lt;/span&gt; POST &lt;span class=&quot;s2&quot;&gt;&quot;https://apisandbox.braspag.com.br/v2/sales/&quot;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;--request&lt;/span&gt; POST &lt;span class=&quot;s2&quot;&gt;&quot;https://apisandbox.cieloecommerce.cielo.com.br&quot;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;--header&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Content-Type: application/json&quot;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;--header&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;MerchantId: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&quot;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;--header&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;MerchantKey: 0123456789012345678901234567890123456789&quot;&lt;/span&gt;
@@ -21574,7 +21634,7 @@ As adquirentes que suportam o AVS são Cielo e Rede.&lt;/p&gt;
         &lt;span class=&quot;s2&quot;&gt;&quot;Name&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Nome do Comprador&quot;&lt;/span&gt;,
         &lt;span class=&quot;s2&quot;&gt;&quot;Identity&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;12345678909&quot;&lt;/span&gt;,
         &lt;span class=&quot;s2&quot;&gt;&quot;IdentityType&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;CPF&quot;&lt;/span&gt;,
-        &lt;span class=&quot;s2&quot;&gt;&quot;Email&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;comprador@braspag.com.br&quot;&lt;/span&gt;,
+        &lt;span class=&quot;s2&quot;&gt;&quot;Email&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;comprador@Cielo.com.br&quot;&lt;/span&gt;,
         &lt;span class=&quot;s2&quot;&gt;&quot;Birthdate&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;1991-01-02&quot;&lt;/span&gt;,
         &lt;span class=&quot;s2&quot;&gt;&quot;Address&quot;&lt;/span&gt;: &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
             &lt;span class=&quot;s2&quot;&gt;&quot;Street&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Alameda Xingu&quot;&lt;/span&gt;,
@@ -21643,14 +21703,14 @@ As adquirentes que suportam o AVS são Cielo e Rede.&lt;/p&gt;
       &lt;td&gt;Guid&lt;/td&gt;
       &lt;td&gt;36&lt;/td&gt;
       &lt;td&gt;Sim&lt;/td&gt;
-      &lt;td&gt;Identificador da loja na Braspag&lt;/td&gt;
+      &lt;td&gt;Identificador da loja na Cielo&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;MerchantKey&lt;/code&gt;&lt;/td&gt;
       &lt;td&gt;Texto&lt;/td&gt;
       &lt;td&gt;40&lt;/td&gt;
       &lt;td&gt;Sim&lt;/td&gt;
-      &lt;td&gt;Chave Publica para Autenticação Dupla na Braspag&lt;/td&gt;
+      &lt;td&gt;Chave Publica para Autenticação Dupla na Cielo&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;RequestId&lt;/code&gt;&lt;/td&gt;
@@ -21888,7 +21948,7 @@ As adquirentes que suportam o AVS são Cielo e Rede.&lt;/p&gt;
       &lt;td&gt;Booleano&lt;/td&gt;
       &lt;td&gt;—&lt;/td&gt;
       &lt;td&gt;Não (Default false)&lt;/td&gt;
-      &lt;td&gt;Booleano que indica se a transação é do tipo recorrente (true) ou não (false). Este com valor true não originará uma nova Recorrência, apenas permitirá a realização de uma transação sem a necessidade de envio do CVV. Somente para transações Cielo. Authenticate deve ser false quando Recurrent é true&lt;/td&gt;
+      &lt;td&gt;Booleano que indica se a transação é do tipo recorrente (true) ou não (false). Estar com valor true não originará uma nova Recorrência, apenas permitirá a realização de uma transação sem a necessidade de envio do CVV. Somente para transações Cielo. Authenticate deve ser false quando Recurrent é true&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Payment.SoftDescriptor&lt;/code&gt;&lt;/td&gt;
@@ -22006,7 +22066,7 @@ As adquirentes que suportam o AVS são Cielo e Rede.&lt;/p&gt;
         &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Nome do Comprador&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
         &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Identity&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;12345678909&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
         &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;IdentityType&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;CPF&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Email&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;comprador@braspag.com.br&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Email&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;comprador@Cielo.com.br&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
         &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Birthdate&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1991-01-02&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
         &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Address&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
             &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Street&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Alameda Xingu&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -22081,7 +22141,7 @@ As adquirentes que suportam o AVS são Cielo e Rede.&lt;/p&gt;
             &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
                 &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Method&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;PUT&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
                 &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Rel&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;void&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Href&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://apisandbox.braspag.com.br/v2/sales/c374099e-c474-4916-9f5c-f2598fec2925/void&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Href&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://apisandbox.cieloecommerce.cielo.com.br/1/sales/{PaymentId}/void&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
             &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
         &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
     &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -22097,7 +22157,7 @@ As adquirentes que suportam o AVS são Cielo e Rede.&lt;/p&gt;
         &lt;span class=&quot;s2&quot;&gt;&quot;Name&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Nome do Comprador&quot;&lt;/span&gt;,
         &lt;span class=&quot;s2&quot;&gt;&quot;Identity&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;12345678909&quot;&lt;/span&gt;,
         &lt;span class=&quot;s2&quot;&gt;&quot;IdentityType&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;CPF&quot;&lt;/span&gt;,
-        &lt;span class=&quot;s2&quot;&gt;&quot;Email&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;comprador@braspag.com.br&quot;&lt;/span&gt;,
+        &lt;span class=&quot;s2&quot;&gt;&quot;Email&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;comprador@Cielo.com.br&quot;&lt;/span&gt;,
         &lt;span class=&quot;s2&quot;&gt;&quot;Birthdate&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;1991-01-02&quot;&lt;/span&gt;,
         &lt;span class=&quot;s2&quot;&gt;&quot;Address&quot;&lt;/span&gt;: &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
             &lt;span class=&quot;s2&quot;&gt;&quot;Street&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Alameda Xingu&quot;&lt;/span&gt;,
@@ -22286,96 +22346,67 @@ As adquirentes que suportam o AVS são Cielo e Rede.&lt;/p&gt;
       &lt;td&gt;Status do resultado do AVS.&lt;/td&gt;
       &lt;td&gt;Número&lt;/td&gt;
       &lt;td&gt;2&lt;/td&gt;
-      &lt;td&gt;0 - Combinação exata&lt;br /&gt;1 - CEP e CPF combinam&lt;br /&gt;2 - Endereço e CPF combinam&lt;br /&gt;3 - Endereço e CEP combinam&lt;br /&gt;4 - CPF exato&lt;br /&gt;5 - Endereço exato&lt;br /&gt;6 - CEP exato&lt;br /&gt;7 - Não suportado ou não verificado para esta bandeira&lt;br /&gt;9 - Banco emissor com sistema indisponível&lt;br /&gt;11 - Nada combina&lt;br /&gt;12 - Nenhum dado fornecido&lt;br /&gt;14 - Resposta inválida&lt;/td&gt;
+      &lt;td&gt;0 Ver lista AVS Status&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Payment.AVS.ReturnCode&lt;/code&gt;&lt;/td&gt;
       &lt;td&gt;Código de retorno do resultado do AVS.&lt;/td&gt;
       &lt;td&gt;Texto&lt;/td&gt;
       &lt;td&gt;1&lt;/td&gt;
-      &lt;td&gt;W - Todos os dados coincidem&lt;br /&gt;X - O CEP e CPF coincidem, endereço não coincide&lt;br /&gt;Z - Endereço e CPF coincidem, CEP não coincide&lt;br /&gt;S - O CEP e endereço coincidem, CPF não coincide&lt;br /&gt;A - CPF coincide, CEP e endereço não coincidem&lt;br /&gt;U - O CEP e CPF não coincidem, endereço coincide&lt;br /&gt;Y - O CEP coincide, CPF e endereço não coincidem&lt;br /&gt;P - Não suportado ou não verificado&lt;br /&gt;I - Banco emissor com sistema indisponível&lt;br /&gt;N - Nada coincide&lt;br /&gt;E - Dado(s) com formato(s) não suportado(s)&lt;br /&gt;R - Resposta inválida&lt;/td&gt;
+      &lt;td&gt;Ver lista AVS Return Code&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h1 id=&quot;o-que-é-o-avs&quot;&gt;O que é o AVS&lt;/h1&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Payment.AVS.Status&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;Sobre o Avs, nó contendo os dados do endereço de cobrança do portador do cartão&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;0 - Combinação exata&lt;/li&gt;
+  &lt;li&gt;1 - CEP e CPF combinam&lt;/li&gt;
+  &lt;li&gt;2 - Endereço e CPF combinam&lt;/li&gt;
+  &lt;li&gt;3 - Endereço e CEP combinam&lt;/li&gt;
+  &lt;li&gt;4 - CPF exato&lt;/li&gt;
+  &lt;li&gt;5 - Endereço exato&lt;/li&gt;
+  &lt;li&gt;6 - CEP exato&lt;/li&gt;
+  &lt;li&gt;7 - Não suportado ou não verificado para esta bandeira&lt;/li&gt;
+  &lt;li&gt;9 - Banco emissor com sistema indisponível&lt;/li&gt;
+  &lt;li&gt;11 - Nada combina&lt;/li&gt;
+  &lt;li&gt;12 - Nenhum dado fornecido&lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;14 - Resposta inválida&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;CardNumber&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1234123412341231&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Holder&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Teste Holder&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ExpirationDate&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;12/2021&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;SecurityCode&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;123&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;SaveCard&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;false&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Brand&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Visa&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Avs&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Cpf&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;12387719719&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ZipCode&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;20241180&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Street&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Rua da Glória&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Number&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;214&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Complement&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ap 203&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;District&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Rio de Janeiro&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Payment.AVS.ReturnCode&lt;/code&gt;&lt;/p&gt;
 
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Paramêtro&lt;/th&gt;
-      &lt;th&gt;Descrição&lt;/th&gt;
-      &lt;th&gt;Tipo&lt;/th&gt;
-      &lt;th&gt;Tamanho&lt;/th&gt;
-      &lt;th&gt;Obrigatório&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Avs.Cpf&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;CPF do portador&lt;/td&gt;
-      &lt;td&gt;texto&lt;/td&gt;
-      &lt;td&gt;11&lt;/td&gt;
-      &lt;td&gt;Não&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Avs.ZipCode&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;CEP do endereço de cobrança do portador&lt;/td&gt;
-      &lt;td&gt;texto&lt;/td&gt;
-      &lt;td&gt;8&lt;/td&gt;
-      &lt;td&gt;Não&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Avs.Street&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Logradouro do endereço de cobrança do portador&lt;/td&gt;
-      &lt;td&gt;texto&lt;/td&gt;
-      &lt;td&gt;50&lt;/td&gt;
-      &lt;td&gt;Não&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Avs.Number&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Número do endereço de cobrança do portador&lt;/td&gt;
-      &lt;td&gt;texto&lt;/td&gt;
-      &lt;td&gt;6&lt;/td&gt;
-      &lt;td&gt;Não&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Avs.Complement&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Complemento do endereço de cobrança do portador&lt;/td&gt;
-      &lt;td&gt;texto&lt;/td&gt;
-      &lt;td&gt;30&lt;/td&gt;
-      &lt;td&gt;Não&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Avs.District&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;Bairro do endereço de cobrança do portador&lt;/td&gt;
-      &lt;td&gt;texto&lt;/td&gt;
-      &lt;td&gt;20&lt;/td&gt;
-      &lt;td&gt;Não&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;ul&gt;
+  &lt;li&gt;W - Todos os dados coincidem&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;X - O CEP e CPF coincidem, endereço não coincide&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Z - Endereço e CPF coincidem, CEP não coincide&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;S - O CEP e endereço coincidem, CPF não coincide&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;A - CPF coincide, CEP e endereço não coincidem&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;U - O CEP e CPF não coincidem, endereço coincide&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Y - O CEP coincide, CPF e endereço não coincidem&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;P - Não suportado ou não verificado&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;I - Banco emissor com sistema indisponível&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;N - Nada coincide&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;E - Dado(s) com formato(s) não suportado(s)&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;R - Resposta inválida&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 </content>
     </entry>
     
