@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-24T19:29:59+00:00</updated>
+    <updated>2018-07-24T19:33:02+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -24275,9 +24275,9 @@ Existem 3 tipos de configurações de analise de fraude disponiveis:&lt;/p&gt;
   &lt;li&gt;Clique em: [&lt;strong&gt;Enviar uma Solicitação&lt;/strong&gt;] (https://suporte.braspag.com.br/hc/pt-br/requests/new)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;I01&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/zendesk/01.png&quot; alt=&quot;zendesk&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;I02&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/zendesk/02.png&quot; alt=&quot;zendesk&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Realize o Login:&lt;/p&gt;
 
@@ -24286,30 +24286,30 @@ Existem 3 tipos de configurações de analise de fraude disponiveis:&lt;/p&gt;
 
 &lt;p&gt;A tela de “Criação de chamados” será apresentada:&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;I03&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/zendesk/03.png&quot; alt=&quot;zendesk&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Preencha os campos da seguinte maneira&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;I04&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/zendesk/04.png&quot; alt=&quot;zendesk&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Você será redirecionado para a tela de Chamado. Nessa tela você pode interagir com a equipe de atendimento Braspag e receber atualização das informações trocadas&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;I05&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/zendesk/05.png&quot; alt=&quot;zendesk&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;consultar-chamados&quot;&gt;Consultar Chamados&lt;/h2&gt;
 
 &lt;p&gt;Acesse o Site de suporte Braspag: 
 Clique em &lt;a href=&quot;https://suporte.braspag.com.br/hc/pt-br&quot;&gt;“&lt;strong&gt;Entrar&lt;/strong&gt;”&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;I01&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/zendesk/01.png&quot; alt=&quot;zendesk&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;No menu lateral, clique em &lt;strong&gt;“Minhas Atividades”&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;I07&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/zendesk/07.png&quot; alt=&quot;zendesk&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;A tela &lt;strong&gt;“Solicitações”&lt;/strong&gt; será apresentada, nessa tela são listados todos os Chamados realizados pelo time Cielo E-commerce.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;I08&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/zendesk/08.png&quot; alt=&quot;zendesk&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Cada Chamados possuirá um Status e um ID.&lt;/p&gt;
 
