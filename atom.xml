@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-24T19:33:02+00:00</updated>
+    <updated>2018-07-24T19:37:05+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -24268,7 +24268,9 @@ Existem 3 tipos de configurações de analise de fraude disponiveis:&lt;/p&gt;
 
 &lt;p&gt;O intuito desde manual é auxiliar a equipe Atento responsável pelo atendimento da API Cielo Ecommerce (3.0) e Checkout Cielo em como abrir e acompanhar chamados via a ferramenta de Suporte Zendesk&lt;/p&gt;
 
-&lt;h2 id=&quot;abrir-chamados&quot;&gt;Abrir Chamados&lt;/h2&gt;
+&lt;h1 id=&quot;abrir-chamados&quot;&gt;Abrir Chamados&lt;/h1&gt;
+
+&lt;h2 id=&quot;tela-de-acesso&quot;&gt;Tela de acesso&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Acesse o Site de suporte Braspag:&lt;/li&gt;
@@ -24279,10 +24281,12 @@ Existem 3 tipos de configurações de analise de fraude disponiveis:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/zendesk/02.png&quot; alt=&quot;zendesk&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Realize o Login:&lt;/p&gt;
+&lt;h2 id=&quot;realizar-o-login&quot;&gt;Realizar o Login&lt;/h2&gt;
 
 &lt;p&gt;• &lt;strong&gt;Usuário:&lt;/strong&gt; Cieloecommerce@cielo.com.br
 • &lt;strong&gt;Senha:&lt;/strong&gt; Definido pelo coordenador Atento&lt;/p&gt;
+
+&lt;h2 id=&quot;tela-de-criação&quot;&gt;tela de criação&lt;/h2&gt;
 
 &lt;p&gt;A tela de “Criação de chamados” será apresentada:&lt;/p&gt;
 
@@ -24292,11 +24296,15 @@ Existem 3 tipos de configurações de analise de fraude disponiveis:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/zendesk/04.png&quot; alt=&quot;zendesk&quot; /&gt;&lt;/p&gt;
 
+&lt;h2 id=&quot;tela-de-detalhes&quot;&gt;Tela de detalhes&lt;/h2&gt;
+
 &lt;p&gt;Você será redirecionado para a tela de Chamado. Nessa tela você pode interagir com a equipe de atendimento Braspag e receber atualização das informações trocadas&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/zendesk/05.png&quot; alt=&quot;zendesk&quot; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;consultar-chamados&quot;&gt;Consultar Chamados&lt;/h2&gt;
+&lt;h1 id=&quot;consultar-chamados&quot;&gt;Consultar Chamados&lt;/h1&gt;
+
+&lt;h2 id=&quot;tela-de-acesso-1&quot;&gt;Tela de acesso&lt;/h2&gt;
 
 &lt;p&gt;Acesse o Site de suporte Braspag: 
 Clique em &lt;a href=&quot;https://suporte.braspag.com.br/hc/pt-br&quot;&gt;“&lt;strong&gt;Entrar&lt;/strong&gt;”&lt;/a&gt;&lt;/p&gt;
