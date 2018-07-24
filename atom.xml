@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-24T18:48:48+00:00</updated>
+    <updated>2018-07-24T19:29:59+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -24255,12 +24255,86 @@ Existem 3 tipos de configurações de analise de fraude disponiveis:&lt;/p&gt;
     </entry>
     
     <entry>
-        <title>Suporte</title>
-        <category term="" />
-        <link href="https://docscielo.github.io/Pilots/suporte"/>
+        <title>Chamados Zendesk</title>
+        <category term="tutorial" />
+        <link href="https://docscielo.github.io/Pilots/tutorial/suporte"/>
         <updated>2000-01-01T00:00:00+00:00</updated>
-        <id>https://docscielo.github.io/Pilots/suporte</id>
-        <content type="html">
+        <id>https://docscielo.github.io/Pilots/tutorial/suporte</id>
+        <content type="html">&lt;h1 id=&quot;o-que-é-zendesk&quot;&gt;O que é Zendesk?&lt;/h1&gt;
+
+&lt;p&gt;O Zendesk é a plataforma de atendimento e suporte oferecida pela a Braspag para interação entre times e produtos Braspag e Cielo.&lt;/p&gt;
+
+&lt;h2 id=&quot;sobre-este-tutorial&quot;&gt;Sobre este tutorial&lt;/h2&gt;
+
+&lt;p&gt;O intuito desde manual é auxiliar a equipe Atento responsável pelo atendimento da API Cielo Ecommerce (3.0) e Checkout Cielo em como abrir e acompanhar chamados via a ferramenta de Suporte Zendesk&lt;/p&gt;
+
+&lt;h2 id=&quot;abrir-chamados&quot;&gt;Abrir Chamados&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Acesse o Site de suporte Braspag:&lt;/li&gt;
+  &lt;li&gt;Clique em: [&lt;strong&gt;Enviar uma Solicitação&lt;/strong&gt;] (https://suporte.braspag.com.br/hc/pt-br/requests/new)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;I01&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I02&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Realize o Login:&lt;/p&gt;
+
+&lt;p&gt;• &lt;strong&gt;Usuário:&lt;/strong&gt; Cieloecommerce@cielo.com.br
+• &lt;strong&gt;Senha:&lt;/strong&gt; Definido pelo coordenador Atento&lt;/p&gt;
+
+&lt;p&gt;A tela de “Criação de chamados” será apresentada:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I03&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Preencha os campos da seguinte maneira&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I04&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Você será redirecionado para a tela de Chamado. Nessa tela você pode interagir com a equipe de atendimento Braspag e receber atualização das informações trocadas&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I05&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;consultar-chamados&quot;&gt;Consultar Chamados&lt;/h2&gt;
+
+&lt;p&gt;Acesse o Site de suporte Braspag: 
+Clique em &lt;a href=&quot;https://suporte.braspag.com.br/hc/pt-br&quot;&gt;“&lt;strong&gt;Entrar&lt;/strong&gt;”&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I01&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;No menu lateral, clique em &lt;strong&gt;“Minhas Atividades”&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I07&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A tela &lt;strong&gt;“Solicitações”&lt;/strong&gt; será apresentada, nessa tela são listados todos os Chamados realizados pelo time Cielo E-commerce.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I08&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Cada Chamados possuirá um Status e um ID.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Status&lt;/th&gt;
+      &lt;th&gt;Descrição&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Aberto&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Ainda em avaliação pela equipe Braspag&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Aguardando Resposta&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;O Chamado passou para outro nível/equipe dentro da Braspag&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Resolvido&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Chamado encerrado&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 </content>
     </entry>
     
