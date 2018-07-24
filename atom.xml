@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-24T19:37:05+00:00</updated>
+    <updated>2018-07-24T19:40:01+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -24273,8 +24273,8 @@ Existem 3 tipos de configurações de analise de fraude disponiveis:&lt;/p&gt;
 &lt;h2 id=&quot;tela-de-acesso&quot;&gt;Tela de acesso&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Acesse o Site de suporte Braspag:&lt;/li&gt;
-  &lt;li&gt;Clique em: [&lt;strong&gt;Enviar uma Solicitação&lt;/strong&gt;] (https://suporte.braspag.com.br/hc/pt-br/requests/new)&lt;/li&gt;
+  &lt;li&gt;Acesse o Site de suporte Braspag: &lt;strong&gt;https://suporte.braspag.com.br/hc/pt-br&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Clique em: &lt;a href=&quot;https://suporte.braspag.com.br/hc/pt-br/requests/new&quot;&gt;&lt;strong&gt;Enviar uma Solicitação&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/zendesk/01.png&quot; alt=&quot;zendesk&quot; /&gt;&lt;/p&gt;
@@ -24306,7 +24306,7 @@ Existem 3 tipos de configurações de analise de fraude disponiveis:&lt;/p&gt;
 
 &lt;h2 id=&quot;tela-de-acesso-1&quot;&gt;Tela de acesso&lt;/h2&gt;
 
-&lt;p&gt;Acesse o Site de suporte Braspag: 
+&lt;p&gt;Acesse o Site de suporte Braspag: &lt;strong&gt;https://suporte.braspag.com.br/hc/pt-br&lt;/strong&gt;
 Clique em &lt;a href=&quot;https://suporte.braspag.com.br/hc/pt-br&quot;&gt;“&lt;strong&gt;Entrar&lt;/strong&gt;”&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/zendesk/01.png&quot; alt=&quot;zendesk&quot; /&gt;&lt;/p&gt;
