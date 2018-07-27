@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-27T13:11:50+00:00</updated>
+    <updated>2018-07-27T13:15:41+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -24257,9 +24257,9 @@ Existem 3 tipos de configurações de analise de fraude disponiveis:&lt;/p&gt;
     <entry>
         <title>Chamados Zendesk</title>
         <category term="tutorial" />
-        <link href="https://docscielo.github.io/Pilots/tutorial/suporte"/>
+        <link href="https://docscielo.github.io/Pilots/tutorial/zendesk"/>
         <updated>2000-01-01T00:00:00+00:00</updated>
-        <id>https://docscielo.github.io/Pilots/tutorial/suporte</id>
+        <id>https://docscielo.github.io/Pilots/tutorial/zendesk</id>
         <content type="html">&lt;h1 id=&quot;o-que-é-zendesk&quot;&gt;O que é Zendesk?&lt;/h1&gt;
 
 &lt;p&gt;O Zendesk é a plataforma de atendimento e suporte oferecida pela a Braspag para interação entre times e produtos Braspag e Cielo.&lt;/p&gt;
