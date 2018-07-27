@@ -1,0 +1,74 @@
+---
+layout: tutorial
+title:  Chamados Zendesk
+description: Manual Zendesk
+categories: tutorial
+sort_order: 1
+tags:
+  - Suporte & HelpDesk
+---
+
+# O que é Zendesk?
+
+O Zendesk é a plataforma de atendimento e suporte oferecida pela a Braspag para interação entre times e produtos Braspag e Cielo.
+
+## Sobre este tutorial
+
+O intuito desde manual é auxiliar a equipe Atento responsável pelo atendimento da API Cielo Ecommerce (3.0) e Checkout Cielo em como abrir e acompanhar chamados via a ferramenta de Suporte Zendesk
+
+# Abrir Chamados
+
+## Tela de acesso
+
+* Acesse o Site de suporte Braspag: **https://suporte.braspag.com.br/hc/pt-br**
+* Clique em: [**Enviar uma Solicitação**](https://suporte.braspag.com.br/hc/pt-br/requests/new)
+
+![zendesk]({{ site.baseurl_root }}/images/zendesk/01.png)
+
+![zendesk]({{ site.baseurl_root }}/images/zendesk/02.png)
+
+## Realizar o Login
+
+• **Usuário:** Cieloecommerce@cielo.com.br
+• **Senha:** Definido pelo coordenador Atento
+
+## tela de criação
+
+A tela de “Criação de chamados” será apresentada:
+
+![zendesk]({{ site.baseurl_root }}/images/zendesk/03.png)
+
+Preencha os campos da seguinte maneira
+
+![zendesk]({{ site.baseurl_root }}/images/zendesk/04.png)
+
+## Tela de detalhes
+
+Você será redirecionado para a tela de Chamado. Nessa tela você pode interagir com a equipe de atendimento Braspag e receber atualização das informações trocadas
+
+![zendesk]({{ site.baseurl_root }}/images/zendesk/05.png)
+
+# Consultar Chamados
+
+## Tela de acesso
+
+Acesse o Site de suporte Braspag: **https://suporte.braspag.com.br/hc/pt-br**
+Clique em ["**Entrar**"](https://suporte.braspag.com.br/hc/pt-br)
+
+![zendesk]({{ site.baseurl_root }}/images/zendesk/01.png)
+
+No menu lateral, clique em **"Minhas Atividades"**
+
+![zendesk]({{ site.baseurl_root }}/images/zendesk/07.png)
+
+A tela **"Solicitações"** será apresentada, nessa tela são listados todos os Chamados realizados pelo time Cielo E-commerce.
+
+![zendesk]({{ site.baseurl_root }}/images/zendesk/08.png)
+
+Cada Chamados possuirá um Status e um ID. 
+
+| Status                  | Descrição                                                  |
+|-------------------------|------------------------------------------------------------|
+| **Aberto**              | Ainda em avaliação pela equipe Braspag                     |
+| **Aguardando Resposta** | O Chamado passou para outro nível/equipe dentro da Braspag |
+| **Resolvido**           | Chamado encerrado                                          |
