@@ -25,13 +25,17 @@ O Pré cadastro cobre/atinge 3 objetivos:
 |**Catalogar e padronizar Plataformas**| Lojas criadas pela API de pré cadastro serão vinculadas automaticamente a sua plataforma de origem, assim permitindo uma melhor rastreabilidade de cadastros|
 |**Facilitar a criação de lojas**|Como as informações de cadastro ja estarão registradas na base de dados, o HD Cielo apenas precisará confirmar se o EC ja existe no SEC, assim completando os campos EC + Chave de Produção. Não será necessario criar uma loja e-commerce na 3.0 ou Checkout |
 
-## Produtos cobertos
+> O Pré cadastro está disponivel para **Checkout Cielo** e **Api Cielo E-commerce (3.0)**
 
-Pré cadastro hoje funcionará como
+## Como funciona?
 
-## Dados Recebidos
+O Pré-cadastro é uma API que salva dados de lojas em uma base de dados apartada do SEC ou de outros produtos ecommerce. Esses dados serão posteriormente atualizados pelo HD Cielo com um EC e Chave de produção. Quando atualizados, a API de pré-cadastro acionará a base de dados 3.0 ou Checkout Cielo, criando uma loja na respectiva base. 
 
-## Integração Legado
+Em si o Pré-cadastro funciona seguinto as etapas abaixo:
+
+1. Plataforma oferece um formulário a ser preenchido pelo Lojista que deseja uma Afiliação
+2. A Plataforma acionará a API P.Cadastro, criando o registro na base apartada
+3. O HD Cielo Buscará diariamente lojas na base do P.Cadastro (Via Admin); Com os dados disponiveis, o HD pesquisará no SEC a existência do lojista 
 
 # Pesquisando Lojas
 
