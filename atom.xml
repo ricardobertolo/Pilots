@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-27T13:41:55+00:00</updated>
+    <updated>2018-07-27T13:51:17+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -24386,13 +24386,21 @@ Se todas as informações forem válidas, a equipe de credenciamento poderá ati
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&quot;produtos-cobertos&quot;&gt;Produtos cobertos&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;O Pré cadastro está disponivel para &lt;strong&gt;Checkout Cielo&lt;/strong&gt; e &lt;strong&gt;Api Cielo E-commerce (3.0)&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;Pré cadastro hoje funcionará como&lt;/p&gt;
+&lt;h2 id=&quot;como-funciona&quot;&gt;Como funciona?&lt;/h2&gt;
 
-&lt;h2 id=&quot;dados-recebidos&quot;&gt;Dados Recebidos&lt;/h2&gt;
+&lt;p&gt;O Pré-cadastro é uma API que salva dados de lojas em uma base de dados apartada do SEC ou de outros produtos ecommerce. Esses dados serão posteriormente atualizados pelo HD Cielo com um EC e Chave de produção. Quando atualizados, a API de pré-cadastro acionará a base de dados 3.0 ou Checkout Cielo, criando uma loja na respectiva base.&lt;/p&gt;
 
-&lt;h2 id=&quot;integração-legado&quot;&gt;Integração Legado&lt;/h2&gt;
+&lt;p&gt;Em si o Pré-cadastro funciona seguinto as etapas abaixo:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Plataforma oferece um formulário a ser preenchido pelo Lojista que deseja uma Afiliação&lt;/li&gt;
+  &lt;li&gt;A Plataforma acionará a API P.Cadastro, criando o registro na base apartada&lt;/li&gt;
+  &lt;li&gt;O HD Cielo Buscará diariamente lojas na base do P.Cadastro (Via Admin); Com os dados disponiveis, o HD pesquisará no SEC a existência do lojista&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h1 id=&quot;pesquisando-lojas&quot;&gt;Pesquisando Lojas&lt;/h1&gt;
 
