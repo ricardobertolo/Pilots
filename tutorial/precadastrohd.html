@@ -12,7 +12,7 @@
 
     <title>
         
-        Chamados Zendesk &middot; Documentações e tutoriais
+        Pré Cadastro no Admin &middot; Documentações e tutoriais
         
     </title>
 
@@ -79,7 +79,7 @@
                             
                                 
                                     
-                                    <li class="active">&gt; <a href="https://docscielo.github.io/Pilots/tutorial/precadastrohd">Chamados Zendesk</a></li>
+                                    <li class="active">&gt; <a href="https://docscielo.github.io/Pilots/tutorial/precadastrohd">Pré Cadastro no Admin</a></li>
                                     
                                 
                             
@@ -89,89 +89,53 @@
             </div>
 
             <div class="post">
-    <h1 id="o-que-é-zendesk">O que é Zendesk?</h1>
+    <h1 id="o-que-é-o-pré-cadastro-cielo">O que é o pré-Cadastro Cielo?</h1>
 
-<p>O Zendesk é a plataforma de atendimento e suporte oferecida pela a Braspag para interação entre times e produtos Braspag e Cielo.</p>
+<h2 id="descrição">Descrição</h2>
 
-<h2 id="sobre-este-tutorial">Sobre este tutorial</h2>
+<p>O pré cadastro Cielo é uma API disponibilizada pela Cielo para que plataformas possam enviar dados cadastrais a um Banco de dados apartado do SEC. Uma vez recebidos, esses dados ficarão disponiveis para avaliação da equipe de credenciamento Cielo.
+Se todas as informações forem válidas, a equipe de credenciamento poderá ativar o pré-cadastro, gerando uma loja e-commerce coEC e Chave de produção valida.</p>
 
-<p>O intuito desde manual é auxiliar a equipe Atento responsável pelo atendimento da API Cielo Ecommerce (3.0) e Checkout Cielo em como abrir e acompanhar chamados via a ferramenta de Suporte Zendesk</p>
+<h2 id="objetivos">Objetivos</h2>
 
-<h1 id="abrir-chamados">Abrir Chamados</h1>
-
-<h2 id="tela-de-acesso">Tela de acesso</h2>
-
-<ul>
-  <li>Acesse o Site de suporte Braspag: <strong>https://suporte.braspag.com.br/hc/pt-br</strong></li>
-  <li>Clique em: <a href="https://suporte.braspag.com.br/hc/pt-br/requests/new"><strong>Enviar uma Solicitação</strong></a></li>
-</ul>
-
-<p><img src="https://docscielo.github.io/Pilots/images/zendesk/01.png" alt="zendesk" /></p>
-
-<p><img src="https://docscielo.github.io/Pilots/images/zendesk/02.png" alt="zendesk" /></p>
-
-<h2 id="realizar-o-login">Realizar o Login</h2>
-
-<p>• <strong>Usuário:</strong> Cieloecommerce@cielo.com.br
-• <strong>Senha:</strong> Definido pelo coordenador Atento</p>
-
-<h2 id="tela-de-criação">tela de criação</h2>
-
-<p>A tela de “Criação de chamados” será apresentada:</p>
-
-<p><img src="https://docscielo.github.io/Pilots/images/zendesk/03.png" alt="zendesk" /></p>
-
-<p>Preencha os campos da seguinte maneira</p>
-
-<p><img src="https://docscielo.github.io/Pilots/images/zendesk/04.png" alt="zendesk" /></p>
-
-<h2 id="tela-de-detalhes">Tela de detalhes</h2>
-
-<p>Você será redirecionado para a tela de Chamado. Nessa tela você pode interagir com a equipe de atendimento Braspag e receber atualização das informações trocadas</p>
-
-<p><img src="https://docscielo.github.io/Pilots/images/zendesk/05.png" alt="zendesk" /></p>
-
-<h1 id="consultar-chamados">Consultar Chamados</h1>
-
-<h2 id="tela-de-acesso-1">Tela de acesso</h2>
-
-<p>Acesse o Site de suporte Braspag: <strong>https://suporte.braspag.com.br/hc/pt-br</strong>
-Clique em <a href="https://suporte.braspag.com.br/hc/pt-br">“<strong>Entrar</strong>”</a></p>
-
-<p><img src="https://docscielo.github.io/Pilots/images/zendesk/01.png" alt="zendesk" /></p>
-
-<p>No menu lateral, clique em <strong>“Minhas Atividades”</strong></p>
-
-<p><img src="https://docscielo.github.io/Pilots/images/zendesk/07.png" alt="zendesk" /></p>
-
-<p>A tela <strong>“Solicitações”</strong> será apresentada, nessa tela são listados todos os Chamados realizados pelo time Cielo E-commerce.</p>
-
-<p><img src="https://docscielo.github.io/Pilots/images/zendesk/08.png" alt="zendesk" /></p>
-
-<p>Cada Chamados possuirá um Status e um ID.</p>
+<p>O Pré cadastro cobre/atinge 3 objetivos:</p>
 
 <table>
   <thead>
     <tr>
-      <th>Status</th>
+      <th>Objetivo</th>
       <th>Descrição</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Aberto</strong></td>
-      <td>Ainda em avaliação pela equipe Braspag</td>
+      <td><strong>Aumentar canais de credenciamento</strong></td>
+      <td>A API será oferecida a Plataformas e parceiros Cielo para que esses possam criar em seus sites formularios de credenciamento. O Plataforma fára o processo de coletar dados como <strong>Informações bancarias, dados do lojista e dados da loja</strong>, auemnto a capilaridade de pontos de credenciamento Cielo</td>
     </tr>
     <tr>
-      <td><strong>Aguardando Resposta</strong></td>
-      <td>O Chamado passou para outro nível/equipe dentro da Braspag</td>
+      <td><strong>Catalogar e padronizar Plataformas</strong></td>
+      <td>Lojas criadas pela API de pré cadastro serão vinculadas automaticamente a sua plataforma de origem, assim permitindo uma melhor rastreabilidade de cadastros</td>
     </tr>
     <tr>
-      <td><strong>Resolvido</strong></td>
-      <td>Chamado encerrado</td>
+      <td><strong>Facilitar a criação de lojas</strong></td>
+      <td>Como as informações de cadastro ja estarão registradas na base de dados, o HD Cielo apenas precisará confirmar se o EC ja existe no SEC, assim completando os campos EC + Chave de Produção. Não será necessario criar uma loja e-commerce na 3.0 ou Checkout</td>
     </tr>
   </tbody>
 </table>
+
+<h2 id="produtos-cobertos">Produtos cobertos</h2>
+
+<p>Pré cadastro hoje funcionará como</p>
+
+<h2 id="dados-recebidos">Dados Recebidos</h2>
+
+<h2 id="integração-legado">Integração Legado</h2>
+
+<h1 id="pesquisando-lojas">Pesquisando Lojas</h1>
+
+<h1 id="ativando-lojas">Ativando lojas</h1>
+
+<h1 id="plataformas">Plataformas</h1>
 
 </div>
 
