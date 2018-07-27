@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-27T13:51:17+00:00</updated>
+    <updated>2018-07-27T14:15:30+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -24396,11 +24396,37 @@ Se todas as informações forem válidas, a equipe de credenciamento poderá ati
 
 &lt;p&gt;Em si o Pré-cadastro funciona seguinto as etapas abaixo:&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Plataforma oferece um formulário a ser preenchido pelo Lojista que deseja uma Afiliação&lt;/li&gt;
-  &lt;li&gt;A Plataforma acionará a API P.Cadastro, criando o registro na base apartada&lt;/li&gt;
-  &lt;li&gt;O HD Cielo Buscará diariamente lojas na base do P.Cadastro (Via Admin); Com os dados disponiveis, o HD pesquisará no SEC a existência do lojista&lt;/li&gt;
-&lt;/ol&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Etapa&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Ambiente&lt;/th&gt;
+      &lt;th&gt;Ação&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Plataforma&lt;/td&gt;
+      &lt;td&gt;A &lt;strong&gt;Plataforma&lt;/strong&gt; oferece um formulário a ser preenchido pelo Lojista que deseja uma Afiliação.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Plataforma&lt;/td&gt;
+      &lt;td&gt;A &lt;strong&gt;Plataforma&lt;/strong&gt; acionará a &lt;strong&gt;API P.Cadastro&lt;/strong&gt;, criando o registro na base apartada&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Admin&lt;/td&gt;
+      &lt;td&gt;O HD Cielo Buscará diariamente lojas na base do P.Cadastro; Com os dados disponiveis, o HD pesquisará no SEC a existência do lojista.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3.1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;SEC&lt;/td&gt;
+      &lt;td&gt;Existem 3 Cenarios a serem tratados: &lt;br /&gt;  &lt;strong&gt;Lojista não tem cadastro Cielo&lt;/strong&gt; - HD deve criar um EC no SEC alinhado com a solução cadastrada no P.Cadastro (3.0 ou Checkout)  &lt;br /&gt; &lt;strong&gt;Lojista possui EC Fisico&lt;/strong&gt; - HD deve criar/Duplicar o EC no SEC alinhado com a solução cadastrada no P.Cadastro (3.0 ou Checkout) &lt;br /&gt; &lt;strong&gt;Lojista ja possui EC na Solução&lt;/strong&gt; - HD deve duplicar o EC e gerar um novo cadastro na solução (Vincular ao EC original como Cadeia) &lt;br /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;h1 id=&quot;pesquisando-lojas&quot;&gt;Pesquisando Lojas&lt;/h1&gt;
 

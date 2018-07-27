@@ -133,11 +133,37 @@ Se todas as informações forem válidas, a equipe de credenciamento poderá ati
 
 <p>Em si o Pré-cadastro funciona seguinto as etapas abaixo:</p>
 
-<ol>
-  <li>Plataforma oferece um formulário a ser preenchido pelo Lojista que deseja uma Afiliação</li>
-  <li>A Plataforma acionará a API P.Cadastro, criando o registro na base apartada</li>
-  <li>O HD Cielo Buscará diariamente lojas na base do P.Cadastro (Via Admin); Com os dados disponiveis, o HD pesquisará no SEC a existência do lojista</li>
-</ol>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Etapa</th>
+      <th style="text-align: center">Ambiente</th>
+      <th>Ação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">Plataforma</td>
+      <td>A <strong>Plataforma</strong> oferece um formulário a ser preenchido pelo Lojista que deseja uma Afiliação.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">Plataforma</td>
+      <td>A <strong>Plataforma</strong> acionará a <strong>API P.Cadastro</strong>, criando o registro na base apartada</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">Admin</td>
+      <td>O HD Cielo Buscará diariamente lojas na base do P.Cadastro; Com os dados disponiveis, o HD pesquisará no SEC a existência do lojista.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3.1</td>
+      <td style="text-align: center">SEC</td>
+      <td>Existem 3 Cenarios a serem tratados: <br />  <strong>Lojista não tem cadastro Cielo</strong> - HD deve criar um EC no SEC alinhado com a solução cadastrada no P.Cadastro (3.0 ou Checkout)  <br /> <strong>Lojista possui EC Fisico</strong> - HD deve criar/Duplicar o EC no SEC alinhado com a solução cadastrada no P.Cadastro (3.0 ou Checkout) <br /> <strong>Lojista ja possui EC na Solução</strong> - HD deve duplicar o EC e gerar um novo cadastro na solução (Vincular ao EC original como Cadeia) <br /></td>
+    </tr>
+  </tbody>
+</table>
 
 <h1 id="pesquisando-lojas">Pesquisando Lojas</h1>
 
