@@ -33,15 +33,14 @@ O Pré-cadastro é uma API que salva dados de lojas em uma base de dados apartad
 
 Em si o Pré-cadastro funciona seguinto as etapas abaixo:
 
-|Etapa|Ambiente|Ação|
-|:---:|:------:|----|
-|1|Plataforma|A **Plataforma** oferece um formulário a ser preenchido pelo Lojista que deseja uma Afiliação.
-|2|Plataforma|A **Plataforma** acionará a **API P.Cadastro**, criando o registro na base apartada
-|3|Admin|O HD Cielo Buscará diariamente lojas na base do P.Cadastro; Com os dados disponiveis, o HD pesquisará no SEC a existência do lojista.
-|3.1|SEC|Existem 3 Cenarios a serem tratados: <BR><BR>  **Lojista não tem cadastro Cielo** - HD deve criar um EC no SEC alinhado com a solução cadastrada no P.Cadastro (3.0 ou Checkout)  <BR> **Lojista possui EC Fisico** - HD deve criar/Duplicar o EC no SEC alinhado com a solução cadastrada no P.Cadastro (3.0 ou Checkout) <BR> **Lojista ja possui EC na Solução** - HD deve duplicar o EC e gerar um novo cadastro na solução (Vincular ao EC original como Cadeia) <br> |
-
-
-
+| Etapa |  Ambiente  | Ação                                                                                                                                  |
+|:-----:|:----------:|---------------------------------------------------------------------------------------------------------------------------------------|
+|   1   | Plataforma | A **Plataforma** oferece um formulário a ser preenchido pelo Lojista que deseja uma Afiliação.                                        |
+|   2   | Plataforma | A **Plataforma** acionará a **API P.Cadastro**, criando o registro na base apartada                                                   |
+|   3   |    Admin   | O HD Cielo Buscará diariamente lojas na base do P.Cadastro; Com os dados disponiveis, o HD pesquisará no SEC a existência do lojista. |
+|  3.1  |     SEC    | Existem 3 Cenarios a serem tratados: <BR><BR>  **Lojista não tem cadastro Cielo** - HD deve criar um EC no SEC alinhado com a solução cadastrada no P.Cadastro (3.0 ou Checkout)  <BR> **Lojista possui EC Fisico** - HD deve criar/Duplicar o EC no SEC alinhado com a solução cadastrada no P.Cadastro (3.0 ou Checkout)<BR>**Lojista ja possui EC na Solução** - HD deve duplicar o EC e gerar um novo cadastro na solução (Vincular ao EC original como Cadeia) <br> |
+|   4   |    Admin   | Inserir o EC + Chave de produção no P.Cadastro. A Ativação será completada quando as duas chaves forem salvas                         |
+|   5   |    Admin   | Uma vez ativado o P.Cadastro, basta dar continuidade com a ativação da loja 3.0/Checkout no Admin como uma loja padrão                |
 
 # Pesquisando Lojas
 
