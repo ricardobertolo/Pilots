@@ -33,9 +33,15 @@ O Pré-cadastro é uma API que salva dados de lojas em uma base de dados apartad
 
 Em si o Pré-cadastro funciona seguinto as etapas abaixo:
 
-1. Plataforma oferece um formulário a ser preenchido pelo Lojista que deseja uma Afiliação
-2. A Plataforma acionará a API P.Cadastro, criando o registro na base apartada
-3. O HD Cielo Buscará diariamente lojas na base do P.Cadastro (Via Admin); Com os dados disponiveis, o HD pesquisará no SEC a existência do lojista 
+|Etapa|Ambiente|Ação|
+|:---:|:------:|----|
+|1|Plataforma|A **Plataforma** oferece um formulário a ser preenchido pelo Lojista que deseja uma Afiliação.
+|2|Plataforma|A **Plataforma** acionará a **API P.Cadastro**, criando o registro na base apartada
+|3|Admin|O HD Cielo Buscará diariamente lojas na base do P.Cadastro; Com os dados disponiveis, o HD pesquisará no SEC a existência do lojista.
+|3.1|SEC|Existem 3 Cenarios a serem tratados: <BR><BR>  **Lojista não tem cadastro Cielo** - HD deve criar um EC no SEC alinhado com a solução cadastrada no P.Cadastro (3.0 ou Checkout)  <BR> **Lojista possui EC Fisico** - HD deve criar/Duplicar o EC no SEC alinhado com a solução cadastrada no P.Cadastro (3.0 ou Checkout) <BR> **Lojista ja possui EC na Solução** - HD deve duplicar o EC e gerar um novo cadastro na solução (Vincular ao EC original como Cadeia) <br> |
+
+
+
 
 # Pesquisando Lojas
 
