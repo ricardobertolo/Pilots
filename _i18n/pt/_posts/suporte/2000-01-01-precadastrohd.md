@@ -1,74 +1,40 @@
 ---
 layout: tutorial
-title:  Chamados Zendesk
-description: Manual Zendesk
+title:  Pré Cadastro no Admin
+description: Manual PC
 categories: tutorial
-sort_order: 1
+sort_order: 2
 tags:
   - Suporte & HelpDesk
 ---
 
-# O que é Zendesk?
+# O que é o pré-Cadastro Cielo?
 
-O Zendesk é a plataforma de atendimento e suporte oferecida pela a Braspag para interação entre times e produtos Braspag e Cielo.
+## Descrição
 
-## Sobre este tutorial
+O pré cadastro Cielo é uma API disponibilizada pela Cielo para que plataformas possam enviar dados cadastrais a um Banco de dados apartado do SEC. Uma vez recebidos, esses dados ficarão disponiveis para avaliação da equipe de credenciamento Cielo.
+Se todas as informações forem válidas, a equipe de credenciamento poderá ativar o pré-cadastro, gerando uma loja e-commerce coEC e Chave de produção valida.
 
-O intuito desde manual é auxiliar a equipe Atento responsável pelo atendimento da API Cielo Ecommerce (3.0) e Checkout Cielo em como abrir e acompanhar chamados via a ferramenta de Suporte Zendesk
+## Objetivos
 
-# Abrir Chamados
+O Pré cadastro cobre/atinge 3 objetivos:
 
-## Tela de acesso
+|Objetivo|Descrição|
+|--------|---------|
+|**Aumentar canais de credenciamento**| A API será oferecida a Plataformas e parceiros Cielo para que esses possam criar em seus sites formularios de credenciamento. O Plataforma fára o processo de coletar dados como **Informações bancarias, dados do lojista e dados da loja**, auemnto a capilaridade de pontos de credenciamento Cielo|
+|**Catalogar e padronizar Plataformas**| Lojas criadas pela API de pré cadastro serão vinculadas automaticamente a sua plataforma de origem, assim permitindo uma melhor rastreabilidade de cadastros|
+|**Facilitar a criação de lojas**|Como as informações de cadastro ja estarão registradas na base de dados, o HD Cielo apenas precisará confirmar se o EC ja existe no SEC, assim completando os campos EC + Chave de Produção. Não será necessario criar uma loja e-commerce na 3.0 ou Checkout |
 
-* Acesse o Site de suporte Braspag: **https://suporte.braspag.com.br/hc/pt-br**
-* Clique em: [**Enviar uma Solicitação**](https://suporte.braspag.com.br/hc/pt-br/requests/new)
+## Produtos cobertos
 
-![zendesk]({{ site.baseurl_root }}/images/zendesk/01.png)
+Pré cadastro hoje funcionará como
 
-![zendesk]({{ site.baseurl_root }}/images/zendesk/02.png)
+## Dados Recebidos
 
-## Realizar o Login
+## Integração Legado
 
-• **Usuário:** Cieloecommerce@cielo.com.br
-• **Senha:** Definido pelo coordenador Atento
+# Pesquisando Lojas
 
-## tela de criação
+# Ativando lojas
 
-A tela de “Criação de chamados” será apresentada:
-
-![zendesk]({{ site.baseurl_root }}/images/zendesk/03.png)
-
-Preencha os campos da seguinte maneira
-
-![zendesk]({{ site.baseurl_root }}/images/zendesk/04.png)
-
-## Tela de detalhes
-
-Você será redirecionado para a tela de Chamado. Nessa tela você pode interagir com a equipe de atendimento Braspag e receber atualização das informações trocadas
-
-![zendesk]({{ site.baseurl_root }}/images/zendesk/05.png)
-
-# Consultar Chamados
-
-## Tela de acesso
-
-Acesse o Site de suporte Braspag: **https://suporte.braspag.com.br/hc/pt-br**
-Clique em ["**Entrar**"](https://suporte.braspag.com.br/hc/pt-br)
-
-![zendesk]({{ site.baseurl_root }}/images/zendesk/01.png)
-
-No menu lateral, clique em **"Minhas Atividades"**
-
-![zendesk]({{ site.baseurl_root }}/images/zendesk/07.png)
-
-A tela **"Solicitações"** será apresentada, nessa tela são listados todos os Chamados realizados pelo time Cielo E-commerce.
-
-![zendesk]({{ site.baseurl_root }}/images/zendesk/08.png)
-
-Cada Chamados possuirá um Status e um ID. 
-
-| Status                  | Descrição                                                  |
-|-------------------------|------------------------------------------------------------|
-| **Aberto**              | Ainda em avaliação pela equipe Braspag                     |
-| **Aguardando Resposta** | O Chamado passou para outro nível/equipe dentro da Braspag |
-| **Resolvido**           | Chamado encerrado                                          |
+# Plataformas
