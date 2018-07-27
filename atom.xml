@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-27T14:15:30+00:00</updated>
+    <updated>2018-07-27T14:36:39+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -24423,7 +24423,17 @@ Se todas as informações forem válidas, a equipe de credenciamento poderá ati
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;3.1&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;SEC&lt;/td&gt;
-      &lt;td&gt;Existem 3 Cenarios a serem tratados: &lt;br /&gt;  &lt;strong&gt;Lojista não tem cadastro Cielo&lt;/strong&gt; - HD deve criar um EC no SEC alinhado com a solução cadastrada no P.Cadastro (3.0 ou Checkout)  &lt;br /&gt; &lt;strong&gt;Lojista possui EC Fisico&lt;/strong&gt; - HD deve criar/Duplicar o EC no SEC alinhado com a solução cadastrada no P.Cadastro (3.0 ou Checkout) &lt;br /&gt; &lt;strong&gt;Lojista ja possui EC na Solução&lt;/strong&gt; - HD deve duplicar o EC e gerar um novo cadastro na solução (Vincular ao EC original como Cadeia) &lt;br /&gt;&lt;/td&gt;
+      &lt;td&gt;Existem 3 Cenarios a serem tratados: &lt;br /&gt;  &lt;strong&gt;Lojista não tem cadastro Cielo&lt;/strong&gt; - HD deve criar um EC no SEC alinhado com a solução cadastrada no P.Cadastro (3.0 ou Checkout)  &lt;br /&gt; &lt;strong&gt;Lojista possui EC Fisico&lt;/strong&gt; - HD deve criar/Duplicar o EC no SEC alinhado com a solução cadastrada no P.Cadastro (3.0 ou Checkout)&lt;br /&gt;&lt;strong&gt;Lojista ja possui EC na Solução&lt;/strong&gt; - HD deve duplicar o EC e gerar um novo cadastro na solução (Vincular ao EC original como Cadeia) &lt;br /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Admin&lt;/td&gt;
+      &lt;td&gt;Inserir o EC + Chave de produção no P.Cadastro. A Ativação será completada quando as duas chaves forem salvas&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Admin&lt;/td&gt;
+      &lt;td&gt;Uma vez ativado o P.Cadastro, basta dar continuidade com a ativação da loja 3.0/Checkout no Admin como uma loja padrão&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
