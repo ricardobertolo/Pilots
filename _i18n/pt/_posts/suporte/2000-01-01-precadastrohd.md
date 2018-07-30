@@ -48,7 +48,15 @@ Em si o Pré-cadastro funciona seguinto as etapas abaixo:
 
 Para pesquisar uma loja Pré-cadastro, basta acessar a tela de pesquisa dentro da área Cielo no Admin.
 
+IMAGEM
 
+Nessa tela é possivel pesquisar p.Cadastros com bases em 3 tipos de informação:
+
+|informação|Descrição|
+|-|-|
+|**Data de criação**|Data que o registro de da loja foi criada na base de P.Cadastro|
+|**Tipo de integração**|Qual o tipo de cadastro será originado|
+|**Plataforma**||
 
 ## Ativar
 
