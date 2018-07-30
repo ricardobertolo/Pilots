@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-30T19:40:06+00:00</updated>
+    <updated>2018-07-30T20:23:33+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -24438,11 +24438,17 @@ Se todas as informações forem válidas, a equipe de credenciamento poderá ati
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h1 id=&quot;pesquisando-lojas&quot;&gt;Pesquisando Lojas&lt;/h1&gt;
+&lt;h1 id=&quot;manipulando-cadastros&quot;&gt;Manipulando cadastros&lt;/h1&gt;
 
-&lt;h1 id=&quot;ativando-lojas&quot;&gt;Ativando lojas&lt;/h1&gt;
+&lt;h2 id=&quot;pesquisar&quot;&gt;Pesquisar&lt;/h2&gt;
+
+&lt;p&gt;Para pesquisar uma loja Pré-cadastro, basta acessar a tela de pesquisa dentro da área Cielo no Admin.&lt;/p&gt;
+
+&lt;h2 id=&quot;ativar&quot;&gt;Ativar&lt;/h2&gt;
 
 &lt;h1 id=&quot;plataformas&quot;&gt;Plataformas&lt;/h1&gt;
+
+&lt;h2 id=&quot;plataformas-integradas&quot;&gt;Plataformas integradas&lt;/h2&gt;
 </content>
     </entry>
     
