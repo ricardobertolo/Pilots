@@ -42,8 +42,16 @@ Em si o Pré-cadastro funciona seguinto as etapas abaixo:
 |   4   |    Admin   | Inserir o EC + Chave de produção no P.Cadastro. A Ativação será completada quando as duas chaves forem salvas                         |
 |   5   |    Admin   | Uma vez ativado o P.Cadastro, basta dar continuidade com a ativação da loja 3.0/Checkout no Admin como uma loja padrão                |
 
-# Pesquisando Lojas
+# Manipulando cadastros
 
-# Ativando lojas
+## Pesquisar
+
+Para pesquisar uma loja Pré-cadastro, basta acessar a tela de pesquisa dentro da área Cielo no Admin.
+
+
+
+## Ativar
 
 # Plataformas
+
+## Plataformas integradas
