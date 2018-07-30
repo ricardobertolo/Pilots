@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-30T20:23:33+00:00</updated>
+    <updated>2018-07-30T21:08:25+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -24443,6 +24443,33 @@ Se todas as informações forem válidas, a equipe de credenciamento poderá ati
 &lt;h2 id=&quot;pesquisar&quot;&gt;Pesquisar&lt;/h2&gt;
 
 &lt;p&gt;Para pesquisar uma loja Pré-cadastro, basta acessar a tela de pesquisa dentro da área Cielo no Admin.&lt;/p&gt;
+
+&lt;p&gt;IMAGEM&lt;/p&gt;
+
+&lt;p&gt;Nessa tela é possivel pesquisar p.Cadastros com bases em 3 tipos de informação:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;informação&lt;/th&gt;
+      &lt;th&gt;Descrição&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Data de criação&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Data que o registro de da loja foi criada na base de P.Cadastro&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Tipo de integração&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Qual o tipo de cadastro será originado&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Plataforma&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;h2 id=&quot;ativar&quot;&gt;Ativar&lt;/h2&gt;
 
