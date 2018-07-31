@@ -52,7 +52,7 @@ Para pesquisar uma loja Pré-cadastro, basta acessar a tela de pesquisa dentro d
 
 A tela de pesquisa será exibida
 
-![Pesquisa]({{ site.baseurl_root }}/images/suporteprecadastro/pesquisar.png)
+![Pesquisa]({{ site.baseurl_root }}/images/suporteprecadastro/pesquisa.png)
 
 Nessa tela é possivel pesquisar P.Cadastros com bases em 3 tipos de informação:
 
@@ -64,7 +64,7 @@ Nessa tela é possivel pesquisar P.Cadastros com bases em 3 tipos de informaçã
 
 A listagem de lojas será exibida. Basta clicar na seta azul para que os detalhes sejam exibidos.
 
-![Pesquisa]({{ site.baseurl_root }}/images/suporteprecadastro/pesquisar2.png)
+![Pesquisa]({{ site.baseurl_root }}/images/suporteprecadastro/pesquisa2.png)
 
 ## Ativar
 
