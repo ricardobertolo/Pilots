@@ -55,8 +55,9 @@ Nessa tela é possivel pesquisar p.Cadastros com bases em 3 tipos de informaçã
 |informação|Descrição|
 |-|-|
 |**Data de criação**|Data que o registro de da loja foi criada na base de P.Cadastro|
-|**Tipo de integração**|Qual o tipo de cadastro será originado|
-|**Plataforma**||
+|**Tipo de integração**|Qual o tipo de cadastro será originado: **Checkout** ou **Api Cielo E-commerce**|
+|**Plataforma**|Plataforma que originou e a qual a loja pertence.|
+
 
 ## Ativar
 
