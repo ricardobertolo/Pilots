@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-31T18:43:09+00:00</updated>
+    <updated>2018-07-31T18:46:42+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -24480,6 +24480,20 @@ Se todas as informações forem válidas, a equipe de credenciamento poderá ati
 &lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/suporteprecadastro/pesquisar2.png&quot; alt=&quot;Pesquisa&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;ativar&quot;&gt;Ativar&lt;/h2&gt;
+
+&lt;p&gt;A Ativação da loja ocorre quando o EC e Chave de produção são inseridos no P.Cadastro, assim como ocorria nas lojas TERRA.&lt;/p&gt;
+
+&lt;p&gt;Acesse os detalhes da loja e vá ao Campo “Ativar”:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/suporteprecadastro/ativar1.png&quot; alt=&quot;Ativar&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dentro do lightbox, insira o EC e Chave de produção&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/suporteprecadastro/ativar2.png&quot; alt=&quot;Ativar&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;ATENÇÃO&lt;/strong&gt;: O Lojista pode enviar o EC e Chave de produção. Esses devem ser validados no SEC antes da Ativação. Os casos descritos no item 3.1 da tabela de ETAPAS devem ser aplicados&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;h1 id=&quot;plataformas&quot;&gt;Plataformas&lt;/h1&gt;
 
