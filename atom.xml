@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-31T18:46:42+00:00</updated>
+    <updated>2018-07-31T19:14:23+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -24448,7 +24448,7 @@ Se todas as informações forem válidas, a equipe de credenciamento poderá ati
 
 &lt;p&gt;A tela de pesquisa será exibida&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/suporteprecadastro/pesquisar.png&quot; alt=&quot;Pesquisa&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/suporteprecadastro/pesquisa.png&quot; alt=&quot;Pesquisa&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Nessa tela é possivel pesquisar P.Cadastros com bases em 3 tipos de informação:&lt;/p&gt;
 
@@ -24477,9 +24477,9 @@ Se todas as informações forem válidas, a equipe de credenciamento poderá ati
 
 &lt;p&gt;A listagem de lojas será exibida. Basta clicar na seta azul para que os detalhes sejam exibidos.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/suporteprecadastro/pesquisar2.png&quot; alt=&quot;Pesquisa&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/suporteprecadastro/pesquisa2.png&quot; alt=&quot;Pesquisa&quot; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;ativar&quot;&gt;Ativar&lt;/h2&gt;
+&lt;h2 id=&quot;ativação-padrão&quot;&gt;Ativação Padrão&lt;/h2&gt;
 
 &lt;p&gt;A Ativação da loja ocorre quando o EC e Chave de produção são inseridos no P.Cadastro, assim como ocorria nas lojas TERRA.&lt;/p&gt;
 
@@ -24497,7 +24497,59 @@ Se todas as informações forem válidas, a equipe de credenciamento poderá ati
 
 &lt;h1 id=&quot;plataformas&quot;&gt;Plataformas&lt;/h1&gt;
 
-&lt;h2 id=&quot;plataformas-integradas&quot;&gt;Plataformas integradas&lt;/h2&gt;
+&lt;h2 id=&quot;criando-plataformas&quot;&gt;Criando Plataformas&lt;/h2&gt;
+
+&lt;p&gt;Existem diferentes plataformas integradas hoje no P.Cadatro.
+Cada plataforma possui um identificador unico chamado PlatformID. Ele vincula as plataformas as lojas, assim criando rastreabilidade da loja e suas transações.&lt;/p&gt;
+
+&lt;p&gt;O PlatformID é um item obrigátorio para a criação de lojas P.Cadastro.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;A criação de PlataformIds é realizada pela equipe de PRODUTOS CIELO. Caso uma plataforma entre em contato requisitando a credencial, um chamado no Zendesk deve ser criado para dar prosseguimento a criação do platformID&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;ativações-especiais&quot;&gt;Ativações Especiais&lt;/h2&gt;
+
+&lt;p&gt;Cada plataforma pode possuir fluxos de ativação diferentes.
+O HD Cielo deve seguir os padrões definidos a seguir para ativar as lojas.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Plataforma&lt;/th&gt;
+      &lt;th&gt;Ativação&lt;/th&gt;
+      &lt;th&gt;Tipo de loja&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;TimeCielo&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Ignorar - Conta criada para testes&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;3.0 e Checkout&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Vindi&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Fluxo padrão de ativação descrito nos itens anteriores deste manual&lt;/td&gt;
+      &lt;td&gt;3.0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;XTECH&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Fluxo fluxo personalizado&lt;/strong&gt;. Descrito adiante&lt;/td&gt;
+      &lt;td&gt;3.0&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;xtech&quot;&gt;XTECH&lt;/h3&gt;
+
+&lt;p&gt;A Xtech usa a API de P.Cadastro para criar lojas 3.0, sendo o diferencial a existencia de “Planos” como no caso do Checkout.
+Como a 3.0 ainda não possui o conceito de Planos, o HD precisra vincular manualmente o valor dos planos as lojas 3.0&lt;/p&gt;
+
+&lt;p&gt;A vinculação ocorre nas seguintes etapas:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt; - &lt;strong&gt;Ativação da loja&lt;/strong&gt; - Segue o padrão definido no item “&lt;strong&gt;Ativação Padrão&lt;/strong&gt;” 
+&lt;strong&gt;2&lt;/strong&gt; - &lt;strong&gt;Identificação do plano&lt;/strong&gt; - O HD deve visualizar o nome do &lt;strong&gt;Plano&lt;/strong&gt; descrito no Campo &lt;strong&gt;“Nome do contato Tecnico”&lt;/strong&gt;
+&lt;strong&gt;3&lt;/strong&gt; - &lt;strong&gt;Vinculação do plano&lt;/strong&gt;&lt;/p&gt;
 </content>
     </entry>
     

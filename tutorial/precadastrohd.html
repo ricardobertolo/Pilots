@@ -185,7 +185,7 @@ Se todas as informações forem válidas, a equipe de credenciamento poderá ati
 
 <p>A tela de pesquisa será exibida</p>
 
-<p><img src="https://docscielo.github.io/Pilots/images/suporteprecadastro/pesquisar.png" alt="Pesquisa" /></p>
+<p><img src="https://docscielo.github.io/Pilots/images/suporteprecadastro/pesquisa.png" alt="Pesquisa" /></p>
 
 <p>Nessa tela é possivel pesquisar P.Cadastros com bases em 3 tipos de informação:</p>
 
@@ -214,9 +214,9 @@ Se todas as informações forem válidas, a equipe de credenciamento poderá ati
 
 <p>A listagem de lojas será exibida. Basta clicar na seta azul para que os detalhes sejam exibidos.</p>
 
-<p><img src="https://docscielo.github.io/Pilots/images/suporteprecadastro/pesquisar2.png" alt="Pesquisa" /></p>
+<p><img src="https://docscielo.github.io/Pilots/images/suporteprecadastro/pesquisa2.png" alt="Pesquisa" /></p>
 
-<h2 id="ativar">Ativar</h2>
+<h2 id="ativação-padrão">Ativação Padrão</h2>
 
 <p>A Ativação da loja ocorre quando o EC e Chave de produção são inseridos no P.Cadastro, assim como ocorria nas lojas TERRA.</p>
 
@@ -234,7 +234,59 @@ Se todas as informações forem válidas, a equipe de credenciamento poderá ati
 
 <h1 id="plataformas">Plataformas</h1>
 
-<h2 id="plataformas-integradas">Plataformas integradas</h2>
+<h2 id="criando-plataformas">Criando Plataformas</h2>
+
+<p>Existem diferentes plataformas integradas hoje no P.Cadatro.
+Cada plataforma possui um identificador unico chamado PlatformID. Ele vincula as plataformas as lojas, assim criando rastreabilidade da loja e suas transações.</p>
+
+<p>O PlatformID é um item obrigátorio para a criação de lojas P.Cadastro.</p>
+
+<blockquote>
+  <p><strong>A criação de PlataformIds é realizada pela equipe de PRODUTOS CIELO. Caso uma plataforma entre em contato requisitando a credencial, um chamado no Zendesk deve ser criado para dar prosseguimento a criação do platformID</strong></p>
+</blockquote>
+
+<h2 id="ativações-especiais">Ativações Especiais</h2>
+
+<p>Cada plataforma pode possuir fluxos de ativação diferentes.
+O HD Cielo deve seguir os padrões definidos a seguir para ativar as lojas.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Plataforma</th>
+      <th>Ativação</th>
+      <th>Tipo de loja</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>TimeCielo</strong></td>
+      <td><strong>Ignorar - Conta criada para testes</strong></td>
+      <td>3.0 e Checkout</td>
+    </tr>
+    <tr>
+      <td><strong>Vindi</strong></td>
+      <td>Fluxo padrão de ativação descrito nos itens anteriores deste manual</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <td><strong>XTECH</strong></td>
+      <td><strong>Fluxo fluxo personalizado</strong>. Descrito adiante</td>
+      <td>3.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="xtech">XTECH</h3>
+
+<p>A Xtech usa a API de P.Cadastro para criar lojas 3.0, sendo o diferencial a existencia de “Planos” como no caso do Checkout.
+Como a 3.0 ainda não possui o conceito de Planos, o HD precisra vincular manualmente o valor dos planos as lojas 3.0</p>
+
+<p>A vinculação ocorre nas seguintes etapas:</p>
+
+<p><strong>1</strong> - <strong>Ativação da loja</strong> - Segue o padrão definido no item “<strong>Ativação Padrão</strong>” 
+<strong>2</strong> - <strong>Identificação do plano</strong> - O HD deve visualizar o nome do <strong>Plano</strong> descrito no Campo <strong>“Nome do contato Tecnico”</strong>
+<strong>3</strong> - <strong>Vinculação do plano</strong></p>
 
 </div>
 
