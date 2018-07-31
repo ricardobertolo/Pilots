@@ -68,6 +68,18 @@ A listagem de lojas será exibida. Basta clicar na seta azul para que os detalhe
 
 ## Ativar
 
+A Ativação da loja ocorre quando o EC e Chave de produção são inseridos no P.Cadastro, assim como ocorria nas lojas TERRA.
+
+Acesse os detalhes da loja e vá ao Campo "Ativar":
+
+![Ativar]({{ site.baseurl_root }}/images/suporteprecadastro/ativar1.png)
+
+Dentro do lightbox, insira o EC e Chave de produção
+
+![Ativar]({{ site.baseurl_root }}/images/suporteprecadastro/ativar2.png)
+
+> **ATENÇÃO**: O Lojista pode enviar o EC e Chave de produção. Esses devem ser validados no SEC antes da Ativação. Os casos descritos no item 3.1 da tabela de ETAPAS devem ser aplicados
+
 # Plataformas
 
 ## Plataformas integradas
