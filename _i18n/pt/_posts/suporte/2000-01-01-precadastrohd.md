@@ -46,11 +46,15 @@ Em si o Pré-cadastro funciona seguinto as etapas abaixo:
 
 ## Pesquisar
 
-Para pesquisar uma loja Pré-cadastro, basta acessar a tela de pesquisa dentro da área Cielo no Admin.
+Para pesquisar uma loja Pré-cadastro, basta acessar a tela de pesquisa dentro da área Cielo no Admin:
 
-![Pesquisa]({{ site.baseurl_root }}/images/zendesk/03.png)
+![Menu]({{ site.baseurl_root }}/images/suporteprecadastro/menu.png)
 
-Nessa tela é possivel pesquisar p.Cadastros com bases em 3 tipos de informação:
+A tela de pesquisa será exibida
+
+![Pesquisa]({{ site.baseurl_root }}/images/suporteprecadastro/pesquisar.png)
+
+Nessa tela é possivel pesquisar P.Cadastros com bases em 3 tipos de informação:
 
 |informação|Descrição|
 |-|-|
@@ -58,6 +62,9 @@ Nessa tela é possivel pesquisar p.Cadastros com bases em 3 tipos de informaçã
 |**Tipo de integração**|Qual o tipo de cadastro será originado: **Checkout** ou **Api Cielo E-commerce**|
 |**Plataforma**|Plataforma que originou e a qual a loja pertence.|
 
+A listagem de lojas será exibida. Basta clicar na seta azul para que os detalhes sejam exibidos.
+
+![Pesquisa]({{ site.baseurl_root }}/images/suporteprecadastro/pesquisar2.png)
 
 ## Ativar
 
