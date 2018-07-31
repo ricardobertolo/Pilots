@@ -125,11 +125,10 @@ A Xtech possui 3 planos diferentes
 * Plus
 * Max
 
-Cada plano tem valores diferentes para Boleto e AF. Para vincula-los a loja, o HD deverá:
+Cada plano tem valores diferentes para Boleto e AF.
+Para vincula-los a loja, o HD deverá acessar a área de **"Tabela de Preço"** 
 
-O HD deverá acessar a área de **"Tabela de Preço"** 
-
-IMAGEM
+![Xtech]({{ site.baseurl_root }}/images/suporteprecadastro/xtech1.png)
 
 Selecionar os campos 
 
@@ -138,4 +137,23 @@ Selecionar os campos
 |**Serviço**| **Boleto** ou **AF**|
 |**TIPO**|**Especifica**|
 
-IMAGEM
+![Xtech]({{ site.baseurl_root }}/images/suporteprecadastro/xtech2.png)
+
+Clicar na tabala exibida
+
+![Xtech]({{ site.baseurl_root }}/images/suporteprecadastro/xtech3.png)
+
+Existirão 6 tabelas, 2 para cada plano:
+
+|Plano|Boleto|AF-SemBPO|
+|-|-|-|
+|**Start**|STARTXtechBoleto|STARTXtechAF|
+|**Plus**|PLUSXtechBoleto|PLUSXtechAF|
+|**Max**|MAXXtechBoleto|MAXXtechAF|
+
+Dentro de cada tabela, o HD deverá incluir o MID 3.0 criado para a loja.
+
+![Xtech]({{ site.baseurl_root }}/images/suporteprecadastro/xtech4.png)
+
+1. Clicar em "Editar"
+2. Adicionar o MID 3.0 da loja no campo **Loja**
