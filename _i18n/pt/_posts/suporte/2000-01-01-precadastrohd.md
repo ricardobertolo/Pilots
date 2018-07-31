@@ -113,7 +113,7 @@ A vinculação ocorre nas seguintes etapas:
 
 Segue o padrão definido no item "**Ativação Padrão**" 
 
-### Identificação do plano
+#### Identificação do plano
 
 O HD deve visualizar o nome do **Plano** descrito no Campo **"Nome do contato Tecnico"**
 
