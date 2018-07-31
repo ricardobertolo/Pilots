@@ -66,7 +66,7 @@ A listagem de lojas será exibida. Basta clicar na seta azul para que os detalhe
 
 ![Pesquisa]({{ site.baseurl_root }}/images/suporteprecadastro/pesquisa2.png)
 
-## Ativar
+## Ativação Padrão
 
 A Ativação da loja ocorre quando o EC e Chave de produção são inseridos no P.Cadastro, assim como ocorria nas lojas TERRA.
 
@@ -82,4 +82,33 @@ Dentro do lightbox, insira o EC e Chave de produção
 
 # Plataformas
 
-## Plataformas integradas
+## Criando Plataformas
+
+Existem diferentes plataformas integradas hoje no P.Cadatro.
+Cada plataforma possui um identificador unico chamado PlatformID. Ele vincula as plataformas as lojas, assim criando rastreabilidade da loja e suas transações.
+
+O PlatformID é um item obrigátorio para a criação de lojas P.Cadastro.
+
+> **A criação de PlataformIds é realizada pela equipe de PRODUTOS CIELO. Caso uma plataforma entre em contato requisitando a credencial, um chamado no Zendesk deve ser criado para dar prosseguimento a criação do platformID**
+
+## Ativações Especiais
+
+Cada plataforma pode possuir fluxos de ativação diferentes.
+O HD Cielo deve seguir os padrões definidos a seguir para ativar as lojas.
+
+|Plataforma|Ativação|Tipo de loja|
+|----------|--------|------------|
+|**TimeCielo**|**Ignorar - Conta criada para testes**|3.0 e Checkout|
+|**Vindi**|Fluxo padrão de ativação descrito nos itens anteriores deste manual|3.0|
+|**XTECH**|**Fluxo fluxo personalizado**. Descrito adiante|3.0|
+
+### XTECH
+
+A Xtech usa a API de P.Cadastro para criar lojas 3.0, sendo o diferencial a existencia de "Planos" como no caso do Checkout.
+Como a 3.0 ainda não possui o conceito de Planos, o HD precisra vincular manualmente o valor dos planos as lojas 3.0
+
+A vinculação ocorre nas seguintes etapas:
+
+**1** - **Ativação da loja** - Segue o padrão definido no item "**Ativação Padrão**" 
+**2** - **Identificação do plano** - O HD deve visualizar o nome do **Plano** descrito no Campo **"Nome do contato Tecnico"**
+**3** - **Vinculação do plano**
