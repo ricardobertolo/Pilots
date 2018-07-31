@@ -117,7 +117,7 @@ Segue o padrão definido no item "**Ativação Padrão**"
 
 O HD deve visualizar o nome do **Plano** descrito no Campo **"Nome do contato Tecnico"**
 
-### **Vinculação do plano** 
+### **Vinculação do plano**
 
 A Xtech possui 3 planos diferentes
 
@@ -139,13 +139,3 @@ Selecionar os campos
 |**TIPO**|**Especifica**|
 
 IMAGEM
-
-
-
-###
-
-
-
-
-
-
