@@ -109,6 +109,43 @@ Como a 3.0 ainda não possui o conceito de Planos, o HD precisra vincular manual
 
 A vinculação ocorre nas seguintes etapas:
 
-**1** - **Ativação da loja** - Segue o padrão definido no item "**Ativação Padrão**" 
-**2** - **Identificação do plano** - O HD deve visualizar o nome do **Plano** descrito no Campo **"Nome do contato Tecnico"**
-**3** - **Vinculação do plano**
+### Ativação da loja
+
+Segue o padrão definido no item "**Ativação Padrão**" 
+
+### Identificação do plano
+
+O HD deve visualizar o nome do **Plano** descrito no Campo **"Nome do contato Tecnico"**
+
+### **Vinculação do plano** 
+
+A Xtech possui 3 planos diferentes
+
+* Start
+* Plus
+* Max
+
+Cada plano tem valores diferentes para Boleto e AF. Para vincula-los a loja, o HD deverá:
+
+O HD deverá acessar a área de **"Tabela de Preço"** 
+
+IMAGEM
+
+Selecionar os campos 
+
+|Campos|Descrição|
+|:-----:|---------------------|
+|**Serviço**| **Boleto** ou **AF**|
+|**TIPO**|**Especifica**|
+
+IMAGEM
+
+
+
+###
+
+
+
+
+
+
