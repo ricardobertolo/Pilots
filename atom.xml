@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-31T21:01:00+00:00</updated>
+    <updated>2018-07-31T21:10:13+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -24551,7 +24551,7 @@ Como a 3.0 ainda não possui o conceito de Planos, o HD precisra vincular manual
 
 &lt;p&gt;Segue o padrão definido no item “&lt;strong&gt;Ativação Padrão&lt;/strong&gt;”&lt;/p&gt;
 
-&lt;h3 id=&quot;identificação-do-plano&quot;&gt;Identificação do plano&lt;/h3&gt;
+&lt;h4 id=&quot;identificação-do-plano&quot;&gt;Identificação do plano&lt;/h4&gt;
 
 &lt;p&gt;O HD deve visualizar o nome do &lt;strong&gt;Plano&lt;/strong&gt; descrito no Campo &lt;strong&gt;“Nome do contato Tecnico”&lt;/strong&gt;&lt;/p&gt;
 
