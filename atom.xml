@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-30T21:08:25+00:00</updated>
+    <updated>2018-07-31T18:37:11+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -24462,11 +24462,11 @@ Se todas as informações forem válidas, a equipe de credenciamento poderá ati
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;strong&gt;Tipo de integração&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;Qual o tipo de cadastro será originado&lt;/td&gt;
+      &lt;td&gt;Qual o tipo de cadastro será originado: &lt;strong&gt;Checkout&lt;/strong&gt; ou &lt;strong&gt;Api Cielo E-commerce&lt;/strong&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;strong&gt;Plataforma&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Plataforma que originou e a qual a loja pertence.&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
