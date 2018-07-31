@@ -109,7 +109,7 @@ Como a 3.0 ainda não possui o conceito de Planos, o HD precisra vincular manual
 
 A vinculação ocorre nas seguintes etapas:
 
-### Ativação da loja
+#### Ativação da loja
 
 Segue o padrão definido no item "**Ativação Padrão**" 
 
@@ -117,7 +117,7 @@ Segue o padrão definido no item "**Ativação Padrão**"
 
 O HD deve visualizar o nome do **Plano** descrito no Campo **"Nome do contato Tecnico"**
 
-### **Vinculação do plano**
+#### **Vinculação do plano**
 
 A Xtech possui 3 planos diferentes
 
