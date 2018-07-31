@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-31T18:38:25+00:00</updated>
+    <updated>2018-07-31T18:43:09+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -24442,11 +24442,15 @@ Se todas as informações forem válidas, a equipe de credenciamento poderá ati
 
 &lt;h2 id=&quot;pesquisar&quot;&gt;Pesquisar&lt;/h2&gt;
 
-&lt;p&gt;Para pesquisar uma loja Pré-cadastro, basta acessar a tela de pesquisa dentro da área Cielo no Admin.&lt;/p&gt;
+&lt;p&gt;Para pesquisar uma loja Pré-cadastro, basta acessar a tela de pesquisa dentro da área Cielo no Admin:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/zendesk/03.png&quot; alt=&quot;Pesquisa&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/suporteprecadastro/menu.png&quot; alt=&quot;Menu&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Nessa tela é possivel pesquisar p.Cadastros com bases em 3 tipos de informação:&lt;/p&gt;
+&lt;p&gt;A tela de pesquisa será exibida&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/suporteprecadastro/pesquisar.png&quot; alt=&quot;Pesquisa&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nessa tela é possivel pesquisar P.Cadastros com bases em 3 tipos de informação:&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -24470,6 +24474,10 @@ Se todas as informações forem válidas, a equipe de credenciamento poderá ati
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;p&gt;A listagem de lojas será exibida. Basta clicar na seta azul para que os detalhes sejam exibidos.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://docscielo.github.io/Pilots/images/suporteprecadastro/pesquisar2.png&quot; alt=&quot;Pesquisa&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;ativar&quot;&gt;Ativar&lt;/h2&gt;
 
