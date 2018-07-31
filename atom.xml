@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-31T20:38:40+00:00</updated>
+    <updated>2018-07-31T20:40:38+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -24547,7 +24547,7 @@ Como a 3.0 ainda não possui o conceito de Planos, o HD precisra vincular manual
 
 &lt;p&gt;A vinculação ocorre nas seguintes etapas:&lt;/p&gt;
 
-&lt;h3 id=&quot;ativação-da-loja&quot;&gt;Ativação da loja&lt;/h3&gt;
+&lt;h4 id=&quot;ativação-da-loja&quot;&gt;Ativação da loja&lt;/h4&gt;
 
 &lt;p&gt;Segue o padrão definido no item “&lt;strong&gt;Ativação Padrão&lt;/strong&gt;”&lt;/p&gt;
 
@@ -24555,7 +24555,7 @@ Como a 3.0 ainda não possui o conceito de Planos, o HD precisra vincular manual
 
 &lt;p&gt;O HD deve visualizar o nome do &lt;strong&gt;Plano&lt;/strong&gt; descrito no Campo &lt;strong&gt;“Nome do contato Tecnico”&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;vinculação-do-plano&quot;&gt;&lt;strong&gt;Vinculação do plano&lt;/strong&gt;&lt;/h3&gt;
+&lt;h4 id=&quot;vinculação-do-plano&quot;&gt;&lt;strong&gt;Vinculação do plano&lt;/strong&gt;&lt;/h4&gt;
 
 &lt;p&gt;A Xtech possui 3 planos diferentes&lt;/p&gt;
 
