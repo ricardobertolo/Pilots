@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-07-31T19:14:23+00:00</updated>
+    <updated>2018-07-31T19:49:09+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -24547,9 +24547,55 @@ Como a 3.0 ainda não possui o conceito de Planos, o HD precisra vincular manual
 
 &lt;p&gt;A vinculação ocorre nas seguintes etapas:&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt; - &lt;strong&gt;Ativação da loja&lt;/strong&gt; - Segue o padrão definido no item “&lt;strong&gt;Ativação Padrão&lt;/strong&gt;” 
-&lt;strong&gt;2&lt;/strong&gt; - &lt;strong&gt;Identificação do plano&lt;/strong&gt; - O HD deve visualizar o nome do &lt;strong&gt;Plano&lt;/strong&gt; descrito no Campo &lt;strong&gt;“Nome do contato Tecnico”&lt;/strong&gt;
-&lt;strong&gt;3&lt;/strong&gt; - &lt;strong&gt;Vinculação do plano&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;ativação-da-loja&quot;&gt;Ativação da loja&lt;/h3&gt;
+
+&lt;p&gt;Segue o padrão definido no item “&lt;strong&gt;Ativação Padrão&lt;/strong&gt;”&lt;/p&gt;
+
+&lt;h3 id=&quot;identificação-do-plano&quot;&gt;Identificação do plano&lt;/h3&gt;
+
+&lt;p&gt;O HD deve visualizar o nome do &lt;strong&gt;Plano&lt;/strong&gt; descrito no Campo &lt;strong&gt;“Nome do contato Tecnico”&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;vinculação-do-plano&quot;&gt;&lt;strong&gt;Vinculação do plano&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;A Xtech possui 3 planos diferentes&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Start&lt;/li&gt;
+  &lt;li&gt;Plus&lt;/li&gt;
+  &lt;li&gt;Max&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Cada plano tem valores diferentes para Boleto e AF. Para vincula-los a loja, o HD deverá:&lt;/p&gt;
+
+&lt;p&gt;O HD deverá acessar a área de &lt;strong&gt;“Tabela de Preço”&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;IMAGEM&lt;/p&gt;
+
+&lt;p&gt;Selecionar os campos&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Campos&lt;/th&gt;
+      &lt;th&gt;Descrição&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Serviço&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Boleto&lt;/strong&gt; ou &lt;strong&gt;AF&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;TIPO&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Especifica&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;IMAGEM&lt;/p&gt;
+
+&lt;p&gt;###&lt;/p&gt;
+
 </content>
     </entry>
     
