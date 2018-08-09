@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-08-06T13:18:34+00:00</updated>
+    <updated>2018-08-09T19:12:51+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -27905,7 +27905,7 @@ O response possuirá o &lt;code class=&quot;highlighter-rouge&quot;&gt;Checkout_
 
 &lt;p&gt;O Request dever ser enviado apenas no Header da requisição.&lt;/p&gt;
 
-&lt;aside class=&quot;request&quot;&gt;&lt;span class=&quot;method post&quot;&gt;POST&lt;/span&gt;&lt;span class=&quot;endpoint&quot;&gt;https://cieloecommerce.cielo.com.br/v2/public/v2/token&lt;/span&gt;&lt;/aside&gt;
+&lt;aside class=&quot;request&quot;&gt;&lt;span class=&quot;method post&quot;&gt;POST&lt;/span&gt;&lt;span class=&quot;endpoint&quot;&gt;https://cieloecommerce.cielo.com.br/api/public/v2/token&lt;/span&gt;&lt;/aside&gt;
 
 &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;x-www-form-urlencoded&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;--header&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Authorization: Basic {base64}&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
