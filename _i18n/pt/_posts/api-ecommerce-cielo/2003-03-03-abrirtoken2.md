@@ -21,6 +21,11 @@ Para consultar uma cartão aberto via API 3.0, é necessario realizar um `GET` u
 
 ## Request 
 
+|Header          |Descrição                                                                          |
+|----------------|-----------------------------------------------------------------------------------|
+|`MerchantId`    |Identificador do estabelecimento, fornecido no momento do credenciamento.          |
+|`MerchantKey`   |Chave do estabelecimento, fornecida no momento do credenciamento.                  |
+
 <aside class="request"><span class="method get">GET</span> <span class="endpoint">https://apiquery.cieloecommerce.cielo.com.br/1/card/{token}?masked=false</span></aside> 
 
 ## Response
