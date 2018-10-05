@@ -17,7 +17,7 @@ language_tabs:
 
 Para consultar uma cartão aberto via API 3.0, é necessario realizar um `GET` utilizando o endpoint abaixo:
 
-> Para utilizar esta funcionalidade é necessario que a loja possua uma permissão especial concedida pelo time de Produtos Cielo.
+> Para utilizar esta funcionalidade é necessario que a loja possua uma permissão especial concedida pelo time de Produtos Cielo..
 
 ## Request 
 
