@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-09-17T21:41:28+00:00</updated>
+    <updated>2018-10-05T19:51:00+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -24986,7 +24986,7 @@ Existem 3 tipos de configurações de analise de fraude disponiveis:&lt;/p&gt;
 &lt;p&gt;Para consultar uma cartão aberto via API 3.0, é necessario realizar um &lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; utilizando o endpoint abaixo:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Para utilizar esta funcionalidade é necessario que a loja possua uma permissão especial concedida pelo time de Produtos Cielo.&lt;/p&gt;
+  &lt;p&gt;Para utilizar esta funcionalidade é necessario que a loja possua uma permissão especial concedida pelo time de Produtos Cielo..&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;request&quot;&gt;Request&lt;/h2&gt;
