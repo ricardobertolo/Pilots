@@ -96,7 +96,7 @@ The string obtained will be similar as follows:
 }
 ```
 
-| **Parâmetro** | **Type** | **Descrição** |
+| **Body** | **Type** | **Description** |
 | --- | --- | --- |
 | encryptedMessage | string | Base64-encoded encrypted message containing payment information and some additional security fields. |
 | ephemeralPublicKey | string | Base64-encoded ephemeral public key associated with the private key to encrypt the message in uncompressed point format. |
@@ -132,7 +132,12 @@ The authorization with the Google Pay token must be performed as the same way as
 }
 ```
 
-| **Parâmetro** | **Type** | **Descrição** |
+| **Header** | **Type** | **Description** |
+| --- | --- | --- |
+| MerchantID | GUID(36) | ID do estabelecimento na Cielo 3.0. Para ambiente Sandbox, utilize fecd2b61-3f0e-4e49-8b4f-eb382fa4da56 |
+| MerchantKey | String(24) | Chave da API para Cielo 3.0. Para ambiente Sandbox, utilize WSCIKUJBVHFPPPAWFPJGRYXRDNGQTMZAGBJSZZBV |
+
+| **Body** | **Type** | **Description** |
 | --- | --- | --- |
 | MerchantOrderId | String (50) | Order identification number |
 | Customer | Node with shopper data| See [https://developercielo.github.io/manual/cielo-ecommerce#transa%C3%A7%C3%A3o-completa](https://developercielo.github.io/manual/cielo-ecommerce#transa%C3%A7%C3%A3o-completa)   |
