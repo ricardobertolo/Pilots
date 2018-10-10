@@ -6,7 +6,7 @@ search: true
 translated: true
 categories: manual
 tags:
-  - Google Pay
+  - E-Wallet
 language_tabs:
   json: JSON
 ---
