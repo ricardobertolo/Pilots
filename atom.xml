@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-10-10T21:57:39+00:00</updated>
+    <updated>2018-10-10T22:35:42+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -160,7 +160,29 @@
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th&gt;&lt;strong&gt;Parâmetro&lt;/strong&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;Parâmetros do Header&lt;/strong&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;Type&lt;/strong&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;Descrição&lt;/strong&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;MerchantID&lt;/td&gt;
+      &lt;td&gt;GUID(36)&lt;/td&gt;
+      &lt;td&gt;ID do estabelecimento na Cielo 3.0. Para ambiente Sandbox, utilize fecd2b61-3f0e-4e49-8b4f-eb382fa4da56&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;MerchantKey&lt;/td&gt;
+      &lt;td&gt;String(24)&lt;/td&gt;
+      &lt;td&gt;Chave da API para Cielo 3.0. Para ambiente Sandbox, utilize WSCIKUJBVHFPPPAWFPJGRYXRDNGQTMZAGBJSZZBV&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&lt;strong&gt;Parâmetros do Body&lt;/strong&gt;&lt;/th&gt;
       &lt;th&gt;&lt;strong&gt;Type&lt;/strong&gt;&lt;/th&gt;
       &lt;th&gt;&lt;strong&gt;Descrição&lt;/strong&gt;&lt;/th&gt;
     &lt;/tr&gt;
