@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/en/"/>
     <logo>https://docscielo.github.io/Pilots/en/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/en/assets/favicon.ico</icon>
-    <updated>2018-10-11T17:15:37+00:00</updated>
+    <updated>2018-10-11T17:16:40+00:00</updated>
     <id>https://docscielo.github.io/Pilots/en/</id>
     <author>
         <name>João Batista Neto</name>
@@ -169,12 +169,12 @@
     &lt;tr&gt;
       &lt;td&gt;MerchantID&lt;/td&gt;
       &lt;td&gt;GUID(36)&lt;/td&gt;
-      &lt;td&gt;ID do estabelecimento na Cielo 3.0. Para ambiente Sandbox, utilize fecd2b61-3f0e-4e49-8b4f-eb382fa4da56&lt;/td&gt;
+      &lt;td&gt;Merchant’s merchant ID. For Sandbox environment, use fecd2b61-3f0e-4e49-8b4f-eb382fa4da56&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;MerchantKey&lt;/td&gt;
       &lt;td&gt;String(24)&lt;/td&gt;
-      &lt;td&gt;Chave da API para Cielo 3.0. Para ambiente Sandbox, utilize WSCIKUJBVHFPPPAWFPJGRYXRDNGQTMZAGBJSZZBV&lt;/td&gt;
+      &lt;td&gt;Merchant’s merchant API Key. For Sandbox environment, use WSCIKUJBVHFPPPAWFPJGRYXRDNGQTMZAGBJSZZBV&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
