@@ -134,6 +134,11 @@ The authorization with the Google Pay token must be performed as the same way as
 }
 ```
 
+| **Header** | **Type** | **Description** |
+| --- | --- | --- |
+| MerchantID | GUID(36) | Merchant's merchant ID. For Sandbox environment, use 63D6ACCB-2734-4236-AB5D-843A9DAC44C7 |
+| MerchantKey | String(24) | Merchant's merchant API Key. For Sandbox environment, use  ZCVHDJWKTGOZXADDYJFURIDIKHEMRYQAQDYEJMQK|
+
 | **Parâmetro** | **Type** | **Descrição** |
 | --- | --- | --- |
 | MerchantOrderId | String (50) | Order identification number |
