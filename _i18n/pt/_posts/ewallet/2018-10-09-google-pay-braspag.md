@@ -134,6 +134,11 @@ A autorização com o token do Google Pay acontece da mesma forma que uma autori
 }
 ```
 
+| **Parâmetros do Header** | **Type** | **Descrição** |
+| --- | --- | --- |
+| MerchantID | GUID(36) | ID do estabelecimento na Cielo 3.0. Para ambiente Sandbox, utilize 63D6ACCB-2734-4236-AB5D-843A9DAC44C7 |
+| MerchantKey | String(24) | Chave da API para Cielo 3.0. Para ambiente Sandbox, utilize ZCVHDJWKTGOZXADDYJFURIDIKHEMRYQAQDYEJMQK|
+
 | **Parâmetro** | **Type** | **Descrição** |
 | --- | --- | --- |
 | MerchantOrderId | String (50) | Número de identificação do Pedido |
