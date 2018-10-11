@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-10-11T17:17:18+00:00</updated>
+    <updated>2018-10-11T21:15:27+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -18,7 +18,7 @@
         <link href="https://docscielo.github.io/Pilots/manual/google-pay"/>
         <updated>2018-10-09T00:00:00+00:00</updated>
         <id>https://docscielo.github.io/Pilots/manual/google-pay</id>
-        <content type="html">&lt;h1 id=&quot;google-pay&quot;&gt;Google Pay&lt;/h1&gt;
+        <content type="html">&lt;h1 id=&quot;google-pay-&quot;&gt;Google Pay ™&lt;/h1&gt;
 
 &lt;p&gt;Google Pay é uma carteira virtual. Ele permite que os compradores realizem pagamentos em lojas virtuais e apps utilizando de forma prática e segura, seus cartões de crédito e débito armazenados em suas contas “Google Account” e dispositivos Android.&lt;/p&gt;
 
@@ -58,7 +58,7 @@
 
 &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;private&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;static&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;JSONObject&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;getTokenizationSpecification()&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;JSONObject&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;tokenizationSpecification&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;JSONObject();&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;tokenizationSpecification.put(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;PAYMENT&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\_&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;GATEWAY&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;tokenizationSpecification.put(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;PAYMENT_GATEWAY&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;tokenizationSpecification.put(&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
       &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;parameters&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
       &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;JSONObject()&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -236,6 +236,16 @@
 &lt;h2 id=&quot;response&quot;&gt;Response&lt;/h2&gt;
 
 &lt;p&gt;Vide &lt;a href=&quot;https://developercielo.github.io/manual/cielo-ecommerce#resposta&quot;&gt;https://developercielo.github.io/manual/cielo-ecommerce#resposta&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;etapa-3-solicitação-de-dados-de-produção&quot;&gt;Etapa 3: Solicitação de dados de produção&lt;/h1&gt;
+
+&lt;h2 id=&quot;passo-1---branding-guideline&quot;&gt;Passo 1 - Branding Guideline&lt;/h2&gt;
+
+&lt;p&gt;Verifique se todas as diretrizes de branding foram seguidas conforme o link: &lt;a href=&quot;https://developers.google.com/pay/api/android/guides/brand-guidelines&quot;&gt;https://developers.google.com/pay/api/android/guides/brand-guidelines&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;passo-2---checklist-e-solicitação-de-credenciais-de-produção&quot;&gt;Passo 2 - Checklist e solicitação de credenciais de produção&lt;/h2&gt;
+
+&lt;p&gt;Verifique se todos os itens do checklist foram atendidos. Quando estiver tudo validado, solicite os dados de acesso produtivos. O checklist está disponível em: &lt;a href=&quot;https://developers.google.com/pay/api/android/guides/test-and-deploy/integration-checklist&quot;&gt;https://developers.google.com/pay/api/android/guides/test-and-deploy/integration-checklist&lt;/a&gt;&lt;/p&gt;
 </content>
     </entry>
     
