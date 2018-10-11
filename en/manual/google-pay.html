@@ -127,7 +127,7 @@
             </div>
 
             <div class="post">
-  <h1 id="google-pay">Google Pay</h1>
+  <h1 id="google-pay-">Google Pay ™</h1>
 
 <p>Google Pay is a e-wallet. It allows shoppers to make payments in e-commerce stores and apps using their credit and debit cards stored in their Google Account and Android devices in a safe and easy way.</p>
 
@@ -167,7 +167,7 @@
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">private</span><span class="w"> </span><span class="err">static</span><span class="w"> </span><span class="err">JSONObject</span><span class="w"> </span><span class="err">getTokenizationSpecification()</span><span class="w"> </span><span class="p">{</span><span class="w">
   </span><span class="err">JSONObject</span><span class="w"> </span><span class="err">tokenizationSpecification</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">new</span><span class="w"> </span><span class="err">JSONObject();</span><span class="w">
-  </span><span class="err">tokenizationSpecification.put(</span><span class="s2">"type"</span><span class="p">,</span><span class="w"> </span><span class="s2">"PAYMENT</span><span class="se">\_</span><span class="s2">GATEWAY"</span><span class="err">);</span><span class="w">
+  </span><span class="err">tokenizationSpecification.put(</span><span class="s2">"type"</span><span class="p">,</span><span class="w"> </span><span class="s2">"PAYMENT_GATEWAY"</span><span class="err">);</span><span class="w">
   </span><span class="err">tokenizationSpecification.put(</span><span class="w">
       </span><span class="s2">"parameters"</span><span class="p">,</span><span class="w">
       </span><span class="err">new</span><span class="w"> </span><span class="err">JSONObject()</span><span class="w">
@@ -345,6 +345,16 @@
 <h2 id="response">Response</h2>
 
 <p>Vide <a href="https://developercielo.github.io/manual/cielo-ecommerce#resposta">https://developercielo.github.io/manual/cielo-ecommerce#resposta</a></p>
+
+<h1 id="step-3-solicitação-de-dados-de-produção">Step 3: Solicitação de dados de produção</h1>
+
+<h2 id="action-1---branding-guideline">Action 1 - Branding Guideline</h2>
+
+<p>Check the all the branding guidelines to help you implement Google Pay within your apps. The guideline is available at: <a href="https://developers.google.com/pay/api/android/guides/brand-guidelines">https://developers.google.com/pay/api/android/guides/brand-guidelines</a></p>
+
+<h2 id="action-2---checklist-and-request-production-access">Action 2 - Checklist and Request production access</h2>
+
+<p>Ensure if all the checklist item was completed. When you are ready, request the production access to deploy your app in production environment. The checklist is available at: <a href="https://developers.google.com/pay/api/android/guides/test-and-deploy/integration-checklist">https://developers.google.com/pay/api/android/guides/test-and-deploy/integration-checklist</a></p>
 
 </div>
 
