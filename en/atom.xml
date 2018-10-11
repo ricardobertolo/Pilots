@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/en/"/>
     <logo>https://docscielo.github.io/Pilots/en/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/en/assets/favicon.ico</icon>
-    <updated>2018-10-11T17:16:40+00:00</updated>
+    <updated>2018-10-11T17:17:23+00:00</updated>
     <id>https://docscielo.github.io/Pilots/en/</id>
     <author>
         <name>João Batista Neto</name>
@@ -385,6 +385,28 @@
   &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&lt;strong&gt;Header&lt;/strong&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;Type&lt;/strong&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;MerchantID&lt;/td&gt;
+      &lt;td&gt;GUID(36)&lt;/td&gt;
+      &lt;td&gt;Merchant’s merchant ID. For Sandbox environment, use 63D6ACCB-2734-4236-AB5D-843A9DAC44C7&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;MerchantKey&lt;/td&gt;
+      &lt;td&gt;String(24)&lt;/td&gt;
+      &lt;td&gt;Merchant’s merchant API Key. For Sandbox environment, use  ZCVHDJWKTGOZXADDYJFURIDIKHEMRYQAQDYEJMQK&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
