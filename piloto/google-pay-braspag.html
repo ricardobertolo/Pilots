@@ -12,7 +12,7 @@
 
     <title>
         
-        Manual de integração Google Pay &middot; Documentações e tutoriais
+        Manual de integração Google Pay via Braspag &middot; Documentações e tutoriais
         
     </title>
 
@@ -26,11 +26,11 @@
 
     
         
-            <link rel="alternate" hreflang="pt" href="/manual/google-pay" />
+            <link rel="alternate" hreflang="pt" href="/piloto/google-pay-braspag" />
         
     
         
-            <link rel="alternate" hreflang="en" href="en/manual/google-pay" />
+            <link rel="alternate" hreflang="en" href="en/piloto/google-pay-braspag" />
         
     
 
@@ -64,14 +64,14 @@
 
                                 
                                     
-                                    <a href="https://docscielo.github.io/Pilots/manual/google-pay">
+                                    <a href="https://docscielo.github.io/Pilots/piloto/google-pay-braspag">
                                     
 
                                         <img alt="Português" src="https://docscielo.github.io/Pilots/assets/images/pt.png"/>
                                     </a>
                                 
                                     
-                                    <a href="https://docscielo.github.io/Pilots/en/manual/google-pay">
+                                    <a href="https://docscielo.github.io/Pilots/en/piloto/google-pay-braspag">
                                     
 
                                         <img alt="English" src="https://docscielo.github.io/Pilots/assets/images/en.png"/>
@@ -117,7 +117,7 @@
                             
                                 
                                     
-                                    <li class="active">&gt; <a href="https://docscielo.github.io/Pilots/manual/google-pay">Manual de integração Google Pay</a></li>
+                                    <li class="active">&gt; <a href="https://docscielo.github.io/Pilots/piloto/google-pay-braspag">Manual de integração Google Pay via Braspag</a></li>
                                     
                                 
                             
@@ -134,10 +134,11 @@
 <h1 id="requisitos">Requisitos</h1>
 
 <ol>
-  <li>Concordar com os termos do Google Pay</li>
+  <li>Concordar com os termos de serviço do Google Pay</li>
   <li>Integrar com o Google Pay em seu site ou app (<a href="https://developers.google.com/pay/api/android/overview">https://developers.google.com/pay/api/android/overview</a>)</li>
+  <li>Contratar o Pagador API REST como gateway de pagamento</li>
   <li>Contratar o Cielo 3.0 como adquirência</li>
-  <li>Integrar com o Pagador API REST (<a href="https://developercielo.github.io/manual/cielo-ecommerce">https://developercielo.github.io/manual/cielo-ecommerce</a>)</li>
+  <li>Integrar com o Pagador API REST (<a href="https://braspag.github.io/manual/braspag-pagador">https://braspag.github.io/manual/braspag-pagador</a>)</li>
 </ol>
 
 <h1 id="etapa-1-integrando-google-pay-em-seu-aplicativo-android">Etapa 1: Integrando Google Pay em seu aplicativo Android</h1>
@@ -159,7 +160,7 @@
 
 <p><a href="https://developers.google.com/pay/api/android/guides/tutorial">https://developers.google.com/pay/api/android/guides/tutorial</a></p>
 
-<p>Para a correta integração do Google Pay via Cielo 3.0, é necessário se atentar aos pontos abaixo:</p>
+<p>Para a correta integração do Google Pay via Braspag, é necessário se atentar aos pontos abaixo:</p>
 
 <h3 id="definição-do-gateway">Definição do Gateway</h3>
 
@@ -231,14 +232,14 @@
     <tr>
       <td>ephemeralPublicKey</td>
       <td>string</td>
-      <td>Mensagem criptografada com codificação base 64, contendo informações referente à chave pública efêmera, compatível com a chave privada da Cielo.</td>
+      <td>Mensagem criptografada com codificação base 64, contendo informações referente à chave pública efêmera, compatível com a chave privada da Braspag.</td>
     </tr>
   </tbody>
 </table>
 
 <p>(vide mais informações em: <a href="https://developers.google.com/pay/api/android/guides/resources/payment-data-cryptography">https://developers.google.com/pay/api/android/guides/resources/payment-data-cryptography</a>)</p>
 
-<p>Guarde os dados “<em>encryptedMessage</em>” e “<em>ephemeralPublicKey</em>”, que serão requisitados na autorização via Cielo 3.0 na próxima etapa (Etapa 2: Autorização com token do Google Pay)</p>
+<p>Guarde os dados “<em>encryptedMessage</em>” e “<em>ephemeralPublicKey</em>”, que serão requisitados na autorização via Pagador da Braspag na próxima etapa (Etapa 2: Autorização com token do Google Pay)</p>
 
 <h1 id="etapa-2-autorização-com-o-token-do-google-pay">Etapa 2: Autorização com o token do Google Pay</h1>
 
@@ -254,6 +255,7 @@
   </span><span class="s2">"Payment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"Type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CreditCard"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"Amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cielo30"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"Installments"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="s2">"Wallet"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="s2">"Type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AndroidPay"</span><span class="p">,</span><span class="w">
@@ -269,29 +271,7 @@
 <table>
   <thead>
     <tr>
-      <th><strong>Parâmetros do Header</strong></th>
-      <th><strong>Type</strong></th>
-      <th><strong>Descrição</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>MerchantID</td>
-      <td>GUID(36)</td>
-      <td>ID do estabelecimento na Cielo 3.0. Para ambiente Sandbox, utilize fecd2b61-3f0e-4e49-8b4f-eb382fa4da56</td>
-    </tr>
-    <tr>
-      <td>MerchantKey</td>
-      <td>String(24)</td>
-      <td>Chave da API para Cielo 3.0. Para ambiente Sandbox, utilize WSCIKUJBVHFPPPAWFPJGRYXRDNGQTMZAGBJSZZBV</td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th><strong>Parâmetros do Body</strong></th>
+      <th><strong>Parâmetro</strong></th>
       <th><strong>Type</strong></th>
       <th><strong>Descrição</strong></th>
     </tr>
@@ -305,7 +285,7 @@
     <tr>
       <td>Customer</td>
       <td>Nó com dados do comprador</td>
-      <td>Vide <a href="https://developercielo.github.io/manual/cielo-ecommerce#transa%C3%A7%C3%A3o-completa">https://developercielo.github.io/manual/cielo-ecommerce#transa%C3%A7%C3%A3o-completa</a></td>
+      <td>Vide <a href="https://braspag.github.io/manual/braspag-pagador?json#criando-uma-transa%C3%A7%C3%A3o-com-dados-do-comprador">https://braspag.github.io/manual/braspag-pagador?json#criando-uma-transa%C3%A7%C3%A3o-com-dados-do-comprador</a></td>
     </tr>
     <tr>
       <td>Payment.Type</td>
@@ -316,6 +296,11 @@
       <td>Payment.Amount</td>
       <td>Número (15)</td>
       <td>Valor do Pedido (ser enviado em centavos)</td>
+    </tr>
+    <tr>
+      <td>Payment.Provider</td>
+      <td>String (15)</td>
+      <td>Nome da provedora de Meio de Pagamento. Para transações Google Pay, utilize “Cielo30”</td>
     </tr>
     <tr>
       <td>Payment.Installments</td>
@@ -340,11 +325,11 @@
   </tbody>
 </table>
 
-<p>Para mais informações, acesse <a href="https://developercielo.github.io/manual/cielo-ecommerce">https://developercielo.github.io/manual/cielo-ecommerce</a></p>
+<p>Para mais informações, acesse <a href="https://braspag.github.io/manual/braspag-pagador">https://braspag.github.io/manual/braspag-pagador</a></p>
 
 <h2 id="response">Response</h2>
 
-<p>Vide <a href="https://developercielo.github.io/manual/cielo-ecommerce#resposta">https://developercielo.github.io/manual/cielo-ecommerce#resposta</a></p>
+<p>Vide <a href="https://braspag.github.io/manual/braspag-pagador?json#resposta">https://braspag.github.io/manual/braspag-pagador?json#resposta</a></p>
 
 </div>
 
@@ -377,26 +362,6 @@
     <div id="toc"></div>
 
     <div class="fixed-footer">
-        
-        <div class="toc-footer">
-            <h2 class="no-toc toc-footer-title">Materiais complementares</h2>
-            
-
-            
-            
-            
-
-            <ul class="toc-footer">
-            
-                
-                    
-                    <li><a href="https://docscielo.github.io/Pilots/piloto/google-pay-braspag" title="Integração técnica Gateway Braspag">Manual de integração Google Pay via Braspag</a></li>
-                
-            
-                
-            
-            </ul>
-        </div>
         
 
     <div class="toc-contact">
