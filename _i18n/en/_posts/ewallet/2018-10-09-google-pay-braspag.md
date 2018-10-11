@@ -11,7 +11,7 @@ language_tabs:
   json: JSON
 ---
 
-# Google Pay
+# Google Pay ™
 
 Google Pay is a e-wallet. It allows shoppers to make payments in e-commerce stores and apps using their credit and debit cards stored in their Google Account and Android devices in a safe and easy way.
 
@@ -49,7 +49,7 @@ In the "_Step 2: Choose a payment tokenization method_", follow the "GATEWAY" in
 ```json
 private static JSONObject getTokenizationSpecification() {
   JSONObject tokenizationSpecification = new JSONObject();
-  tokenizationSpecification.put("type", "PAYMENT\_GATEWAY");
+  tokenizationSpecification.put("type", "PAYMENT_GATEWAY");
   tokenizationSpecification.put(
       "parameters",
       new JSONObject()
@@ -67,7 +67,7 @@ In the "_Step 3: Define supported payment card networks_", use these brands: "VI
 
 ### Definition of environment
 
-In the "_Step 5: Create a PaymentsClient instance_", use the vaue "ENVIRONMENT\_TEST" for test purpose.
+In the "_Step 5: Create a PaymentsClient instance_", use the vaue "ENVIRONMENT_TEST" for test purpose.
 
 ### Definition of shopping data
 
@@ -75,7 +75,7 @@ In the "_Step 7: Create a PaymentDataRequest object_", use the value "BRL" for "
 
 ### Payment Data Recovery
 
-In the "_Step 9: Handle the response object_", the "Activity.RESULT\_OK" event is described, which is returned a object with all the payment data, including payment tokens.
+In the "_Step 9: Handle the response object_", the "Activity.RESULT_OK" event is described, which is returned a object with all the payment data, including payment tokens.
 
 The _PaymentData_ contains the object _PaymentMethodToken_. To get this object, use the **getPaymentMethodToken()** method.
 
@@ -156,3 +156,13 @@ For more information: [https://braspag.github.io/manual/braspag-pagador](https:/
 ## Response
 
 Vide [https://braspag.github.io/manual/braspag-pagador?json#resposta](https://braspag.github.io/manual/braspag-pagador?json#resposta)
+
+# Step 3: Solicitação de dados de produção
+
+## Action 1 - Branding Guideline
+
+Check the all the branding guidelines to help you implement Google Pay within your apps. The guideline is available at: [https://developers.google.com/pay/api/android/guides/brand-guidelines](https://developers.google.com/pay/api/android/guides/brand-guidelines)
+
+## Action 2 - Checklist and Request production access
+
+Ensure if all the checklist item was completed. When you are ready, request the production access to deploy your app in production environment. The checklist is available at: [https://developers.google.com/pay/api/android/guides/test-and-deploy/integration-checklist](https://developers.google.com/pay/api/android/guides/test-and-deploy/integration-checklist)
