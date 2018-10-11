@@ -2,7 +2,7 @@
 title:        Documentações e tutoriais
 tagline:      Documentações e tutoriais sobre a integração
 permalink:    /:categories/:slug
-baseurl:      ""
+baseurl:      "https://docscielo.github.io"
 author:
   name:       João Batista Neto
   email:      neto.joaobatista@gmail.com
