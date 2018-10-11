@@ -68,7 +68,7 @@ No passo "_Step 3: Define supported payment card networks_", seguir com as bande
 
 ### Definição do ambiente
 
-No passo "_Step 5: Create a PaymentsClient instance_", utilize o valor "ENVIRONMENT\_TEST" para utilizar o ambiente de teste.
+No passo "_Step 5: Create a PaymentsClient instance_", utilize o valor "ENVIRONMENT_TEST" para utilizar o ambiente de teste.
 
 ### Definição dos dados de compra
 
@@ -76,7 +76,7 @@ No passo "_Step 7: Create a PaymentDataRequest object_", utilize o valor "BRL" p
 
 ### Recuperação dos dados pagamento
 
-No passo "_Step 9: Handle the response object_", está descrito o evento "Activity.RESULT\_OK", onde é retornado um objeto com todos os dados referente ao dados de pagamento, inclusive o token de pagamento.
+No passo "_Step 9: Handle the response object_", está descrito o evento "Activity.RESULT_OK", onde é retornado um objeto com todos os dados referente ao dados de pagamento, inclusive o token de pagamento.
 
 A partir do _PaymentData,_ obtém-se o objeto _PaymentMethodToken_, através da chamada do método **getPaymentMethodToken()**.
 
