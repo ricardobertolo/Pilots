@@ -157,7 +157,7 @@ For more information: [https://braspag.github.io/manual/braspag-pagador](https:/
 
 Vide [https://braspag.github.io/manual/braspag-pagador?json#resposta](https://braspag.github.io/manual/braspag-pagador?json#resposta)
 
-# Step 3: Solicitação de dados de produção
+# Step 3: Requesting production access
 
 ## Action 1 - Branding Guideline
 
