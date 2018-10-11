@@ -11,7 +11,7 @@ language_tabs:
   json: JSON
 ---
 
-# Google Pay
+# Google Pay ™
 
 Google Pay é uma carteira virtual. Ele permite que os compradores realizem pagamentos em lojas virtuais e apps utilizando de forma prática e segura, seus cartões de crédito e débito armazenados em suas contas "Google Account" e dispositivos Android.
 
@@ -49,7 +49,7 @@ No passo "_Step 2: Choose a payment tokenization method_", siga o modelo indicad
 ```json
 private static JSONObject getTokenizationSpecification() {
   JSONObject tokenizationSpecification = new JSONObject();
-  tokenizationSpecification.put("type", "PAYMENT\_GATEWAY");
+  tokenizationSpecification.put("type", "PAYMENT_GATEWAY");
   tokenizationSpecification.put(
       "parameters",
       new JSONObject()
@@ -67,7 +67,7 @@ No passo "_Step 3: Define supported payment card networks_", seguir com as bande
 
 ### Definição do ambiente
 
-No passo "_Step 5: Create a PaymentsClient instance_", utilize o valor "ENVIRONMENT\_TEST" para utilizar o ambiente de teste.
+No passo "_Step 5: Create a PaymentsClient instance_", utilize o valor "ENVIRONMENT_TEST" para utilizar o ambiente de teste.
 
 ### Definição dos dados de compra
 
@@ -75,7 +75,7 @@ No passo "_Step 7: Create a PaymentDataRequest object_", utilize o valor "BRL" p
 
 ### Recuperação dos dados pagamento
 
-No passo "_Step 9: Handle the response object_", está descrito o evento "Activity.RESULT\_OK", onde é retornado um objeto com todos os dados referente ao dados de pagamento, inclusive o token de pagamento.
+No passo "_Step 9: Handle the response object_", está descrito o evento "Activity.RESULT_OK", onde é retornado um objeto com todos os dados referente ao dados de pagamento, inclusive o token de pagamento.
 
 A partir do _PaymentData,_ obtém-se o objeto _PaymentMethodToken_, através da chamada do método **getPaymentMethodToken()**.
 
@@ -156,3 +156,13 @@ Para mais informações, acesse [https://braspag.github.io/manual/braspag-pagado
 ## Response
 
 Vide [https://braspag.github.io/manual/braspag-pagador?json#resposta](https://braspag.github.io/manual/braspag-pagador?json#resposta)
+
+# Etapa 3: Solicitação de dados de produção
+
+## Passo 1 - Branding Guideline
+
+Verifique se todas as diretrizes de branding foram seguidas conforme o link: [https://developers.google.com/pay/api/android/guides/brand-guidelines](https://developers.google.com/pay/api/android/guides/brand-guidelines)
+
+## Passo 2 - Checklist e solicitação de credenciais de produção
+
+Verifique se todos os itens do checklist foram atendidos. Quando estiver tudo validado, solicite os dados de acesso produtivos. O checklist está disponível em: [https://developers.google.com/pay/api/android/guides/test-and-deploy/integration-checklist](https://developers.google.com/pay/api/android/guides/test-and-deploy/integration-checklist)
