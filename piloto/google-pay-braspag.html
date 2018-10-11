@@ -127,7 +127,7 @@
             </div>
 
             <div class="post">
-  <h1 id="google-pay">Google Pay</h1>
+  <h1 id="google-pay-">Google Pay ™</h1>
 
 <p>Google Pay é uma carteira virtual. Ele permite que os compradores realizem pagamentos em lojas virtuais e apps utilizando de forma prática e segura, seus cartões de crédito e débito armazenados em suas contas “Google Account” e dispositivos Android.</p>
 
@@ -168,7 +168,7 @@
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">private</span><span class="w"> </span><span class="err">static</span><span class="w"> </span><span class="err">JSONObject</span><span class="w"> </span><span class="err">getTokenizationSpecification()</span><span class="w"> </span><span class="p">{</span><span class="w">
   </span><span class="err">JSONObject</span><span class="w"> </span><span class="err">tokenizationSpecification</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">new</span><span class="w"> </span><span class="err">JSONObject();</span><span class="w">
-  </span><span class="err">tokenizationSpecification.put(</span><span class="s2">"type"</span><span class="p">,</span><span class="w"> </span><span class="s2">"PAYMENT</span><span class="se">\_</span><span class="s2">GATEWAY"</span><span class="err">);</span><span class="w">
+  </span><span class="err">tokenizationSpecification.put(</span><span class="s2">"type"</span><span class="p">,</span><span class="w"> </span><span class="s2">"PAYMENT_GATEWAY"</span><span class="err">);</span><span class="w">
   </span><span class="err">tokenizationSpecification.put(</span><span class="w">
       </span><span class="s2">"parameters"</span><span class="p">,</span><span class="w">
       </span><span class="err">new</span><span class="w"> </span><span class="err">JSONObject()</span><span class="w">
@@ -352,6 +352,16 @@
 <h2 id="response">Response</h2>
 
 <p>Vide <a href="https://braspag.github.io/manual/braspag-pagador?json#resposta">https://braspag.github.io/manual/braspag-pagador?json#resposta</a></p>
+
+<h1 id="etapa-3-solicitação-de-dados-de-produção">Etapa 3: Solicitação de dados de produção</h1>
+
+<h2 id="passo-1---branding-guideline">Passo 1 - Branding Guideline</h2>
+
+<p>Verifique se todas as diretrizes de branding foram seguidas conforme o link: <a href="https://developers.google.com/pay/api/android/guides/brand-guidelines">https://developers.google.com/pay/api/android/guides/brand-guidelines</a></p>
+
+<h2 id="passo-2---checklist-e-solicitação-de-credenciais-de-produção">Passo 2 - Checklist e solicitação de credenciais de produção</h2>
+
+<p>Verifique se todos os itens do checklist foram atendidos. Quando estiver tudo validado, solicite os dados de acesso produtivos. O checklist está disponível em: <a href="https://developers.google.com/pay/api/android/guides/test-and-deploy/integration-checklist">https://developers.google.com/pay/api/android/guides/test-and-deploy/integration-checklist</a></p>
 
 </div>
 
