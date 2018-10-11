@@ -4,7 +4,7 @@ title: Manual de integração Google Pay via Braspag
 description: Integração técnica Gateway Braspag
 search: true
 translated: true
-categories: piloto
+categories: manual
 tags:
   - E-Wallet
 language_tabs:
