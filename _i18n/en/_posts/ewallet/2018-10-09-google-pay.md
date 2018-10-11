@@ -154,7 +154,7 @@ For more information: [https://developercielo.github.io/manual/cielo-ecommerce](
 
 Vide [https://developercielo.github.io/manual/cielo-ecommerce#resposta](https://developercielo.github.io/manual/cielo-ecommerce#resposta)
 
-# Step 3: Solicitação de dados de produção
+# Step 3: Requesting production access
 
 ## Action 1 - Branding Guideline
 
