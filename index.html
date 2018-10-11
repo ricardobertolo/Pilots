@@ -11,9 +11,9 @@ title: Home
 
            {% for lang in site.language_names %}
                 {% if lang[0] == site.default_lang %}
-                <a href="{{ site.baseurl }}{{page.url}}">
+                <a href="{{page.url}}">
                 {% else %}
-                <a href="{{ site.baseurl }}{{ lang[0] }}{{page.url}}">
+                <a href="{{ lang[0] }}{{page.url}}">
                 {% endif %}
 
                    <img alt="{{ lang[1] }}" src="{{ site.baseurl }}assets/images/{{ lang[0] }}.png"/>
