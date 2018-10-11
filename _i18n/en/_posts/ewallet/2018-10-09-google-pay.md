@@ -134,8 +134,8 @@ The authorization with the Google Pay token must be performed as the same way as
 
 | **Header** | **Type** | **Description** |
 | --- | --- | --- |
-| MerchantID | GUID(36) | ID do estabelecimento na Cielo 3.0. Para ambiente Sandbox, utilize fecd2b61-3f0e-4e49-8b4f-eb382fa4da56 |
-| MerchantKey | String(24) | Chave da API para Cielo 3.0. Para ambiente Sandbox, utilize WSCIKUJBVHFPPPAWFPJGRYXRDNGQTMZAGBJSZZBV |
+| MerchantID | GUID(36) | Merchant's merchant ID. For Sandbox environment, use fecd2b61-3f0e-4e49-8b4f-eb382fa4da56 |
+| MerchantKey | String(24) | Merchant's merchant API Key. For Sandbox environment, use WSCIKUJBVHFPPPAWFPJGRYXRDNGQTMZAGBJSZZBV |
 
 | **Body** | **Type** | **Description** |
 | --- | --- | --- |
