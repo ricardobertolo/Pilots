@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-10-11T21:24:16+00:00</updated>
+    <updated>2018-10-11T21:26:35+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -251,10 +251,10 @@
     
     <entry>
         <title>Manual de integração Google Pay via Braspag</title>
-        <category term="piloto" />
-        <link href="https://docscielo.github.io/Pilots/piloto/google-pay-braspag"/>
+        <category term="manual" />
+        <link href="https://docscielo.github.io/Pilots/manual/google-pay-braspag"/>
         <updated>2018-10-09T00:00:00+00:00</updated>
-        <id>https://docscielo.github.io/Pilots/piloto/google-pay-braspag</id>
+        <id>https://docscielo.github.io/Pilots/manual/google-pay-braspag</id>
         <content type="html">&lt;h1 id=&quot;google-pay-&quot;&gt;Google Pay ™&lt;/h1&gt;
 
 &lt;p&gt;Google Pay é uma carteira virtual. Ele permite que os compradores realizem pagamentos em lojas virtuais e apps utilizando de forma prática e segura, seus cartões de crédito e débito armazenados em suas contas “Google Account” e dispositivos Android.&lt;/p&gt;
