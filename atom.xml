@@ -5,7 +5,7 @@
     <link href="https://docscielo.github.io/Pilots/"/>
     <logo>https://docscielo.github.io/Pilots/assets/images/logo.png</logo>
     <icon>https://docscielo.github.io/Pilots/assets/favicon.ico</icon>
-    <updated>2018-10-11T21:28:47+00:00</updated>
+    <updated>2018-11-23T16:45:58+00:00</updated>
     <id>https://docscielo.github.io/Pilots/</id>
     <author>
         <name>João Batista Neto</name>
@@ -2167,7 +2167,7 @@ Todas essas etapas exigem que transações sejam realizadas para obter acesso a 
 
 &lt;blockquote&gt;
   &lt;p&gt;Consulte  para visualizar a descrição dos códigos de retorno. 
-O código de retorno &lt;strong&gt;85 representa sucesso no Zero Auth&lt;/strong&gt;, os demais códigos são definidos de acordo com a documentação acima.&lt;/p&gt;
+O código de retorno &lt;strong&gt;00 representa sucesso no Zero Auth&lt;/strong&gt;, os demais códigos são definidos de acordo com a documentação acima.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h4 id=&quot;negativa---cartão-inválido&quot;&gt;NEGATIVA - Cartão Inválido&lt;/h4&gt;
